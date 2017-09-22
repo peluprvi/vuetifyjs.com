@@ -1,3 +1,17 @@
+<style lang="stylus" scoped>
+  img.logo
+    margin 40px 0 25px
+  .diamondSponsorLabel
+    color #676767
+    margin-bottom: 7px
+    font-size 13px
+  .diamondSponsor
+    // todo trim down actual image file dimensions
+    height: 40px
+    margin-bottom 25px
+</style>
+
+
 <template lang="pug">
   v-navigation-drawer(
     app
@@ -6,13 +20,13 @@
     v-model="appDrawer"
     :disable-route-watcher="!routeWatcher"
   )
-    div.pa-5.text-xs-center
-      v-avatar(size="68" tile).mb-5
-        img(src="/static/v.png" alt="Logo")
-      img(
+    div.text-xs-center
+      img.logo(src="/static/v.svg" alt="Logo" width="85px")
+
+      div.diamondSponsorLabel Diamond Sponsor
+      img.diamondSponsor(
         src="https://vuetifyjs.com/static/doc-images/backers/lmax-exchange.png"
         alt="Sponsor"
-        height="40px"
       )
     v-container(fluid)
       v-select(
@@ -24,7 +38,7 @@
         autocomplete
         solo
         append-icon="search"
-      ).mb-5
+      ).mb-4
     v-list(dense)
       template(v-for="item in items")
         v-list-group(v-if="item.items" v-bind:group="item.group" no-action)

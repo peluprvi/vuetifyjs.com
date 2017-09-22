@@ -1,5 +1,25 @@
 {
-  "message": {
-    "hello": "poop"
+  "home": {
+    "announcementBanner": "Aww yisss, this is an exciting announcement! Or maybe its an advertisement!",
+    "heading1": "Supercharge your development with",
+    "heading1cont": "Vuetify Material Component Framework",
+    "getStarted": "Get Started",
+    "features": [
+      {
+        "img": "",
+        "title": "Ready to Go",
+        "text": "Vuetify comes ready to go with 5 pre-made vue-cli templates. From simple html to full-blown SSR you are ready to go in minutes."
+      },
+      {
+        "img": "",
+        "title": "Semantic Material Components",
+        "text": "Be prepared for an armada of specialized components at your disposal. With over 80 in total, there is a solution for any application."
+      },
+      {
+        "img": "",
+        "title": "Vibrant Community",
+        "text": "Got a question about using the framework? Join our community Discord server-- there's probably someone that can help you!"
+      }
+    ]
   }
 }
