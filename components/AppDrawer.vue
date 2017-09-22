@@ -1,6 +1,8 @@
 <template lang="pug">
   v-navigation-drawer(
     app
+    permanent
+    v-if="$route.fullPath !== '/'"
     v-model="appDrawer"
     :disable-route-watcher="!routeWatcher"
   )
@@ -10,7 +12,7 @@
       img(
         src="https://vuetifyjs.com/static/doc-images/backers/lmax-exchange.png"
         alt="Sponsor"
-        width="80%"
+        height="40px"
       )
     v-container(fluid)
       v-select(
@@ -145,6 +147,9 @@
           this.$store.commit('app:drawer', val)
         }
       }
+    },
+    mounted(){
+      console.log('this.$route', this.$route)
     }
   }
 </script>
