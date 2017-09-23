@@ -7,7 +7,7 @@
     "features": [
       {
         "img": "",
-        "title": "Ready to Go",
+        "title": "Ready-Made Project Scaffolding",
         "text": "Vuetify comes ready to go with 5 pre-made vue-cli templates. From simple html to full-blown SSR you are ready to go in minutes."
       },
       {
@@ -20,6 +20,20 @@
         "title": "Vibrant Community",
         "text": "Got a question about using the framework? Join our community Discord server-- there's probably someone that can help you!"
       }
+    ],
+    "checkFeaturesTitle": "All the Tools You Need",
+    "checkFeaturesTitleCtd": "To Build Incredible User Interfaces",
+    "checkFeatures": [
+      { "text": "Semantic Helper Componets" },
+      { "text": "SRR and PWA Support" },
+      { "text": "8 Vue-CLI Templates" },
+      { "text": "Community Chat Support" }
+    ],
+    "checkFeaturesCtd": [
+      { "text": "80+ Material Design Components" },
+      { "text": "Transition System Component" },
+      { "text": "Blazing Fast" },
+      { "text": "A La Carte Components" }
     ]
   }
 }

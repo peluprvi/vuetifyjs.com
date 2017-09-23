@@ -161,9 +161,6 @@
           this.$store.commit('app:drawer', val)
         }
       }
-    },
-    mounted(){
-      console.log('this.$route', this.$route)
     }
   }
 </script>
