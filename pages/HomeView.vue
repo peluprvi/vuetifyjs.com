@@ -1,4 +1,5 @@
 <style lang="stylus" scoped>
+  @import '../node_modules/vuetify/src/stylus/settings/_variables'
 
   #home
     background white
@@ -26,15 +27,50 @@
         font-size 18px
   #features
     padding 5vh 0
-    h3
-      font-size 21px
-      color #455163
-      line-height 1.2em
-      font-weight 500
-    p
-      font-size 16px
-      line-height 1.5em
-      color #455163
+    margin 5vh 0
+
+    .layout
+      margin 0 -1em
+      .flex
+        padding-left: 1em
+        padding-right: 1em
+        margin-bottom: 4em
+        text-align: center
+        img
+          box-shadow: 0 1px 3px rgba(0,0,0,0.18) !important;
+          max-width 75%
+          margin-bottom 1.75em
+        h3
+          font-size 21px
+          color #455163
+          line-height 1.2em
+          font-weight 400
+        p
+          font-size 18px
+          line-height 1.5em
+          font-weight 300
+          color #455163
+
+    @media $display-breakpoints.md-and-up
+      .layout
+        .flex
+          margin-bottom: 0
+          text-align left
+          img
+            max-width 90%
+
+    @media $display-breakpoints.xl-only
+      .layout
+        margin 0 -1.5em
+        .flex
+          padding-left: 1.5em
+          padding-right: 1.5em
+          h3
+            font-size 24px
+          p
+            font-size 21px
+          img
+            max-width 75%
   #checkFeatures
     padding 2em 0
     h2
@@ -50,7 +86,11 @@
     ul
       li
         font-size 21px
+        font-weight 300
   #letterFromAuthor
+    .card
+      box-shadow: 0 1px 3px rgba(0,0,0,0.18) !important;
+
     padding 2em 0
     p
       font-size 21px
@@ -69,11 +109,15 @@
         font-size 24px
         color #666666
         font-weight 300
+        margin-bottom 1.5em
+      img
+        margin-bottom 1.5em
+        max-width: 100%
   #callout
     position: relative
     color rgba(255,255,255,.98)
-    // @media $display-breakpoints.md-and-up
-    //   padding: 2em 0;
+    @media $display-breakpoints.md-and-up
+      padding: 2em 0;
     &:before
       content ''
       position absolute
@@ -83,15 +127,15 @@
       height 100vw
       background url('/static/doc-images/slant-footer.svg') no-repeat  50% 100%
       background-size 100%
-      // @media $display-breakpoints.xs-only
-      //   background-size 475%
-      //   height 300vw
-      // @media $display-breakpoints.sm-only
-      //   background-size 225%
-      //   height 300vw
-      // @media $display-breakpoints.md-only
-      //   background-size 140%
-      //   height 300vw
+      @media $display-breakpoints.xs-only
+        background-size 475%
+        height 300vw
+      @media $display-breakpoints.sm-only
+        background-size 225%
+        height 300vw
+      @media $display-breakpoints.md-only
+        background-size 140%
+        height 300vw
 
 
     img
@@ -101,8 +145,9 @@
       font-size 32px
       color white
       font-weight 300
-      // @media $display-breakpoints.lg-and-up
-      //     font-size 40px
+      @media $display-breakpoints.lg-and-up
+          font-size 40px
+          width: 70%
 
 </style>
 
@@ -128,13 +173,15 @@
           p version 0.16.0
 
     section#features
-      v-container(grid-list-lg)
+      v-container
         v-layout(row wrap)
           v-flex(
             xs12 sm12 md4 lg4
             v-for="(feature, i) in features"
             :key="i"
           )
+
+            img(:src="feature.img")
             h3 {{feature.title}}
             p {{feature.text}}
 
@@ -158,7 +205,7 @@
             v-card.pa-5
                 p Hey there,
                 p I know choosing a UI framework can be a daunting task -- there are so many options to choose from and every one of them claims that they are the best. So you have to decide for yourself: what are the metrics for success?
-                p This was me almost a year ago. There were plenty of UI toolkits to choose from, but none them had everything that I needed, and that is why I started working on Vuetify.
+                p This was me almost a year ago. There were plenty of UI toolkits to choose from, but none of them had everything that I needed, and that is why I started working on Vuetify.
                 p I am extremely humbled that you have considered using Vuetify as your next UI Framework. A lot of care has went into crafting the perfect setup for taking any idea from conception to production. I look forward to you joining the Vuetify community and am excited to see what incredible interfaces you create!
 
           v-flex.xs3.text-xs-center
@@ -180,12 +227,12 @@
     section#sponsors-and-backers.my-5
       v-container
         v-card
-          h2.mb-4 Proudly sponsored by:
+          h2.text-xs-center.text-md-left Proudly Sponsored By
           v-layout(row wrap)
-            v-flex(xs12 md3 v-for="(sponsor, i) in sponsors" :key="i").text-xs-center
+            v-flex(xs12 sm6 md4 lg3 v-for="(sponsor, i) in sponsors" :key="i").text-xs-center
                 a(:href="sponsor.href" target="_blank" :title="sponsor.title" rel="noopener")
                   img(:src="sponsor.src"  :height="sponsor.height" ).sponsor
-            v-flex(xs12 md3 ).text-xs-center
+            v-flex(xs12 sm6 md4 lg3).text-xs-center
               v-btn(to="/vuetify/sponsors-and-backers" large).white.primary--text Become a sponsor
                 v-icon(right).primary--text fa-arrow-circle-right
 
@@ -208,20 +255,21 @@
       return {
         sponsors: [
           {
-            title: 'LMAX Exchange',
-            href: 'https://careers.lmax.com/?utm_source=vuetify&utm_medium=logo-link&utm_campaign=lmax-careers',
-            src: '/static/doc-images/backers/lmax-exchange.png',
-            height: '45px'
-          },
-          {
             title: 'BrowserStack',
             href: 'https://www.browserstack.com/',
-            src: '/static/doc-images/browser-stack.svg'
+            src: '/static/doc-images/browser-stack.svg',
+            height: '50px'
           },
           {
             title: 'Cloudflare',
             href: 'https://www.cloudflare.com/',
             src: '/static/doc-images/cloudflare.svg'
+          },
+          {
+            title: 'LMAX Exchange',
+            href: 'https://careers.lmax.com/?utm_source=vuetify&utm_medium=logo-link&utm_campaign=lmax-careers',
+            src: '/static/doc-images/backers/lmax-exchange.png',
+            height: '45px'
           }
         ]
       }
