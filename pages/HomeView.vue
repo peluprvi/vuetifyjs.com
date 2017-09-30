@@ -8,26 +8,42 @@
       background #005caf
       color rgba(255,255,255,.98)
       font-weight 400
-      height 50px
-      padding 16px
+      padding 10px 16px
+      display: block
+      p
+        margin 0
 
-      display: flex;
     .parallax.primary
+      height: auto !important
+      padding-top: 4em
+      padding-bottom 4em
+      img
+        height 160px
       h1
         font-size 42px
         font-weight 400
         display block
-        line-height 50px
+        line-height 1.2em
         span
-          font-size 36px
+          font-size 32px
           font-weight 300
+          line-height 1.2em
           display block
+          margin-bottom .3em
+
+      @media $display-breakpoints.xs-only
+        img
+          height 120px
+        h1
+          font-size 32px
+          span
+            font-size 24px
       .btn
         height 56px
         font-size 18px
   #features
-    padding 5vh 0
-    margin 5vh 0
+    padding 5vh 0 0
+    margin 5vh 0 0
 
     .layout
       margin 0 -1em
@@ -36,6 +52,8 @@
         padding-right: 1em
         margin-bottom: 4em
         text-align: center
+        &:last-child
+          margin-bottom 0
         img
           box-shadow: 0 1px 3px rgba(0,0,0,0.18) !important;
           max-width 75%
@@ -72,35 +90,123 @@
           img
             max-width 75%
   #checkFeatures
-    padding 2em 0
+    padding 8em 0
     h2
       font-size 42px
       font-weight 400
       margin-bottom .75em
       display block
-      line-height 50px
+      line-height 1.2em
       span
         font-size 36px
         font-weight 300
         display block
     ul
+      list-style: none;
       li
+        &::before
+          content: '✓'
+          position relative
+          left: -10px
+          color: #00c100
         font-size 21px
+        margin-bottom .5em
         font-weight 300
+
+    @media $display-breakpoints.xs-only
+      padding 2em 0
+      h2
+        font-size 36px
+        span
+          font-size 28px
+      ul
+        li
+          font-size 18px
+    @media $display-breakpoints.sm-only
+      padding 3em 0
   #letterFromAuthor
     .card
+      padding 3em
+      position relative
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 30px
+        right: -15px
+        box-sizing: border-box;
+        border: 1.25em solid black;
+        border-color: transparent transparent white white
+        transform: rotate(-135deg);
+        box-shadow: -3px 3px 3px -1px rgba(0,0,0,0.08) !important;
+      }
       box-shadow: 0 1px 3px rgba(0,0,0,0.18) !important;
 
-    padding 2em 0
+    .avatar
+      margin-top 0
+      width: 100px !important
+      height: 100px !important
     p
       font-size 21px
       font-weight 300
-      line-height 36px
+      line-height 1.7em
+      &.john, &.authorOfVuetify
+        font-size 21px
+        margin-bottom: 0
+        line-height 1.2em
+      &.john
+        font-weight 500
+        margin-top .5em
+
+    @media $display-breakpoints.sm-and-down
+      .card
+        padding 2em
+      .avatar
+        margin-top 1em
+        width: 50px !important
+        height: 50px !important
+      p
+        font-size: 18px
+        &.john, &.authorOfVuetify
+          font-size 14px
+
   #support
+    margin 1em
+    img
+      margin-bottom 2em
     p
-      font-size 28px
       font-weight 400
-      margin: 0
+      text-align: center
+      font-size: 21px
+    @media $display-breakpoints.md-and-down
+      p
+        margin-bottom .5em
+        line-height 1.2em
+    @media $display-breakpoints.md-and-up
+      p
+        margin-bottom 0
+        text-align: left
+        line-height 1.5em
+    @media $display-breakpoints.sm-only
+      p
+        font-size: 24px
+        text-align: center
+      margin 2em
+    @media $display-breakpoints.md-only
+      margin 4em
+      p
+        text-align: left
+        font-size 24px
+    @media $display-breakpoints.lg-only
+      margin 7em
+      p
+        font-size 28px
+    @media $display-breakpoints.xl-only
+      margin 10em
+      p
+        font-size 36px
+
   #sponsors-and-backers
     .card
       z-index 1
@@ -128,14 +234,22 @@
       background url('/static/doc-images/slant-footer.svg') no-repeat  50% 100%
       background-size 100%
       @media $display-breakpoints.xs-only
-        background-size 475%
+        background-position 50% 105%
+        background-size 375%
         height 300vw
       @media $display-breakpoints.sm-only
-        background-size 225%
+        background-size 175%
         height 300vw
       @media $display-breakpoints.md-only
         background-size 140%
         height 300vw
+      @media $display-breakpoints.lg-only
+        background-size 100%
+        background-position 50% 109%
+      @media $display-breakpoints.xl-only
+        background-size 100%
+        height 250vw
+        background-position 50% 110%
 
 
     img
@@ -158,11 +272,10 @@
       p {{ $t('home.announcementBanner')}}
     v-parallax(
       jumbotron
-      height="70vh"
     ).primary
       v-layout(align-center justify-center)
         v-flex.text-xs-center
-          img(src="/static/v-alt.svg" alt="Logo" height="160px")
+          img(src="/static/v-alt.svg" alt="Logo")
           h1.mt-4.mb-5
             span {{ $t("home.heading1")}}
             | {{ $t("home.heading1cont")}}
@@ -186,44 +299,46 @@
             p {{feature.text}}
 
     section#checkFeatures
-      h2.text-xs-center
-        span All the Tools You  Need
-        | To Build Incredible User Interfaces
       v-container
-        v-layout(row)
-          v-flex.xs4.offset-xs2
+        h2.text-xs-center
+          span All the Tools You  Need
+          | To Build Incredible User Interfaces
+        v-layout(row wrap)
+          v-flex.xs12.md5.offset-md1.lg4.offset-lg2.xl3.offset-xl3
             ul
               li(v-for="(feature, i) in checkFeatures") {{feature.text}}
-          v-flex.xs4
+          v-flex.xs12.md5.lg4.xl3
             ul
               li(v-for="(feature, i) in checkFeaturesCtd") {{feature.text}}
 
     section#letterFromAuthor
       v-container
         v-layout
-          v-flex.xs9
-            v-card.pa-5
-                p Hey there,
-                p I know choosing a UI framework can be a daunting task -- there are so many options to choose from and every one of them claims that they are the best. So you have to decide for yourself: what are the metrics for success?
-                p This was me almost a year ago. There were plenty of UI toolkits to choose from, but none of them had everything that I needed, and that is why I started working on Vuetify.
-                p I am extremely humbled that you have considered using Vuetify as your next UI Framework. A lot of care has went into crafting the perfect setup for taking any idea from conception to production. I look forward to you joining the Vuetify community and am excited to see what incredible interfaces you create!
+          v-flex.xs9.xl8.offset-xl1
+            v-card
+              p Hey there,
+              p I know choosing a UI framework can be a daunting task -- there are so many options to choose from and every one of them claims that they are the best. So you have to decide for yourself: what are the metrics for success?
+              p This was me almost a year ago. There were plenty of UI toolkits to choose from, but none of them had everything that I needed, and that is why I started working on Vuetify.
+              p I am extremely humbled that you have considered using Vuetify as your next UI Framework. A lot of care has went into crafting the perfect setup for taking any idea from conception to production. I look forward to you joining the Vuetify community and am excited to see what incredible interfaces you create!
 
-          v-flex.xs3.text-xs-center
-            p John Leider
-            | Author of Vuetify
+          v-flex.xs3.xl2.text-xs-center
+            v-avatar
+             img(src="https://vuetifyjs.com/static/doc-images/john.jpg")
+            p.john John Leider
+            p.authorOfVuetify Author of Vuetify
       v-container
-    section#support.my-5
+    section#support
       v-container
           v-layout(row wrap)
-            v-flex(xs3).text-xs-center
+            v-flex(xs6 offset-xs3 md3 offset-md0 offset-xl1).text-xs-center
               a(
                 href="https://www.patreon.com/vuetify"
                 target="_blank" rel="noopener"
               )
                 img(src="http://www.underconsideration.com/brandnew/archives/patreon_logo.png" width="75%")
-            v-flex(xs9).mb-5
+            v-flex(xs12 md9 xl7).mb-5
               p Has Vuetify helped you create an amazing application?
-              p You can show your support for Vuetify by <a>becoming a patron</a>.
+              p Show your support for Vuetify by <a>becoming a patron</a>.
     section#sponsors-and-backers.my-5
       v-container
         v-card
@@ -241,8 +356,8 @@
         v-container
           v-layout(row wrap)
             v-flex(xs12 md8 lg10)
-              img(src="/static/doc-images/logo.svg" height="90px")
-              h2.mt-4.mb-5 Supercharge Your Development with the Power of Vue and Material Design
+              img(src="/static/v-alt.svg" height="50px")
+              h2.mt-4.mb-5 Supercharge your development with the power of Vue and Material Design
     home-footer
 </template>
 
