@@ -306,26 +306,22 @@
         v-layout(row wrap)
           v-flex.xs12.md5.offset-md1.lg4.offset-lg2.xl3.offset-xl3
             ul
-              li(v-for="(feature, i) in checkFeatures") {{feature.text}}
+              li(v-for="(feature, i) in checkFeatures" :key="i") {{feature}}
           v-flex.xs12.md5.lg4.xl3
             ul
-              li(v-for="(feature, i) in checkFeaturesCtd") {{feature.text}}
+              li(v-for="(feature, i) in checkFeaturesCtd" :key="i") {{feature}}
 
     section#letterFromAuthor
       v-container
         v-layout
           v-flex.xs9.xl8.offset-xl1
             v-card
-              p Hey there,
-              p I know choosing a UI framework can be a daunting task -- there are so many options to choose from and every one of them claims that they are the best. So you have to decide for yourself: what are the metrics for success?
-              p This was me almost a year ago. There were plenty of UI toolkits to choose from, but none of them had everything that I needed, and that is why I started working on Vuetify.
-              p I am extremely humbled that you have considered using Vuetify as your next UI Framework. A lot of care has went into crafting the perfect setup for taking any idea from conception to production. I look forward to you joining the Vuetify community and am excited to see what incredible interfaces you create!
-
+              p(v-for="(p, i) in letterFromAuthor" :key="i") {{p}}
           v-flex.xs3.xl2.text-xs-center
             v-avatar
              img(src="https://vuetifyjs.com/static/doc-images/john.jpg")
             p.john John Leider
-            p.authorOfVuetify Author of Vuetify
+            p.authorOfVuetify {{ $t("home.authorOfVuetify")}}
       v-container
     section#support
       v-container
@@ -337,18 +333,18 @@
               )
                 img(src="http://www.underconsideration.com/brandnew/archives/patreon_logo.png" width="75%")
             v-flex(xs12 md9 xl7).mb-5
-              p Has Vuetify helped you create an amazing application?
-              p Show your support for Vuetify by <a>becoming a patron</a>.
+              p {{ $t("home.support.hasVuetifyHelped")}}
+              p {{ $t("home.support.showYourSupport")}} <a>{{ $t("home.support.becomingAPatron")}}</a>.
     section#sponsors-and-backers.my-5
       v-container
         v-card
-          h2.text-xs-center.text-md-left Proudly Sponsored By
+          h2.text-xs-center.text-md-left {{ $t("home.proudlySponsoredBy")}}
           v-layout(row wrap)
             v-flex(xs12 sm6 md4 lg3 v-for="(sponsor, i) in sponsors" :key="i").text-xs-center
                 a(:href="sponsor.href" target="_blank" :title="sponsor.title" rel="noopener")
                   img(:src="sponsor.src"  :height="sponsor.height" ).sponsor
             v-flex(xs12 sm6 md4 lg3).text-xs-center
-              v-btn(to="/vuetify/sponsors-and-backers" large).white.primary--text Become a sponsor
+              v-btn(to="/vuetify/sponsors-and-backers" large).white.primary--text {{ $t("home.becomeSponsor")}}
                 v-icon(right).primary--text fa-arrow-circle-right
 
     section#callout
@@ -357,7 +353,7 @@
           v-layout(row wrap)
             v-flex(xs12 md8 lg10)
               img(src="/static/v-alt.svg" height="50px")
-              h2.mt-4.mb-5 Supercharge your development with the power of Vue and Material Design
+              h2.mt-4.mb-5 {{ $t("home.callout")}}
     home-footer
 </template>
 
@@ -399,12 +395,13 @@
         return this.$t('home.features')
       },
       checkFeatures(){
-        // todo: this doesn't like retrieving an array of strings, made the objects for now
         return this.$t('home.checkFeatures')
       },
       checkFeaturesCtd(){
-        // todo: this doesn't like retrieving an array of strings, made the objects for now
         return this.$t('home.checkFeaturesCtd')
+      },
+      letterFromAuthor(){
+        return this.$t('home.letterFromAuthor')
       }
     }
   }
