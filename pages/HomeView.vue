@@ -319,7 +319,7 @@
               p(v-for="(p, i) in letterFromAuthor" :key="i") {{p}}
           v-flex.xs3.xl2.text-xs-center
             v-avatar
-             img(src="https://vuetifyjs.com/static/doc-images/john.jpg")
+             img(src="/static/doc-images/john.jpg")
             p.john John Leider
             p.authorOfVuetify {{ $t("home.authorOfVuetify")}}
       v-container
@@ -331,7 +331,7 @@
                 href="https://www.patreon.com/vuetify"
                 target="_blank" rel="noopener"
               )
-                img(src="http://www.underconsideration.com/brandnew/archives/patreon_logo.png" width="75%")
+                img(src="/static/doc-images/patreon_logo.png" width="75%")
             v-flex(xs12 md9 xl7).mb-5
               p {{ $t("home.support.hasVuetifyHelped")}}
               p {{ $t("home.support.showYourSupport")}} <a href="https://www.patreon.com/vuetify" target="_blank">{{ $t("home.support.becomingAPatron")}}</a>.
