@@ -334,7 +334,7 @@
                 img(src="http://www.underconsideration.com/brandnew/archives/patreon_logo.png" width="75%")
             v-flex(xs12 md9 xl7).mb-5
               p {{ $t("home.support.hasVuetifyHelped")}}
-              p {{ $t("home.support.showYourSupport")}} <a>{{ $t("home.support.becomingAPatron")}}</a>.
+              p {{ $t("home.support.showYourSupport")}} <a href="https://www.patreon.com/vuetify" target="_blank">{{ $t("home.support.becomingAPatron")}}</a>.
     section#sponsors-and-backers.my-5
       v-container
         v-card

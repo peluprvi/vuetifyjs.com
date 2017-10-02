@@ -3,12 +3,18 @@
     margin 40px 0 25px
   .diamondSponsorLabel
     color #676767
-    margin-bottom: 7px
+    margin: 3em 0 .5em
     font-size 13px
   .diamondSponsor
     // todo trim down actual image file dimensions
     height: 40px
-    margin-bottom 25px
+    margin-bottom 1.25em
+
+    aside.navigation-drawer
+      ul
+        li
+          font-size 14px
+          color: #373737
 </style>
 
 
@@ -16,24 +22,18 @@
   v-navigation-drawer(
     app
     permanent
+    clipped
     v-if="$route.fullPath !== '/'"
     v-model="appDrawer"
     :disable-route-watcher="!routeWatcher"
   )
     div.text-xs-center
-      img.logo(src="/static/v.svg" alt="Logo" width="85px")
-
       div.diamondSponsorLabel Diamond Sponsor
       img.diamondSponsor(
         src="https://vuetifyjs.com/static/doc-images/backers/lmax-exchange.png"
         alt="Sponsor"
       )
     v-container(fluid)
-      v-select(
-        :items="['pre-release 0.16.0']"
-        value="pre-release 0.16.0"
-        solo
-      ).mb-4
       v-select(
         autocomplete
         solo
