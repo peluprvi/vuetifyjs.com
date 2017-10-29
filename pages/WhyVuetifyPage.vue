@@ -1,6 +1,6 @@
 <template lang="pug">
   text-page(:data="$data")
-    section-heading(value="Vuetify.WhyVuetify.header")
+    section-heading(value="GettingStarted.WhyVuetify.header")
     v-layout(row wrap).mb-5
       v-flex(xs12)
         v-container(fluid grid-list-md).pa-0
@@ -32,18 +32,18 @@
                 p(v-for="(p, i) in whyText" :key="i") {{p}}
 
               section#design-principles
-                section-heading(value="Vuetify.WhyVuetify.designHeader")
-                section-text(value="Vuetify.WhyVuetify.designText")
+                section-heading(value="GettingStarted.WhyVuetify.designHeader")
+                section-text(value="GettingStarted.WhyVuetify.designText")
 
               section#vibrant-community
-                section-heading(value="Vuetify.WhyVuetify.communityHeader")
-                section-text(value="Vuetify.WhyVuetify.communityText")
+                section-heading(value="GettingStarted.WhyVuetify.communityHeader")
+                section-text(value="GettingStarted.WhyVuetify.communityText")
 
               section#framework-comparison
-                section-heading(value="Vuetify.WhyVuetify.comparisonHeader")
-                section-text(value="Vuetify.WhyVuetify.comparisonText")
+                section-heading(value="GettingStarted.WhyVuetify.comparisonHeader")
+                section-text(value="GettingStarted.WhyVuetify.comparisonText")
 
-                v-subheader {{ $t('Vuetify.WhyVuetify.featuresHeader') }}
+                v-subheader {{ $t('GettingStarted.WhyVuetify.featuresHeader') }}
                 v-layout(row wrap)
                   v-flex(xs12 sm8)
                     v-list(style="max-width: 400px;" dense).transparent.mb-5
@@ -80,7 +80,7 @@
                           img(src="/static/doc-images/john.jpg")
                       v-list-tile-content
                         v-list-tile-title John Leider
-                        v-list-tile-sub-title {{ $t('Vuetify.WhyVuetify.authorOfVuetify') }}
+                        v-list-tile-sub-title {{ $t('GettingStarted.WhyVuetify.authorOfVuetify') }}
                       v-list-tile-action
                         v-tooltip(left)
                           v-btn(
@@ -89,13 +89,13 @@
                           slot="activator"
                           )
                             v-icon mail
-                          span {{ $t('Vuetify.WhyVuetify.contactMe') }}
-                  v-card-text {{ $t('Vuetify.WhyVuetify.letterFromAuthor') }}
+                          span {{ $t('GettingStarted.WhyVuetify.contactMe') }}
+                  v-card-text {{ $t('GettingStarted.WhyVuetify.letterFromAuthor') }}
                   v-card-text.text-xs-right <em>&mdash;John Leider</em>
 
     div.text-xs-center.mb-5
-      em {{ $t('Vuetify.WhyVuetify.questionHeader') }}<br>
-      v-btn(flat outline round color="success" href="https://chat.vuetifyjs.com" target="_blank") {{ $t('Vuetify.WhyVuetify.questionButton') }}
+      em {{ $t('GettingStarted.WhyVuetify.questionHeader') }}<br>
+      v-btn(flat outline round color="success" href="https://chat.vuetifyjs.com" target="_blank") {{ $t('GettingStarted.WhyVuetify.questionButton') }}
 </template>
 
 <script>
@@ -105,13 +105,13 @@
 
     computed: {
       philosophies () {
-        return this.$t('Vuetify.WhyVuetify.philosophies')
+        return this.$t('GettingStarted.WhyVuetify.philosophies')
       },
       whyText () {
-        return this.$t('Vuetify.WhyVuetify.whyText')
+        return this.$t('GettingStarted.WhyVuetify.whyText')
       },
       featuresList () {
-        return this.$t('Vuetify.WhyVuetify.featuresList')
+        return this.$t('GettingStarted.WhyVuetify.featuresList')
       }
     }
   }

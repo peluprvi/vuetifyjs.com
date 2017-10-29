@@ -419,7 +419,7 @@
       @media $display-breakpoints.lg-and-up
           font-size 40px
           width: 70%
-          
+
   #home-footer
     background: #37424b
     color: white
