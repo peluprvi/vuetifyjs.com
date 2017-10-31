@@ -3,18 +3,18 @@
 
     section#frequently-asked-questions
       v-text-field(
-      label="Search"
-      single-line
-      clearable
-      prepend-icon="filter_list"
-      solo
-      v-model="search"
-      ref="search"
+        label="Search"
+        single-line
+        clearable
+        prepend-icon="filter_list"
+        solo
+        v-model="search"
+        ref="search"
       ).mb-3
       v-expansion-panel(expand).mb-5
         v-expansion-panel-content(
-        v-for="(faq, i) in faqs"
-        v-bind:key="i"
+          v-for="(faq, i) in faqs"
+          v-bind:key="i"
         )
           div(slot="header").pr-5
             strong {{ $t('GettingStarted.Faq.question') }} &nbsp;
@@ -26,7 +26,7 @@
               div(v-html="faq.a")
       v-fade-transition
         div(
-        v-if="!faqs.length"
+          v-if="!faqs.length"
         ).text-xs-center.mb-5
           h3 {{ $t('GettingStarted.Faq.noResultsFound') }}
           v-btn(color="primary" flat @click="resetSearch") {{ $t('GettingStarted.Faq.resetSearch') }}

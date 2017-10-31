@@ -12,16 +12,21 @@
               v-icon fa-diamond
           v-list-tile-title {{ $t('GettingStarted.Sponsors.backersSubHeader') }}
       v-container(fluid grid-list-md).mb-5
-        v-layout(row wrap justify-start align-center)
+        v-layout(
+          row
+          wrap
+          justify-start
+          align-center
+        )
           a(
-          :href="`${backer.href}?ref=vuetifyjs.com`"
-          target="_blank"
+            :href="`${backer.href}?ref=vuetifyjs.com`"
+            target="_blank"
             :title="backer.title"
-          v-for="backer in backers"
-          v-bind:key="backer.title"
+            v-for="backer in backers"
+            v-bind:key="backer.title"
           ).text-xs-center.mx-3
             img(
-            :src="`/static/doc-images/backers/${backer.src}`"
+              :src="`/static/doc-images/backers/${backer.src}`"
               :alt="backer.title"
             )
       v-list.transparent
@@ -31,57 +36,77 @@
               v-icon star
           v-list-tile-title {{ $t('GettingStarted.Sponsors.backersSubHeader2') }}
       v-container(fluid grid-list-md).mb-5
-        v-layout(row wrap justify-start align-center)
+        v-layout(
+          row
+          wrap
+          justify-start
+          align-center
+        )
           a(
           target="_blank"
             :class="[backer.dark ? 'black' : '']"
-              :href="`${backer.href}?ref=vuetifyjs.com`"
-              :title="backer.title"
-          v-for="backer in backers2"
-          v-bind:key="backer.title"
+            :href="`${backer.href}?ref=vuetifyjs.com`"
+            :title="backer.title"
+            v-for="backer in backers2"
+            v-bind:key="backer.title"
           ).text-xs-center.mx-3
             img(
-            :src="`/static/doc-images/backers/${backer.src}`"
+              :src="`/static/doc-images/backers/${backer.src}`"
               :alt="backer.title"
             )
 
       section-heading(value="GettingStarted.Sponsors.affiliatesHeader")
       v-divider.mb-3
       v-container(fluid grid-list-md).mb-5.affiliates
-        v-layout(row wrap justify-start align-center)
+        v-layout(
+          row
+          wrap
+          justify-start
+          align-center
+        )
           a(
-          target="_blank"
+            target="_blank"
             :class="[affiliate.dark ? 'black' : '']"
-              :href="`${affiliate.href}${affiliate.noref ? '' : '?ref=vuetifyjs.com'}`"
-              :title="affiliate.title"
-          v-for="affiliate in affiliates"
-          v-bind:key="affiliate.title"
+            :href="`${affiliate.href}${affiliate.noref ? '' : '?ref=vuetifyjs.com'}`"
+            :title="affiliate.title"
+            v-for="affiliate in affiliates"
+            v-bind:key="affiliate.title"
           ).text-xs-center.mx-3
             img(
-            :src="`/static/doc-images/affiliates/${affiliate.src}`"
+              :src="`/static/doc-images/affiliates/${affiliate.src}`"
               :alt="affiliate.title"
-            width="150px"
+              width="150px"
             )
 
       section-heading(value="GettingStarted.Sponsors.sponsorsHeader")
       v-divider.mb-3
       v-container(fluid).mb-5
-        v-layout(row wrap justify-start align-center)
+        v-layout(
+          row
+          wrap
+          justify-start
+          align-center
+        )
           a(
-          :href="`${sponsor.href}?ref=vuetifyjs.com`"
-          target="_blank"
+            :href="`${sponsor.href}?ref=vuetifyjs.com`"
+            target="_blank"
             :title="sponsor.title"
-          v-for="sponsor in sponsors"
-          v-bind:key="sponsor.title"
+            v-for="sponsor in sponsors"
+            v-bind:key="sponsor.title"
           ).text-xs-center.mx-3
             img(
-            :src="`/static/doc-images/${sponsor.src}`"
-            alt="sponsor.title"
+              :src="`/static/doc-images/${sponsor.src}`"
+              alt="sponsor.title"
             )
 
       div.text-xs-center
         div.mb-3 {{ $t('GettingStarted.Sponsors.questionHeader') }}
-        v-btn(outline color="success" round href="mailto:john@vuetifyjs.com") {{ $t('GettingStarted.Sponsors.questionButton') }}
+        v-btn(
+          outline
+          color="success"
+          round
+          href="mailto:john@vuetifyjs.com"
+        ) {{ $t('GettingStarted.Sponsors.questionButton') }}
 </template>
 
 <script>
@@ -91,7 +116,6 @@
     data: () => ({
       header: "GettingStarted.Sponsors.header",
       headerText: "GettingStarted.Sponsors.headerText",
-
       sponsors: [
         { title: 'BrowserStack', href: 'https://www.browserstack.com/', src: 'browser-stack.png' },
         { title: 'Cloudflare', href: 'https://www.cloudflare.com/', src: 'cloudflare.svg' }
