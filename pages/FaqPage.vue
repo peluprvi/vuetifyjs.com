@@ -1,6 +1,5 @@
 <template lang="pug">
   text-page(:data="$data")
-
     section#frequently-asked-questions
       v-text-field(
         label="Search"
@@ -29,11 +28,22 @@
           v-if="!faqs.length"
         ).text-xs-center.mb-5
           h3 {{ $t('GettingStarted.Faq.noResultsFound') }}
-          v-btn(color="primary" flat @click="resetSearch") {{ $t('GettingStarted.Faq.resetSearch') }}
+          v-btn(
+            color="primary"
+            flat
+            @click="resetSearch"
+          ) {{ $t('GettingStarted.Faq.resetSearch') }}
 
       div.text-xs-center
         div.mb-3 {{ $t('GettingStarted.Faq.questionHeader') }}
-        v-btn(outline color="success" round href="https://chat.vuetifyjs.com" target="_blank" rel="noopener") {{ $t('GettingStarted.Faq.questionButton') }}
+        v-btn(
+          outline
+          color="success"
+          round
+          href="https://chat.vuetifyjs.com"
+          target="_blank"
+          rel="noopener"
+        ) {{ $t('GettingStarted.Faq.questionButton') }}
 </template>
 
 <script>
@@ -43,7 +53,6 @@
       headerText: "GettingStarted.Faq.headerText",
       search: ''
     }),
-
     computed: {
       gotchas () {
         return this.$t('GettingStarted.Faq.gotchas')
@@ -53,13 +62,11 @@
           const answer = qa.a.toLowerCase()
           const question = qa.q.toLowerCase()
           const search = (this.search || '').toLowerCase()
-
           return answer.indexOf(search) > -1 ||
             question.indexOf(search) > -1
         })
       }
     },
-
     methods: {
       resetSearch () {
         this.search = ''

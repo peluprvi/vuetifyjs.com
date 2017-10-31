@@ -1,9 +1,7 @@
 <template lang="pug">
   text-page(:data="$data")
-
     section#sponsors-and-backers
       section-heading(value="GettingStarted.Sponsors.backersHeader")
-
       v-divider.mb-3
       v-list.transparent
         v-list-tile
@@ -54,7 +52,6 @@
               :src="`/static/doc-images/backers/${backer.src}`"
               :alt="backer.title"
             )
-
       section-heading(value="GettingStarted.Sponsors.affiliatesHeader")
       v-divider.mb-3
       v-container(fluid grid-list-md).mb-5.affiliates
@@ -77,7 +74,6 @@
               :alt="affiliate.title"
               width="150px"
             )
-
       section-heading(value="GettingStarted.Sponsors.sponsorsHeader")
       v-divider.mb-3
       v-container(fluid).mb-5
@@ -98,7 +94,6 @@
               :src="`/static/doc-images/${sponsor.src}`"
               alt="sponsor.title"
             )
-
       div.text-xs-center
         div.mb-3 {{ $t('GettingStarted.Sponsors.questionHeader') }}
         v-btn(
@@ -112,7 +107,6 @@
 <script>
   export default {
     name: 'sponsors-page',
-
     data: () => ({
       header: "GettingStarted.Sponsors.header",
       headerText: "GettingStarted.Sponsors.headerText",
@@ -145,7 +139,6 @@
     img
       max-width: 225px
       width: 100%
-
     .affiliates img
       width: 80%
 </style>
