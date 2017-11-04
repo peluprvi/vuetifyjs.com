@@ -10,7 +10,7 @@
       v-expansion-panel.elevation-0
         v-expansion-panel-content(v-model="panel").grey.lighten-4
           div(slot="header").text-xs-center
-            span.grey--text Show Example
+            span.grey--text  {{ $t('Components.ComponentPage.showExample') }}
           v-tabs(ref="tabs" :scrollable="false")
             v-tabs-bar(class="pl-0").grey.lighten-4.px-3
               v-tabs-slider(color="accent")
