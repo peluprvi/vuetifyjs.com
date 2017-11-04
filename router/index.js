@@ -58,7 +58,7 @@ export function createRouter () {
         route('/getting-started/sponsors-and-backers', 'Sponsors'),
         route('/getting-started/contributing', 'Contributing'),
         route('/playground', 'Playground'),
-        route('/components/alerts', 'Alerts'),
+        route('/components/alerts', 'components/Alerts'),
         // Global redirect for 404
         { path: '*', redirect: '/' }
       ]
