@@ -1,4 +1,5 @@
 export default {
   usage: 'Usage',
-  examples: 'Examples'
+  examples: 'Examples',
+  openInCodePen: 'Open in Codepen'
 }

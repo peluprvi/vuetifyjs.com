@@ -20,7 +20,7 @@
           flat
           v-on:click="sendToCodepen"
         )
-          span Open in Codepen
+          span {{ $t(`Components.ComponentPage.openInCodePen`) }}
           v-icon.ml-3 fa-codepen
       v-tabs-items
         v-tabs-content(
