@@ -5,7 +5,7 @@
       div(v-html="$t(`Components.${data.namespace}.headerText`)")
 
     section#usage
-      section-heading(:value="$t('Components.ComponentPage.usage')")
+      section-heading(value="Components.ComponentPage.usage")
       component-example(
         :new-in="data.usage.new"
         :file="`${data.namespace.toLowerCase()}/${data.usage.file}`"
@@ -18,7 +18,7 @@
 
     slot(name="top")
     section#examples
-      section-heading(:value="$t('Components.ComponentPage.examples')")
+      section-heading(value="Components.ComponentPage.examples")
 
       component-example(
         :header="`#${i + 1} ${genHeader(example)}`"
