@@ -4,16 +4,16 @@
 
 <script>
   export default {
-    name: 'alerts-page',
+    name: 'badges-page',
 
     data: () => ({
-      namespace: 'Alerts',
-      folder: 'alerts',
-      usage: { file: 'contextual' },
+      namespace: 'Badges',
+      folder: 'badges',
+      usage: { file: 'character' },
       examples: [
-        { file: 'closable' },
         { file: 'icon' },
-        { file: 'transition' }
+        { file: 'inline' },
+        { file: 'visibility' }
       ]
     })
   }
