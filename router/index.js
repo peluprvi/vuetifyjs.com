@@ -52,12 +52,13 @@ export function createRouter () {
       routes: [
         route('/', 'Home'),
         // Getting Started
-        route('/getting-started/quick-start', 'QuickStart'),
-        route('/getting-started/why-vuetify', 'WhyVuetify'),
-        route('/getting-started/frequently-asked-questions', 'Faq'),
-        route('/getting-started/sponsors-and-backers', 'Sponsors'),
-        route('/getting-started/contributing', 'Contributing'),
+        route('/getting-started/quick-start', 'getting-started/QuickStart'),
+        route('/getting-started/why-vuetify', 'getting-started/WhyVuetify'),
+        route('/getting-started/frequently-asked-questions', 'getting-started/Faq'),
+        route('/getting-started/sponsors-and-backers', 'getting-started/Sponsors'),
+        route('/getting-started/contributing', 'getting-started/Contributing'),
         route('/playground', 'Playground'),
+        // Components
         route('/components/alerts', 'components/Alerts'),
         route('/components/avatars', 'components/Avatars'),
         route('/components/badges', 'components/Badges'),
