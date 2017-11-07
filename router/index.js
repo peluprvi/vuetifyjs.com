@@ -94,6 +94,8 @@ export function createRouter () {
         route('/components/text-fields', 'components/TextFields'),
         route('/components/toolbars', 'components/Toolbars'),
         route('/components/tooltips', 'components/Tooltips'),
+        // Guides
+        route('/guides/server-side-rendering', 'guides/SSR'),
         // Global redirect for 404
         { path: '*', redirect: '/' }
       ]
