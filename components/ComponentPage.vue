@@ -18,27 +18,53 @@
 
     section#api
       section-heading(value="Components.ComponentPage.api")
-      v-tabs(v-model="tabs" v-bind:scrollable="false").elevation-1
-        v-tabs-bar.grey.lighten-3.px-3
+      v-tabs(v-if="components.length > 1" v-model="tabs" v-bind:scrollable="true").elevation-1
+        v-tabs-bar.grey.lighten-4.px-3
           v-tabs-slider(color="primary")
           v-tabs-item(
-            v-for="(p, i) in ['props']"
-            v-bind:href="`#${p}`"
+            v-for="(componentName, i) in components"
+            v-bind:href="`#${componentName}`"
             v-bind:key="i"
-          ) {{ p }}
+          ) {{ componentName }}
         v-tabs-items
           v-tabs-content(
-            v-for="(p, i) in ['props']"
-            v-bind:id="p"
+            v-for="(componentName, i) in components"
+            v-bind:id="componentName"
             v-bind:key="i"
           )
+            div(class="pa-4 grey lighten-4")
+              v-text-field(
+                append-icon="search"
+                label="Search..."
+                single-line
+                hide-details
+                v-model="search"
+              )
             component-parameters(
+              v-for="(p, i) in ['props']"
+              v-bind:component-name="componentName"
               v-bind:headers="headers[p]"
-              v-bind:type="p"
-              v-bind:items="getItems(p)"
+              v-bind:items="getItems(p, componentName)"
               v-bind:namespace="namespace"
-              v-bind:components="components"
+              v-bind:search="search"
             )
+      div(v-else v-for="(componentName, i) in components")
+        div(class="pa-4 grey lighten-4")
+          v-text-field(
+            append-icon="search"
+            label="Search..."
+            single-line
+            hide-details
+            v-model="search"
+          )
+        component-parameters(
+          v-for="(p, i) in ['props']"
+          v-bind:component-name="componentName"
+          v-bind:headers="headers[p]"
+          v-bind:items="getItems(p, componentName)"
+          v-bind:namespace="namespace"
+          v-bind:search="search"
+        )
 
     slot(name="top")
     section#examples
@@ -93,6 +119,7 @@
           { text: 'Description', value: 'description', align: 'left' }
         ]
       },
+      search: '',
       tabs: null
     }),
 
@@ -126,7 +153,7 @@
         const namespace = this.name.split('-').map(n => {
           return n.substr(0, 1).toUpperCase() + n.slice(1)
         }).join('')
-        
+
         if (this.data.plural) return namespace
 
         return `${namespace}s`
@@ -140,10 +167,10 @@
       genHeader (example) {
         return this.$t(`Examples.${this.namespace}.${example.file}.header`)
       },
-      getItems (name) {
+      getItems (name, componentName) {
         switch (name) {
           case 'props':
-            return this.genComponentProps()
+            return (this.genComponentProps()[componentName] || {})[name]
           break
         }
       },

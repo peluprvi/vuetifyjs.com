@@ -1,36 +1,20 @@
 <template lang="pug">
   v-card.component-parameters
-    v-card-title
-      v-select(
-        label="Component"
-        hide-details
-        single-line
-        v-bind:items="components"
-        v-model="currentComponent"
-        auto
-        :disabled="components.length < 2"
+    v-card-text
+      v-data-table(
+        v-if="items.length"
+        v-bind:headers="headers"
+        v-bind:search="search"
+        v-bind:items="parsedItems"
+        v-bind:pagination.sync="pagination"
       )
-      v-spacer
-      v-spacer.hidden-sm-and-down
-      v-text-field(
-        append-icon="search"
-        label="Search..."
-        single-line
-        hide-details
-        v-model="search"
-      )
-    v-data-table(
-      v-bind:headers="headers"
-      v-bind:search="search"
-      v-bind:items="parsedItems"
-      v-bind:pagination.sync="pagination"
-    )
-      template(slot="items" slot-scope="{ item }")
-        td(
-          v-for="(opt, i) in item"
-          v-bind:key="i"
-          v-html="opt"
-        )
+        template(slot="items" slot-scope="{ item }")
+          td(
+            v-for="(opt, i) in item"
+            v-bind:key="i"
+            v-html="opt"
+          )
+      div(v-else class="px-2 py-5 grey--text text-xs-center") No data for this component
 </template>
 
 <script>
@@ -39,43 +23,36 @@
 
     data () {
       return {
-        currentComponent: Object.keys(this.items)[0],
         pagination: {
           rowsPerPage: 10
         },
-        search: '',
         shared: {}
       }
     },
 
     props: {
-      components: {
-        type: Array,
-        default: () => ([])
-      },
-      id: String,
+      componentName: String,
       headers: {
         type: Array,
         default: () => ([])
       },
       items: {
-        type: Object,
-        default: () => ({})
+        type: Array,
+        default: () => ([])
       },
       namespace: String,
-      type: String
+      search: String
     },
 
     computed: {
       parsedItems () {
-        const items = this.items[this.currentComponent] || { props: [] }
-
-        return items.props.map(item => {
+        const items = this.items || []
+        return items.map(item => {
           const def = item.default
           const type = this.$t(`Generic.Types.${item.type}`)
           let description = ''
 
-          const specialLevelDesc = `Components.${this.namespace}.special.props.${this.currentComponent}.${item.name}`
+          const specialLevelDesc = `Components.${this.namespace}.special.props.${this.componentName}.${item.name}`
           const componentLevelDesc = `Components.${this.namespace}.props.${item.name}`
           const genericDesc = `Generic.Props.${item.name}`
           if (this.$te(specialLevelDesc)) {
