@@ -97,6 +97,7 @@ export function createRouter () {
         route('/components/toolbars', 'components/Toolbars'),
         route('/components/tooltips', 'components/Tooltips'),
         // Directives
+        route('/directives/touch-support', 'directives/Touch'),
         //
         route('/pre-made-themes', 'PremadeThemes'),
         // Guides
