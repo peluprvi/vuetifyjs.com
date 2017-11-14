@@ -49,26 +49,3 @@
     })
   }
 </script>
-
-<style lang="stylus">
-  #colors
-    .flex
-      margin: 1rem 0
-
-    .card
-      color: #fff
-      font-weight: 500
-      letter-spacing: .5px
-      padding: 1rem
-      border-radius: 0
-
-      .card__text
-        h3
-          color: #fff
-          align-self: flex-start
-          font-size: 1.5rem
-          margin: 0
-
-    .card__text
-      padding: 0
-</style>

@@ -62,6 +62,7 @@ export function createRouter () {
         // Base Styles
         route('/style/colors', 'style/Colors'),
         route('/style/theme', 'style/Theme'),
+        route('/style/typography', 'style/Typography'),
         // Motion & Translations
         // Components
         route('/components/alerts', 'components/Alerts'),
