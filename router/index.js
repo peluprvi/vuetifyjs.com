@@ -60,6 +60,7 @@ export function createRouter () {
         // Application Layout
         route('/layout/pre-defined', 'layout/PreDefined'),
         // Base Styles
+        route('/style/colors', 'style/Colors'),
         // Motion & Translations
         // Components
         route('/components/alerts', 'components/Alerts'),
