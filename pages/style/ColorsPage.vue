@@ -67,7 +67,7 @@
 </script>
 
 <style lang="stylus">
-  #colors
+  #colors-page #colors
     .flex
       margin: 1rem 0
 
