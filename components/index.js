@@ -10,6 +10,10 @@ import SectionHeading from './SectionHeading'
 import SectionText from './SectionText'
 import TextPage from './TextPage'
 
+// Refactor
+import PageIntroduction from './PageIntroduction'
+import PageUsage from './PageUsage'
+
 export default {
   AppAlert,
   Codepen,
@@ -21,5 +25,9 @@ export default {
   PageHeading,
   SectionHeading,
   SectionText,
-  TextPage
+  TextPage,
+
+  // Refactor
+  PageIntroduction,
+  PageUsage
 }

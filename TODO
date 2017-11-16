@@ -1,3 +1,45 @@
+Page layout:
+  Main:
+    --- Content ---
+    ▫ Page title & desc
+    ▫ Sections
+      ▫ (default)
+      ▫ Usage
+      ▫ API
+      ▫ Examples
+
+    --- Footer ---
+  Aside:
+    ▫ Table of contents
+
+Child components:
+    ▫  template-list
+        @/components/TemplateList
+        Only used in Vuetify/Quick Start
+    ▫ ComponentExample.vue => codepen
+        Only used in ComponentExample
+        @/components/Codepen
+
+Building blocks:
+    ▫ section-header & section-text
+        @/components/
+        Should also add a section-subheader. Used h3.py-3 in BaseStyles/Colors.
+    ▫ markup
+        @/components/Markup
+    ▫ alert/info
+        @/core/AppAlert
+    ▫ component-example
+        @/components/ComponentExample
+        This should be renamed. Should not be limited to components only. Make it more generic.
+        => needs: id, header, desc, file, newIn
+    ▫ ad
+        @/core/AppAd
+    ▫ table-of-contents
+        @/core/AppTableOfContents
+    ▫ app-footer
+        @/core/AppFooter
+        Bottom nav arrows.
+
 Missing pages:
     ▫ Vuetify
         - Starter Templates

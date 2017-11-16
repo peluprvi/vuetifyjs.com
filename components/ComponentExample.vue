@@ -13,8 +13,7 @@
       span(v-text="header")
 
     //- Description
-    div(v-if="$slots.desc").justify
-      slot(name="desc")
+    div(v-if="desc" v-html="desc").justify
 
     v-card.mt-5
       //- Example options
@@ -119,7 +118,8 @@
       file: String,
       header: String,
       newIn: String,
-      id: String
+      id: String,
+      desc: String
     },
 
     computed: {
@@ -221,7 +221,7 @@
 <style lang="stylus">
   .component-example
     // margin-bottom: 32px
-    
+
     .application--example
       transition: .3s ease-in-out
 

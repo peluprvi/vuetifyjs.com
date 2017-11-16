@@ -1,23 +1,30 @@
 <template lang="pug">
   page(v-bind="$attrs" :toc="toc")
-    page-heading#introduction
-      template(slot="title") {{ $t(`Components.${namespace}.header`) }}
-      div(v-html="$t(`Components.${namespace}.headerText`)")
+    page-introduction(
+      :title="$t(`Components.${namespace}.header`)"
+      :desc="$t(`Components.${namespace}.headerText`)"
+    )
 
-    section#usage
-      section-heading(value="Components.ComponentPage.usage")
-      component-example(
-        :new-in="data.usage.new"
-        :file="`${folder}/${data.usage.file}`"
-        :id="`data.usage-${-1}`"
-      )
-        div(
-          slot="desc"
-          v-html="genDesc(data.usage)"
-        )
+    //- section#usage
+    //-   section-heading(value="Generic.ComponentPage.usage")
+    //-   component-example(
+    //-     :new-in="data.usage.new"
+    //-     :file="`${folder}/${data.usage.file}`"
+    //-     :id="`data.usage-${-1}`"
+    //-   )
+    //-     div(
+    //-       slot="desc"
+    //-       v-html="genDesc(data.usage)"
+    //-     )
+    page-usage(
+      :id="`data.usage-${-1}`"
+      :file="`${folder}/${data.usage.file}`"
+      :new-in="data.usage.new"
+      :desc="genDesc(data.usage)"
+    )
 
     section#api
-      section-heading(value="Components.ComponentPage.api")
+      section-heading(value="Generic.ComponentPage.api")
       v-tabs(v-model="tab" v-bind:scrollable="false").elevation-1
         v-tabs-bar.grey.lighten-3.px-3
           v-tabs-slider(color="primary")
@@ -43,7 +50,7 @@
 
     slot(name="top")
     section#examples
-      section-heading(value="Components.ComponentPage.examples")
+      section-heading(value="Generic.ComponentPage.examples")
 
       component-example(
         :header="`#${i + 1} ${genHeader(example)}`"
@@ -58,7 +65,7 @@
           v-html="genDesc(example)"
         )
 
-    section-heading {{ $t('Components.ComponentPage.examples') }}
+    section-heading {{ $t('Generic.ComponentPage.examples') }}
     slot(name="bottom")
 </template>
 
@@ -136,13 +143,13 @@
         const namespace = this.name.split('-').map(n => {
           return n.substr(0, 1).toUpperCase() + n.slice(1)
         }).join('')
-        
+
         if (this.data.plural) return namespace
 
         return `${namespace}s`
       },
       toc () {
-        return this.$t(`Components.ComponentPage.toc`)
+        return this.$t(`Generic.ComponentPage.toc`)
       }
     },
 

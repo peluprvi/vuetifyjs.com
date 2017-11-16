@@ -8,7 +8,6 @@ import Btns from './Btns'
 import Cards from './Cards'
 import Carousels from './Carousels'
 import Chips from './Chips'
-import ComponentPage from './ComponentPage'
 import DataTables from './DataTables'
 import Dialogs from './Dialogs'
 import Dividers from './Dividers'
@@ -47,7 +46,6 @@ export default {
   Cards,
   Carousels,
   Chips,
-  ComponentPage,
   DataTables,
   Dialogs,
   Dividers,
