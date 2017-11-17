@@ -56,7 +56,7 @@ export function createRouter () {
         // Getting Started
         route('/getting-started/quick-start', 'getting-started/QuickStart'),
         route('/getting-started/why-vuetify', 'getting-started/WhyVuetify'),
-        route('/getting-started/frequently-asked-questions', 'getting-started/Faq'),
+        route('/getting-started/frequently-asked-questions', 'getting-started/FAQ'),
         route('/getting-started/sponsors-and-backers', 'getting-started/Sponsors'),
         route('/getting-started/contributing', 'getting-started/Contributing'),
         // Application Layout

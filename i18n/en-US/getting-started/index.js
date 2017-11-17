@@ -1,13 +1,13 @@
 import QuickStart from './QuickStart'
 import WhyVuetify from './WhyVuetify'
-import Faq from './Faq'
+import FAQ from './FAQ'
 import Sponsors from './Sponsors'
 import Contributing from './Contributing'
 
 export default {
   QuickStart,
   WhyVuetify,
-  Faq,
+  FAQ,
   Sponsors,
   Contributing
 }

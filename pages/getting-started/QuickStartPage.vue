@@ -4,7 +4,6 @@
     id="quick-start-page"
     toc="GettingStarted.QuickStart.toc"
   )
-
     page-introduction(
       title="GettingStarted.QuickStart.header"
       desc="GettingStarted.QuickStart.headerText"
