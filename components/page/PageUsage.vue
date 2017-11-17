@@ -2,14 +2,22 @@
 
   section#usage
     section-heading(value="Generic.ComponentPage.usage")
-    //- example
+    example(
+      :desc="desc"
+      :file="examplePath"
+    )
 
 </template>
 
 <script>
 
   export default {
-    name: 'page-usage'
+    name: 'page-usage',
+
+    props: {
+      desc: String,
+      examplePath: String
+    }
   }
 
 </script>

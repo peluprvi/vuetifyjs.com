@@ -47,7 +47,7 @@ export default {
   SectionText,
 
   // Common
-  // Example,
+  Example,
   ExampleCodepen,
   HomeFooter
 }

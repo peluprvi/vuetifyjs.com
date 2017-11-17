@@ -5,11 +5,15 @@
     toc="Generic.ComponentPage.toc"
   )
     page-introduction(
-      :title="`Components.${current}.header`"
-      :desc="`Components.${current}.headerText`"
+      :title="`Components.${capitalized}.header`"
+      :desc="`Components.${capitalized}.headerText`"
     )
 
-    page-usage
+    page-usage(
+      :desc="`Examples.${capitalized}.${file}.desc`"
+      :examplePath="`${current}/${file}`"
+    )
+
     page-api
     page-examples
 
@@ -19,11 +23,16 @@
   export default {
     computed: {
       current () {
-        let name = this.$route.params.component
-        return name.charAt(0).toUpperCase() + name.slice(1)
+        return this.$route.params.component
+      },
+      capitalized () {
+        return this.current.charAt(0).toUpperCase() + this.current.slice(1)
       },
       components () {
         return require('./components.json')
+      },
+      file () {
+        return this.components[this.current].usage.file
       }
     }
   }

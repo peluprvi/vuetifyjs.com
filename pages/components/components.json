@@ -1,5 +1,5 @@
 {
-  "v-alert": {
+  "alerts": {
     "usage": {
       "file": "contextual"
     },
@@ -9,7 +9,7 @@
       { "file": "transition" }
     ]
   },
-  "v-avatar": {
+  "avatars": {
     "usage": {
       "file": "standard"
     },
