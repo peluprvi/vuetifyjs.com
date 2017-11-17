@@ -68,7 +68,7 @@
     box-shadow: none
     display: flex
     padding: 3rem 2rem
-    margin: 0 0 16px
+    margin: 48px 0
     border-radius: 2px
     position: relative
     align-items: center
