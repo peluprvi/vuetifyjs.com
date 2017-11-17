@@ -3,7 +3,7 @@ export default {
   toc: [
     {
       text: `What's the difference?`,
-      href: 'why-vuetify'
+      href: 'introduction'
     },
     {
       text: 'Design principles',
