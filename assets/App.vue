@@ -7,21 +7,19 @@
 </template>
 
 <script>
-  import AppDrawer from '@core/AppDrawer'
-  import AppFab from '@core/AppFab'
-  import AppToolbar from '@core/AppToolbar'
-  import AppView from '@core/AppView'
   import Meta from '@mixins/meta'
+  // import AppDrawer from '@core/AppDrawer'
+  // import AppToolbar from '@core/AppToolbar'
+  // import AppView from '@core/AppView'
+  // import AppFab from '@core/AppFab'
 
   export default {
-    name: 'documentation',
-
-    components: {
-      AppDrawer,
-      AppFab,
-      AppToolbar,
-      AppView
-    },
+    // components: {
+    //   AppDrawer,
+    //   AppToolbar,
+    //   AppView,
+    //   AppFab
+    // },
 
     mixins: [Meta],
 
@@ -47,7 +45,7 @@
             this.$route.from &&
             this.$route.from.fullPath !== '/'
           ) return
-          
+
           if (this.$vuetify.breakpoint.mdAndDown) return
 
           this.$store.commit('app/DRAWER', drawer)
@@ -57,11 +55,11 @@
   }
 </script>
 
+<style src="mdi/css/materialdesignicons.css"></style>
+
 <style lang="stylus">
-  @import '../node_modules/vuetify/src/stylus/settings/_elevations.styl'
+  @import '~vuetify/src/stylus/settings/_elevations.styl'
 
   code
     elevation(1)
 </style>
-
-<style src="../node_modules/mdi/css/materialdesignicons.css"></style>

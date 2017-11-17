@@ -19,11 +19,11 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.json', '.vue'],
     alias: {
+      // 'vuetify': resolve('../node_modules/vuetify'),
       '@assets': resolve('../assets'),
       '@components': resolve('../components'),
-      '@core': resolve('../core'),
-      '@examples': resolve('../pages/examples'),
-      '@layouts': resolve('../layouts'),
+      '@core': resolve('../components/core'),
+      '@page': resolve('../components/page'),
       '@i18n': resolve('../i18n'),
       '@mixins': resolve('../mixins'),
       '@pages': resolve('../pages'),

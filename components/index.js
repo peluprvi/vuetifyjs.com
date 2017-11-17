@@ -1,33 +1,53 @@
-import AppAlert from '../core/AppAlert'
-import Codepen from './Codepen'
-import ComponentExample from './ComponentExample'
-import ComponentPage from './ComponentPage'
-import ComponentParameters from './ComponentParameters'
-import Markup from './Markup'
-import Page from './Page'
-import PageHeading from './PageHeading'
-import SectionHeading from './SectionHeading'
-import SectionText from './SectionText'
-import TextPage from './TextPage'
+// Core
+import AppAd from './core/AppAd'
+import AppDrawer from './core/AppDrawer'
+import AppFab from './core/AppFab'
+import AppFooter from './core/AppFooter'
+import AppTableOfContents from './core/AppTableOfContents'
+import AppToolbar from './core/AppToolbar'
+import AppView from './core/AppView'
 
-// Refactor
-import PageIntroduction from './PageIntroduction'
-import PageUsage from './PageUsage'
+// Page
+import Markup from './page/Markup'
+import Page from './page/Page'
+import PageAPI from './page/PageAPI'
+import PageAlert from './page/PageAlert'
+import PageExamples from './page/PageExamples'
+import PageIntroduction from './page/PageIntroduction'
+import SectionHeading from './page/SectionHeading'
+import SectionSubheading from './page/SectionSubheading'
+import SectionText from './page/SectionText'
+
+// Common
+import Example from './Example'
+import ExampleCodepen from './ExampleCodepen'
+import HomeFooter from './HomeFooter'
+import QuickStartTemplateList from './QuickStartTemplateList'
 
 export default {
-  AppAlert,
-  Codepen,
-  ComponentExample,
-  ComponentPage,
-  ComponentParameters,
+  // Core
+  AppAd,
+  AppDrawer,
+  AppFab,
+  AppFooter,
+  AppTableOfContents,
+  AppToolbar,
+  AppView,
+
+  // Page
   Markup,
   Page,
-  PageHeading,
-  SectionHeading,
-  SectionText,
-  TextPage,
-
-  // Refactor
+  // PageAPI,
+  PageAlert,
+  // PageExamples,
   PageIntroduction,
-  PageUsage
+  SectionHeading,
+  SectionSubheading,
+  SectionText,
+
+  // Common
+  // Example,
+  ExampleCodepen,
+  HomeFooter,
+  QuickStartTemplateList
 }

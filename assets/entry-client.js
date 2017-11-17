@@ -1,4 +1,4 @@
-import '../node_modules/vuetify/dist/vuetify.css'
+import 'vuetify/dist/vuetify.css'
 import Vue from 'vue'
 import 'es6-promise/auto'
 import { createApp } from './app'
