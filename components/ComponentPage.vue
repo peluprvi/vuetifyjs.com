@@ -50,10 +50,9 @@
 
     slot(name="top")
     section#examples
-      section-heading(value="Generic.ComponentPage.examples")
-
+      section-heading(value="Components.ComponentPage.examples")
       component-example(
-        :header="`#${i + 1} ${genHeader(example)}`"
+        :header="`${genHeader(example)}`"
         :new-in="example.new"
         :file="`${folder}/${example.file}`"
         :id="`example-${i + 1}`"
