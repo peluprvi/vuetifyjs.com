@@ -22,7 +22,6 @@ import SectionText from './page/SectionText'
 import Example from './Example'
 import ExampleCodepen from './ExampleCodepen'
 import HomeFooter from './HomeFooter'
-import QuickStartTemplateList from './QuickStartTemplateList'
 
 export default {
   // Core
@@ -48,6 +47,5 @@ export default {
   // Common
   // Example,
   ExampleCodepen,
-  HomeFooter,
-  QuickStartTemplateList
+  HomeFooter
 }

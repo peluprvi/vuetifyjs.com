@@ -4,15 +4,15 @@
     v-layout
       v-flex(xs12 md9)
         slot
-        //- app-footer
+        app-footer
       v-flex(md3 hidden-sm-and-down)
-        strong ASIDE
-        //- app-table-of-contents(
-        //-   threshold="50"
-        //-   offset="85"
-        //-   :items="toc"
-        //- )
-        //-   app-ad(slot="top")
+        app-table-of-contents(
+          v-if="toc"
+          threshold="50"
+          offset="85"
+          :items="$t(toc)"
+        )
+          //- app-ad(slot="top")
 
 </template>
 
@@ -21,10 +21,8 @@
   export default {
     name: 'page',
 
-    data () {
-      return {
-
-      }
+    props: {
+      toc: String
     }
   }
 

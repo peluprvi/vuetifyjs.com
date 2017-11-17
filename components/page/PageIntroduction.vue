@@ -1,13 +1,18 @@
 <template lang="pug">
-  div.page-heading.mb-5
-    h1.display-1.primary--text.mb-3#introduction
-      slot(name="title")
-    div
-      slot
+
+  div#introduction.mb-5
+    h1.display-1.primary--text.mb-3(v-html="$t(title)")
+    div(v-if="desc" v-html="$t(desc)")
+
 </template>
 
 <script>
   export default {
-    name: 'page-introduction'
+    name: 'page-introduction',
+
+    props: {
+      title: String,
+      desc: String
+    }
   }
 </script>

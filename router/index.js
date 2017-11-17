@@ -10,8 +10,10 @@ const release = process.env.RELEASE
 // Function to create routes
 // Is default lazy but can be changed
 function route (path, view) {
+  let name = view.split('/').pop()
   return {
     path: path,
+    name,
     meta: meta[path],
     component: () => import(
       /* webpackChunkName: "routes" */
