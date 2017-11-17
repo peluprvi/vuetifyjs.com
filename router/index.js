@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import ComponentPage from '@pages/components/_ComponentPage'
+
 Vue.use(Router)
 
 // The meta data for your routes
@@ -69,41 +71,10 @@ export function createRouter () {
         // Motion & Transitions
         route('/motion/transitions', 'motion/Transitions'),
         // Components
-        route('/components/alerts', 'components/Alerts'),
-        route('/components/avatars', 'components/Avatars'),
-        route('/components/badges', 'components/Badges'),
-        route('/components/breadcrumbs', 'components/Breadcrumbs'),
-        route('/components/bottom-navigation', 'components/BottomNav'),
-        route('/components/bottom-sheets', 'components/BottomSheets'),
-        route('/components/buttons', 'components/Buttons'),
-        route('/components/floating-action-buttons', 'components/Fabs'),
-        route('/components/cards', 'components/Cards'),
-        route('/components/carousels', 'components/Carousels'),
-        route('/components/chips', 'components/Chips'),
-        route('/components/data-tables', 'components/DataTables'),
-        route('/components/dialogs', 'components/Dialogs'),
-        route('/components/dividers', 'components/Dividers'),
-        route('/components/expansion-panels', 'components/ExpansionPanels'),
-        route('/components/footer', 'components/Footer'),
-        route('/components/grid-lists', 'components/GridLists'),
-        route('/components/icons', 'components/Icons'),
-        route('/components/lists', 'components/Lists'),
-        route('/components/menus', 'components/Menus'),
-        route('/components/navigation-drawers', 'components/NavigationDrawers'),
-        route('/components/pagination', 'components/Pagination'),
-        route('/components/parallax', 'components/Parallax'),
-        route('/components/pickers', 'components/Pickers'),
-        route('/components/progress', 'components/Progress'),
-        route('/components/selects', 'components/Selects'),
-        route('/components/selection-controls', 'components/SelectionControls'),
-        route('/components/sliders', 'components/Sliders'),
-        route('/components/snackbars', 'components/Snackbars'),
-        route('/components/steppers', 'components/Steppers'),
-        route('/components/subheaders', 'components/Subheaders'),
-        route('/components/tabs', 'components/Tabs'),
-        route('/components/text-fields', 'components/TextFields'),
-        route('/components/toolbars', 'components/Toolbars'),
-        route('/components/tooltips', 'components/Tooltips'),
+        {
+          path: '/components/:component',
+          component: ComponentPage
+        },
         // Directives
         route('/directives/touch-support', 'directives/Touch'),
         //

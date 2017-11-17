@@ -7,7 +7,7 @@ export default {
   toc: [
     {
       text: 'Introduction',
-      href: 'introduction' 
+      href: 'introduction'
     },
     {
       text: 'Usage',

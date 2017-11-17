@@ -1,0 +1,21 @@
+{
+  "v-alert": {
+    "usage": {
+      "file": "contextual"
+    },
+    "examples": [
+      { "file": "closable" },
+      { "file": "icon" },
+      { "file": "transition" }
+    ]
+  },
+  "v-avatar": {
+    "usage": {
+      "file": "standard"
+    },
+    "examples": [
+      { "file": "advanced" },
+      { "file": "iconAndText" }
+    ]
+  }
+}

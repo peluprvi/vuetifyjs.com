@@ -8,19 +8,8 @@
 
 <script>
   import Meta from '@mixins/meta'
-  // import AppDrawer from '@core/AppDrawer'
-  // import AppToolbar from '@core/AppToolbar'
-  // import AppView from '@core/AppView'
-  // import AppFab from '@core/AppFab'
 
   export default {
-    // components: {
-    //   AppDrawer,
-    //   AppToolbar,
-    //   AppView,
-    //   AppFab
-    // },
-
     mixins: [Meta],
 
     watch: {

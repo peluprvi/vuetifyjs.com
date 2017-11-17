@@ -14,6 +14,7 @@ import PageAPI from './page/PageAPI'
 import PageAlert from './page/PageAlert'
 import PageExamples from './page/PageExamples'
 import PageIntroduction from './page/PageIntroduction'
+import PageUsage from './page/PageUsage'
 import SectionHeading from './page/SectionHeading'
 import SectionSubheading from './page/SectionSubheading'
 import SectionText from './page/SectionText'
@@ -36,10 +37,11 @@ export default {
   // Page
   Markup,
   Page,
-  // PageAPI,
+  PageAPI,
   PageAlert,
-  // PageExamples,
+  PageExamples,
   PageIntroduction,
+  PageUsage,
   SectionHeading,
   SectionSubheading,
   SectionText,
