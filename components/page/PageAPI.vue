@@ -19,7 +19,6 @@
           page-api-parameters(
             :headers="headers[p]"
             :type="p"
-            :api="api"
             :namespace="component.name"
             :components="components"
             :items="getItems(p)"
@@ -28,7 +27,6 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
 
   export default {
     name: 'page-api',
@@ -63,9 +61,6 @@
     }),
 
     computed: {
-      ...mapState({
-        api: state => state.api
-      }),
       components () {
         let components = [this.component.name]
 

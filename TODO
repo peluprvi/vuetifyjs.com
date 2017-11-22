@@ -4,22 +4,29 @@ TODO:
         anchors don't work in /components (because of dynamic routing)
     ▫ TransitionsPage - fix examples
         This will use the PageExamples component eventually.
-    ▫ add :inverted & :has-inverted props to Example
-    ▫ fix FAB page
-    ▫ fix Data Tables page
-    ▫ fix Dividers page
+    ▫ fix Pickers page examples mismatching
+    ▫ fix FAB missing API
     ▫ fix Forms page
+        Property or method "errors" is not defined on the instance but referenced during render.
+        Error in render: "TypeError: Cannot read property 'collect' of undefined"
+
+        veeValidate.vue example
     ▫ fix Grid Lists page
     ▫ fix Nav Drawers page examples overlapping
     ▫ fix Pagination page
-    ▫ fix Pickers page examples mismatching
-    ▫ fix Sliders page
+    ▫ fix Data Tables page
+        Error in render: "TypeError: Cannot read property 'concat' of undefined"
+        at components/page/PageAPIparameters.vue
+    ▫ fix Dividers page
         Error in render: "TypeError: Cannot read property 'map' of undefined"
         at components/page/PageAPIparameters.vue
+    ▫ fix Sliders page
+        same
     ▫ fix Tabs page
         same
     ▫ fix Text Fields
         same
+    ✔ add :inverted & :has-inverted props to Example @done (ср 22 ноември 16:58)
 
 Missing pages:
     ▫ Vuetify

@@ -34,6 +34,8 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
+
   export default {
     name: 'page-api-parameters',
 
@@ -49,10 +51,6 @@
     },
 
     props: {
-      api: {
-        type: Object,
-        default: () => ({})
-      },
       components: {
         type: Array,
         default: () => ([])
@@ -67,6 +65,9 @@
     },
 
     computed: {
+      api () {
+        return this.$store.state.api
+      },
       items () {
         const component = this.api[this.currentComponent] || {
           props: [],
