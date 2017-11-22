@@ -1,5 +1,6 @@
 {
   "alerts": {
+    "name": "v-alert",
     "usage": {
       "file": "contextual"
     },
@@ -10,6 +11,7 @@
     ]
   },
   "avatars": {
+    "name": "v-avatar",
     "usage": {
       "file": "standard"
     },

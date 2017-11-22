@@ -8,13 +8,15 @@
       :title="`Components.${capitalized}.header`"
       :desc="`Components.${capitalized}.headerText`"
     )
-
     page-usage(
       :desc="`Examples.${capitalized}.${file}.desc`"
       :examplePath="`${current}/${file}`"
     )
 
-    page-api
+    page-api(
+      :component="JSONentry"
+    )
+
     page-examples
 
 </template>
@@ -28,11 +30,14 @@
       capitalized () {
         return this.current.charAt(0).toUpperCase() + this.current.slice(1)
       },
-      components () {
+      componentsJSON () {
         return require('./components.json')
       },
+      JSONentry () {
+        return this.componentsJSON[this.current]
+      },
       file () {
-        return this.components[this.current].usage.file
+        return this.componentsJSON[this.current].usage.file
       }
     }
   }

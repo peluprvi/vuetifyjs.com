@@ -11,6 +11,7 @@ import AppView from './core/AppView'
 import Markup from './page/Markup'
 import Page from './page/Page'
 import PageAPI from './page/PageAPI'
+import PageAPIparameters from './page/PageAPIparameters'
 import PageAlert from './page/PageAlert'
 import PageExamples from './page/PageExamples'
 import PageIntroduction from './page/PageIntroduction'
@@ -38,6 +39,7 @@ export default {
   Markup,
   Page,
   PageAPI,
+  PageAPIparameters,
   PageAlert,
   PageExamples,
   PageIntroduction,
