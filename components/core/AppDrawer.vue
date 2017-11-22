@@ -18,9 +18,16 @@
           )
     v-container(fluid)
       v-text-field(
-        solo
+        placeholder="Search"
         append-icon="search"
-        placeholder="Search..."
+        id="search"
+        clearable
+        single-line
+        solo
+        key="search"
+        v-model="search"
+        ref="search"
+        light
       )
     div.py-3.text-xs-center
       a(
@@ -35,32 +42,57 @@
           title="VueJobs"
           width="30%"
         )
-    v-list(dense)
+    v-list(dense expand)
       template(v-for="item in items")
-        v-list-group(v-if="item.items" v-bind:group="item.group")
-          v-list-tile(slot="item" ripple)
-            v-list-tile-action
-              v-icon {{ item.icon }}
+        v-list-group(
+          v-if="item.items"
+          v-bind:group="item.group"
+          no-action
+          :prepend-icon="item.icon"
+        )
+          v-list-tile(slot="activator" ripple)
             v-list-tile-content
               v-list-tile-title {{ item.title }}
-            v-list-tile-action
-              v-icon keyboard_arrow_down
-          v-list-tile(
-            v-for="subItem in item.items"
-            v-bind:key="subItem.title"
-            v-bind="{ \
-              to: !subItem.target ? subItem.href : null, \
-              href: subItem.target && subItem.href \
-            }"
-            ripple
-            v-bind:disabled="subItem.disabled"
-            v-bind:target="subItem.target"
-          )
-            v-list-tile-content
-              v-list-tile-title {{ subItem.title }}
-            v-list-tile-action(v-if="subItem.action")
-              v-icon(:class="[subItem.actionClass || 'success--text']") {{ subItem.action }}
-        v-subheader(v-else-if="item.header").primary--text {{ item.header }}
+          template(v-for="(subItem, i) in item.items")
+            v-list-group(
+              v-if="subItem.items"
+              sub-group
+              :group="subItem.group"
+            )
+              v-list-tile(slot="activator" ripple)
+                v-list-tile-content
+                  v-list-tile-title {{ subItem.title }}
+              v-list-tile(
+                v-for="(grand, i) in subItem.items"
+                :key="i"
+                :to="grand.href"
+              )
+                v-list-tile-content
+                  v-list-tile-title {{ grand.title }}
+            v-list-tile(
+              :key="i"
+              v-bind="{ \
+                to: !subItem.target ? subItem.href : null, \
+                href: subItem.target && subItem.href \
+              }"
+              ripple
+              :disabled="subItem.disabled"
+              :target="subItem.target"
+              v-else
+            )
+              v-list-tile-content
+                v-list-tile-title
+                  span {{ subItem.title }}
+              v-chip(
+                small
+                v-if="subItem.badge"
+                class="white--text pa-0 caption"
+                color="red lighten-2"
+                disabled
+              ) {{ subItem.badge }}
+              v-list-tile-action(v-if="subItem.action")
+                v-icon(:class="[subItem.actionClass || 'success--text']") {{ subItem.action }}
+        v-subheader(v-else-if="item.header").grey--text {{ item.header }}
         v-divider(v-else-if="item.divider")
         v-list-tile(
           v-bind="{ \
@@ -91,9 +123,10 @@
   import { mapState } from 'vuex'
 
   export default {
-    name: 'app-drawer',
-
     data: () => ({
+      docSearch: {},
+      isSearching: false,
+      search: '',
       items: [
         { header: 'Core documentation' },
         {
@@ -115,7 +148,7 @@
           group: 'layout',
           icon: 'mdi-page-layout-body',
           items: [
-            { href: '/layout/pre-defined', title: 'Pre-defined' },
+            { href: '/layout/pre-defined', title: 'Pre-defined', badge: 'updated' },
             { href: '/layout/grid', title: 'Grid & breakpoints' },
             { href: '/layout/spacing', title: 'Spacing' },
             { href: '/layout/alignment', title: 'Alignment' },
@@ -221,6 +254,7 @@
         }
       ]
     }),
+
     computed: {
       ...mapState({
         stateless: state => state.stateless,
@@ -234,11 +268,82 @@
           this.$store.commit('app/DRAWER', val)
         }
       }
+    },
+
+    watch: {
+      isSearching (val) {
+        this.$refs.toolbar.isScrolling = !val
+
+        if (val) {
+          this.$nextTick(() => {
+            this.$refs.search.focus()
+          })
+        } else {
+          this.search = null
+        }
+      },
+      search (val) {
+        if (!val) {
+          this.docSearch.autocomplete.autocomplete.close()
+        }
+      }
+    },
+
+    mounted () {
+      this.init()
+    },
+
+    methods: {
+      init () {
+        this.initDocSearch()
+      },
+      initDocSearch () {
+        const vm = this
+
+        this.docSearch = docsearch({
+          apiKey: '259d4615e283a1bbaa3313b4eff7881c',
+          autocompleteOptions: {
+            appendTo: '#yourself',
+            hint: false,
+            debug: true
+          },
+          indexName: 'vuetifyjs',
+          inputSelector: '#search',
+          handleSelected (input, event, suggestion) {
+            const url = suggestion.url
+            const loc = url.split('.com')
+
+            vm.search = ''
+            vm.isSearching = false
+            vm.$router.push(loc.pop())
+          }
+        })
+      },
+      toggleSidebar () {
+        this.$store.commit('vuetify/SIDEBAR', !this.$store.state.sidebar)
+      }
     }
   }
 </script>
 
 <style lang="stylus">
+  @import '../../node_modules/vuetify/src/stylus/settings/_elevations.styl'
+
+  .algolia-autocomplete
+    flex: 1 1 auto
+
+  #search
+    width: 100%
+
+  #yourself
+    .algolia-autocomplete > span
+      left: -16px !important
+      top: 12px !important
+      elevation(6)
+
+      .ds-dataset-1
+        border: none !important
+
   #app-drawer
     img.logo
       margin 40px 0 15px

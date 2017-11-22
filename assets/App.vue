@@ -1,9 +1,10 @@
 <template lang="pug">
-  v-app
-    app-drawer
-    app-toolbar
-    app-view
-    app-fab
+  v-fade-transition(appear)
+    v-app(v-cloak)
+      app-drawer
+      app-toolbar
+      app-view
+      app-fab
 </template>
 
 <script>
@@ -18,17 +19,16 @@
       }
     },
 
-    mounted () {
+    created () {
       this.setupLayout()
     },
 
     methods: {
       setupLayout (timeout = 300) {
         const drawer = this.$route.fullPath !== '/'
+        this.$store.commit('app/STATELESS', !drawer)
 
         setTimeout(() => {
-          this.$store.commit('app/STATELESS', !drawer)
-
           if (this.$route &&
             this.$route.fullPath !== '/' &&
             this.$route.from &&
@@ -51,4 +51,7 @@
 
   code
     elevation(1)
+  
+  [v-cloak]
+    display: none
 </style>

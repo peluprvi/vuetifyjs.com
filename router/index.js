@@ -20,7 +20,7 @@ function route (path, view) {
     component: () => import(
       /* webpackChunkName: "routes" */
       /* webpackMode: "lazy-once" */
-      `@pages/${view}Page.vue`
+      `@/pages/${view}Page.vue`
     )
   }
 }
