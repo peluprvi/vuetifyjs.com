@@ -327,7 +327,7 @@
 </script>
 
 <style lang="stylus">
-  @import '../node_modules/vuetify/src/stylus/settings/_elevations.styl'
+  @import '../../node_modules/vuetify/src/stylus/settings/_elevations.styl'
 
   .algolia-autocomplete
     flex: 1 1 auto

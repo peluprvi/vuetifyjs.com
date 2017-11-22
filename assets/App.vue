@@ -8,11 +8,11 @@
 </template>
 
 <script>
-  import AppDrawer from '@core/AppDrawer'
-  import AppFab from '@core/AppFab'
-  import AppToolbar from '@core/AppToolbar'
-  import AppView from '@core/AppView'
-  import Meta from '@mixins/meta'
+  import AppDrawer from '@/components/core/AppDrawer'
+  import AppFab from '@/components/core/AppFab'
+  import AppToolbar from '@/components/core/AppToolbar'
+  import AppView from '@/components/core/AppView'
+  import Meta from '@/mixins/meta'
 
   export default {
     name: 'documentation',

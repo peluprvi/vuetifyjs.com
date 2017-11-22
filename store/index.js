@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-const api = require('../api/api.js')
+const api = require('@/api/api.js')
 
 Vue.use(Vuex)
 
