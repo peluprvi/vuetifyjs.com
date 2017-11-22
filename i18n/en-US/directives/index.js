@@ -1,5 +1,5 @@
-import Touch from './Touch'
+import TouchSupport from './TouchSupport'
 
 export default {
-  Touch
+  TouchSupport
 }

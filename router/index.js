@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import ComponentPage from '@pages/components/_ComponentPage'
+import ComponentPage from '@/pages/components/_ComponentPage'
 
 Vue.use(Router)
 

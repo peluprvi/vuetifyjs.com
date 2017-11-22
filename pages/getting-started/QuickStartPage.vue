@@ -108,7 +108,7 @@
 </template>
 
 <script>
-  import TemplateList from '@components/QuickStartTemplateList'
+  import TemplateList from '@/components/QuickStartTemplateList'
 
   export default {
     components: { TemplateList },

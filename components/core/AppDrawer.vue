@@ -1,4 +1,5 @@
 <template lang="pug">
+
   v-navigation-drawer(
     app
     fixed
@@ -117,12 +118,15 @@
             small
             class="caption blue lighten-2 white--text mx-0"
           ) {{ item.chip }}
+
 </template>
 
 <script>
   import { mapState } from 'vuex'
 
   export default {
+    name: 'app-drawer',
+
     data: () => ({
       docSearch: {},
       isSearching: false,
@@ -145,7 +149,7 @@
         },
         {
           title: 'Application layout',
-          group: 'layout',
+          group: '/layout',
           icon: 'mdi-page-layout-body',
           items: [
             { href: '/layout/pre-defined', title: 'Pre-defined', badge: 'updated' },
@@ -170,7 +174,7 @@
         },
         {
           title: 'Motion & transitions',
-          group: 'motion',
+          group: '/motion',
           icon: 'mdi-clock-fast',
           items: [
             { href: '/motion/transitions', title: 'Transitions' }
@@ -221,7 +225,7 @@
         },
         {
           title: 'Directives',
-          group: 'directives',
+          group: '/directives',
           icon: 'mdi-function',
           items: [
             { href: '/directives/resizing', title: 'Resizing' },
@@ -236,7 +240,7 @@
         { header: 'Additional resources' },
         {
           title: 'Community',
-          group: 'community',
+          group: '/community',
           icon: 'mdi-account-multiple',
           items: [
             { href: 'https://chat.vuetifyjs.com/', title: 'Chat and support', target: '_blank' },
@@ -246,7 +250,7 @@
         },
         {
           title: 'Guides',
-          group: 'guides',
+          group: '/guides',
           icon: 'mdi-television-guide',
           items: [
             { href: '/guides/server-side-rendering', title: 'Server side rendering' }
@@ -327,7 +331,7 @@
 </script>
 
 <style lang="stylus">
-  @import '../../node_modules/vuetify/src/stylus/settings/_elevations.styl'
+  @import '~vuetify/src/stylus/settings/_elevations.styl'
 
   .algolia-autocomplete
     flex: 1 1 auto

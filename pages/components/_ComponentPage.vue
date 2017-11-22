@@ -5,39 +5,44 @@
     toc="Generic.ComponentPage.toc"
   )
     page-introduction(
-      :title="`Components.${capitalized}.header`"
-      :desc="`Components.${capitalized}.headerText`"
+      :title="$t(`Components.${currentFormatted}.header`)"
+      :desc="$t(`Components.${currentFormatted}.headerText`)"
     )
     page-usage(
-      :desc="`Examples.${capitalized}.${file}.desc`"
-      :examplePath="`${current}/${file}`"
+      :desc="$t(`Examples.${currentFormatted}.${usageFile}.desc`)"
+      :examplePath="`${currentFormatted}/${usageFile}`"
     )
 
     page-api(
-      :component="JSONentry"
+      :component="currentData"
     )
 
-    page-examples
+    page-examples(
+      :folder="currentFormatted"
+      :files="currentData.examples"
+    )
 
 </template>
 
 <script>
+  import componentsData from './componentsData'
+
   export default {
     computed: {
       current () {
         return this.$route.params.component
       },
-      capitalized () {
-        return this.current.charAt(0).toUpperCase() + this.current.slice(1)
+      currentFormatted () {
+        return this.current
+                      .split('-')
+                      .map(el => el.charAt(0).toUpperCase() + el.slice(1))
+                      .join('')
       },
-      componentsJSON () {
-        return require('./components.json')
+      currentData () {
+        return componentsData[this.current]
       },
-      JSONentry () {
-        return this.componentsJSON[this.current]
-      },
-      file () {
-        return this.componentsJSON[this.current].usage.file
+      usageFile () {
+        return componentsData[this.current].usage.file
       }
     }
   }

@@ -1,10 +1,10 @@
 import Alerts from './Alerts'
 import Avatars from './Avatars'
 import Badges from './Badges'
-import BottomNav from './BottomNav'
+import BottomNavigation from './BottomNavigation'
 import BottomSheets from './BottomSheets'
 import Breadcrumbs from './Breadcrumbs'
-import Btns from './Btns'
+import Buttons from './Buttons'
 import Cards from './Cards'
 import Carousels from './Carousels'
 import Chips from './Chips'
@@ -12,7 +12,7 @@ import DataTables from './DataTables'
 import Dialogs from './Dialogs'
 import Dividers from './Dividers'
 import ExpansionPanels from './ExpansionPanels'
-import Fabs from './Fabs'
+import FloatingActionButtons from './FloatingActionButtons'
 import Footer from './Footer'
 import Forms from './Forms'
 import GridLists from './GridLists'
@@ -20,7 +20,7 @@ import Icons from './Icons'
 import Lists from './Lists'
 import Menus from './Menus'
 import NavigationDrawers from './NavigationDrawers'
-import Paginations from './Paginations'
+import Pagination from './Pagination'
 import Parallax from './Parallax'
 import Pickers from './Pickers'
 import Progress from './Progress'
@@ -34,17 +34,17 @@ import Tabs from './Tabs'
 import TextFields from './TextFields'
 import Toolbars from './Toolbars'
 import Tooltips from './Tooltips'
-import Touch from './Touch'
+import TouchSupport from './TouchSupport'
 import Transitions from './Transitions'
 
 export default {
   Alerts,
   Avatars,
   Badges,
-  BottomNav,
+  BottomNavigation,
   BottomSheets,
   Breadcrumbs,
-  Btns,
+  Buttons,
   Cards,
   Carousels,
   Chips,
@@ -52,7 +52,7 @@ export default {
   Dialogs,
   Dividers,
   ExpansionPanels,
-  Fabs,
+  FloatingActionButtons,
   Footer,
   Forms,
   GridLists,
@@ -60,7 +60,7 @@ export default {
   Lists,
   Menus,
   NavigationDrawers,
-  Paginations,
+  Pagination,
   Parallax,
   Pickers,
   Progress,
@@ -74,6 +74,6 @@ export default {
   TextFields,
   Toolbars,
   Tooltips,
-  Touch,
+  TouchSupport,
   Transitions
 }

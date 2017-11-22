@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import Meta from '@mixins/meta'
+  import Meta from '@/mixins/meta'
 
   export default {
     mixins: [Meta],
@@ -44,14 +44,12 @@
   }
 </script>
 
-<style src="mdi/css/materialdesignicons.css"></style>
-
 <style lang="stylus">
   @import '~vuetify/src/stylus/settings/_elevations.styl'
 
   code
     elevation(1)
-  
+
   [v-cloak]
     display: none
 </style>

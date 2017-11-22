@@ -5,6 +5,7 @@ import 'event-source-polyfill'
 // Packages
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import 'mdi/css/materialdesignicons.css'
 
 // Bootstrap
 import { createStore } from '@/store/index'

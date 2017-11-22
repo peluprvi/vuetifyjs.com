@@ -3,7 +3,7 @@ export default {
     header: "VForm - Basic validation",
     desc: ''
   },
-  validationWithSubmitAndClear: {
+  submitAndClear: {
     header: "VForm - Validation w/ submit & clear",
     desc: ''
   },

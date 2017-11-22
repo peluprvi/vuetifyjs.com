@@ -10,10 +10,10 @@
         style="text-decoration: none;"
       ).mr-2
         v-icon(color="accent") mdi-pound
-      span(v-text="header")
+      span(v-html="header")
 
     //- Section Description
-    div(v-if="desc" v-html="$t(desc)").justify
+    div(v-if="desc" v-html="desc").justify
 
     //- Example
     v-card.mt-5
@@ -90,7 +90,7 @@
 </template>
 
 <script>
-  import Codepen from '@components/ExampleCodepen'
+  import Codepen from '@/components/ExampleCodepen'
 
   import Vue from 'vue'
   const release = process.env.RELEASE
@@ -160,7 +160,7 @@
       import(
         /* webpackChunkName: "examples" */
         /* webpackMode: "lazy-once" */
-        `../examples/${this.file}.vue`
+        `@/examples/${this.file}.vue`
       ).then(comp => {
         this.instance = new Vue(comp.default)
         this.instance.$mount('#example-'+this.uid)
