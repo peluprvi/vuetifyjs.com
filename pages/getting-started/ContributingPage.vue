@@ -4,8 +4,8 @@
     id="contributing"
   )
     page-introduction(
-      title="GettingStarted.Contributing.header"
-      desc="GettingStarted.Contributing.headerText"
+      :title="$t('GettingStarted.Contributing.header')"
+      :desc="$t('GettingStarted.Contributing.headerText')"
     )
 
     section#reporting-issues

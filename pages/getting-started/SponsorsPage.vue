@@ -4,8 +4,8 @@
     id="sponsors-and-backers"
   )
     page-introduction(
-      title="GettingStarted.Sponsors.header"
-      desc="GettingStarted.Sponsors.headerText"
+      :title="$t('GettingStarted.Sponsors.header')"
+      :desc="$t('GettingStarted.Sponsors.headerText')"
     )
 
     section

@@ -5,8 +5,8 @@
     toc="GettingStarted.QuickStart.toc"
   )
     page-introduction(
-      title="GettingStarted.QuickStart.header"
-      desc="GettingStarted.QuickStart.headerText"
+      :title="$t('GettingStarted.QuickStart.header')"
+      :desc="$t('GettingStarted.QuickStart.headerText')"
     )
 
     page-alert(error value="GettingStarted.QuickStart.alert1")

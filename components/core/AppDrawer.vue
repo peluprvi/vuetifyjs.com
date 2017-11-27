@@ -322,9 +322,6 @@
             vm.$router.push(loc.pop())
           }
         })
-      },
-      toggleSidebar () {
-        this.$store.commit('vuetify/SIDEBAR', !this.$store.state.sidebar)
       }
     }
   }

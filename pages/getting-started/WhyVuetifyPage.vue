@@ -5,7 +5,7 @@
     toc="GettingStarted.WhyVuetify.toc"
   )
     page-introduction(
-      title="GettingStarted.WhyVuetify.header"
+      :title="$t('GettingStarted.WhyVuetify.header')"
     )
 
     section

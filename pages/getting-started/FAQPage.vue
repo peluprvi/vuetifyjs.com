@@ -4,8 +4,8 @@
     id="FAQ"
   )
     page-introduction(
-      title="GettingStarted.FAQ.header"
-      desc="GettingStarted.FAQ.headerText"
+      :title="$t('GettingStarted.FAQ.header')"
+      :desc="$t('GettingStarted.FAQ.headerText')"
     )
 
     section#frequently-asked-questions
