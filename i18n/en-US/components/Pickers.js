@@ -89,7 +89,9 @@ export default {
       "headerDateFormat": "Allows you to customize the format of the month string that appears in the header of the calendar. Called with date (ISO 8601 string) and locale (string) arguments.",
       "yearFormat": "Allows you to customize the format of the year string that appears in the header of the calendar. Called with date (ISO 8601 string) and locale (string) arguments.",
       "dayFormat": "Allows you to customize the format of the day string that appears in the date table. Called with date (ISO 8601 string) and locale (string) arguments.",
-      "yearIcon": "Generates an icon next to the year"
+      "yearIcon": "Generates an icon next to the year",
+      "appendIcon": "Sets the icon for next month/year button",
+      "prependIcon": "Sets the icon for previous month/year button"
     },
     "v-time-picker": {
       "actions": "Use this when using actions inside the picker",
