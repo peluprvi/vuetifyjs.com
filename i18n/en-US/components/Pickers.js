@@ -23,6 +23,10 @@ export default {
       header: "Date pickers - Internationalization",
       desc: 'The date picker supports internationalization through the JavaScript Date object. Specify a BCP 47 language tag using the <code>locale</code> prop, and then set the first day of the week with the <code>first-day-of-week</code> prop.'
     },
+    dateIcons: {
+      header: "Date pickers - icons",
+      desc: 'You can override the default icons used in the picker.'
+    },
     monthLight: {
       header: "Month pickers",
       desc: 'Month pickers come in two orientation variations, portrait **(default)** and landscape.'
@@ -42,6 +46,10 @@ export default {
     monthInternationalization: {
       header: "Month pickers - Internationalization",
       desc: 'The month picker supports internationalization through the JavaScript Date object. Specify a BCP 47 language tag using the <code>locale</code> prop, and then set the first day of the week with the <code>first-day-of-week</code> prop.'
+    },
+    monthIcons: {
+      header: "Month pickers - icons",
+      desc: 'You can override the default icons used in the picker.'
     },
     timeLight: {
       header: "Time pickers",
