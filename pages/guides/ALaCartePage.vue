@@ -30,16 +30,6 @@
     section#component-name-list
       section-head(value="Guides.ALaCarte.componentNameListHeader")
       section-text(value="Guides.ALaCarte.componentNameListText1")
-      //- v-card
-        v-card-title
-          v-spacer
-          v-text-field(append-icon="search" label="Search" single-line hide-details v-model="search")
-        v-data-table(v-bind:headers="headers" v-bind:items="filterItems" v-bind:search="search")
-          template(slot="items" slot-scope="props")
-            td(class="text-xs-right") {{ props.item.name }}
-            td(class="text-xs-right") {{ props.item.component }}
-            td(class="text-xs-right") {{ props.item.group }}
-          template(slot="pageText" slot-scope="{ pageStart, pageStop }")= 'From {{ pageStart }} to {{ pageStop }}'
       v-card
         v-card-title
           v-spacer
@@ -56,10 +46,11 @@
             td(class="text-xs-right") {{ props.item.component }}
             td(class="text-xs-right") {{ props.item.group }}
           template(slot="footer")
-            v-tooltip(right debounce="300" dark)
-                v-btn(icon color="primary" dark @click="copyMarkup" slot="activator")
-                  v-icon content_copy
-                span Copy components
+            td(colspan="100%")
+              v-tooltip(right debounce="300" dark)
+                  v-btn(icon color="primary" dark @click="copyMarkup" slot="activator")
+                    v-icon content_copy
+                  span Copy components
 </template>
 
 <script>
@@ -69,6 +60,7 @@ export default {
       search: '',
       pagination: {},
       selected: [],
+      components: '',
       headers: [
         { text: 'Markup', value: 'markup' },
         { text: 'Component Name', value: 'component' },
@@ -154,10 +146,10 @@ export default {
       return items.filter(item => filter(item['name'], search) || filter(item['component'], search)) || filter(item['group'], search);
     },
     generateCustomComponent() {
-      let components = '';
+      this.components = '';
       const unique = [...(new Set(this.selected.map(({ component }) => component)))];
-      unique.forEach(element => components += `${element}, `);
-      return `import Vue from 'vue'; import { Vuetify, ${components}transitions } from 'vuetify'; import App from './App.vue'; Vue.use(Vuetify, { components: { ${components}transitions }, });`;
+      unique.forEach(element => this.components += `${element}, `);
+      return `import Vue from 'vue'; import { Vuetify, ${this.components}transitions } from 'vuetify'; import App from './App.vue'; Vue.use(Vuetify, { components: { ${this.components}transitions }, });`;
     },
     copyMarkup () {
       this.$refs.copy.select();
