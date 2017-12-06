@@ -1,6 +1,10 @@
 <template lang="pug">
   doc-view
-    input(:style="{ position: 'absolute', left: '-1000px', top: '-1000px' }" :value="copy" ref="copy")
+    input(
+      :style="{ position: 'absolute', left: '-1000px', top: '-1000px' }"
+      :value="copy"
+      ref="copy"
+    )
     section#application
       section-head(value="Guides.ALaCarte.applicationHeader")
       section-text(value="Guides.ALaCarte.applicationText1")
@@ -33,22 +37,51 @@
       v-card
         v-card-title
           v-spacer
-          v-text-field(append-icon="search" label="Search" single-line hide-details v-model="search")
-        v-data-table(v-bind:headers="headers" v-bind:items="items" :customFilter="customFilter" v-bind:search="search" v-model="selected" item-key="name" select-all class="elevation-1")
+          v-text-field(
+            append-icon="search"
+            label="Search"
+            single-line
+            hide-details
+            v-model="search"
+          )
+        v-data-table(
+            :headers="headers"
+            :items="items"
+            :customFilter="customFilter"
+            :search="search"
+            v-model="selected"
+            item-key="name"
+            select-all
+            class="elevation-1"
+          )
           template(slot="headerCell" slot-scope="props")
             v-tooltip(bottom)
               span(slot="activator") {{ props.header.text }}
               span {{ props.header.text }}
           template(slot="items" slot-scope="props")
             td
-              v-checkbox(primary hide-details v-model="props.selected")
+              v-checkbox(
+                primary
+                hide-details
+                v-model="props.selected"
+              )
             td(class="text-xs-right") {{ props.item.name }}
             td(class="text-xs-right") {{ props.item.component }}
             td(class="text-xs-right") {{ props.item.group }}
           template(slot="footer")
             td(colspan="100%")
-              v-tooltip(right debounce="300" dark)
-                  v-btn(icon color="primary" dark @click="copyMarkup" slot="activator")
+              v-tooltip(
+                right
+                debounce="300"
+                dark
+              )
+                  v-btn(
+                    icon
+                    color="primary"
+                    dark
+                    @click="copyMarkup"
+                    slot="activator"
+                  )
                     v-icon content_copy
                   span Copy components
 </template>
@@ -137,7 +170,9 @@ export default {
     };
   },
   computed: {
-    copy() { return this.generateCustomComponent(); },
+    copy() {
+      return this.generateCustomComponent();
+    },
   },
   methods: {
     customFilter(items, search, filter) {
