@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap>
     <v-flex xs12 sm6>
-      <v-date-picker type="month" v-model="picker" year-icon="mdi-calendar-blank" previous-icon="fa-backward" next-icon="fa-forward"></v-date-picker>
+      <v-date-picker type="month" v-model="picker" year-icon="mdi-calendar-blank" prepend-icon="fa-backward" append-icon="fa-forward"></v-date-picker>
     </v-flex>
   </v-layout>
 </template>
