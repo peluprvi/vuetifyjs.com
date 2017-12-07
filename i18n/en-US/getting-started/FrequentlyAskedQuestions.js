@@ -45,7 +45,7 @@ export default {
     },
     {
       q: `My page on mobile is not responsive`,
-      a: `Add the <code>```<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">```</code> to the <code>```<head>```</code> section in your index.html.`
+      a: 'Add the <code>`<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">`</code> to the <code>`<head>`</code> section in your index.html.'
     },
     {
       q: `How do I use Font Awesome Icons or Material Design Icons (mdi)?`,
