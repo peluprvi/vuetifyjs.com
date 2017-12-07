@@ -4,7 +4,7 @@ export default {
   blockquoteHeader: 'Block quote',
   paragraphsHeader: 'Paragraphs',
   codeHeader: 'Code',
-  codeText: 'Example of an inline <code>`<code>`</code> element.',
+  codeText: 'Example of an inline `<code>` element.',
   variablesHeader: 'Variables',
   variablesText: '<var>v</var> = <var>u</var> * <var>e</var>',
   userInputHeader: 'User input',
