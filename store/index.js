@@ -149,6 +149,12 @@ export function createStore () {
             { href: 'server-side-rendering', title: 'Server side rendering' },
             { href: 'a-la-carte', title: 'A la carte', badge: 'updated' }
           ]
+        },
+        {
+          title: 'Theme generator',
+          icon: 'mdi-format-color-fill',
+          href: '/additional/generator',
+          badge: 'new'
         }
       ],
       appFooter: true,
