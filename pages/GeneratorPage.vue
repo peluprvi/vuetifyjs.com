@@ -1,65 +1,99 @@
 <template lang="pug">
-  doc-view
-  //- v-container(fluid)#generator
-  //-   v-layout(column align-center)
-  //-     div.pa-4
-  //-       v-btn(icon :disabled="current === 1" @click="current = current - 1")
-  //-         v-icon chevron_left
-  //-       span.body-2 {{ current }} / {{ total }}
-  //-       v-btn(icon :disabled="current === total" @click="current = current + 1")
-  //-         v-icon chevron_right
-  //-     component(:is="components[current - 1]" :dark="dark")
-  //-     v-btn(flat icon @click="dark = !dark")
-  //-       v-icon(:dark="dark") invert_colors
-  //-   v-navigation-drawer(fixed right clipped)
-  //-     div.ma-2
-  //-       v-btn(block color="blue darken-2 white--text" @click.stop="dialog = true") EXPORT THEME
-  //-     v-list
-  //-       v-list-tile(active-class="highlight" :value="key === active" v-for="(value, key, i) in theme" :key="i" @click="active = key")
-  //-         v-list-tile-content
-  //-           v-list-tile-title(v-text="key")
-  //-         v-list-tile-action
-  //-           div(:class="['color', key, 'white--text', 'text-xs-center']") {{ value }}
-  //-     swatch-picker(class="swatch-picker" v-model="color" @input="change" :palette="palette")
-  //-   v-dialog(v-model="dialog" width="300px" content-class="generator-dialog")
-  //-     v-card
-  //-       v-card-text
-  //-         kbd {{ JSON.stringify(this.theme, null, 2) }}
-  //-       v-card-actions
-  //-         v-btn(block color="blue darken-2 white--text" flat="flat" @click.native="dialog = false") Close
+  doc-view#theme-generator
+    app-back-fab(:to="to")
+    div.text-xs-center.mb-5
+      v-btn(icon :disabled="current === 1" @click="current = current - 1")
+        v-icon chevron_left
+      span.body-2 {{ current }} / {{ total }}
+      v-btn(icon :disabled="current === total" @click="current = current + 1")
+        v-icon chevron_right
+    component(:is="components[current - 1]" :dark="dark")
+    div.text-xs-center
+      v-btn(flat icon @click="dark = !dark")
+        v-icon(:dark="dark") invert_colors
+    v-navigation-drawer(
+      fixed 
+      right
+      stateless
+      hide-overlay
+      v-model="drawer"
+    )
+      v-card(tile flat)
+        v-card-text
+          v-btn(
+            block
+            color="blue darken-2 white--text"
+            @click.stop="dialog = true"
+          ) EXPORT THEME
+        v-list
+          v-list-tile(
+            active-class="grey lighten-4"
+            :value="key === active"
+            v-for="(value, key, i) in theme"
+            :key="i"
+            @click="active = key"
+          )
+            v-list-tile-content
+              v-list-tile-title(v-text="key")
+            v-list-tile-action
+              div(
+                :class="['color', key, 'white--text', 'text-xs-center']"
+              ).pa-1 {{ value.toUpperCase() }}
+        swatch-picker(
+          class="swatch-picker"
+          v-model="color"
+          @input="change"
+        )
+        v-dialog(v-model="dialog" width="300px" content-class="generator-dialog")
+          v-card
+            v-card-text
+              kbd {{ JSON.stringify(this.theme, null, 2) }}
+            v-card-actions
+              v-btn(block color="blue darken-2 white--text" flat="flat" @click.native="dialog = false") Close
 
 </template>
 
 <script>
-  import { Swatches } from 'vue-color'
-  import materialColors from '@/util/colors'
+  import colors from '@/util/colors'
   import Components from '@/components/generator'
+  import { Swatches } from 'vue-color'
 
   export default {
     components: {
       'swatch-picker': Swatches
     },
-    data() {
+
+    beforeRouteEnter (to, from, next) {
+      next(vm => {
+        vm.to = from.fullPath
+      })
+    },
+
+    data () {
       return {
+        active: 'primary',
+        backupTheme: {},
+        color: '',
+        components: Components,
+        current: 1,
         dark: false,
         dialog: false,
-        current: 1,
-        total: Components.length,
-        components: Components,
-        active: 'primary',
-        color: '',
-        palette: materialColors,
+        drawer: false,
+        palette: colors,
         theme: {
-          primary: materialColors[5][6],
-          secondary: materialColors[5][10],
-          accent: materialColors[3][5],
-          error: materialColors[0][12],
-          info: materialColors[5][12],
-          success: materialColors[9][12],
-          warning: materialColors[14][12]
+          primary: colors.red.base,
+          secondary: colors.red.lighten2,
+          accent: colors.purple.base,
+          error: colors.red.base,
+          warning: colors.yellow.base,
+          info: colors.blue.base,
+          success: colors.green.base
         },
+        to: null,
+        total: Components.length
       }
     },
+
     watch: {
       active: {
         handler () {
@@ -71,10 +105,24 @@
         handler () {
           this.$vuetify.theme = this.theme
         },
-        deep: true,
-        immediate: true
+        deep: true
       }
     },
+
+    beforeDestroy () {
+      this.drawer = false
+      this.$vuetify.theme = this.backupTheme
+    },
+
+    created () {
+      this.backupTheme = Object.assign({}, this.$vuetify.theme)
+      this.$vuetify.theme = this.theme
+    },
+
+    mounted () {
+      setTimeout(() => (this.drawer = true), 300)
+    },
+
     methods: {
       change (value) {
         this.theme[this.active] = value.hex
@@ -84,19 +132,18 @@
 </script>
 
 <style lang="stylus">
-  #generator
-    .navigation-drawer
-      padding: 0 !important
-      overflow: hidden !important
-
-    .color
-      width: 100px
-      height: 20px
-
+  #theme-generator
     .swatch-picker.vc-swatches
       height: calc(100% - 400px)
       width: 100%
-      box-shadow: none;
+      box-shadow: none
+      overflow: hidden
+
+      .vc-swatches-box
+        display: flex
+        flex-wrap: wrap
+        margin: 0 auto
+        padding: 16px
 
     .component-card
       margin: 1rem;

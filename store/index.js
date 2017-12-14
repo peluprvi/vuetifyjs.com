@@ -152,13 +152,14 @@ export function createStore () {
         },
         {
           title: 'Theme generator',
-          icon: 'mdi-format-color-fill',
-          href: '/additional/generator',
+          icon: 'mdi-format-paint',
+          href: '/theme-generator',
           badge: 'new'
         }
       ],
       appFooter: true,
       currentVersion: null,
+      fullscreenRoutes: ['/', '/404', '/theme-generator'],
       releases: [],
       stateless: false,
       supporters: {
