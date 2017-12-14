@@ -1,6 +1,15 @@
 <template lang="pug">
-  doc-view#theme-generator
-    app-back-fab(:to="to")
+  fullscreen-view(:to="to")#theme-generator
+    v-btn(
+      fab
+      top 
+      right 
+      fixed 
+      @click="drawer = !drawer" 
+      small
+      color="indigo"
+    ).mt-1.white--text
+      v-icon menu
     div.text-xs-center.mb-5
       v-btn(icon :disabled="current === 1" @click="current = current - 1")
         v-icon chevron_left
@@ -12,16 +21,13 @@
       v-btn(flat icon @click="dark = !dark")
         v-icon(:dark="dark") invert_colors
     v-navigation-drawer(
-      fixed 
       right
-      stateless
-      hide-overlay
+      app
       v-model="drawer"
     )
       v-card(tile flat)
         v-card-text
           v-btn(
-            block
             color="blue darken-2 white--text"
             @click.stop="dialog = true"
           ) EXPORT THEME
@@ -39,10 +45,16 @@
               div(
                 :class="['color', key, 'white--text', 'text-xs-center']"
               ).pa-1 {{ value.toUpperCase() }}
+      v-card(
+        tile
+        flat
+        height="calc(100% - 332px)"
+      ).scroll-y.card--swatches
         swatch-picker(
           class="swatch-picker"
           v-model="color"
           @input="change"
+          :palette="palette"
         )
         v-dialog(v-model="dialog" width="300px" content-class="generator-dialog")
           v-card
@@ -78,8 +90,7 @@
         current: 1,
         dark: false,
         dialog: false,
-        drawer: false,
-        palette: colors,
+        drawer: null,
         theme: {
           primary: colors.red.base,
           secondary: colors.red.lighten2,
@@ -91,6 +102,18 @@
         },
         to: null,
         total: Components.length
+      }
+    },
+
+    computed: {
+      palette () {
+        const palette = []
+
+        Object.values(colors).forEach(color => {
+          palette.push(Object.values(color))
+        })
+
+        return palette
       }
     },
 
@@ -133,17 +156,24 @@
 
 <style lang="stylus">
   #theme-generator
+    .navigation-drawer
+      overflow: hidden
+
+    .card--swatches
+      direction: rtl
+
     .swatch-picker.vc-swatches
-      height: calc(100% - 400px)
+      height: 100%
       width: 100%
       box-shadow: none
-      overflow: hidden
+      overflow-y: auto
 
       .vc-swatches-box
         display: flex
         flex-wrap: wrap
         margin: 0 auto
         padding: 16px
+        direction: ltr
 
     .component-card
       margin: 1rem;
