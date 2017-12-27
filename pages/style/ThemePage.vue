@@ -5,7 +5,7 @@
         section-head(:value="`${namespace}.lightAndDarkHeader`")
         section-text(:value="`${namespace}.lightAndDarkText1`")
         markup(lang="html")
-          |&lt;v-app light&gt;
+          |&lt;v-app dark&gt;
           |...
           |&lt;/v-app&gt;
         section-text(:value="`${namespace}.lightAndDarkText2`")
@@ -56,12 +56,18 @@
         h3.mb-3 {{ $t(`${namespace}.stylusHeader2`) }}
         section-text(:value="`${namespace}.stylusText2`")
         markup(lang="cli")
-          |npm i stylus stylus-loader style-loader css-loader --save-dev
+          |$ npm i stylus stylus-loader style-loader css-loader --save-dev
+          |// or
+          |$ yarn add stylus stylus-loader style-loader css-loader --dev
         section-text(:value="`${namespace}.stylusText3`")
         markup(lang="javascript")
-          |{
-          |   test: /\.styl$/,
-          |   loader: ['style-loader', 'css-loader', 'stylus-loader']
+          |module: {
+          |  rules: [
+          |    {
+          |      test: /\.styl$/,
+          |      loader: ['style-loader', 'css-loader', 'stylus-loader']
+          |    }
+          |  ]
           |}
         section-text(:value="`${namespace}.stylusText4`")
         markup(lang="stylus")
@@ -70,32 +76,15 @@
         section-text(:value="`${namespace}.stylusText5`")
         markup(lang="javascript")
           |// app.js
-          |require('./stylus/main.styl')
-        markup(lang="html")
-          |// App.vue
-          |&lt;style lang="stylus"&gt;
-          |   @require './stylus/main'
-          |&lt;/style&gt;
+          |import('./stylus/main.styl')
         section-text(:value="`${namespace}.stylusText6`")
         h3.mb-3 {{ $t(`${namespace}.stylusHeader3`) }}
         section-text(:value="`${namespace}.stylusText7`")
         markup(lang="stylus")
-          |@require '../../node_modules/vuetify/src/stylus/settings/_colors'
+          |$body-font-family = 'Open Sans'
+          |$alert-font-size = 18px
           |&nbsp;
           |@import '../../node_modules/vuetify/src/stylus/main'
-        section-text(:value="`${namespace}.stylusText8`")
-        markup(lang="stylus")
-          |@require '../../node_modules/vuetify/src/stylus/settings/_colors'
-          |&nbsp;
-          |$theme := {
-          |   primary: $red.darken-2
-          |   accent: $red.accent-2
-          |   secondary: $grey.lighten-1
-          |   info: $blue.lighten-1
-          |   warning: $amber.darken-2
-          |   error: $red.accent-4
-          |   success: $green.lighten-2
-          |}
-          |&nbsp;
-          |@require '../../node_modules/vuetify/src/stylus/main'
+          |// For a-la-carte
+          |@import '../../node_modules/vuetify/src/stylus/app'
 </template>
