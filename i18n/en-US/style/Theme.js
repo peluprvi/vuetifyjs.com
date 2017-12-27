@@ -22,7 +22,7 @@ export default {
   stylusText7: 'Now that stylus is configured, we can create a custom `$theme` hash containing the application specific styles. Keep in mind, if you want to use the built in color pack variables, i.e. `$grey.lighten-3` you will need to import the color file at the top of your `main.styl` file. For a list of colors available, navigate to the [Colors](/style/colors) section of the documentation.',
   stylusText8: 'After you have decided on your color palette, simply create a new hash:',
   toc: [
-  {
+    {
       text: 'Theme',
       href: 'introduction'
     },

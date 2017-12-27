@@ -50,8 +50,6 @@
         markup(lang="javascript")
           |this.$vuetify.theme.primary = '#4caf50'
 
-
-      //- STYLUS GUIDE
       section#stylus-guide
         section-head(:value="`${namespace}.stylusHeader`")
         section-text(:value="`${namespace}.stylusText1`")
