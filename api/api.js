@@ -3461,7 +3461,7 @@ module.exports = {
         "default": "top"
       },
       {
-        "name": "hover",
+        "name": "openOnHover",
         "type": "Boolean",
         "default": "False"
       },
