@@ -50,7 +50,15 @@ export default {
       headerless: {
         header: 'Headerless tables',
         desc: 'Setting the <code>hide-headers</code> prop creates a headerless table.'
-      }
+      },
+      editdialog: {
+        header: 'Inline Editing',
+        desc: 'The <code>v-edit-dialog</code> component is used for inline-editing within data tables.'
+      },
+      crud: {
+        header: 'CRUD Actions',
+        desc: 'Simple CRUD actions with data-table.'
+      },
   }],
   props: {
     cancelText: `Set's the default text for the cancel button when using the **large** prop`,

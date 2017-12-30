@@ -38,6 +38,10 @@ export default {
       desc: 'The power and flexibility of the Vuetify grid system allows you to create amazing user interfaces.',
       uninverted: true
     },
+    spacer: {
+      header: 'v-spacer',
+      desc: "The <code>v-spacer</code> component is useful when you want to fill available space or make space between two components. Please note it's parent has a flex display"
+    },
     tags: {
       header: 'Html tags',
       desc: 'Sometimes you will want to specify a layout item as a specific tag, such as a <code>section</code> or <code>li</code> element.'
