@@ -53,11 +53,11 @@ export default {
       },
       editdialog: {
         header: 'Inline Editing',
-        desc: 'The <code>v-edit-dialog</code> component is used for inline-editing within data tables.'
+        desc: 'The `v-edit-dialog` component is used for inline-editing within data tables.'
       },
       crud: {
         header: 'CRUD Actions',
-        desc: 'Simple CRUD actions with data-table.'
+        desc: 'data-table with CRUD actions using a `v-dialog` component for editing each row'
       },
   }],
   props: {

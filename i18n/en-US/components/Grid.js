@@ -40,7 +40,7 @@ export default {
     },
     spacer: {
       header: 'v-spacer',
-      desc: "The <code>v-spacer</code> component is useful when you want to fill available space or make space between two components. Please note it's parent has a flex display"
+      desc: 'The `v-spacer` component is useful when you want to fill available space or make space between two components.'
     },
     tags: {
       header: 'Html tags',
