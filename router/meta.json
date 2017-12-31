@@ -188,7 +188,7 @@
   "/components/data-iterator": {
     "h1": "Data iterator",
     "title": "Data iterator Component",
-    "description": "The v-data-iterator component is used for displaying data, and shares a majority of its functionality with the <code>v-data-table</code> component. Features include sorting, searching, pagination, inline-editing, header tooltips, and selection.",
+    "description": "The v-data-iterator component is used for displaying data, and shares a majority of its functionality with the v-data-table component. Features include sorting, searching, pagination, and selection.",
     "keywords": "data iterator, tables"
   },
   "/components/data-tables": {
