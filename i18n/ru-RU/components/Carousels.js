@@ -1,26 +1,26 @@
 export default {
-  header: 'Carousel',
-  headerText: 'The `v-carousel` component is used to display large numbers of visual content on a rotating timer.',
+  header: 'Карусель',
+  headerText: 'Компонент `v-carousel` используется для отображения большого количества визуального контента на вращающемся таймере.',
   components: ['v-carousel', 'v-carousel-item'],
   examples: [{
     default: {
-      header: 'Default',
-      desc: 'A carousel by default has a slide transition.',
+      header: 'По умолчанию',
+      desc: 'Карусель по умолчанию имеет переход слайдов.',
       uninverted: true
     },
     customTransition: {
-      header: 'Custom transition',
-      desc: 'You can also apply your own custom transition.',
+      header: 'Пользовательский переход',
+      desc: 'Вы также можете применить свой собственный переход.',
       uninverted: true
     },
     customDelimiter: {
-      header: 'Custom delimiter',
-      desc: 'You can also change the icon for the carousel delimiter.',
+      header: 'Пользовательский разделитель',
+      desc: 'Вы также можете изменить значок карусельного разделителя.',
       uninverted: true
     },
     hideControls: {
-      header: 'Hide controls',
-      desc: 'You can hide the bottom controls with the `hide-controls` prop.',
+      header: 'Скрыть элементы управления',
+      desc: 'Вы можете скрыть нижние элементы управления с помощью `hide-controls`.',
       uninverted: true
     }
   }]
