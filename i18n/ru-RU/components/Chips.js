@@ -1,45 +1,45 @@
 export default {
   header: 'Chip',
-  headerText: 'The `v-chip` component is used to convey small pieces of information. Using the `close` property, the chip becomes interactive, allowing user interaction.',
+  headerText: 'Компонент `v-chip` используется для передачи небольших фрагментов информации. Используя свойство `close`, чип становится интерактивным, что позволяет взаимодействовать с пользователем.',
   components: ['v-chip'],
   examples: [{
     default: {
-      header: 'Default',
-      desc: 'Chips come in 4 primary variations. Regular, with icon, with portrait and closeable.',
+      header: 'По умолчанию',
+      desc: 'Chips входят в 4 основных варианта. Обычный, со значком, с портретом и закрывающимся.',
       uninverted: true
     },
     colored: {
-      header: 'Colored',
-      desc: 'Any color from the Material Design palette can be used to change a chips color.'
+      header: 'цветной',
+      desc: 'Любой цвет из палитры Material Design можно использовать для изменения цвета чипов.'
     },
     icon: {
-      header: 'Icon',
-      desc: 'Chips can use text or any icon available in the Material Icons font library.'
+      header: 'Иконка',
+      desc: 'Chips могут использовать текст или любой значок, доступный в библиотеке шрифтов Material Icons.'
     },
     outline: {
-      header: 'Outline',
-      desc: 'Outlined chips inherit their border color from the current text color.'
+      header: 'Контур',
+      desc: 'Очерченные chips наследуют свой цвет границы от текущего цвета текста.'
     },
     label: {
-      header: 'Label',
-      desc: 'Label chips use the `v-card` border-radius.'
+      header: 'Метка',
+      desc: 'В метки chips  используется border-radius `v-card`.'
     },
     closable: {
-      header: 'Closable',
-      desc: 'Closable chips can be controlled with a v-model. Listen to the `input` event if you want to know when a chip has been closed.',
+      header: 'Перекрываемый',
+      desc: 'Закрытые chips можно контролировать с помощью v-model. Прослушайте событие `input`, если вы хотите узнать, когда chip был закрыт.',
       uninverted: true
     },
     inSelects: {
-      header: 'In selects',
-      desc: 'Selects can use chips to display the selected data.',
+      header: 'В выборе',
+      desc: 'Выбор позволяет использовать чипы для отображения выбранных данных.',
       uninverted: true
     }
   }],
   props: {
-    close: 'Adds remove button',
-    label: 'Removes circle edges',
-    outline: 'Removes background and applies border and text color',
-    selected: 'Applies a selection color to the chip. Primarily used for displaying highlight context in `v-select`',
-    small: 'Decreases the chip size'
+    close: 'Кнопка добавления удаления',
+    label: 'Удаляет края круга',
+    outline: 'Удаляет фон и применяет цвет границы и текста',
+    selected: 'Применяет цвет выделения к chip. В основном используется для отображения контекста выделения в `v-select`',
+    small: 'Уменьшает размер чипа'
   }
 }
