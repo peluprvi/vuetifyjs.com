@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(:class="['markup', color]" v-bind:data-lang="lang").mb-3
+  div(:class="['markup', color]" :data-lang="lang").mb-3
     pre
       code(v-bind:class="lang" ref="markup")
         slot
@@ -29,7 +29,8 @@
     data () {
       return {
         copied: false,
-        content: ''
+        content: '',
+        highlightAttempts: 0
       }
     },
 
@@ -42,7 +43,18 @@
     },
 
     mounted () {
-      highlight.highlightBlock(this.$refs.markup)
+      const cb = deadline => {
+        if (deadline.timeRemaining() < 33.3 && this.highlightAttempts < 3 && !deadline.didTimeout) {
+          ++this.highlightAttempts
+          requestIdleCallback(cb, { timeout: 250 })
+        } else {
+          highlight.highlightBlock(this.$refs.markup)
+        }
+      }
+
+      'requestIdleCallback' in window
+        ? window.requestIdleCallback(cb, { timeout: 500 })
+        : highlight.highlightBlock(this.$refs.markup)
     },
 
     methods: {
