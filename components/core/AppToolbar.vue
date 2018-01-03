@@ -4,8 +4,9 @@
     app
     dark
     fixed
-    :inverted-scroll="getManualScroll($route.path)"
     scroll-off-screen
+    :inverted-scroll="$route.path === '/'"
+    :manual-scroll="isFullscreen"
     ref="toolbar"
   )#app-toolbar
     v-toolbar-side-icon(
@@ -69,7 +70,6 @@
   export default {
     data: () => ({
       fixed: false,
-      isManualScrolling: false,
       languages: [
         {
           title: 'English',
@@ -84,8 +84,9 @@
 
     computed: {
       ...mapState({
+        appToolbar: state => state.appToolbar,
         currentVersion: state => state.currentVersion,
-        fullscreenRoutes: state => state.fullscreenRoutes,
+        isFullscreen: state => state.isFullscreen,
         loadedLangs: state => state.loadedLangs,
         releases: state => state.releases,
         stateless: state => state.stateless
@@ -95,9 +96,6 @@
     methods: {
       changeToRelease (release) {
         window.location.href = `${window.location.origin}/releases/${release}/#${this.$route.fullPath}`
-      },
-      getManualScroll (path) {
-        return this.fullscreenRoutes.includes(path)
       },
       async translateI18n (lang) {
         if (this.loadedLangs.indexOf(lang) < 0) {
