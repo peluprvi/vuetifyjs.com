@@ -73,6 +73,7 @@ export function createStore () {
             { href: 'cards', title: 'Cards' },
             { href: 'carousels', title: 'Carousels' },
             { href: 'chips', title: 'Chips' },
+            { href: 'data-iterator', title: 'Data iterator', badge: 'new' },
             { href: 'data-tables', title: 'Data tables' },
             { href: 'dialogs', title: 'Dialogs' },
             { href: 'dividers', title: 'Dividers' },
@@ -111,7 +112,7 @@ export function createStore () {
             { href: 'snackbars', title: 'Snackbars' },
             { href: 'steppers', title: 'Steppers' },
             { href: 'subheaders', title: 'Subheaders' },
-            { href: 'tabs', title: 'Tabs' },
+            { href: 'tabs', title: 'Tabs', badge: 'updated' },
             { href: 'toolbars', title: 'Toolbars', badge: 'updated' },
             { href: 'tooltips', title: 'Tooltips' }
           ]
@@ -131,6 +132,14 @@ export function createStore () {
         { href: 'https://vuetify.threadless.com/', title: 'Shop', target: '_blank', icon: 'mdi-store' },
         { divider: true },
         { header: 'Additional resources' },
+        {
+          title: 'Ecosystem',
+          group: '/ecosystem',
+          icon: 'mdi-earth',
+          items: [
+            { href: 'https://github.com/vuetifyjs/awesome-vuetify', title: 'Awesome Vuetify', target: '_blank', badge: 'new' }
+          ]
+        },
         {
           title: 'Community',
           group: '/community',
@@ -160,6 +169,7 @@ export function createStore () {
       appFooter: true,
       currentVersion: null,
       fullscreenRoutes: ['/', '/404', '/theme-generator'],
+      loadedLangs: [],
       releases: [],
       stateless: false,
       supporters: {
@@ -222,6 +232,9 @@ export function createStore () {
       },
       ['app/RELEASES'] (state, payload) {
         state.releases = payload
+      },
+      ['app/LOAD_LANG'] (state, payload) {
+        state.loadedLangs.push(payload)
       }
     },
 

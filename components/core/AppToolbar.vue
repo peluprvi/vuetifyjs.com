@@ -25,7 +25,6 @@
         offset-y
         left
         attach
-        min-width="300"
       )
         v-btn(
           slot="activator"
@@ -33,10 +32,13 @@
         )
           span Translations
           v-icon keyboard_arrow_down
-        v-card(light)
-          v-card-title.title Coming soon!
-          v-card-text
-            div For more information, visit the <a href="https://discord.gg/CweuCn7" target="_blank">community</a>
+        v-list(light)
+          v-list-tile(
+            v-for="language in languages"
+            :key="language.locale"
+            @click="translateI18n(language.locale)"
+          )
+            v-list-tile-title {{language.title}}
       v-menu(bottom offset-y attach).hidden-xs-only
         v-btn(
           slot="activator"
@@ -67,13 +69,24 @@
   export default {
     data: () => ({
       fixed: false,
-      isManualScrolling: false
+      isManualScrolling: false,
+      languages: [
+        {
+          title: 'English',
+          locale: 'en'
+        },
+        {
+          title: 'русский',
+          locale: 'ru'
+        }
+      ]
     }),
 
     computed: {
       ...mapState({
         currentVersion: state => state.currentVersion,
         fullscreenRoutes: state => state.fullscreenRoutes,
+        loadedLangs: state => state.loadedLangs,
         releases: state => state.releases,
         stateless: state => state.stateless
       })
@@ -85,6 +98,20 @@
       },
       getManualScroll (path) {
         return this.fullscreenRoutes.includes(path)
+      },
+      async translateI18n (lang) {
+        if (this.loadedLangs.indexOf(lang) < 0) {
+          await import(
+            /* webpackChunkName: "lang-[request]" */
+            /* webpackMode: "lazy-once" */
+            `@/lang/${lang}`
+          ).then(msgs => this.$i18n.setLocaleMessage(lang, msgs.default))
+          .catch(err => Promise.resolve(err))
+        }
+
+        document.querySelector('html').setAttribute('lang', lang)
+
+        this.$i18n.locale = lang
       }
     }
   }
