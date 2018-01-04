@@ -152,7 +152,7 @@
       }),
       appDrawer: {
         get (state) {
-          return this.$store.state.appDrawer ||
+          return this.$store.state.appDrawer &&
             !this.isFullscreen
         },
         set (val) {

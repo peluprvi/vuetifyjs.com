@@ -1,6 +1,6 @@
 <template lang="pug">
-  v-container.page
-    app-back-fab(:to="to" v-if="to")
+  v-container(v-bind="$attrs").page
+    app-back-fab(:to="to" v-if="to && !noBack")
     slot(:namespace="namespace")
 </template>
 
@@ -11,9 +11,15 @@
   import { camel } from '@/util/helpers'
 
   export default {
+    inheritAttrs: false,
+
     data: () => ({
       to: null
     }),
+
+    props: {
+      noBack: Boolean
+    },
 
     computed: {
       ...mapState({

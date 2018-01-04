@@ -117,7 +117,7 @@ export default [
     ]
   },
   { href: '/pre-made-themes', title: 'Pre-made themes', icon: 'mdi-theme-light-dark' },
-  { href: '/store', title: 'Store', icon: 'mdi-store', badge: 'new' },
+  { href: '/store', title: 'Store', icon: 'mdi-store', badge: 'coming soon' },
   { divider: true },
   { header: 'Additional resources' },
   {
