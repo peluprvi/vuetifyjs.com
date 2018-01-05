@@ -17,7 +17,7 @@ export default {
     {
       "img": "/static/doc-images/feature3.svg",
       "title": "充满活力的社区",
-      "text": "Vuetify借助Discord服务成立了正在不断壮大社区，为您提供即时聊天支持。当遇到问题时，您可以立即向我们请求协助。"
+      "text": "当遇到问题时，您可以立即向我们请求协助。Vuetify借助Discord服务成立了正在不断壮大社区，为您提供即时聊天支持。"
     }
   ],
   "checkFeaturesTitle": "你需要的工具应有尽有",

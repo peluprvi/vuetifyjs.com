@@ -1,48 +1,48 @@
 export default {
-  header: `What's coming up`,
-  headerText: 'Vuetify is always under development. We are constantly working towards improving the existing codebase, as well as adding new features and functionality that help make building applications even easier. Below is a tentative list of planned features. This is not an exhaustive list and is subject to change at any time without notice.',
+  header: `即将到来`,
+  headerText: 'Vuetify始终在开发中。我们一直致力于改进现有的代码库，并且增加新的特性和功能，使得构建应用程序更加轻松。以下是计划功能的暂定清单，这不是一个详尽的清单，可能随时会更改，恕不另行通知。',
   roadmap: [
     {
       icon: 'mdi-alert-decagram',
-      name: 'Version 1.0',
+      name: '1.0正式版',
       date: 'Q4 2017',
-      desc: 'The official release of Vuetify. Will include a full documentation update featuring i18n support, light/dark built in examples and much more!'
+      desc: 'Vuetify官方正式版发布。将包含一个完整的文档更新，使得支持国际化、内置光亮/黑暗事例，甚至更多特性!'
     },
     {
       icon: 'brush',
-      name: 'Alpha theme',
+      name: 'Alpha主题',
       date: 'Q1 2018',
-      desc: `Vuetify's first theme. A handcrafted Material Design theme with Vuetify at its core. Features custom components.`
+      desc: `Vuetify的第一个主题。一个以Vuetify为核心的手工Material Design主题，涵盖自定义组件和特性。`
     },
     {
       icon: 'error',
-      name: 'Version 1.1',
+      name: '1.1正式版',
       date: 'Q1 2018',
-      desc: 'Will be focused on updating/improving and abstracted the form elements. The new abstracted components will be publicly available so that developers can create their own implementations easier.'
+      desc: '重点更新/改进和抽象表单（Form）元素。新的抽象组件将公开可用，以便开发者可以更容易地创建自己的实现。'
     },
     {
       icon: 'mdi-package-variant-closed',
-      name: 'Front-end pack',
+      name: '前端包',
       date: 'Q2 2018',
-      desc: 'Includes 10 new components. Will be **free** to everyone thanks to our Patrons.'
+      desc: '包含10个新组件。感谢我们的赞助者将它们**免费**带给每一个人。'
     },
     {
       icon: 'error',
-      name: 'Version 1.2',
+      name: '1.2正式版',
       date: 'Q2 2018',
       desc: 'TBD'
     },
     {
       icon: 'mdi-package-variant-closed',
-      name: 'Back-end pack',
+      name: '后端包',
       date: 'Q2 2018',
-      desc: 'Includes 10 new components. Will be **free** to everyone thanks to our Patrons.'
+      desc: '包含10个新组件。感谢我们的赞助者将它们**免费**带给每一个人。'
     },
     {
       icon: 'mdi-youtube-play',
       name: 'Vueticasts',
       date: '2018',
-      desc: 'A Video series on Vue and Vuetify. Will be **free** to everyone thanks to our Patrons.'
+      desc: '一个Vue和Vuetify的视频系列。感谢我们的赞助者将它们**免费**带给每一个人。'
     }
   ]
 }
