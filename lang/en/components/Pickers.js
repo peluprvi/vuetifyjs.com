@@ -19,6 +19,10 @@ export default {
       header: 'Date pickers - Allowed dates',
       desc: 'You can specify allowed dates using arrays, objects, and functions.'
     },
+    dateEvents: {
+      header: 'Date pickers - Events',
+      desc: 'You can specify events using arrays, objects, and functions. To change the default color of the event use **event-color** prop.'
+    },
     dateInternationalization: {
       header: 'Date pickers - Internationalization',
       desc: 'The date picker supports internationalization through the JavaScript Date object. Specify a BCP 47 language tag using the `locale` prop, and then set the first day of the week with the `first-day-of-week` prop.'
