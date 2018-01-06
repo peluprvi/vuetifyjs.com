@@ -2,7 +2,7 @@
 import Vuetify from './vuetify';
 import GettingStarted from './getting-started';
 // import Guides from './guides';
-// import Layout from './layout';
+import Layout from './layout';
 // import Style from './style';
 // import Motion from './motion';
 
@@ -22,7 +22,7 @@ export default {
   // Components,
   // Directives,
   // Generic,
-  // Layout,
+  Layout,
   // Mixins,
   // Style,
   // Motion,
