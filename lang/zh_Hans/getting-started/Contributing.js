@@ -6,7 +6,7 @@ export default {
   issue2: '一般性问题,请加入[社区](https://chat.vuetifyjs.com)。',
   issue3: '尝试搜索您的工单，它或许已获得回答。',
   issue4: '看看错误是否可用最新版本重现。',
-  issue5: '如果可重现，请提供一个简单的[codepen示例](https://template.vuetifyjs.com)可被克隆并产生预期行为的仓库。',
+  issue5: '如果可重现，请提供一个简单的[codepen示例](https://template.vuetifyjs.com)或者是可被克隆并产生预期行为的仓库。',
   pullRequestsHeader: '拉取请求（Pull requests）',
   pullRequest1: '所有拉取请求都必须放在Vuetify的`dev`分支。',
   pullRequest2: '有关更改和功能请求，请包含您正在尝试解决的问题的示例和标签示例。',
