@@ -3,7 +3,7 @@ import Vuetify from './vuetify';
 import GettingStarted from './getting-started';
 // import Guides from './guides';
 import Layout from './layout';
-// import Style from './style';
+import Style from './style';
 import Motion from './motion';
 
 // // Generic
@@ -24,7 +24,7 @@ export default {
   // Generic,
   Layout,
   // Mixins,
-  // Style,
+  Style,
   Motion,
   Vuetify,
   GettingStarted,
