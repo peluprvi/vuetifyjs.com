@@ -1,5 +1,5 @@
 export default {
-  header: '快速起步',
+  header: '快速入门',
   headerText: '使用一个Vuetify Vue CLI安装包 _(基于官方示例)_ 立即开始您的项目。 Vuetify 支持**SSR**（服务端渲染）,**SPA**（单页应用程序）,**PWA**（渐进式Web应用程序）和标准**HTML**页面。',
   alert1: '为了让您的应用程序正常工作，您**必须**将其包装在一个`v-app`组件中。这个组件是用来管理您的动态内容，以及用来安装许多组件的地方。',
   browserHeader: '受支持的浏览器',

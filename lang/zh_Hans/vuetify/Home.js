@@ -2,7 +2,7 @@ export default {
   "announcementBanner": "嗨！这是一则令人兴奋的公告，也或许只是一则广告！",
   "heading1": "Vuetify",
   "heading1cont": "Material Design 组件框架",
-  "getStarted": "起步",
+  "getStarted": "快速入门",
   "features": [
     {
       "img": "/static/doc-images/feature1.svg",
