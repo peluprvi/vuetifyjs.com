@@ -1,15 +1,15 @@
 export default {
   header: 'Free and Premium themes',
-  headerText: 'Vuetify offers Free and Premium pre-made themes designed to get you started in a flash. Free themes are available to install through vue-cli or you can simply download the source.',
-  free: 'FREE',
+  headerText: 'Vuetify offers both **free** and **premium** pre-made themes designed to get you started in a flash. Free themes are available to install through vue-cli or you can simply download the source.',
+  free: 'Free',
   demo: 'Demo',
-  comingSoon: 'Coming soon',
-  sourceCode: 'Source Code',
+  comingSoon: 'coming soon',
+  sourceCode: 'source code',
   templates: [
     {
       screenshot: '/static/doc-images/starter/vuetify-premium.jpg',
       title: 'Startup',
-      tag: 'PREMIUM',
+      tag: 'Premium',
       description: 'Showcase your Company or personal portfolio with this beautifully hand-crafted Material design template.',
       price: '25$',
       demoUrl: ''

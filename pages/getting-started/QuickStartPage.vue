@@ -14,14 +14,12 @@
               v-bind:key="browser.title"
             ).px-0
               v-list-tile(avatar tag="ul")
-                v-list-tile-avatar
-                  v-icon(dark).primary fa-{{ browser.icon }}
+                v-list-tile-avatar(:color="browser.supported ? browser.supported === 'polyfill' ? 'warning' : 'success' : 'error'")
+                  v-icon(dark v-if="typeof browser.icon === 'string'") fa-{{ browser.icon }}
+                  v-icon(dark v-else v-for="icon in browser.icon" :key="icon").browser-icon--split fa-{{ icon }}
                 v-list-tile-content
                   v-list-tile-title {{ browser.title }}
-                  v-list-tile-sub-title {{ browser.supported === true ? 'Supported' : (browser.supported === false ? 'Not supported' : browser.supported) }}
-                v-list-tile-action
-                  v-icon(v-if="!browser.supported" color="error") clear
-                  v-icon(v-else color="success") check
+                  v-list-tile-sub-title {{ getBrowserSupport(browser) }}
 
       section#cdn-install
         section-head(:value="`${namespace}.cdnHeader`")
@@ -114,12 +112,34 @@
     data: () => ({
       browsers: [
         { icon: 'internet-explorer', title: 'IE9 / IE10', supported: false },
-        { icon: 'internet-explorer', title: 'IE11', supported: 'Supported with polyfill' },
+        { icon: ['internet-explorer', 'safari'], title: 'IE11 / Safari 9', supported: 'polyfill' },
         { icon: 'edge', title: 'Edge', supported: true },
         { icon: 'chrome', title: 'Chrome', supported: true },
         { icon: 'firefox', title: 'Firefox', supported: true },
-        { icon: 'safari', title: 'Safari 9+', supported: true },
+        { icon: 'safari', title: 'Safari 10+', supported: true },
       ]
-    })
+    }),
+
+    methods: {
+      getBrowserSupport (browser) {
+        if (browser.supported === true) return this.$t('GettingStarted.QuickStart.browserSupport.supported')
+        else if (browser.supported === false) return this.$t('GettingStarted.QuickStart.browserSupport.notSupported')
+        else return this.$t(`GettingStarted.QuickStart.browserSupport.${browser.supported}`)
+      }
+    }
   }
 </script>
+
+<style lang="stylus">
+  .browser-icon--split
+    position: absolute
+
+    // IE  щ（ﾟДﾟщ）
+    top: 8px
+    left: 16px
+
+    &:nth-child(1)
+      clip: rect(0px 21px 40px 0px)
+    &:nth-child(2)
+      clip: rect(0px 40px 40px 22px)
+</style>

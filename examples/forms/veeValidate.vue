@@ -58,7 +58,23 @@
           'Item 3',
           'Item 4'
         ],
-        checkbox: null
+        checkbox: null,
+        dictionary: {
+          attributes: {
+            email: 'E-mail Address'
+            // custom attributes
+          },
+          custom: {
+            name: {
+              required: () => 'Name can not be empty',
+              max:'The name field may not be greater than 10 characters',
+              // custom messages
+            },
+            select: {
+               required: 'Select field is required'
+            }
+          }
+        }
       }
     },
     methods: {
@@ -72,6 +88,9 @@
         this.checkbox = null
         this.$validator.reset()
       }
+    },
+    mounted(){
+      this.$validator.localize('en',this.dictionary)
     }
 
   }

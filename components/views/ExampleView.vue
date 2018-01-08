@@ -128,6 +128,12 @@
             { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
             { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
           ],
+          functions: [
+            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
+            { text: this.$t('Generic.Pages.parameters'), value: 'parameters', align: 'left' },
+            { text: this.$t('Generic.Pages.return'), value: 'return', align: 'left' },
+            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+          ],
           functional: [
             { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
             { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
@@ -135,12 +141,18 @@
         },
         search: null,
         tab: null,
-        tabs: ['props', 'slots', 'scopedSlots', 'params', 'events', 'functional']
+        tabs: ['props', 'slots', 'scopedSlots', 'params', 'events', 'functions', 'functional']
       }
     },
 
     props: {
       data: Object
+    },
+
+    watch: {
+      currentApi () {
+        if (!this.currentApi.hasOwnProperty(this.tab)) this.tab = 'props'
+      }
     },
 
     computed: {
