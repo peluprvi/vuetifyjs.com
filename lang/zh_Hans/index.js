@@ -16,14 +16,14 @@ import Generic from './generic';
 import Directives from './directives';
 
 // Mixins
-// import Mixins from './mixins'
+import Mixins from './mixins'
 
 export default {
   // Components,
   Directives,
   Generic,
   Layout,
-  // Mixins,
+  Mixins,
   Style,
   Motion,
   Vuetify,
