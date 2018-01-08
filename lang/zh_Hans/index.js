@@ -7,21 +7,21 @@ import Style from './style';
 import Motion from './motion';
 
 // // Generic
-// import Generic from './generic';
+import Generic from './generic';
 
 // // Components
 // import Components from './components';
 
 // // Directives
-// import Directives from './directives';
+import Directives from './directives';
 
 // Mixins
 // import Mixins from './mixins'
 
 export default {
   // Components,
-  // Directives,
-  // Generic,
+  Directives,
+  Generic,
   Layout,
   // Mixins,
   Style,
