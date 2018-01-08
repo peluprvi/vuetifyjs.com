@@ -1,15 +1,15 @@
 export default {
   props: {
-    activeClass: `Class bound when component is active. **warning** Depending upon the component, this could cause side effects. If you need to add a custom class on top of a default, just do <code>active-class="default-class your-class"</code>`,
+    activeClass: `当组件处于激活状态时被绑定的类，**警告（warning）**取决于组件，这可能会导致副作用。如果您需要在默认情况下添加自定义类，只需设置<code>active-class="default-class your-class"</code>`,
     append: `Vue Router的router-link属性`,
-    disabled: 'Route item is disabled',
-    exact: 'Exactly match the link. Without this, "/" will match every route',
-    exactActiveClass: 'Vue Router router-link prop',
-    href: 'Will designate the component tag to `<a>`',
+    disabled: 'Route列表项是被禁用的',
+    exact: '完全匹配链接，没有这个的话，“/”将匹配每一个路由',
+    exactActiveClass: 'Vue Router的 router-link属性',
+    href: '将组件标签指定为`<a>`',
     nuxt: '指定一个链接是nuxt链接（nuxt-link）',
-    replace: 'Vue Router router-link prop',
-    to: 'Will designate the component tag to `<router-link>`',
-    tag: 'Specify a custom tag to use on the component',
-    target: 'Specify the target attribute, only works with anchor tag.'
+    replace: 'Vue Router router-link 属性',
+    to: '将组件标签指定为`<router-link>`',
+    tag: '指定要在组件上使用的自定义标签',
+    target: '指定目标属性，仅适用于猫标签。'
   }
 }
