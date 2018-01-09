@@ -94,9 +94,9 @@ export default {
       'prependIcon': 'Sets the icon for previous month/year button'
     },
     'v-time-picker': {
-      'format': 'Available options are `ampm` and `24hr`',
-      'allowedHours': 'Restricts which hours can be selected',
-      'allowedMinutes': 'Restricts which minutes can be selected'
+      format: 'Available options are `ampm` and `24hr`',
+      allowedHours: 'Restricts which hours can be selected',
+      allowedMinutes: 'Restricts which minutes can be selected'
     }
   }
 }
