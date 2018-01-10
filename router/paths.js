@@ -1,5 +1,4 @@
 export default [
-  ['404', 'general/404'],
   ['', 'Home'],
   ['getting-started/quick-start', 'getting-started/QuickStart'],
   ['getting-started/why-vuetify', 'getting-started/WhyVuetify'],
@@ -24,5 +23,6 @@ export default [
   ['guides/a-la-carte', 'guides/ALaCarte'],
   ['theme-generator', 'ThemeGenerator'],
   ['examples/:example+', 'examples/Example'],
-  [':section/:component', 'components/Doc']
+  [':section/:component', 'components/Doc'],
+  ['*', 'general/404']
 ]

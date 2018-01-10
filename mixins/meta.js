@@ -1,5 +1,3 @@
-const meta = require('@/router/meta.json')
-
 export default {
   data: () => ({
     meta: {},
@@ -58,7 +56,7 @@ export default {
       this.setMeta()
     },
     setMeta () {
-      this.meta = meta[this.$route.path] || {}
+      this.meta = this.$route.meta
     }
   }
 }
