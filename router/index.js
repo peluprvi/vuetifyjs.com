@@ -37,7 +37,7 @@ export function createRouter () {
       {
         path: '/:lang',
         component: () => import(/* webpackChunkName: "routes" */'@/components/views/RootView.vue'),
-        props: true,
+        props: route => ({ lang: route.params.lang }),
         children: routes
       },
       { path: '*', redirect: '/en/' }
