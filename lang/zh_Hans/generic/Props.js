@@ -14,7 +14,7 @@ export default {
   maxHeight: '设置内容的最大高度',
   min: '设置最小宽度',
   mobileBreakPoint: '设置指定的移动端断点',
-  overlap: '组将折叠开槽的内容',
+  overlap: '组件将折叠插槽里的内容',
   persistent: '点击外部不会消除对话框',
   returnMaskedValue: '返回未修改的掩码字符串',
   ripple: '使用`v-ripple`指令',
@@ -24,6 +24,6 @@ export default {
   textColor: '将指定的颜色应用于控件文本',
   tile: '删除边看弧度',
   trueValue: '设置真值',
-  value: '控制能见度',
+  value: '控制可见性',
   width: '内容的宽度'
 }

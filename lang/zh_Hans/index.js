@@ -10,7 +10,7 @@ import Motion from './motion';
 import Generic from './generic';
 
 // // Components
-// import Components from './components';
+import Components from './components';
 
 // // Directives
 import Directives from './directives';
@@ -19,7 +19,7 @@ import Directives from './directives';
 import Mixins from './mixins'
 
 export default {
-  // Components,
+  Components,
   Directives,
   Generic,
   Layout,

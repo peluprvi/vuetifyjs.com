@@ -7,7 +7,7 @@ export default {
       href: 'introduction'
     },
     {
-      text: '能见度',
+      text: '可见性',
       href: 'visibility'
     },
     {
@@ -19,7 +19,7 @@ export default {
       href: 'examples'
     }
   ],
-  visibilityHeader: '能见度',
+  visibilityHeader: '可见性',
   visibilityText: '有条件地显示基于当前**视野**的元素。这些类使用格式`hidden-{breakpoint}-{condition}`',
   breakpointText: '_断点（breakpoint）_ 设置视野大小:',
   breakpoints: [
