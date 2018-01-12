@@ -132,9 +132,13 @@ function render (req, res) {
   })
 }
 
-app.get('*', isProd ? render : (req, res) => {
+app.get(/^\/([a-z]{2,3}|[a-z]{2,3}-[a-zA-Z]{4}|[a-z]{2,3}-[A-Z]{2,3})(?:\/.*)?$/, isProd ? render : (req, res) => {
   readyPromise.then(() => render(req, res))
 })
+
+// 302 redirect for no language
+// TODO: use accept-language or a cookie instead of /en
+app.get('*', (req, res) => res.redirect(302, `/en${req.path}`))
 
 const port = process.env.PORT || 8095
 app.listen(port, '0.0.0.0', () => {

@@ -6,6 +6,10 @@ import scrollBehavior from './scroll-behavior'
 
 Vue.use(Router)
 
+// language regex:
+// /^[a-z]{2,3}(?:-[a-zA-Z]{4})?(?:-[A-Z]{2,3})?$/
+// /^[a-z]{2,3}|[a-z]{2,3}-[a-zA-Z]{4}|[a-z]{2,3}-[A-Z]{2,3}$/
+
 // The meta data for your routes
 const meta = require('./meta.json')
 const release = process.env.RELEASE
@@ -35,12 +39,16 @@ export function createRouter () {
     scrollBehavior,
     routes: [
       {
-        path: '/:lang',
+        path: '/:lang([a-z]{2,3}|[a-z]{2,3}-[a-zA-Z]{4}|[a-z]{2,3}-[A-Z]{2,3})',
         component: () => import(/* webpackChunkName: "routes" */'@/components/views/RootView.vue'),
         props: route => ({ lang: route.params.lang }),
         children: routes
       },
-      { path: '*', redirect: '/en/' }
+      {
+        path: '*',
+        // TODO: use current language (localstorage?)
+        redirect: to => `/en${to.path}`
+      }
     ]
   })
 
