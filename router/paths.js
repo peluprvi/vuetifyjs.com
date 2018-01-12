@@ -18,7 +18,7 @@ export default [
   ['style/content', 'style/Content'],
   ['motion/transitions', 'motion/Transitions'],
   ['pre-made-themes', 'PremadeThemes'],
-  ['store', 'Store'],
+  ['store', 'store/Index'],
   ['guides/server-side-rendering', 'guides/SSR'],
   ['guides/a-la-carte', 'guides/ALaCarte'],
   ['theme-generator', 'ThemeGenerator', true],
