@@ -1303,7 +1303,11 @@ module.exports = {
       {
         "name": "filter",
         "type": "Function",
+<<<<<<< HEAD
         "default": "(val: object, search: string): boolean",
+=======
+        "default": "(val: Object, search: String) => Boolean",
+>>>>>>> mocking new api section
         "source": "data-iterable"
       },
       {
@@ -1327,13 +1331,21 @@ module.exports = {
       {
         "name": "customSort",
         "type": "Function",
+<<<<<<< HEAD
         "default": "(items: object[], index: number, isDescending: boolean): object[]",
+=======
+        "default": "(items: Array, index: Number, isDescending: Boolean) => Array",
+>>>>>>> mocking new api section
         "source": "data-iterable"
       },
       {
         "name": "customFilter",
         "type": "Function",
+<<<<<<< HEAD
         "default": "(items: object[], search: string, filter: Filter) => object[]",
+=======
+        "default": "(items: Array, search: String, filter: Function) => Array",
+>>>>>>> mocking new api section
         "source": "data-iterable"
       },
       {
@@ -1531,30 +1543,51 @@ module.exports = {
         "default": [],
         "source": null,
         "example": {
+<<<<<<< HEAD
           "text": "string",
           "value": "string",
           "align": "'left' | 'center' | 'right'",
           "sortable": "boolean",
           "class": "string[] | string",
           "width": "string"
+=======
+          "text": "String",
+          "value": "String",
+          "align": "left | center | right",
+          "sortable": "Boolean",
+          "class": "Array | String",
+          "width": "String"
+>>>>>>> mocking new api section
         }
       },
       {
         "name": "customSort",
         "type": "Function",
+<<<<<<< HEAD
         "default": "(items: object[], index: number, isDescending: boolean): object[]",
+=======
+        "default": "(items: Array, index: Number, isDescending: Boolean) => Array",
+>>>>>>> mocking new api section
         "source": "data-iterable"
       },
       {
         "name": "customFilter",
         "type": "Function",
+<<<<<<< HEAD
         "default": "(items: object[], search: string, filter: Filter) => object[]",
+=======
+        "default": "(items: Array, search: String, filter: Function, headers: Array) => Array",
+>>>>>>> mocking new api section
         "source": "data-iterable"
       },
       {
         "name": "filter",
         "type": "Function",
+<<<<<<< HEAD
         "default": "(val: object, search: string): boolean",
+=======
+        "default": "(val: Object, search: String) => Boolean",
+>>>>>>> mocking new api section
         "source": "data-iterable"
       },
       {

@@ -180,8 +180,12 @@
       font-weight: 900
 
     .header
+<<<<<<< HEAD
       font-family: monospace
       font-size: 0.75rem
+=======
+      font-size: 0.8rem
+>>>>>>> mocking new api section
 
     .justify
       text-align: justify
