@@ -37,5 +37,6 @@ export default {
   usage: 'Usage',
   parameters: 'Parameters',
   return: 'Returns',
-  example: 'Example'
+  example: 'Example',
+  signature: 'Signature'
 }

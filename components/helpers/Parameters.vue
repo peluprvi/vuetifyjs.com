@@ -2,13 +2,14 @@
   v-data-iterator(
     :search="search"
     :items="computedItems"
+    :pagination.sync="pagination"
     hide-actions
   ).component-parameters
     template(slot="item" slot-scope="{ item }")
       div(class="ma-2")
         div(class="pa-2 grey lighten-4 d-flex align-top")
           v-flex(v-for="header in headers" :key="header.value" :class="[`xs${header.size}`, `text-xs-${header.align}`]")
-            div(class="header grey--text text--darken-1") {{ header.text }}
+            div(class="header grey--text text--darken-1") {{ genHeaderName(header.value, item) }}
             div(:class="['mono', header.value]") {{ item[header.value] }}
         div(class="pa-2 grey lighten-3 grey--text text--darken-2 d-flex")
           v-flex
@@ -37,10 +38,19 @@
       type: String
     },
 
+    data () {
+      return {
+        pagination: {
+          sortBy: 'name',
+          rowsPerPage: -1
+        }
+      }
+    },
+
     computed: {
       computedItems () {
         return this.items.map(item => {
-          const newItem = Object.assign({}, item)
+          const newItem = item !== Object(item) ? { name: item } : Object.assign({}, item)
 
           const keys = Object.keys(newItem)
           for (let i = 0; i < keys.length; i++) {
@@ -48,7 +58,7 @@
             const fn = this[`gen${capitalize(key)}`]
 
             if (fn) {
-              newItem[key] = fn(item[key], item)
+              newItem[key] = fn(newItem[key], item)
             }
           }
 
@@ -145,8 +155,12 @@
         else return value
       },
       genTypescriptDef (obj) {
-        console.log(obj)
         return JSON.stringify(obj, null, 2).replace(/\"(.*)\"\:\s\"(.*)\",?/g, "$1: $2;")
+      },
+      genHeaderName (header, item) {
+        let name = header
+        if (header === 'default' && item.type === 'Function') name = 'signature'
+        return this.$t(`Generic.Pages.${name}`)
       }
     }
   }

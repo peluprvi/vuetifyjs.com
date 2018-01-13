@@ -128,10 +128,8 @@
             { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
           ],
           functions: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.parameters'), value: 'parameters', align: 'left' },
-            { text: this.$t('Generic.Pages.return'), value: 'return', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left' },
+            { value: 'signature', align: 'right' }
           ],
           functional: [
             { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },

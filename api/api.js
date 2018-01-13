@@ -1303,7 +1303,7 @@ module.exports = {
       {
         "name": "filter",
         "type": "Function",
-        "default": "(val: Object, search: String) => Boolean",
+        "default": "(val: object, search: string): boolean",
         "source": "data-iterable"
       },
       {
@@ -1327,13 +1327,13 @@ module.exports = {
       {
         "name": "customSort",
         "type": "Function",
-        "default": "(items: Array, index: Number, isDescending: Boolean) => Array",
+        "default": "(items: object[], index: number, isDescending: boolean): object[]",
         "source": "data-iterable"
       },
       {
         "name": "customFilter",
         "type": "Function",
-        "default": "(items: Array, search: String, filter: Function) => Array",
+        "default": "(items: object[], search: string, filter: Filter) => object[]",
         "source": "data-iterable"
       },
       {
@@ -1462,21 +1462,21 @@ module.exports = {
     "scopedSlots": [
       {
         "name": "items",
-        "props": [
-          "item",
-          "index",
-          "selected",
-          "expanded"
-        ],
+        "props": {
+          "item": "object",
+          "index": "number",
+          "selected": "boolean",
+          "expanded": "boolean"
+        },
         "source": "data-iterable"
       },
       {
         "name": "pageText",
-        "props": [
-          "pageStart",
-          "pageStop",
-          "itemsLength"
-        ],
+        "props": {
+          "pageStart": "number",
+          "pageStop": "number",
+          "itemsLength": "number"
+        },
         "source": "data-iterable"
       }
     ]
@@ -1548,7 +1548,7 @@ module.exports = {
       {
         "name": "customFilter",
         "type": "Function",
-        "default": "(items: object[], search: string, filter: Filter, headers: object[]): object[]",
+        "default": "(items: object[], search: string, filter: Filter) => object[]",
         "source": "data-iterable"
       },
       {
@@ -1818,7 +1818,11 @@ module.exports = {
       },
       {
         "name": "eventColor",
-        "type": "String",
+        "type": [
+          "String",
+          "Function",
+          "Object"
+        ],
         "default": "warning",
         "source": null
       },
@@ -1850,6 +1854,12 @@ module.exports = {
         "name": "prependIcon",
         "type": "String",
         "default": "chevron_left",
+        "source": null
+      },
+      {
+        "name": "readonly",
+        "type": "Boolean",
+        "default": "false",
         "source": null
       },
       {
@@ -1951,6 +1961,12 @@ module.exports = {
         "source": "colorable"
       },
       {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
         "name": "format",
         "type": "Function",
         "default": "null",
@@ -1985,9 +2001,9 @@ module.exports = {
   "v-date-picker-date-table": {
     "props": [
       {
-        "name": "tableDate",
-        "type": "String",
-        "default": "undefined",
+        "name": "scrollable",
+        "type": "Boolean",
+        "default": "false",
         "source": null
       },
       {
@@ -2010,6 +2026,12 @@ module.exports = {
         "name": "current",
         "type": "String",
         "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false",
         "source": null
       },
       {
@@ -2054,9 +2076,9 @@ module.exports = {
         "source": null
       },
       {
-        "name": "scrollable",
-        "type": "Boolean",
-        "default": "false",
+        "name": "tableDate",
+        "type": "String",
+        "default": "undefined",
         "source": null
       },
       {
@@ -2098,6 +2120,12 @@ module.exports = {
         "name": "current",
         "type": "String",
         "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false",
         "source": null
       },
       {
@@ -2493,6 +2521,16 @@ module.exports = {
     "mixins": [],
     "slots": [
       "default"
+    ],
+    "functions": [
+      {
+        "name": "reset",
+        "signature": "(): void"
+      },
+      {
+        "name": "validate",
+        "signature": "(): boolean"
+      }
     ]
   },
   "v-content": {
@@ -3980,7 +4018,7 @@ module.exports = {
       {
         "name": "transition",
         "type": "String",
-        "default": "picker-transition",
+        "default": "fade-transition",
         "source": null
       }
     ],
