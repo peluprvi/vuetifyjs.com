@@ -1,27 +1,27 @@
 export default {
-  header: 'Pagination',
-  headerText: 'The `v-pagination` component is used to separate long sets of data so that it is easier for a user to consume information. Depending on the length provided, the pagination component will automatically scale. To maintain the current page, simply supply a v-model attribute.',
+  header: '分页',
+  headerText: '`v-pagination`组件用于分隔长的数据集，以便用户更容易地使用信息。根据提供的长度，分页组件将自动缩放。要维护当前页面，只需提供一个v-model标签。',
   components: ['v-pagination'],
   examples: [{
     short: {
-      header: 'Short',
-      desc: 'Pagination displays all pages if parent container is big enough.'
+      header: '短的',
+      desc: '如果父容器足够大，分页器会显示所有页面按钮。'
     },
     long: {
-      header: 'Long',
-      desc: 'When the number of page buttons exceeds the parent container, the component will truncate the list.'
+      header: '长的',
+      desc: '当页面按钮的水浪超过父容器时，组件将截断列表。'
     },
     limit: {
-      header: 'Limit',
-      desc: 'You can also manually set the maximum number of visible page buttons with the `total-visible` prop.'
+      header: '限制',
+      desc: '您可以用`total-visible`属性手动设置可见页面按钮的最大数量。'
     },
     round: {
-      header: 'Round',
-      desc: 'The alternate style for pagination is circle pages.'
+      header: '圆形',
+      desc: '分页的另一种分割是圆形页面按钮'
     },
     disabled: {
-      header: 'Disabled',
-      desc: 'Pagination items can be manually deactivated.'
+      header: '禁用',
+      desc: '分页按钮可以手动禁用。'
     }
   }]
 }

@@ -1,22 +1,22 @@
 export default {
-  header: 'Subheaders',
-  headerText: 'The `v-subheader` component is used to separate sections of lists.',
+  header: '副标题',
+  headerText: '`v-subheader`组件由于分隔列表的各部分。',
   components: ['v-subheader'],
   examples: [{
     list: {
-      header: 'List subheaders',
-      desc: 'Subheaders work great with lists for describing the information below.'
+      header: '列表副标题',
+      desc: '副标题用于描述以下信息的列表时很好用。'
     },
     grid: {
-      header: 'Grid subheaders',
-      desc: 'A subheader can add context to what a user is looking at.'
+      header: '栅格副标题',
+      desc: '一个副标题可以添加上下文到用户正在看的东西。'
     },
     menu: {
-      header: 'Menu subheaders',
-      desc: 'Using a subheader can help separate different types of actions.'
+      header: '菜单副标题',
+      desc: '使用副标题可以帮助分离不同类型的操作。'
     }
   }],
   props: {
-    inset: 'Adds identation (72px)'
+    inset: '添加标识（72px）'
   }
 }

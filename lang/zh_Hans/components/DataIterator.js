@@ -1,6 +1,6 @@
 export default {
-  header: 'Data iterator',
-  headerText: 'The `v-data-iterator` component is used for displaying data, and shares a majority of its functionality with the `v-data-table` component. Features include sorting, searching, pagination, and selection.',
+  header: '数据迭代器',
+  headerText: '`v-data-iterator`组件用于显示数据，并且与 `v-data-table` component. Features include sorting, searching, pagination, and selection.',
   components: ['v-data-iterator'],
   examples: [{
     simple: {
