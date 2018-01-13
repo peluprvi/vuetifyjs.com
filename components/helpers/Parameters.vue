@@ -6,20 +6,15 @@
   ).component-parameters
     template(slot="item" slot-scope="{ item }")
       div(class="ma-2")
-        div(class="pa-2 grey lighten-4 d-flex align-center")
-          v-flex(xs3)
-            div(class="header grey--text") Name
-            div(class="mono name") {{ item.name }}
-          v-flex(xs7)
-            div(class="header grey--text") {{ item.type === 'Function' ? 'Signature' : 'Default' }}
-            div(class="mono") {{ item.default }}
-          v-flex(xs2 class="text-xs-right")
-            div(class="header grey--text") Type
-            div(class="mono") {{ item.type }}
+        div(class="pa-2 grey lighten-4 d-flex align-top")
+          v-flex(v-for="header in headers" :key="header.value" :class="[`xs${header.size}`, `text-xs-${header.align}`]")
+            div(class="header grey--text text--darken-1") {{ header.text }}
+            div(:class="['mono', header.value]") {{ item[header.value] }}
         div(class="pa-2 grey lighten-3 grey--text text--darken-2 d-flex")
-          v-flex(xs12)
+          v-flex
             markdown(:source="item.description" class="justify")
-            kbd(v-if="item.example" class="pa-2 d-flex mt-2 grey darken-2") {{ JSON.stringify(item.example, null, 2).replace(/\"(.*)\"\:\s\"(.*)\"/g, "$1: $2") }}
+            kbd(v-if="item.example" class="pa-2 d-flex mt-2 grey darken-2") {{ genTypescriptDef(item.example) }}
+
 
 </template>
 
@@ -45,6 +40,22 @@
     computed: {
       computedItems () {
         return this.items.map(item => {
+          const newItem = Object.assign({}, item)
+
+          const keys = Object.keys(newItem)
+          for (let i = 0; i < keys.length; i++) {
+            const key = keys[i]
+            const fn = this[`gen${capitalize(key)}`]
+
+            if (fn) {
+              newItem[key] = fn(item[key], item)
+            }
+          }
+
+          newItem.description = this.genDescription(item.name, item)
+
+          return newItem
+          /*
           const newItem = {}
 
           if (item !== Object(item)) {
@@ -63,6 +74,7 @@
           }
 
           return newItem
+          */
         })
       }
     },
@@ -124,13 +136,17 @@
         }).join(', ')
       },
       genProps (props) {
-        if (!Array.isArray(props)) return 'Missing data'
+        if (!props) return '-'
 
-        return `<kbd>{ ${props.join(', ')} }</kbd>`
+        return this.genTypescriptDef(props)
       },
       genDefault (value) {
         if (typeof value !== 'string') return JSON.stringify(value)
         else return value
+      },
+      genTypescriptDef (obj) {
+        console.log(obj)
+        return JSON.stringify(obj, null, 2).replace(/\"(.*)\"\:\s\"(.*)\",?/g, "$1: $2;")
       }
     }
   }
@@ -150,7 +166,8 @@
       font-weight: 900
 
     .header
-      font-size: 0.8rem
+      font-family: monospace
+      font-size: 0.75rem
 
     .justify
       text-align: justify

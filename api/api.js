@@ -1531,30 +1531,30 @@ module.exports = {
         "default": [],
         "source": null,
         "example": {
-          "text": "String",
-          "value": "String",
-          "align": "left | center | right",
-          "sortable": "Boolean",
-          "class": "Array | String",
-          "width": "String"
+          "text": "string",
+          "value": "string",
+          "align": "'left' | 'center' | 'right'",
+          "sortable": "boolean",
+          "class": "string[] | string",
+          "width": "string"
         }
       },
       {
         "name": "customSort",
         "type": "Function",
-        "default": "(items: Array, index: Number, isDescending: Boolean) => Array",
+        "default": "(items: object[], index: number, isDescending: boolean): object[]",
         "source": "data-iterable"
       },
       {
         "name": "customFilter",
         "type": "Function",
-        "default": "(items: Array, search: String, filter: Function, headers: Array) => Array",
+        "default": "(items: object[], search: string, filter: Filter, headers: object[]): object[]",
         "source": "data-iterable"
       },
       {
         "name": "filter",
         "type": "Function",
-        "default": "(val: Object, search: String) => Boolean",
+        "default": "(val: object, search: string): boolean",
         "source": "data-iterable"
       },
       {
@@ -1665,35 +1665,35 @@ module.exports = {
     "scopedSlots": [
       {
         "name": "headerCell",
-        "props": [
-          "header"
-        ]
+        "props": {
+          "header": "object"
+        }
       },
       {
         "name": "headers",
-        "props": [
-          "headers",
-          "indeterminate",
-          "all"
-        ]
+        "props": {
+          "headers": "object[]",
+          "indeterminate": "boolean",
+          "all": "boolean"
+        }
       },
       {
         "name": "items",
-        "props": [
-          "item",
-          "index",
-          "selected",
-          "expanded"
-        ],
+        "props": {
+          "item": "object",
+          "index": "number",
+          "selected": "boolean",
+          "expanded": "boolean"
+        },
         "source": "data-iterable"
       },
       {
         "name": "pageText",
-        "props": [
-          "pageStart",
-          "pageStop",
-          "itemsLength"
-        ],
+        "props": {
+          "pageStart": "number",
+          "pageStop": "number",
+          "itemsLength": "number"
+        },
         "source": "data-iterable"
       }
     ]
