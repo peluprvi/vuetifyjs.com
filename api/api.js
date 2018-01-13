@@ -1,4 +1,4 @@
-/* 
+/*
  * THIS FILE HAS BEEN AUTOMATICALLY GENERATED USING THE VUETIFY-HELPER-JSON TOOL.
  *
  * CHANGES MADE TO THIS FILE WILL BE LOST!
@@ -1303,7 +1303,7 @@ module.exports = {
       {
         "name": "filter",
         "type": "Function",
-        "default": "(val, search) => {}",
+        "default": "(val: Object, search: String) => Boolean",
         "source": "data-iterable"
       },
       {
@@ -1327,13 +1327,13 @@ module.exports = {
       {
         "name": "customSort",
         "type": "Function",
-        "default": "(items, index, isDescending) => {}",
+        "default": "(items: Array, index: Number, isDescending: Boolean) => Array",
         "source": "data-iterable"
       },
       {
         "name": "customFilter",
         "type": "Function",
-        "default": "(items, search, filter) => {}",
+        "default": "(items: Array, search: String, filter: Function) => Array",
         "source": "data-iterable"
       },
       {
@@ -1529,24 +1529,32 @@ module.exports = {
         "name": "headers",
         "type": "Array",
         "default": [],
-        "source": null
+        "source": null,
+        "example": {
+          "text": "String",
+          "value": "String",
+          "align": "left | center | right",
+          "sortable": "Boolean",
+          "class": "Array | String",
+          "width": "String"
+        }
       },
       {
         "name": "customSort",
         "type": "Function",
-        "default": "(items, index, isDescending) => {}",
+        "default": "(items: Array, index: Number, isDescending: Boolean) => Array",
         "source": "data-iterable"
       },
       {
         "name": "customFilter",
         "type": "Function",
-        "default": "(items, search, filter, headers) => {}",
+        "default": "(items: Array, search: String, filter: Function, headers: Array) => Array",
         "source": "data-iterable"
       },
       {
         "name": "filter",
         "type": "Function",
-        "default": "(val, search) => {}",
+        "default": "(val: Object, search: String) => Boolean",
         "source": "data-iterable"
       },
       {

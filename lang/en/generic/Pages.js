@@ -36,5 +36,6 @@ export default {
   ],
   usage: 'Usage',
   parameters: 'Parameters',
-  return: 'Returns'
+  return: 'Returns',
+  example: 'Example'
 }

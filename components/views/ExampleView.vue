@@ -115,7 +115,8 @@
             { text: this.$t('Generic.Pages.options'), value: 'name', align: 'left' },
             { text: this.$t('Generic.Pages.type'), value: 'type', align: 'left' },
             { text: this.$t('Generic.Pages.default'), value: 'default', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' },
+            { text: this.$t('Generic.Pages.example'), value: 'example', align: 'left' }
           ],
           slots: [
             { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },

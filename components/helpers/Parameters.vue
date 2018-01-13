@@ -1,16 +1,26 @@
 <template lang="pug">
-  v-data-table(
-    :headers="headers"
+  v-data-iterator(
     :search="search"
     :items="computedItems"
     hide-actions
   ).component-parameters
-    template(slot="items" slot-scope="{ item }")
-      td(
-        v-for="(opt, i) in item"
-        :key="i"
-      )
-        markdown(:source="opt.toString()")
+    template(slot="item" slot-scope="{ item }")
+      div(class="ma-2")
+        div(class="pa-2 grey lighten-4 d-flex align-center")
+          v-flex(xs3)
+            div(class="header grey--text") Name
+            div(class="mono name") {{ item.name }}
+          v-flex(xs7)
+            div(class="header grey--text") {{ item.type === 'Function' ? 'Signature' : 'Default' }}
+            div(class="mono") {{ item.default }}
+          v-flex(xs2 class="text-xs-right")
+            div(class="header grey--text") Type
+            div(class="mono") {{ item.type }}
+        div(class="pa-2 grey lighten-3 grey--text text--darken-2 d-flex")
+          v-flex(xs12)
+            markdown(:source="item.description" class="justify")
+            kbd(v-if="item.example" class="pa-2 d-flex mt-2 grey darken-2") {{ JSON.stringify(item.example, null, 2).replace(/\"(.*)\"\:\s\"(.*)\"/g, "$1: $2") }}
+
 </template>
 
 <script>
@@ -94,7 +104,8 @@
           description = '**MISSING DESCRIPTION**'
         }
 
-        const prepend = process.env.NODE_ENV === 'development' ? devPrepend : ''
+        // const prepend = process.env.NODE_ENV === 'development' ? devPrepend : ''
+        const prepend = ''
 
         return `${prepend}${description}`
       },
@@ -103,7 +114,7 @@
         name = name.replace(/([A-Z])/g, (g) => `-${g[0].toLowerCase()}`)
         const sync = item.sync && '.sync' || ''
 
-        return `<code>${name}${sync}</code>`
+        return `${name}${sync}`
       },
       genType (type) {
         type = Array.isArray(type) ? type : [type]
@@ -129,7 +140,22 @@
   .component-parameters
     code
       white-space: nowrap
+      box-shadow: none
 
     p
       margin-bottom: 0
+
+    .mono
+      font-family: monospace
+      font-weight: 900
+
+    .header
+      font-size: 0.8rem
+
+    .justify
+      text-align: justify
+
+    .name
+      color: #bd4147
+
 </style>
