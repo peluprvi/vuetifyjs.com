@@ -1303,11 +1303,7 @@ module.exports = {
       {
         "name": "filter",
         "type": "Function",
-<<<<<<< HEAD
-        "default": "(val: object, search: string): boolean",
-=======
         "default": "(val: Object, search: String) => Boolean",
->>>>>>> mocking new api section
         "source": "data-iterable"
       },
       {
@@ -1331,21 +1327,13 @@ module.exports = {
       {
         "name": "customSort",
         "type": "Function",
-<<<<<<< HEAD
-        "default": "(items: object[], index: number, isDescending: boolean): object[]",
-=======
         "default": "(items: Array, index: Number, isDescending: Boolean) => Array",
->>>>>>> mocking new api section
         "source": "data-iterable"
       },
       {
         "name": "customFilter",
         "type": "Function",
-<<<<<<< HEAD
-        "default": "(items: object[], search: string, filter: Filter) => object[]",
-=======
         "default": "(items: Array, search: String, filter: Function) => Array",
->>>>>>> mocking new api section
         "source": "data-iterable"
       },
       {
@@ -1474,21 +1462,21 @@ module.exports = {
     "scopedSlots": [
       {
         "name": "items",
-        "props": {
-          "item": "object",
-          "index": "number",
-          "selected": "boolean",
-          "expanded": "boolean"
-        },
+        "props": [
+          "item",
+          "index",
+          "selected",
+          "expanded"
+        ],
         "source": "data-iterable"
       },
       {
         "name": "pageText",
-        "props": {
-          "pageStart": "number",
-          "pageStop": "number",
-          "itemsLength": "number"
-        },
+        "props": [
+          "pageStart",
+          "pageStop",
+          "itemsLength"
+        ],
         "source": "data-iterable"
       }
     ]
@@ -1543,51 +1531,30 @@ module.exports = {
         "default": [],
         "source": null,
         "example": {
-<<<<<<< HEAD
           "text": "string",
           "value": "string",
           "align": "'left' | 'center' | 'right'",
           "sortable": "boolean",
           "class": "string[] | string",
           "width": "string"
-=======
-          "text": "String",
-          "value": "String",
-          "align": "left | center | right",
-          "sortable": "Boolean",
-          "class": "Array | String",
-          "width": "String"
->>>>>>> mocking new api section
         }
       },
       {
         "name": "customSort",
         "type": "Function",
-<<<<<<< HEAD
         "default": "(items: object[], index: number, isDescending: boolean): object[]",
-=======
-        "default": "(items: Array, index: Number, isDescending: Boolean) => Array",
->>>>>>> mocking new api section
         "source": "data-iterable"
       },
       {
         "name": "customFilter",
         "type": "Function",
-<<<<<<< HEAD
-        "default": "(items: object[], search: string, filter: Filter) => object[]",
-=======
-        "default": "(items: Array, search: String, filter: Function, headers: Array) => Array",
->>>>>>> mocking new api section
+        "default": "(items: object[], search: string, filter: Filter, headers: object[]): object[]",
         "source": "data-iterable"
       },
       {
         "name": "filter",
         "type": "Function",
-<<<<<<< HEAD
         "default": "(val: object, search: string): boolean",
-=======
-        "default": "(val: Object, search: String) => Boolean",
->>>>>>> mocking new api section
         "source": "data-iterable"
       },
       {
@@ -1851,11 +1818,7 @@ module.exports = {
       },
       {
         "name": "eventColor",
-        "type": [
-          "String",
-          "Function",
-          "Object"
-        ],
+        "type": "String",
         "default": "warning",
         "source": null
       },
@@ -1881,18 +1844,21 @@ module.exports = {
         "name": "monthFormat",
         "type": "Function",
         "default": "null",
+<<<<<<< HEAD
         "source": null
       },
       {
         "name": "prependIcon",
         "type": "String",
         "default": "chevron_left",
+=======
+>>>>>>> eed89fa... updated api mock
         "source": null
       },
       {
-        "name": "readonly",
-        "type": "Boolean",
-        "default": "false",
+        "name": "prependIcon",
+        "type": "String",
+        "default": "chevron_left",
         "source": null
       },
       {
@@ -1994,12 +1960,6 @@ module.exports = {
         "source": "colorable"
       },
       {
-        "name": "disabled",
-        "type": "Boolean",
-        "default": "false",
-        "source": null
-      },
-      {
         "name": "format",
         "type": "Function",
         "default": "null",
@@ -2034,9 +1994,9 @@ module.exports = {
   "v-date-picker-date-table": {
     "props": [
       {
-        "name": "scrollable",
-        "type": "Boolean",
-        "default": "false",
+        "name": "tableDate",
+        "type": "String",
+        "default": "undefined",
         "source": null
       },
       {
@@ -2059,12 +2019,6 @@ module.exports = {
         "name": "current",
         "type": "String",
         "default": "undefined",
-        "source": null
-      },
-      {
-        "name": "disabled",
-        "type": "Boolean",
-        "default": "false",
         "source": null
       },
       {
@@ -2109,9 +2063,9 @@ module.exports = {
         "source": null
       },
       {
-        "name": "tableDate",
-        "type": "String",
-        "default": "undefined",
+        "name": "scrollable",
+        "type": "Boolean",
+        "default": "false",
         "source": null
       },
       {
@@ -2153,12 +2107,6 @@ module.exports = {
         "name": "current",
         "type": "String",
         "default": "undefined",
-        "source": null
-      },
-      {
-        "name": "disabled",
-        "type": "Boolean",
-        "default": "false",
         "source": null
       },
       {
@@ -2554,16 +2502,6 @@ module.exports = {
     "mixins": [],
     "slots": [
       "default"
-    ],
-    "functions": [
-      {
-        "name": "reset",
-        "signature": "(): void"
-      },
-      {
-        "name": "validate",
-        "signature": "(): boolean"
-      }
     ]
   },
   "v-content": {
@@ -4051,7 +3989,7 @@ module.exports = {
       {
         "name": "transition",
         "type": "String",
-        "default": "fade-transition",
+        "default": "picker-transition",
         "source": null
       }
     ],
