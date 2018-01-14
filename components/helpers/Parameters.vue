@@ -50,11 +50,7 @@
     computed: {
       computedItems () {
         return this.items.map(item => {
-<<<<<<< HEAD
           const newItem = item !== Object(item) ? { name: item } : Object.assign({}, item)
-=======
-          const newItem = Object.assign({}, item)
->>>>>>> updated api mock
 
           const keys = Object.keys(newItem)
           for (let i = 0; i < keys.length; i++) {
@@ -62,11 +58,7 @@
             const fn = this[`gen${capitalize(key)}`]
 
             if (fn) {
-<<<<<<< HEAD
               newItem[key] = fn(newItem[key], item)
-=======
-              newItem[key] = fn(item[key], item)
->>>>>>> updated api mock
             }
           }
 
@@ -142,17 +134,12 @@
         else return value
       },
       genTypescriptDef (obj) {
-<<<<<<< HEAD
         return JSON.stringify(obj, null, 2).replace(/\"(.*)\"\:\s\"(.*)\",?/g, "$1: $2;")
       },
       genHeaderName (header, item) {
         let name = header
         if (header === 'default' && item.type === 'Function') name = 'signature'
         return this.$t(`Generic.Pages.${name}`)
-=======
-        console.log(obj)
-        return JSON.stringify(obj, null, 2).replace(/\"(.*)\"\:\s\"(.*)\",?/g, "$1: $2;")
->>>>>>> updated api mock
       }
     }
   }
@@ -172,17 +159,8 @@
       font-weight: 900
 
     .header
-<<<<<<< HEAD
-<<<<<<< HEAD
       font-family: monospace
-      font-size: 0.75rem
-=======
       font-size: 0.8rem
->>>>>>> mocking new api section
-=======
-      font-family: monospace
-      font-size: 0.75rem
->>>>>>> updated api mock
 
     .justify
       text-align: justify
