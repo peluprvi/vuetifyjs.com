@@ -73,26 +73,6 @@
           newItem.description = this.genDescription(item.name, item)
 
           return newItem
-          /*
-          const newItem = {}
-
-          if (item !== Object(item)) {
-            item = { name: item }
-          }
-
-          for (const header of this.headers) {
-            const key = header.value
-            const fn = this[`gen${capitalize(key)}`]
-
-            if (fn) {
-              newItem[key] = fn(item[key] || item.name, item)
-            } else {
-              newItem[key] = item[key] == null ? '' : item[key]
-            }
-          }
-
-          return newItem
-          */
         })
       }
     },
@@ -134,8 +114,7 @@
           description = '**MISSING DESCRIPTION**'
         }
 
-        // const prepend = process.env.NODE_ENV === 'development' ? devPrepend : ''
-        const prepend = ''
+        const prepend = process.env.NODE_ENV === 'development' ? devPrepend : ''
 
         return `${prepend}${description}`
       },

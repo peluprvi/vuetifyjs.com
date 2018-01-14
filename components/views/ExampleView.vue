@@ -105,35 +105,29 @@
         current: null,
         id: '',
         headers: {
-          params: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.type'), value: 'type', align: 'left' },
-            { text: this.$t('Generic.Pages.default'), value: 'default', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
-          ],
           props: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left', size: 3 },
-            { text: this.$t('Generic.Pages.default'), value: 'default', align: 'left', size: 7 },
-            { text: this.$t('Generic.Pages.type'), value: 'type', align: 'right', size: 2 },
+            { value: 'name', align: 'left', size: 3 },
+            { value: 'default', align: 'left', size: 6 },
+            { value: 'type', align: 'right', size: 3 },
           ],
           slots: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' }
+            { value: 'name', align: 'left' }
           ],
           scopedSlots: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left', size: 3 },
-            { text: this.$t('Generic.Pages.props'), value: 'props', align: 'right', size: 9 }
+            { value: 'name', align: 'left', size: 3 },
+            { value: 'props', align: 'right', size: 9 }
           ],
           events: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left' },
+            { value: 'value', align: 'right' },
           ],
           functions: [
             { value: 'name', align: 'left' },
             { value: 'signature', align: 'right' }
           ],
           functional: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left' },
+            { value: 'description', align: 'left' }
           ]
         },
         search: null,

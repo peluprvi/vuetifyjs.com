@@ -1333,7 +1333,7 @@ module.exports = {
       {
         "name": "customFilter",
         "type": "Function",
-        "default": "(items: Array, search: String, filter: Function) => Array",
+        "default": "(items: object[], search: string, filter: Filter): object[]",
         "source": "data-iterable"
       },
       {
@@ -1456,6 +1456,14 @@ module.exports = {
     "slots": [
       {
         "name": "footer",
+        "source": "data-iterable"
+      },
+      {
+        "name": "noData",
+        "source": "data-iterable"
+      },
+      {
+        "name": "noResults",
         "source": "data-iterable"
       }
     ],
@@ -1660,6 +1668,14 @@ module.exports = {
       {
         "name": "footer",
         "source": "data-iterable"
+      },
+      {
+        "name": "noData",
+        "source": "data-iterable"
+      },
+      {
+        "name": "noResults",
+        "source": "data-iterable"
       }
     ],
     "scopedSlots": [
@@ -1777,9 +1793,9 @@ module.exports = {
         "source": null
       },
       {
-        "name": "locale",
-        "type": "String",
-        "default": "en-us",
+        "name": "monthFormat",
+        "type": "Function",
+        "default": "null",
         "source": null
       },
       {
@@ -1835,6 +1851,12 @@ module.exports = {
         "source": null
       },
       {
+        "name": "locale",
+        "type": "String",
+        "default": "en-us",
+        "source": null
+      },
+      {
         "name": "landscape",
         "type": "Boolean",
         "default": "false",
@@ -1844,15 +1866,6 @@ module.exports = {
         "name": "monthFormat",
         "type": "Function",
         "default": "null",
-<<<<<<< HEAD
-        "source": null
-      },
-      {
-        "name": "prependIcon",
-        "type": "String",
-        "default": "chevron_left",
-=======
->>>>>>> eed89fa... updated api mock
         "source": null
       },
       {
@@ -3927,6 +3940,20 @@ module.exports = {
     ],
     "mixins": [
       "colorable"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "number"
+      },
+      {
+        "name": "next",
+        "value": "void"
+      },
+      {
+        "name": "right",
+        "value": "void"
+      }
     ]
   },
   "v-parallax": {

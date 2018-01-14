@@ -38,5 +38,6 @@ export default {
   parameters: 'Parameters',
   return: 'Returns',
   example: 'Example',
-  signature: 'Signature'
+  signature: 'Signature',
+  value: 'Value'
 }
