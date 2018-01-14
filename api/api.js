@@ -1867,12 +1867,6 @@ module.exports = {
         "source": "picker"
       },
       {
-        "name": "monthFormat",
-        "type": "Function",
-        "default": "null",
-        "source": null
-      },
-      {
         "name": "prependIcon",
         "type": "String",
         "default": "chevron_left",
