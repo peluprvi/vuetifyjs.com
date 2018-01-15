@@ -10,7 +10,8 @@ module.exports = {
     browser: true
   },
   extends: [
-    'plugin:vue/recommended'
+    'plugin:vue/recommended',
+    'standard'
   ],
   rules: {
     "vue/max-attributes-per-line": [2, {
@@ -19,9 +20,21 @@ module.exports = {
         "max": 1,
         "allowFirstLine": false
       }
-    }]
+    }],
+    // TODO: disabled until vuejs/eslint-plugin-vue#349 is fixed
+    /*"vue/script-indent": ["error", 2, {
+      "baseIndent": 1,
+      "switchCase": 0,
+      "ignores": []
+    }]*/
   },
   overrides: [
+    {
+      files: '**/*.vue',
+      rules: {
+        indent: false
+      }
+    },
     {
       files: 'examples/**/*.vue',
       rules: {
