@@ -16,8 +16,7 @@ export default {
       this.asyncData = asyncData({
         store: this.$store,
         route: this.$route
-      })
-      this.asyncData.then(() => this.dataLoading = false)
+      }).then(() => this.dataLoading = false)
     }
   },
 

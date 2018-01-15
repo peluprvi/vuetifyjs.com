@@ -7,7 +7,7 @@ export default {
   state: () => ({
     products: [],
     hasFetchedProducts: false,
-    cart: []
+    checkout: null
   }),
 
   mutations: {
@@ -22,6 +22,9 @@ export default {
       } else {
         state.products.push(payload)
       }
+    },
+    SET_CHECKOUT (state, payload) {
+      state.checkout = payload
     }
   },
 
@@ -34,6 +37,23 @@ export default {
     getProduct ({ commit }, id) {
       return shopifyClient.product.fetch(id).then(product => {
         commit('SET_PRODUCT', product)
+      })
+    },
+    getCheckout ({ commit }) {
+      let checkout
+      const checkoutId = localStorage.getItem('vuetify_shopify_checkout_id')
+
+      if (checkoutId) {
+        checkout = shopifyClient.checkout.fetch(checkoutId)
+      }
+
+      if (!checkout) {
+        checkout = shopifyClient.checkout.create()
+      }
+
+      return checkout.then(checkout => {
+        commit('SET_CHECKOUT', checkout)
+        localStorage.setItem('vuetify_shopify_checkout_id', checkout.id)
       })
     }
   }

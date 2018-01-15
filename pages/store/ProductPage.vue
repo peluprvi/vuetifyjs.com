@@ -20,9 +20,12 @@
                 v-flex(xs4 mx-1)
                   v-text-field(v-model.number="quantity" type="number" label="Quantity")
                 v-btn(flat @click="addToCart").ml-1 buy
+          v-flex(xs12)
+            v-card-text {{ product.description }}
 </template>
 
 <script>
+  import shopifyClient from '@/util/shopifyClient'
   import asyncData from '@/util/asyncData'
 
   function getLongId (id) {
@@ -42,9 +45,11 @@
 
     asyncData ({ store, route }) {
       const longId = getLongId(route.params.id)
-      return store.state.store.products.length && findProduct(store, longId)
-        ? Promise.resolve()
-        : store.dispatch('store/getProduct', longId)
+      return Promise.all([
+        !(store.state.store.products.length && findProduct(store, longId))
+          && store.dispatch('store/getProduct', longId),
+        store.dispatch('store/getCheckout')
+      ])
     },
 
     data: () => ({
@@ -70,7 +75,14 @@
 
     methods: {
       addToCart () {
-        //
+        this.asyncData.then(() => {
+          const checkout = this.$store.state.store.checkout.id
+          const items = [{ variantId: this.selectedVariant.id, quantity: this.quantity }]
+
+          shopifyClient.checkout.addLineItems(checkout, items).then(checkout => {
+            console.log('added')
+          })
+        })
       }
     }
   }
