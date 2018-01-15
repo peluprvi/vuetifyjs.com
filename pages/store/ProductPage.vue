@@ -1,22 +1,25 @@
 <template lang="pug">
   v-container(d-flex style="height: 100%")#store-product
-    v-card(v-if="!product" height="100%").fill-height
-    v-card(v-else height="100%").layout.fill-height.wrap.align-content-start
-      v-layout(flex xs12 sm4 md6 align-center justify-center)
-        img(:src="product.images[0].src").product-image
-      v-layout(wrap flex xs12 sm8 md6 align-content-start)
-        v-flex(xs12)
-          v-card-title(primary-title)
-            div.headline.mb-0 {{ product.title }}
-            div.green--text ${{ price }}
-        v-flex(xs12)
-          v-card-text
-            v-layout(align-baseline)
-              v-flex(xs6 mr-1)
-                v-select(v-model="selectedVariant" :items="variantOptions" label="Size")
-              v-flex(xs4 mx-1)
-                v-text-field(v-model.number="quantity" type="number" label="Quantity")
-              v-btn(flat @click="addToCart").ml-1 buy
+    v-fade-transition(mode="out-in")
+      v-card(v-if="dataLoading" height="100%")
+        div.display-4 Loading...
+      v-card(v-else-if="!product" height="100%").fill-height
+      v-card(v-else height="100%").layout.fill-height.wrap.align-content-start
+        v-layout(flex xs12 sm4 md6 align-center justify-center)
+          img(:src="product.images[0].src").product-image
+        v-layout(wrap flex xs12 sm8 md6 align-content-start)
+          v-flex(xs12)
+            v-card-title(primary-title)
+              div.headline.mb-0 {{ product.title }}
+              div.green--text ${{ price }}
+          v-flex(xs12)
+            v-card-text
+              v-layout(align-baseline)
+                v-flex(xs6 mr-1)
+                  v-select(v-model="selectedVariant" :items="variantOptions" label="Size")
+                v-flex(xs4 mx-1)
+                  v-text-field(v-model.number="quantity" type="number" label="Quantity")
+                v-btn(flat @click="addToCart").ml-1 buy
 </template>
 
 <script>

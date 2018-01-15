@@ -1,9 +1,13 @@
 <template lang="pug">
   v-container#store
-    h2.title Products
-    v-container(grid-list-md)
-      v-layout(wrap)
-        store-product(v-for="product in products" :product="product" :key="product.id")
+    template(v-if="dataLoading && !products")
+      div.display-4 Loading...
+    template(v-else)
+      h2.title Products
+      v-fade-transition(mode="out-in")
+        v-container(grid-list-md :key="products.length")
+          v-layout(wrap)
+            store-product(v-for="product in products" :product="product" :key="product.id")
 </template>
 
 <script>
