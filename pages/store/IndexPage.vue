@@ -13,7 +13,6 @@
 <script>
   import asyncData from '@/util/asyncData'
   import StoreProduct from '@/components/store/StoreProduct'
-  import shopifyClient from '@/util/shopifyClient'
 
   export default {
     mixins: [asyncData],

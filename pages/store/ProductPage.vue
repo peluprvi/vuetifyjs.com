@@ -16,14 +16,13 @@
             v-card-text
               v-layout(align-baseline)
                 v-flex(xs6 mr-1)
-                  v-select(v-model="selectedVariant" :items="variantOptions" label="Size")
+                  v-select(v-model="selectedVariant" :items="product.variants" item-text="title" item-value="id" return-object label="Size")
                 v-flex(xs4 mx-1)
                   v-text-field(v-model.number="quantity" type="number" label="Quantity")
                 v-btn(flat @click="addToCart").ml-1 buy
 </template>
 
 <script>
-  import shopifyClient from '@/util/shopifyClient'
   import asyncData from '@/util/asyncData'
 
   function getLongId (id) {
@@ -49,9 +48,13 @@
     },
 
     data: () => ({
-      selectedVariant: 0,
+      selectedVariant: null,
       quantity: 1
     }),
+
+    created () {
+      this.selectedVariant = this.product.variants[0]
+    },
 
     computed: {
       product () {
@@ -61,13 +64,7 @@
         return getLongId(this.id)
       },
       price () {
-        return this.product.variants[this.selectedVariant].price
-      },
-      variantOptions () {
-        return this.product.variants.map((v, i) => ({
-          text: v.title,
-          value: i
-        }))
+        return this.selectedVariant.price
       }
     },
 
