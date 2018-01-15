@@ -11,7 +11,7 @@
     "build:server": "NODE_ENV=production webpack --config build/webpack.server.config.js --progress --hide-modules",
     "lint": "eslint --ext .js,.vue .",
     "commitmsg": "node scripts/lint-commit-message.js",
-    "precommit": "node scripts/warn-npm-install.js"
+    "precommit": "node scripts/warn-npm-install.js && yarn lint"
   },
   "engines": {
     "node": ">=7.0",
