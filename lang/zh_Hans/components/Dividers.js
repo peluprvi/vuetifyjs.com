@@ -1,27 +1,27 @@
 export default {
-  header: '分隔符',
-  headerText: '`v-divider`组件用来 is used to separate sections of lists.',
+  header: '分隔线',
+  headerText: '`v-divider`组件用来分隔列表的各部分',
   components: ['v-divider'],
   examples: [{
     fullBleed: {
-      header: 'Full bleed',
-      desc: 'Full bleed dividers extend the entire content width.'
+      header: '完全流血（Full bleed）',
+      desc: '完全出血分隔线扩展了整个内容的宽度。'
     },
     lightAndDark: {
-      header: 'Light and dark',
-      desc: 'Dividers have light and dark variants.',
+      header: '明亮与暗黑',
+      desc: '分隔线有明亮和暗黑的变种',
       uninverted: true
     },
     inset: {
-      header: 'Inset dividers',
-      desc: 'Inset dividers are moved 72px to the right. This will cause them to line up with list items.'
+      header: '插页分隔线',
+      desc: '插页隔线向右移动72px，这将使他们将列表项分隔。'
     },
     subheaders: {
-      header: 'Subheaders and dividers',
-      desc: 'Subheaders can be lined up with inset dividers by using the same prop.'
+      header: '副标题和分割线',
+      desc: '副标题可以使用相同的属性与插页分割线对齐。'
     }
   }],
   props: {
-    inset: 'Adds indentation (72px)'
+    inset: '添加缩进 (72px)'
   }
 }

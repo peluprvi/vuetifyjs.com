@@ -1,5 +1,5 @@
 export default {
-  header: 'Jumbotron',
+  header: '超大屏幕',
   headerText: 'Soon...',
   components: [
     'v-jumbotron'
@@ -14,7 +14,7 @@ export default {
       desc: 'Soon...'
     },
     gradient: {
-      header: 'Gradient',
+      header: '渐变',
       desc: 'More information on writing gradients can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)'
     },
     gradientWithImage: {

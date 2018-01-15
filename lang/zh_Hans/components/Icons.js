@@ -1,36 +1,36 @@
 export default {
-  header: 'Icon',
-  headerText: 'The `v-icon` component provides a large set of glyphs to provide context to various aspects of your application. Vuetify icons utilize Google\'s Material Icons font library. For a list of all available icons, visit the official <a href="https://material.io/icons/" target="_blank" rel="noopener">Material Icons</a> page.',
+  header: '图标',
+  headerText: '`v-icon`组件提供了大量的字形来为应用程序的各个方面提供上下文。Vuetify图标利用Google的Material图标字体库。有关所有可用图标的列表，请访问官方的<a href="https://material.io/icons/" target="_blank" rel="noopener">Material Icons</a>页面。',
   components: ['v-icon'],
   examples: [{
     standard: {
-      header: 'Standard',
-      desc: 'Icons come in two themes (light and dark), and four different sizes (standard, medium, large, and x-large).'
+      header: '标准',
+      desc: '图标有两个主题（明亮和暗黑）和四个不同的大小（标准（standard）、中型（medium）、大型（large）和超大型（x-large））。'
     },
     fontAwesome: {
       header: 'Font Awesome',
-      desc: '[Font Awesome](http://fontawesome.io/icons/) is also supported. Simply use the `fa-` prefixed icon name. Please note that you still need to include the Font Awesome icons in your project.'
+      desc: '[Font Awesome](http://fontawesome.io/icons/)也被支持，只需简单地使用`fa-`前缀的图标名称即可。请注意，您仍然需要在您的项目中包含Font Awesome图标。'
     },
     mdi: {
-      header: 'Material Design Icons',
-      desc: '[Material Design Icons](https://materialdesignicons.com/) is also supported. Simply use the `mdi-` prefixed icon name. Please note that you still need to include the MDI icons in your project.'
+      header: 'Material Design图标',
+      desc: '[Material Design图标](https://materialdesignicons.com/)也被支持，您只需简单地使用`mdi-`前缀的图标名即可。请注意，您仍然需要在您的项目中包含MDI图标。'
     },
     color: {
-      header: 'Color',
-      desc: 'Using color helpers you can change the color of an icon from the standard dark and light themes.'
+      header: '色彩',
+      desc: '使用色彩辅助器，您可以改变标准的暗黑和明亮的主题的图标的颜色。'
     },
     buttons: {
-      header: 'Buttons',
-      desc: 'Icons can be used inside of buttons to add emphasis to the action.'
+      header: '按钮',
+      desc: '图标可以在按钮内部使用，以增加动作的重点。'
     }
   }],
   props: {
     disabled: 'Mixins.Input.props.disabled',
-    large: 'Makes the icon large **(36px)**',
-    left: 'Places icon on the left, when used inside a button',
-    medium: 'Makes the icon medium **(28px)**',
-    right: 'Places icon on the right, when used inside a button',
-    small: 'Makes the icon small **(16px)**',
-    xLarge: 'Makes the icon extra large **(40px)**'
+    large: '设置图标为大型**（36px）**',
+    left: '在按钮内部使用时，把图标放置在左侧',
+    medium: '设置图标为中型**(28px)**',
+    right: '在按钮内部使用时，把图标放置在右侧',
+    small: '设置图标为小型**(16px)**',
+    xLarge: '设置图标为超大型**(40px)**'
   }
 }

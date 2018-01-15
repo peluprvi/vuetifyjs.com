@@ -17,7 +17,7 @@ export default {
     }
   }],
   props: {
-    closeDelay: '当（open-on-hover）属性设置为true时，会在菜单关闭之后延时（以毫秒为单位） (when open-on-hover prop is set to true)',
+    closeDelay: '当（open-on-hover）属性设置为true时，会在菜单关闭之后延时（以毫秒为单位）',
     debounce: 'Duration before tooltip is shown and hidden when hovered',
     openDelay: 'Delay (in ms) after which menu opens (when open-on-hover prop is set to true)'
   }

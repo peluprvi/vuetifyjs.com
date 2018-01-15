@@ -1,26 +1,26 @@
 export default {
-  header: 'Form',
-  headerText: 'When it comes to form validation, Vuetify has a multitude of integrations and baked in functionality. Want to use a 3rd party validation plugin? Out of the box you can use Vee-validate and Vuelidate.',
+  header: '表单',
+  headerText: '在表单验证方面，Vuetify拥有集成了众多的功能，想要使用第三方验证插件？您可以开箱即用Vee-validate和Vuelidate。',
   components: ['v-form'],
   examples: [{
     basicValidation: {
-      header: 'VForm - Basic validation',
+      header: 'VForm - 基本验证',
       desc: ''
     },
     validationWithSubmitAndClear: {
-      header: 'VForm - Validation with submit & clear',
+      header: 'VForm - 提交和清除时验证和',
       desc: ''
     },
     vuelidate: {
-      header: 'Vuelidate',
+      header: '验证',
       desc: ''
     },
     veeValidate: {
       header: 'Vee-validate',
-      desc: 'Vee-validate is another validation plugin that allows you to check your forms. One caveat is that you must add the **type="checkbox"** to properly validate a `v-checkbox` when using the **value** prop.'
+      desc: 'Vee-validate是另一个验证插件，允许您检查您的表单。一个警告是，当您使用**value**属性时必须添加**type="checkbox"**来正确验证一个`v-checkbox`。'
     }
   }],
   props: {
-    lazyValidation: 'If enabled, **value** will always be _true_ unless there are visible validation errors. You can still call `validate()` to manually trigger validation'
+    lazyValidation: '如果启用，**value**将永远是 _true_ ，除非有可见的验证错误。您仍然可以调用`validate()`来手动触发验证。'
   }
 }
