@@ -1,10 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import storeModule from './storeModule'
+
 Vue.use(Vuex)
 
 export function createStore () {
   return new Vuex.Store({
+    modules: {
+      store: storeModule
+    },
+
     state: {
       appDrawer: null,
       appFooter: true,

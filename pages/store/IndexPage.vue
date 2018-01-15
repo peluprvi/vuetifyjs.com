@@ -7,30 +7,28 @@
 </template>
 
 <script>
+  import asyncData from '@/util/asyncData'
   import StoreProduct from '@/components/store/StoreProduct'
   import shopifyClient from '@/util/shopifyClient'
 
   export default {
-    data: () => ({
-      products: []
-    }),
+    mixins: [asyncData],
+
+    asyncData ({ store }) {
+      return store.state.store.hasFetchedProducts
+        && store.state.store.products.length
+          ? Promise.resolve()
+          : store.dispatch('store/getProducts')
+    },
+
+    computed: {
+      products () {
+        return this.$store.state.store.products
+      }
+    },
 
     components: {
       StoreProduct
-    },
-
-    created () {
-      this.$store.commit('app/DRAWER', false)
-    },
-
-    mounted () {
-      shopifyClient.product.fetchAll().then(products => {
-        this.products = products
-      })
-    },
-
-    beforeDestroy () {
-      this.$store.commit('app/DRAWER', true)
     }
   }
 </script>

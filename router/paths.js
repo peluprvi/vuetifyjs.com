@@ -19,6 +19,7 @@ export default [
   ['motion/transitions', 'motion/Transitions'],
   ['pre-made-themes', 'PremadeThemes'],
   ['store', 'store/Index'],
+  ['store/product/:id', 'store/Product', null, r => ({ id: r.params.id })],
   ['guides/server-side-rendering', 'guides/SSR'],
   ['guides/a-la-carte', 'guides/ALaCarte'],
   ['theme-generator', 'ThemeGenerator', true],

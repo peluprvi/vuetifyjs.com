@@ -28,7 +28,7 @@
         }
       },
       shortId () {
-        const arr = atob(this.product.id).split('/')
+        const arr = new Buffer(this.product.id, 'base64').toString('binary').split('/')
         return arr[arr.length - 1]
       }
     }
