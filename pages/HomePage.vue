@@ -162,7 +162,7 @@
   import { mapState } from 'vuex'
 
   export default {
-    name: 'home-page',
+    name: 'HomePage',
 
     components: {
       HomeFooter

@@ -4,7 +4,7 @@
       <v-btn color="primary" dark slot="activator" class="mb-2">New Item</v-btn>
       <v-card>
         <v-card-title>
-          <span class="headline">{{formTitle}}</span>
+          <span class="headline">{{ formTitle }}</span>
         </v-card-title>
         <v-card-text>
           <v-container grid-list-md>
@@ -35,10 +35,10 @@
       </v-card>
     </v-dialog>
     <v-data-table
-        v-bind:headers="headers"
-        :items="items"
-        hide-actions
-        class="elevation-1"
+      :headers="headers"
+      :items="items"
+      hide-actions
+      class="elevation-1"
     >
       <template slot="items" slot-scope="props">
         <td>{{ props.item.name }}</td>
@@ -64,41 +64,44 @@
 
 <script>
   export default {
-    data() {
-      return {
-        dialog: false,
-        headers: [
-          {
-            text: 'Dessert (100g serving)',
-            align: 'left',
-            sortable: false,
-            value: 'name'
-          },
-          {text: 'Calories', value: 'calories'},
-          {text: 'Fat (g)', value: 'fat'},
-          {text: 'Carbs (g)', value: 'carbs'},
-          {text: 'Protein (g)', value: 'protein'},
-          {text: 'Actions', value: 'name', sortable: false},
-        ],
-        items: [],
-        item: {
-          edit: false,
-          name: '',
-          calories: 0,
-          fat: 0,
-          carbs: 0,
-          protein: 0,
-        }
+    data: () => ({
+      dialog: false,
+      headers: [
+        {
+          text: 'Dessert (100g serving)',
+          align: 'left',
+          sortable: false,
+          value: 'name'
+        },
+        { text: 'Calories', value: 'calories' },
+        { text: 'Fat (g)', value: 'fat' },
+        { text: 'Carbs (g)', value: 'carbs' },
+        { text: 'Protein (g)', value: 'protein' },
+        { text: 'Actions', value: 'name', sortable: false },
+      ],
+      items: [],
+      item: {
+        edit: false,
+        name: '',
+        calories: 0,
+        fat: 0,
+        carbs: 0,
+        protein: 0,
       }
-    },
+    }),
+
     computed: {
-      formTitle() {
+      formTitle () {
         return this.item.edit ? 'Edit Item' : 'New Item'
       }
     },
-    methods: {
 
-      initialize() {
+    created() {
+      this.initialize()
+    },
+
+    methods: {
+      initialize () {
         this.items = [
           {
             edit: false,
@@ -184,33 +187,30 @@
       },
 
       editItem(item) {
-        this.item = item;
-        this.item.edit = true;
-        this.dialog = true;
+        this.item = item
+        this.item.edit = true
+        this.dialog = true
       },
 
       deleteItem(index) {
         // alert user for delete
-        this.items.splice(index, 1);
+        this.items.splice(index, 1)
       },
 
       close() {
-        this.item.edit = false;
-        this.dialog = false;
+        this.item.edit = false
+        this.dialog = false
       },
 
       save() {
         if (this.item.edit) {
           // edit item
-          this.item.edit = false;
+          this.item.edit = false
         } else {
-          this.items.push(this.item);
+          this.items.push(this.item)
         }
-        this.dialog = false;
+        this.dialog = false
       }
-    },
-    created() {
-      this.initialize();
     }
   }
 </script>

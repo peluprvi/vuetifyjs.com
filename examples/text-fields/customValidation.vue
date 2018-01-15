@@ -18,7 +18,7 @@
             :rules="[
               () => !!address || 'This field is required',
               () => !!address && address.length <= 25 || 'Address must be less than 25 characters',
-              this.addressCheck
+              addressCheck
             ]"
             v-model="address"
             ref="address"
@@ -28,7 +28,7 @@
           <v-text-field
             label="City"
             placeholder="El Paso"
-            :rules="[() => !!city || 'This field is required', this.addressCheck]"
+            :rules="[() => !!city || 'This field is required', addressCheck]"
             v-model="city"
             ref="city"
             required

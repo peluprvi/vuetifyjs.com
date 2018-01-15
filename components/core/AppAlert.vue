@@ -9,13 +9,25 @@
 
 <script>
   export default {
-    name: 'app-alert',
+    name: 'AppAlert',
 
     props: {
-      error: Boolean,
-      info: Boolean,
-      success: Boolean,
-      warning: Boolean,
+      error: {
+        type: Boolean,
+        default: false
+      },
+      info: {
+        type: Boolean,
+        default: false
+      },
+      success: {
+        type: Boolean,
+        default: false
+      },
+      warning: {
+        type: Boolean,
+        default: false
+      },
       value: {
         type: String,
         default: ''

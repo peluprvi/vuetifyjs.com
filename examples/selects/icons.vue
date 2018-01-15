@@ -6,7 +6,7 @@
       </v-flex>
       <v-flex xs6>
         <v-select
-          v-bind:items="states"
+          :items="states"
           v-model="e1"
           label="Select"
           single-line
@@ -20,7 +20,7 @@
       </v-flex>
       <v-flex xs6>
         <v-select
-          v-bind:items="states"
+          :items="states"
           v-model="e2"
           label="Select"
           single-line

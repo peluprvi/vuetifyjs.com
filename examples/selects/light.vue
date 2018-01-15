@@ -6,7 +6,7 @@
       </v-flex>
       <v-flex xs6>
         <v-select
-          v-bind:items="items"
+          :items="items"
           v-model="e1"
           label="Select"
           single-line
@@ -18,7 +18,7 @@
       </v-flex>
       <v-flex xs6>
         <v-select
-          v-bind:items="items"
+          :items="items"
           v-model="e2"
           label="Select"
           class="input-group--focused"
@@ -31,9 +31,9 @@
       <v-flex xs6>
         <v-select
           label="Select"
-          v-bind:items="items"
+          :items="items"
           v-model="e3"
-          v-bind:error-messages="['Please select an option']"
+          :error-messages="['Please select an option']"
           item-value="text"
         ></v-select>
       </v-flex>
@@ -43,7 +43,7 @@
       <v-flex xs6>
         <v-select
           label="Select"
-          v-bind:items="items"
+          :items="items"
           v-model="e4"
           disabled
         ></v-select>

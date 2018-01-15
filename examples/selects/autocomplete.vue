@@ -6,7 +6,7 @@
       </v-flex>
       <v-flex xs12 sm6>
         <v-select
-          v-bind:items="states"
+          :items="states"
           v-model="a1"
           label="Select"
           autocomplete

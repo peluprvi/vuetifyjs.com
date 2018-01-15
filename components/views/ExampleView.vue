@@ -99,6 +99,13 @@
   export default {
     inheritAttrs: false,
 
+    props: {
+      data: {
+        type: Object,
+        default: () => ({})
+      }
+    },
+
     data () {
       return {
         api,
@@ -133,16 +140,6 @@
         search: null,
         tab: null,
         tabs: ['props', 'slots', 'scopedSlots', 'params', 'events', 'functions', 'functional']
-      }
-    },
-
-    props: {
-      data: Object
-    },
-
-    watch: {
-      currentApi () {
-        if (!this.currentApi.hasOwnProperty(this.tab)) this.tab = 'props'
       }
     },
 
@@ -192,6 +189,12 @@
       },
       usage () {
         return this.examples.slice(0, 1).shift()
+      }
+    },
+
+    watch: {
+      currentApi () {
+        if (!this.currentApi.hasOwnProperty(this.tab)) this.tab = 'props'
       }
     },
 

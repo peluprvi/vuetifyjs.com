@@ -24,7 +24,10 @@
 
   export default {
     props: {
-      target: String,
+      target: {
+        type: String,
+        default: ''
+      },
       headers: {
         type: Array,
         default: () => ([])
@@ -33,9 +36,18 @@
         type: Array,
         default: () => ([])
       },
-      namespace: String,
-      search: String,
-      type: String
+      namespace: {
+        type: String,
+        default: ''
+      },
+      search: {
+        type: String,
+        default: ''
+      },
+      type: {
+        type: String,
+        default: ''
+      }
     },
 
     data () {

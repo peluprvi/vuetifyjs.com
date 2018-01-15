@@ -7,7 +7,7 @@
       <v-flex xs12 sm6>
         <v-select
           label="Select"
-          v-bind:items="people"
+          :items="people"
           v-model="e11"
           item-text="name"
           item-value="name"
@@ -36,7 +36,7 @@
             </template>
             <template v-else>
               <v-list-tile-avatar>
-                <img v-bind:src="data.item.avatar"/>
+                <img :src="data.item.avatar">
               </v-list-tile-avatar>
               <v-list-tile-content>
                 <v-list-tile-title v-html="data.item.name"></v-list-tile-title>

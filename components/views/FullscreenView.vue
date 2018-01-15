@@ -13,13 +13,16 @@
   export default {
     inheritAttrs: false,
 
+    props: {
+      noBack: {
+        type: Boolean,
+        default: false
+      }
+    },
+
     data: () => ({
       to: null
     }),
-
-    props: {
-      noBack: Boolean
-    },
 
     computed: {
       ...mapState({

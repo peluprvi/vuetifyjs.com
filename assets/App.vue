@@ -43,7 +43,7 @@
   import { mapState } from 'vuex'
 
   export default {
-    name: 'documentation',
+    name: 'Documentation',
 
     components: {
       AppDrawer,

@@ -4,7 +4,7 @@
 
 <script>
   export default {
-    name: 'app-ad',
+    name: 'AppAd',
 
     mounted () {
       if (process.env.NODE_ENV === 'development') return

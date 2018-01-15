@@ -7,7 +7,7 @@
       <v-flex xs12 sm6>
         <v-select
           label="Select"
-          v-bind:items="states"
+          :items="states"
           v-model="e6"
           multiple
           max-height="400"
@@ -21,7 +21,7 @@
       <v-flex xs12 sm6>
         <v-select
           label="Select"
-          v-bind:items="states"
+          :items="states"
           v-model="e7"
           multiple
           chips

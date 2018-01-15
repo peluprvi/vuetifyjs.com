@@ -1,18 +1,12 @@
 <script>
   export default {
-    name: 'app-table-of-contents',
-
-    data: () => ({
-      currentOffset: 0,
-      position: 'relative',
-      right: 0,
-      top: 0,
-      list: [],
-      isBooted: false
-    }),
+    name: 'AppTableOfContents',
 
     props: {
-      discovery: Boolean,
+      discovery: {
+        type: Boolean,
+        default: false
+      },
       items: {
         type: Array,
         default: () => ([])
@@ -22,6 +16,15 @@
         required: true
       }
     },
+
+    data: () => ({
+      currentOffset: 0,
+      position: 'relative',
+      right: 0,
+      top: 0,
+      list: [],
+      isBooted: false
+    }),
 
     computed: {
       activeIndex () {
@@ -147,7 +150,7 @@
     list-style-type: none
     margin: 0 24px
     width: 200px
-    
+
     li > a
       padding-left: 18px
       text-decoration: none

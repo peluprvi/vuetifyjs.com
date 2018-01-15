@@ -24,7 +24,18 @@
   highlight.registerLanguage('js', highlightJS)
 
   export default {
-    name: 'markup',
+    name: 'Markup',
+
+    props: {
+      color: {
+        type: String,
+        default: 'grey lighten-3'
+      },
+      lang: {
+        type: String,
+        default: ''
+      },
+    },
 
     data () {
       return {
@@ -32,14 +43,6 @@
         content: '',
         highlightAttempts: 0
       }
-    },
-
-    props: {
-      color: {
-        type: String,
-        default: 'grey lighten-3'
-      },
-      lang: String,
     },
 
     mounted () {
