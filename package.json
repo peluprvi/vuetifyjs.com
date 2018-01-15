@@ -9,6 +9,7 @@
     "build": "rimraf dist && npm run build:client && npm run build:server",
     "build:client": "NODE_ENV=production webpack --config build/webpack.client.config.js --progress --hide-modules",
     "build:server": "NODE_ENV=production webpack --config build/webpack.server.config.js --progress --hide-modules",
+    "lint": "eslint --ext .js,.vue .",
     "commitmsg": "node scripts/lint-commit-message.js",
     "precommit": "node scripts/warn-npm-install.js"
   },
@@ -47,6 +48,7 @@
   "devDependencies": {
     "autoprefixer": "^7.2.3",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-syntax-async-functions": "^6.13.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
@@ -56,6 +58,8 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
     "css-loader": "^0.28.7",
+    "eslint": "^4.15.0",
+    "eslint-plugin-vue": "^4.2.0",
     "event-source-polyfill": "^0.0.12",
     "file-loader": "^1.1.6",
     "friendly-errors-webpack-plugin": "^1.6.1",
