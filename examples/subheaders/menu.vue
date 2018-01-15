@@ -44,7 +44,7 @@
           },
           {
             action: 'delete',
-            title: 'Trash',
+            title: 'Trash'
           },
           {
             action: 'report',
@@ -62,7 +62,7 @@
           },
           {
             action: 'label',
-            title: 'Work',
+            title: 'Work'
           }
         ]
       }

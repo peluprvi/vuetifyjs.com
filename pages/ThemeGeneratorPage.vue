@@ -124,12 +124,12 @@
             return e
           }, {})
           let str = `import colors from 'vuetify/src/util/colors'\n\n${JSON.stringify(names, null, 2)}`
-          str = str.replace(/\"(.*)\"\:\s\"(.*)\"/g, "$1: colors.$2")
+          str = str.replace(/"(.*)":\s"(.*)"/g, '$1: colors.$2')
 
           return str
         } else {
           let str = JSON.stringify(this.theme, null, 2)
-          str = str.replace(/\"(.*)\"\:\s\"(.*)\"/g, "$1: \"$2\"")
+          str = str.replace(/"(.*)":\s"(.*)"/g, '$1: "$2"')
           return str
         }
       }

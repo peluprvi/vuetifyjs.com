@@ -31,8 +31,6 @@
         this.query = true
         this.show = true
         this.value = 0
-        let int
-
         this.query = false
 
         this.interval = setInterval(() => {

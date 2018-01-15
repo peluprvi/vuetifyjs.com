@@ -25,7 +25,7 @@
       return {
         checkbox: true,
         radioGroup: 1,
-        switch1: true,
+        switch1: true
       }
     }
   }

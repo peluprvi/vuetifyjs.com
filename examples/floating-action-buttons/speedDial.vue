@@ -86,7 +86,7 @@
 <script>
   export default {
     data: () => ({
-      direction: "top",
+      direction: 'top',
       fab: false,
       fling: false,
       hover: false,

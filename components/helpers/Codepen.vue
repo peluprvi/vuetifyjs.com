@@ -58,7 +58,7 @@
 
         return template
           .replace(/\/static\//g, 'https://vuetifyjs.com/static/')
-          .replace(/(<template>|<\/template>([^<\/template>]*)$)/g, '')
+          .replace(/(<template>|<\/template>([^</template>]*)$)/g, '')
           .replace(/\n/g, '\n  ')
           .trim()
       },

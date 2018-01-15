@@ -93,8 +93,7 @@
 <script>
   import api from '@/api/api'
   // Utilities
-  import { mapState } from 'vuex'
-  import { camel, capitalize, kebab } from '@/util/helpers'
+  import { camel } from '@/util/helpers'
 
   export default {
     inheritAttrs: false,
@@ -115,7 +114,7 @@
           props: [
             { value: 'name', align: 'left', size: 3 },
             { value: 'default', align: 'left', size: 6 },
-            { value: 'type', align: 'right', size: 3 },
+            { value: 'type', align: 'right', size: 3 }
           ],
           slots: [
             { value: 'name', align: 'left' }
@@ -126,7 +125,7 @@
           ],
           events: [
             { value: 'name', align: 'left' },
-            { value: 'value', align: 'right' },
+            { value: 'value', align: 'right' }
           ],
           functions: [
             { value: 'name', align: 'left' },
@@ -209,7 +208,7 @@
         return (this.currentApi[tab] || []).length > 0
       },
       camelCaseToDash (str) {
-        return str.replace( /([a-z])([A-Z])/g, '$1-$2' ).toLowerCase()
+        return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
       }
     }
   }

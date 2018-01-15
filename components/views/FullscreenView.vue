@@ -4,7 +4,6 @@
     slot(:namespace="namespace")
 </template>
 
-
 <script>
   // Utilities
   import { mapState } from 'vuex'

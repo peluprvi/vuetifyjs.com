@@ -93,7 +93,7 @@
     data () {
       return {
         ex8: 'primary',
-        ex11: ["primary", "secondary", "error", "success", "warning", "info"]
+        ex11: ['primary', 'secondary', 'error', 'success', 'warning', 'info']
       }
     }
   }

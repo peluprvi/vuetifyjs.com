@@ -80,7 +80,6 @@
 </template>
 
 <script>
-  import Vue from 'vue'
   const release = process.env.RELEASE
 
   export default {

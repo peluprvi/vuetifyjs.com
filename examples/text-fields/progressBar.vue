@@ -26,10 +26,10 @@ export default {
     custom: true
   }),
   computed: {
-    progress() {
+    progress () {
       return Math.min(100, this.value.length * 10)
     },
-    color() {
+    color () {
       return ['error', 'warning', 'success'][Math.floor(this.progress / 40)]
     }
   }

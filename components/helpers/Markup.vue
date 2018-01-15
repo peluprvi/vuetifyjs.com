@@ -34,7 +34,7 @@
       lang: {
         type: String,
         default: ''
-      },
+      }
     },
 
     data () {
@@ -68,7 +68,7 @@
         document.execCommand('selectAll', false, null)
         this.copied = document.execCommand('copy')
         markup.removeAttribute('contenteditable')
-        setTimeout(() => this.copied = false, 2000)
+        setTimeout(() => { this.copied = false }, 2000)
       }
     }
   }

@@ -8,6 +8,13 @@
 </template>
 
 <script>
+  const iconMap = {
+    error: 'warning',
+    info: 'info',
+    success: 'check_circle',
+    warning: 'priority_high'
+  }
+
   export default {
     name: 'AppAlert',
 
@@ -42,20 +49,7 @@
         else if (this.warning) return 'warning'
       },
       computedIcon () {
-        switch (this.computedColor) {
-          case 'error':
-            return 'warning'
-          break
-          case 'info':
-            return 'info'
-          break
-          case 'success':
-            return 'check_circle'
-          break
-          case 'warning':
-            return 'priority_high'
-          break
-        }
+        return iconMap[this.computedColor]
       }
     }
   }

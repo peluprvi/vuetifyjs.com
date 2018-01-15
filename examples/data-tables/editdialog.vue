@@ -53,7 +53,7 @@
 
 <script>
   export default {
-    data() {
+    data () {
       return {
         max25chars: (v) => v.length <= 25 || 'Input too long!',
         tmp: '',

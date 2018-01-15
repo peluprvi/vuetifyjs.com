@@ -108,7 +108,7 @@
 
         const shouldFloat = this.currentOffset >= this.threshold
 
-        this.position =  shouldFloat ? 'fixed' : 'relative'
+        this.position = shouldFloat ? 'fixed' : 'relative'
         this.top = shouldFloat ? 85 : 0
         this.isBooted = true
       }

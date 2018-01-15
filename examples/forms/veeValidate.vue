@@ -67,7 +67,7 @@
         custom: {
           name: {
             required: () => 'Name can not be empty',
-            max:'The name field may not be greater than 10 characters',
+            max: 'The name field may not be greater than 10 characters'
             // custom messages
           },
           select: {
@@ -77,8 +77,8 @@
       }
     }),
 
-    mounted(){
-      this.$validator.localize('en',this.dictionary)
+    mounted () {
+      this.$validator.localize('en', this.dictionary)
     },
 
     methods: {

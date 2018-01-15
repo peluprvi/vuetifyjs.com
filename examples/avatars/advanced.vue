@@ -15,7 +15,7 @@
             >
               <img
                 src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-                alt="" 
+                alt=""
                 v-if="message.avatar"
               >
               <v-icon :color="message.color" v-else>{{ message.icon }}</v-icon>

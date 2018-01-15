@@ -13,6 +13,9 @@ module.exports = {
     'plugin:vue/recommended',
     'standard'
   ],
+  globals: {
+    docsearch: true
+  },
   rules: {
     "vue/max-attributes-per-line": [2, {
       "singleline": 5,
@@ -21,18 +24,19 @@ module.exports = {
         "allowFirstLine": false
       }
     }],
-    // TODO: disabled until vuejs/eslint-plugin-vue#349 is fixed
-    /*"vue/script-indent": ["error", 2, {
-      "baseIndent": 1,
-      "switchCase": 0,
-      "ignores": []
-    }]*/
+    "prefer-promise-reject-errors": 0
   },
   overrides: [
     {
       files: '**/*.vue',
       rules: {
-        indent: false
+        indent: false,
+        // TODO: disabled until vuejs/eslint-plugin-vue#349 is fixed
+        /*"vue/script-indent": ["error", 2, {
+          "baseIndent": 1,
+          "switchCase": 0,
+          "ignores": []
+        }]*/
       }
     },
     {

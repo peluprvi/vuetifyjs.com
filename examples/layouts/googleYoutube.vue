@@ -102,7 +102,7 @@
         { picture: 38, text: 'Apple' },
         { picture: 48, text: 'Xbox Ahoy' },
         { picture: 58, text: 'Nokia' },
-        { picture: 78, text: 'MKBHD' },
+        { picture: 78, text: 'MKBHD' }
       ]
     }),
     props: {
