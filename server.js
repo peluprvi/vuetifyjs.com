@@ -119,7 +119,8 @@ function render (req, res) {
 
   const context = {
     title: 'Vuetify', // default title
-    url: req.url
+    url: req.url,
+    res
   }
   renderer.renderToString(context, (err, html) => {
     if (err) {

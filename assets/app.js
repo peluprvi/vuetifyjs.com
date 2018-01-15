@@ -42,7 +42,7 @@ Object.keys(Components).forEach(key => {
 export function createApp (ssrContext) {
   // create store and router instances
   const store = createStore()
-  const router = createRouter()
+  const router = createRouter(store)
   const i18n = createI18n()
 
   store.state.currentVersion = Vuetify.version

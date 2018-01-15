@@ -9,8 +9,8 @@
 
 <script>
   export default {
-    mounted () {
-      this.$store.state.appDrawer = false
+    created () {
+      this.$ssrContext && this.$ssrContext.res.status(404)
     }
   }
 </script>

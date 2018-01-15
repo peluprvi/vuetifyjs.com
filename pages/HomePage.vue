@@ -206,14 +206,6 @@
 
         return supporters
       }
-    },
-
-    created () {
-      this.$store.commit('app/FULLSCREEN', true)
-    },
-
-    beforeDestroy () {
-      this.$store.commit('app/FULLSCREEN', false)
     }
   }
 </script>

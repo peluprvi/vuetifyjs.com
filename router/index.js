@@ -16,10 +16,12 @@ const release = process.env.RELEASE
 
 // Function to create routes
 // Is default lazy but can be changed
-function route (path, view) {
+function route (path, view, fullscreen, props) {
   return {
     path: path,
-    meta: meta[path],
+    meta: Object.assign({ fullscreen }, meta[path]),
+    name: view,
+    props,
     component: () => import(
       /* webpackChunkName: "routes" */
       /* webpackMode: "lazy-once" */
@@ -29,10 +31,10 @@ function route (path, view) {
 }
 
 const routes = paths.map(path => {
-  return route(`${path.shift()}`, path)
+  return route(...path)
 })
 
-export function createRouter () {
+export function createRouter (store) {
   const router = new Router({
     base: release ? `/releases/${release}` : __dirname,
     mode: release ? 'hash' : 'history',
@@ -50,6 +52,15 @@ export function createRouter () {
         redirect: to => `/en${to.path}`
       }
     ]
+  })
+
+  router.beforeEach((to, from, next) => {
+    if (to.meta.fullscreen && !from.meta.fullscreen) {
+      store.commit('app/FULLSCREEN', true)
+    } else if (from.meta.fullscreen && !to.meta.fullscreen) {
+      store.commit('app/FULLSCREEN', false)
+    }
+    next()
   })
 
   Vue.use(VueAnalytics, {

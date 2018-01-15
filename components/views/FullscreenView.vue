@@ -19,28 +19,17 @@
       }
     },
 
-    data: () => ({
-      to: null
+    data: vm => ({
+      to: { name: vm.$store.state.route.from.name }
     }),
 
     computed: {
-      ...mapState({
-        from: state => state.route.from
-      }),
       namespace () {
         const route = this.$route.path.slice(1).split('/')
+        const lang = route.shift()
 
         return route.map(s => camel(s)).join('.')
       }
-    },
-
-    mounted () {
-      this.to = this.from
-      this.$store.commit('app/FULLSCREEN', true)
-    },
-
-    beforeDestroy () {
-      this.$store.commit('app/FULLSCREEN', false)
     }
   }
 </script>

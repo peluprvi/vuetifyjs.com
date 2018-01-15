@@ -150,18 +150,18 @@
       }
     },
 
-    created () {
-      this.backupTheme = Object.assign({}, this.$vuetify.theme)
-      this.$vuetify.theme = this.theme
+    beforeRouteEnter (to, from, next) {
+      next(vm => {
+        vm.backupTheme = Object.assign({}, vm.$vuetify.theme)
+        vm.$vuetify.theme = vm.theme
+        setTimeout(() => (vm.drawer = true), 400)
+      })
     },
 
-    mounted () {
-      setTimeout(() => (this.drawer = true), 400)
-    },
-
-    beforeDestroy () {
+    beforeRouteLeave (to, from, next) {
       this.drawer = false
       this.$vuetify.theme = this.backupTheme
+      next()
     },
 
     methods: {
