@@ -45,10 +45,10 @@
 
     asyncData ({ store, route }) {
       const longId = getLongId(route.params.id)
+      typeof window !== 'undefined' && store.dispatch('store/getCheckout')
       return Promise.all([
         !(store.state.store.products.length && findProduct(store, longId))
           && store.dispatch('store/getProduct', longId),
-        store.dispatch('store/getCheckout')
       ])
     },
 
