@@ -17,7 +17,7 @@
         v-list(three-line).py-0.mb-3
           v-list-tile-content
             v-list-tile-title {{ value.title }}
-            v-list-tile-sub-title(style="min-height: 42px") {{ value.description }}
+            v-list-tile-sub-title(style="min-height: 36px").caption {{ value.description }}
         div.text-xs-center
           div.green--text.headline.mb-3 {{ priceRange }}
           v-btn(depressed color="primary")
