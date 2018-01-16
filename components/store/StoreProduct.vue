@@ -47,7 +47,8 @@
         }
       },
       shortId () {
-        const arr = new Buffer(this.value.id, 'base64').toString('binary').split('/')
+        // atob() but for node
+        const arr = Buffer.from(this.value.id, 'base64').toString('binary').split('/')
         return arr[arr.length - 1]
       }
     }

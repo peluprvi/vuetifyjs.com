@@ -5,7 +5,7 @@
       v-container(grid-list-md :key="products.length")
         v-layout(wrap)
           v-flex(
-            xs12 sm4 md3 
+            xs12 sm4 md3
             v-for="product in products"
             :key="product.id"
             d-flex
@@ -20,11 +20,15 @@
   import StoreProduct from '@/components/store/StoreProduct'
 
   export default {
+    components: {
+      StoreProduct
+    },
+
     mixins: [asyncData],
 
     asyncData ({ store }) {
-      return store.state.store.hasFetchedProducts
-        && store.state.store.products.length
+      return store.state.store.hasFetchedProducts &&
+        store.state.store.products.length
           ? Promise.resolve()
           : store.dispatch('store/getProducts')
     },
@@ -33,10 +37,6 @@
       products () {
         return this.$store.state.store.products
       }
-    },
-
-    components: {
-      StoreProduct
     }
   }
 </script>

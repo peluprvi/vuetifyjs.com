@@ -29,7 +29,8 @@
   import asyncData from '@/util/asyncData'
 
   function getLongId (id) {
-    return new Buffer(`gid://shopify/Product/${id}`, 'binary').toString('base64')
+    // btoa() but for node
+    return Buffer.from(`gid://shopify/Product/${id}`, 'binary').toString('base64')
   }
 
   function findProduct (store, id) {
@@ -37,29 +38,28 @@
   }
 
   export default {
-    props: {
-      id: String
-    },
-
     mixins: [asyncData],
+
+    props: {
+      id: {
+        type: String,
+        default: ''
+      }
+    },
 
     asyncData ({ store, route }) {
       const longId = getLongId(route.params.id)
+      // TODO: only fetch once
       typeof window !== 'undefined' && store.dispatch('store/getCheckout')
-      return Promise.all([
-        !(store.state.store.products.length && findProduct(store, longId))
-          && store.dispatch('store/getProduct', longId),
-      ])
+      return store.state.store.products.length && findProduct(store, longId)
+        ? Promise.resolve()
+        : store.dispatch('store/getProduct', longId)
     },
 
     data: () => ({
       selectedVariant: null,
       quantity: 1
     }),
-
-    created () {
-      this.selectedVariant = this.product.variants[0]
-    },
 
     computed: {
       product () {
@@ -71,6 +71,10 @@
       price () {
         return this.selectedVariant.price
       }
+    },
+
+    created () {
+      this.selectedVariant = this.product.variants[0]
     },
 
     methods: {

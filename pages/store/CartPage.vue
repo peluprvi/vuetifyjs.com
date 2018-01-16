@@ -41,14 +41,14 @@
         ])
     },
 
+    computed: {
+      ...mapState('store', ['checkout'])
+    },
+
     watch: {
       checkout (val) {
         console.log(val)
       }
-    },
-
-    computed: {
-      ...mapState('store', ['checkout'])
     },
 
     methods: {
