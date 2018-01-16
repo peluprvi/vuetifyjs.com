@@ -1,23 +1,42 @@
 <template lang="pug">
-  v-flex(xs12 sm4 md3 d-flex)
-    v-card(:to="{ name: 'store/Product', params: { id: shortId }}")
-      v-card-media(contain :src="product.images[0].src" height="150")
-      v-card-title(primary-title)
-        div.headline.mb-0 {{ product.title }}
-        div {{ product.description }}
-      v-spacer
-      v-card-text.green--text {{ priceRange }}
+  v-card(:to="{ name: 'store/Product', params: { id: shortId }}")
+    div.text-xs-center.pt-2.mb-4
+      img(
+        src="/static/doc-images/logo-inverted.png"
+        width="24px"
+        alt="Vuetify Store Logo"
+      )
+    v-card-media(
+      contain
+      :src="value.images[0].src"
+      height="150"
+    ).mb-3
+    v-divider
+    v-layout(column justify-space-between).ma-0
+      v-card-text
+        v-list(three-line).py-0.mb-3
+          v-list-tile-content
+            v-list-tile-title {{ value.title }}
+            v-list-tile-sub-title(style="min-height: 42px") {{ value.description }}
+        div.text-xs-center
+          div.green--text.headline.mb-3 {{ priceRange }}
+          v-btn(depressed color="primary")
+            v-icon(left) shopping_cart
+            span Add to Cart
 </template>
 
 <script>
   export default {
     props: {
-      product: Object
+      value: {
+        type: Object,
+        required: true
+      }
     },
 
     computed: {
       priceRange () {
-        const prices = this.product.variants
+        const prices = this.value.variants
           .map(v => v.price)
           .sort((a, b) => +a > +b)
 
@@ -28,7 +47,7 @@
         }
       },
       shortId () {
-        const arr = new Buffer(this.product.id, 'base64').toString('binary').split('/')
+        const arr = new Buffer(this.value.id, 'base64').toString('binary').split('/')
         return arr[arr.length - 1]
       }
     }

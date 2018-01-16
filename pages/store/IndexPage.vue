@@ -1,15 +1,18 @@
 <template lang="pug">
   v-container(layout column)#store
-    template(v-if="dataLoading && !products")
-      div.display-4 Loading...
-    template(v-else)
-      h2.title Products
-      v-fade-transition(mode="out-in")
-        v-container(grid-list-md :key="products.length")
-          v-layout(wrap)
-            store-product(v-for="product in products" :product="product" :key="product.id")
-      v-layout(justify-end)
-        v-btn(:to="{ name: 'store/Cart' }") cart
+    h2.title Products
+    v-fade-transition(mode="out-in")
+      v-container(grid-list-md :key="products.length")
+        v-layout(wrap)
+          v-flex(
+            xs12 sm4 md3 
+            v-for="product in products"
+            :key="product.id"
+            d-flex
+          )
+            store-product(:value="product")
+    v-layout(justify-end)
+      v-btn(:to="{ name: 'store/Cart' }") cart
 </template>
 
 <script>
@@ -37,8 +40,3 @@
     }
   }
 </script>
-
-<style lang="stylus" scoped>
-  #store
-    height: 100%
-</style>
