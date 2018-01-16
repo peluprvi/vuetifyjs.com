@@ -52,11 +52,10 @@
       },
       namespace () {
         const route = this.$route.path.slice(1).split('/')
-        let lang
 
         // If a root page, prefix namespace with Vuetify
         if (route.length === 1) route.unshift('vuetify')
-        else lang = route.shift()
+        else route.shift() // TODO: language
 
         return route.map(s => camel(s)).join('.')
       },

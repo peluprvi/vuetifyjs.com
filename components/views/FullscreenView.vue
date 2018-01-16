@@ -6,7 +6,6 @@
 
 <script>
   // Utilities
-  import { mapState } from 'vuex'
   import { camel } from '@/util/helpers'
 
   export default {
@@ -26,7 +25,7 @@
     computed: {
       namespace () {
         const route = this.$route.path.slice(1).split('/')
-        const lang = route.shift()
+        route.shift() // TODO: language
 
         return route.map(s => camel(s)).join('.')
       }

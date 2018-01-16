@@ -76,12 +76,6 @@
       SwatchPicker: Swatches
     },
 
-    beforeRouteEnter (to, from, next) {
-      next(vm => {
-        vm.to = from.fullPath
-      })
-    },
-
     data () {
       return {
         active: 'primary',
@@ -152,6 +146,7 @@
 
     beforeRouteEnter (to, from, next) {
       next(vm => {
+        vm.to = from.fullPath
         vm.backupTheme = Object.assign({}, vm.$vuetify.theme)
         vm.$vuetify.theme = vm.theme
         setTimeout(() => (vm.drawer = true), 400)
