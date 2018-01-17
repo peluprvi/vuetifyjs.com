@@ -2,24 +2,31 @@
   v-container(d-flex style="height: 100%")#store-cart
     v-fade-transition(mode="out-in")
       template(v-if="!checkout")
-        div.display-4 Loading...
+        div.display-4 Loading everything...
       template(v-else)
         v-layout(column)
-          div(v-if="dataLoading").display-2 More loading...
+          div(v-if="dataLoading").display-2 Updating existing data...
           v-flex(xs12 v-if="!checkout.lineItems.length")
             div Your cart is empty
             v-btn(:to="{ name: 'store/Index' }" exact) Buy some shit
-          v-card(class="d-flex" height="120" v-else v-for="(item, i) in checkout.lineItems" :key="item.id")
-            v-layout(pa-3)
-              v-flex(xs2)
-                img(:src="item.variant.image && item.variant.image.src").product-image
-              v-flex(xs6)
-                div {{ item.title }}
-                div {{ item.variant.title }}
-              v-flex(xs1) ${{ item.variant.price }}
-              v-flex(xs3)
-                div {{ item.quantity }}
-                v-btn(@click="removeItem(item)") remove
+          template(v-else)
+            v-layout(shrink)
+              v-flex(xs6 offset-xs2) Name
+              v-flex(xs1) Price
+              v-flex(xs2) Quantity
+              v-flex(xs1) Subtotal
+            v-card(class="d-flex" height="120" v-for="(item, i) in checkout.lineItems" :key="item.id")
+              v-layout(pa-3)
+                v-flex(xs2)
+                  img(:src="item.variant.image && item.variant.image.src").product-image
+                v-flex(xs6)
+                  div {{ item.title }}
+                  div {{ item.variant.title }}
+                v-flex(xs1) ${{ item.variant.price }}
+                v-flex(xs2)
+                  div {{ item.quantity }}
+                  v-btn(@click="removeItem(item)") remove
+                v-flex(xs1) ${{ (item.variant.price * item.quantity).toFixed(2) }}
           v-layout(justify-end shrink my-5 mx-3)
             v-btn(:href="checkout.webUrl" target="_blank" color="primary") Proceed to checkout #[v-icon chevron_right]
 </template>
@@ -43,12 +50,6 @@
 
     computed: {
       ...mapState('store', ['checkout'])
-    },
-
-    watch: {
-      checkout (val) {
-        console.log(val)
-      }
     },
 
     methods: {

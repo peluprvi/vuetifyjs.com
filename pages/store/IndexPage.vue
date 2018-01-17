@@ -1,6 +1,7 @@
 <template lang="pug">
   v-container(layout column)#store
     h2.title Products
+    div(v-if="dataLoading").display-2 Refreshing data...
     v-fade-transition(mode="out-in")
       v-container(grid-list-md :key="products.length")
         v-layout(wrap)
@@ -11,8 +12,6 @@
             d-flex
           )
             store-product(:value="product")
-    v-layout(justify-end)
-      v-btn(:to="{ name: 'store/Cart' }") cart
 </template>
 
 <script>
