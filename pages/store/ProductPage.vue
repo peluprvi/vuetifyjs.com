@@ -84,6 +84,7 @@
           const items = [{ variantId: this.selectedVariant.id, quantity: this.quantity }]
 
           shopifyClient.checkout.addLineItems(checkout, items).then(checkout => {
+            this.$store.commit('store/SET_CHECKOUT', checkout)
             console.log('added')
           })
         })
