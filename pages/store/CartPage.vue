@@ -55,9 +55,9 @@
     methods: {
       removeItem (item) {
         this.dataLoading = true
-        shopifyClient.checkout.removeLineItems(this.checkout.id, item.id).then(() => {
+        shopifyClient.checkout.removeLineItems(this.checkout.id, item.id).then(checkout => {
           console.log('removed item')
-          return this.$store.dispatch('store/getCheckout')
+          this.$store.commit('store/SET_CHECKOUT', checkout)
         }).then(() => {
           this.dataLoading = false
         })
