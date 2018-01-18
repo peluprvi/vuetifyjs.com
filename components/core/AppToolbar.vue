@@ -20,7 +20,7 @@
         height="38px"
       )
     v-fade-transition(mode="out-in")
-      v-btn(flat :to="backPath" v-if="$route.path === '/store'")
+      v-btn(flat :to="backPath" v-if="$route.path.name === 'store/Index'")
         v-icon(left) mdi-arrow-left
         span Back to Docs
       v-toolbar-title(v-else).pb-1.hidden-xs-only Vuetify
@@ -28,8 +28,8 @@
     v-toolbar-items
       v-btn(
         flat
-        v-show="$route.path === '/'"
-        to="/getting-started/quick-start"
+        v-show="$route.path.name === 'Home'"
+        to="{ name: 'getting-started/QuickStart' }"
       )
         span.hidden-md-and-up Docs
         span.hidden-sm-and-down Documentation
@@ -98,22 +98,21 @@
         appToolbar: state => state.appToolbar,
         currentVersion: state => state.currentVersion,
         isFullscreen: state => state.isFullscreen,
-        loadedLangs: state => state.loadedLangs,
         releases: state => state.releases,
         route: state => state.route,
         stateless: state => state.stateless
       }),
       backPath () {
         return this.route.from.path === '/'
-          ? '/getting-started/quick-start'
+          ? { name: 'getting-started/QuickStart' }
           : this.route.from.path
       },
       isManualScrolled () {
-        return this.$route.path !== '/' &&
+        return this.$route.name !== 'Home' &&
           this.isFullscreen
       },
       isStore () {
-        return this.$route.path === '/store'
+        return this.$route.name.startsWith === 'store/'
       }
     },
 
@@ -121,19 +120,8 @@
       changeToRelease (release) {
         window.location.href = `${window.location.origin}/releases/${release}/#${this.$route.fullPath}`
       },
-      async translateI18n (lang) {
-        if (this.loadedLangs.indexOf(lang) < 0) {
-          await import(
-            /* webpackChunkName: "lang-[request]" */
-            /* webpackMode: "lazy-once" */
-            `@/lang/${lang}`
-          ).then(msgs => this.$i18n.setLocaleMessage(lang, msgs.default))
-          .catch(err => Promise.resolve(err))
-        }
-
-        document.querySelector('html').setAttribute('lang', lang)
-
-        this.$i18n.locale = lang
+      translateI18n (lang) {
+        this.$router.replace({ params: { lang } })
       }
     }
   }
