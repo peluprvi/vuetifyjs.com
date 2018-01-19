@@ -1,52 +1,52 @@
 export default {
-  header: 'Navigation drawer',
-  headerText: 'The `v-navigation-drawer` component is what your users will utilize to navigate through the application. The navigation-drawer is pre-configured to work with or without **vue-router** right out the box.',
+  header: '导航抽屉',
+  headerText: '`v-navigation-drawer`组件是用户将用来浏览应用程序的内容，导航抽屉被预先配置为可以使用或不实用**vue-router**。',
   components: ['v-navigation-drawer'],
   examples: [{
     permanent: {
-      header: 'Default',
-      desc: 'The navigation drawer is primarily used to house links to the pages in your application'
+      header: '默认情况',
+      desc: '导航抽屉主要用于容纳应用程序中的页面的链接。'
     },
     permanentClipped: {
-      header: 'Colored drawer',
-      desc: 'Navigation drawers can be customized to fit any application\'s design. While any component can be used within a drawer, the primary ones you will use are `v-list`, all of the **list** children components and `v-divider`'
+      header: '彩色的抽屉',
+      desc: '导航抽屉可以定制，以适应任何应用程序的设计。虽然让和组件都可以在抽屉中使用，但是您使用的主要组件是`v-list`、所有**列表**自组建和`v-divider`。'
     },
     permanentFloating: {
-      header: 'Permanent floating drawer',
-      desc: 'A navigation drawer can be placed inside of a card and float over the content background.'
+      header: '永久浮动抽屉',
+      desc: '导航抽屉可以放置在卡片内并浮在内容背景上。'
     },
     persistent: {
-      header: 'Avatars',
-      desc: 'Since drawers support the `v-list` component, you can easily create customized dashboard solutions.'
+      header: '头像',
+      desc: '由于抽屉支持`v-list`组件，您可以轻松创建自定义的仪表板解决方案。'
     },
     mini: {
-      header: 'Mini',
-      desc: 'The navigation drawer also has a mini-variant which can be controlled using the prop `mini-variant.sync`.'
+      header: '迷你',
+      desc: '导航抽屉也有一个小型变体，可以使用`mini-variant.sync`来控制。'
     },
     temporary: {
-      header: 'Temporary',
-      desc: 'A temporary drawer sits above its application and uses a scrim (overlay) to darken the background. This drawer behavior is mimicked on the persistent drawer when on mobile. Clicking outside of the drawer will cause it to close.'
+      header: '临时的',
+      desc: '临时抽屉位于其应用之上，并使用稀松布（叠加）来使背景变暗。这个抽屉的行为是模仿在移动设备时的持续抽屉。点击抽屉外部会导致关闭。'
     },
     dark: {
-      header: 'Dark theme',
-      desc: 'Vuetify also supports the dark application theme. This will not override components that have default themes so in some cases it will be necessary to manually set the dark theme accents.',
+      header: '暗黑主题',
+      desc: 'Vuetify也支持暗黑的应用程序主题，这不会覆盖具有默认主题的主键，因此在某些情况下，需要手动设置为暗黑主题。',
       uninverted: true
     }
   }],
   props: {
     absolute: 'Mixins.Positionable.props.absolute',
-    clipped: 'A clipped drawer rests under the application toolbar',
-    disableResizeWatcher: 'Will automatically open/close drawer when resized depending if mobile or desktop.',
-    disableRouteWatcher: 'Disables opening of navigation drawer when route changes',
+    clipped: '剪切的抽屉位于应用程序工具栏下方',
+    disableResizeWatcher: '调整大小时将自动打开/关闭抽屉，具体取决于手机还是桌面',
+    disableRouteWatcher: '当路由改变时禁止打开抽屉导航',
     fixed: 'Mixins.Positionable.props.fixed',
-    floating: 'A floating drawer has no visible container (no border-right)',
-    hideOverlay: 'Hide the display of the overlay',
-    miniVariantWidth: 'Designates the width assigned when the `mini` prop is turned on',
-    miniVariant: 'Condenses navigation drawer width, also accepts the **.sync** modifier. With this, the drawer will re-open when clicking it',
-    permanent: 'The drawer remains visible regardless of screen size',
-    right: 'Places the navigation drawer on the right',
-    stateless: 'Remove all automated state functionality (resize, mobile, route) and manually control the drawer state',
-    temporary: 'A temporary drawer sits above its application and uses a scrim (overlay) to darken the background',
-    touchless: 'Disable mobile touch functionality'
+    floating: '浮动抽屉没有可见的容器（没有右边框）',
+    hideOverlay: '隐藏叠加层的显示',
+    miniVariantWidth: '指定`mini`属性开期时指定的宽度',
+    miniVariant: '凝结导航抽屉宽度，也接受**.sync**修饰符。这样，抽屉在点击时会重新打开',
+    permanent: '不管屏幕尺寸如何，抽屉都可以看到',
+    right: '将抽屉放置在右侧',
+    stateless: '删除所有自动状态功能（调整大小、移动、路由）并手动控制抽屉状态。',
+    temporary: '临时抽屉位于其应用之上，并使用稀松布（叠加）来使背景变暗',
+    touchless: '禁用移动触摸功能'
   }
 }

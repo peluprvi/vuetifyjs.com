@@ -1,52 +1,52 @@
 export default {
-  header: 'Menu',
-  headerText: 'The `v-menu` component shows a menu at the position of the element used to activate it.',
+  header: '菜单',
+  headerText: '`v-menu`组件展示一个菜单在用于激活它的元素的位置上。',
   components: ['v-menu'],
   examples: [{
     activator: {
-      header: 'Activator',
-      desc: 'Remember to put the element that activates the menu in the `activator` slot.',
+      header: '激活器',
+      desc: '请记住将激活菜单的元素放置在`activator`插槽中。',
       uninverted: true
     },
     absolute: {
-      header: 'Absolute position',
-      desc: 'Menus can also be placed absolutely on top of the activator element using the `absolute` prop. Try clicking anywhere on the image.',
+      header: '绝对定位',
+      desc: '菜单也可以使用`absolute`属性绝对定位在激活元素的顶部。尝试点击图片上的任何地方。',
       uninverted: true
     },
     absoluteWithoutActivator: {
-      header: 'Absolute position without activator',
-      desc: 'Menus can also be used without an activator by using `absolute` together with the props `position-x` and `position-y`. Try right-clicking anywhere on the image.',
+      header: '没有激活时的绝对定位',
+      desc: '菜单也可以通过`absolute`属性跟`position-x`和`position-y`属性一起使用。尝试右键点击图像上的仍和位置。',
       uninverted: true
     },
     hover: {
-      header: 'Hover',
-      desc: 'Menus can be accessed using hover instead of clicking with the `open-on-hover` prop.',
+      header: '悬停',
+      desc: '菜单可以使用悬停进行访问，而不是用`open-on-hover`属性进行点击。',
       uninverted: true
     },
     menus: {
-      header: 'Menus',
-      desc: 'Menus can be placed within almost any component.',
+      header: '菜单',
+      desc: '菜单可以放在几乎任何组件中',
       uninverted: true
     },
     customTransition: {
-      header: 'Custom transitions',
-      desc: 'Vuetify comes with 3 standard transitions, **scale**, **slide-x** and **slide-y**. You can also create your own and pass it as the transition argument. For an example of how the stock transitions are constructed, visit <a href="https://github.com/vuetifyjs/vuetify/blob/master/src/util/helpers.js#L13" target="_blank" rel="noopener">here</a>.',
+      header: '自定义过渡',
+      desc: 'Vuetify带有3个标准过渡，**scale**、**slide-x**和**slide-y**。您也可以创建自己的并将其作为过渡参数传递。有关如何构建内置过渡的示例，请访问[此处](https://github.com/vuetifyjs/vuetify/blob/master/src/util/helpers.js#L13)。',
       uninverted: true
     },
     popover: {
-      header: 'Popover menu',
-      desc: 'A menu can be configured to be static when opened, allowing it to function as a popover. This can be useful when there are multiple interactive items within the menu contents.',
+      header: '弹出菜单',
+      desc: '可以将菜单配置为在打开时为静态，使其可以用作弹出窗口。当菜单内容有多个交互项时，这可能很有用。',
       uninverted: true
     }
   }],
   props: {
-    closeOnClick: 'Designates if menu should close on outside-activator click',
-    closeOnContentClick: 'Designates if menu should close when its content is clicked',
-    disabled: 'Disables the menu',
-    offsetX: 'Offset the menu on the x-axis. Works in conjunction with direction left/right',
-    offsetY: 'Offset the menu on the y-axis. Works in conjunction with direction top/bottom',
-    openOnClick: 'Designates whether menu should open on activator click',
-    openOnHover: 'Designates whether menu should open on activator hover',
+    closeOnClick: '指定菜应该在外部激活器被点击时关闭。',
+    closeOnContentClick: '指定点击内容时菜单是否应该关闭。',
+    disabled: '禁用菜单',
+    offsetX: '在x轴上偏移菜单，与左/右方向一起工作',
+    offsetY: '在y轴上偏移菜单，与上/下方向一起工作',
+    openOnClick: '指定是否在激活器点击时打开菜单',
+    openOnHover: '指定是否在激活器悬停时打开菜单',
     origin: 'Mixins.Transitionable.props.origin',
     transition: 'Mixins.Transitionable.props.transition'
   }

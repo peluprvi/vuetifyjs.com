@@ -1,51 +1,51 @@
 export default {
-  header: 'Progress',
-  headerText: 'The `v-progress-circular` and `v-progress-linear` components are used to convey data visually to users. They can also represent an indeterminate amount, such as loading or processing. These components contains a slot that is centered within the component container.',
+  header: '进度条',
+  headerText: '`v-progress-circular`和`v-progress-linear`组件用于将数据直观地传达给用户。他们也可以代表一个不确定的数量，如加载或处理。这些组件包含一个位于组件容器中心的插槽。',
   components: ['v-progress-circular', 'v-progress-linear'],
   examples: [{
     circularDefault: {
-      header: 'Default',
-      desc: 'By default, progress circular uses the applications secondary color.'
+      header: '默认圆环',
+      desc: '默认情况下，进度圆环使用应用程序辅助色彩。'
     },
     circularColored: {
-      header: 'Colored',
-      desc: 'Alternate colors can be applied.'
+      header: '圆环色彩',
+      desc: '可以使用其他颜色。'
     },
     circularIndeterminate: {
-      header: 'Indeterminate',
-      desc: 'An indeterminate progress circular animates forever.'
+      header: '不定圆环',
+      desc: '一个不确定的进度圆环永远循环动画。'
     },
     circularSizeAndWidth: {
-      header: 'Size & Width',
-      desc: 'The progress circular component can have an altered width and size.'
+      header: '圆环大小和宽度',
+      desc: '进度圆环组件可以改变宽度和大小。'
     },
     circularRotate: {
-      header: 'Rotate',
-      desc: 'The progress origin can be rotated.'
+      header: '圆环环绕',
+      desc: '进度圆环原生可以环绕。'
     },
     linearDeterminate: {
-      header: 'Determinate',
-      desc: 'The progress linear component can have a determinate state modified by v-model.'
+      header: '定值线条',
+      desc: '进度线条组件可以有一个由v-model修改的确定性状态。'
     },
     linearIndeterminate: {
-      header: 'Indeterminate',
-      desc: 'Just as with the progress circular component, progress linear has an indeterminate state.'
+      header: '不定线条',
+      desc: '正如进度圆环组件一样，进度线条有一个不确定的状态。'
     },
     linearBuffer: {
-      header: 'Buffer',
-      desc: 'A buffer state represents two values simultaneously. The primary value is controled by the model, whereas the buffer is controlled by the `buffer-value` prop.'
+      header: '缓冲',
+      desc: '缓冲区状态同事表示两个值，主值由模型控制，而缓冲区由`buffer-value`属性控制。'
     },
     linearQueryIndeterminateAndDeterminate: {
-      header: 'Query Indeterminate and Determinate',
+      header: '查询不确定和确定',
       desc: 'To query state is controlled by the truthiness of indeterminate with the query prop set to true.'
     },
     linearCustomHeightAndContextualColors: {
-      header: 'Custom height and contextual colors',
-      desc: 'A custom height or contextual color can be applied to a progress bar. The bars primary color is your applications primary color.'
+      header: '自定义高度和上下文色彩',
+      desc: '自定义高度或上下文颜色可以应用于进度条。边栏的原色是您的应用程序的主要颜色。'
     },
     linearCustomColors: {
-      header: 'Custom colors',
-      desc: 'You can also set the color using the props `color` and `background-color`.'
+      header: '自定义色彩',
+      desc: '您还可以使用属性`color`和`background-color`设置颜色。'
     }
   }]
 }
