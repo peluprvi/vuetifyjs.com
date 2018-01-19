@@ -1,34 +1,54 @@
 <template lang="pug">
-  v-container(d-flex style="height: 100%")#store-cart
-    v-fade-transition(mode="out-in")
-      template(v-if="!checkout")
-        div.display-4 Loading everything...
-      template(v-else)
-        v-layout(column)
-          div(v-if="dataLoading").display-2 Updating existing data...
-          v-flex(xs12 v-if="!checkout.lineItems.length")
-            div Your cart is empty
-            v-btn(:to="{ name: 'store/Index' }" exact) Buy some shit
-          template(v-else)
-            v-layout(shrink)
-              v-flex(xs6 offset-xs2) Name
-              v-flex(xs1) Price
-              v-flex(xs2) Quantity
-              v-flex(xs1) Subtotal
-            v-card(class="d-flex" height="120" v-for="(item, i) in checkout.lineItems" :key="item.id")
-              v-layout(pa-3)
-                v-flex(xs2)
-                  img(:src="item.variant.image && item.variant.image.src").product-image
-                v-flex(xs6)
-                  div {{ item.title }}
-                  div {{ item.variant.title }}
-                v-flex(xs1) ${{ item.variant.price }}
-                v-flex(xs2)
-                  div {{ item.quantity }}
-                  v-btn(@click="removeItem(item)") remove
-                v-flex(xs1) ${{ (item.variant.price * item.quantity).toFixed(2) }}
-          v-layout(justify-end shrink my-5 mx-3)
-            v-btn(:href="checkout.webUrl" target="_blank" color="primary") Proceed to checkout #[v-icon chevron_right]
+  v-container#store-cart
+    v-layout(column).mb-5
+      v-flex(
+        xs12
+        v-if="!checkout.lineItems.length"
+      )
+        div.text-xs-center.headline Your cart is empty
+
+      v-flex(xs12).text-xs-center
+        v-btn(
+          :to="{ name: 'store/Index' }"
+          exact
+          large
+          flat
+        ) Back to Store
+
+    v-card(v-if="checkout.lineItems.length").mb-5
+      v-data-table(
+        :headers="headers"
+        :items="checkout.lineItems"
+        hide-actions
+      )
+        template(slot="items" slot-scope="{ item }")
+          td
+            img(:src="item.variant.image && item.variant.image.src").product-image
+          td
+            div(v-text="item.title")
+            div(v-text="item.variant.title")
+          td
+            v-layout(align-center)
+              span(v-text="item.quantity").subheading
+              v-btn(icon small @click="removeItem(item)")
+                v-icon(size="16px") remove
+          td.text-xs-right ${{ item.variant.price }}
+          td.text-xs-right ${{ (item.variant.price * item.quantity).toFixed(2) }}
+
+        template(slot="footer")
+          td(colspan="100%").py-3
+            v-layout(align-center)
+              v-spacer
+              span.subheading.mr-5 CART SUBTOTAL:
+              span.grey--text.title ${{ checkout.subtotalPrice }}
+
+      div.text-xs-right
+        v-btn(
+          :href="checkout.webUrl"
+          target="_blank"
+          color="primary"
+          large
+        ).mx-0 Proceed to checkout #[v-icon chevron_right]
 </template>
 
 <script>
@@ -47,6 +67,38 @@
           store.dispatch('store/getProducts')
         ])
     },
+
+    data: () => ({
+      headers: [
+        {
+          text: 'Product',
+          value: false,
+          sortable: false
+        },
+        {
+          text: 'Name',
+          value: false,
+          sortable: false
+        },
+        {
+          text: 'Quantity',
+          value: false,
+          sortable: false
+        },
+        {
+          text: 'Price',
+          align: 'right',
+          value: false,
+          sortable: false
+        },
+        {
+          text: 'Subtotal',
+          align: 'right',
+          value: false,
+          sortable: false
+        }
+      ]
+    }),
 
     computed: {
       ...mapState('store', ['checkout'])

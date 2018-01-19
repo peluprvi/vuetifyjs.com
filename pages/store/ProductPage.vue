@@ -1,27 +1,45 @@
 <template lang="pug">
-  v-container(d-flex style="height: 100%")#store-product
-    v-fade-transition(mode="out-in")
-      v-card(v-if="dataLoading" height="100%")
-        div.display-4 Loading...
-      v-card(v-else-if="!product" height="100%").fill-height
-      v-card(v-else height="100%").layout.fill-height.wrap.align-content-start
-        v-layout(flex xs12 sm4 md6 align-center justify-center)
-          img(:src="product.images[0].src").product-image
-        v-layout(wrap flex xs12 sm8 md6 align-content-start)
-          v-flex(xs12)
-            v-card-title(primary-title)
-              div.headline.mb-0 {{ product.title }}
-              div.green--text ${{ price }}
-          v-flex(xs12)
-            v-card-text
-              v-layout(align-baseline)
-                v-flex(xs6 mr-1)
-                  v-select(v-model="selectedVariant" :items="product.variants" item-text="title" item-value="id" return-object label="Size")
-                v-flex(xs4 mx-1)
-                  v-text-field(v-model.number="quantity" type="number" label="Quantity")
-                v-btn(flat @click="addToCart").ml-1 buy
-          v-flex(xs12)
-            v-card-text {{ product.description }}
+  v-container(fill-height fluid)
+    v-layout
+      v-flex(tag="v-card")
+        v-card-text
+          v-layout
+            v-flex(xs12 sm6).text-xs-center
+              img(:src="product.images[0].src").product-image
+            v-flex(xs12 sm6)
+              div(v-text="product.title").display-1.mb-3
+              div(v-text="`$${price}`").headline.green--text.mb-3
+              div.mb-5
+                span.caption.grey--text Description
+                div(v-text="product.description")
+              v-container(grid-list-xl pa-0)
+                v-layout(wrap)
+                  v-flex(xs12 sm6)
+                    v-select(
+                      v-model="selectedVariant"
+                      :items="product.variants"
+                      item-text="title"
+                      item-value="id"
+                      return-object
+                      label="Select size"
+                      hide-details
+                    )
+                  v-flex(xs12 sm6)
+                    v-text-field(
+                      v-model.number="quantity"
+                      type="number"
+                      label="Quantity"
+                      max="5"
+                      hide-details
+                    )
+                  v-flex(xs12).text-xs-right
+                    v-btn(
+                      round
+                      color="primary"
+                      @click="addToCart"
+                    )
+                      span Add to Cart
+                      v-icon(right size="18px") add_shopping_cart
 </template>
 
 <script>

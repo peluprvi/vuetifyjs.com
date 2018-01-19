@@ -72,9 +72,16 @@
             @click="changeToRelease(release)"
           )
             v-list-tile-title {{ release }}
-      v-btn(v-if="isStore && cart" flat :to="{ name: 'store/Cart' }" active-class="btn")
-        v-icon(left) shopping_cart
-        | ${{ cart.totalPrice }}
+      v-btn(
+        v-if="isStore && cart"
+        flat
+        :to="{ name: 'store/Cart' }"
+        active-class="btn"
+      )
+        v-badge(color="red" left)
+          template(slot="badge") {{ cart.lineItems.length }}
+          v-icon(left) shopping_cart
+        span Cart
 </template>
 
 <script>

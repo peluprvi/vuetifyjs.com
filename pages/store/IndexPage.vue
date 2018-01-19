@@ -1,12 +1,10 @@
 <template lang="pug">
   v-container(layout column)#store
-    h2.title Products
-    div(v-if="dataLoading").display-2 Refreshing data...
     v-fade-transition(mode="out-in")
-      v-container(grid-list-md :key="products.length")
+      v-container(grid-list-xl :key="products.length")
         v-layout(wrap)
           v-flex(
-            xs12 sm4 md3
+            xs12 sm6 md4 lg3
             v-for="product in products"
             :key="product.id"
             d-flex

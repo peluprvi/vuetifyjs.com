@@ -1,5 +1,8 @@
 <template lang="pug">
-  v-card(:to="{ name: 'store/Product', params: { id: shortId }}")
+  v-card(
+    hover
+    :to="{ name: 'store/Product', params: { id: shortId }}"
+  )
     div.text-xs-center.pt-2.mb-4
       img(
         src="/static/doc-images/logo-inverted.png"
@@ -12,17 +15,12 @@
       height="150"
     ).mb-3
     v-divider
-    v-layout(column justify-space-between).ma-0
-      v-card-text
-        v-list(three-line).py-0.mb-3
-          v-list-tile-content
-            v-list-tile-title {{ value.title }}
-            v-list-tile-sub-title(style="min-height: 36px").caption {{ value.description }}
-        div.text-xs-center
-          div.green--text.headline.mb-3 {{ priceRange }}
-          v-btn(depressed color="primary")
-            v-icon(left) shopping_cart
-            span Add to Cart
+    v-card-text(style="height: 88px;")
+      div(v-text="value.title").body-2.mb-2
+      div(v-text="description").caption.grey--text
+    v-card-text.text-xs-center
+      div.green--text.display-1.mb-4 {{ priceRange }}
+      v-btn(block color="primary" depressed large).my-0 Details
 </template>
 
 <script>
@@ -35,6 +33,13 @@
     },
 
     computed: {
+      description () {
+        const { description } = this.value
+        
+        if (description.length < 75) return description
+
+        return description.slice(0, 72) + '...'
+      },
       priceRange () {
         const prices = this.value.variants
           .map(v => v.price)
