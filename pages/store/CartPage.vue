@@ -31,8 +31,8 @@
           td
             v-layout(align-center)
               span(v-text="item.quantity").subheading
-              v-btn(icon small @click="removeItem(item)")
-                v-icon(size="16px") remove
+              v-btn(icon flat small @click="removeItem(item)")
+                v-icon(size="16px") remove_shopping_cart
           td.text-xs-right ${{ item.variant.price }}
           td.text-xs-right ${{ (item.variant.price * item.quantity).toFixed(2) }}
 
