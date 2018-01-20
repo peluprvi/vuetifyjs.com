@@ -1,5 +1,6 @@
 <template lang="pug">
-  v-container(fill-height fluid)
+  v-container(fluid)#store-product
+    v-progress-linear(indeterminate :active="dataLoading" class="my-0" height="4")
     v-layout
       v-flex(tag="v-card")
         v-card-text
@@ -37,6 +38,7 @@
                       round
                       color="primary"
                       @click="addToCart"
+                      :loading="cartLoading"
                     )
                       span Add to Cart
                       v-icon(right size="18px") add_shopping_cart
@@ -75,6 +77,7 @@
     },
 
     data: () => ({
+      cartLoading: false,
       selectedVariant: null,
       quantity: 1
     }),
@@ -98,12 +101,13 @@
     methods: {
       addToCart () {
         this.asyncData.then(() => {
+          this.cartLoading = true
           const checkout = this.$store.state.store.checkout.id
           const items = [{ variantId: this.selectedVariant.id, quantity: this.quantity }]
 
           shopifyClient.checkout.addLineItems(checkout, items).then(checkout => {
             this.$store.commit('store/SET_CHECKOUT', checkout)
-            console.log('added')
+            this.cartLoading = false
           })
         })
       }
@@ -112,6 +116,11 @@
 </script>
 
 <style lang="stylus" scoped>
+  #store-product
+    height: 100%
+    display: flex
+    flex-direction: column
+
   .product-image
     max-width: 100%
 </style>

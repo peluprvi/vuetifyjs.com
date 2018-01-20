@@ -1,7 +1,8 @@
 <template lang="pug">
   v-container(layout column)#store
+    v-progress-linear(indeterminate :active="dataLoading" class="my-0" height="4")
     v-fade-transition(mode="out-in")
-      v-container(grid-list-xl :key="products.length")
+      v-container(grid-list-xl pa-0 :key="products.length")
         v-layout(wrap)
           v-flex(
             xs12 sm6 md4 lg3

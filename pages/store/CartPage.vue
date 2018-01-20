@@ -1,5 +1,6 @@
 <template lang="pug">
   v-container#store-cart
+    v-progress-linear(indeterminate :active="dataLoading" class="my-0" height="4")
     v-layout(column).mb-5
       v-flex(
         xs12
