@@ -39,19 +39,20 @@ export default {
         commit('SET_PRODUCT', product)
       })
     },
-    getCheckout ({ commit }) {
+    getCheckout ({ dispatch, commit }, fresh = false) {
       let checkout
       const checkoutId = localStorage.getItem('vuetify_shopify_checkout_id')
 
-      if (checkoutId) {
+      if (!fresh && checkoutId) {
         checkout = shopifyClient.checkout.fetch(checkoutId)
-      }
-
-      if (!checkout) {
+      } else {
         checkout = shopifyClient.checkout.create()
       }
 
       return checkout.then(checkout => {
+        if (checkout.completedAt != null) {
+          return dispatch('getCheckout', true)
+        }
         commit('SET_CHECKOUT', checkout)
         localStorage.setItem('vuetify_shopify_checkout_id', checkout.id)
       })

@@ -78,7 +78,7 @@
         :to="{ name: 'store/Cart' }"
         active-class="btn"
       )
-        v-badge(color="red" left)
+        v-badge(color="red" left :value="cart.lineItems.length")
           template(slot="badge") {{ cart.lineItems.length }}
           v-icon(left) shopping_cart
         span Cart

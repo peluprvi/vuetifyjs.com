@@ -35,7 +35,7 @@
     computed: {
       description () {
         const { description } = this.value
-        
+
         if (description.length < 75) return description
 
         return description.slice(0, 72) + '...'
