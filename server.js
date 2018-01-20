@@ -120,6 +120,7 @@ function render (req, res) {
   const context = {
     title: 'Vuetify', // default title
     url: req.url,
+    lang: req.params[0],
     res
   }
   renderer.renderToString(context, (err, html) => {

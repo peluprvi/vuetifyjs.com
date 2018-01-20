@@ -55,10 +55,8 @@ export function createRouter (store) {
   })
 
   router.beforeEach((to, from, next) => {
-    if (to.meta.fullscreen && !from.meta.fullscreen) {
-      store.commit('app/FULLSCREEN', true)
-    } else if (from.meta.fullscreen && !to.meta.fullscreen) {
-      store.commit('app/FULLSCREEN', false)
+    if (to.meta.fullscreen || from.meta.fullscreen) {
+      store.commit('app/FULLSCREEN', !!to.meta.fullscreen)
     }
     next()
   })
