@@ -111,6 +111,9 @@
         shopifyClient.checkout.removeLineItems(this.checkout.id, item.id).then(checkout => {
           console.log('removed item')
           this.$store.commit('store/SET_CHECKOUT', checkout)
+        }).catch(err => {
+          console.error(err.message)
+          return this.$store.dispatch('store/getCheckout')
         }).then(() => {
           this.dataLoading = false
         })
