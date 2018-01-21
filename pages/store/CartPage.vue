@@ -13,8 +13,8 @@
           :to="{ name: 'store/Index' }"
           v-if="!hasItems"
         )
-          v-icon(left) chevron_left
           span {{ $t('Vuetify.Store.backToStore') }}
+          v-icon(right) mdi-arrow-right
 
     template(v-if="hasItems")
       v-card.mb-5

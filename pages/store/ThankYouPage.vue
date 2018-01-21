@@ -12,8 +12,8 @@
           color="primary"
           :to="{ name: 'store/Index' }"
         ).mb-4.px-5
-          v-icon(left) chevron_left
-          span(v-text="$t('Vuetify.Store.backToStore')")
+          span {{ $t('Vuetify.Store.backToStore') }}
+          v-icon(right) mdi-arrow-right
         markdown(:source="$t('Vuetify.Store.thankYouBack')").caption
 </template>
 

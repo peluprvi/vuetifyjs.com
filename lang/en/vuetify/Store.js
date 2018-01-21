@@ -1,9 +1,9 @@
 export default {
   indexHeader: 'Welcome to our new Store!',
   indexSubheader: 'Supercharge your Development',
-  cartHeader: 'Shopping Cart',
+  cartHeader: 'Your Cart',
   cartSubheader: 'You\'re almost done!',
-  cartEmptySubheader: 'Head back to the store',
+  cartEmptySubheader: 'Your cart is currently empty',
   thankYouHeader: 'Thank you!',
   thankYouSubheader: 'Your purchase helps support the continued maintenance and development of Vuetify',
   checkout: 'Proceeed to checkout',
@@ -11,7 +11,7 @@ export default {
   details: 'Details',
   description: 'Description',
   back: 'Back',
-  backToStore: 'Back to store',
+  backToStore: 'Continue Shopping',
   thankYouBack: 'Having issues?<br>Come to the [community](https://community.vuetifyjs.com)',
   cartHeaders: [
     {

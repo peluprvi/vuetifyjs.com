@@ -15,10 +15,11 @@
           h2(v-text="product.title").display-2.primary--text.mb-3
 
           div.mb-5
-            span.mr-3.display-1.green--text
-              | $ {{ select.price }}
-            span(v-if="onSale").strike.display-1.grey--text.text--lighten-1
-              | $ {{ select.compareAtPrice }}
+            span(v-if="onSale").mr-3.strike.display-1.grey--text.text--lighten-1
+              | ${{ select.compareAtPrice }}
+            span.display-1.green--text
+              span.mr-1 ${{ select.price }}
+              span(v-if="onSale").subheading Sale
 
           v-container(grid-list-xl pa-0).mb-5
             v-layout(wrap)
