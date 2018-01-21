@@ -44,8 +44,10 @@ export function createRouter (store) {
       },
       {
         path: '*',
-        // TODO: use current language (localstorage?)
-        redirect: to => `/en${to.path}`
+        redirect: to => {
+          const lang = (typeof window !== 'undefined' && window.localStorage.getItem('currentLanguage')) || 'en'
+          return `/${lang}${to.path}`
+        }
       }
     ]
   })

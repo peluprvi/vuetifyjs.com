@@ -122,6 +122,8 @@
       },
       translateI18n (lang) {
         this.$router.replace({ params: { lang } })
+        document.cookie = `currentLanguage=${lang};path='/';max-age=${60 * 60 * 24 * 7}` // expires in 7 days
+        window.localStorage.setItem('currentLanguage', lang)
       }
     }
   }

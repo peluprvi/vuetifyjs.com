@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const LRU = require('lru-cache')
 const express = require('express')
+const cookieParser = require('cookie-parser')
 const favicon = require('serve-favicon')
 const compression = require('compression')
 const microcache = require('route-cache')
@@ -66,6 +67,7 @@ const serve = (path, cache) => express.static(resolve(path), {
   maxAge: cache && isProd ? 1000 * 60 * 60 * 24 * 30 : 0
 })
 
+app.use(cookieParser())
 app.use(compression({ threshold: 0 }))
 app.use(favicon('./static/favicon.ico'))
 app.use('/example-source', serve('./examples', true)) // TODO: This should be a regex to serve anything with an extension
@@ -103,6 +105,9 @@ function render (req, res) {
 
   res.setHeader('Content-Type', 'text/html')
   res.setHeader('Server', serverInfo)
+  res.cookie('currentLanguage', req.params[0], {
+    maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
+  })
 
   const handleError = err => {
     if (err.url) {
@@ -139,8 +144,10 @@ app.get(/^\/([a-z]{2,3}|[a-z]{2,3}-[a-zA-Z]{4}|[a-z]{2,3}-[A-Z]{2,3})(?:\/.*)?$/
 })
 
 // 302 redirect for no language
-// TODO: use accept-language or a cookie instead of /en
-app.get('*', (req, res) => res.redirect(302, `/en${req.path}`))
+app.get('*', (req, res) => {
+  const lang = req.cookies.currentLanguage || req.acceptsLanguages() || 'en'
+  res.redirect(302, `/${lang}${req.path}`)
+})
 
 const port = process.env.PORT || 8095
 app.listen(port, '0.0.0.0', () => {
