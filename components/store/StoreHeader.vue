@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-container.pt-5.text-xs-center#store-header
+  v-container.text-xs-center#store-header
     v-layout
       v-flex(xs12)
         img(

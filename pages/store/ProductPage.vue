@@ -1,61 +1,62 @@
 <template lang="pug">
-  v-container#store-product.pt-5
+  v-container(pt-5)#store-product
     v-progress-linear(
       indeterminate
       :active="dataLoading"
       class="my-0"
       height="4"
     )
-    v-layout(wrap)
-      v-flex(xs12 md6 order-xs2 order-sm2 order-md1).text-xs-center
-        img(:src="product.images[0].src").product-image
+    v-container(grid-list-xl).pa-0
+      v-layout(wrap)
+        v-flex(xs12 md6 order-xs2 order-sm2 order-md1).text-xs-center
+          img(:src="product.images[0].src").product-image
 
-      v-flex(xs12 md6 order-md2)
-        h2(v-text="product.title").display-2.primary--text.mb-3
+        v-flex(xs12 md6 order-md2)
+          h2(v-text="product.title").display-2.primary--text.mb-3
 
-        div.mb-5
-          span.mr-3.display-1.green--text
-            | $ {{ select.price }}
-          span(v-if="onSale").strike.display-1.grey--text.text--lighten-1
-            | $ {{ select.compareAtPrice }}
+          div.mb-5
+            span.mr-3.display-1.green--text
+              | $ {{ select.price }}
+            span(v-if="onSale").strike.display-1.grey--text.text--lighten-1
+              | $ {{ select.compareAtPrice }}
 
-        v-container(grid-list-xl pa-0).mb-5
-          v-layout(wrap)
-            v-flex(xs12 sm6)
-              v-select(
-                v-model="select"
-                :items="product.variants"
-                item-text="title"
-                item-value="id"
-                :label="option.name"
-                return-object
-                hide-details
-                v-for="(option, i) in product.options"
-                :key="i"
-              )
-            v-flex(xs12 sm6)
-              v-text-field(
-                v-model.number="quantity"
-                type="number"
-                label="Quantity"
-                max="5"
-                hide-details
-              )
-            v-flex(xs12).my-3
-              v-btn(
-                large
-                color="primary"
-                @click="addToCart"
-                :loading="cartLoading"
-                block
-              ).px-5.mx-0
-                span(v-text="$t('Vuetify.Store.addToCart')")
-                v-icon(right size="18px") add_shopping_cart
+          v-container(grid-list-xl pa-0).mb-5
+            v-layout(wrap)
+              v-flex(xs12 sm6)
+                v-select(
+                  v-model="select"
+                  :items="product.variants"
+                  item-text="title"
+                  item-value="id"
+                  :label="option.name"
+                  return-object
+                  hide-details
+                  v-for="(option, i) in product.options"
+                  :key="i"
+                )
+              v-flex(xs12 sm6)
+                v-text-field(
+                  v-model.number="quantity"
+                  type="number"
+                  label="Quantity"
+                  max="5"
+                  hide-details
+                )
+              v-flex(xs12).my-3
+                v-btn(
+                  large
+                  color="primary"
+                  @click="addToCart"
+                  :loading="cartLoading"
+                  block
+                ).px-5.mx-0
+                  span(v-text="$t('Vuetify.Store.addToCart')")
+                  v-icon(right size="18px") add_shopping_cart
 
-            v-flex(xs12)
-              span(v-text="$t('Vuetify.Store.description')").body-2.grey--text
-              v-divider.my-2
-              div(v-html="product.descriptionHtml").description
+              v-flex(xs12)
+                span(v-text="$t('Vuetify.Store.description')").body-2.grey--text
+                v-divider.my-2
+                div(v-html="product.descriptionHtml").description
 </template>
 
 <script>

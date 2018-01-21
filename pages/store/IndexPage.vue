@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-container(layout fill-height)#store
+  v-container(layout fill-height pt-5)#store
     v-layout(column justify-space-between)
       v-flex(shrink)
         store-header(

@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-container#store-thank-you
+  v-container(pt-5)#store-thank-you
     v-layout
       v-flex.text-xs-center
         store-header(
