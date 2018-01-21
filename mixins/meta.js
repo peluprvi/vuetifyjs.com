@@ -56,7 +56,11 @@ export default {
       this.setMeta()
     },
     setMeta () {
-      this.meta = this.$route.meta
+      const path = this.$route.path.split('/').slice(2).join('/')
+      const lang = this.$route.path.split('/')[1]
+      const meta = this.$i18n.getLocaleMessage(lang).meta || {}
+      const fallbackmeta = this.$i18n.getLocaleMessage('en').meta
+      this.meta = meta[path] || (console.warn('Falling back to english meta for ' + path), fallbackmeta[path]) || {}
     }
   }
 }

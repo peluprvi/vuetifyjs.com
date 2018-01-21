@@ -24,8 +24,7 @@
 
     computed: {
       namespace () {
-        const route = this.$route.path.slice(1).split('/')
-        route.shift() // TODO: language
+        const route = this.$route.path.split('/').slice(2)
 
         return route.map(s => camel(s)).join('.')
       }
