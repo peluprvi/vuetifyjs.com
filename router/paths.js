@@ -20,6 +20,7 @@ export default [
   ['pre-made-themes', 'PremadeThemes'],
   ['store', 'store/Index'],
   ['store/cart', 'store/Cart'],
+  ['store/thank-you', 'store/ThankYou'],
   ['store/product/:id', 'store/Product', null, r => ({ id: r.params.id })],
   ['guides/server-side-rendering', 'guides/SSR'],
   ['guides/a-la-carte', 'guides/ALaCarte'],

@@ -14,6 +14,11 @@ export function createStore () {
     state: {
       appDrawer: null,
       appFooter: true,
+      appSnackbar: {
+        color: 'success',
+        msg: '',
+        text: 'Close'
+      },
       appToolbar: null,
       currentVersion: null,
       isFullscreen: false,
@@ -45,6 +50,9 @@ export function createStore () {
         state.stateless = payload
         state.appDrawer = !payload && null
         state.appToolbar = !payload
+      },
+      'app/SNACKBAR': (state, payload) => {
+        state.appSnackbar = payload
       }
     },
 

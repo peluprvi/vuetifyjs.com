@@ -3,17 +3,11 @@
     hover
     :to="{ name: 'store/Product', params: { id: shortId }}"
   )
-    div.text-xs-center.pt-2.mb-4
-      img(
-        src="/static/doc-images/logo-inverted.png"
-        width="24px"
-        alt="Vuetify Store Logo"
-      )
     v-card-media(
       contain
       :src="value.images[0].src"
       height="150"
-    ).mb-3
+    ).my-3
     v-divider
     v-card-text(style="height: 88px;")
       div(v-text="value.title").body-2.mb-2
