@@ -13,7 +13,7 @@
       div(v-text="value.title").body-2.mb-2
       div(v-text="description").caption.grey--text
     v-card-text.text-xs-center
-      div.green--text.display-1.mb-4 {{ priceRange }}
+      div.green--text.headline.mb-4 {{ priceRange }}
       v-btn(block color="primary" depressed large).my-0 Details
 </template>
 
