@@ -103,7 +103,7 @@
     computed: {
       ...mapState('store', ['checkout', 'products']),
       hasItems () {
-        return this.checkout.lineItems.length > 0
+        return this.checkout && this.checkout.lineItems.length > 0
       },
       subHeader () {
         const subHeader = `Vuetify.Store.cart${!this.hasItems ? 'Empty' : ''}Subheader`
