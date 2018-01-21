@@ -25,21 +25,17 @@ export default {
       sortable: false
     },
     {
-      text: 'Quantity',
-      value: false,
-      sortable: false
-    },
-    {
       text: 'Price',
       align: 'right',
       value: false,
       sortable: false
     },
     {
-      text: 'Subtotal',
+      text: 'Quantity',
       align: 'right',
       value: false,
-      sortable: false
+      sortable: false,
+      width: '50px'
     }
   ]
 }

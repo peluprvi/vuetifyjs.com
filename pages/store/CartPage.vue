@@ -28,17 +28,25 @@
               img(
                 :src="item.variant.image.src"
                 v-if="item.variant.image"
-              ).product-image
+                height="72px"
+              )
             td
-              div(v-text="item.title")
-              div(v-text="item.variant.title")
-            td
-              v-layout(align-center)
-                span(v-text="item.quantity").subheading
-                v-btn(icon flat small @click="removeItem(item)")
-                  v-icon(size="16px") remove_shopping_cart
+              div(v-text="item.title").primary--text.subheading
+              div(v-text="item.variant.title").grey--text.text--darken-1
+              a(
+                @click.prevent="removeItem(item)"
+                href="#!"
+              ).caption Delete
             td.text-xs-right ${{ item.variant.price }}
-            td.text-xs-right ${{ (item.variant.price * item.quantity).toFixed(2) }}
+            td
+              v-layout(align-center justify-end)
+                v-text-field(
+                  hide-details
+                  :value="item.quantity"
+                  @input="updateCart(item, $event)"
+                  type="number"
+                  disabled
+                ).pa-0.ma-0
 
           template(slot="footer")
             td(colspan="100%").py-3
@@ -96,6 +104,7 @@
 
     data () {
       return {
+        cartLoading: false,
         headers: this.$t('Vuetify.Store.cartHeaders')
       }
     },
@@ -113,10 +122,25 @@
     },
 
     methods: {
+      updateCart (item, value) {
+        // const quantity = parseInt(value)
+
+        // if (isNaN(quantity)) return
+
+        // this.asyncData.then(() => {
+        //   this.cartLoading = true
+        //   const checkout = this.$store.state.store.checkout.id
+        //   const items = [{ variantId: item.variableValues.id, quantity }]
+
+        //   return shopifyClient.checkout.updateLineItems(checkout, items)
+        // }).then(checkout => {
+        //   this.$store.commit('store/SET_CHECKOUT', checkout)
+        //   this.cartLoading = false
+        // })
+      },
       goToShopify () {
         this.$router.push({ name: 'store/ThankYou' })
       },
-
       removeItem (item) {
         this.dataLoading = true
         shopifyClient.checkout.removeLineItems(this.checkout.id, item.id).then(checkout => {
@@ -136,8 +160,11 @@
 <style lang="stylus" scoped>
   .mt-a
     margin-top: auto
-
-  .product-image
-    max-width: 100%
-    max-height: 100%
+  
+  td
+    height: auto !important
+    min-height: 48px
+    
+  a
+    text-decoration: none
 </style>
