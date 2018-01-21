@@ -129,7 +129,7 @@
         }).then(checkout => {
           this.$store.commit('store/SET_CHECKOUT', checkout)
           this.cartLoading = false
-          this._default('Product Added', 'Go to cart')
+          this.$router.push({ name: 'store/Cart' })
         })
       },
       snackHandler () {

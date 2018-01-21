@@ -47,26 +47,26 @@
                 span.subheading.mr-5 CART SUBTOTAL:
                 span.grey--text.title ${{ checkout.subtotalPrice }}
 
-      div.d-flex.justify-space-between.align-center
-        div
-          v-btn(
-            flat
-            :to="{ name: 'store/Index' }"
-            exact
-          ).mx-0
-            v-icon(left) chevron_left
-            span {{ $t('Vuetify.Store.backToStore') }}
-        div.text-xs-right
-          div.caption.grey--text You will be re-directed to Shopify to complete your purchase
-          v-btn(
-            @click="goToShopify"
-            :href="checkout.webUrl"
-            target="_blank"
-            color="primary"
-            large
-          ).mx-0
-            span(v-text="$t('Vuetify.Store.checkout')")
-            v-icon chevron_right
+      div.text-xs-right
+        div.caption.grey--text You will be re-directed to Shopify to complete your purchase
+        v-btn(
+          flat
+          :to="{ name: 'store/Index' }"
+          exact
+          outline
+          large
+          color="grey darken-1"
+        )
+          span {{ $t('Vuetify.Store.backToStore') }}
+        v-btn(
+          @click="goToShopify"
+          :href="checkout.webUrl"
+          target="_blank"
+          color="primary"
+          large
+        ).mx-0
+          span(v-text="$t('Vuetify.Store.checkout')")
+          v-icon(right) mdi-arrow-right
 </template>
 
 <script>
