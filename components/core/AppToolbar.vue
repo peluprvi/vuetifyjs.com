@@ -7,7 +7,7 @@
     scroll-off-screen
     height="58px"
     :manual-scroll="isManualScrolled"
-    :inverted-scroll="$route.path === '/'"
+    :inverted-scroll="isHome"
     ref="toolbar"
   )#app-toolbar
     v-toolbar-side-icon(
@@ -28,8 +28,8 @@
     v-toolbar-items
       v-btn(
         flat
-        v-show="$route.path.name === 'Home'"
-        to="{ name: 'getting-started/QuickStart' }"
+        v-show="isHome"
+        :to="{ name: 'getting-started/QuickStart' }"
       )
         span.hidden-md-and-up Docs
         span.hidden-sm-and-down Documentation
@@ -88,6 +88,7 @@
   // Utilities
   import { mapState } from 'vuex'
   import asyncData from '@/util/asyncData'
+  import languages from '@/i18n/languages'
 
   export default {
     mixins: [asyncData],
@@ -100,16 +101,7 @@
 
     data: () => ({
       fixed: false,
-      languages: [
-        {
-          title: 'English',
-          locale: 'en'
-        },
-        {
-          title: 'Русский',
-          locale: 'ru'
-        }
-      ]
+      languages
     }),
 
     computed: {
@@ -127,8 +119,11 @@
           ? { name: 'getting-started/QuickStart' }
           : this.route.from.path
       },
+      isHome () {
+        return this.route.name === 'Home'
+      },
       isManualScrolled () {
-        return this.$route.name !== 'Home' &&
+        return !this.isHome &&
           this.isFullscreen
       },
       isStore () {
@@ -142,8 +137,7 @@
       },
       translateI18n (lang) {
         this.$router.replace({ params: { lang } })
-        document.cookie = `currentLanguage=${lang};path='/';max-age=${60 * 60 * 24 * 7}` // expires in 7 days
-        window.localStorage.setItem('currentLanguage', lang)
+        document.cookie = `currentLanguage=${lang};path=/;max-age=${60 * 60 * 24 * 7}` // expires in 7 days
       }
     }
   }

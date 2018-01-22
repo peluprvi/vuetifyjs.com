@@ -160,11 +160,11 @@
 <style lang="stylus" scoped>
   .mt-a
     margin-top: auto
-  
+
   td
     height: auto !important
     min-height: 48px
-    
+
   a
     text-decoration: none
 </style>

@@ -16,6 +16,8 @@ const serverInfo =
   `express/${require('express/package.json').version} ` +
   `vue-server-renderer/${require('vue-server-renderer/package.json').version}`
 
+const availableLanguages = require('./i18n/languages').map(lang => lang.locale)
+
 const app = express()
 
 // const template = fs.readFileSync(resolve('./assets/index.template.html'), 'utf-8')
@@ -139,13 +141,16 @@ function render (req, res) {
   })
 }
 
-app.get(/^\/([a-z]{2,3}|[a-z]{2,3}-[a-zA-Z]{4}|[a-z]{2,3}-[A-Z]{2,3})(?:\/.*)?$/, isProd ? render : (req, res) => {
+const languageRegex = /^\/([a-z]{2,3}|[a-z]{2,3}-[a-zA-Z]{4}|[a-z]{2,3}-[A-Z]{2,3})(?:\/.*)?$/
+
+app.get(languageRegex, isProd ? render : (req, res) => {
   readyPromise.then(() => render(req, res))
 })
 
 // 302 redirect for no language
 app.get('*', (req, res) => {
-  const lang = req.cookies.currentLanguage || req.acceptsLanguages() || 'en'
+  let lang = req.cookies.currentLanguage || req.acceptsLanguages(availableLanguages) || 'en'
+  if (!languageRegex.test('/' + lang)) lang = 'en'
   res.redirect(302, `/${lang}${req.path}`)
 })
 

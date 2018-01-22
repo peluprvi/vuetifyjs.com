@@ -6,7 +6,7 @@
     :stateless="isFullscreen"
   )#app-drawer
     div.text-xs-center
-      div.diamond-sponsor-label Diamond Sponsors
+      div(v-text="$t('Vuetify.AppDrawer.diamondSponsors')").diamond-sponsor-label
       div(
         v-for="diamond in diamonds"
         :key="diamond.title"
@@ -29,7 +29,7 @@
         active-class=""
         to="/getting-started/sponsors-and-backers"
       )
-        span.caption Become a Sponsor
+        span(v-text="$t('Vuetify.AppDrawer.becomeASponsor')").caption
     v-container(fluid)
       v-text-field(
         placeholder="Search"
@@ -45,7 +45,7 @@
       )
     div.py-3.text-xs-center
       a(
-        href="https://vuejobs.com/?utm_source=vuejobs&utm_medium=banner&utm_campaign=linking"
+        href="https://vuejobs.com/?utm_source=vuejobs&utm_medium=banner&utm_campaign=linking&ref=vuetifyjs.com"
         target="_blank"
         rel="noopener"
         class="d-inline-block"
@@ -57,44 +57,47 @@
           title="VueJobs"
           width="30%"
         )
+
     v-list(dense expand)
       template(v-for="item in items")
+        <!--group with subitems-->
         v-list-group(
-          v-if="item.items"
-          :group="item.group"
-          :prepend-icon="item.icon"
+          v-if="item.items",
+          :group="item.group",
+          :prepend-icon="item.icon",
           no-action
         )
           v-list-tile(slot="activator" ripple)
             v-list-tile-content
               v-list-tile-title {{ item.title }}
           template(v-for="(subItem, i) in item.items")
+            <!--sub group-->
             v-list-group(
-              v-if="subItem.items"
-              :group="subItem.group"
+              v-if="subItem.items",
+              :group="subItem.group",
               sub-group
             )
               v-list-tile(slot="activator" ripple)
                 v-list-tile-content
                   v-list-tile-title {{ subItem.title }}
               v-list-tile(
-                v-for="(grand, i) in subItem.items"
-                :key="i"
-                :to="`${item.group}/${grand.href}`"
+                v-for="(grand, i) in subItem.items",
+                :key="i",
+                :to="genChildTarget(item, grand)",
+                :href="grand.href"
                 ripple
               )
                 v-list-tile-content
                   v-list-tile-title {{ grand.title }}
+            <!--child item-->
             v-list-tile(
-              :key="i"
-              v-bind="{ \
-                to: !subItem.target ? `${item.group}/${subItem.href}` : null, \
-                href: subItem.target && subItem.href \
-              }"
-              :disabled="subItem.disabled"
-              :target="subItem.target"
+              v-else,
+              :key="i",
+              :to="genChildTarget(item, subItem)",
+              :href="subItem.href",
+              :disabled="subItem.disabled",
+              :target="subItem.target",
               ripple
-              v-else
             )
               v-list-tile-content
                 v-list-tile-title
@@ -107,18 +110,19 @@
               ) {{ subItem.badge }}
               v-list-tile-action(v-if="subItem.action")
                 v-icon(:class="[subItem.actionClass || 'success--text']") {{ subItem.action }}
+
         v-subheader(v-else-if="item.header").grey--text {{ item.header }}
         v-divider(v-else-if="item.divider")
+
+        <!--top-level link-->
         v-list-tile(
-          v-bind="{ \
-            to: !item.target ? item.href : null, \
-            href: item.target && item.href \
-          }"
-          ripple
-          v-bind:disabled="item.disabled"
-          v-bind:target="item.target"
+          v-else,
+          :to="!item.href ? { name: item.name } : null",
+          :href="item.href",
+          ripple,
+          :disabled="item.disabled",
+          :target="item.target",
           rel="noopener"
-          v-else
         )
           v-list-tile-action(v-if="item.icon")
             v-icon {{ item.icon }}
@@ -203,6 +207,19 @@
     },
 
     methods: {
+      genChildTarget (item, subItem) {
+        if (subItem.href) return
+        if (item.component) {
+          return {
+            name: item.component,
+            params: {
+              section: item.group,
+              component: subItem.name
+            }
+          }
+        }
+        return { name: `${item.group}/${subItem.name}` }
+      },
       init () {
         this.initDocSearch()
       },
@@ -227,9 +244,6 @@
             vm.$router.push(loc.pop())
           }
         })
-      },
-      toggleSidebar () {
-        this.$store.commit('vuetify/SIDEBAR', !this.$store.state.sidebar)
       }
     }
   }
@@ -276,6 +290,6 @@
 
       &-label
         color #676767
-        margin: 2em 0 1.5em
+        margin: 24px 0 16px 0
         font-size 13px
 </style>

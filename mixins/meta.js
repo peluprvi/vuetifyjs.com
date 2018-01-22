@@ -60,7 +60,7 @@ export default {
       const lang = this.$route.path.split('/')[1]
       const meta = this.$i18n.getLocaleMessage(lang).meta || {}
       const fallbackmeta = this.$i18n.getLocaleMessage('en').meta
-      this.meta = meta[path] || (console.warn('Falling back to english meta for ' + path), fallbackmeta[path]) || {}
+      this.meta = meta[path] || (console.warn('Falling back to english meta for ' + (path || '/')), fallbackmeta[path]) || {}
     }
   }
 }
