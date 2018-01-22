@@ -7,7 +7,7 @@
     scroll-off-screen
     height="58px"
     :manual-scroll="isManualScrolled"
-    :inverted-scroll="$route.path === '/'"
+    :inverted-scroll="isHome"
     ref="toolbar"
   )#app-toolbar
     v-toolbar-side-icon(
@@ -28,7 +28,7 @@
     v-toolbar-items
       v-btn(
         flat
-        v-show="$route.path.name === 'Home'"
+        v-show="isHome"
         to="{ name: 'getting-started/QuickStart' }"
       )
         span.hidden-md-and-up Docs
@@ -107,8 +107,11 @@
           ? { name: 'getting-started/QuickStart' }
           : this.route.from.path
       },
+      isHome () {
+        return this.route.name === 'Home'
+      },
       isManualScrolled () {
-        return this.$route.name !== 'Home' &&
+        return !this.isHome &&
           this.isFullscreen
       },
       isStore () {
