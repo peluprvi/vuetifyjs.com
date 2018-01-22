@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import VueAnalytics from 'vue-analytics'
 import paths from './paths'
+import languages from '@/i18n/languages'
 import scrollBehavior from './scroll-behavior'
 
 Vue.use(Router)
@@ -9,8 +10,14 @@ Vue.use(Router)
 // language regex:
 // /^[a-z]{2,3}(?:-[a-zA-Z]{4})?(?:-[A-Z]{2,3})?$/
 // /^[a-z]{2,3}|[a-z]{2,3}-[a-zA-Z]{4}|[a-z]{2,3}-[A-Z]{2,3}$/
+const languageRegex = /^\/([a-z]{2,3}|[a-z]{2,3}-[a-zA-Z]{4}|[a-z]{2,3}-[A-Z]{2,3})(?:\/.*)?$/
 
 const release = process.env.RELEASE
+
+function getLanguageCookie () {
+  if (typeof document === 'undefined') return
+  return new Map(document.cookie.split('; ').map(c => c.split('='))).get('currentLanguage')
+}
 
 export function createRouter (store) {
   function route (path, view, fullscreen, props) {
@@ -45,7 +52,8 @@ export function createRouter (store) {
       {
         path: '*',
         redirect: to => {
-          const lang = (typeof window !== 'undefined' && window.localStorage.getItem('currentLanguage')) || 'en'
+          let lang = getLanguageCookie() || 'en'
+          if (!languageRegex.test('/' + lang)) lang = 'en'
           return `/${lang}${to.path}`
         }
       }

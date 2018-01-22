@@ -77,24 +77,12 @@
 <script>
   // Utilities
   import { mapState } from 'vuex'
+  import languages from '@/i18n/languages'
 
   export default {
     data: () => ({
       fixed: false,
-      languages: [
-        {
-          title: 'English',
-          locale: 'en'
-        },
-        {
-          title: 'Русский',
-          locale: 'ru'
-        },
-        {
-          title: '简体中文',
-          locale: 'zh-Hans'
-        }
-      ]
+      languages
     }),
 
     computed: {
@@ -130,7 +118,6 @@
       translateI18n (lang) {
         this.$router.replace({ params: { lang } })
         document.cookie = `currentLanguage=${lang};path=/;max-age=${60 * 60 * 24 * 7}` // expires in 7 days
-        window.localStorage.setItem('currentLanguage', lang)
       }
     }
   }
