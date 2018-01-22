@@ -3,6 +3,7 @@
 </template>
 
 <script>
+  import { camel } from '@/util/helpers'
   import { mapState } from 'vuex'
 
   export default {
@@ -25,12 +26,13 @@
 
     async beforeRouteUpdate (to, from, next) {
       const locale = to.params.lang
+      const localeFile = camel(locale)
 
       if (this.loadedLangs.indexOf(locale) < 0) {
         await import(
           /* webpackChunkName: "lang-[request]" */
           /* webpackMode: "lazy-once" */
-          `@/lang/${locale}`
+          `@/lang/${localeFile}`
           ).then(msgs => this.$i18n.setLocaleMessage(locale, msgs.default))
           .catch(err => Promise.resolve(err))
       }

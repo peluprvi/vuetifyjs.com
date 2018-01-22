@@ -29,7 +29,7 @@
       v-btn(
         flat
         v-show="isHome"
-        to="{ name: 'getting-started/QuickStart' }"
+        :to="{ name: 'getting-started/QuickStart' }"
       )
         span.hidden-md-and-up Docs
         span.hidden-sm-and-down Documentation
@@ -92,7 +92,7 @@
         },
         {
           title: '简体中文',
-          locale: 'zh_Hans'
+          locale: 'zh-Hans'
         }
       ]
     }),
