@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import { camel } from '@/util/helpers'
+  import { camelActual } from '@/util/helpers'
   import { mapState } from 'vuex'
 
   export default {
@@ -26,7 +26,7 @@
 
     async beforeRouteUpdate (to, from, next) {
       const locale = to.params.lang
-      const localeFile = camel(locale)
+      const localeFile = camelActual(locale)
 
       if (this.loadedLangs.indexOf(locale) < 0) {
         await import(
