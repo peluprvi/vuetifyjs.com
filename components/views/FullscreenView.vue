@@ -1,11 +1,12 @@
 <template lang="pug">
   v-container(v-bind="$attrs").page
-    app-back-fab(:to="to" v-if="to && !noBack")
+    app-back-fab(:to="{ name: to }" v-if="to != null && !noBack")
     slot(:namespace="namespace")
 </template>
 
 <script>
   // Utilities
+  import { mapState } from 'vuex'
   import { camel } from '@/util/helpers'
 
   export default {
@@ -18,11 +19,10 @@
       }
     },
 
-    data: vm => ({
-      to: { name: vm.$store.state.route.from.name }
-    }),
-
     computed: {
+      ...mapState({
+        to: state => state.route.from.name || 'getting-started/QuickStart'
+      }),
       namespace () {
         const route = this.$route.path.split('/').slice(2)
 

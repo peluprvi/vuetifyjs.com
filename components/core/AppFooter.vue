@@ -48,12 +48,10 @@
         footer: state => !state.stateless
       }),
       index () {
-        return this.routes.findIndex(route => {
-          const comparison = route.group
-            ? `${route.group}/${route.name}`
-            : route.name
+        const path = this.$route.path.replace(/\/[^\/]*\/(.*)/, '/$1')
 
-          return this.$route.name === comparison
+        return this.routes.findIndex(route => {
+          return path === route.route
         })
       },
       current () {
