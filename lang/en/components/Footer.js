@@ -22,7 +22,7 @@ export default {
     tealFooter: {
       header: 'Teal Footer',
       desc: 'The footer component with a Teal color header and columns and rows of links.'
-    },
+    }
   }],
   props: {
     absolute: 'Mixins.Positionable.props.absolute',
