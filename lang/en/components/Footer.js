@@ -7,10 +7,6 @@ export default {
       header: 'Default',
       desc: 'The footer component is just a basic container.'
     },
-    advancedFooter: {
-      header: 'Advanced Footer',
-      desc: 'The footer component with a container using v-card and social media icons and button.'
-    },
     companyFooter: {
       header: 'Company Footer',
       desc: 'The footer component as a basic company footer with links.'
