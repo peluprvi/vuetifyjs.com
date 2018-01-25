@@ -1,17 +1,28 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import storeModule from './storeModule'
+
 Vue.use(Vuex)
 
 export function createStore () {
   return new Vuex.Store({
+    modules: {
+      store: storeModule
+    },
+
     state: {
       appDrawer: null,
       appFooter: true,
+      appSnackbar: {
+        color: 'success',
+        msg: '',
+        text: 'Close',
+        timeout: 6000
+      },
       appToolbar: null,
       currentVersion: null,
       isFullscreen: false,
-      fullscreenRoutes: ['/', '/404', '/store', '/theme-generator'],
       loadedLangs: [],
       releases: [],
       stateless: false
@@ -40,6 +51,9 @@ export function createStore () {
         state.stateless = payload
         state.appDrawer = !payload && null
         state.appToolbar = !payload
+      },
+      'app/SNACKBAR': (state, payload) => {
+        state.appSnackbar = payload
       }
     },
 

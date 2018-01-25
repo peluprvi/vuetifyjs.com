@@ -1,6 +1,5 @@
 export default [
-  ['404', 'general/404'],
-  ['', 'Home'],
+  ['', 'Home', true],
   ['getting-started/quick-start', 'getting-started/QuickStart'],
   ['getting-started/why-vuetify', 'getting-started/WhyVuetify'],
   ['getting-started/frequently-asked-questions', 'getting-started/FrequentlyAskedQuestions'],
@@ -19,10 +18,14 @@ export default [
   ['style/content', 'style/Content'],
   ['motion/transitions', 'motion/Transitions'],
   ['pre-made-themes', 'PremadeThemes'],
-  ['store', 'Store'],
+  ['store', 'store/Index'],
+  ['store/cart', 'store/Cart'],
+  ['store/thank-you', 'store/ThankYou'],
+  ['store/product/:id', 'store/Product', null, r => ({ id: r.params.id })],
   ['guides/server-side-rendering', 'guides/SSR'],
   ['guides/a-la-carte', 'guides/ALaCarte'],
-  ['theme-generator', 'ThemeGenerator'],
-  ['examples/:example+', 'examples/Example'],
-  [':section/:component', 'components/Doc']
+  ['theme-generator', 'ThemeGenerator', true],
+  ['examples/:example+', 'examples/Example', true],
+  [':section/:component', 'components/Doc'],
+  ['*', 'general/404', true]
 ]
