@@ -47,7 +47,7 @@
         <td class="text-xs-right">{{ props.item.carbs }}</td>
         <td class="text-xs-right">{{ props.item.protein }}</td>
         <td class="justify-center layout px-0">
-          <v-btn icon class="mx-0" @click="editItem(props.item)">
+          <v-btn icon class="mx-0" @click="editItem(props.index)">
             <v-icon color="teal">edit</v-icon>
           </v-btn>
           <v-btn icon class="mx-0" @click="deleteItem(props.index)">
@@ -185,8 +185,9 @@
         ]
       },
 
-      editItem (item) {
-        this.editedItem = Object.assign({}, item)
+      editItem (index) {
+        this.editedIndex = index
+        this.editedItem = Object.assign({}, this.items[index])
         this.dialog = true
       },
 
@@ -196,6 +197,7 @@
 
       close () {
         this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
         this.dialog = false
       },
 
@@ -206,6 +208,7 @@
           this.items.push(this.editedItem)
         }
         this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
         this.dialog = false
       }
     }
