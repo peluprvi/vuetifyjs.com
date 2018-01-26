@@ -10,19 +10,19 @@
           <v-container grid-list-md>
             <v-layout wrap>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Dessert name" v-model="item.name"></v-text-field>
+                <v-text-field label="Dessert name" v-model="editedItem.name"></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Calories" v-model="item.calories"></v-text-field>
+                <v-text-field label="Calories" v-model="editedItem.calories"></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Fat (g)" v-model="item.fat"></v-text-field>
+                <v-text-field label="Fat (g)" v-model="editedItem.fat"></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Carbs (g)" v-model="item.carbs"></v-text-field>
+                <v-text-field label="Carbs (g)" v-model="editedItem.carbs"></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Protein (g)" v-model="item.protein"></v-text-field>
+                <v-text-field label="Protein (g)" v-model="editedItem.protein"></v-text-field>
               </v-flex>
             </v-layout>
           </v-container>
@@ -80,7 +80,16 @@
         { text: 'Actions', value: 'name', sortable: false }
       ],
       items: [],
-      item: {
+      editedIndex: -1,
+      editedItem: {
+        edit: false,
+        name: '',
+        calories: 0,
+        fat: 0,
+        carbs: 0,
+        protein: 0
+      },
+      defaultItem: {
         edit: false,
         name: '',
         calories: 0,
@@ -92,7 +101,7 @@
 
     computed: {
       formTitle () {
-        return this.item.edit ? 'Edit Item' : 'New Item'
+        return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
       }
     },
 
@@ -104,7 +113,6 @@
       initialize () {
         this.items = [
           {
-            edit: false,
             name: 'Frozen Yogurt',
             calories: 159,
             fat: 6.0,
@@ -112,7 +120,6 @@
             protein: 4.0
           },
           {
-            edit: false,
             name: 'Ice cream sandwich',
             calories: 237,
             fat: 9.0,
@@ -120,7 +127,6 @@
             protein: 4.3
           },
           {
-            edit: false,
             name: 'Eclair',
             calories: 262,
             fat: 16.0,
@@ -128,7 +134,6 @@
             protein: 6.0
           },
           {
-            edit: false,
             name: 'Cupcake',
             calories: 305,
             fat: 3.7,
@@ -136,7 +141,6 @@
             protein: 4.3
           },
           {
-            edit: false,
             name: 'Gingerbread',
             calories: 356,
             fat: 16.0,
@@ -144,7 +148,6 @@
             protein: 3.9
           },
           {
-            edit: false,
             name: 'Jelly bean',
             calories: 375,
             fat: 0.0,
@@ -152,7 +155,6 @@
             protein: 0.0
           },
           {
-            edit: false,
             name: 'Lollipop',
             calories: 392,
             fat: 0.2,
@@ -160,7 +162,6 @@
             protein: 0
           },
           {
-            edit: false,
             name: 'Honeycomb',
             calories: 408,
             fat: 3.2,
@@ -168,7 +169,6 @@
             protein: 6.5
           },
           {
-            edit: false,
             name: 'Donut',
             calories: 452,
             fat: 25.0,
@@ -176,7 +176,6 @@
             protein: 4.9
           },
           {
-            edit: false,
             name: 'KitKat',
             calories: 518,
             fat: 26.0,
@@ -187,28 +186,26 @@
       },
 
       editItem (item) {
-        this.item = item
-        this.item.edit = true
+        this.editedItem = Object.assign({}, item)
         this.dialog = true
       },
 
       deleteItem (index) {
-        // alert user for delete
-        this.items.splice(index, 1)
+        confirm('Are you sure you want to delete this item?') && this.items.splice(index, 1)
       },
 
       close () {
-        this.item.edit = false
+        this.editedItem = Object.assign({}, this.defaultItem)
         this.dialog = false
       },
 
       save () {
-        if (this.item.edit) {
-          // edit item
-          this.item.edit = false
+        if (this.editedIndex > -1) {
+          this.items[this.editedIndex] = Object.assign(this.items[this.editedIndex], this.editedItem)
         } else {
-          this.items.push(this.item)
+          this.items.push(this.editedItem)
         }
+        this.editedItem = Object.assign({}, this.defaultItem)
         this.dialog = false
       }
     }
