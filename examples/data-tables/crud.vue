@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-dialog v-model="dialog" persistent max-width="500px">
+    <v-dialog v-model="dialog" max-width="500px">
       <v-btn color="primary" dark slot="activator" class="mb-2">New Item</v-btn>
       <v-card>
         <v-card-title>
@@ -50,7 +50,7 @@
           <v-btn icon class="mx-0" @click="editItem(props.item)">
             <v-icon color="teal">edit</v-icon>
           </v-btn>
-          <v-btn icon class="mx-0" @click="deleteItem(props.index)">
+          <v-btn icon class="mx-0" @click="deleteItem(props.item)">
             <v-icon color="pink">delete</v-icon>
           </v-btn>
         </td>
@@ -187,14 +187,14 @@
       },
 
       editItem (item) {
-        this.item = item
-        this.item.edit = true
+        item.edit = true
+        this.item = Object.assign({}, item)
         this.dialog = true
       },
 
-      deleteItem (index) {
+      deleteItem (item) {
         // alert user for delete
-        this.items.splice(index, 1)
+        this.items.splice(this.items.indexOf(item), 1)
       },
 
       close () {
@@ -203,9 +203,11 @@
       },
 
       save () {
-        if (this.item.edit) {
+        const index = this.items.findIndex(({edit}) => edit)
+        if (index >= 0) {
           // edit item
           this.item.edit = false
+          this.items[index] = Object.assign(this.items[index], this.item)
         } else {
           this.items.push(this.item)
         }
