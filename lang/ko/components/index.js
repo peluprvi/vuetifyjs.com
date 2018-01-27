@@ -6,8 +6,8 @@ import BottomSheets from './BottomSheets'
 import Breadcrumbs from './Breadcrumbs'
 import Buttons from './Buttons'
 import Cards from './Cards'
-// TODO: import Carousels from './Carousels'
-// TODO: import Chips from './Chips'
+import Carousels from './Carousels'
+import Chips from './Chips'
 // TODO: import DataIterator from './DataIterator'
 // TODO: import DataTables from './DataTables'
 // TODO: import DatePickers from './DatePickers'
@@ -48,8 +48,8 @@ export default {
   Breadcrumbs,
   Buttons,
   Cards,
-  // TODO:   Carousels,
-  // TODO:   Chips,
+  Carousels,
+  Chips,
   // TODO:   DataIterator,
   // TODO:   DataTables,
   // TODO:   DatePickers,
