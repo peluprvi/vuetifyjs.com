@@ -8,7 +8,7 @@ import QuickStart from './QuickStart'
 export default {
   // TODO: Contributing,
   // TODO: FrequentlyAskedQuestions,
-  QuickStart,
+  QuickStart
   // TODO: Roadmap,
   // TODO: SponsorsAndBackers,
   // TODO: WhyVuetify
