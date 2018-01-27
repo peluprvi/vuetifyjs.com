@@ -7,7 +7,7 @@ import Style from './style'
 import Motion from './motion'
 
 // Generic
-// TODO: import Generic from './generic'
+import Generic from './generic'
 
 // Components
 import Components from './components'
@@ -23,7 +23,7 @@ import Components from './components'
 export default {
   Components,
   // TODO:   Directives,
-  // TODO:   Generic,
+  Generic,
   GettingStarted,
   // TODO:   Guides,
   Layout,
