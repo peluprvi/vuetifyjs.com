@@ -1,8 +1,8 @@
 // Pages
 // TODO: import Vuetify from './vuetify'
-// TODO: import GettingStarted from './getting-started'
+import GettingStarted from './getting-started'
 // TODO: import Guides from './guides'
-// TODO: import Layout from './layout'
+import Layout from './layout'
 // TODO: import Style from './style'
 // TODO: import Motion from './motion'
 
@@ -24,9 +24,9 @@ export default {
 //   Components,
 // TODO:   Directives,
 // TODO:   Generic,
-// TODO:   GettingStarted,
+GettingStarted,
 // TODO:   Guides,
-// TODO:   Layout,
+Layout,
 // TODO:   Mixins,
 // TODO:   Motion,
 // TODO:   Style,
