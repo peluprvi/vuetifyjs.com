@@ -4,7 +4,7 @@ import GettingStarted from './getting-started'
 // TODO: import Guides from './guides'
 import Layout from './layout'
 import Style from './style'
-// TODO: import Motion from './motion'
+import Motion from './motion'
 
 // Generic
 // TODO: import Generic from './generic'
@@ -28,7 +28,7 @@ export default {
   // TODO:   Guides,
   Layout,
   // TODO:   Mixins,
-  // TODO:   Motion,
+  Motion,
   Style
   // TODO:   Vuetify,
   // TODO:   meta
