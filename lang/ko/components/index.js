@@ -8,7 +8,7 @@ import Buttons from './Buttons'
 import Cards from './Cards'
 import Carousels from './Carousels'
 import Chips from './Chips'
-// TODO: import DataIterator from './DataIterator'
+import DataIterator from './DataIterator'
 // TODO: import DataTables from './DataTables'
 // TODO: import DatePickers from './DatePickers'
 // TODO: import Dialogs from './Dialogs'
@@ -50,7 +50,7 @@ export default {
   Cards,
   Carousels,
   Chips,
-  // TODO:   DataIterator,
+  DataIterator,
   // TODO:   DataTables,
   // TODO:   DatePickers,
   // TODO:   Dialogs,
