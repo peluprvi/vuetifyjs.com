@@ -10,7 +10,7 @@ import Motion from './motion'
 // TODO: import Generic from './generic'
 
 // Components
-// TODO: import Components from './components'
+import Components from './components'
 
 // Directives
 // TODO: import Directives from './directives'
@@ -21,7 +21,7 @@ import Motion from './motion'
 // TODO: import meta from './meta'
 
 export default {
-//   Components,
+  Components,
   // TODO:   Directives,
   // TODO:   Generic,
   GettingStarted,
