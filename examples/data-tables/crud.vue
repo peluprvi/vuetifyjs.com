@@ -184,13 +184,13 @@
       },
 
       editItem (item) {
-        this.editedIndex = this.items.findIndex(i => i === item)
+        this.editedIndex = this.items.indexOf(item)
         this.editedItem = Object.assign({}, item)
         this.dialog = true
       },
 
       deleteItem (item) {
-        const index = this.items.findIndex(i => i === item)
+        const index = this.items.indexOf(item)
         confirm('Are you sure you want to delete this item?') && this.items.splice(index, 1)
       },
 
