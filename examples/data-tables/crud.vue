@@ -47,10 +47,10 @@
         <td class="text-xs-right">{{ props.item.carbs }}</td>
         <td class="text-xs-right">{{ props.item.protein }}</td>
         <td class="justify-center layout px-0">
-          <v-btn icon class="mx-0" @click="editItem(props.index)">
+          <v-btn icon class="mx-0" @click="editItem(props.item)">
             <v-icon color="teal">edit</v-icon>
           </v-btn>
-          <v-btn icon class="mx-0" @click="deleteItem(props.index)">
+          <v-btn icon class="mx-0" @click="deleteItem(props.item)">
             <v-icon color="pink">delete</v-icon>
           </v-btn>
         </td>
@@ -183,13 +183,14 @@
         ]
       },
 
-      editItem (index) {
-        this.editedIndex = index
-        this.editedItem = Object.assign({}, this.items[index])
+      editItem (item) {
+        this.editedIndex = this.items.findIndex(i => i === item)
+        this.editedItem = Object.assign({}, item)
         this.dialog = true
       },
 
-      deleteItem (index) {
+      deleteItem (item) {
+        const index = this.items.findIndex(i => i === item)
         confirm('Are you sure you want to delete this item?') && this.items.splice(index, 1)
       },
 
