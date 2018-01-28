@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-dialog v-model="dialog" persistent max-width="500px">
+    <v-dialog v-model="dialog" max-width="500px">
       <v-btn color="primary" dark slot="activator" class="mb-2">New Item</v-btn>
       <v-card>
         <v-card-title>
@@ -82,7 +82,6 @@
       items: [],
       editedIndex: -1,
       editedItem: {
-        edit: false,
         name: '',
         calories: 0,
         fat: 0,
@@ -90,7 +89,6 @@
         protein: 0
       },
       defaultItem: {
-        edit: false,
         name: '',
         calories: 0,
         fat: 0,
