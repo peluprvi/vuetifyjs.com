@@ -19,7 +19,7 @@ import Footer from './Footer'
 // TODO: import Forms from './Forms'
 import Grid from './Grid'
 // TODO: import GridLists from './GridLists'
-// TODO: import Icons from './Icons'
+import Icons from './Icons'
 // TODO: import Lists from './Lists'
 // TODO: import Jumbotrons from './Jumbotrons'
 // TODO: import Menus from './Menus'
@@ -61,7 +61,7 @@ export default {
   // TODO:   Forms,
   Grid,
   // TODO:   GridLists,
-  // TODO:   Icons,
+  Icons,
   // TODO:   Lists,
   // TODO:   Jumbotrons,
   // TODO:   Menus,
