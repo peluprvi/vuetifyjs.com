@@ -1,6 +1,6 @@
 import Common from './Common'
 // TODO: import Events from './Events'
-// TODO: import Pages from './Pages'
+import Pages from './Pages'
 // TODO: import Params from './Params'
 import Props from './Props'
 // TODO: import Slots from './Slots'
@@ -9,7 +9,7 @@ import Props from './Props'
 export default {
   Common,
   // TODO: Events,
-  // TODO: Pages,
+  Pages,
   // TODO: Params,
   Props
   // TODO: Slots,
