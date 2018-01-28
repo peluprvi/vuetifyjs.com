@@ -18,7 +18,7 @@ import Components from './components'
 // Mixins
 // TODO: import Mixins from './mixins'
 
-// TODO: import meta from './meta'
+import meta from './meta'
 
 export default {
   Components,
@@ -29,7 +29,7 @@ export default {
   Layout,
   // TODO:   Mixins,
   Motion,
-  Style
+  Style,
   // TODO:   Vuetify,
-  // TODO:   meta
+  meta
 }

@@ -11,7 +11,7 @@ import Chips from './Chips'
 import DataIterator from './DataIterator'
 import DataTables from './DataTables'
 import DatePickers from './DatePickers'
-// TODO: import Dialogs from './Dialogs'
+import Dialogs from './Dialogs'
 // TODO: import Dividers from './Dividers'
 // TODO: import ExpansionPanels from './ExpansionPanels'
 // TODO: import FloatingActionButtons from './FloatingActionButtons'
@@ -53,7 +53,7 @@ export default {
   DataIterator,
   DataTables,
   DatePickers,
-  // TODO:   Dialogs,
+  Dialogs,
   // TODO:   Dividers,
   // TODO:   ExpansionPanels,
   // TODO:   FloatingActionButtons,
