@@ -3,7 +3,7 @@ export default {
   headerText: 'O bottom sheet é um `v-dialog` modificado que é deslizado da parte inferior da tela, similar a um `v-bottom-nav`. Enquanto um componente de navegação inferior é para botões e ações de nível da aplicação, um bottom sheet pode conter qualquer coisa.',
   components: ['v-bottom-sheet'],
   examples: [{
-      standard: {
+    standard: {
       header: 'Exibição padrão',
       desc: 'Aqui mostramos uma lista de exemplos de ações que podem estar presentes em uma aplicação.'
     },
