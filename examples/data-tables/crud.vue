@@ -207,9 +207,7 @@
         } else {
           this.items.push(this.editedItem)
         }
-        this.editedItem = Object.assign({}, this.defaultItem)
-        this.editedIndex = -1
-        this.dialog = false
+        this.close()
       }
     }
   }
