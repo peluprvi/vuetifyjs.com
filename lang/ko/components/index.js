@@ -16,7 +16,7 @@ import Dividers from './Dividers'
 import ExpansionPanels from './ExpansionPanels'
 // TODO: import FloatingActionButtons from './FloatingActionButtons'
 import Footer from './Footer'
-// TODO: import Forms from './Forms'
+import Forms from './Forms'
 import Grid from './Grid'
 // TODO: import GridLists from './GridLists'
 import Icons from './Icons'
@@ -58,7 +58,7 @@ export default {
   ExpansionPanels,
   // TODO:   FloatingActionButtons,
   Footer,
-  // TODO:   Forms,
+  Forms,
   Grid,
   // TODO:   GridLists,
   Icons,
