@@ -12,10 +12,10 @@ import DataIterator from './DataIterator'
 import DataTables from './DataTables'
 import DatePickers from './DatePickers'
 import Dialogs from './Dialogs'
-// TODO: import Dividers from './Dividers'
-// TODO: import ExpansionPanels from './ExpansionPanels'
+import Dividers from './Dividers'
+import ExpansionPanels from './ExpansionPanels'
 // TODO: import FloatingActionButtons from './FloatingActionButtons'
-// TODO: import Footer from './Footer'
+import Footer from './Footer'
 // TODO: import Forms from './Forms'
 // TODO: import Grid from './Grid'
 // TODO: import GridLists from './GridLists'
@@ -54,10 +54,10 @@ export default {
   DataTables,
   DatePickers,
   Dialogs,
-  // TODO:   Dividers,
-  // TODO:   ExpansionPanels,
+  Dividers,
+  ExpansionPanels,
   // TODO:   FloatingActionButtons,
-  // TODO:   Footer,
+  Footer,
   // TODO:   Forms,
   // TODO:   Grid,
   // TODO:   GridLists,
