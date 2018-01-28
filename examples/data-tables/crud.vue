@@ -204,7 +204,7 @@
 
       save () {
         if (this.editedIndex > -1) {
-          this.items[this.editedIndex] = Object.assign(this.items[this.editedIndex], this.editedItem)
+          Object.assign(this.items[this.editedIndex], this.editedItem)
         } else {
           this.items.push(this.editedItem)
         }
