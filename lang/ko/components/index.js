@@ -10,7 +10,7 @@ import Carousels from './Carousels'
 import Chips from './Chips'
 import DataIterator from './DataIterator'
 import DataTables from './DataTables'
-// TODO: import DatePickers from './DatePickers'
+import DatePickers from './DatePickers'
 // TODO: import Dialogs from './Dialogs'
 // TODO: import Dividers from './Dividers'
 // TODO: import ExpansionPanels from './ExpansionPanels'
@@ -52,7 +52,7 @@ export default {
   Chips,
   DataIterator,
   DataTables,
-  // TODO:   DatePickers,
+  DatePickers,
   // TODO:   Dialogs,
   // TODO:   Dividers,
   // TODO:   ExpansionPanels,
