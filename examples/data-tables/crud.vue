@@ -103,6 +103,12 @@
       }
     },
 
+    watch: {
+      dialog (val) {
+        val || this.close()
+      }
+    },
+
     created () {
       this.initialize()
     },
