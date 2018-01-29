@@ -27,7 +27,7 @@ import Icons from './Icons'
 // TODO: import Paginations from './Paginations'
 // TODO: import Parallax from './Parallax'
 // TODO: import Progress from './Progress'
-// TODO: import SelectionControls from './SelectionControls'
+import SelectionControls from './SelectionControls'
 import Selects from './Selects'
 // TODO: import Sliders from './Sliders'
 // TODO: import Snackbars from './Snackbars'
@@ -69,7 +69,7 @@ export default {
   // TODO:   Paginations,
   // TODO:   Parallax,
   // TODO:   Progress,
-  // TODO:   SelectionControls,
+  SelectionControls,
   Selects,
   // TODO:   Sliders,
   // TODO:   Snackbars,
