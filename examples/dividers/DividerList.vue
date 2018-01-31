@@ -38,11 +38,11 @@ export default {
     return {
       items: [
         {
-          header: "Today"
+          header: 'Today'
         },
         {
-          avatar: "https://picsum.photos/250/300?image=1027",
-          title: "Meeting @ Noon",
+          avatar: 'https://picsum.photos/250/300?image=1027',
+          title: 'Meeting @ Noon',
           subtitle:
             "<span class='text--primary'>Spike Lee</span> &mdash; I'll be in your neighborhood"
         },
@@ -51,7 +51,7 @@ export default {
           inset: true
         },
         {
-          avatar: "https://picsum.photos/250/300?image=821",
+          avatar: 'https://picsum.photos/250/300?image=821',
           title: 'Summer BBQ <span class="grey--text text--lighten-1"></span>',
           subtitle:
             "<span class='text--primary'>to Operations support</span> &mdash; Wish I could come."
@@ -61,17 +61,17 @@ export default {
           inset: true
         },
         {
-          avatar: "https://picsum.photos/250/300?image=783",
-          title: "Yes yes",
+          avatar: 'https://picsum.photos/250/300?image=783',
+          title: 'Yes yes',
           subtitle:
             "<span class='text--primary'>Bella</span> &mdash; Do you have Paris recommendations"
         },
         {
-          header: "Tomorrow"
+          header: 'Tomorrow'
         },
         {
-          avatar: "https://picsum.photos/250/300?image=1006",
-          title: "Dinner tonight?",
+          avatar: 'https://picsum.photos/250/300?image=1006',
+          title: 'Dinner tonight?',
           subtitle:
             "<span class='text--primary'>LaToya</span> &mdash; Do you want to hang out?"
         },
@@ -80,17 +80,17 @@ export default {
           inset: true
         },
         {
-          avatar: "https://picsum.photos/250/300?image=146",
-          title: "So long",
+          avatar: 'https://picsum.photos/250/300?image=146',
+          title: 'So long',
           subtitle:
             "<span class='text--primary'>Nancy</span> &mdash; Do you see what time it is?"
         },
         {
-          header: "Last Week"
+          header: 'Last Week'
         },
         {
-          avatar: "https://picsum.photos/250/300?image=1008",
-          title: "Breakfast?",
+          avatar: 'https://picsum.photos/250/300?image=1008',
+          title: 'Breakfast?',
           subtitle:
             "<span class='text--primary'>LaToya</span> &mdash; Do you want to hang out?"
         },
@@ -99,7 +99,7 @@ export default {
           inset: true
         },
         {
-          avatar: "https://picsum.photos/250/300?image=839",
+          avatar: 'https://picsum.photos/250/300?image=839',
           title:
             'Winter Porridge <span class="grey--text text--lighten-1"></span>',
           subtitle:
@@ -110,13 +110,13 @@ export default {
           inset: true
         },
         {
-          avatar: "https://picsum.photos/250/300?image=145",
-          title: "Oui oui",
+          avatar: 'https://picsum.photos/250/300?image=145',
+          title: 'Oui oui',
           subtitle:
             "<span class='text--primary'>Nancy</span> &mdash; Do you see what time it is?"
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
