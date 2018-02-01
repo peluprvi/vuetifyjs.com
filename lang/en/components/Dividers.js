@@ -12,13 +12,13 @@ export default {
       desc: 'Dividers have light and dark variants.',
       uninverted: true
     },
-    inset: {
-      header: 'Inset dividers',
-      desc: 'Inset dividers are moved 72px to the right. This will cause them to line up with list items.'
+    dividerList: {
+      header: 'List dividers',
+      desc: 'Shows list of dividers and subheaders with list items.'
     },
-    subheaders: {
-      header: 'Subheaders and dividers',
-      desc: 'Subheaders can be lined up with inset dividers by using the same prop.'
+    dividerListPortrait: {
+      header: 'Divivders in Portrait View',
+      desc: 'List dividers in portrait view v-tile and v-list.'
     }
   }],
   props: {
