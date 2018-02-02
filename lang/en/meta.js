@@ -59,6 +59,12 @@ export default {
     'description': 'Make an amazing application with smooth built in animations.',
     'keywords': 'motion, transitions'
   },
+  'motion/smooth-scroll': {
+    'h1': 'Smooth Scroll',
+    'title': 'Smooth Scroll',
+    'description': 'Smooth scroll to a target location on the page.',
+    'keywords': 'smooth scroll, transitions'
+  },
   'style/colors': {
     'h1': 'Colors',
     'title': 'Material color palette',
