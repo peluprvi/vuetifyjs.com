@@ -18,7 +18,7 @@ export default [
   ['style/typography', 'style/Typography'],
   ['style/content', 'style/Content'],
   ['motion/transitions', 'motion/Transitions'],
-  ['motion/smooth-scroll', 'motion/SmoothScroll'],
+  ['motion/scrolling', 'motion/Scrolling'],
   ['store', 'store/Index'],
   ['store/cart', 'store/Cart'],
   ['store/thank-you', 'store/ThankYou'],
