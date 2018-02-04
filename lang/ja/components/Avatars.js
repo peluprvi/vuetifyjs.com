@@ -1,19 +1,19 @@
 export default {
   header: 'Avatar',
-  headerText: 'The `v-avatar` component is used to control the size and border radius of responsive images, typically used to show profile pictures.',
+  headerText: '`v-avatar` コンポーネントは、プロフィール画像のようなレスポンシブな画像のサイズと角丸の制御に使用します。',
   components: ['v-avatar'],
   examples: [{
     standard: {
-      header: 'Standard display',
-      desc: 'The avatar has a dynamic size that can be scaled for any situation. A **tile** variation is available for displaying an avatar without border radius.'
+      header: '基本的な表示',
+      desc: 'アバターは様々なシチュエーションのために動的にサイズを変更し拡大することができます。 **tile** 変数を使用することで、角丸処理を使用せず表示することができます。'
     },
     advanced: {
-      header: 'Advanced usage',
-      desc: 'Combining an avatar with other components allows you to build beautiful user interfaces right out of the box.'
+      header: '高度な使用方法',
+      desc: 'アバターと他のコンポーネントを組み合わせることで、革新的で美しいユーザーインターフェイスをすぐに構築することができます。'
     },
     iconAndText: {
-      header: 'Icon and text',
-      desc: 'An avatar also accepts the `v-icon` component or text. Mix and match functionality to create something unique.'
+      header: 'アイコンとテキスト',
+      desc: 'アバターは `v-icon` コンポーネント、もしくはテキストを受け付けることができます。これらの機能を組み合わせることで独創的なUIを作成することができます。'
     }
   }]
 }
