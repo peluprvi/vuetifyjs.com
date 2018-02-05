@@ -20,7 +20,7 @@ import Forms from './Forms'
 import Grid from './Grid'
 // TODO: import GridLists from './GridLists'
 import Icons from './Icons'
-// TODO: import Lists from './Lists'
+import Lists from './Lists'
 // TODO: import Jumbotrons from './Jumbotrons'
 // TODO: import Menus from './Menus'
 // TODO: import NavigationDrawers from './NavigationDrawers'
@@ -62,7 +62,7 @@ export default {
   Grid,
   // TODO:   GridLists,
   Icons,
-  // TODO:   Lists,
+  Lists,
   // TODO:   Jumbotrons,
   // TODO:   Menus,
   // TODO:   NavigationDrawers,
