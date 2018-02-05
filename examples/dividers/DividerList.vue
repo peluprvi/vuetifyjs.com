@@ -1,8 +1,8 @@
 <template>
   <v-layout row>
     <v-flex
-      xs4
-      offset-md4
+      xs12
+      sm6
       offset-sm3>
       <v-card>
         <v-toolbar

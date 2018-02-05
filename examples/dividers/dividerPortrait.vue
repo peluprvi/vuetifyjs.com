@@ -3,9 +3,9 @@
     row
     wrap>
     <v-flex
-      xs4
-      offset-md4
-      offset-sm1>
+      xs12
+      sm6
+      offset-sm3>
       <v-card color="grey darken-1">
         <v-card-title>
           <span class="headline white--text pl-3">Portrait View</span>
