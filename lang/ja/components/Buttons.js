@@ -1,76 +1,76 @@
 export default {
   header: 'Button',
-  headerText: 'The `v-btn` component replaces the standard html button with a material design theme and a multitude of options. Any color helper class can be used to alter the background or text color.',
+  headerText: '`v-btn` コンポーネントは基本的な HTML におけるボタンをマテリアルデザインで置き換え、多数のオプションを提供します。 様々なカラーヘルパークラスを利用して、背景やテキストの色を変更することができます。',
   components: ['v-btn'],
   examples: [{
     usage: {
-      header: 'Usage',
+      header: '使用方法',
       desc: ''
     },
     flat: {
-      header: 'Flat',
-      desc: 'Flat buttons have no box shadow and no background. Only on hover is the container for the button shown.'
+      header: 'フラットボタン',
+      desc: 'フラットボタンは影と背景色を持ちません。ホバーした時のみに、ボタンの形状が表示されます。'
     },
     raised: {
-      header: 'Raised',
-      desc: 'Raised buttons have a box shadow that increases when clicked. This is the default style.'
+      header: 'レイズドボタン',
+      desc: 'レイズドボタンはクリックした時に広がる影を持ちます。これはデフォルトのスタイルです。'
     },
     depressed: {
-      header: 'Depressed',
-      desc: 'Depressed buttons still maintain their background color, but have no box shadow.'
+      header: 'ディプレスドボタン',
+      desc: 'ディプレスドボタン背景色は変化しますが、影は持ちません。'
     },
     dropdown: {
-      header: 'Button Dropdown Variants',
-      desc: 'Button dropdowns are regular selects with additional styling.',
+      header: 'ボタンドロップダウン',
+      desc: 'ボタンドロップダウンは、付加的なスタイリングがされた一般的なセレクトボックスです。',
       uninverted: true
     },
     toggle: {
-      header: 'Button Toggle',
-      desc: 'Toggle buttons are essentially styled radio or checkboxes, depending on the properties selected. This component is compatible with the `v-toolbar` component.'
+      header: 'トグルボタン',
+      desc: 'トグルボタンは本質的には、選択されたプロパティに反応するスタイリングされたラジオボタン、もしくはチェックボックスです。子のコンポーネントは `v-toolbar` コンポーネントと互換性があります。'
     },
     icon: {
-      header: 'Icon',
-      desc: 'Icons can be used for the primary content of a button.'
+      header: 'アイコン',
+      desc: 'アイコンをボタンの主要なコンテンツとして使用することができます。'
     },
     floating: {
-      header: 'Floating',
-      desc: 'Floating buttons are round and usually contain an icon.'
+      header: 'フローティングボタン',
+      desc: 'フローティングボタンは丸く、多くの場合アイコンを含んでいます。'
     },
     loaders: {
-      header: 'Loaders',
-      desc: 'Using the loading prop, you can notify a user that there is processing taking place. The default behavior is to use a `v-progress-circular` component but this can be customized.'
+      header: 'ローディング',
+      desc: 'loading prop を使用すれば、処理中であることをユーザーに通知することができます。デフォルトの振る舞いには `v-progress-circular` コンポーネントが使用されますが、これはカスタマイズすることができます。'
     },
     sizing: {
-      header: 'Sizing',
-      desc: 'Buttons can be given different sizing options to fit a multitude of scenarios.'
+      header: 'サイズ',
+      desc: 'ボタンにはさまざまなシナリオに合うように、異なったサイズのオプションを設定することができます。'
     },
     outline: {
-      header: 'Outline',
-      desc: 'Outline buttons inherit their borders from the current color applied.'
+      header: 'アウトラインボタン',
+      desc: 'アウトラインボタンは現在適用されている色を引き継いだ境界線を表示します。'
     },
     round: {
-      header: 'Round',
-      desc: 'Rounded buttons behave the same as regular buttons but have rounded edges.'
+      header: 'ラウンドボタン',
+      desc: 'ラウンドボタンは通常のボタンと同じように振る舞いますが、角が丸くなります。'
     },
     block: {
-      header: 'Block',
-      desc: 'Block buttons extend the full available width.'
+      header: 'ブロックボタン',
+      desc: 'ブロックボタンは可能な限り横に広がります。'
     }
   }],
   props: {
     'v-btn': {
-      block: 'Expands the button to 100% of available space',
-      depressed: 'Removes the button box shadow',
-      fab: 'Makes button round',
-      flat: 'Removes the button background color',
-      icon: 'Designates the button as icon - round and flat',
-      inputValue: 'Controls the button active state',
-      large: 'Large size button',
-      loading: 'Adds a loading icon animation',
-      outline: 'Button will have an outline',
-      round: 'Button will be round on the sides',
-      small: 'Small size button',
-      type: 'Set the button\'s type attribute'
+      block: 'ボタンを使用可能なスペースの最大限まで広げます。',
+      depressed: 'ボタンの影を削除します。',
+      fab: 'ボタンを丸くします。',
+      flat: 'ボタンの背景色を削除します。',
+      icon: 'ボタンをアイコンとして丸くフラットにします。',
+      inputValue: 'ボタンの有効状態を制御します。',
+      large: 'ボタンのサイズを大きくします。',
+      loading: 'ローディングアニメーションを追加します。',
+      outline: 'ボタンを境界線で表現します。',
+      round: 'ボタンの両端が丸くなります。',
+      small: 'ボタンを小さくします。',
+      type: 'ボタンの属性を設定します。'
     }
   }
 }
