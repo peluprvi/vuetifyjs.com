@@ -16,8 +16,8 @@ export default {
       header: 'List dividers',
       desc: 'Shows list of dividers and subheaders with list items.'
     },
-    dividerListPortrait: {
-      header: 'Divivders in Portrait View',
+    dividerPortrait: {
+      header: 'Dividers in Portrait View',
       desc: 'List dividers in portrait view v-tile and v-list.'
     }
   }],

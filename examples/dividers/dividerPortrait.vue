@@ -1,21 +1,34 @@
 <template>
-  <v-layout row wrap>
-    <v-flex xs4 offset-md4 offset-sm1>
+  <v-layout
+    row
+    wrap>
+    <v-flex
+      xs4
+      offset-md4
+      offset-sm1>
       <v-card color="grey darken-1">
         <v-card-title>
           <span class="headline white--text pl-3">Portrait View</span>
-          <v-spacer></v-spacer>
-          <v-btn dark icon>
+          <v-spacer/>
+          <v-btn
+            dark
+            icon>
             <v-icon>chevron_left</v-icon>
           </v-btn>
-          <v-btn dark icon>
+          <v-btn
+            dark
+            icon>
             <v-icon>edit</v-icon>
           </v-btn>
-          <v-btn dark icon>
+          <v-btn
+            dark
+            icon>
             <v-icon>more_vert</v-icon>
           </v-btn>
         </v-card-title>
-        <v-list two-line class="grey darken-1">
+        <v-list
+          two-line
+          class="grey darken-1">
           <v-list-tile>
             <v-list-tile-action>
               <v-icon color="white">phone</v-icon>
@@ -27,7 +40,7 @@
               <v-icon class="white--text">chat</v-icon>
             </v-list-tile-action>
           </v-list-tile>
-          <v-divider inset></v-divider>
+          <v-divider inset/>
           <v-list-tile>
             <v-list-tile-action>
               <v-icon color="white">phone</v-icon>
@@ -39,7 +52,7 @@
               <v-icon class="white--text">chat</v-icon>
             </v-list-tile-action>
           </v-list-tile>
-          <v-divider inset></v-divider>
+          <v-divider inset/>
           <v-list-tile>
             <v-list-tile-action>
               <v-icon color="white">mail</v-icon>
@@ -48,7 +61,7 @@
               <v-list-tile-title class="white--text">mcbeal@example.com</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-          <v-divider inset></v-divider>
+          <v-divider inset/>
           <v-list-tile>
             <v-list-tile-action>
               <v-icon color="white">location_on</v-icon>
@@ -58,8 +71,9 @@
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
-        <v-card-media src="https://picsum.photos/250/300?image=1027" height="200px">
-        </v-card-media>
+        <v-card-media
+          src="https://picsum.photos/250/300?image=1027"
+          height="200px"/>
       </v-card>
     </v-flex>
   </v-layout>
