@@ -9,7 +9,7 @@
       <v-card color="grey darken-1">
         <v-card-title>
           <span class="headline white--text pl-3">Portrait View</span>
-          <v-spacer/>
+          <v-spacer></v-spacer>
           <v-btn
             dark
             icon>
@@ -40,7 +40,7 @@
               <v-icon class="white--text">chat</v-icon>
             </v-list-tile-action>
           </v-list-tile>
-          <v-divider inset/>
+          <v-divider inset></v-divider>
           <v-list-tile>
             <v-list-tile-action>
               <v-icon color="white">phone</v-icon>
@@ -52,7 +52,7 @@
               <v-icon class="white--text">chat</v-icon>
             </v-list-tile-action>
           </v-list-tile>
-          <v-divider inset/>
+          <v-divider inset></v-divider>
           <v-list-tile>
             <v-list-tile-action>
               <v-icon color="white">mail</v-icon>
@@ -61,7 +61,7 @@
               <v-list-tile-title class="white--text">mcbeal@example.com</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-          <v-divider inset/>
+          <v-divider inset></v-divider>
           <v-list-tile>
             <v-list-tile-action>
               <v-icon color="white">location_on</v-icon>
@@ -73,7 +73,8 @@
         </v-list>
         <v-card-media
           src="https://picsum.photos/250/300?image=1027"
-          height="200px"/>
+          height="200px">
+        </v-card-media>
       </v-card>
     </v-flex>
   </v-layout>
