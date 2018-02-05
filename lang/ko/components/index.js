@@ -21,7 +21,7 @@ import Grid from './Grid'
 import GridLists from './GridLists'
 import Icons from './Icons'
 import Lists from './Lists'
-// TODO: import Jumbotrons from './Jumbotrons'
+import Jumbotrons from './Jumbotrons'
 // TODO: import Menus from './Menus'
 // TODO: import NavigationDrawers from './NavigationDrawers'
 // TODO: import Paginations from './Paginations'
@@ -63,7 +63,7 @@ export default {
   GridLists,
   Icons,
   Lists,
-  // TODO:   Jumbotrons,
+  Jumbotrons,
   // TODO:   Menus,
   // TODO:   NavigationDrawers,
   // TODO:   Paginations,
