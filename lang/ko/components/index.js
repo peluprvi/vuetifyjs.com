@@ -18,7 +18,7 @@ import FloatingActionButtons from './FloatingActionButtons'
 import Footer from './Footer'
 import Forms from './Forms'
 import Grid from './Grid'
-// TODO: import GridLists from './GridLists'
+import GridLists from './GridLists'
 import Icons from './Icons'
 import Lists from './Lists'
 // TODO: import Jumbotrons from './Jumbotrons'
@@ -60,7 +60,7 @@ export default {
   Footer,
   Forms,
   Grid,
-  // TODO:   GridLists,
+  GridLists,
   Icons,
   Lists,
   // TODO:   Jumbotrons,
