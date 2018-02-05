@@ -12,7 +12,8 @@
           <v-spacer></v-spacer>
           <v-btn icon>
             <v-icon>search</v-icon>
-        </v-btn></v-toolbar>
+          </v-btn>
+        </v-toolbar>
         <v-list
           two-line
           class="orange lighten-2">
