@@ -1,22 +1,23 @@
 export default {
   header: 'Breadcrumbs',
-  headerText: 'The `v-breadcrumbs` component is a navigational helper for pages. It can accept a **Material Icons** icon or characters as a divider. An array of objects containing the fields _href_, _text_ and optional _disabled_ can be passed to the **items** property of the component.  Additionally, a regular slot exists for more control of the breadcrumbs, either utilizing `v-breadcrumbs-item` or other custom markup.',
+  headerText: '`v-breadcrumbs` コンポーネントはページ用のナビゲーションヘルパーです。**Material Icons** のアイコン、もしくは文字を区切りとして使用できます。_href_、_text_ そして任意で _disabled_ を含んだオブジェクトの配列を **items** プロパティに渡すことができます。 加えて、パンくずリストをより細かく制御するために slot を使用したり、`v-breadcrumbs-item` や他のカスタムマークアップを利用することができます。',
   components: ['v-breadcrumbs', 'v-breadcrumbs-items'],
   examples: [{
     textDividers: {
-      header: 'Text dividers',
-      desc: 'By default, breadcrumbs use a text divider. This can be any string.'
+      header: 'テキスト区切り',
+      desc: 'パンくずリストはデフォルトでテキストで区切られます。あらゆる文字を使用することができます。'
+
     },
     iconDividers: {
-      header: 'Icon dividers',
-      desc: 'For the icon variant, breadcrumbs can use any icon in Material Design Icons.'
+      header: 'アイコン区切り',
+      desc: 'icon 変数を使用することで、 Material Design Icon に存在するアイコンをパンくずリストに使用することができます。'
     }
   }],
   props: {
-    divider: 'Specifies the dividing character',
-    icons: 'Specifies that the dividers are icons',
-    justifyCenter: 'Align the breadcrumbs center',
-    justifyEnd: 'Align the breadcrumbs at the end',
-    large: 'Increase the font-size of the breadcrumb item text'
+    divider: '区切り文字を指定します。',
+    icons: '区切りとなるアイコンを指定します。',
+    justifyCenter: 'パンくずリストを中央寄せにします。',
+    justifyEnd: 'パンくずリストを右側寄せにします。',
+    large: 'パンくずリストの項目のテキストを大きくします。'
   }
 }
