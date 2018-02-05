@@ -14,7 +14,7 @@ import DatePickers from './DatePickers'
 import Dialogs from './Dialogs'
 import Dividers from './Dividers'
 import ExpansionPanels from './ExpansionPanels'
-// TODO: import FloatingActionButtons from './FloatingActionButtons'
+import FloatingActionButtons from './FloatingActionButtons'
 import Footer from './Footer'
 import Forms from './Forms'
 import Grid from './Grid'
@@ -56,7 +56,7 @@ export default {
   Dialogs,
   Dividers,
   ExpansionPanels,
-  // TODO:   FloatingActionButtons,
+  FloatingActionButtons,
   Footer,
   Forms,
   Grid,
