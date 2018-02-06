@@ -1799,12 +1799,6 @@ module.exports = {
         "source": null
       },
       {
-        "name": "returnValue",
-        "type": "Any",
-        "default": "undefined",
-        "source": "returnable"
-      },
-      {
         "name": "saveText",
         "type": "Any",
         "default": "Save",
@@ -1817,9 +1811,7 @@ module.exports = {
         "source": null
       }
     ],
-    "mixins": [
-      "returnable"
-    ],
+    "mixins": [],
     "slots": [
       "default",
       "input"
@@ -1850,9 +1842,12 @@ module.exports = {
   "v-date-picker": {
     "props": [
       {
-        "name": "headerDateFormat",
-        "type": "Function",
-        "default": "null",
+        "name": "firstDayOfWeek",
+        "type": [
+          "String",
+          "Number"
+        ],
+        "default": 0,
         "source": null
       },
       {
@@ -1868,16 +1863,32 @@ module.exports = {
         "source": null
       },
       {
+        "name": "autosave",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
         "name": "allowedDates",
+        "type": [
+          "Array",
+          "Object",
+          "Function"
+        ],
+        "default": null,
+        "source": null
+      },
+      {
+        "name": "monthFormat",
         "type": "Function",
         "default": "null",
         "source": null
       },
       {
-        "name": "max",
-        "type": "String",
-        "default": "undefined",
-        "source": null
+        "name": "noTitle",
+        "type": "Boolean",
+        "default": "false",
+        "source": "picker"
       },
       {
         "name": "headerColor",
@@ -1886,35 +1897,10 @@ module.exports = {
         "source": "picker"
       },
       {
-        "name": "dark",
+        "name": "light",
         "type": "Boolean",
         "default": "false",
         "source": "themeable"
-      },
-      {
-        "name": "firstDayOfWeek",
-        "type": [
-          "String",
-          "Number"
-        ],
-        "default": 0,
-        "source": null
-      },
-      {
-        "name": "fullWidth",
-        "type": "Boolean",
-        "default": "false",
-        "source": "picker"
-      },
-      {
-        "name": "eventColor",
-        "type": [
-          "String",
-          "Function",
-          "Object"
-        ],
-        "default": "warning",
-        "source": null
       },
       {
         "name": "dayFormat",
@@ -1933,27 +1919,25 @@ module.exports = {
         "source": null
       },
       {
-        "name": "prependIcon",
-        "type": "String",
-        "default": "chevron_left",
+        "name": "eventColor",
+        "type": [
+          "String",
+          "Function",
+          "Object"
+        ],
+        "default": "warning",
         "source": null
       },
       {
-        "name": "light",
+        "name": "dark",
         "type": "Boolean",
         "default": "false",
         "source": "themeable"
       },
       {
-        "name": "landscape",
-        "type": "Boolean",
-        "default": "false",
-        "source": "picker"
-      },
-      {
-        "name": "scrollable",
-        "type": "Boolean",
-        "default": "false",
+        "name": "headerDateFormat",
+        "type": "Function",
+        "default": "null",
         "source": null
       },
       {
@@ -1963,42 +1947,36 @@ module.exports = {
         "source": null
       },
       {
-        "name": "showCurrent",
-        "type": [
-          "Boolean",
-          "String"
-        ],
-        "default": true,
-        "source": null
-      },
-      {
-        "name": "min",
-        "type": "String",
-        "default": "undefined",
-        "source": null
-      },
-      {
-        "name": "monthFormat",
-        "type": "Function",
-        "default": "null",
-        "source": null
-      },
-      {
-        "name": "noTitle",
+        "name": "landscape",
         "type": "Boolean",
         "default": "false",
         "source": "picker"
       },
       {
-        "name": "pickerDate",
+        "name": "prependIcon",
         "type": "String",
-        "default": "undefined",
+        "default": "chevron_left",
         "source": null
       },
       {
         "name": "readonly",
         "type": "Boolean",
         "default": "false",
+        "source": null
+      },
+      {
+        "name": "scrollable",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "showCurrent",
+        "type": [
+          "Boolean",
+          "String"
+        ],
+        "default": true,
         "source": null
       },
       {
@@ -2018,15 +1996,6 @@ module.exports = {
         "type": "String",
         "default": "undefined",
         "source": null
-      },
-      {
-        "name": "width",
-        "type": [
-          "Number",
-          "String"
-        ],
-        "default": 330,
-        "source": "picker"
       },
       {
         "name": "yearFormat",
@@ -2118,18 +2087,6 @@ module.exports = {
         "source": null
       },
       {
-        "name": "max",
-        "type": "String",
-        "default": "undefined",
-        "source": null
-      },
-      {
-        "name": "min",
-        "type": "String",
-        "default": "undefined",
-        "source": null
-      },
-      {
         "name": "prependIcon",
         "type": "String",
         "default": "chevron_left",
@@ -2152,9 +2109,9 @@ module.exports = {
   "v-date-picker-date-table": {
     "props": [
       {
-        "name": "max",
-        "type": "String",
-        "default": "undefined",
+        "name": "scrollable",
+        "type": "Boolean",
+        "default": "false",
         "source": null
       },
       {
@@ -2165,12 +2122,16 @@ module.exports = {
       },
       {
         "name": "allowedDates",
-        "type": "Function",
-        "default": "null",
+        "type": [
+          "Array",
+          "Object",
+          "Function"
+        ],
+        "default": null,
         "source": null
       },
       {
-        "name": "tableDate",
+        "name": "current",
         "type": "String",
         "default": "undefined",
         "source": null
@@ -2179,12 +2140,6 @@ module.exports = {
         "name": "disabled",
         "type": "Boolean",
         "default": "false",
-        "source": null
-      },
-      {
-        "name": "current",
-        "type": "String",
-        "default": "undefined",
         "source": null
       },
       {
@@ -2229,15 +2184,9 @@ module.exports = {
         "source": null
       },
       {
-        "name": "min",
+        "name": "tableDate",
         "type": "String",
         "default": "undefined",
-        "source": null
-      },
-      {
-        "name": "scrollable",
-        "type": "Boolean",
-        "default": "false",
         "source": null
       },
       {
@@ -2260,9 +2209,13 @@ module.exports = {
   "v-date-picker-month-table": {
     "props": [
       {
-        "name": "locale",
-        "type": "String",
-        "default": "en-us",
+        "name": "allowedDates",
+        "type": [
+          "Array",
+          "Object",
+          "Function"
+        ],
+        "default": null,
         "source": null
       },
       {
@@ -2270,12 +2223,6 @@ module.exports = {
         "type": "String",
         "default": "undefined",
         "source": "colorable"
-      },
-      {
-        "name": "allowedDates",
-        "type": "Function",
-        "default": "null",
-        "source": null
       },
       {
         "name": "current",
@@ -2296,15 +2243,9 @@ module.exports = {
         "source": null
       },
       {
-        "name": "max",
+        "name": "locale",
         "type": "String",
-        "default": "undefined",
-        "source": null
-      },
-      {
-        "name": "min",
-        "type": "String",
-        "default": "undefined",
+        "default": "en-us",
         "source": null
       },
       {
@@ -2385,7 +2326,7 @@ module.exports = {
   "v-dialog": {
     "props": [
       {
-        "name": "persistent",
+        "name": "fullscreen",
         "type": "Boolean",
         "default": "false",
         "source": null
@@ -2410,12 +2351,6 @@ module.exports = {
       },
       {
         "name": "fullWidth",
-        "type": "Boolean",
-        "default": "false",
-        "source": null
-      },
-      {
-        "name": "fullscreen",
         "type": "Boolean",
         "default": "false",
         "source": null
@@ -2452,10 +2387,10 @@ module.exports = {
         "source": null
       },
       {
-        "name": "returnValue",
-        "type": "Any",
-        "default": "undefined",
-        "source": "returnable"
+        "name": "persistent",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
       },
       {
         "name": "scrollable",
@@ -2493,7 +2428,6 @@ module.exports = {
       "dependent",
       "detachable",
       "overlayable",
-      "returnable",
       "stackable",
       "toggleable"
     ],
@@ -3644,7 +3578,7 @@ module.exports = {
   "v-menu": {
     "props": [
       {
-        "name": "nudgeTop",
+        "name": "nudgeRight",
         "type": [
           "Number",
           "String"
@@ -3777,15 +3711,6 @@ module.exports = {
         "source": "menuable"
       },
       {
-        "name": "nudgeRight",
-        "type": [
-          "Number",
-          "String"
-        ],
-        "default": 0,
-        "source": "menuable"
-      },
-      {
         "name": "closeDelay",
         "type": [
           "Number",
@@ -3793,6 +3718,15 @@ module.exports = {
         ],
         "default": 200,
         "source": "delayable"
+      },
+      {
+        "name": "nudgeTop",
+        "type": [
+          "Number",
+          "String"
+        ],
+        "default": 0,
+        "source": "menuable"
       },
       {
         "name": "nudgeWidth",
@@ -3834,16 +3768,52 @@ module.exports = {
         "source": null
       },
       {
+        "name": "auto",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
         "name": "closeOnClick",
         "type": "Boolean",
         "default": "true",
         "source": null
       },
       {
-        "name": "auto",
+        "name": "openOnClick",
+        "type": "Boolean",
+        "default": "true",
+        "source": null
+      },
+      {
+        "name": "openOnHover",
         "type": "Boolean",
         "default": "false",
         "source": null
+      },
+      {
+        "name": "origin",
+        "type": "String",
+        "default": "top left",
+        "source": null
+      },
+      {
+        "name": "positionX",
+        "type": "Number",
+        "default": "undefined",
+        "source": "menuable"
+      },
+      {
+        "name": "positionY",
+        "type": "Number",
+        "default": "undefined",
+        "source": "menuable"
+      },
+      {
+        "name": "right",
+        "type": "Boolean",
+        "default": "false",
+        "source": "positionable"
       },
       {
         "name": "top",
@@ -3858,48 +3828,6 @@ module.exports = {
           "String"
         ],
         "default": "menu-transition",
-        "source": null
-      },
-      {
-        "name": "origin",
-        "type": "String",
-        "default": "top left",
-        "source": null
-      },
-      {
-        "name": "positionY",
-        "type": "Number",
-        "default": "undefined",
-        "source": "menuable"
-      },
-      {
-        "name": "positionX",
-        "type": "Number",
-        "default": "undefined",
-        "source": "menuable"
-      },
-      {
-        "name": "returnValue",
-        "type": "Any",
-        "default": "undefined",
-        "source": "returnable"
-      },
-      {
-        "name": "right",
-        "type": "Boolean",
-        "default": "false",
-        "source": "positionable"
-      },
-      {
-        "name": "openOnClick",
-        "type": "Boolean",
-        "default": "true",
-        "source": null
-      },
-      {
-        "name": "openOnHover",
-        "type": "Boolean",
-        "default": "false",
         "source": null
       },
       {
@@ -3925,7 +3853,6 @@ module.exports = {
       "detachable",
       "menuable",
       "positionable",
-      "returnable",
       "stackable",
       "themeable",
       "toggleable"
@@ -4215,12 +4142,6 @@ module.exports = {
         "source": "themeable"
       },
       {
-        "name": "fullWidth",
-        "type": "Boolean",
-        "default": "false",
-        "source": null
-      },
-      {
         "name": "landscape",
         "type": "Boolean",
         "default": "false",
@@ -4236,15 +4157,6 @@ module.exports = {
         "name": "transition",
         "type": "String",
         "default": "fade-transition",
-        "source": null
-      },
-      {
-        "name": "width",
-        "type": [
-          "Number",
-          "String"
-        ],
-        "default": 330,
         "source": null
       }
     ],
@@ -6225,9 +6137,12 @@ module.exports = {
   "v-text-field": {
     "props": [
       {
-        "name": "value",
-        "type": "Any",
-        "default": "undefined",
+        "name": "toggleKeys",
+        "type": "Array",
+        "default": [
+          13,
+          32
+        ],
         "source": "input"
       },
       {
@@ -6273,10 +6188,10 @@ module.exports = {
         "source": "input"
       },
       {
-        "name": "flat",
+        "name": "returnMaskedValue",
         "type": "Boolean",
         "default": "false",
-        "source": "soloable"
+        "source": "maskable"
       },
       {
         "name": "type",
@@ -6351,15 +6266,6 @@ module.exports = {
         "source": "input"
       },
       {
-        "name": "toggleKeys",
-        "type": "Array",
-        "default": [
-          13,
-          32
-        ],
-        "source": "input"
-      },
-      {
         "name": "loading",
         "type": [
           "Boolean",
@@ -6367,6 +6273,12 @@ module.exports = {
         ],
         "default": false,
         "source": "loadable"
+      },
+      {
+        "name": "textarea",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
       },
       {
         "name": "dontFillMaskBlanks",
@@ -6384,16 +6296,16 @@ module.exports = {
         "source": "maskable"
       },
       {
-        "name": "returnMaskedValue",
-        "type": "Boolean",
-        "default": "false",
-        "source": "maskable"
-      },
-      {
         "name": "rules",
         "type": "Array",
         "default": [],
         "source": "validatable"
+      },
+      {
+        "name": "flat",
+        "type": "Boolean",
+        "default": "false",
+        "source": "soloable"
       },
       {
         "name": "soloInverted",
@@ -6457,32 +6369,14 @@ module.exports = {
         "source": null
       },
       {
-        "name": "noResize",
-        "type": "Boolean",
-        "default": "false",
-        "source": null
-      },
-      {
         "name": "prefix",
         "type": "String",
         "default": "undefined",
         "source": null
       },
       {
-        "name": "rowHeight",
-        "type": [
-          "Number",
-          "String"
-        ],
-        "default": 24,
-        "source": null
-      },
-      {
         "name": "rows",
-        "type": [
-          "Number",
-          "String"
-        ],
+        "type": "Any",
         "default": 5,
         "source": null
       },
@@ -6499,16 +6393,16 @@ module.exports = {
         "source": null
       },
       {
-        "name": "textarea",
-        "type": "Boolean",
-        "default": "false",
-        "source": null
-      },
-      {
         "name": "validateOnBlur",
         "type": "Boolean",
         "default": "false",
         "source": "validatable"
+      },
+      {
+        "name": "value",
+        "type": "Any",
+        "default": "undefined",
+        "source": "input"
       }
     ],
     "mixins": [
@@ -6538,13 +6432,14 @@ module.exports = {
   "v-time-picker": {
     "props": [
       {
-        "name": "width",
+        "name": "allowedHours",
         "type": [
-          "Number",
-          "String"
+          "Array",
+          "Object",
+          "Function"
         ],
-        "default": 330,
-        "source": "picker"
+        "default": null,
+        "source": null
       },
       {
         "name": "color",
@@ -6553,33 +6448,19 @@ module.exports = {
         "source": "colorable"
       },
       {
-        "name": "allowedMinutes",
-        "type": "Function",
-        "default": "null",
-        "source": null
-      },
-      {
-        "name": "allowedHours",
-        "type": "Function",
-        "default": "null",
-        "source": null
-      },
-      {
-        "name": "light",
+        "name": "autosave",
         "type": "Boolean",
         "default": "false",
-        "source": "themeable"
+        "source": null
       },
       {
-        "name": "headerColor",
-        "type": "String",
-        "default": "undefined",
-        "source": "picker"
-      },
-      {
-        "name": "format",
-        "type": "String",
-        "default": "ampm",
+        "name": "allowedMinutes",
+        "type": [
+          "Array",
+          "Object",
+          "Function"
+        ],
+        "default": null,
         "source": null
       },
       {
@@ -6589,9 +6470,15 @@ module.exports = {
         "source": "themeable"
       },
       {
-        "name": "fullWidth",
-        "type": "Boolean",
-        "default": "false",
+        "name": "format",
+        "type": "String",
+        "default": "ampm",
+        "source": null
+      },
+      {
+        "name": "headerColor",
+        "type": "String",
+        "default": "undefined",
         "source": "picker"
       },
       {
@@ -6601,16 +6488,10 @@ module.exports = {
         "source": "picker"
       },
       {
-        "name": "max",
-        "type": "String",
-        "default": "undefined",
-        "source": null
-      },
-      {
-        "name": "min",
-        "type": "String",
-        "default": "undefined",
-        "source": null
+        "name": "light",
+        "type": "Boolean",
+        "default": "false",
+        "source": "themeable"
       },
       {
         "name": "noTitle",
@@ -6659,8 +6540,12 @@ module.exports = {
       },
       {
         "name": "allowedValues",
-        "type": "Function",
-        "default": "null",
+        "type": [
+          "Array",
+          "Object",
+          "Function"
+        ],
+        "default": null,
         "source": null
       },
       {
@@ -7361,5 +7246,63 @@ module.exports = {
       }
     ],
     "mixins": []
+  },
+  "$vuetify": {
+    "functions": [
+      {
+        "name": "goTo",
+        "signature": "(target: string | number | HTMLElement | VueComponent, options?: object) => void"
+      }
+    ]
+  },
+  "v-ripple": {
+    "options": [
+      {
+        "name": "value",
+        "default": "{}",
+        "type": "Object"
+      }
+    ],
+    "type": "undefined"
+  },
+  "v-resize": {
+    "options": [
+      {
+        "name": "modifiers.quiet",
+        "default": "false",
+        "type": "Boolean"
+      },
+      {
+        "name": "value",
+        "default": "undefined",
+        "type": "Function"
+      }
+    ],
+    "type": "undefined"
+  },
+  "v-scroll": {
+    "options": [
+      {
+        "name": "arg:target",
+        "default": "window",
+        "type": "String"
+      },
+      {
+        "name": "value",
+        "default": "() => {}",
+        "type": "Function"
+      }
+    ],
+    "type": "undefined"
+  },
+  "v-touch": {
+    "options": [
+      {
+        "name": "value",
+        "default": "{}",
+        "type": "Object"
+      }
+    ],
+    "type": "undefined"
   }
 }
