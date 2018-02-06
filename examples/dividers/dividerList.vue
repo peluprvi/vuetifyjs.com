@@ -1,47 +1,42 @@
 <template>
-  <v-layout row>
-    <v-flex
-      xs12
-      sm6
-      offset-sm3>
+  <v-layout justify-center>
+    <v-flex xs12 sm8 md6>
       <v-card>
-        <v-toolbar
-          class="orange lighten-1"
-          dark>
-          <v-toolbar-title>My List</v-toolbar-title>
+        <v-toolbar color="orange lighten-1" dark>
+          <v-toolbar-side-icon></v-toolbar-side-icon>
+          <v-toolbar-title>Message Board</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-btn icon>
             <v-icon>search</v-icon>
           </v-btn>
         </v-toolbar>
-        <v-list
-          two-line
-          class="orange lighten-2">
+        <v-list two-line>
           <template v-for="(item, index) in items">
             <v-subheader
-              v-if="item.header"
+              inset
               :key="item.header"
-              class="white--text">{{ item.header }}</v-subheader>
+              v-if="item.header"
+            >
+              {{ item.header }}
+            </v-subheader>
             <v-divider
               v-else-if="item.divider"
-              :inset="item.inset"
-              :key="index"></v-divider>
+              inset
+              :key="index"
+            ></v-divider>
             <v-list-tile
-              avatar
               v-else
-              :key="item.title" >
-              <v-list-tile-avatar >
-                <img :src="item.avatar" >
+              avatar
+              ripple
+              :key="item.title"
+              @click=""
+            >
+              <v-list-tile-avatar>
+                <img :src="item.avatar">
               </v-list-tile-avatar>
               <v-list-tile-content>
-                <v-list-tile-title
-                  v-html="item.title"
-                  class="white--text">
-                </v-list-tile-title>
-                <v-list-tile-sub-title
-                  v-html="item.subtitle"
-                  class="white--text">
-                </v-list-tile-sub-title>
+                <v-list-tile-title v-html="item.title"></v-list-tile-title>
+                <v-list-tile-sub-title v-html="item.subtitle"></v-list-tile-sub-title>
               </v-list-tile-content>
             </v-list-tile>
           </template>
@@ -58,15 +53,12 @@ export default {
         {
           header: 'Today'
         },
+        { divider: true },
         {
-          avatar: 'https://picsum.photos/250/300?image=1027',
+          avatar: 'https://picsum.photos/250/300?image=660',
           title: 'Meeting @ Noon',
           subtitle:
             "<span class='text--primary'>Spike Lee</span> &mdash; I'll be in your neighborhood"
-        },
-        {
-          divider: true,
-          inset: true
         },
         {
           avatar: 'https://picsum.photos/250/300?image=821',
@@ -75,27 +67,20 @@ export default {
             "<span class='text--primary'>to Operations support</span> &mdash; Wish I could come."
         },
         {
-          divider: true,
-          inset: true
-        },
-        {
           avatar: 'https://picsum.photos/250/300?image=783',
           title: 'Yes yes',
           subtitle:
             "<span class='text--primary'>Bella</span> &mdash; Do you have Paris recommendations"
         },
         {
-          header: 'Tomorrow'
+          header: 'Yesterday'
         },
+        { divider: true },
         {
           avatar: 'https://picsum.photos/250/300?image=1006',
           title: 'Dinner tonight?',
           subtitle:
             "<span class='text--primary'>LaToya</span> &mdash; Do you want to hang out?"
-        },
-        {
-          divider: true,
-          inset: true
         },
         {
           avatar: 'https://picsum.photos/250/300?image=146',
@@ -106,6 +91,7 @@ export default {
         {
           header: 'Last Week'
         },
+        { divider: true },
         {
           avatar: 'https://picsum.photos/250/300?image=1008',
           title: 'Breakfast?',
@@ -113,19 +99,11 @@ export default {
             "<span class='text--primary'>LaToya</span> &mdash; Do you want to hang out?"
         },
         {
-          divider: true,
-          inset: true
-        },
-        {
           avatar: 'https://picsum.photos/250/300?image=839',
           title:
             'Winter Porridge <span class="grey--text text--lighten-1"></span>',
           subtitle:
             "<span class='text--primary'>cc: Daniel</span> &mdash; Tell me more..."
-        },
-        {
-          divider: true,
-          inset: true
         },
         {
           avatar: 'https://picsum.photos/250/300?image=145',
