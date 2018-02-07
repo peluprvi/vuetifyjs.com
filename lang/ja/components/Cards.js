@@ -1,6 +1,6 @@
 export default {
   header: 'Card',
-  headerText: 'The `v-card` component is a versatile component that can be used for anything from a panel to a static image. The **card** component has numerous helper components to make markup as easy as possible. Components that have no listed options use **Vue\'s** functional component option for faster rendering and serve as markup sugar to make building easier.',
+  headerText: '`v-card` コンポーネントは、パネルから画像まであらゆる用途に使用できる汎用的なコンポーネントです。**card** コンポーネントには、可能な限りマークアップを簡単にするためのたくさんのヘルパーコンポーネントが存在します。オプションを持たないコンポーネントはレンダリングを高速化し、構築を簡単にするための糖衣構文として機能するために、Vueのコンポーネント機能を使用しています。',
   components: [
     'v-card',
     'v-card-media',
@@ -9,35 +9,36 @@ export default {
   ],
   examples: [{
     components: {
-      header: 'Components',
-      desc: 'A card has 4 basic components, `v-card-media`, `v-card-title`, `v-card-text` and `v-card-actions`.'
+      header: 'コンポーネント',
+      desc: 'カードには `v-card-media` 、 `v-card-title` 、 `v-card-text` と `v-card-actions` のベースとなる4種類のコンポーネントが用意されています。'
     },
     mediaWithText: {
-      header: 'Media with text',
-      desc: 'Using the layout system, we can add custom text anywhere within the background.'
+      header: 'テキスト付き画像',
+      desc: 'レイアウトシステムを使用すると、背景のどこにでもカスタムテキストを追加することができます。'
     },
     horizontal: {
-      header: 'Horizontal cards',
-      desc: 'Using `v-flex`, you can create customized horizontal cards. Use the `contain` property to shrink the `v-card-media` to fit inside the container, instead of covering.'
+      header: '水平カード',
+      desc: '`v-flex` を使用することで、カスタマイズされた水平カードを作成することができます。`v-card-media` 全体を覆うのではなくコンテナの内側にフィットさせるには、`contain` プロパティを使用します。'
+
     },
     grids: {
-      header: 'Grids',
-      desc: 'Using grid lists, you can create beautiful layouts.'
+      header: 'グリッド',
+      desc: 'グリッドリストを使用すると、美しいレイアウトを作成することができます。'
     },
     customActions: {
-      header: 'Custom actions',
-      desc: 'With a simple conditional, you can easily add supplementary text that is hidden until opened.'
+      header: 'カスタムアクション',
+      desc: 'シンプルな条件によって、開くまで閉じられている補助的なテキストを簡単に追加できます。'
     }
   }],
   props: {
-    contain: 'Change the background-size to contain.',
-    flat: 'Removes card box shadow',
-    height: 'Manually define the height of the card',
-    hover: 'Apply a higher elevation on hover',
-    img: 'Specifies an image background',
-    primaryTitle: 'Applies primary title specific padding.',
-    raised: 'Specifies a higher default elevation',
-    src: 'The image to display as a background.',
-    tile: 'Turn the card into a tile by removing the border radius'
+    contain: 'background-size を内容に合わせます。',
+    flat: 'カードの box-shadow を削除します。',
+    height: 'カードの高さを手動で設定します。',
+    hover: 'ホバーした際により高く浮き出します。',
+    img: '背景に設定する画像を設定します。',
+    primaryTitle: 'プライマリタイトル向けのパディングを適用します。',
+    raised: 'デフォルトで高く浮き出だします。',
+    src: '背景に設定する画像を設定します。',
+    tile: '角丸を削除し、カードをタイルのようにします。'
   }
 }
