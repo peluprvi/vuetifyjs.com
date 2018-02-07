@@ -1,39 +1,39 @@
 export default {
   header: 'Carousel',
-  headerText: 'The `v-carousel` component is used to display large numbers of visual content on a rotating timer.',
+  headerText: '`v-carousel` コンポーネントは、タイマーで入れ替わる数枚の大きなビジュアルコンテンツを表示するために使います。',
   components: ['v-carousel', 'v-carousel-item'],
   examples: [{
     default: {
-      header: 'Default',
-      desc: 'A carousel by default has a slide transition.',
+      header: 'デフォルト',
+      desc: 'カルーセルはデフォルトでスライドの遷移が行われます。',
       uninverted: true
     },
     customTransition: {
-      header: 'Custom transition',
-      desc: 'You can also apply your own custom transition.',
+      header: 'カスタムトランジション',
+      desc: '独自のカスタムトランジションを適用することもできます。',
       uninverted: true
     },
     customDelimiter: {
-      header: 'Custom delimiter',
-      desc: 'You can also change the icon for the carousel delimiter.',
+      header: 'カスタムデリミター',
+      desc: 'カルーセルのデリミターに使用されるアイコンを変更することができます。',
       uninverted: true
     },
     hideControls: {
-      header: 'Hide controls',
-      desc: 'You can hide the bottom controls with the `hide-controls` prop.',
+      header: 'コントロールを隠す',
+      desc: '`hide-controls` prop を使用することで下部のコントローラーを隠すことができます。',
       uninverted: true
     }
   }],
   props: {
     appendIcon: 'Mixins.Input.props.appendIcon',
     prependIcon: 'Mixins.Input.props.prependIcon',
-    cycle: 'Determines if carousel should cycle through images',
-    delimiterIcon: 'Sets icon for carousel delimiter',
-    hideControls: 'Hides the navigation controls',
-    hideDelimiters: 'Hides the panel with carousel delimiters',
-    interval: 'The duration between image cycles',
-    reverseTransition: 'Sets the reverse transition',
-    src: 'The image src',
+    cycle: 'カルーセルが画像を循環させるかどうかを設定します。',
+    delimiterIcon: 'カルーセルのデリミターとして使用するアイコンを設定します。',
+    hideControls: 'ナビゲーションコントロールを隠します。',
+    hideDelimiters: 'カルーセルのデリミターを隠します。',
+    interval: '画像が切り替わるまでの時間を設定します。',
+    reverseTransition: '戻す際のトランジションを設定します。',
+    src: '画像を設定します。',
     transition: 'Mixins.Transitionable.props.transition'
   }
 }
