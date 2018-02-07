@@ -23,7 +23,7 @@ import Icons from './Icons'
 import Lists from './Lists'
 import Jumbotrons from './Jumbotrons'
 import Menus from './Menus'
-// TODO: import NavigationDrawers from './NavigationDrawers'
+import NavigationDrawers from './NavigationDrawers'
 // TODO: import Paginations from './Paginations'
 // TODO: import Parallax from './Parallax'
 // TODO: import Progress from './Progress'
@@ -65,7 +65,7 @@ export default {
   Lists,
   Jumbotrons,
   Menus,
-  // TODO:   NavigationDrawers,
+  NavigationDrawers,
   // TODO:   Paginations,
   // TODO:   Parallax,
   // TODO:   Progress,
