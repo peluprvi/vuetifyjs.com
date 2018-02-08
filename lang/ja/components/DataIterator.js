@@ -1,16 +1,16 @@
 export default {
-  header: 'Data iterator',
-  headerText: 'The `v-data-iterator` component is used for displaying data, and shares a majority of its functionality with the `v-data-table` component. Features include sorting, searching, pagination, and selection.',
+  header: 'データイテレーター',
+  headerText: '`v-data-iterator` コンポーネントはデータを表示するために使用され、`v-data-table` コンポーネントと主要な機能を共有します。ソート、検索、ページネーション、選択の機能を含みます。',
   components: ['v-data-iterator'],
   examples: [{
     simple: {
-      header: 'Simple',
-      desc: 'The `v-data-iterator` allows you to customize exactly how to display your data. In this example we are using a grid list with cards. We can use the `content-tag` prop (along with `content-class` and `content-props`) to specify what the wrapper element around the items should look like.'
+      header: 'シンプルな用法',
+      desc: '`v-data-iterator` コンポーネントはデータをどのように表示するか細かくカスタマイズすることができます。この例では、カードとグリッドリストを使用しています。項目のラッパー要素がどのような見た目にするかを決定するため、`content-tag` prop (加えて `content-class` と `content-props`) を使用できます。'
     }
   }],
   props: {
-    contentClass: 'Applies a custom class to the wrapper element around items',
-    contentProps: 'Applies custom props to the wrapper element around items',
-    contentTag: 'Specified what tag should be used for the wrapper element around items'
+    contentClass: '項目のラッパー要素にカスタムクラスを適用します。',
+    contentProps: '項目のラッパー要素にカスタムPropを適用します。',
+    contentTag: '項目のラッパー要素に使用するタグを決定します。'
   }
 }
