@@ -1,52 +1,52 @@
 export default {
-  announcementBanner: 'Aww yisss, this is an exciting announcement! Or maybe its an advertisement!',
+  announcementBanner: 'Ahh simmm, isto é um anúncio excitante! Ou talvez é uma propaganda!',
   heading1: 'Vuetify',
   heading1cont: 'Material Component Framework',
-  getStarted: 'Get Started',
+  getStarted: 'Iniciar',
   features: [
     {
       img: '/static/doc-images/feature1.svg',
       title: 'Ready-Made Project Scaffolding',
-      text: 'Vuetify comes ready to go with 8 pre-made vue-cli templates. From simple html to full-blown SSR you are ready to go in minutes.'
+      text: 'Vuetify vem pronto com 8 modelos vue-cli pré-fabricados. Do simples html ao SSR completo, você estará pronto para desenvolver em minutos.'
     },
     {
       img: '/static/doc-images/feature2.svg',
       title: 'Semantic Material Components',
-      text: 'Be prepared for an armada of specialized components at your disposal. With over 80 in total, there is a solution for any application.'
+      text: 'Esteja preparado para um conjunto de componentes especializados à sua disposição. Com mais de 80 no total, existe uma solução para qualquer aplicação.'
     },
     {
       img: '/static/doc-images/feature3.svg',
-      title: 'Vibrant Community',
-      text: 'When you run into a roadblock, you need assistance right away. Vuetify offers chat support in our growing community on Discord.'
+      title: 'Comunidade Vibrante',
+      text: 'Quando você se depara com um obstáculo, você precisa de assistência imediata. Vuetify oferece um chat de suporte em nossa crescente comunidade no Discord.'
     }
   ],
-  checkFeaturesTitle: 'All the Tools You Need',
-  checkFeaturesTitleCtd: 'To Build Incredible User Interfaces',
+  checkFeaturesTitle: 'Todas as Ferramentas que você precisa',
+  checkFeaturesTitleCtd: 'Para criar Incríveis Interfaces de Usuário',
   checkFeatures: [
     'Community Chat Support',
-    'Dynamic Themes',
-    'SSR and PWA Support',
-    '8 vue-cli Templates'
+    'Temas Dinâmicos',
+    'Suporte para SSR e PWA',
+    '8 Modelos de vue-cli'
   ],
   checkFeaturesCtd: [
-    '80+ Material Design Components',
-    'A La Carte Importing',
-    'Transition Components',
-    'Blazing Fast'
+    '80+ Componentes com Design Material (Material Design Components)',
+    'Importação "A La Carte"',
+    'Componentes com Transição (Transition Components)',
+    'Extremamente rápido (Blazing Fast)'
   ],
   letterFromAuthor: [
-    'Hey there,',
-    'I know choosing a UI framework can be a daunting task -- there are so many options to choose from and every one of them claims that they are the best. So you have to decide for yourself: what are the metrics for success?',
-    'This was me almost a year ago. There were plenty of UI toolkits to choose from, but none of them had everything that I needed, and that is why I started working on Vuetify.',
-    'I am extremely humbled that you have considered using Vuetify as your next UI Framework. A lot of care has went into crafting the perfect setup for taking any idea from conception to production. I look forward to you joining the Vuetify community and am excited to see what incredible interfaces you create!'
+    'Olá,',
+    'Eu sei que escolher um framework para interface de usuário (UI) pode ser uma tarefa desanimadora -- existem tantas opções e todas elas dizem que elas são as melhores. Então você mesmo deve decidir: quais suas métricas para o sucesso?',
+    'Este era eu quase um ano atrás. Haviam diversas ferramentas de interfaces de usuário (UI) para escolher, mas nenhuma delas tinham tudo o que eu precisava, e este é o motivo de eu ter começado a trabalhar no Vuetify.'
+    'Eu estou extremamente honrado de você ter considerado utilizar o Vuetify como sua próximo framework. Muito cuidado foi tido em construir a configuração perfeita para ter qualquer ideia, desde sua concepção até sua produção. Estou ansioso para ter você se juntar a comunidade do Vuetify e animado para ver quais interfaces incríveis você irá criar!'
   ],
-  authorOfVuetify: 'Author of Vuetify',
+  authorOfVuetify: 'Autor do Vuetify',
   support: {
-    hasVuetifyHelped: 'Has Vuetify helped you create an amazing application?',
-    showYourSupport: 'Show your support for Vuetify by',
-    becomingAPatron: 'becoming a patron'
+    hasVuetifyHelped: 'O Vuetify ajudou você a criar uma aplicação incrível?',
+    showYourSupport: 'Mostre seu apoio ao Vuetify por',
+    becomingAPatron: 'se tornando um patrono'
   },
-  becomeSponsor: 'Become a Sponsor',
-  proudlySponsoredBy: 'Patreon Sponsors',
-  callout: 'Supercharge your development with the power of Vue and Material Design'
+  becomeSponsor: 'Se torne um Patrocinador',
+  proudlySponsoredBy: 'Patrocinadores do Patreon',
+  callout: 'Sobrecarregue seu desenvolvimento com o poder do Vue e do Design Material'
 }

@@ -1,18 +1,18 @@
 export default {
-  backToDocs: 'Back to Docs',
-  cart: 'Cart',
-  docs: 'Docs',
+  backToDocs: 'Voltar para a documentação',
+  cart: 'Carrinho de compras',
+  docs: 'Documentação',
   documentation: 'Documentation',
   ecosystem: 'Ecosystem',
   ecosystems: [
     {
       href: 'https://community.vuetifyjs.com/',
-      text: 'Community',
+      text: 'Comunidade',
       icon: 'mdi-account-multiple'
     },
     {
       href: 'https://medium.com/vuetify',
-      text: 'Medium Publication',
+      text: 'Publicações no Medium',
       icon: 'mdi-medium'
     },
     {
@@ -22,22 +22,22 @@ export default {
     },
     {
       href: 'https://issues.vuetifyjs.com',
-      text: 'Create an Issue',
+      text: 'Criar uma Questão (Issue)',
       icon: 'mdi-alert-octagon'
     },
     {
       href: 'https://template.vuetifyjs.com',
-      text: 'Codepen Template',
+      text: 'Modelo do Codepen (Codepen Template)',
       icon: 'mdi-codepen'
     },
     {
       href: 'https://github.com/vuetifyjs/vuetify/releases',
-      text: 'Latest Releases',
+      text: 'ÚLtimos Lançamentos',
       icon: 'mdi-format-list-checks'
     },
     {
       href: 'https://github.com/vuetifyjs/vuetify/issues',
-      text: 'Github Issue board',
+      text: 'Fórum de Questões no Github (Github Issue board)',
       icon: 'mdi-github-face'
     },
     {
@@ -47,7 +47,7 @@ export default {
     }
   ],
   quickLinks: 'Quick Links',
-  social: 'Social',
+  social: 'Mídia Social',
   socials: [
     {
       href: 'https://github.com/vuetifyjs/vuetify',
