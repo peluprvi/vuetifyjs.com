@@ -10,16 +10,15 @@ export default {
   examples: [{
     components: {
       header: 'コンポーネント',
-      desc: 'カードには `v-card-media` 、 `v-card-title` 、 `v-card-text` と `v-card-actions` のベースとなる4種類のコンポーネントが用意されています。'
+      desc: 'Card には `v-card-media` 、 `v-card-title` 、 `v-card-text` と `v-card-actions` のベースとなる4種類のコンポーネントが用意されています。'
     },
     mediaWithText: {
-      header: 'テキスト付き画像',
+      header: 'テキスト付きメディア',
       desc: 'レイアウトシステムを使用すると、背景のどこにでもカスタムテキストを追加することができます。'
     },
     horizontal: {
-      header: '水平カード',
-      desc: '`v-flex` を使用することで、カスタマイズされた水平カードを作成することができます。`v-card-media` 全体を覆うのではなくコンテナの内側にフィットさせるには、`contain` プロパティを使用します。'
-
+      header: '水平型Card',
+      desc: '`v-flex` を使用することで、カスタマイズされた水平型Cardを作成することができます。`v-card-media` の `contain` プロパティを使用すると、コンテナの内側に収まるように縮小することができます。'
     },
     grids: {
       header: 'グリッド',
@@ -32,13 +31,13 @@ export default {
   }],
   props: {
     contain: 'background-size を内容に合わせます。',
-    flat: 'カードの box-shadow を削除します。',
-    height: 'カードの高さを手動で設定します。',
+    flat: 'Card の box-shadow を削除します。',
+    height: 'Card の高さを手動で設定します。',
     hover: 'ホバーした際により高く浮き出します。',
     img: '背景に設定する画像を設定します。',
     primaryTitle: 'プライマリタイトル向けのパディングを適用します。',
     raised: 'デフォルトで高く浮き出だします。',
     src: '背景に設定する画像を設定します。',
-    tile: '角丸を削除し、カードをタイルのようにします。'
+    tile: '角丸を削除し、Card をタイルのようにします。'
   }
 }

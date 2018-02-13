@@ -5,7 +5,7 @@ export default {
   examples: [{
     default: {
       header: 'デフォルト',
-      desc: 'カルーセルはデフォルトでスライドの遷移が行われます。',
+      desc: 'Carousel はデフォルトでスライドの遷移が行われます。',
       uninverted: true
     },
     customTransition: {
@@ -15,7 +15,7 @@ export default {
     },
     customDelimiter: {
       header: 'カスタムデリミター',
-      desc: 'カルーセルのデリミターに使用されるアイコンを変更することができます。',
+      desc: 'Carousel のデリミターに使用されるアイコンを変更することができます。',
       uninverted: true
     },
     hideControls: {
@@ -27,10 +27,10 @@ export default {
   props: {
     appendIcon: 'Mixins.Input.props.appendIcon',
     prependIcon: 'Mixins.Input.props.prependIcon',
-    cycle: 'カルーセルが画像を循環させるかどうかを設定します。',
-    delimiterIcon: 'カルーセルのデリミターとして使用するアイコンを設定します。',
+    cycle: 'Carousel が画像を循環させるかどうかを設定します。',
+    delimiterIcon: 'Carousel のデリミターとして使用するアイコンを設定します。',
     hideControls: 'ナビゲーションコントロールを隠します。',
-    hideDelimiters: 'カルーセルのデリミターを隠します。',
+    hideDelimiters: 'Carousel のデリミターを隠します。',
     interval: '画像が切り替わるまでの時間を設定します。',
     reverseTransition: '戻す際のトランジションを設定します。',
     src: '画像を設定します。',

@@ -9,7 +9,7 @@ export default {
     },
     colorAndShift: {
       header: 'カラーとシフト',
-      desc: '色の付いた背景の場合、 `light` を指定することが推奨されます。`shift` を指定すると非アクティブなボタンのテキストが非表示になります。`v-btn` のテキストは `<span>` タグでラップしておくことが推奨されることを覚えておいてください。'
+      desc: '色の付いた背景の場合、 `light` を指定することが推奨されます。`shift` を指定すると非アクティブなボタンのテキストが非表示になります。`v-btn` のテキストは `<span>` タグでラップしておくことが推奨されます。'
     },
     toggle: {
       header: '切り替え',
@@ -17,7 +17,7 @@ export default {
     }
   }],
   props: {
-    active: '現在アクティブなボタンの値を保持します。特に値が設定されない場合は、indexの値が代わりに使用されます。この prop は **.sync** 修飾子をサポートします。',
+    active: '現在アクティブなボタンの値を保持します。特に値が設定されない場合は、index の値が代わりに使用されます。この prop は **.sync** 修飾子をサポートします。',
     absolute: 'Mixins.Positionable.props.absolute',
     fixed: 'Mixins.Positionable.props.fixed'
   }

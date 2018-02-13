@@ -5,7 +5,7 @@ export default {
   examples: [{
     character: {
       header: 'Character',
-      desc: 'あらゆる要素とともにバッジを使用することができます。'
+      desc: 'あらゆる要素とともに Badge を使用することができます。'
     },
     overlap: {
       header: '重ね合わせ',
@@ -13,7 +13,7 @@ export default {
     },
     inline: {
       header: 'インライン',
-      desc: 'バッジはテキスト内部に配置することができます。'
+      desc: 'Badge はテキスト内部に配置することができます。'
     },
     icon: {
       header: 'アイコン',
@@ -21,7 +21,7 @@ export default {
     },
     visibility: {
       header: '表示',
-      desc: 'バッジの表示は `v-model` を介して制御することができます。'
+      desc: 'Badge の表示は `v-model` を介して制御することができます。'
     }
   }],
   props: {
