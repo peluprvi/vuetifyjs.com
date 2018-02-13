@@ -1,3 +1,3 @@
 export default {
-  'input': 'The updated bound model'
+  'input': 'O modelo vinculado atualizado'
 }

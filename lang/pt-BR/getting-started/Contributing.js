@@ -1,5 +1,5 @@
 export default {
-  header: 'Be a part of something bigger!',
+  header: 'Faça parte de algo maior!',
   headerText: 'Vuetify is made possible by an amazing community that submits issues, creates pull requests, and provides invaluable feedback. It is our job to enable you to create amazing applications. A lot of the time, you come across something that can be made better. Maybe you find a bug, or you have an idea for additional functionality. That\'s great! It\'s as easy as cloning the Vuetify repository to get started working in a development environment.',
   issuesHeader: 'Reporting issues',
   issue1: 'The issue list of this repo is exclusively for bug reports and feature requests. Non-conforming issues will be closed immediately.',

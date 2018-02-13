@@ -7,7 +7,7 @@ export default {
       header: 'Contextual'
     },
     closable: {
-      header: 'Fechável',
+      header: 'Fechável (Closable)',
       desc: 'Usando `v-model` você pode controlar o estado do Alerta. Se você não deseja atribuir um v-model e apenas deseja exibir o alerta, você pode simplesmente atribuir a prop `value`.'
     },
     icon: {
@@ -19,14 +19,14 @@ export default {
       desc: 'Você pode aplicar uma transição customizável para quando mostrar ou ocultar o alerta.'
     },
     outline: {
-      header: 'Outline',
-      desc: 'Outline alerts inherit their borders from the current color applied.'
+      header: 'Traçado (Outline)',
+      desc: 'Alertas possuírão um traçado (sem cor de fundo) herdam suas bordas da cor atualmente aplicada.'
     }
   }],
   props: {
-    dismissible: 'Specifies that the Alert can be closed',
-    icon: 'Designates a specific icon',
-    outline: 'Alert will have an outline',
-    type: 'Specify a **success**, **info**, **warning** or **error** alert. Uses the contextual color and a pre-defined icon.'
+    dismissible: 'É especificado que o Alerta pode ser fechado',
+    icon: 'Designa um ícone específico',
+    outline: 'Alertas possuírão um traçado (sem cor de fundo)',
+    type: 'Especique um **success**, **info**, **warning** ou **error** alert. Utilize a cor contextual e ícones pré-definidos.'
   }
 }
