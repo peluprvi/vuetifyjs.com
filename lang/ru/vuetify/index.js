@@ -1,5 +1,9 @@
+import AppDrawer from './AppDrawer'
 import Home from './Home'
+import Store from './Store'
 
 export default {
-  Home
+  AppDrawer,
+  Home,
+  Store
 }

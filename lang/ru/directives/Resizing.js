@@ -1,32 +1,16 @@
 export default {
-  header: 'Изменить размер',
-  headerText: 'Директива `v-resize` может использоваться для вызова определенных функций при изменении размера окна.',
+  header: 'Resize directive',
+  headerText: 'The `v-resize` directive can be used for calling specific functions when the window resizes.',
   components: ['v-resize'],
   examples: [{
     default: {
-      header: 'По умолчанию',
-      desc: 'Измените размер окна и соблюдайте изменения значений.',
+      header: 'Default',
+      desc: 'Resize your window and observe the values change..',
       uninverted: true
     }
   }],
-  params: [{
-    'v-resize': [
-      {
-        name: 'callback',
-        type: 'Function',
-        default: 'null'
-      },
-      {
-        name: 'quiet',
-        type: 'Boolean',
-        default: 'false',
-        desc: 'Не вызывать метод обратного вызова, когда директива привязана'
-      },
-      {
-        name: 'debounce',
-        type: 'Number',
-        default: '200'
-      }
-    ]
-  }]
+  options: {
+    'modifiers.quiet': '`v-resize.quiet="callback"` Will **not** automatically invoke the provided callback on bind.',
+    'value': '`v-resize="callback"` The function to invoke on window resize'
+  }
 }

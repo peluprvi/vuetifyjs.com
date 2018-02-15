@@ -1,27 +1,27 @@
 export default {
   header: 'Time picker',
-  headerText: '`v-date-picker` и` v-time-picker` являются автономными компонентами, которые могут использоваться во многих существующих компонентах Vuetify. Они предлагают пользователю визуальное представление для выбора даты и времени.',
+  headerText: 'The `v-time-picker` is stand-alone component that can be utilized in many existing Vuetify components. It offers the user a visual representation for selecting the time.',
   components: ['v-time-picker'],
   examples: [{
     timeLight: {
-      header: 'Выбор времени',
-      desc: 'У Выбора времени по умолчанию включена светлая тема.'
+      header: 'Time pickers',
+      desc: 'Time pickers have the light theme enabled by default.'
     },
     timeColorable: {
-      header: 'Выбор времени - Цвета',
-      desc: 'Цветовая схема Выбора времени может быть установлена с помощью `color` и `header-color`. Если `header-color` не указан, заголовок будет использовать значение `color`'
+      header: 'Time pickers - Colors',
+      desc: 'Time picker colors can be set using the `color` and `header-color` props. If `header-color` prop is not provided  header will use the `color` prop value.'
     },
     timeDialogAndMenu: {
-      header: 'Выбор времени - В диалоговом окне и меню',
-      desc: 'Благодаря гибкости Picker вы действительно можете собрать на любой случай, именно так, как вы этого хотите.'
+      header: 'Time pickers - In dialog and menu',
+      desc: 'Due to the flexibility of pickers, you can really dial in the experience exactly how you want it.'
     },
     time24hFormat: {
-      header: 'Выбор времени - 24-часовой формат',
-      desc: 'Выбор времени можно переключить на 24-часовой формат.'
+      header: 'Time pickers - 24h format',
+      desc: 'A time picker can be switched to 24hr format.'
     },
     timeAllowedTimes: {
-      header: 'Выбор времени - Доступное для выбора время',
-      desc: 'Вы можете указать доступное для выбора время, используя массивы, объекты и функции.'
+      header: 'Time pickers - Allowed times',
+      desc: 'You can specify allowed times using arrays, objects, and functions.'
     },
     timeWidth: {
       header: 'Time pickers - Setting picker width',
@@ -30,9 +30,9 @@ export default {
   }],
   props: {
     'v-time-picker': {
-      format: 'Доступны следующие опции: `am/pm` и` 24ч`',
-      allowedHours: 'Ограничивает, часы которые могут быть выбраны',
-      allowedMinutes: 'Ограничивает, какие минуты можно выбрать',
+      format: 'Available options are `ampm` and `24hr`',
+      allowedHours: 'Restricts which hours can be selected',
+      allowedMinutes: 'Restricts which minutes can be selected',
       scrollable: 'Allows changing hour/minute with mouse scroll',
       min: 'Minimum allowed time',
       max: 'Maximum allowed time'

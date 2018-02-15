@@ -1,87 +1,95 @@
 export default {
-  header: 'Таблица данных',
-  headerText: 'Компонент `v-data-table` используется для отображения табличных данных. Особенности включают сортировку, поиск, разбиение на страницы, встроенное редактирование, всплывающие подсказки и выбор строк.',
+  header: 'Data table',
+  headerText: 'The `v-data-table` component is used for displaying tabular data. Features include sorting, searching, pagination, inline-editing, header tooltips, and row selection.',
   components: ['v-data-table', 'v-edit-dialog'],
   examples: [{
     standard: {
-      header: 'Cтандарт',
-      desc: 'Стандартная таблица данных содержит данные без дополнительной функциональности. Вы можете отказаться от улучшения таблиц, которые позволяют вам управлять разбиением на страницы, информации с помощью подсказки `hide-actions`.'
+      header: 'Standard',
+      desc: 'The standard data-table contains data with no additional functionality. You can opt out of displaying table actions that allow you to control the pagination of information with the `hide-actions` prop.'
     },
     noData: {
-      header: 'Слоты: нет данных/нет результатов',
-      desc: 'Слоты `no-data` и` no-results` могут отображать пользовательский HTML, если в таблице нет данных или нет отфильтрованных данных'
+      header: 'Slot: no-data',
+      desc: "The `no-data` slot can display custom HTML when there's no data."
     },
     headers: {
-      header: 'Слоты: элементы и заголовки',
-      desc: 'Слоты `items` и `headers` могут принимать либо коллекцию тегов <kbd>td/th</kbd>, либо если вы хотите управлять всей строкой, тегом <kbd>tr</kbd>.'
+      header: 'Slot: items and headers',
+      desc: 'The `items` and `headers` slots can accept either a collection of <kbd>td/th</kbd> tags, or if you want control of the entire row, a <kbd>tr</kbd> tag.'
     },
     headerCell: {
-      header: 'Слоты: headerCell',
-      desc: 'Если вы хотите применить некоторую общую разметку или эффект для каждой из ячеек заголовка, вы можете использовать слот `headerCell`. В этом примере используется для применения всплывающей подсказки к каждому заголовку.'
+      header: 'Slot: headerCell',
+      desc: 'If you only want to apply some common markup or effect on each of the header cells, you can use the slot `headerCell`. In this example is has been used to apply a tooltip to each header.'
+    },
+    progress: {
+      header: 'Slot: progress',
+      desc: 'There is also a `progress` slot for when you want to customize the display for the data table\'s `loading` state.  By default this is an `indeterminate` `v-progress-linear`'
     },
     footer: {
-      header: 'Слоты: нижний колонтитул',
-      desc: 'Существует также слот `footer` , когда вы хотите добавить дополнительную функциональность в таблицы, например, для фильтрации столбцов или поиска.'
+      header: 'Slot: footer',
+      desc: 'There is also a `footer` slot for when you want to add some extra functionality to tables, for example per column filtering or search.'
     },
     expand: {
-      header: 'Слоты: expand',
-      desc: 'Компонент `v-data-table` также поддерживает расширяемые строки, используя слот` expand`. Вы можете использовать свойство `expand` для предотвращения развернутых строк от закрытия при нажатии на другую строку.'
+      header: 'Slot: expand',
+      desc: 'The `v-data-table` component also supports expandable rows using the `expand` slot. You can use the prop `expand` to prevent expanded rows from closing when clicking on another row.'
+    },
+    pageText: {
+      header: 'Slot: page-text',
+      desc: 'You can customize the page text displaying the range and total items by using the `page-text` slot.'
     },
     select: {
-      header: 'Выбираемые строки',
-      desc: 'Выбираемые строки позволяют выполнять действие по определенным или всем строкам.'
+      header: 'Selectable rows',
+      desc: 'Selectable rows allow you to perform an action on specific and all rows.'
     },
     search: {
-      header: 'Поиск с помощью настраиваемого текста страницы',
-      desc: 'В таблице данных содержится подсказка `search`, которая позволяет фильтровать ваши данные.'
+      header: 'Search with custom no-results slot',
+      desc: 'The data table exposes a `search` prop that allows you to filter your data.'
     },
     customIcons: {
       header: 'Custom icons',
       desc: 'Previous/next pagination icons and sort icon can be customized with **prev-icon**, **next-icon** and **sort-icon** props.'
     },
     paginate: {
-      header: 'Внешняя разбивка на страницы',
-      desc: 'Пагинация может управляться извне с помощью свойства `pagination`. Помните, что вы должны применять модификатор `.sync`.'
+      header: 'External pagination',
+      desc: 'Pagination can be controlled externally by using the `pagination` prop. Remember that you must apply the `.sync` modifier.'
     },
     sort: {
-      header: 'Внешняя сортировка',
-      desc: 'Сортировка также может управляться извне с помощью свойства `pagination`. Помните, что вы должны применять модификатор `.sync`. Вы также можете использовать свойства, чтобы установить отсортированный по умолчанию столбец.'
+      header: 'External sorting',
+      desc: 'Sorting can also be controlled externally by using the `pagination` prop. Remember that you must apply the `.sync` modifier. You can also use the prop to set the default sorted column.'
     },
     server: {
-      header: 'Разбивка по страницам и сортировка на стороне сервера',
-      desc: 'Если вы загружаете данные из бэкэнд и хотите разбивать страницы и сортировать результаты перед их отображением, вы можете использовать свойство `total-items`. Определение этого свойства отключит встроенную сортировку и разбивку на страницы, и вместо этого вам придется использовать свойство `pagination` для прослушивания изменений. Используйте `loading` для отображения индикатора выполнения при извлечении данных.'
+      header: 'Paginate and sort server-side',
+      desc: 'If you\'re loading data from a backend and want to paginate and sort the results before displaying them, you can use the `total-items` prop. Defining this prop will disable the built-in sorting and pagination, and you will instead need to use the `pagination` prop to listen for changes. Use the `loading` prop to display a progress bar while fetching data.'
     },
     headerless: {
-      header: 'Таблицы без заголовка',
-      desc: 'Установка свойства `hide-headers` создает таблицу без заголовка.'
+      header: 'Headerless tables',
+      desc: 'Setting the `hide-headers` prop creates a headerless table.'
     },
     editdialog: {
-      header: 'Встроенное редактирование',
-      desc: 'Компонент `v-edit-dialog` используется для встроенного редактирования в таблицах данных. You can block closing the dialog when clicked outside by adding the **persistent** prop.'
+      header: 'Inline Editing',
+      desc: 'The `v-edit-dialog` component is used for inline-editing within data tables. You can block closing the dialog when clicked outside by adding the **persistent** prop.'
     },
     crud: {
-      header: 'Действия CRUD',
-      desc: 'таблица данных с действиями CRUD с использованием компонента `v-dialog` для редактирования каждой строки'
+      header: 'CRUD Actions',
+      desc: 'data-table with CRUD actions using a `v-dialog` component for editing each row'
     }
   }],
   props: {
     'v-edit-dialog': {
-      cancelText: 'Устанавливает текст по умолчанию для кнопки отмены при использовании **large** ',
+      cancelText: 'Sets the default text for the cancel button when using the **large** prop',
       lazy: 'Mixins.Bootable.props.lazy',
-      large: 'Прикрепляет кнопку отправки и отмены к диалоговому окну',
-      saveText: 'Устанавливает текст по умолчанию для кнопки сохранения при использовании **large**',
+      large: 'Attachs a submit and cancel button to the dialog',
+      saveText: 'Sets the default text for the save button when using the **large** prop',
       transition: 'Mixins.Transitionable.props.transition'
     },
     'v-data-table': {
-      headerText: 'При использовании объекта, текстовое значение для заголовка',
-      headers: 'Массив заголовков',
-      hideHeaders: 'Скрыть заголовки таблиц'
+      headerText: 'If using an object, the text value for the header',
+      headers: 'An array of objects that each describe a header column. See the example below for a definition of all properties.',
+      hideHeaders: 'Hide the table headers'
     }
   },
   scopedSlots: {
     'v-data-table': {
-      headerCell: 'Слот для настройки ячеек заголовка',
-      headers: 'Слот для настройки всего заголовка'
+      headerCell: 'Slot to customize header cells',
+      headers: 'Slot to customize entire header'
     }
   }
 }
