@@ -1,4 +1,5 @@
-const meta = require('@/router/meta.json')
+// Utilities
+import { getLongId, findProduct } from '@/util/helpers'
 
 export default {
   data: () => ({
@@ -32,7 +33,7 @@ export default {
       }
     }
   },
-  
+
   created () {
     if (process.env.VUE_ENV === 'client') return
 
@@ -57,8 +58,33 @@ export default {
 
       this.setMeta()
     },
+    getProductMeta () {
+      const longId = getLongId(this.$route.params.id)
+      const product = findProduct(this.$store, longId)
+
+      return {
+        title: product.title,
+        description: product.description,
+        keywords: `vuetify store, ${product.title}`
+      }
+    },
     setMeta () {
-      this.meta = meta[this.$route.path] || {}
+      const path = this.$route.path.split('/').slice(2).join('/')
+      const lang = this.$route.path.split('/')[1]
+      const meta = this.$i18n.getLocaleMessage(lang).meta || {}
+
+      if (this.$route.path.indexOf('product') > -1) {
+        return (this.meta = this.getProductMeta())
+      }
+
+      this.meta = meta[path] || this.getFallbackMeta(path) || {}
+    },
+    getFallbackMeta (path) {
+      const fallbackmeta = this.$i18n.getLocaleMessage('en').meta
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Falling back to english meta for ' + (path || '/'))
+      }
+      return fallbackmeta[path]
     }
   }
 }

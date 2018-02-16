@@ -12,7 +12,7 @@ let plugins = []
 module.exports = {
   devtool: isProd
     ? false
-    : '#cheap-module-source-map',
+    : 'eval-source-map',
   output: {
     path: resolve('../public'),
     publicPath: '/public/',
@@ -22,7 +22,7 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.json', '.vue'],
     alias: {
-      '@': resolve('../'),
+      '@': path.resolve(__dirname, '../'),
       'vue$': 'vue/dist/vue.common.js'
     }
   },
@@ -32,7 +32,7 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: vueConfig,
+        options: vueConfig
       },
       {
         test: /\.js$/,

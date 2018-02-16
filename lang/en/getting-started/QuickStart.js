@@ -2,6 +2,7 @@ export default {
   header: 'Quick start',
   headerText: 'Use one of the Vuetify Vue CLI packages _(based on the official examples)_ to get your project started in no time. Vuetify supports **SSR** (server-side rendering), **SPA** (single page application), **PWA** (progressive web application) and standard **HTML** pages.',
   alert1: 'In order for your application to work properly, you **must** wrap it in a `v-app` component. This component is used for dynamically managing your content area and is the mounting point for many components.',
+  newStoreAlert: 'The new Vuetify store is now **live**!. Help support the project and get some cool swag at the same time! <a href="https://vuetifyjs.com/store" class="btn btn--white primary--text"><span class="btn__content">Check it out</span></a>',
   browserHeader: 'Supported Browsers',
   browserText: 'Vuetify is a progressive framework that attempts to push web development to the next level. In order to best accomplish this task, some sacrifices had to be made in terms of support for older versions of Internet Explorer. This is not an exhaustive list of compatible browsers, but the main targeted ones.',
   cdnHeader: 'CDN Install',
@@ -18,6 +19,11 @@ export default {
   ie11Header: 'IE11 & Safari 9 support',
   ie11Text: 'In your project directory, install `babel-polyfill` and import it into your main entry:',
   ie11Text2: 'Due to Internet Explorer\'s limited support for `<template>` tags, you must send fully compiled dom elements to the browser. This can be done by either building your Vue code in advance or by creating helper components to replace the dom elements. For instance, if sent directly to IE, this will fail:',
+  browserSupport: {
+    supported: 'Supported',
+    notSupported: 'Not supported',
+    polyfill: 'Supported with polyfill'
+  },
   toc: [
     {
       text: 'Introduction',

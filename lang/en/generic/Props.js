@@ -9,7 +9,7 @@ export default {
   fixedTabs: '`v-tabs-item` min-width 160px (72px mobile), max-width 264px',
   height: 'Sets the component height',
   id: 'Sets the DOM id on the component',
-  mask: 'Apply a custom character mask to the input. See mask table above for more information',
+  mask: 'Apply a custom character mask to the input. See mask table below for more information',
   max: 'Sets maximum width',
   maxHeight: 'Sets the maximum height for the content',
   min: 'Sets minimum width',
@@ -25,5 +25,5 @@ export default {
   tile: 'Removes border radius',
   trueValue: 'Sets value for truthy state',
   value: 'Controls visibility',
-  width: 'The width the content'
+  width: 'The width of the content'
 }

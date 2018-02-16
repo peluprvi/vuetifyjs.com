@@ -50,7 +50,7 @@ export default {
     },
     customValidation: {
       header: 'Custom validation',
-      desc: 'While the built in `v-form` or 3rd party plugin such as <a href="https://github.com/monterail/vuelidate" target="_blank" rel="noopener">vuelidate</a> or <a href="https://github.com/logaretm/vee-validate" target="_blank" rel="noopener">vee-validation</a> can help streamline your validation process, you can choose to simply control it yourself.'
+      desc: 'While the built in `v-form` or 3rd party plugin such as [vuelidate](https://github.com/monterail/vuelidate) or [vee-validation](https://github.com/logaretm/vee-validate) can help streamline your validation process, you can choose to simply control it yourself.'
     },
     textarea: {
       header: 'Textarea',
@@ -60,6 +60,10 @@ export default {
     box: {
       header: 'Box style',
       desc: 'Text-fields can be used with an alternative box design. Append and prepend icon props are **not** supported in this mode.'
+    },
+    solo: {
+      header: 'Solo style',
+      desc: 'Text-fields can be used with an alternative solo design.'
     },
     customColors: {
       header: 'Custom colors',
@@ -87,5 +91,9 @@ export default {
     textarea: 'Textarea text-field with alternate style',
     toggleKeys: 'Array of key codes that will toggle the input (if it supports toggling)',
     type: 'Sets input type'
+  },
+  events: {
+    change: 'Mixins.Input.events.change',
+    'update:error': 'Mixins.Input.events.update:error'
   }
 }

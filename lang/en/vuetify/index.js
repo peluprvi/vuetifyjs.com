@@ -1,7 +1,11 @@
+import AppDrawer from './AppDrawer'
+import AppToolbar from './AppToolbar'
 import Home from './Home'
-import PremadeThemes from './PremadeThemes'
+import Store from './Store'
 
 export default {
+  AppDrawer,
+  AppToolbar,
   Home,
-  PremadeThemes
+  Store
 }

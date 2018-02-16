@@ -3,8 +3,8 @@
     dark
     color="cyan"
     show-arrows
-    prepend-icon="mdi-arrow-left-bold-box-outline"
-    append-icon="mdi-arrow-right-bold-box-outline"
+    prev-icon="mdi-arrow-left-bold-box-outline"
+    next-icon="mdi-arrow-right-bold-box-outline"
   >
     <v-tabs-slider color="yellow"></v-tabs-slider>
     <v-tab
@@ -14,15 +14,6 @@
     >
       Item {{ i }}
     </v-tab>
-    <v-menu>
-      <v-tabs-item slot="activator">
-        Menu
-        <v-icon>arrow_drop_down</v-icon>
-      </v-tabs-item>
-      <v-list v-for="n in 4" v-bind:key="n">
-        <v-list-tile @click="">Item {{ n }}</v-list-tile>
-      </v-list>
-    </v-menu>
     <v-tabs-items>
       <v-tab-item
         v-for="i in 15"

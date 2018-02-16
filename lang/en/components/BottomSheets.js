@@ -3,7 +3,7 @@ export default {
   headerText: 'The bottom sheet is a modified `v-dialog` that slides from the bottom of the screen, similar to a `v-bottom-nav`. Whereas a bottom navigation component is for buttons and specific application level actions, a bottom sheet can contain anything.',
   components: ['v-bottom-sheet'],
   examples: [{
-      standard: {
+    standard: {
       header: 'Standard display',
       desc: 'Here we display an example list of actions that could be present in an application.'
     },
@@ -14,6 +14,7 @@ export default {
   }],
   props: {
     disabled: 'Disables the ability to open the dialog',
+    hideOverlay: 'Hide the display of the overlay',
     inset: 'Reduces the dialog content maximum width to 70%',
     lazy: 'Mixins.Bootable.props.lazy',
     maxWidth: 'Specify the maximum width of the sheet\'s container'

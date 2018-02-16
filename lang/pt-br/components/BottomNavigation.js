@@ -20,5 +20,8 @@ export default {
     active: 'Mantém o valor do botão atualmente ativo. Se o botão não tiver um valor atribuído, seu índice será usado. Esta propriedade suporta o modificador **.sync**.',
     absolute: 'Mixins.Positionable.props.absolute',
     fixed: 'Mixins.Positionable.props.fixed'
+  },
+  events: {
+    'update:active': 'O evento usado para `active.sync`'
   }
 }

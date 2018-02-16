@@ -15,7 +15,7 @@ export default {
   toc: [
     {
       text: 'Introduction',
-      href: 'introduction' 
+      href: 'introduction'
     },
     {
       text: 'Usage',
@@ -34,5 +34,10 @@ export default {
       href: 'examples'
     }
   ],
-  usage: 'Usage'
+  usage: 'Usage',
+  parameters: 'Parameters',
+  return: 'Returns',
+  example: 'Example',
+  signature: 'Signature',
+  value: 'Value'
 }

@@ -1,7 +1,11 @@
 import en from './en'
 import ru from './ru'
+import ko from './ko'
+import zhHans from './zhHans'
 
-export default {
+export {
   en,
-  ru
+  ru,
+  ko,
+  zhHans
 }

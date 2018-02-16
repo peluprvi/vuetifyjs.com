@@ -1,6 +1,6 @@
 export default {
   header: 'Pagination',
-  headerText: 'The `v-pagination` component is used to separate long sets of data so that it is easier for a user to consume information. Depending on the length provided, the pagination component will automatically scale. To maintain the current page, simply supply a v-model attribute.',
+  headerText: 'The `v-pagination` component is used to separate long sets of data so that it is easier for a user to consume information. Depending on the length provided, the pagination component will automatically scale. To maintain the current page, simply supply a `v-model` attribute.',
   components: ['v-pagination'],
   examples: [{
     short: {
@@ -19,9 +19,22 @@ export default {
       header: 'Round',
       desc: 'The alternate style for pagination is circle pages.'
     },
+    icons: {
+      header: 'Icons',
+      desc: 'Previous and next page icons can be customized with `prev-icon` and `next-icon` props.'
+    },
     disabled: {
       header: 'Disabled',
       desc: 'Pagination items can be manually deactivated.'
     }
-  }]
+  }],
+  props: {
+    circle: 'Shape pagination elements as circles',
+    disabled: 'Disables component',
+    length: 'The length of the paginator',
+    nextIcon: 'Specify the icon to use for the next icon',
+    prevIcon: 'Specify the icon to use for the prev icon',
+    totalVisible: 'Specify the max total visible pagination numbers',
+    value: 'Current selected page'
+  }
 }

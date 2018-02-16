@@ -21,7 +21,7 @@ export default {
     },
     checkboxesColors: {
       header: 'Checkboxes - Colors',
-      desc: 'Checkboxes can be colored by using any of the builtin colors and contextual names using the color prop.'
+      desc: 'Checkboxes can be colored by using any of the builtin colors and contextual names using the `color` prop.'
     },
     checkboxesInlineTexfield: {
       header: 'Checkboxes - Inline with a textfield',
@@ -37,7 +37,7 @@ export default {
     },
     radiosColors: {
       header: 'Radios - Colors',
-      desc: 'Radios can be colored by using any of the builtin colors and contextual names using the color prop.'
+      desc: 'Radios can be colored by using any of the builtin colors and contextual names using the `color` prop.'
     },
     switchesBoolean: {
       header: 'Switches - Boolean',
@@ -53,7 +53,7 @@ export default {
     },
     switchesColors: {
       header: 'Switches - Colors',
-      desc: 'Switches can be colored by using any of the builtin colors and contextual names using the color prop.'
+      desc: 'Switches can be colored by using any of the builtin colors and contextual names using the `color` prop.'
     }
   }],
   props: {
@@ -66,5 +66,10 @@ export default {
     indeterminate: 'Sets an indeterminate state for the checkbox',
     inputValue: 'The **v-model** bound value',
     value: 'Sets the value of the selection control component'
+  },
+  events: {
+    blur: 'Mixins.Input.events.blur',
+    change: 'Mixins.Input.events.change',
+    'update:error': 'Mixins.Input.events.update:error'
   }
 }

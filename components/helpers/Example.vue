@@ -80,10 +80,48 @@
 </template>
 
 <script>
-  import Vue from 'vue'
   const release = process.env.RELEASE
 
   export default {
+    props: {
+      active: {
+        type: Boolean,
+        default: false
+      },
+      hasInverted: {
+        type: Boolean,
+        default: false
+      },
+      file: {
+        type: String,
+        default: ''
+      },
+      header: {
+        type: String,
+        default: ''
+      },
+      desc: {
+        type: String,
+        default: ''
+      },
+      inverted: {
+        type: Boolean,
+        default: false
+      },
+      newIn: {
+        type: String,
+        default: ''
+      },
+      id: {
+        type: String,
+        default: ''
+      },
+      readonly: {
+        type: Boolean,
+        default: false
+      }
+    },
+
     data () {
       return {
         tabs: ['template', 'script', 'style'],
@@ -97,18 +135,6 @@
         },
         url: release ? `releases/${release}/` : ''
       }
-    },
-
-    props: {
-      active: Boolean,
-      hasInverted: Boolean,
-      file: String,
-      header: String,
-      desc: String,
-      inverted: Boolean,
-      newIn: String,
-      id: String,
-      readonly: Boolean
     },
 
     computed: {
@@ -199,6 +225,7 @@
     .application--example
       position: relative
       transition: .3s $transition.swing
+      overflow: hidden
       z-index: 0
 
       > div,
@@ -223,6 +250,10 @@
 
     .justify
       text-align: justify
+
+    aside.navigation-drawer,
+    .overlay
+      z-index: 1
 
     nav.toolbar
       z-index: 0

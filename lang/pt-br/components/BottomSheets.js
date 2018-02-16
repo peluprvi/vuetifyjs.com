@@ -14,6 +14,7 @@ export default {
   }],
   props: {
     disabled: 'Desativa a capacidade de abrir o diálogo',
+    hideOverlay: 'Oculta a exibição da sobreposição',
     inset: 'Reduz a largura máxima do conteúdo do diálogo para 70%',
     lazy: 'Mixins.Bootable.props.lazy',
     maxWidth: 'Especifica a largura máxima do conteúdo'

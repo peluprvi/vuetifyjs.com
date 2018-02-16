@@ -1,18 +1,12 @@
 <script>
   export default {
-    name: 'app-table-of-contents',
-
-    data: () => ({
-      currentOffset: 0,
-      position: 'relative',
-      right: 0,
-      top: 0,
-      list: [],
-      isBooted: false
-    }),
+    name: 'AppTableOfContents',
 
     props: {
-      discovery: Boolean,
+      discovery: {
+        type: Boolean,
+        default: false
+      },
       items: {
         type: Array,
         default: () => ([])
@@ -22,6 +16,16 @@
         required: true
       }
     },
+
+    data: () => ({
+      currentOffset: 0,
+      position: 'relative',
+      right: 0,
+      top: 0,
+      list: [],
+      isBooted: false,
+      timeout: null
+    }),
 
     computed: {
       activeIndex () {
@@ -57,9 +61,10 @@
       genItem (item, index) {
         item = item || {}
         const isActive = this.activeIndex === index
+        const vm = this
 
         return this.$createElement('li', [
-          this.$createElement('router-link', {
+          this.$createElement('a', {
             staticClass: 'subheading mb-3 d-block',
             'class': {
               'primary--text': isActive,
@@ -68,11 +73,19 @@
             style: {
               borderLeft: `2px solid ${isActive ? this.$vuetify.theme.primary : 'transparent'}`
             },
-            props: {
-              to: { hash: `#${item.href}` }
-            },
-            domProps: {
-              innerText: item.text
+            props: { href: '#' },
+            domProps: { innerText: item.text },
+            on: {
+              click (e) {
+                e.stopPropagation()
+                e.preventDefault()
+
+                const goTo = index === 0
+                  ? 0
+                  : `#${item.href}`
+
+                vm.$vuetify.goTo(goTo)
+              }
             }
           })
         ])
@@ -83,14 +96,11 @@
         for (let item of this.items) {
           item = Object.assign({}, item)
 
-          const target = item.target
-            ? item.target
-            : document.getElementById(item.href)
+          const target = item.target ||
+            document.getElementById(item.href)
 
           if (target) {
-            const offsetTop = target.offsetTop
-
-            item.offsetTop = offsetTop
+            item.offsetTop = target.offsetTop
             item.target = target
 
             list.push(item)
@@ -100,14 +110,20 @@
         this.list = list
       },
       onScroll () {
+        clearTimeout(this.timeout)
+
         this.currentOffset = window.pageYOffset ||
-          document.documentElement.offsetTop
+        document.documentElement.offsetTop
 
         const shouldFloat = this.currentOffset >= this.threshold
 
-        this.position =  shouldFloat ? 'fixed' : 'relative'
+        this.position = shouldFloat ? 'fixed' : 'relative'
         this.top = shouldFloat ? 85 : 0
-        this.isBooted = true
+
+        this.timeout = setTimeout(() => {
+          requestAnimationFrame(this.genList)
+          this.isBooted = true
+        }, 100)
       }
     },
 
@@ -147,7 +163,7 @@
     list-style-type: none
     margin: 0 24px
     width: 200px
-    
+
     li > a
       padding-left: 18px
       text-decoration: none

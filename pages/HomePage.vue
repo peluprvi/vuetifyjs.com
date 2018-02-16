@@ -12,6 +12,7 @@
               src="/static/vuetify-logo-300.png"
               alt="Logo"
               width="196px"
+              height="196px"
             )
             h1.display-3 {{ $t("Vuetify.Home.heading1") }}
             div.headline.mb-3 {{ $t("Vuetify.Home.heading1cont") }}
@@ -29,7 +30,7 @@
             v-btn(
               color="white"
               class="primary--text"
-              to="/getting-started/quick-start"
+              :to="{ name: 'getting-started/QuickStart' }"
               large
             ).mb-2
               strong {{ $t("Vuetify.Home.getStarted") }}
@@ -51,8 +52,8 @@
     section#checkFeatures
       v-container
         h2.text-xs-center
-          span All the Tools You  Need
-          | To Build Incredible User Interfaces
+          span {{ $t("Vuetify.Home.checkFeaturesTitle") }}
+          | {{ $t("Vuetify.Home.checkFeaturesTitleCtd") }}
         v-layout(row wrap justify-center)
           v-flex(
             xs12
@@ -111,7 +112,7 @@
             p {{ $t("Vuetify.Home.support.hasVuetifyHelped") }}
             p {{ $t("Vuetify.Home.support.showYourSupport") }} <a href="https://www.patreon.com/vuetify" target="_blank">{{ $t("Vuetify.Home.support.becomingAPatron") }}</a>.
 
-    section#sponsors-and-backers.my-5
+    section.sponsors-and-backers.my-5
       v-container
         v-card(
           :class="{ 'pa-5': $vuetify.breakpoint.mdAndUp, 'py-5 px-2': $vuetify.breakpoint.smAndDown }"
@@ -131,6 +132,7 @@
                 :href="`${supporter.href}?ref=vuetifyjs.com`"
                 :title="supporter.title"
                 :key="i"
+                @click="$ga.event('home sponsor click', 'click', supporter.title)"
                 v-else
               )
                 img(
@@ -139,7 +141,7 @@
                   :style="{ maxHeight: `${supporter.size}px` }"
                 ).supporter
             v-flex(xs12).text-xs-center.mt-5
-              v-btn(to="/getting-started/sponsors-and-backers" large).white.primary--text {{ $t("Vuetify.Home.becomeSponsor") }}
+              v-btn(:to="{ name: 'getting-started/SponsorsAndBackers' }" large).white.primary--text {{ $t("Vuetify.Home.becomeSponsor") }}
                 v-icon(right color="primary") chevron_right
 
     section#callout
@@ -152,20 +154,26 @@
 </template>
 
 <script>
+  import supporters from '@/assets/supporters'
+
   // Components
   import HomeFooter from '@/components/misc/HomeFooter'
 
-  // Utilities
-  import { mapState } from 'vuex'
+  // Mixins
+  import Message from '@/mixins/message'
 
   export default {
-    name: 'home-page',
+    name: 'HomePage',
 
     components: {
       HomeFooter
     },
 
+    mixins: [Message],
+
     data: () => ({
+      diamond: supporters.diamond,
+      palladium: supporters.palladium,
       socials: [
         {
           icon: 'fa-github',
@@ -183,10 +191,6 @@
     }),
 
     computed: {
-      ...mapState({
-        diamond: state => state.supporters.diamond,
-        palladium: state => state.supporters.palladium
-      }),
       checkFeatures () {
         return this.$t('Vuetify.Home.checkFeatures')
       },
@@ -200,14 +204,19 @@
         return this.$t('Vuetify.Home.letterFromAuthor')
       },
       supporters () {
-        const supporters = [].concat(this.diamond)
-          .concat(this.palladium)
+        const supporters = [...this.diamond, ...this.palladium]
 
         const end = { break: true }
 
         supporters.splice(2, 0, end)
 
         return supporters
+      }
+    },
+
+    methods: {
+      snackHandler () {
+        this.$router.push({ name: 'store/Index' })
       }
     }
   }
@@ -391,7 +400,7 @@
       p
         font-size 36px
 
-  #sponsors-and-backers
+  .sponsors-and-backers
     .card
       z-index 1
 

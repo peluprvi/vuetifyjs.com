@@ -21,12 +21,12 @@
             color="grey lighten-3"
             slider-color="primary"
           )
-            v-tab(
-              v-for="(tab, i) in tabs"
-              :href="`#${tab}`"
-              :key="i"
-              v-show="hasTab(tab)"
-            ) {{ tab.replace(/([A-Z])/g, ' $1') }}
+            template(v-for="(tab, i) in tabs")
+              v-tab(
+                :key="i"
+                :href="`#${tab}`"
+                v-if="hasTab(tab)"
+              ) {{ tab.replace(/([A-Z])/g, ' $1') }}
           v-card-title
             v-select(
               label="Component"
@@ -74,79 +74,81 @@
       slot(name="top")
       section(v-if="examples.length > 1")#examples
         section-head(value="Generic.Pages.examples")
-        example(
-          :header="`${example.header}`"
-          :new-in="example.new"
-          :file="`${folder}/${example.file}`"
-          :inverted="example.inverted"
-          :has-inverted="!example.uninverted"
-          :id="`example-${camelCaseToDash(example.file)}`"
-          :key="example.file"
-          :desc="example.desc"
-          v-for="(example, i) in examples.slice(1)"
-        )
+        template(v-for="(example, i) in examples.slice(1)")
+          support-vuetify(v-if="i === 5" :key="i")
+          example(
+            :header="`${example.header}`"
+            :new-in="example.new"
+            :file="`${folder}/${example.file}`"
+            :inverted="example.inverted"
+            :has-inverted="!example.uninverted"
+            :id="`example-${camelCaseToDash(example.file)}`"
+            :key="example.file"
+            :desc="example.desc"
+          )
       section-head {{ $t('Generic.Pages.examples') }}
 
       slot
 </template>
 
 <script>
+  import api from '@/api/api'
   // Utilities
-  import { mapState } from 'vuex'
-  import { camel, capitalize, kebab } from '@/util/helpers'
+  import { camel } from '@/util/helpers'
 
   export default {
     inheritAttrs: false,
 
+    props: {
+      data: {
+        type: Object,
+        default: () => ({})
+      }
+    },
+
     data () {
       return {
+        api,
         current: null,
         id: '',
         headers: {
-          params: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.type'), value: 'type', align: 'left' },
-            { text: this.$t('Generic.Pages.default'), value: 'default', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
-          ],
           props: [
-            { text: this.$t('Generic.Pages.options'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.type'), value: 'type', align: 'left' },
-            { text: this.$t('Generic.Pages.default'), value: 'default', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left', size: 3 },
+            { value: 'default', align: 'left', size: 6 },
+            { value: 'type', align: 'right', size: 3 }
           ],
           slots: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left' }
           ],
           scopedSlots: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.props'), value: 'props', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left', size: 3 },
+            { value: 'props', align: 'right', size: 9 }
           ],
           events: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left' },
+            { value: 'value', align: 'right' }
+          ],
+          functions: [
+            { value: 'name', align: 'left' },
+            { value: 'signature', align: 'right' }
           ],
           functional: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left' },
+            { value: 'description', align: 'left' }
+          ],
+          options: [
+            { value: 'name', align: 'left', size: 3 },
+            { value: 'default', align: 'left', size: 3 },
+            { value: 'type', align: 'right' }
           ]
         },
         search: null,
         tab: null,
-        tabs: ['props', 'slots', 'scopedSlots', 'params', 'events', 'functional']
+        tabs: ['props', 'slots', 'scopedSlots', 'params', 'events', 'functions', 'functional', 'options']
       }
     },
 
-    props: {
-      data: Object
-    },
-
     computed: {
-      ...mapState({
-        api: state => state.api
-      }),
       components () {
         let components = (this.data.components || []).slice()
 
@@ -158,10 +160,14 @@
       },
       currentApi () {
         return this.api[this.current] || {
-          params: [],
           props: [],
           slots: [],
-          scopedSlots: []
+          scopedSlots: [],
+          params: [],
+          events: [],
+          funtions: [],
+          functional: [],
+          options: []
         }
       },
       examples () {
@@ -183,15 +189,24 @@
         return `${section}.${component}`
       },
       supplemental () {
-        return this.$te(`${this.namespace}.supplemental`)
-          ? this.$t(`${this.namespace}.supplemental`)
-          : []
+        const namespace = `${this.namespace}.supplemental`
+        return this.$te(namespace)
+          ? this.$t(namespace)
+          : this.$te(namespace, 'en')
+            ? this.$t(namespace, 'en')
+            : []
       },
       toc () {
-        return this.$t(`Generic.Pages.toc`)
+        return this.$t(this.data.toc || `Generic.Pages.toc`)
       },
       usage () {
         return this.examples.slice(0, 1).shift()
+      }
+    },
+
+    watch: {
+      currentApi () {
+        if (!this.currentApi.hasOwnProperty(this.tab)) this.tab = 'props'
       }
     },
 
@@ -206,7 +221,7 @@
         return (this.currentApi[tab] || []).length > 0
       },
       camelCaseToDash (str) {
-        return str.replace( /([a-z])([A-Z])/g, '$1-$2' ).toLowerCase()
+        return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
       }
     }
   }

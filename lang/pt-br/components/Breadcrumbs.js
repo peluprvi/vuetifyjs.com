@@ -1,7 +1,7 @@
 export default {
   header: 'Breadcrumbs',
   headerText: 'O componente `v-breadcrumbs` é um auxiliar de navegação por páginas. Ele aceita um ícone **Material Icons** ou caracteres como divisor. Uma matriz de objetos que contém os campos _href_, _text_ e o opcional _disabled_ pode ser atribuída à propriedade **items** do componente.  Além disso, um slot existe para mais controle dos breadcrumbs, utilizando `v-breadcrumbs-item` ou outra marcação personalizada.',
-  components: ['v-breadcrumbs', 'v-breadcrumbs-items'],
+  components: ['v-breadcrumbs', 'v-breadcrumbs-item'],
   examples: [{
     textDividers: {
       header: 'Divisores de texto',

@@ -9,8 +9,8 @@ export default {
     'v-list-tile-content',
     'v-list-tile-action',
     'v-list-tile-avatar',
-    'v-list-tile-group',
-    'v-list-tile-action-text',
+    'v-list-group',
+    'v-list-tile-action-text'
   ],
   examples: [{
     avatarTwoLines: {
@@ -27,7 +27,7 @@ export default {
     },
     avatarThreeLines: {
       header: 'Avatar with 3 lines',
-      desc: 'For three line lists, the subtitle will clamp vertically at 2 lines and then ellipsis. If you need more than 3 lines, it is advised to use a <router-link to="/components/cards">card</router-link>.'
+      desc: 'For three line lists, the subtitle will clamp vertically at 2 lines and then ellipsis. If you need more than 3 lines, it is advised to use a [card](/components/cards).'
     },
     avatarSubheaderTitleAndAction: {
       header: 'Avatar with title and action',
@@ -52,12 +52,6 @@ export default {
     expansionLists: {
       header: 'Expansion Lists',
       desc: 'A list can contain a group of items which will display on click. Expansion lists are also used within the `navigation drawer` component.'
-    },
-    dark: {
-      header: 'Dark scheme',
-      desc: 'A list can assume the alternate scheme color of dark.',
-      inverted: true,
-      uninverted: true
     }
   }],
   props: {
