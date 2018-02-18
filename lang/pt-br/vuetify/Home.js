@@ -37,7 +37,7 @@ export default {
   letterFromAuthor: [
     'Olá,',
     'Eu sei que escolher um framework para interface de usuário (UI) pode ser uma tarefa desanimadora -- existem tantas opções e todas elas dizem que elas são as melhores. Então você mesmo deve decidir: quais suas métricas para o sucesso?',
-    'Este era eu quase um ano atrás. Haviam diversas ferramentas de interfaces de usuário (UI) para escolher, mas nenhuma delas tinham tudo o que eu precisava, e este é o motivo de eu ter começado a trabalhar no Vuetify.'
+    'Este era eu quase um ano atrás. Haviam diversas ferramentas de interfaces de usuário (UI) para escolher, mas nenhuma delas tinham tudo o que eu precisava, e este é o motivo de eu ter começado a trabalhar no Vuetify.',
     'Eu estou extremamente honrado de você ter considerado utilizar o Vuetify como sua próximo framework. Muito cuidado foi tido em construir a configuração perfeita para ter qualquer ideia, desde sua concepção até sua produção. Estou ansioso para ter você se juntar a comunidade do Vuetify e animado para ver quais interfaces incríveis você irá criar!'
   ],
   authorOfVuetify: 'Autor do Vuetify',
