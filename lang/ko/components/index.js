@@ -29,7 +29,7 @@ import Parallax from './Parallax'
 import Progress from './Progress'
 import SelectionControls from './SelectionControls'
 import Selects from './Selects'
-// TODO: import Sliders from './Sliders'
+import Sliders from './Sliders'
 // TODO: import Snackbars from './Snackbars'
 // TODO: import Steppers from './Steppers'
 // TODO: import Subheaders from './Subheaders'
@@ -71,7 +71,7 @@ export default {
   Progress,
   SelectionControls,
   Selects,
-  // TODO:   Sliders,
+  Sliders,
   // TODO:   Snackbars,
   // TODO:   Steppers,
   // TODO:   Subheaders,
