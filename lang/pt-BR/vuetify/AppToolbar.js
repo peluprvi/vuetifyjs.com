@@ -1,9 +1,9 @@
 export default {
   backToDocs: 'Voltar para a documentação',
   cart: 'Carrinho de compras',
-  docs: 'Documentação',
-  documentation: 'Documentation',
-  ecosystem: 'Ecosystem',
+  docs: 'Documentações',
+  documentation: 'Documentação',
+  ecosystem: 'Ecossistema',
   ecosystems: [
     {
       href: 'https://community.vuetifyjs.com/',
@@ -32,7 +32,7 @@ export default {
     },
     {
       href: 'https://github.com/vuetifyjs/vuetify/releases',
-      text: 'ÚLtimos Lançamentos',
+      text: 'Últimos Lançamentos',
       icon: 'mdi-format-list-checks'
     },
     {
@@ -46,7 +46,7 @@ export default {
       icon: 'mdi-stack-overflow'
     }
   ],
-  quickLinks: 'Quick Links',
+  quickLinks: 'Links',
   social: 'Mídia Social',
   socials: [
     {
@@ -65,5 +65,5 @@ export default {
       icon: 'mdi-facebook-box'
     }
   ],
-  store: 'Store'
+  store: 'Loja'
 }

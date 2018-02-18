@@ -7,7 +7,7 @@ export default {
     {
       img: '/static/doc-images/feature1.svg',
       title: 'Ready-Made Project Scaffolding',
-      text: 'Vuetify vem pronto com 8 modelos vue-cli pré-fabricados. Do simples html ao SSR completo, você estará pronto para desenvolver em minutos.'
+      text: 'Vuetify vem pronto com 8 modelos pré-fabricados no vue-cli. Do simples html ao completo SSR, você estará pronto para desenvolver em minutos.'
     },
     {
       img: '/static/doc-images/feature2.svg',
@@ -23,16 +23,16 @@ export default {
   checkFeaturesTitle: 'Todas as Ferramentas que você precisa',
   checkFeaturesTitleCtd: 'Para criar Incríveis Interfaces de Usuário',
   checkFeatures: [
-    'Community Chat Support',
+    'Apoio ao chat da comunidade',
     'Temas Dinâmicos',
     'Suporte para SSR e PWA',
-    '8 Modelos de vue-cli'
+    '8 Modelos no vue-cli'
   ],
   checkFeaturesCtd: [
     '80+ Componentes com Design Material (Material Design Components)',
     'Importação "A La Carte"',
     'Componentes com Transição (Transition Components)',
-    'Extremamente rápido (Blazing Fast)'
+    'Extremamente rápido'
   ],
   letterFromAuthor: [
     'Olá,',
@@ -47,6 +47,6 @@ export default {
     becomingAPatron: 'se tornando um patrono'
   },
   becomeSponsor: 'Se torne um Patrocinador',
-  proudlySponsoredBy: 'Patrocinadores do Patreon',
-  callout: 'Sobrecarregue seu desenvolvimento com o poder do Vue e do Design Material'
+  proudlySponsoredBy: 'Patrocinadores do nosso Patreon',
+  callout: 'Sobrecarregue seu desenvolvimento com o poder do Vue e do Material Design'
 }
