@@ -1,5 +1,5 @@
 export default {
-  header: 'Theme',
+  header: 'Tema',
   headerText: 'Easily change the colors of your application programmatically. Rebuild the default stylesheet and customize various aspects of the framework for your particular needs. If you are looking for the **Theme Generator**, please navigate [here](/theme-generator).',
   lightAndDarkHeader: 'Light and Dark',
   lightAndDarkText1: 'Vuetify supports both **light** and **dark** variants of the Material Design spec. This designation starts at the root application component, `v-app` and is supported by majority of components. By default, your application will use the **light** theme, but this can be easily overwritten by adding the **dark** prop.',
@@ -29,23 +29,23 @@ export default {
   stylusText7: 'Now that stylus is configured, you can set default values for the stylus variables that you wish to change. These must be declared _before_ the import and will automatically override the Vuetify defaults.',
   toc: [
     {
-      text: 'Theme',
+      text: 'Tema',
       href: 'introduction'
     },
     {
-      text: 'Light and Dark',
+      text: 'Claro e escuro (Light and Dark)',
       href: 'light-and-dark'
     },
     {
-      text: 'Customizing',
+      text: 'Customizando',
       href: 'customizing'
     },
     {
-      text: 'Options',
+      text: 'Opções',
       href: 'options'
     },
     {
-      text: 'Modifying Stylus variables',
+      text: 'Modificando variáveis do Stylus',
       href: 'stylus-guide'
     }
   ]

@@ -1,5 +1,5 @@
 export default {
-  header: 'Colors',
+  header: 'Cores',
   headerText: 'Out of the box you get access to all colors in the [Material Design spec](https://material.io/guidelines/style/color.html) through **stylus** and **javascript**. These values can be used within your style sheets, your component files and on actual components via the **color class** system.',
   classesHeader: 'Classes',
   classesText: 'Each color from the spec gets converted to a **background** and **text** variant for styling within your application through a class, e.g. `<div class="red">` or `<span class="red--text">`. These class colors are defined [here](https://github.com/vuetifyjs/vuetify/blob/master/src/stylus/settings/_colors.styl).',
@@ -11,11 +11,11 @@ export default {
   stylusPackText2: 'Your created `main.styl` file will then need to be included in your project.',
   alert: 'You **must** configure your webpack setup to use `stylus`. If you are using a [pre-made template](/getting-started/quick-start#new-applications) this will already be done for you.',
   stylusPackText3: 'This can also be done within your main **App.vue** file. Keep in mind, depending on your project setup, this _will_ increase build times as every time your entry file is updated, the stylus files will be re-generated.',
-  colorHeader: 'Material colors',
-  colorText: 'Below is a list of the Material design color palette grouped by primary color',
+  colorHeader: 'Cores do Material Design',
+  colorText: 'Abaixo há uma lista da paleta de cores do Material Design, agrupada pela cor primária',
   toc: [
     {
-      text: 'Introduction',
+      text: 'Introdução',
       href: 'introduction'
     },
     {
@@ -23,15 +23,15 @@ export default {
       href: 'classes'
     },
     {
-      text: 'Javascript color pack',
+      text: 'Javascript pacote de corolor pack',
       href: 'javascript-color-pack'
     },
     {
-      text: 'Stylus color pack',
+      text: 'Stylus pacote de cor',
       href: 'stylus-color-pack'
     },
     {
-      text: 'Material colors',
+      text: 'Cores do Material Design',
       href: 'material-colors'
     }
   ]
