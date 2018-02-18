@@ -1,3 +1,3 @@
 export default {
-  header: 'Gerador de Tema'
+  header: 'Gerador de Temas'
 }
