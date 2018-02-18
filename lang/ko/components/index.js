@@ -33,7 +33,7 @@ import Sliders from './Sliders'
 import Snackbars from './Snackbars'
 import Steppers from './Steppers'
 import Subheaders from './Subheaders'
-// TODO: import Tabs from './Tabs'
+import Tabs from './Tabs'
 // TODO: import TextFields from './TextFields'
 // TODO: import TimePickers from './TimePickers'
 // TODO: import Toolbars from './Toolbars'
@@ -75,7 +75,7 @@ export default {
   Snackbars,
   Steppers,
   Subheaders,
-  // TODO:   Tabs,
+  Tabs,
   // TODO:   TextFields,
   // TODO:   TimePickers,
   // TODO:   Toolbars,
