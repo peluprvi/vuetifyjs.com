@@ -31,7 +31,7 @@ import SelectionControls from './SelectionControls'
 import Selects from './Selects'
 import Sliders from './Sliders'
 import Snackbars from './Snackbars'
-// TODO: import Steppers from './Steppers'
+import Steppers from './Steppers'
 // TODO: import Subheaders from './Subheaders'
 // TODO: import Tabs from './Tabs'
 // TODO: import TextFields from './TextFields'
@@ -73,7 +73,7 @@ export default {
   Selects,
   Sliders,
   Snackbars,
-  // TODO:   Steppers,
+  Steppers,
   // TODO:   Subheaders,
   // TODO:   Tabs,
   // TODO:   TextFields,
