@@ -26,7 +26,7 @@ import Menus from './Menus'
 import NavigationDrawers from './NavigationDrawers'
 import Paginations from './Paginations'
 import Parallax from './Parallax'
-// TODO: import Progress from './Progress'
+import Progress from './Progress'
 import SelectionControls from './SelectionControls'
 import Selects from './Selects'
 // TODO: import Sliders from './Sliders'
@@ -68,7 +68,7 @@ export default {
   NavigationDrawers,
   Paginations,
   Parallax,
-  // TODO:   Progress,
+  Progress,
   SelectionControls,
   Selects,
   // TODO:   Sliders,
