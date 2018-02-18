@@ -36,7 +36,7 @@ import Subheaders from './Subheaders'
 import Tabs from './Tabs'
 import TextFields from './TextFields'
 import TimePickers from './TimePickers'
-// TODO: import Toolbars from './Toolbars'
+import Toolbars from './Toolbars'
 import Tooltips from './Tooltips'
 
 export default {
@@ -78,6 +78,6 @@ export default {
   Tabs,
   TextFields,
   TimePickers,
-  // TODO:   Toolbars,
+  Toolbars,
   Tooltips
 }
