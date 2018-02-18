@@ -25,7 +25,7 @@ import Jumbotrons from './Jumbotrons'
 import Menus from './Menus'
 import NavigationDrawers from './NavigationDrawers'
 import Paginations from './Paginations'
-// TODO: import Parallax from './Parallax'
+import Parallax from './Parallax'
 // TODO: import Progress from './Progress'
 import SelectionControls from './SelectionControls'
 import Selects from './Selects'
@@ -67,7 +67,7 @@ export default {
   Menus,
   NavigationDrawers,
   Paginations,
-  // TODO:   Parallax,
+  Parallax,
   // TODO:   Progress,
   SelectionControls,
   Selects,
