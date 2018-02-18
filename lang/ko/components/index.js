@@ -35,7 +35,7 @@ import Steppers from './Steppers'
 import Subheaders from './Subheaders'
 import Tabs from './Tabs'
 import TextFields from './TextFields'
-// TODO: import TimePickers from './TimePickers'
+import TimePickers from './TimePickers'
 // TODO: import Toolbars from './Toolbars'
 import Tooltips from './Tooltips'
 
@@ -77,7 +77,7 @@ export default {
   Subheaders,
   Tabs,
   TextFields,
-  // TODO:   TimePickers,
+  TimePickers,
   // TODO:   Toolbars,
   Tooltips
 }
