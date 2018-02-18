@@ -30,7 +30,7 @@ import Progress from './Progress'
 import SelectionControls from './SelectionControls'
 import Selects from './Selects'
 import Sliders from './Sliders'
-// TODO: import Snackbars from './Snackbars'
+import Snackbars from './Snackbars'
 // TODO: import Steppers from './Steppers'
 // TODO: import Subheaders from './Subheaders'
 // TODO: import Tabs from './Tabs'
@@ -72,7 +72,7 @@ export default {
   SelectionControls,
   Selects,
   Sliders,
-  // TODO:   Snackbars,
+  Snackbars,
   // TODO:   Steppers,
   // TODO:   Subheaders,
   // TODO:   Tabs,
