@@ -16,7 +16,7 @@ import Components from './components'
 // TODO: import Directives from './directives'
 
 // Mixins
-// TODO: import Mixins from './mixins'
+import Mixins from './mixins'
 
 import meta from './meta'
 
@@ -27,7 +27,7 @@ export default {
   GettingStarted,
   // TODO:   Guides,
   Layout,
-  // TODO:   Mixins,
+  Mixins,
   Motion,
   Style,
   // TODO:   Vuetify,
