@@ -9,6 +9,8 @@ script:
 branches:
   only:
     - master
+before_script:
+- npm install now -g
 script:
 - yarn run deploy
 after_script:
