@@ -1,7 +1,7 @@
 export default {
   backToDocs: 'Voltar para a documentação',
-  cart: 'Carrinho de compras',
-  docs: 'Documentações',
+  cart: 'Carrinho',
+  docs: 'Doc',
   documentation: 'Documentação',
   ecosystem: 'Ecossistema',
   ecosystems: [

@@ -2,7 +2,7 @@ export default {
   announcementBanner: 'Ahh simmm, isto é um anúncio excitante! Ou talvez é uma propaganda!',
   heading1: 'Vuetify',
   heading1cont: 'Material Component Framework',
-  getStarted: 'Iniciar',
+  getStarted: 'Começar',
   features: [
     {
       img: '/static/doc-images/feature1.svg',
@@ -29,21 +29,21 @@ export default {
     '8 Modelos no vue-cli'
   ],
   checkFeaturesCtd: [
-    '80+ Componentes com Design Material (Material Design Components)',
+    '80+ Componentes em Material Design',
     'Importação "A La Carte"',
     'Componentes com Transição (Transition Components)',
     'Extremamente rápido'
   ],
   letterFromAuthor: [
     'Olá,',
-    'Eu sei que escolher um framework para interface de usuário (UI) pode ser uma tarefa desanimadora -- existem tantas opções e todas elas dizem que elas são as melhores. Então você mesmo deve decidir: quais suas métricas para o sucesso?',
+    'Eu sei que escolher seu próximo framework (UI) pode ser uma tarefa desanimadora -- existem tantas opções e todas elas dizem que elas são as melhores. Então você mesmo deve decidir: quais suas métricas para o sucesso?',
     'Este era eu quase um ano atrás. Haviam diversas ferramentas de interfaces de usuário (UI) para escolher, mas nenhuma delas tinham tudo o que eu precisava, e este é o motivo de eu ter começado a trabalhar no Vuetify.',
-    'Eu estou extremamente honrado de você ter considerado utilizar o Vuetify como sua próximo framework. Muito cuidado foi tido em construir a configuração perfeita para ter qualquer ideia, desde sua concepção até sua produção. Estou ansioso para ter você se juntar a comunidade do Vuetify e animado para ver quais interfaces incríveis você irá criar!'
+    'Eu estou extremamente honrado de você ter considerado utilizar o Vuetify como sua próximo framework. Muito cuidado foi tido em construir a configuração perfeita para ter qualquer ideia, desde sua concepção até sua produção. Estou ansioso para você se juntar à comunidade do Vuetify e animado para ver quais interfaces incríveis você irá criar!'
   ],
   authorOfVuetify: 'Autor do Vuetify',
   support: {
     hasVuetifyHelped: 'O Vuetify ajudou você a criar uma aplicação incrível?',
-    showYourSupport: 'Mostre seu apoio ao Vuetify por',
+    showYourSupport: 'Mostre seu apoio ao Vuetify',
     becomingAPatron: 'se tornando um patrono'
   },
   becomeSponsor: 'Se torne um Patrocinador',
