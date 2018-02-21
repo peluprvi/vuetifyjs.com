@@ -1,24 +1,24 @@
 export default {
   header: 'Tooltip',
-  headerText: 'The `v-tooltip` component is useful for conveying information when a user hovers over an element. You can also programmatically control the display of tooltips through a **v-model**',
+  headerText: '`v-tooltip` コンポーネントはユーザーが要素をホバーした際に情報を表示するのに便利です。**v-model** を経由してTooltipの表示をプログラム的に制御することができます。',
   components: ['v-tooltip'],
   examples: [{
     default: {
       header: 'Default',
-      desc: 'Tooltips can wrap any element.'
+      desc: 'Tooltipsはどんな要素もラップすることができます。'
     },
     alignment: {
-      header: 'Alignment',
-      desc: 'Tooltip can be aligned to any of the four sides of the activator element'
+      header: '配置',
+      desc: 'Tooltipは対象になる要素の四方向のどこにでも配置することができます。'
     },
     visibility: {
-      header: 'Visibility',
-      desc: 'Tooltip visibility can be programmatically changed using `v-model`.'
+      header: '表示',
+      desc: '`v-model`を使用してTooltipの表示をプログラム的制御できます。'
     }
   }],
   props: {
-    closeDelay: 'Delay (in ms) after which menu closes (when open-on-hover prop is set to true)',
-    debounce: 'Duration before tooltip is shown and hidden when hovered',
-    openDelay: 'Delay (in ms) after which menu opens (when open-on-hover prop is set to true)'
+    closeDelay: 'open-on-hover prop が true の場合に、メニューが閉じられるまでの遅延時間。(ミリ秒単位)',
+    debounce: 'Tooltipがホバーされた際に表示されてから消えるまでの時間。',
+    openDelay: 'open-on-hover prop が true の場合に、メニューが開くまでの遅延時間。(ミリ秒単位)'
   }
 }
