@@ -1,5 +1,5 @@
 export default {
-  header: 'データイテレーター',
+  header: 'Data iterator',
   headerText: '`v-data-iterator` コンポーネントはデータを表示するために使用され、`v-data-table` コンポーネントと主要な機能を共有します。ソート、検索、ページネーション、選択の機能を含みます。',
   components: ['v-data-iterator'],
   examples: [{
