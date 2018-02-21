@@ -2,51 +2,51 @@ export default {
   announcementBanner: 'Aww yisss, this is an exciting announcement! Or maybe its an advertisement!',
   heading1: 'Vuetify',
   heading1cont: 'Material Component Framework',
-  getStarted: 'Get Started',
+  getStarted: 'はじめる',
   features: [
     {
       img: '/static/doc-images/feature1.svg',
-      title: 'Ready-Made Project Scaffolding',
-      text: 'Vuetify comes ready to go with 8 pre-made vue-cli templates. From simple html to full-blown SSR you are ready to go in minutes.'
+      title: 'プロジェクトのテンプレート',
+      text: '8つのvue-cli用のテンプレートを用意しています。シンプルなHTMLからSSRを使用した本格的なものまで、数分で作成できます。'
     },
     {
       img: '/static/doc-images/feature2.svg',
-      title: 'Semantic Material Components',
-      text: 'Be prepared for an armada of specialized components at your disposal. With over 80 in total, there is a solution for any application.'
+      title: 'セマンティックコンポーネント',
+      text: '80種類以上のコンポーネントが用意されており、どんなアプリケーションにも対応することができます。'
     },
     {
       img: '/static/doc-images/feature3.svg',
-      title: 'Vibrant Community',
-      text: 'When you run into a roadblock, you need assistance right away. Vuetify offers chat support in our growing community on Discord.'
+      title: '活発なコミュニティ',
+      text: 'つまづいてしまったら、すぐに助けが必要です。Discord上でコミュニティによるチャットサポートを用意しています。'
     }
   ],
-  checkFeaturesTitle: 'All the Tools You Need',
-  checkFeaturesTitleCtd: 'To Build Incredible User Interfaces',
+  checkFeaturesTitle: '最高のUIを構築するために',
+  checkFeaturesTitleCtd: '必要なすべてがそろっています',
   checkFeatures: [
-    'Community Chat Support',
-    'Dynamic Themes',
-    'SSR and PWA Support',
-    '8 vue-cli Templates'
+    'コミュニティによるチャットサポート',
+    '動的なテーマリング',
+    'SSR と PWA のサポート',
+    'vue-cli 向けの8つのテンプレート'
   ],
   checkFeaturesCtd: [
-    '80+ Material Design Components',
-    'A La Carte Importing',
-    'Transition Components',
-    'Blazing Fast'
+    '80種類以上のコンポーネント',
+    'コンポーネント個別のインポート',
+    'トランジションコンポーネント',
+    '圧倒的な速さ'
   ],
   letterFromAuthor: [
-    'Hey there,',
-    'I know choosing a UI framework can be a daunting task -- there are so many options to choose from and every one of them claims that they are the best. So you have to decide for yourself: what are the metrics for success?',
-    'This was me almost a year ago. There were plenty of UI toolkits to choose from, but none of them had everything that I needed, and that is why I started working on Vuetify.',
-    'I am extremely humbled that you have considered using Vuetify as your next UI Framework. A lot of care has went into crafting the perfect setup for taking any idea from conception to production. I look forward to you joining the Vuetify community and am excited to see what incredible interfaces you create!'
+    'みなさんこんにちは。',
+    '私は、UIフレームワークの選定は難しい作業であることを理解しています。数多くの選択肢があり、それぞれが自身をより良いものであるとアピールしています。そのため、成功のための指標が何であるのか？ということを自身で決める必要があります。',
+    'これは約１年ほど前の私でした。選択肢に挙がったUIツールキットは沢山ありましたが、それらのどれ1つとして私の必要とする機能を含んでいなかったため、Vuetifyの開発を開始しました。',
+    'あなたが次なるUIフレームワークとしてVuetifyを使用する検討することについては私はとても謙虚でいます。構想から生産までのあらゆるアイディアを取り入れるための沢山の気配りが完璧な構成を形作りました。あなたがVuetifyのコミュニティに参加し、素晴らしいUIを作成することを楽しみにしています！'
   ],
-  authorOfVuetify: 'Author of Vuetify',
+  authorOfVuetify: 'Vuetify作者',
   support: {
-    hasVuetifyHelped: 'Has Vuetify helped you create an amazing application?',
-    showYourSupport: 'Show your support for Vuetify by',
-    becomingAPatron: 'becoming a patron'
+    hasVuetifyHelped: 'Vuetifyは素敵なアプリを作成する力になりましたか？',
+    showYourSupport: 'よろしければVuetifyを',
+    becomingAPatron: 'Patronで支援してください'
   },
-  becomeSponsor: 'Become a Sponsor',
+  becomeSponsor: 'スポンサーになる',
   proudlySponsoredBy: 'Patreon Sponsors',
-  callout: 'Supercharge your development with the power of Vue and Material Design'
+  callout: 'Vueとマテリアルデザインの力で、あなたの開発を加速しましょう'
 }
