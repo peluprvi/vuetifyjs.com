@@ -8,7 +8,7 @@ export default {
       desc: 'ここではアプリケーションに存在する可能性のあるアクションの一覧の例を示します。'
     },
     inset: {
-      header: '差し込み型 Bottom sheet',
+      header: '差し込み Bottom sheet',
       desc: 'Bottom sheet はデスクトップの最大の横幅の70%に縮小して、差し込むことができます。これは `width` prop を使用することで手動で更に縮小することができます。また、Vuetify のブレークポイントオブジェクトを使用した動的なクラスバインディングの方法を合わせて紹介します。'
     }
   }],
