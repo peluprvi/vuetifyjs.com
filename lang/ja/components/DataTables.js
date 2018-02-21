@@ -1,91 +1,91 @@
 export default {
   header: 'Data table',
-  headerText: 'The `v-data-table` component is used for displaying tabular data. Features include sorting, searching, pagination, inline-editing, header tooltips, and row selection.',
+  headerText: '`v-data-table` コンポーネントは表形式のデータを表示するために使われます。ソート、検索、ページネーション、インライン編集、ヘッダーツールチップ、行の選択 などの機能を含んでいます。',
   components: ['v-data-table', 'v-edit-dialog'],
   examples: [{
     standard: {
-      header: 'Standard',
-      desc: 'The standard data-table contains data with no additional functionality. You can opt out of displaying table actions that allow you to control the pagination of information with the `hide-actions` prop.'
+      header: '基本的な使い方',
+      desc: '基本的な Data table は付加的な機能を含まないデータを格納します。 `hide-actions` prop を使用することで、ページネーションを制御するテーブルアクションの表示を外すことができます。'
     },
     noData: {
-      header: 'Slot: no-data',
-      desc: "The `no-data` slot can display custom HTML when there's no data."
+      header: 'スロット: no-data',
+      desc: '`no-data` スロットはデータが無い場合に表示する HTML を設定することができます。'
     },
     headers: {
-      header: 'Slot: items and headers',
-      desc: 'The `items` and `headers` slots can accept either a collection of <kbd>td/th</kbd> tags, or if you want control of the entire row, a <kbd>tr</kbd> tag.'
+      header: 'スロット: items と headers',
+      desc: '`items` と `headers` スロットは <kbd>td/th</kbd> タグを受け付けることができます。行の全体を制御したい場合は、 <kbd>tr</kbd> を受け付けることができます。'
     },
     headerCell: {
-      header: 'Slot: headerCell',
-      desc: 'If you only want to apply some common markup or effect on each of the header cells, you can use the slot `headerCell`. In this example is has been used to apply a tooltip to each header.'
+      header: 'スロット: headerCell',
+      desc: 'ヘッダーのセルごとに共通のマークアップやエフェクトを適用したい場合は、`headerCell` スロットを使用することができます。この例では Tooltip をヘッダーごとに適用しています。'
     },
     progress: {
-      header: 'Slot: progress',
-      desc: 'There is also a `progress` slot for when you want to customize the display for the data table\'s `loading` state.  By default this is an `indeterminate` `v-progress-linear`'
+      header: 'スロット: progress',
+      desc: '`progress` スロットは、Data Table のローディング状態の表示をカスタマイズする際に使用します。デフォルトでは `indeterminate` が設定された `v-progress-linear` が使用されます。'
     },
     footer: {
-      header: 'Slot: footer',
-      desc: 'There is also a `footer` slot for when you want to add some extra functionality to tables, for example per column filtering or search.'
+      header: 'スロット: footer',
+      desc: '`footer` スロットは、例えばカラムのフィルタや検索など、テーブルに拡張機能を持たせたい場合に使用します。'
     },
     expand: {
-      header: 'Slot: expand',
-      desc: 'The `v-data-table` component also supports expandable rows using the `expand` slot. You can use the prop `expand` to prevent expanded rows from closing when clicking on another row.'
+      header: 'スロット: expand',
+      desc: '`v-data-table` コンポーネントは `expand` スロットを使用して行の折りたたみを可能にします。`expand` prop を使用して他の行をクリックした際に行を閉じる動作を止めることができます。'
     },
     pageText: {
-      header: 'Slot: page-text',
-      desc: 'You can customize the page text displaying the range and total items by using the `page-text` slot.'
+      header: 'スロット: page-text',
+      desc: '`page-text` スロットを利用すると、ページネーションに使用されるテキストを変更することができます。'
     },
     select: {
-      header: 'Selectable rows',
-      desc: 'Selectable rows allow you to perform an action on specific and all rows.'
+      header: '選択可能な行',
+      desc: '選択可能な行を使用することで、特定の行及びすべての行に対してアクションを実行することができます。'
     },
     search: {
-      header: 'Search with custom no-results slot',
-      desc: 'The data table exposes a `search` prop that allows you to filter your data.'
+      header: 'no-results スロットを使用した検索',
+      desc: 'Data table ではデータをフィルタリングするために `search` prop が用意されています'
     },
     paginate: {
-      header: 'External pagination',
-      desc: 'Pagination can be controlled externally by using the `pagination` prop. Remember that you must apply the `.sync` modifier.'
+      header: '外部ページネーション',
+      desc: '`pagination` prop を使用することで外部からページネーションを制御できます。 使用するには `.sync` modifier を適用する必要があります。'
     },
     sort: {
-      header: 'External sorting',
-      desc: 'Sorting can also be controlled externally by using the `pagination` prop. Remember that you must apply the `.sync` modifier. You can also use the prop to set the default sorted column.'
+      header: '外部ソート',
+      desc: '`pagination` prop を使用することで外部からソートも制御できます。 使用するには `.sync` modifier を適用する必要があります。 prop でデフォルトでソートに使用するカラムを設定することもできます。'
     },
     server: {
-      header: 'Paginate and sort server-side',
-      desc: 'If you\'re loading data from a backend and want to paginate and sort the results before displaying them, you can use the `total-items` prop. Defining this prop will disable the built-in sorting and pagination, and you will instead need to use the `pagination` prop to listen for changes. Use the `loading` prop to display a progress bar while fetching data.'
+      header: 'サーバーサイドでのページネーションとソート',
+      desc: 'バックエンドから情報を読み込んでおり、結果を表示する前にページネーションとソートを適用する必要がある場合には、 `total-items` prop を使用することができます。 この prop を使用すると、標準のページネーションとソートは無効化されるため、変化を検知するには代わりに `pagination` prop を使用する必要があります。 `loading` prop を使用するとデータを取得している間にプログレスバーを表示することができます。'
     },
     headerless: {
-      header: 'Headerless tables',
-      desc: 'Setting the `hide-headers` prop creates a headerless table.'
+      header: 'ヘッダー無しテーブル',
+      desc: '`hide-headers` prop を設定するとヘッダーなしのテーブルを作成することができます。'
     },
     editdialog: {
-      header: 'Inline Editing',
-      desc: 'The `v-edit-dialog` component is used for inline-editing within data tables.'
+      header: 'インライン編集',
+      desc: '`v-edit-dialog` コンポーネントは Data table 内部でインライン編集する際に使用します。'
     },
     crud: {
-      header: 'CRUD Actions',
-      desc: 'data-table with CRUD actions using a `v-dialog` component for editing each row'
+      header: 'CRUD アクション',
+      desc: '各行を編集するために `v-dialog` コンポーネントを使用した、CRUD アクション付き Data table のサンプルです。'
     }
   }],
   props: {
     'v-edit-dialog': {
-      cancelText: 'Sets the default text for the cancel button when using the **large** prop',
+      cancelText: '**large** prop を使用した際に表示されるキャンセルボタンのデフォルトテキストを設定します。',
       lazy: 'Mixins.Bootable.props.lazy',
-      large: 'Attachs a submit and cancel button to the dialog',
-      saveText: 'Sets the default text for the save button when using the **large** prop',
+      large: 'ダイアログの送信ボタンとキャンセルボタンに適用されます。',
+      saveText: '**large** prop を使用した際に表示される保存ボタンのデフォルトテキストを設定します。',
       transition: 'Mixins.Transitionable.props.transition'
     },
     'v-data-table': {
-      headerText: 'If using an object, the text value for the header',
-      headers: 'An array of objects that each describe a header column. See the example below for a definition of all properties.',
-      hideHeaders: 'Hide the table headers'
+      headerText: 'ヘッダーとなるテキストを設定します。',
+      headers: 'ヘッダーのカラムとなる配列のオブジェクトを設定します。 全プロパティの定義については下記の例を参照してください。',
+      hideHeaders: 'ヘッダーを非表示にします。'
     }
   },
   scopedSlots: {
     'v-data-table': {
-      headerCell: 'Slot to customize header cells',
-      headers: 'Slot to customize entire header'
+      headerCell: 'ヘッダーのセルをカスタマイズするためのスロットです',
+      headers: 'ヘッダー全体をカスタマイズするためのスロットです'
     }
   }
 }
