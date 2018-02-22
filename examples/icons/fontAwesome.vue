@@ -13,3 +13,13 @@
     <v-icon>fa-thermometer-empty</v-icon>
   </v-layout>
 </template>
+
+<codepenDeps lang="json">
+{
+  "js": [
+    {
+      "url": "https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    }
+  ]
+}
+</codepenDeps>

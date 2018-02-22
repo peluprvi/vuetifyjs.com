@@ -110,3 +110,14 @@
     }
   }
 </script>
+
+<codepenDeps lang="json">
+{
+  "js": [
+    {
+      "url": "https://unpkg.com/vuelidate@latest/dist/vuelidate.min.js",
+      "name": "Vuelidate"
+    }
+  ]
+}
+</codepenDeps>

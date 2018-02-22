@@ -95,3 +95,14 @@
     }
   }
 </script>
+
+<codepenDeps lang="json">
+{
+  "js": [
+    {
+      "url": "https://unpkg.com/vee-validate@latest/dist/vee-validate.js",
+      "name": "VeeValidate"
+    }
+  ]
+}
+</codepenDeps>

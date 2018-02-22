@@ -13,3 +13,13 @@
     <v-icon>mdi-mouse</v-icon>
   </v-layout>
 </template>
+
+<codepenDeps lang="json">
+{
+  "css": [
+    {
+      "url": "https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css"
+    }
+  ]
+}
+</codepenDeps>

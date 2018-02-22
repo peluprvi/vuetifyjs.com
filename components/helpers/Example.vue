@@ -131,7 +131,8 @@
         parsed: {
           script: null,
           style: null,
-          template: null
+          template: null,
+          codepenDeps: null
         },
         url: release ? `releases/${release}/` : ''
       }
@@ -199,11 +200,13 @@
         const template = this.parseTemplate('template', res)
         const script = this.parseTemplate('script', res)
         const style = this.parseTemplate('style', res)
+        const codepenDeps = this.parseTemplate('codepenDeps', res)
 
         this.parsed = {
           template,
           script,
-          style
+          style,
+          codepenDeps
         }
       },
       toggle () {
