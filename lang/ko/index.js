@@ -1,5 +1,5 @@
 // Pages
-// TODO: import Vuetify from './vuetify'
+import Vuetify from './vuetify'
 import GettingStarted from './getting-started'
 import Guides from './guides'
 import Layout from './layout'
@@ -30,6 +30,6 @@ export default {
   Mixins,
   Motion,
   Style,
-  // TODO:   Vuetify,
+  Vuetify,
   meta
 }
