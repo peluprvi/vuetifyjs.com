@@ -3661,6 +3661,12 @@ module.exports = {
         ],
         "default": 40,
         "source": null
+      },
+      {
+        "name": "tile",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
       }
     ],
     "mixins": [],
@@ -5589,6 +5595,12 @@ module.exports = {
   },
   "v-stepper-step": {
     "props": [
+      {
+        "name": "color",
+        "type": "String",
+        "default": "primary",
+        "source": "colorable"
+      },
       {
         "name": "complete",
         "type": "Boolean",

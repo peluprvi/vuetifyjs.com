@@ -49,7 +49,7 @@
           style="min-width: 64px"
         )
           img(
-            :src="`http://www.countryflags.io/${currentLanguage.country}/flat/32.png`"
+            :src="`https://countryflags.io/${currentLanguage.country}/flat/32.png`"
             width="32px"
           )
         v-list(light)
@@ -61,7 +61,7 @@
           )
             v-list-tile-avatar(size="24px").avatar--tile
               img(
-                :src="`http://www.countryflags.io/${language.country}/flat/24.png`"
+                :src="`https://countryflags.io/${language.country}/flat/24.png`"
                 width="24px"
               )
             v-list-tile-title {{language.title}}
@@ -144,7 +144,7 @@
         v-if="isStore && cart"
         flat
         :to="{ name: 'store/Cart' }"
-        active-class="btn"
+        dark
       )
         v-badge(color="red" left :value="cart.lineItems.length")
           template(slot="badge") {{ cart.lineItems.length }}
@@ -211,7 +211,7 @@
         const path = this.$route.fullPath.split('/')
           .slice(2)
           .join('/')
-        window.location.href = `${window.location.origin}/releases/${release}/#${path}`
+        window.location.href = `${window.location.origin}/releases/${release}/#/${path}`
       },
       translateI18n (lang) {
         this.$router.replace({ params: { lang } })
