@@ -5,7 +5,7 @@ export default {
   examples: [{
     dateLight: {
       header: 'Date pickers',
-      desc: 'Date picker 는 세로(portrait) 와 가로(landscape0) 두 방향의 변형이 있습니다. 기본 모드는 세로입니다.'
+      desc: 'Date picker 는 세로(portrait) 와 가로(landscape0) 두 방향의 변형이 있습니다. 기본 모드는 세로입니다. By default they are emitting `input` event when the day (for date picker) or month (for month picker), but with **reactive** prop they can update the model even after clicking year/month.'
     },
     dateColorable: {
       header: 'Date pickers - 색상 (Colors)',
@@ -105,8 +105,8 @@ export default {
       min: '최소 날짜/월',
       max: '최대 날짜/월',
       pickerDate: '표시되는 년/월',
-      appendIcon: '다음 달/년 버튼의 아이콘',
-      prependIcon: '이전 달/년 버튼의 아이콘',
+      nextIcon: '다음 달/년 버튼의 아이콘',
+      prevIcon: '이전 달/년 버튼의 아이콘',
       readonly: '읽기전용으로 만듬 (새로운 날짜를 선택하거나 다른 년/월로 이동할 수 없음)',
       scrollable: '마우스 스크롤로 월을 바꿈.',
       showCurrent: '현재 날짜/월이나 현재 날짜/월로 지정된 날짜/월이 outline으로 표시될지 결정'

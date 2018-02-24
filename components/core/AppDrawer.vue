@@ -21,15 +21,7 @@
             :src="`/static/doc-images/${diamond.src}`"
             :alt="diamond.title"
           )
-      v-btn(
-        small
-        round
-        outline
-        color="primary"
-        active-class=""
-        to="/getting-started/sponsors-and-backers"
-      )
-        span(v-text="$t('Vuetify.AppDrawer.becomeASponsor')").caption
+      patreon-btn
     v-container(fluid)
       v-text-field(
         placeholder="Search"
@@ -149,6 +141,7 @@
   import { mapMutations, mapState } from 'vuex'
   import supporters from '@/assets/supporters'
   import appDrawerItems from '@/assets/app-drawer-items'
+  import { camel } from '@/util/helpers'
 
   export default {
     data: () => ({
@@ -217,7 +210,7 @@
             }
           }
         }
-        return { name: `${item.group}/${subItem.name}` }
+        return { name: `${item.group}/${camel(subItem.name)}` }
       },
       init () {
         this.initDocSearch()
