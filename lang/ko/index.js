@@ -1,7 +1,7 @@
 // Pages
 // TODO: import Vuetify from './vuetify'
 import GettingStarted from './getting-started'
-// TODO: import Guides from './guides'
+import Guides from './guides'
 import Layout from './layout'
 import Style from './style'
 import Motion from './motion'
@@ -25,7 +25,7 @@ export default {
   // TODO:   Directives,
   Generic,
   GettingStarted,
-  // TODO:   Guides,
+  Guides,
   Layout,
   Mixins,
   Motion,
