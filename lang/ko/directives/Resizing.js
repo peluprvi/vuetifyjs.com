@@ -9,24 +9,8 @@ export default {
       uninverted: true
     }
   }],
-  params: [{
-    'v-resize': [
-      {
-        name: 'callback',
-        type: '함수',
-        default: 'null'
-      },
-      {
-        name: 'quiet',
-        type: '부울',
-        default: 'false',
-        desc: '디렉티브가 연결(bound)될때 콜백을 호출하지 않음'
-      },
-      {
-        name: 'debounce',
-        type: '숫자',
-        default: '200'
-      }
-    ]
-  }]
+  options: {
+    'modifiers.quiet': '`v-resize.quiet="callback"` Will **not** automatically invoke the provided callback on bind.',
+    'value': '`v-resize="callback"` 윈도우가 리사이즈될 때 호출되는 함수'
+  }
 }

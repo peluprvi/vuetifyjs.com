@@ -91,5 +91,9 @@ export default {
     textarea: '대체 스타일의 Textarea 텍스트 필드',
     toggleKeys: '인풋을 토글하기 위한 키 코드 배열 (토글이 지원될 경우)',
     type: '인풋 타입을 설정'
+  },
+  events: {
+    change: 'Mixins.Input.events.change',
+    'update:error': 'Mixins.Input.events.update:error'
   }
 }

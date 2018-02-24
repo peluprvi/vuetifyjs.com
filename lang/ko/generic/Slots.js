@@ -3,6 +3,5 @@ export default {
   badge: 'The slot that will be used for the badge',
   default: 'Default Vue slot',
   label: 'Replaces the default label',
-  progress: '커스텀 프로그레스 바를 위한 슬롯(**loading** prop이 부울 False 가 아닐때 표시)',
-  noData: '필터링된 아이템이 없을때 표시'
+  progress: '커스텀 프로그레스 바를 위한 슬롯(**loading** prop이 부울 False 가 아닐때 표시)'
 }

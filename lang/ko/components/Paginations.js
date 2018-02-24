@@ -19,6 +19,10 @@ export default {
       header: '둥근 버튼 (Round)',
       desc: '페이지네이션 스타일에 둥근 페이지 버튼을 사용할 수 있습니다.'
     },
+    icons: {
+      header: '아이콘',
+      desc: '이전/다음페이지 아이콘은 `prev-icon` 과 `next-icon` prop으로 커스터마이즈할 수 있습니다.'
+    },
     disabled: {
       header: '비활성화 (Disabled)',
       desc: '페이지네이션 아이템들은 수동으로 비활성활 할 수 있습니다.'

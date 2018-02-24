@@ -1,17 +1,17 @@
 export default {
   header: '점보트론 (Jumbotron)',
-  headerText: 'Soon...',
+  headerText: '점포트론은 유연한 액션컴포넌트 입니다. 배경 이미지와 그래디언트 오버레이, 그리고 여러가지를 지원합니다.',
   components: [
     'v-jumbotron'
   ],
   examples: [{
     usage: {
       header: '사용법 (Usage)',
-      desc: 'Soon..'
+      desc: ''
     },
     color: {
       header: '커스텀 색상 (Custom color)',
-      desc: 'Soon...'
+      desc: '커스텀 배경색을 적용해보세요.'
     },
     gradient: {
       header: '그래디언트 (Gradient)',

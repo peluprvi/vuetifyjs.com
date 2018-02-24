@@ -9,20 +9,8 @@ export default {
       uninverted: true
     }
   }],
-  props: [{
-    'v-touch': [
-      {
-        name: '[up, down, left, right]',
-        type: 'Function',
-        default: 'null',
-        desc: '스와이프 방향에 따른 콜백을 지정. x-axis 와 y-axis 콜백을 묶는 것은 현재 권장하지 않음'
-      },
-      {
-        name: '[move, start, end]',
-        type: 'Function',
-        default: 'null',
-        desc: '터치 이벤트가 시작/종료/진행 될 때의 콜백을 지정'
-      }
-    ]
-  }]
+  options: {
+    '{ move, start, end }': '터치 이벤트가 시작/종료/진행 될 때의 콜백을 지정',
+    '{ up, down, left, right }': '스와이프 방향에 따른 콜백을 지정. x-axis 와 y-axis 콜백을 묶는 것은 현재 권장하지 않음'
+  }
 }

@@ -55,13 +55,13 @@ export default {
     },
     icons: {
       header: '커스텀 아이콘 (Custom icons)',
-      desc: '**prepend-icon**과 **append-icon**를 사용하여 커스텀 페이지네이션 아이콘을 적용할 수 있습니다.'
+      desc: '**prev-icon**과 **next-icon**를 사용하여 커스텀 페이지네이션 아이콘을 적용할 수 있습니다.'
     }
   }],
   props: {
     alignWithTitle: '`v-tabs` 툴바 타이틀과 함께 나열되도록 설정',
-    prependIcon: '왼쪽 페이지네이션 아이콘',
-    appendIcon: '오른쪽 페이지네이션 아이콘',
+    prevIcon: '왼쪽 페이지네이션 아이콘',
+    nextIcon: '오른쪽 페이지네이션 아이콘',
     right: '탭을 오른쪽으로 정렬'
   }
 }

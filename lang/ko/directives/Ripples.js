@@ -44,20 +44,8 @@ export default {
       uninverted: true
     }
   }],
-  props: [{
-    'v-ripple': [
-      {
-        name: 'class',
-        type: '문자열',
-        default: 'undefined',
-        desc: '커스텀 클래스를 리플에 적용. 색을 바꾸는데 사용됨'
-      },
-      {
-        name: 'center',
-        type: '부울',
-        default: 'False',
-        desc: '리플이 타겟의 중심에서 시작되도록 설정'
-      }
-    ]
-  }]
+  options: {
+    'class': '`v-ripple="{ class: \'my-class\' }"` 커스텀 클래스를 리플에 적용. 색상을 바꾸는데 사용됨',
+    'center': '`v-ripple="{ center: true }"` 리플이 타겟의 중심에서 시작되도록 설정'
+  }
 }
