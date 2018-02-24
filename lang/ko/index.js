@@ -13,7 +13,7 @@ import Generic from './generic'
 import Components from './components'
 
 // Directives
-// TODO: import Directives from './directives'
+import Directives from './directives'
 
 // Mixins
 import Mixins from './mixins'
@@ -22,7 +22,7 @@ import meta from './meta'
 
 export default {
   Components,
-  // TODO:   Directives,
+  Directives,
   Generic,
   GettingStarted,
   Guides,
