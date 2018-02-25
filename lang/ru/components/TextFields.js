@@ -91,5 +91,9 @@ export default {
     textarea: 'Текстовое поле textarea с альтернативным стилем',
     toggleKeys: 'Массив кодов клавиш, которые будут переключаться на вход (если он поддерживает переключение)',
     type: 'Устанавливает тип ввода'
+  },
+  events: {
+    change: 'Mixins.Input.events.change',
+    'update:error': 'Mixins.Input.events.update:error'
   }
 }

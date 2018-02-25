@@ -1,29 +1,29 @@
 export default {
   header: 'Jumbotron',
-  headerText: 'Скоро...',
+  headerText: 'The jumbotron is a flexible call to action component. Supports background images, gradient overlays and much more.',
   components: [
     'v-jumbotron'
   ],
   examples: [{
     usage: {
-      header: 'Применение',
-      desc: 'Скоро..'
+      header: 'Usage',
+      desc: ''
     },
     color: {
-      header: 'Пользовательские цвета',
-      desc: 'Скоро...'
+      header: 'Custom color',
+      desc: 'Apply a custom background-color'
     },
     gradient: {
-      header: 'Градиент',
-      desc: 'Более подробную информацию о градиентах можно найти [здесь](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)'
+      header: 'Gradient',
+      desc: 'More information on writing gradients can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)'
     },
     gradientWithImage: {
-      header: 'Градиент с изображением',
-      desc: 'Более подробную информацию о градиентах можно найти [здесь](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)'
+      header: 'Gradient with image',
+      desc: 'More information on writing gradients can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)'
     }
   }],
   props: {
-    gradient: 'Примените градиент как фон. Если используется с **src** , наложите его',
-    src: 'img src'
+    gradient: 'Apply a gradient background. If used with the **src** prop, will overlay it',
+    src: 'The img src'
   }
 }

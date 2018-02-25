@@ -83,7 +83,10 @@ export default {
     'v-data-table': {
       headerText: 'При использовании объекта текстовое значение для заголовка',
       headers: 'Массив объектов, каждый из которых описывает столбец заголовка. См. Пример ниже для определения всех свойств.',
-      hideHeaders: 'Скрыть заголовки таблиц'
+      hideHeaders: 'Скрыть заголовки таблиц',
+      sortIcon: 'Используйте пользовательскую иконку сортировки, используя тот же синтаксис, что и `v-icon`',
+      nextIcon: 'Mixins.Input.props.appendIcon',
+      prevIcon: 'Mixins.Input.props.prependIcon'
     }
   },
   scopedSlots: {
