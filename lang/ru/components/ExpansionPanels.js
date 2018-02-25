@@ -38,5 +38,9 @@ export default {
       hideActions: 'Скрыть иконку разворота в заголовке содержимого',
       expandIcon: 'Set the expand action icon'
     }
+  },
+  slots: {
+    actions: 'Расширение действие заголовка',
+    header: 'Расширение содержимое заголовка'
   }
 }

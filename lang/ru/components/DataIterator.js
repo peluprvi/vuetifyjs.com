@@ -11,6 +11,11 @@ export default {
   props: {
     contentClass: 'Применяет пользовательский класс к элементу обертки вокруг элементов',
     contentProps: 'Применяет пользовательские свойства к оберточному элементу вокруг элементов',
-    contentTag: 'Укажите, какой тег следует использовать для элемента оболочки вокруг элементов'
+    contentTag: 'Укажите, какой тег следует использовать для элемента оболочки вокруг элементов',
+    nextIcon: 'Mixins.Input.props.appendIcon',
+    prevIcon: 'Mixins.Input.props.prependIcon'
+  },
+  events: {
+    'update:pagination': ' `pagination.sync` событие обновления'
   }
 }
