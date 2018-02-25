@@ -72,6 +72,7 @@ If you feel comfortable translating/reviewing content on your own, the steps are
 - If you want to add a new language, copy and follow the [en translation structure](https://github.com/vuetifyjs/vuetifyjs.com/tree/master/lang/en);
 - Translate/revise the files that you choose;
 - When finished, make a _pull request_ **with the _commit_ description in English**;
+- All PRs should be made to the `dev` branch;
 - Do not forget to `pull` the latest changes before resuming the process.
 
 If you can not completely finish a file translation, but want to send the partial work, make it clear in the _issue_ of your work after the submission, to report what issues persist in the uploaded file. In this case, you must include untranslated [component files](https://github.com/vuetifyjs/vuetifyjs.com/tree/master/lang/en/components) and variables in your commit.
