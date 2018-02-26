@@ -1,6 +1,6 @@
 export default {
-  header: `Support Vuetify's development`,
-  headerText: 'Vuetify is an open source project under the MIT license. It is and will always be free to use. However, the amount of effort it takes to maintain the core framework and all supplementing packages is quite considerable. With the goal to continue development of additional functionality even after the completion of Material Design spec, you can help by <a href="https://www.patreon.com/vuetify" target="_blank" rel="noreferrer">backing Vuetify on Patreon</a>.',
+  header: 'Поддержка разработки Vuetify',
+  headerText: 'Vuetify - проект с открытым исходным кодом под лицензией MIT. Это всегда можно будет свободно использовать. Тем не менее, объем усилий, необходимых для поддержания базовой структуры и всех дополняющих пакетов, довольно значителен. С целью продолжения разработки дополнительной функциональности даже после завершения спецификации Material Design вы можете помочь <a href="https://www.patreon.com/vuetify" target="_blank" rel="noreferrer"> поддержка Vuetify в Patreon </a>.',
   backersHeader: 'Patreon backers:',
   backersSubHeader: 'Diamond ($500/mo)',
   backersSubHeader2: 'Palladium ($250/mo)',
@@ -8,6 +8,6 @@ export default {
   backersSubHeader4: 'Gold ($50/mo)',
   affiliatesHeader: 'Affiliates:',
   sponsorsHeader: 'Service sponsors:',
-  questionHeader: 'Have additional questions?',
-  questionButton: 'Contact Us'
+  questionHeader: 'Дополнительные вопросы?',
+  questionButton: 'Свяжитесь с нами'
 }
