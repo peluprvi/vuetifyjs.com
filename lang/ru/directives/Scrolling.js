@@ -1,21 +1,21 @@
 export default {
-  header: 'Scrolling directive',
-  headerText: 'The `v-scroll` directive allows you to provide callbacks when the window or a specifically defined element are scrolled.',
+  header: 'Директива прокрутки',
+  headerText: 'Директива `v-scroll` позволяет вам предоставлять обратные вызовы при прокрутке окна или определенного элемента.',
   components: ['v-scroll'],
   examples: [{
     default: {
-      header: 'Default',
-      desc: 'The default behavior is to bind to the window. If no additional configuration options are needed, you can simple pass your callback function.',
+      header: 'По умолчанию',
+      desc: 'По умолчанию используется привязка к окну. Если дополнительных параметров конфигурации не требуется, вы можете просто передать свою функцию обратного вызова.',
       uninverted: true
     },
     options: {
-      header: 'Scroll with options',
-      desc: 'For a more fine tuned approach, you can designate the target to bind the scroll event listener.',
+      header: 'Прокрутка с параметрами',
+      desc: 'Для более точной настройки вы можете назначить цель для привязки слушателя событий прокрутки.',
       uninverted: true
     }
   }],
   options: {
-    'arg:target': '`v-scroll:#target="callback"` The target watched for scroll changes. Defaults to window but can be changed to any valid id selector.',
-    'value': '`v-scroll="callback"` The function to invoke on target scroll'
+    'arg:target': '`v-scroll:#target="callback"` наблюдает за изменениями прокрутки. По умолчанию это window, но может быть изменено на любой действительный селектор id.',
+    'value': '`v-scroll="callback"` функция вызова в прокрутке'
   }
 }
