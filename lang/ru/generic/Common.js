@@ -1,7 +1,7 @@
 export default {
-  askCommunity: 'Ask the community',
-  contactUs: 'Contact Us',
-  needHelp: 'Need Help?',
-  getHelp: 'Get Help Now',
-  havingIssues: 'Are you having issues?'
+  askCommunity: 'Задать вопрос в сообществе',
+  contactUs: 'связаться с нами',
+  needHelp: 'Нужна помощь?',
+  getHelp: 'Получить помощь сейчас',
+  havingIssues: 'У вас проблемы?'
 }

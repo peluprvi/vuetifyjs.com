@@ -1,24 +1,24 @@
 export default {
   api: 'API',
-  default: 'Default',
-  description: 'Description',
-  examples: 'Examples',
-  howItWorks: 'How it works',
-  name: 'Name',
-  openInCodePen: 'Open in Codepen',
-  options: 'Options',
-  props: 'Props',
-  showExample: 'Show Example',
+  default: 'По умолчанию',
+  description: 'Описание',
+  examples: 'Примеры',
+  howItWorks: 'Как это работает',
+  name: 'Имя',
+  openInCodePen: 'Открыть в Codepen',
+  options: 'Опции',
+  props: 'Свойства',
+  showExample: 'Показать пример',
   slots: 'Slots',
-  supplemental: 'Supplemental',
-  type: 'Type',
+  supplemental: 'Дополнительный',
+  type: 'Тип',
   toc: [
     {
-      text: 'Introduction',
+      text: 'Введение',
       href: 'introduction'
     },
     {
-      text: 'Usage',
+      text: 'Применение',
       href: 'usage'
     },
     {
@@ -26,18 +26,18 @@ export default {
       href: 'api'
     },
     {
-      text: 'Supplemental',
+      text: 'Дополнительный',
       href: 'supplemental'
     },
     {
-      text: 'Examples',
+      text: 'Примеры',
       href: 'examples'
     }
   ],
-  usage: 'Usage',
-  parameters: 'Parameters',
-  return: 'Returns',
-  example: 'Example',
+  usage: 'Применение',
+  parameters: 'Параметры',
+  return: 'Возвращает',
+  example: 'Пример',
   signature: 'Signature',
-  value: 'Value'
+  value: 'Значение'
 }
