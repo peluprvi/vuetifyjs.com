@@ -176,15 +176,15 @@
       palladium: supporters.palladium,
       socials: [
         {
-          icon: 'fa-github',
+          icon: 'fab fa-github',
           href: 'https://github.com/vuetifyjs/vuetify'
         },
         {
-          icon: 'fa-twitter',
+          icon: 'fab fa-twitter',
           href: 'https://twitter.com/vuetifyjs'
         },
         {
-          icon: 'fa-facebook',
+          icon: 'fab fa-facebook',
           href: 'https://www.facebook.com/vuetifyjs/'
         }
       ]
