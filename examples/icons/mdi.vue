@@ -14,12 +14,8 @@
   </v-layout>
 </template>
 
-<codepenDeps lang="json">
-{
-  "css": [
-    {
-      "url": "https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css"
-    }
-  ]
-}
-</codepenDeps>
+<codepen-resources lang="json">
+  {
+    "css": ["https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css"]
+  }
+</codepen-resources>

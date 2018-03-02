@@ -111,13 +111,18 @@
   }
 </script>
 
-<codepenDeps lang="json">
-{
-  "js": [
-    {
-      "url": "https://unpkg.com/vuelidate@latest/dist/vuelidate.min.js",
-      "name": "Vuelidate"
-    }
-  ]
-}
-</codepenDeps>
+<codepen-resources lang="json">
+  {
+    "js": [
+      "https://unpkg.com/vuelidate/dist/vuelidate.min.js",
+      "https://unpkg.com/vuelidate/dist/validators.min.js"
+    ]
+  }
+</codepen-resources>
+
+<codepen-additional lang="js">
+  const { required, maxLength, email } = validators
+  const validationMixin = vuelidate.validationMixin
+
+  Vue.use(vuelidate.default)
+</codepen-additional>

@@ -13,17 +13,20 @@
 </template>
 
 <script>
-  const version = require('vuetify/package.json').version || 'latest'
+  import { version } from 'vuetify'
   const title = 'Vuetify Example Pen'
-  const css_external = [ // eslint-disable-line camelcase
+
+  const cssResources = [
     'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
     `https://unpkg.com/vuetify@${version}/dist/vuetify.min.css`
   ]
-  const js_external = [ // eslint-disable-line camelcase
+
+  const jsResources = [
     'https://unpkg.com/babel-polyfill/dist/polyfill.min.js',
     'https://unpkg.com/vue/dist/vue.js',
     `https://unpkg.com/vuetify@${version}/dist/vuetify.min.js`
   ]
+
   export default {
     name: 'Codepen',
 
@@ -31,19 +34,32 @@
       pen: {
         type: Object,
         default: () => ({})
+      },
+      title: {
+        type: String,
+        default: title
       }
     },
 
     computed: {
-      imports () {
-        const find = /(import*) ([^'\n]*) from ([^\n]*)/g
-        const script = this.pen.script || ''
-        let modules = []
-        let module
-        while ((module = find.exec(script))) {
-          modules.push(module[0])
-        }
-        return modules.join('\n')
+      additionalScript () {
+        const additional = this.pen.codepenAdditional || ''
+
+        return additional
+          .replace(/(<codepen-additional.*?>|<\/codepen-additional>$)/g, '')
+          .replace(/\/static\//g, 'https://vuetifyjs.com/static/')
+          .replace(/\n {2}/g, '\n')
+          .trim() + '\n\n'
+      },
+      additionalResources () {
+        const resources = this.pen.codepenResources || '{}'
+
+        return Object.assign(
+          { css: [], js: [] },
+          JSON.parse(
+            resources.replace(/(<codepen-resources.*?>|<\/codepen-resources>$)/g, '')
+          )
+        )
       },
       script () {
         const replace = /(export default {|<script>|<\/script>|}([^}]*)$)/g
@@ -66,28 +82,9 @@
 
         return template
           .replace(/\/static\//g, 'https://vuetifyjs.com/static/')
-          .replace(/(<template>|<\/template>([^</template>]*)$)/g, '')
+          .replace(/(<template>|<\/template>$)/g, '')
           .replace(/\n/g, '\n  ')
           .trim()
-      },
-      dependencies () {
-        const deps = (this.pen.codepenDeps || '')
-          .replace(/(<codepenDeps.*?>|<\/codepenDeps>([^</codepenDeps>]*)$)/g, '')
-          .replace(/\n/g, '\n  ')
-          .trim()
-        return deps ? JSON.parse(deps) : {
-          js: [],
-          css: []
-        }
-      },
-      allDependencies () {
-        const jsUrls = (this.dependencies.js || []).map((lib) => lib.url)
-        const cssUrls = (this.dependencies.css || []).map((lib) => lib.url)
-
-        return {
-          js_external: js_external.concat(jsUrls || []).join(';'),
-          css_external: css_external.concat(cssUrls || []).join(';')
-        }
       },
       editors () {
         const html = this.template && 0b100
@@ -98,22 +95,24 @@
       },
       value () {
         const data = Object.assign({
-          html: `<div id="app">
+          html:
+`<div id="app">
   <v-app id="inspire">
     ${this.template}
   </v-app>
 </div>`,
           css: this.style.content,
           css_pre_processor: this.style.language ? this.style.language[1] : 'none',
-          js: `${this.imports}
-${this.dependencies.js && this.genUseStatements(this.dependencies.js)}
-new Vue({
+          css_external: [...this.additionalResources.css, ...cssResources].join(';'),
+          js: this.additionalScript +
+`new Vue({
   el: '#app',
   ${this.script}
 })`,
           js_pre_processor: 'babel',
+          js_external: [...this.additionalResources.js, ...jsResources].join(';'),
           editors: this.editors
-        }, this.allDependencies, { title: title })
+        })
 
         return JSON.stringify(data)
       }
@@ -122,13 +121,6 @@ new Vue({
     methods: {
       submit () {
         this.$el.submit()
-      },
-      genUseStatements (deps) {
-        let stmts = ''
-        deps.forEach((d) => {
-          if (d.name) stmts += `Vue.use(${d.name});\n`
-        })
-        return stmts
       }
     }
   }

@@ -96,13 +96,12 @@
   }
 </script>
 
-<codepenDeps lang="json">
-{
-  "js": [
-    {
-      "url": "https://unpkg.com/vee-validate@latest/dist/vee-validate.js",
-      "name": "VeeValidate"
-    }
-  ]
-}
-</codepenDeps>
+<codepen-resources lang="json">
+  {
+    "js": ["https://unpkg.com/vee-validate@latest/dist/vee-validate.js"]
+  }
+</codepen-resources>
+
+<codepen-additional lang="js">
+  Vue.use(VeeValidate)
+</codepen-additional>
