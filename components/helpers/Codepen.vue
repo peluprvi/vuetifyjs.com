@@ -49,7 +49,7 @@
           .replace(/(<codepen-additional.*?>|<\/codepen-additional>$)/g, '')
           .replace(/\/static\//g, 'https://vuetifyjs.com/static/')
           .replace(/\n {2}/g, '\n')
-          .trim() + '\n\n'
+          .trim() + (additional ? '\n\n' : '')
       },
       additionalResources () {
         const resources = this.pen.codepenResources || '{}'
