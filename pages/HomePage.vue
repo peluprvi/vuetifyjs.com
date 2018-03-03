@@ -1,7 +1,7 @@
 <template lang="pug">
   div#home
     v-jumbotron(
-      gradient="to right top, #1867c0, #19e5f4"
+      gradient="to bottom, #1867c0, #5CBBF6"
       height="auto"
       dark
     )
@@ -162,6 +162,9 @@
   // Mixins
   import Message from '@/mixins/message'
 
+  // Utilities
+  import { mapMutations } from 'vuex'
+
   export default {
     name: 'HomePage',
 
@@ -178,6 +181,10 @@
         {
           icon: 'fab fa-github',
           href: 'https://github.com/vuetifyjs/vuetify'
+        },
+        {
+          icon: 'fab fa-reddit',
+          href: 'https://www.reddit.com/r/vuetifyjs/'
         },
         {
           icon: 'fab fa-twitter',
@@ -214,7 +221,20 @@
       }
     },
 
+    mounted () {
+      this.snackbar({
+        color: '',
+        msg: 'Vuetify is now on Reddit!',
+        href: 'https://www.reddit.com/r/vuetifyjs/',
+        text: 'Check it out',
+        timeout: 0
+      })
+    },
+
     methods: {
+      ...mapMutations('app', {
+        snackbar: 'SNACKBAR'
+      }),
       snackHandler () {
         this.$router.push({ name: 'store/Index' })
       }
