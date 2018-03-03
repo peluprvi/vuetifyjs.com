@@ -94,7 +94,8 @@
         return (html | css | js).toString(2)
       },
       value () {
-        const data = Object.assign({
+        const data = {
+          title: this.title,
           html:
 `<div id="app">
   <v-app id="inspire">
@@ -112,7 +113,7 @@
           js_pre_processor: 'babel',
           js_external: [...this.additionalResources.js, ...jsResources].join(';'),
           editors: this.editors
-        })
+        }
 
         return JSON.stringify(data)
       }
