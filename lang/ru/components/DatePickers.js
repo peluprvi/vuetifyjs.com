@@ -1,115 +1,115 @@
 export default {
-  header: 'Date/month picker',
-  headerText: 'The `v-date-picker` is stand-alone component that can be utilized in many existing Vuetify components. It offers the user a visual representation for selecting date/month.',
+  header: 'Выбор даты/месяца',
+  headerText: '`v-date-picker` является автономным компонентом, который может использоваться во многих существующих компонентах Vuetify. Он предлагает пользователю визуальное представление для выбора даты/месяца.',
   components: ['v-date-picker'],
   examples: [{
     dateLight: {
-      header: 'Date pickers',
-      desc: 'Date pickers come in two orientation variations, portrait **(default)** and landscape. By default they are emitting `input` event when the day (for date picker) or month (for month picker), but with **reactive** prop they can update the model even after clicking year/month.'
+      header: 'Выбор даты',
+      desc: 'Выбор даты существует в двух вариантах, портретная **(по умолчанию)** и альбомная. По умолчанию они вызывают событие `input` при выборе дня (для выбора даты) или месяца (для выбора месяца), но с **реактивным** свойством они могут обновить модель даже после клика года/месяца.'
     },
     dateColorable: {
-      header: 'Date pickers - Colors',
-      desc: 'Date picker colors can be set using the `color` and `header-color` props. If `header-color` prop is not provided header will use the `color` prop value.'
+      header: 'Выбор даты - Цвета',
+      desc: 'Цвета выбора даты можно установить с помощью свойств `color` и `header-color`. Если `header-color` не указан, заголовок будет использовать значение `color` .'
     },
     dateDialogAndMenu: {
-      header: 'Date pickers - In dialog and menu',
-      desc: 'When integrating a picker into a `v-text-field`, it is recommended to use the **readonly** prop. This will prevent mobile keyboards from triggering. To save vertical space, you can also hide the picker title.  \n\n  Pickers expose a scoped slot that allow you to hook into save and cancel functionality. This will maintain an old value which can be replaced if the user cancels.'
+      header: 'Выбор даты - В диалоговом окне и меню',
+      desc: 'При интеграции "выбора" в поле `v-text` рекомендуется использовать **readonly**. Это предотвратит запуск мобильных клавиатур. Чтобы сохранить вертикальную ориентацию, вы также можете скрыть заголовок выбора. \n \n Выбор даты выставляет доступный слот, который позволяет вам подключаться к функциям сохранения и отмены. Оно поддерживать старое значение, которое может быть заменено, если пользователь отменяет событие.'
     },
     dateAllowedDates: {
-      header: 'Date pickers - Allowed dates',
-      desc: 'You can specify allowed dates using arrays, objects, and functions.'
+      header: 'Выбор даты - Допустимые значения',
+      desc: 'Вы можете указать допустимые даты с использованием массивов, объектов и функций.'
     },
     dateWidth: {
-      header: 'Date pickers - Setting picker width',
-      desc: 'You can specify allowed the picker\'s width or make it full width.'
+      header: 'Выбор даты - установка ширины',
+      desc: 'Вы можете указать допустимую ширину или сделать ее на всю ширину.'
     },
     dateBirthday: {
-      header: 'Date pickers - birthday picker',
-      desc: 'Starting with year picker by default, resticting dates range and closing the picker menu after selecting the day make the perfect birthday picker.'
+      header: 'Выбор даты - день рождения',
+      desc: 'Начиная с выбора года по умолчанию, ограничивая диапазон дат и закрывая меню выбора после выбора дня, сделайте идеальный выбор день рождения.'
     },
     datePickerDate: {
-      header: 'Date pickers - react to disaplyed month/year change',
-      desc: 'You can watch the `pickerDate` which is the displayed month/year (depending on the picker type and active view) to perform some action when it changes.'
+      header: 'Выбор даты - реакция на изменение месяца/года',
+      desc: 'Вы можете наблюдать за `pickerDate`, который является отображаемым месяцем/годом (в зависимости от типа выбора и активного вида), чтобы выполнять некоторые действия, когда он изменяется.'
     },
     dateEvents: {
-      header: 'Date pickers - Events',
-      desc: 'You can specify events using arrays, objects, and functions. To change the default color of the event use **event-color** prop.'
+      header: 'Выбор даты - События',
+      desc: 'Вы можете указать события, используя массивы, объекты и функции. Чтобы изменить цвет по умолчанию для события, используйте **event-color** prop.'
     },
     dateInternationalization: {
-      header: 'Date pickers - Internationalization',
-      desc: 'The date picker supports internationalization through the JavaScript Date object. Specify a BCP 47 language tag using the `locale` prop, and then set the first day of the week with the `first-day-of-week` prop.'
+      header: 'Выбор даты - интернационализация',
+      desc: 'Выбор даты поддерживает интернационализацию через объект JavaScript Date. Укажите тег языка BCP 47, используя `locale`, а затем установите первый день недели с помощью `first-day-of-week` .'
     },
     dateIcons: {
-      header: 'Date pickers - icons',
-      desc: 'You can override the default icons used in the picker.'
+      header: 'Выбор даты - иконки',
+      desc: 'Вы можете переопределить иконки по умолчанию, используемые в сборщике.'
     },
     dateReadonly: {
-      header: 'Date pickers - read only',
-      desc: 'Selecting new date could be disabled by adding **readonly** prop.'
+      header: 'Выбор даты - только для чтения',
+      desc: 'Выбор новой даты может быть отключен путем добавления **readonly** prop.'
     },
     dateCurrent: {
-      header: 'Date pickers - current date indicator',
-      desc: 'By default the current date is displayed using outline button - **show-current** prop allows you to remove the border or select different date to be displayed as the current one.'
+      header: 'Выбор даты - текущий индикатор даты',
+      desc: 'По умолчанию текущая дата отображается с помощью контурной кнопки - **show-current** prop позволяет удалить границу или выбрать другую дату, которая будет отображаться как текущая.'
     },
     monthLight: {
-      header: 'Month pickers',
-      desc: 'Month pickers come in two orientation variations, portrait **(default)** and landscape.'
+      header: 'Выбор месяца',
+      desc: 'Выбор месяца имеет два варианта ориентации: портретная **(по умолчанию)** и альбомная.'
     },
     monthColorable: {
-      header: 'Month pickers - Colors',
-      desc: 'Month picker colors can be set using the `color` and `header-color` props. If `header-color` prop is not provided header will use the `color` prop value.'
+      header: 'Выбор месяца - цвета',
+      desc: 'Цвета Выбора месяца можно установить с помощью `color` и `header-color` props. Если `header-color` prop не указан, заголовок будет использовать значение `color`.'
     },
     monthDialogAndMenu: {
-      header: 'Month pickers - In dialog and menu',
-      desc: 'When integrating a picker into a `v-text-field`, it is recommended to use the **readonly** prop. This will prevent mobile keyboards from triggering. To save vertical space, you can also hide the picker title. \n\n Pickers expose a scoped slot that allow you to hook into save and cancel functionality. This will maintain an old value which can be replaced if the user cancels.'
+      header: 'Выбор месяца - В диалоговом окне и меню',
+      desc: 'При интеграции выбора `v-text-field` рекомендуется использовать **readonly** prop. Это предотвратит запуск мобильных клавиатур. Чтобы сохранить вертикальную ориентацию, вы также можете скрыть заголовок выбора. \n \n Сборщики выставляют доступный слот, который позволяет вам подключаться к функциям сохранения и отмены. Это будет поддерживать старое значение, которое может быть заменено, если пользователь отменяет.'
     },
     monthAllowedMonths: {
-      header: 'Month pickers - Allowed months',
-      desc: 'You can specify allowed months using arrays, objects, and functions.'
+      header: 'Выбор месяца - допустимые значения',
+      desc: 'Вы можете указать допустимые месяцы, используя массивы, объекты и функции.'
     },
     monthWidth: {
-      header: 'Month pickers - Setting picker width',
-      desc: 'You can specify allowed the picker\'s width or make it full width.'
+      header: 'Выбор месяца - установка ширины',
+      desc: 'Вы можете указать допустимую ширину или сделать ее на всю ширину.'
     },
     monthInternationalization: {
-      header: 'Month pickers - Internationalization',
-      desc: 'The month picker supports internationalization through the JavaScript Date object. Specify a BCP 47 language tag using the `locale` prop, and then set the first day of the week with the `first-day-of-week` prop.'
+      header: 'Выбор месяца - интернационализация',
+      desc: 'Выбор даты поддерживает интернационализацию через объект JavaScript Date. Укажите тег языка BCP 47, используя `locale`, а затем установите первый день недели с помощью `first-day-of-week` .'
     },
     monthIcons: {
-      header: 'Month pickers - icons',
-      desc: 'You can override the default icons used in the picker.'
+      header: 'Выбор месяца - иконки',
+      desc: 'Вы можете переопределить значки по умолчанию.'
     },
     monthReadonly: {
-      header: 'Month pickers - read only',
-      desc: 'Selecting new date could be disabled by adding **readonly** prop.'
+      header: 'Выбор месяца - только для чтения',
+      desc: 'Выбор новой даты можно отключить, добавив **readonly** prop.'
     },
     monthCurrent: {
-      header: 'Month pickers - current month indicator',
-      desc: 'By default the current month is displayed using outline button - **show-current** prop allows you to remove the border or select different month to be displayed as the current one.'
+      header: 'Выбор месяца - текущий индикатор месяца',
+      desc: 'По умолчанию текущий месяц отображается с помощью кнопки-контура - **show-current** prop позволяет удалить границу или выбрать другой месяц, который будет отображаться как текущий.'
     }
   }],
   props: {
     'v-date-picker': {
-      type: 'Determines the type of the picker - `date` for date picker, `month` for month picker',
-      monthFormat: 'Formatting function used for displaying months in the months table. Called with date (ISO 8601 string) and locale (string) arguments.',
-      allowedDates: 'Restricts which dates can be selected',
-      eventColor: 'Sets the color for event dot. It can be string (all events will have the same color) or `object` where attribute is the event date and value is the color for specified date or `function` taking date as a parameter and returning color for that date',
-      events: 'Marks the date as an event (only for date picker)',
-      locale: 'Sets the locale. Accepts a string with a BCP 47 language tag.',
-      firstDayOfWeek: 'Sets the first day of the week, starting with 0 for Sunday.',
-      titleDateFormat: 'Allows you to customize the format of the date string that appears in the title of the date picker. Called with date (ISO 8601 string) and locale (string) arguments.',
-      headerDateFormat: 'Allows you to customize the format of the month string that appears in the header of the calendar. Called with date (ISO 8601 string) and locale (string) arguments.',
-      yearFormat: 'Allows you to customize the format of the year string that appears in the header of the calendar. Called with date (ISO 8601 string) and locale (string) arguments.',
-      dayFormat: 'Allows you to customize the format of the day string that appears in the date table. Called with date (ISO 8601 string) and locale (string) arguments.',
-      yearIcon: 'Generates an icon next to the year',
-      min: 'Minimum allowed date/month',
-      max: 'Maximum allowed date/month',
-      pickerDate: 'Displayed year/month',
-      nextIcon: 'Sets the icon for next month/year button',
-      prevIcon: 'Sets the icon for previous month/year button',
-      readonly: 'Makes the picker readonly (doesnt\'t allow to select new date or navigate through months/years)',
-      scrollable: 'Allows changing displayed month with mouse scroll',
-      showCurrent: 'Toggles visibility of the current date/month outline or shows the provided date/month as a current'
+      type: 'Определяет тип выбора- `date` для выбора даты, `month` для выбора месяца',
+      monthFormat: 'Функция форматирования, используемая для отображения месяцев в таблице месяцев. Вызывается с датой (строка ISO 8601) и locale (string).',
+      allowedDates: 'Ограничения, которые могут быть выбраны',
+      eventColor: 'Устанавливает цвет для точки события. Это может быть строка (все события будут иметь один и тот же цвет) или `объект`, где атрибутом является дата события, а значение - цвет указанной даты или `функция`, принимающий дату в качестве параметра и возвращающий цвет для этой даты',
+      events: 'Отмечает дату как событие (только для выбора даты)',
+      locale: 'Устанавливает языковой стандарт. Принимает строку с тегом языка BCP 47.',
+      firstDayOfWeek: 'Устанавливает первый день недели, начиная с 0 для воскресенья.',
+      titleDateFormat: 'Позволяет настроить формат строки даты, который отображается в заголовке выбора даты. Вызывается с датой (строка ISO 8601) и locale (string).',
+      headerDateFormat: 'Позволяет настроить формат строки месяца, который отображается в заголовке календаря. Вызывается с датой (строка ISO 8601) и locale (string).',
+      yearFormat: 'Позволяет настроить формат строки года, отображаемой в заголовке календаря. Вызывается с датой (строка ISO 8601) и locale (string).',
+      dayFormat: 'Позволяет настроить формат дневной строки, отображаемой в таблице даты. Вызывается с датой (строка ISO 8601) и locale (string).',
+      yearIcon: 'Создает иконку рядом с годом',
+      min: 'Минимальный допустимый день/месяц',
+      max: 'Максимальный допустимый день/месяц',
+      pickerDate: 'Отображается год/месяц',
+      nextIcon: 'Устанавливает иконку для кнопки следующего месяца/года',
+      prevIcon: 'Устанавливает иконку для кнопки предыдущий месяц/год',
+      readonly: 'Делает сборщик readonly (не позволяет выбрать новую дату или перемещаться по месяцам/годам)',
+      scrollable: 'Позволяет изменять отображаемый месяц с помощью мыши',
+      showCurrent: 'Переключает видимость текущей даты/месяца или показывает предоставленную дату/месяц как текущий'
     }
   }
 }
