@@ -1,6 +1,6 @@
 export default {
   header: 'List',
-  headerText: 'The `v-list` component is used to display information. It can contain an avatar, content, actions, subheaders and much more. Lists can contain children and are used in the sidebar.',
+  headerText: '`v-list` компонент используется для отображения информации. Он может содержать аватар, контент, действия, подзаголовки и многое другое. Списки могут содержать детей и использоваться на боковой панели(sidebar).',
   components: [
     'v-list',
     'v-list-tile',
@@ -14,53 +14,53 @@ export default {
   ],
   examples: [{
     avatarTwoLines: {
-      header: 'Avatar with 2 lines',
-      desc: 'Lists can take an array of list items. When given an array, the list component will figure out the classes that are needed depending on what it was given. You can also define headers or dividers within the items array.'
+      header: 'Аватар с 2 строчками',
+      desc: 'Списки могут принимать массив элементов списка. Когда задан массив, компонент списка будет определять классы, которые необходимы в зависимости от того, что ему было дано. Вы также можете определить заголовки или разделители в массиве items.'
     },
     avatarTitleAndAction: {
-      header: 'Avatar with title and action',
-      desc: 'Lists also contain slots for a more explicit approach. If you choose this approach, remember you must provide additional props for correct spacing. In this example, we have a tile with an avatar, so we must provide an `avatar` property.'
+      header: 'Аватар с заголовком и действием',
+      desc: 'Списки также содержат слоты для более четкого подхода. Если вы выберете этот подход, помните, что вы должны предоставить дополнительные пропсы для правильного интервала. В этом примере у нас есть плитка с аватаром, поэтому мы должны предоставить свойство `avatar`.'
     },
     iconTwoLinesAndAction: {
-      header: 'Icon with 2 lines and action',
-      desc: 'Lists can contain subheaders, dividers, and can contain 1 or more lines. The subtitle will overflow with ellipsis if it extends past one line.'
+      header: 'Иконка с 2 строками и действием',
+      desc: 'Списки могут содержать подзаголовки, разделители и могут содержать 1 или более строк. Подзаголовок будет дополняться с помощью многоточия, если он не вмещается в одну строку.'
     },
     avatarThreeLines: {
-      header: 'Avatar with 3 lines',
-      desc: 'For three line lists, the subtitle will clamp vertically at 2 lines and then ellipsis. If you need more than 3 lines, it is advised to use a [card](/components/cards).'
+      header: 'Аватар с 3 строчками',
+      desc: 'Для трех линейных списков, субтитры будут зажимать вертикально на 2 строки, а затем на многоточие. Если вам требуется более 3 строк, рекомендуется использовать [card](/components/cards).'
     },
     avatarSubheaderTitleAndAction: {
-      header: 'Avatar with title and action',
-      desc: 'When a lists slot is used, you must manually define whether it contains headers, or if the items contain an avatar. This is required to maintain proper spacing.'
+      header: 'Аватар с заголовком и действием',
+      desc: 'Когда используется слот списков, вы должны вручную определить, содержит ли он заголовки, или если элементы содержат аватар. Это необходимо для поддержания правильного расстояния.'
     },
     subheadingsAndDividers: {
-      header: 'Subheadings and dividers',
-      desc: 'Lists can contain multiple subheaders and dividers.'
+      header: 'Подзаголовки и разделители',
+      desc: 'Списки могут содержать несколько подзаголовков и разделителей.'
     },
     cardList: {
-      header: 'Card image with toolbar and list',
-      desc: 'A list can be combined with a card.'
+      header: 'Изображение карты с панелью инструментов и списком',
+      desc: 'Список можно комбинировать с картой.'
     },
     titleSubtitleActionsAndActionText: {
-      header: 'Title with sub-title, actions and action-text',
-      desc: 'A list can contain a stack within an action. Ripple and router props can be passed through the main v-list, to the v-list-tile or as a property in the items array.'
+      header: 'Заголовок с _sub-title_, _actions_ и _action-text_',
+      desc: 'Список может содержать стек внутри действия. _Ripple_ и _router_ пропсы могут передаваться через главный `v-list`, в `v-list-tile` или как свойство в массиве items.'
     },
     actionTitleAndSubtitle: {
-      header: 'Action with title and sub-title',
-      desc: 'A list can contain up to 3 lines.'
+      header: 'Действие с заголовком и подзаголовком',
+      desc: 'Список может содержать до 3 строк.'
     },
     expansionLists: {
-      header: 'Expansion Lists',
-      desc: 'A list can contain a group of items which will display on click. Expansion lists are also used within the `navigation drawer` component.'
+      header: 'Расширение списков',
+      desc: 'Список может содержать группу элементов, которые будут отображаться при нажатии. Расширение списков также используются в компоненте `navigation drawer`.'
     }
   }],
   props: {
-    avatar: 'Used to set minimum tile height on a single-line list item',
-    dense: 'Lowers max height of list tiles',
-    expand: 'Will only collapse when explicitly closed',
-    subheader: 'Removes top padding. Used when previous sibling is a header',
-    threeLine: 'Increases list-tile height for three lines',
-    twoLine: 'Increases list-tile height for two lines',
-    inactive: 'If set, the list tile will not be rendered as a link even if it has to/href prop or @click handler'
+    avatar: 'Используется для установки минимальной высоты плитки в элементе списка с одной строкой',
+    dense: 'Уменьшает максимальную высоту списков',
+    expand: 'Будет только скрываться при явном закрытии',
+    subheader: 'Удаляет верхний padding. Используется, когда предыдущий sibling является заголовком',
+    threeLine: 'Увеличивает высоту списка для трех линий',
+    twoLine: 'Увеличивает высоту списка для двух линий',
+    inactive: 'Если установлено, плитка списка не будет отображаться как ссылка, даже если она должна to/href prop или обработчик @click'
   }
 }
