@@ -34,7 +34,7 @@
 </script>
 
 <style lang="stylus">
-  #carousel-view
+  #example-custom-transition
     .fade
       &-enter-active, &-leave-active, &-leave-to
         transition: .3s ease-out
