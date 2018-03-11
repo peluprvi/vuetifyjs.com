@@ -1,26 +1,26 @@
 export default {
   header: 'Subheaders',
-  headerText: 'The `v-subheader` component is used to separate sections of lists.',
+  headerText: 'Компонент `v-subheader` используется для выделения разделов списков.',
   components: ['v-subheader'],
   examples: [{
     list: {
-      header: 'List subheaders',
-      desc: 'Subheaders work great with lists for describing the information below.'
+      header: '',
+      desc: 'Подзаголовки отлично работают со списками для описания нижеприведенной информации.'
     },
     grid: {
       header: 'Grid subheaders',
-      desc: 'A subheader can add context to what a user is looking at.'
+      desc: 'Подзаголовок может добавить контекст к тому, что ищет пользователь.'
     },
     menu: {
       header: 'Menu subheaders',
-      desc: 'Using a subheader can help separate different types of actions.'
+      desc: 'Использование подзаголовка может помочь разделить различные типы действий.'
     },
     social: {
-      header: 'Subheaders with social media',
-      desc: 'Using a subheader with social media interaction.'
+      header: 'Подзаголовок с социальными сетями',
+      desc: 'Использование подзаголовка с взаимодействием в социальных сетях.'
     }
   }],
   props: {
-    inset: 'Adds identation (72px)'
+    inset: 'Добавляет отступы (72px)'
   }
 }
