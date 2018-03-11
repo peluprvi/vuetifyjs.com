@@ -1,52 +1,52 @@
 export default {
-  header: 'Navigation drawer',
-  headerText: 'The `v-navigation-drawer` component is what your users will utilize to navigate through the application. The navigation-drawer is pre-configured to work with or without **vue-router** right out the box.',
+  header: 'Панель навигации',
+  headerText: '`v-navigation-drawer`Компонент - это то, что ваши пользователи будут использовать для навигации по приложению. Панель навигации предварительно настроена для работы с **vue-router** прямо из коробки.',
   components: ['v-navigation-drawer'],
   examples: [{
     permanent: {
-      header: 'Default',
-      desc: 'The navigation drawer is primarily used to house links to the pages in your application'
+      header: 'По умолчанию',
+      desc: 'Панель навигации в основном используется для размещения ссылок на страницы вашего приложения'
     },
     permanentClipped: {
-      header: 'Colored drawer',
-      desc: 'Navigation drawers can be customized to fit any application\'s design. While any component can be used within a drawer, the primary ones you will use are `v-list`, all of the **list** children components and `v-divider`'
+      header: 'Цвета панели',
+      desc: 'Панель навигации может быть настроена в соответствии с дизайном любого приложения. Хотя любой компонент может использоваться в панели, основными из них будут `v-list`, все дочении компоненты **list** и `v-divider`'
     },
     permanentFloating: {
-      header: 'Permanent floating drawer',
-      desc: 'A navigation drawer can be placed inside of a card and float over the content background.'
+      header: 'Постоянно плавающая панель',
+      desc: 'Панель навигации может быть размещен внутри карты и плавать над фоновым контентом.'
     },
     persistent: {
-      header: 'Avatars',
-      desc: 'Since drawers support the `v-list` component, you can easily create customized dashboard solutions.'
+      header: 'Аватары',
+      desc: 'Поскольку панель поддерживает компонент `v-list`, вы можете легко создавать индивидуальные решения для панели мониторинга.'
     },
     mini: {
       header: 'Mini',
-      desc: 'The navigation drawer also has a mini-variant which can be controlled using the prop `mini-variant.sync`.'
+      desc: 'В навигационной панели также есть мини-вариант, который можно управлять с помощью prop `mini-variant.sync`.'
     },
     temporary: {
-      header: 'Temporary',
-      desc: 'A temporary drawer sits above its application and uses a scrim (overlay) to darken the background. This drawer behavior is mimicked on the persistent drawer when on mobile. Clicking outside of the drawer will cause it to close.'
+      header: 'Временный',
+      desc: 'Временная панель находиться над своим приложением и использует холст (наложение), чтобы затемнить фон. Это поведение панели подражает нативной панели меню на мобильном устройстве. Щелчок за пределами ящика приведет к его закрытию.'
     },
     dark: {
-      header: 'Dark theme',
-      desc: 'Vuetify also supports the dark application theme. This will not override components that have default themes so in some cases it will be necessary to manually set the dark theme accents.',
+      header: 'Темная тема',
+      desc: 'Vuetify также поддерживает темную тему приложения. Это не изменит компоненты, которые имеют темы по умолчанию, поэтому в некоторых случаях необходимо вручную установить темные темы.',
       uninverted: true
     }
   }],
   props: {
     absolute: 'Mixins.Positionable.props.absolute',
-    clipped: 'A clipped drawer rests under the application toolbar',
-    disableResizeWatcher: 'Will automatically open/close drawer when resized depending if mobile or desktop.',
-    disableRouteWatcher: 'Disables opening of navigation drawer when route changes',
+    clipped: 'Обрезанный ящик находится под панелью инструментов приложения',
+    disableResizeWatcher: 'Будет автоматически открывать/закрывать панель при изменении размера в зависимости от мобильного или desktop.',
+    disableRouteWatcher: 'Отключает открытие навигационной панели при изменении route',
     fixed: 'Mixins.Positionable.props.fixed',
-    floating: 'A floating drawer has no visible container (no border-right)',
-    hideOverlay: 'Hide the display of the overlay',
-    miniVariantWidth: 'Designates the width assigned when the `mini` prop is turned on',
-    miniVariant: 'Condenses navigation drawer width, also accepts the **.sync** modifier. With this, the drawer will re-open when clicking it',
-    permanent: 'The drawer remains visible regardless of screen size',
-    right: 'Places the navigation drawer on the right',
-    stateless: 'Remove all automated state functionality (resize, mobile, route) and manually control the drawer state',
-    temporary: 'A temporary drawer sits above its application and uses a scrim (overlay) to darken the background',
-    touchless: 'Disable mobile touch functionality'
+    floating: 'Плавающая панель не имеет видимого контейнера (без границ)',
+    hideOverlay: 'Скрыть отображение наложения',
+    miniVariantWidth: 'Определяет ширину, назначенную при включении prop `mini`',
+    miniVariant: 'Condenses ширина панели навигации, также принимает модификатор **.sync **. При этом панель снова откроется при нажатии',
+    permanent: 'Панель остается видимой независимо от размера экрана',
+    right: 'Помещает панель навигации справа',
+    stateless: 'Удалите все автоматизированные функции состояния (изменение размера, мобильность, роут) и вручную управляйте состоянием панели',
+    temporary: 'Временная панель находиться над своим приложением и использует холст (наложение), чтобы затемнить фон',
+    touchless: 'Отключить touch - функциональность мобильного телефона'
   }
 }
