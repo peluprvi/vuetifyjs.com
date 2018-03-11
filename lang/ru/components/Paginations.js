@@ -1,40 +1,40 @@
 export default {
   header: 'Pagination',
-  headerText: 'The `v-pagination` component is used to separate long sets of data so that it is easier for a user to consume information. Depending on the length provided, the pagination component will automatically scale. To maintain the current page, simply supply a `v-model` attribute.',
+  headerText: 'Компонент `v-pagination` используется для разделения длинных наборов данных, чтобы пользователь мог потреблять информацию. В зависимости от предоставленной длины компонент pagination будет автоматически масштабироваться. Чтобы сохранить текущую страницу, просто поставьте атрибут `v-model`.',
   components: ['v-pagination'],
   examples: [{
     short: {
-      header: 'Short',
-      desc: 'Pagination displays all pages if parent container is big enough.'
+      header: 'Короткий',
+      desc: 'Pagination отображает все страницы, если родительский контейнер достаточно велик.'
     },
     long: {
-      header: 'Long',
-      desc: 'When the number of page buttons exceeds the parent container, the component will truncate the list.'
+      header: 'Длинный',
+      desc: 'Когда количество кнопок страницы превышает родительский контейнер, компонент усекает список.'
     },
     limit: {
-      header: 'Limit',
-      desc: 'You can also manually set the maximum number of visible page buttons with the `total-visible` prop.'
+      header: 'Лимит',
+      desc: 'Вы также можете вручную установить максимальное количество видимых кнопок страницы с помощью `total-visible` prop.'
     },
     round: {
-      header: 'Round',
-      desc: 'The alternate style for pagination is circle pages.'
+      header: 'Круглые',
+      desc: 'Альтернативный стиль для разбивки на страницы - это круглые страницы.'
     },
     icons: {
-      header: 'Icons',
-      desc: 'Previous and next page icons can be customized with `prev-icon` and `next-icon` props.'
+      header: 'Иконки',
+      desc: 'Иконки предыдущей и следующей страницы можно настроить с помощью `prev-icon` и `next-icon` props.'
     },
     disabled: {
       header: 'Disabled',
-      desc: 'Pagination items can be manually deactivated.'
+      desc: 'Элементы разбиения на страницы можно вручную отключить.'
     }
   }],
   props: {
-    circle: 'Shape pagination elements as circles',
-    disabled: 'Disables component',
-    length: 'The length of the paginator',
-    nextIcon: 'Specify the icon to use for the next icon',
-    prevIcon: 'Specify the icon to use for the prev icon',
-    totalVisible: 'Specify the max total visible pagination numbers',
-    value: 'Current selected page'
+    circle: 'Элементы разбиения на фигуры в виде кругов',
+    disabled: 'Отключенный компонент',
+    length: 'Длина paginator',
+    nextIcon: 'Укажите иконку, которая будет использоваться для иконки "следующее"',
+    prevIcon: 'Укажите иконку, которая будет использоваться для иконки "предыдущее"',
+    totalVisible: 'Укажите максимальное количество отображаемых номеров страниц',
+    value: 'Текущая выбранная страница'
   }
 }
