@@ -1,6 +1,6 @@
 export default {
   header: 'Tab',
-  headerText: 'The `v-tabs` component is used for hiding content behind a selectable item. This can also be used as a pseudo-navigation for a page, where the tabs are links and the tab-items are the content.',
+  headerText: 'Компонент `v-tabs` используется для скрытия содержимого за выбранным элементом. Это также можно использовать в качестве псевдо-навигации для страницы, где вкладки являются ссылками, а вкладками являются содержимое.',
   components: [
     'v-tabs',
     'v-tab',
@@ -15,53 +15,53 @@ export default {
     },
     fixedTabs: {
       header: 'Fixed tabs',
-      desc: 'The **fixed-tabs** prop sets a higher minimum width and applies a new maximum width to `v-tabs-items`. On desktop screens, the tab items will be centered within the `v-tabs` component and switch to evenly fill on mobile.'
+      desc: '**fixed-tabs** prop устанавливает более высокую минимальную ширину и применяет новую максимальную ширину к `v-tabs-items`. На desktop screens элементы вкладки будут центрироваться в компоненте `v-tabs` и переключаться на равномерное заполнение на мобильном устройстве.'
     },
     right: {
-      header: 'Right aligned tabs',
-      desc: 'The **right** prop aligns the tabs to the right'
+      header: 'Выровненные справа tabs',
+      desc: '**right** prop выравнивает tabs в право'
     },
     content: {
-      header: 'Content',
-      desc: 'Tabs are not the only thing you can put inside the `v-tabs` component. In this example we\'ve also added a toolbar.'
+      header: 'Контент',
+      desc: 'Вкладки - это не единственное, что можно добавить в компонент `v-tabs`. В этом примере мы также добавили панель инструментов.'
     },
     search: {
-      header: 'With search',
-      desc: 'Here is another example of additional content inside the `v-tabs` component.'
+      header: 'С поиском',
+      desc: 'Вот еще один пример дополнительного содержимого внутри компонента `v-tabs`.'
     },
     iconsAndText: {
-      header: 'Icons and text',
-      desc: 'By using the **icons-and-text** prop you can add icons to each tab item.'
+      header: 'Иконки и текст',
+      desc: 'Используя **icons-and-text** prop, вы можете добавлять значки к каждому элементу табуляции.'
     },
     desktop: {
       header: 'Desktop tabs',
       desc: ''
     },
     alignWithTitle: {
-      header: 'Align tabs with toolbar title',
-      desc: 'Make `v-tabs` lined up with the `v-toolbar-title` component (`v-toolbar-side-icon` or `v-btn` must be used in `v-toolbar`). May not work if the tab text is wrapped.'
+      header: 'Выровнять вкладки с заголовком панели инструментов',
+      desc: 'Создайте `v-tabs`, выровненные с компонентом `v-toolbar-title` (`v-toolbar-side-icon` или `v-btn` должны использоваться в `v-toolbar`). Может не работать, если текст вкладки завернут.'
     },
     grow: {
       header: 'Grow',
-      desc: 'The **grow** prop will make the tab items take up all available space.'
+      desc: '**grow** prop сделают элементы вкладки заняты всем доступным пространством.'
     },
     overflowToMenu: {
-      header: 'With menu',
-      desc: 'You can use a menu to hold additional tabs, swapping them out on the fly'
+      header: 'С меню',
+      desc: 'Вы можете использовать меню, чтобы удерживать дополнительные вкладки, заменяя их на лету'
     },
     pagination: {
       header: 'Pagination',
-      desc: 'If the tab items overflow their container, pagination controls will appear.'
+      desc: 'Если элементы табуляции переполняют свой контейнер, появятся элементы управления разбиением на страницы.'
     },
     icons: {
-      header: 'Custom icons',
-      desc: '**prev-icon** and **next-icon** can be used for applying custom pagination icons.'
+      header: 'Пользовательские иконки',
+      desc: '**prev-icon** и **next-icon** могут использоваться для применения пользовательских значков разбиения на страницы.'
     }
   }],
   props: {
-    alignWithTitle: 'Make `v-tabs` lined up with the toolbar title',
-    prevIcon: 'Left pagination icon',
-    nextIcon: 'Right pagination icon',
-    right: 'Aligns tabs to the right'
+    alignWithTitle: 'Сделайте `v-tabs` выровненным с заголовком панели инструментов',
+    prevIcon: 'Значок левой страницы',
+    nextIcon: 'Значок правой страницы',
+    right: 'Выравнивает вкладки вправо'
   }
 }
