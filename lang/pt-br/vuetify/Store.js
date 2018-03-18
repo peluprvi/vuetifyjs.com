@@ -1,6 +1,6 @@
 export default {
   indexHeader: 'Seja bem vindo a nossa nova Loja!',
-  indexSubheader: 'Sobrecarregue seu Desenvolvimento',
+  indexSubheader: 'Dê um UP no seu Desenvolvimento',
   cartHeader: 'Seu carrinho de compras',
   cartSubheader: 'Você está quase lá!',
   cartEmptySubheader: 'Seu carrinho está vazio',

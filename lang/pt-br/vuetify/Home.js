@@ -1,17 +1,17 @@
 export default {
   announcementBanner: 'Ahh simmm, isto é um anúncio excitante! Ou talvez é uma propaganda!',
   heading1: 'Vuetify',
-  heading1cont: 'Material Component Framework',
+  heading1cont: 'Framework de Componentes do Material',
   getStarted: 'Começar',
   features: [
     {
       img: '/static/doc-images/feature1.svg',
       title: 'Ready-Made Project Scaffolding',
-      text: 'Vuetify vem pronto com 8 modelos pré-fabricados no vue-cli. Do simples html ao completo SSR, você estará pronto para desenvolver em minutos.'
+      text: 'Vuetify vem pronto com 8 modelos pré-fabricados no vue-cli. Do simples HTML ao SSR completo, você estará pronto para desenvolver em minutos.'
     },
     {
       img: '/static/doc-images/feature2.svg',
-      title: 'Semantic Material Components',
+      title: 'Componentes do Material Semânticos',
       text: 'Esteja preparado para um conjunto de componentes especializados à sua disposição. Com mais de 80 no total, existe uma solução para qualquer aplicação.'
     },
     {
@@ -23,13 +23,13 @@ export default {
   checkFeaturesTitle: 'Todas as Ferramentas que você precisa',
   checkFeaturesTitleCtd: 'Para criar Incríveis Interfaces de Usuário',
   checkFeatures: [
-    'Apoio ao chat da comunidade',
+    'Suporte pelo chat da comunidade',
     'Temas Dinâmicos',
-    'Suporte para SSR e PWA',
+    'Suporte a SSR e PWA',
     '8 Modelos no vue-cli'
   ],
   checkFeaturesCtd: [
-    '80+ Componentes em Material Design',
+    'Mais de 80 componentes do Material Design',
     'Importação "A La Carte"',
     'Componentes com Transição (Transition Components)',
     'Extremamente rápido'
@@ -46,7 +46,7 @@ export default {
     showYourSupport: 'Mostre seu apoio ao Vuetify',
     becomingAPatron: 'se tornando um patrono'
   },
-  becomeSponsor: 'Se torne um Patrocinador',
+  becomeSponsor: 'Torne-se um Patrocinador',
   proudlySponsoredBy: 'Patrocinadores do nosso Patreon',
-  callout: 'Sobrecarregue seu desenvolvimento com o poder do Vue e do Material Design'
+  callout: 'Dê um up seu desenvolvimento com o poder do Vue e do Material Design'
 }
