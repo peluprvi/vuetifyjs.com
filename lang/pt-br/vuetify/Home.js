@@ -23,7 +23,7 @@ export default {
   checkFeaturesTitle: 'Todas as Ferramentas que você precisa',
   checkFeaturesTitleCtd: 'Para criar Incríveis Interfaces de Usuário',
   checkFeatures: [
-    'Apoio no chat da comunidade',
+    'Suporte pelo chat da comunidade',
     'Temas Dinâmicos',
     'Suporte a SSR e PWA',
     '8 Modelos no vue-cli'
