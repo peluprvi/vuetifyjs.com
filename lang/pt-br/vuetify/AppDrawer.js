@@ -1,4 +1,4 @@
 export default {
-  becomeASponsor: 'Seja um Patrão',
+  becomeASponsor: 'Seja um Patrono',
   diamondSponsors: 'Patrocinadores Diamante'
 }
