@@ -48,5 +48,8 @@ export default {
   },
   becomeSponsor: 'Стать спонсором',
   proudlySponsoredBy: 'Спонсоры Patreon',
-  callout: 'Повысьте эффективность разработки Vue и Material Design'
+  callout: 'Повысьте эффективность разработки Vue и Material Design',
+  madeWithVuetify: 'Проекты, выполненные с помощью Vuetify',
+  materialDesign: 'Material Design',
+  mit: 'MIT License'
 }
