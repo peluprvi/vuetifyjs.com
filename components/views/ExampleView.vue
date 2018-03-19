@@ -1,5 +1,8 @@
 <template lang="pug">
-  doc-view(:toc="toc")
+  doc-view(
+    :toc="toc"
+    :id="folder"
+  )
     template(slot-scope="{ namespace }")
       section(v-if="usage")#usage
         section-head(value="Generic.Pages.usage")
@@ -21,11 +24,10 @@
             color="grey lighten-3"
             slider-color="primary"
           )
-            template(v-for="(tab, i) in tabs")
+            template(v-for="(tab, i) in computedTabs")
               v-tab(
                 :key="i"
                 :href="`#${tab}`"
-                v-if="hasTab(tab)"
               ) {{ tab.replace(/([A-Z])/g, ' $1') }}
           v-card-title
             v-select(
@@ -48,7 +50,7 @@
             )
           v-tabs-items(touchless v-model="tab").white
             v-tab-item(
-              v-for="(tabItem, i) in tabs"
+              v-for="(tabItem, i) in computedTabs"
               :id="tabItem"
               :key="i"
             )
@@ -158,6 +160,9 @@
 
         return components
       },
+      computedTabs () {
+        return this.tabs.filter(tab => (this.currentApi[tab] || []).length > 0)
+      },
       currentApi () {
         return this.api[this.current] || {
           props: [],
@@ -206,7 +211,16 @@
 
     watch: {
       currentApi () {
-        if (!this.currentApi.hasOwnProperty(this.tab)) this.tab = 'props'
+        if (this.currentApi.hasOwnProperty(this.tab) &&
+          this.currentApi[this.tab].length > 0
+        ) return
+
+        for (let tab of ['props', 'slots']) {
+          if (this.currentApi[tab].length > 0) {
+            this.tab = tab
+            break
+          }
+        }
       }
     },
 

@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <v-navigation-drawer
       fixed
-      :clipped="$vuetify.breakpoint.mdAndUp"
+      :clipped="$vuetify.breakpoint.lgAndUp"
       app
       v-model="drawer"
     >
@@ -69,7 +69,7 @@
       color="blue darken-3"
       dark
       app
-      :clipped-left="$vuetify.breakpoint.mdAndUp"
+      :clipped-left="$vuetify.breakpoint.lgAndUp"
       fixed
     >
       <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
@@ -113,6 +113,12 @@
               <v-icon large>code</v-icon>
             </v-btn>
             <span>Source</span>
+          </v-tooltip>
+          <v-tooltip right>
+            <v-btn icon large href="https://codepen.io/johnjleider/pen/EQOYVV" target="_blank" slot="activator">
+              <v-icon large>mdi-codepen</v-icon>
+            </v-btn>
+            <span>Codepen</span>
           </v-tooltip>
         </v-layout>
       </v-container>

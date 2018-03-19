@@ -51,7 +51,7 @@
       app
     >
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-icon class="mx-3">fa-youtube</v-icon>
+      <v-icon class="mx-3">fab fa-youtube</v-icon>
       <v-toolbar-title class="mr-5 align-center">
         <span class="title">Youtube</span>
       </v-toolbar-title>
@@ -82,6 +82,12 @@
                 <v-icon large>code</v-icon>
               </v-btn>
               <span>Source</span>
+            </v-tooltip>
+            <v-tooltip right>
+              <v-btn icon large href="https://codepen.io/johnjleider/pen/YeRKwQ" target="_blank" slot="activator">
+                <v-icon large>mdi-codepen</v-icon>
+              </v-btn>
+              <span>Codepen</span>
             </v-tooltip>
           </v-flex>
         </v-layout>
@@ -114,9 +120,3 @@
     }
   }
 </script>
-
-<style>
-  .input-group__details:after {
-    background-color: rgba(255, 255, 255, 0.32) !important;
-  }
-</style>

@@ -11,12 +11,20 @@ export default {
       size: 70,
       href: 'http://intygrate.com/',
       src: 'backers/intygrate.png'
+    },
+    {
+      title: 'ResaleAI',
+      size: 70,
+      href: 'http://resaleai.com/',
+      src: 'backers/resaleai_logo_blue.svg'
     }
   ],
   palladium: [
     { title: 'Eikos Partners', size: 50, href: 'http://www.eikospartners.com/', src: 'backers/eikos-partners.webp' },
     { title: 'rateGenius', size: 50, href: 'https://application.rategenius.com/', src: 'backers/rate-genius.png' },
-    { title: 'quitt.ch', size: 50, href: 'https://quitt.ch', src: 'backers/quitt.png' }
+    { title: 'quitt.ch', size: 50, href: 'https://quitt.ch', src: 'backers/quitt.png' },
+    { title: 'Clearblue Technologies', size: 50, href: 'http://www.clearbluetechnologies.com/', src: 'backers/clear-blue.png'
+    }
   ],
   gold: [
     { title: 'Deister Software', href: 'http://www.deister.es/', src: 'backers/deister-logo-light.png' },
@@ -24,8 +32,8 @@ export default {
     { title: 'Cycloid', href: 'https://www.cycloid.io/', src: 'backers/cycloid.png' },
     { title: 'Live Casino', href: 'https://livecasino.com/', src: 'backers/casino.webp', dark: true },
     { title: 'Nate Controls', href: 'http://www.natecontrols.com/', src: 'backers/n8controls.png' },
-    { title: 'Trek10', href: 'https://www.trek10.com/', src: 'backers/trek10.svg' },
-    { title: 'Zweidenker', href: 'http://zweidenker.de/', src: 'backers/zweidenker-logo-grey.svg' }
+    { title: 'Zweidenker', href: 'http://zweidenker.de/', src: 'backers/zweidenker-logo-grey.svg' },
+    { title: 'Identity Panel', size: 100, href: 'https://support.identitypanel.com/', src: 'backers/identity-panel.png' }
   ],
   affiliates: [
     {

@@ -1,13 +1,13 @@
 <template lang="pug">
   v-toolbar(
-    color="primary"
     app
+    color="primary"
     dark
     fixed
-    scroll-off-screen
     height="58px"
+    :flat="isHome"
     :manual-scroll="isManualScrolled"
-    :inverted-scroll="isHome"
+    :scroll-off-screen="!isHome"
     ref="toolbar"
   )#app-toolbar
     v-toolbar-side-icon(
@@ -81,6 +81,7 @@
         bottom
         left
         offset-y
+        max-height="500"
         v-show="!isStore"
       )
         v-btn(
@@ -119,6 +120,7 @@
 
       v-menu(
         bottom
+        left
         offset-y
         attach
         v-show="!isStore"

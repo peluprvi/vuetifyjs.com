@@ -1,20 +1,14 @@
 <template lang="pug">
   doc-view
     template(slot-scope="{ namespace }")
-      a(href="https://www.patreon.com/bePatron?u=6223325" target="_blank").d-inline-block.mb-5
-        img(
-          src="/static/doc-images/become_a_patron_button.png"
-          alt="Become a Patron"
-          width="175px"
-        )
       section#sponsors-and-backers
         section-head(value="GettingStarted.SponsorsAndBackers.backersHeader")
         v-divider.mb-3
-        v-list.transparent
+        v-list(dense).transparent
           v-list-tile
-            v-list-tile-title
+            v-list-tile-title.title.grey--text
               strong {{ $t('GettingStarted.SponsorsAndBackers.backersSubHeader') }}
-        v-container(fluid grid-list-md).mb-5
+        v-container(fluid grid-list-md).mb-3
           v-layout(
             row
             wrap
@@ -28,17 +22,17 @@
               v-for="backer in diamond"
               v-bind:key="backer.title"
               @click="$ga.event('backers page click', 'click', backer.title)"
-            ).text-xs-center.mx-3
+            ).text-xs-center.ma-3
               img(
                 :src="`/static/doc-images/${backer.src}`"
                 :alt="backer.title"
               ).supporter
 
-        v-list.transparent
+        v-list(dense).transparent
           v-list-tile(tag="div")
-            v-list-tile-title
+            v-list-tile-title.title.grey--text
               strong {{ $t('GettingStarted.SponsorsAndBackers.backersSubHeader2') }}
-        v-container(fluid grid-list-md).mb-5
+        v-container(fluid grid-list-md).mb-3
           v-layout(row wrap justify-start align-center)
             a(
               target="_blank"
@@ -48,17 +42,17 @@
               v-for="backer in palladium"
               v-bind:key="backer.title"
               @click="$ga.event('backers page click', 'click', backer.title)"
-            ).text-xs-center.mx-3
+            ).text-xs-center.ma-3
               img(
                 :src="`/static/doc-images/${backer.src}`"
                 :alt="backer.title"
               ).supporter
 
-        v-list.transparent
+        v-list(dense).transparent
           v-list-tile(tag="div")
-            v-list-tile-title
+            v-list-tile-title.title.grey--text
               strong {{ $t('GettingStarted.SponsorsAndBackers.backersSubHeader4') }}
-        v-container(fluid grid-list-md).mb-5
+        v-container(fluid grid-list-md).mb-3
           v-layout(
             row
             wrap
@@ -73,15 +67,15 @@
               v-for="backer in gold"
               v-bind:key="backer.title"
               @click="$ga.event('backers page click', 'click', backer.title)"
-            ).text-xs-center.mx-3
+            ).text-xs-center.ma-3
               img(
                 :src="`/static/doc-images/${backer.src}`"
                 :alt="backer.title"
-                style="max-width: 150px;"
+                :style="`max-width: ${backer.size || 150}px;`"
               ).supporter
         section-head(value="GettingStarted.SponsorsAndBackers.affiliatesHeader")
         v-divider.mb-3
-        v-container(fluid grid-list-md).mb-5.affiliates
+        v-container(fluid grid-list-md).mb-5.affiliate3
           v-layout(
             row
             wrap
@@ -104,7 +98,7 @@
               ).supporter
         section-head(value="GettingStarted.SponsorsAndBackers.sponsorsHeader")
         v-divider.mb-3
-        v-container(fluid).mb-5
+        v-container(fluid).mb-3
           v-layout(
             row
             wrap
