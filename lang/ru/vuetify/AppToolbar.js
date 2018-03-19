@@ -1,38 +1,38 @@
 export default {
-  backToDocs: 'Back to Docs',
+  backToDocs: 'Вернуться к Документации',
   cart: 'Cart',
-  docs: 'Docs',
-  documentation: 'Documentation',
-  ecosystem: 'Ecosystem',
+  docs: 'Док',
+  documentation: 'Документация',
+  ecosystem: 'Экосистема',
   ecosystems: [
     {
       href: 'https://community.vuetifyjs.com/',
-      text: 'Community',
+      text: 'Сообщество',
       icon: 'mdi-account-multiple'
     },
     {
       href: 'https://medium.com/vuetify',
-      text: 'Medium Publication',
+      text: 'Публикации на Medium',
       icon: 'mdi-medium'
     },
     {
       href: 'https://github.com/vuetifyjs/awesome-vuetify',
-      text: 'Awesome Vuetify',
+      text: 'Потрясающее Vuetify',
       icon: 'mdi-creation'
     },
     {
       href: 'https://issues.vuetifyjs.com',
-      text: 'Create an Issue',
+      text: 'Создать Issue',
       icon: 'mdi-alert-octagon'
     },
     {
       href: 'https://template.vuetifyjs.com',
-      text: 'Codepen Template',
+      text: 'Шаблоны в Codepen',
       icon: 'mdi-codepen'
     },
     {
       href: 'https://github.com/vuetifyjs/vuetify/releases',
-      text: 'Latest Releases',
+      text: 'Последние релизы',
       icon: 'mdi-format-list-checks'
     },
     {
@@ -46,7 +46,7 @@ export default {
       icon: 'mdi-stack-overflow'
     }
   ],
-  quickLinks: 'Quick Links',
+  quickLinks: 'Быстрые ссылки',
   social: 'Social',
   socials: [
     {
@@ -65,5 +65,5 @@ export default {
       icon: 'mdi-facebook-box'
     }
   ],
-  store: 'Store'
+  store: 'Магазин'
 }
