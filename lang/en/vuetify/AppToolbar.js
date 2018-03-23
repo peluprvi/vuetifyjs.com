@@ -11,6 +11,11 @@ export default {
       icon: 'mdi-account-multiple'
     },
     {
+      href: 'https://www.reddit.com/r/vuetifyjs/',
+      text: 'Reddit',
+      icon: 'mdi-reddit'
+    },
+    {
       href: 'https://medium.com/vuetify',
       text: 'Medium Publication',
       icon: 'mdi-medium'
@@ -37,7 +42,7 @@ export default {
     },
     {
       href: 'https://github.com/vuetifyjs/vuetify/issues',
-      text: 'Github Issue board',
+      text: 'GitHub Issue board',
       icon: 'mdi-github-face'
     },
     {
@@ -51,7 +56,7 @@ export default {
   socials: [
     {
       href: 'https://github.com/vuetifyjs/vuetify',
-      text: 'Github',
+      text: 'GitHub',
       icon: 'mdi-github-box'
     },
     {

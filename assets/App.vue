@@ -19,7 +19,10 @@
   import AppView from '@/components/core/AppView'
   import Meta from '@/mixins/meta'
 
-  import { mapState } from 'vuex'
+  import {
+    mapMutations,
+    mapState
+  } from 'vuex'
 
   export default {
     name: 'Documentation',
@@ -45,9 +48,22 @@
 
     mounted () {
       this.getReleases()
+
+      this.snackbar({
+        color: 'default',
+        close: true,
+        id: 'vue-conf-sale',
+        text: 'Go To Store',
+        msg: 'The _Vuetify Alpha Theme_ on **SALE** through 3/28',
+        to: { name: 'store/Index' },
+        timeout: 0
+      })
     },
 
     methods: {
+      ...mapMutations('app', {
+        snackbar: 'SNACKBAR'
+      }),
       getReleases () {
         this.$http.get('/releases/releases.json').then(({ data }) => {
           this.$store.commit('app/RELEASES', data)

@@ -1,7 +1,7 @@
 <template>
   <v-snackbar
-    top
-    center
+    bottom
+    right
     :color="snackbar.color"
     :timeout="snackbar.timeout"
     v-model="snack"
@@ -16,16 +16,29 @@
       >
         {{ computedIcon }}
       </v-icon>
-      <span v-text="snackbar.msg" />
+      <markdown
+        class="snack-markdown"
+        :source="snackbar.msg"
+      />
       <v-spacer />
       <v-btn
-        flat
-        :ripple="false"
-        @click="onClick"
         dark
+        flat
+        @click="onClick"
         :color="!computedIcon ? 'primary lighten-3' : null"
+        :ripple="false"
+        v-bind="bind"
       >
         {{ snackbar.text }}
+      </v-btn>
+      <v-btn
+        icon
+        class="ml-3"
+        @click="markViewed"
+        v-if="snackbar.close"
+        :ripple="false"
+      >
+        <v-icon>clear</v-icon>
       </v-btn>
     </v-layout>
   </v-snackbar>
@@ -43,6 +56,18 @@
       ...mapState('app', {
         snackbar: state => state.appSnackbar
       }),
+      bind () {
+        if (this.snackbar.to) return { to: this.snackbar.to }
+        if (this.snackbar.href) {
+          return {
+            href: this.snackbar.href,
+            target: '_blank',
+            rel: 'noopener'
+          }
+        }
+
+        return {}
+      },
       computedIcon () {
         switch (this.snackbar.color) {
           case 'success': return 'check'
@@ -59,13 +84,23 @@
         this.snack = false
       },
       snackbar () {
+        if (localStorage.getItem(this.snackbar.id)) return
+
         this.snack = true
       }
     },
 
     methods: {
-      onClick () {
+      markViewed () {
+        if (this.snackbar.id) {
+          localStorage.setItem(this.snackbar.id, true)
+        }
         this.snack = false
+      },
+      onClick () {
+        this.$ga.event('snackbar', 'click', this.snackbar.id)
+
+        this.markViewed()
 
         this.snackbar.handler &&
           this.snackbar.handler()
@@ -73,3 +108,9 @@
     }
   }
 </script>
+
+<style>
+  .snack-markdown p {
+    margin-bottom: 0 !important;
+  }
+</style>
