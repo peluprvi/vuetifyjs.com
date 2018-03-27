@@ -16,6 +16,6 @@ export default {
     {
       text: 'Get Started',
       href: 'get-started'
-    },
+    }
   ]
 }
