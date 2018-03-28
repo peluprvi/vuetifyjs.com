@@ -45,9 +45,10 @@
               v-icon(left) mdi-github-circle
               | Github
             v-btn(
-              color="dark"
+              color="white"
               href="https://community.vuetifyjs.com"
               large
+              outline
               rel="noopener"
               target="_blank"
             )
