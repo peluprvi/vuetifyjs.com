@@ -7,7 +7,7 @@ export default {
   getStartedText3: 'Generate a project using vue-cli 3.0',
   getStartedText4: 'Before installing the vuetify plugin, make sure to commit or stash your changes in case you need to revert',
   getStartedText5: 'To install and invoke the vuetify plugin...',
-  getStartedText6: 'That\'s it! Let us know what you think on [discord](https://discordapp.com/channels/340160225338195969/340160225338195969).',
+  getStartedText6: 'That\'s it! Let us know what you think on [discord](https://community.vuetifyjs.com).',
   toc: [
     {
       text: 'Overview',
