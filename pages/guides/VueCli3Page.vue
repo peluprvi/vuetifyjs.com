@@ -13,9 +13,7 @@
       section-text(value="Guides.VueCli3.getStartedText5")
 
       markup(lang="bash")
-        | npm i -D vue-cli-plugin-vuetify
-        | vue invoke vuetify
-        | npm run serve
+        | vue add vuetify
 
       section-text(value="Guides.VueCli3.getStartedText6")
 </template>
