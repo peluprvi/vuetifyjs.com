@@ -182,9 +182,9 @@
       &__image
         max-width: 90%
 
-    .carousel
-      .carousel__left,
-      .carousel__right
+    .v-carousel
+      .v-carousel__left,
+      .v-carousel__right
         .icon
           color: rgba(#000, .54) !important
 
