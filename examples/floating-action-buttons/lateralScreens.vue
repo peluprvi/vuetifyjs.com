@@ -69,7 +69,7 @@
 
 <style>
   /* This is for documentation purposes and will not be needed in your application */
-  #lateral .speed-dial,
+  #lateral .v-speed-dial,
   #lateral .btn--floating {
     position: absolute;
   }

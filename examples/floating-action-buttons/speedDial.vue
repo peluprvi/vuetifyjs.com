@@ -128,7 +128,7 @@
 
 <style>
   /* This is for documentation purposes and will not be needed in your application */
-  #create .speed-dial {
+  #create .v-speed-dial {
     position: absolute;
   }
 
