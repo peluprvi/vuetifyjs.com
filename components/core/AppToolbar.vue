@@ -58,7 +58,7 @@
             :key="language.locale"
             @click="translateI18n(language.locale)"
           )
-            v-list-tile-avatar(size="24px").avatar--tile
+            v-list-tile-avatar(tile size="24px")
               img(
                 :src="`https://countryflags.io/${language.country}/flat/24.png`"
                 width="24px"
