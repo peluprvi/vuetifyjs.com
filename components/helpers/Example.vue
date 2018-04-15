@@ -245,10 +245,10 @@
       .expansion-panel__body
         border: none
 
-      .tabs__item, .markup
+      .v-tabs__item, .markup
         height: 100%
 
-      .tabs__items
+      .v-tabs__items
         border: none
         max-height: 500px
         overflow-y: auto

@@ -24,8 +24,8 @@
         >
           {{ item }}
         </v-tab>
-        <v-menu left bottom class="tabs__div" v-if="more.length">
-          <a class="tabs__item" slot="activator">
+        <v-menu left bottom class="v-tabs__div" v-if="more.length">
+          <a class="v-tabs__item" slot="activator">
             more
             <v-icon>arrow_drop_down</v-icon>
           </a>

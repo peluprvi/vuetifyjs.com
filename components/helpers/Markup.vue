@@ -175,7 +175,7 @@
         color: $grey.base
         font-weight: 300
 
-  .tabs
+  .v-tabs
     .markup
       max-width: 100%
 </style>
