@@ -53,7 +53,7 @@
 </script>
 
 <style lang="stylus" scoped>
-  .portrait.card
+  .portrait.v-card
     margin: 0 auto
     max-width: 600px
     width: 100%
