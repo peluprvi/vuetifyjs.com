@@ -178,7 +178,7 @@
     display: flex
     flex-direction: column
 
-    .jumbotron
+    .v-jumbotron
       &__image
         max-width: 90%
 

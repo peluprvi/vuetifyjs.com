@@ -263,6 +263,6 @@
     .overlay
       z-index: 1
 
-    nav.toolbar
+    nav.v-toolbar
       z-index: 0
 </style>

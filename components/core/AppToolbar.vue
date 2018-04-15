@@ -254,14 +254,14 @@
 
 <style lang="stylus">
   #app-toolbar
-    .toolbar__title
+    .v-toolbar__title
       margin-left .5em
       font-weight 300
       font-size 21px
       position relative
       top 1px
 
-    .toolbar__items
+    .v-toolbar__items
       .v-btn
         text-transform capitalize
         font-size 16px
