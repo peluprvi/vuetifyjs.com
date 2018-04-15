@@ -185,7 +185,7 @@
     .v-carousel
       .v-carousel__left,
       .v-carousel__right
-        .icon
+        .v-icon
           color: rgba(#000, .54) !important
 
     .strike
