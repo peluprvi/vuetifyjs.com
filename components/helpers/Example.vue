@@ -242,7 +242,7 @@
         width: 100%
 
     .component-example__panel
-      .expansion-panel__body
+      .v-expansion-panel__body
         border: none
 
       .v-tabs__item, .markup
