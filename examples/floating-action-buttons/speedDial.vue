@@ -132,7 +132,7 @@
     position: absolute;
   }
 
-  #create .btn--floating {
+  #create .v-btn--floating {
     position: relative;
   }
 </style>

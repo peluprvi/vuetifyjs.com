@@ -70,10 +70,10 @@
 <style>
   /* This is for documentation purposes and will not be needed in your application */
   #lateral .v-speed-dial,
-  #lateral .btn--floating {
+  #lateral .v-btn--floating {
     position: absolute;
   }
-  #lateral .btn--floating {
+  #lateral .v-btn--floating {
     margin: 0 0 16px 16px;
   }
 </style>

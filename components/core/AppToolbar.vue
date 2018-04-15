@@ -262,7 +262,7 @@
       top 1px
 
     .toolbar__items
-      .btn
+      .v-btn
         text-transform capitalize
         font-size 16px
         font-weight 300

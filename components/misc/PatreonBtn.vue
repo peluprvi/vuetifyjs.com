@@ -12,6 +12,6 @@
 </template>
 
 <style lang="stylus" scoped>
-  .btn span
+  .v-btn span
     font-weight: 900 !important
 </style>
