@@ -15,7 +15,7 @@
       An Unlimited License can be used an unlimited amount of times for Personal Use, Commercial Use, and Commercial End Products.
     </p>
     <p>If you have a use-case that you feel isn't covered by these licenses and are interested in purchasing, please <a href="mailto:sales@vuetifyjs.com">Contact Us</a>.</p>
-    <table class="table">
+    <table class="v-table">
       <thead>
         <tr class="text-xs-left">
           <th>License</th>

@@ -1,7 +1,7 @@
 <template lang="pug">
   v-card.mb-5
     v-table-overflow
-      table.table
+      table.v-table
         caption.mt-3
           strong Mask legend
         thead

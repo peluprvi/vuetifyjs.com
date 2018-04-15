@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap>
     <v-flex md12 lg4>
-      <table class="table text-xs-left" style="width: 300px;">
+      <table class="v-table text-xs-left" style="width: 300px;">
         <tbody>
           <tr>
             <th>Original</th>

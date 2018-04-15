@@ -1,7 +1,7 @@
 <template lang="pug">
   doc-view
     section#highlights
-      table.table.elevation-1.mb-5
+      table.v-table.elevation-1.mb-5
         tbody
           tr(
             v-for="(road, i) in roadmap"
@@ -29,6 +29,6 @@
 </script>
 
 <style lang="stylus">
-  #highlights table.table tbody p
+  #highlights table.v-table tbody p
     margin-bottom: 0
 </style>
