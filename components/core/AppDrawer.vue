@@ -96,7 +96,7 @@
                   span {{ subItem.title }}
               v-chip(
                 v-if="subItem.badge"
-                class="white--text pa-0 chip--x-small"
+                class="white--text pa-0 v-chip--x-small"
                 color="primary"
                 disabled
               ) {{ subItem.badge }}
@@ -122,7 +122,7 @@
             v-list-tile-title {{ item.title }}
           v-chip(
             v-if="item.badge"
-            class="white--text pa-0 chip--x-small"
+            class="white--text pa-0 v-chip--x-small"
             :color="item.color || 'primary'"
             disabled
           ) {{ item.badge }}
@@ -266,11 +266,11 @@
     img.logo
       margin 40px 0 15px
 
-    .chip--x-small
+    .v-chip--x-small
       font-size: 10px
       height: 16px
 
-      .chip__content
+      .v-chip__content
         line-height: 1
         padding: 8px
 
