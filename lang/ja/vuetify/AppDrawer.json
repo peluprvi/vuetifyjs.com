@@ -1,4 +1,4 @@
-export default {
-  becomeASponsor: 'スポンサーになる',
-  diamondSponsors: 'Diamond Sponsors'
+{
+  "becomeASponsor": "スポンサーになる",
+  "diamondSponsors": "Diamond Sponsors"
 }
