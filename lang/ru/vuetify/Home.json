@@ -29,12 +29,6 @@
     "Поддержка SSR и PWA",
     "8 vue-cli Шаблонов"
   ],
-  "checkFeaturesCtd": [
-    "80+ Material Design Components",
-    "A La Carte Importing",
-    "Transition Components",
-    "Blazing Fast"
-  ],
   "letterFromAuthor": [
     "Привет всем,",
     "Я знаю, что выбор структуры пользовательского интерфейса может быть сложной задачей - есть так много вариантов выбора, и каждый из них утверждает, что они самые лучшие. Поэтому вы должны сами решить",

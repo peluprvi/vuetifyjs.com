@@ -36,13 +36,6 @@
     "빠른 속도"
   ],
   "componentFramework": "컴포넌트 프레임워크",
-  "letterFromAuthor": [
-    "Hey there,",
-    "I know choosing a UI framework can be a daunting task -- there are so many options to choose from and every one of them claims that they are the best. So you have to decide for *yourself*: what are the metrics for success?",
-    "This was me almost a year ago. There were plenty of UI toolkits to choose from, but none of them had everything that I needed, and that is why I started working on Vuetify.",
-    "I am extremely humbled that you have considered using Vuetify as your next UI Framework. A lot of care has went into crafting the perfect setup for taking any idea from conception to production. I look forward to you joining the Vuetify community and am excited to see what incredible interfaces you create!"
-  ],
-  "authorOfVuetify": "Author of Vuetify",
   "support": {
     "hasVuetifyHelped": "Vuetify 가 여러분의 놀라운 어플리케이션을 만드는데 도움이 되었나요?",
     "showYourSupport": "후원자(parton)가 되어서",
