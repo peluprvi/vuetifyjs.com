@@ -2,7 +2,7 @@
   "header": "선택 컨트롤 (Selection controls)",
   "headerText": "선택 컨트롤 컴포넌트는 사용자가 옵션을 선택할 수 있도록 합니다.Selection control components allow a user to select options. 이 컴포넌트들은 자신의 상태를 관리하지 않기 때문에 **반드시** `v-model` prop을 사용해야 합니다.",
   "components": ["v-radio-group', 'v-radio', 'v-checkbox', 'v-switch"],
-  "examples": [{
+  "examples": {
     "example": {
       "header": "기본 예제",
       "desc": ""
@@ -55,7 +55,7 @@
       "header": "스위치 - 색깔",
       "desc": "`color` prop를 이용하면 스위치를 어떠한 내장 색(builtin colors) 이나 contextual 이름에 대응 하는 색으로 만들 수 있습니다."
     }
-  }],
+  },
   "props": {
     "column": "라디오 버튼을 열(column)로 표시",
     "disabled": "Mixins.Input.props.disabled",

@@ -23,31 +23,5 @@
     "supported": "Поддерживается",
     "notSupported": "Не поддерживается",
     "polyfill": "Поддержка с polyfill"
-  },
-  "toc": [
-    {
-      "text": "Введение",
-      "href": "introduction"
-    },
-    {
-      "text": "Поддержка браузеров",
-      "href": "supported-browsers"
-    },
-    {
-      "text": "Установка с CDN",
-      "href": "cdn-install"
-    },
-    {
-      "text": "Новые приложения",
-      "href": "new-applications"
-    },
-    {
-      "text": "Существующие приложения",
-      "href": "existing-applications"
-    },
-    {
-      "text": "Поддержка IE11",
-      "href": "ie11-support"
-    }
-  ]
+  }
 }

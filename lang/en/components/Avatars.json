@@ -2,7 +2,7 @@
   "header": "Avatar",
   "headerText": "The `v-avatar` component is used to control the size and border radius of responsive images, typically used to show profile pictures.",
   "components": ["v-avatar"],
-  "examples": [{
+  "examples": {
     "standard": {
       "header": "Standard display",
       "desc": "The avatar has a dynamic size that can be scaled for any situation. A **tile** variation is available for displaying an avatar without border radius."
@@ -15,5 +15,5 @@
       "header": "Icon and text",
       "desc": "An avatar also accepts the `v-icon` component or text. Mix and match functionality to create something unique."
     }
-  }]
+  }
 }

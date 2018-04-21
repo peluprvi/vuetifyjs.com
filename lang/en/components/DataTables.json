@@ -2,7 +2,7 @@
   "header": "Data table",
   "headerText": "The `v-data-table` component is used for displaying tabular data. Features include sorting, searching, pagination, inline-editing, header tooltips, and row selection.",
   "components": ["v-data-table', 'v-edit-dialog"],
-  "examples": [{
+  "examples": {
     "standard": {
       "header": "Standard",
       "desc": "The standard data-table contains data with no additional functionality. You can opt out of displaying table actions that allow you to control the pagination of information with the `hide-actions` prop."
@@ -71,7 +71,7 @@
       "header": "CRUD Actions",
       "desc": "data-table with CRUD actions using a `v-dialog` component for editing each row"
     }
-  }],
+  },
   "props": {
     "v-edit-dialog": {
       "cancelText": "Sets the default text for the cancel button when using the **large** prop",

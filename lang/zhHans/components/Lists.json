@@ -12,7 +12,7 @@
     "v-list-tile-group",
     "v-list-tile-action-text"
   ],
-  "examples": [{
+  "examples": {
     "avatarTwoLines": {
       "header": "头像和两行内容的组合",
       "desc": "列表可以包含一个items数组。如果给定一个数组，列表组件将依据给出的内容找到相关的类，你也可以在items数组定义列表组标题（headers）或分隔线（divider）。"
@@ -53,7 +53,7 @@
       "header": "可展开的列表",
       "desc": "一个列表项可以包含一组在点击时展开的项，可展开的列表也可以在 `navigation drawer` 组件中使用。"
     }
-  }],
+  },
   "props": {
     "avatar": "用来设置单行列表项的最小高度（即使用该属性后将有一个头像大小的最小高度）",
     "dense": "减小列表块的最大宽度",

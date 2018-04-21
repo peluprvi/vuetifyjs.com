@@ -2,7 +2,7 @@
   "header": "Selection controls",
   "headerText": "Selection control components allow a user to select options. These components **must** be used with the `v-model` prop as they do not maintain their own state.",
   "components": ["v-radio-group', 'v-radio', 'v-checkbox', 'v-switch"],
-  "examples": [{
+  "examples": {
     "example": {
       "header": "Default examples",
       "desc": ""
@@ -55,7 +55,7 @@
       "header": "Switches - Colors",
       "desc": "Switches can be colored by using any of the builtin colors and contextual names using the `color` prop."
     }
-  }],
+  },
   "props": {
     "column": "Displays radio buttons in column",
     "disabled": "Mixins.Input.props.disabled",

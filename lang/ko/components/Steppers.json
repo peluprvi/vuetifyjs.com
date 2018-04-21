@@ -7,7 +7,7 @@
     "v-stepper-content",
     "v-stepper-header"
   ],
-  "examples": [{
+  "examples": {
     "example": {
       "header": "예제 (Example)",
       "desc": "단계(stepper) 는 쇼핑 카트나 레코드 생성 등 여러 시나리오에 사용될 수 있습니다."
@@ -60,7 +60,7 @@
       "header": "동적 단계 (Dynamic steps)",
       "desc": "각 단계는 동적으로 추가되거나 제거 될 수 있습니다. 현제 활성화된 단계가 제거될 경우, 적용된 모델을 변경하여 이를 적절이 관리해야 합니다.."
     }
-  }],
+  },
   "props": {
     "altLabels": "단계 아래에 레이블을 표시",
     "complete": "단계가 완료된 것으로 표시",

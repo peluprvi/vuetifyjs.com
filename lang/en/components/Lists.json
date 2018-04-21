@@ -12,7 +12,7 @@
     "v-list-tile-sub-title",
     "v-list-tile-action-text"
   ],
-  "examples": [{
+  "examples": {
     "avatarTwoLines": {
       "header": "Avatar with 2 lines",
       "desc": "Lists can take an array of list items. When given an array, the list component will figure out the classes that are needed depending on what it was given. You can also define headers or dividers within the items array."
@@ -53,7 +53,7 @@
       "header": "Expansion Lists",
       "desc": "A list can contain a group of items which will display on click. Expansion lists are also used within the `navigation drawer` component."
     }
-  }],
+  },
   "props": {
     "avatar": "Used to set minimum tile height on a single-line list item",
     "dense": "Lowers max height of list tiles",

@@ -1,24 +1,7 @@
 {
   "header": "В чем отличия?",
   "headerText": "",
-  "toc": [
-    {
-      "text": "В чем отличия?",
-      "href": "why-vuetify"
-    },
-    {
-      "text": "Принципы дизайна",
-      "href": "design-principles"
-    },
-    {
-      "text": "Яркое сообщество",
-      "href": "vibrant-community"
-    },
-    {
-      "text": "сравнение framework",
-      "href": "framework-comparison"
-    }
-  ],
+  
   "philosophies": [
     {
       "img": "/static/vuetify_semantic.svg",

@@ -12,28 +12,7 @@
   "slots": "슬롯",
   "supplemental": "보충",
   "type": "타입",
-  "toc": [
-    {
-      "text": "소개",
-      "href": "introduction"
-    },
-    {
-      "text": "사용법",
-      "href": "usage"
-    },
-    {
-      "text": "API",
-      "href": "api"
-    },
-    {
-      "text": "보충",
-      "href": "supplemental"
-    },
-    {
-      "text": "예제",
-      "href": "examples"
-    }
-  ],
+  
   "usage": "사용법",
   "parameters": "파라미터",
   "return": "반환값",

@@ -7,7 +7,7 @@
     "v-card-title",
     "v-card-actions"
   ],
-  "examples": [{
+  "examples": {
     "components": {
       "header": "컴포넌트 (Components)",
       "desc": "카드는 4가지 기본 컴포넌트를 가지고 있습니다. `v-card-media`, `v-card-title`, `v-card-text` and `v-card-actions`."
@@ -28,7 +28,7 @@
       "header": "커스텀 액션 (Custom Actions)",
       "desc": "간단한 조건과 함께 열릴때 까지 보이지 않는 추가 텍스트를 쉽게 넣을 수 있습니다."
     }
-  }],
+  },
   "props": {
     "contain": "백그라운드 사이즈 (background-size) 를 컨테이너에 맞게 조정합니다.",
     "flat": "카드 박스의 그림자를 제거",

@@ -2,7 +2,7 @@
   "header": "디바이더 (Divider)",
   "headerText": "`v-divider` 컴포넌트는 리스트의 섹션을 분리합니다.",
   "components": ["v-divider"],
-  "examples": [{
+  "examples": {
     "fullBleed": {
       "header": "풀 블리드 (Full bleed)",
       "desc": "풀 블리드 디바이더는 전체 컨텐츠 너비로 확장됩니다."
@@ -28,7 +28,7 @@
       "header": "새로보기에서의 디바이더",
       "desc": "어떤 상황에도 적합한 커스텀 카드를 만듭니다."
     }
-  }],
+  },
   "props": {
     "inset": "들여쓰기(indentation) 추가 (72px)"
   }

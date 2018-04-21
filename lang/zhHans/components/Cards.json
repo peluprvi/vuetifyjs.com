@@ -7,7 +7,7 @@
     "v-card-title",
     "v-card-actions"
   ],
-  "examples": [{
+  "examples": {
     "components": {
       "header": "组件",
       "desc": "一个卡片有四个基本组件，`v-card-media`、`v-card-title`、`v-card-text`和`v-card-actions`。"
@@ -28,7 +28,7 @@
       "header": "自定义操作",
       "desc": "使用简单的条件，您可以轻松添加隐藏的补充文本，直到被打开。"
     }
-  }],
+  },
   "props": {
     "contain": "修改包含的背景大小来",
     "flat": "移除卡片的盒子阴影",

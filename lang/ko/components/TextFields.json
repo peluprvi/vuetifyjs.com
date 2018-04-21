@@ -3,7 +3,7 @@
   "headerText": "텍스트 필드 컴포넌트는 사용자가 제공한 정보를 모으는데 사용됩니다.",
   "components": ["v-text-field"],
   "supplemental": ["MaskTable"],
-  "examples": [{
+  "examples": {
     "label": {
       "header": "레이블과 함께 (With label)",
       "desc": "텍스트필드는 다크/라이트 두 테마 옵션과 함께 사용됩니다."
@@ -77,7 +77,7 @@
       "header": "프로그레스 바 (Progress bar)",
       "desc": "바텀 라인(bottom line) 대신 프로그레스 바를 표시할 수도 있습니다. 기본적으로 텍스트 필드와 같은 색상을 가진 불확정 프로그래스를 사용하 ㄹ수도 있고  `progress` 슬롯을 이용해서 커스터마이즈할 수도 있습니다."
     }
-  }],
+  },
   "props": {
     "autoGrow": "인풋의 자동 확장(Auto-grows). 이 옵션은 **v-model**을 필요로 합니다.",
     "autofocus": "오토 포커스 활성화",

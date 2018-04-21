@@ -2,7 +2,7 @@
   "header": "페이지네이션 (Pagination)",
   "headerText": "`v-pagination` 컴포넌트는 긴 데이터 뭉치를 사용자가 쉽게 볼 수 있도록 나누는 데 쓰입니다. 설정된 길이에 따라 페이지네이션 컴포넌트는 자동으로 확장됩니다. 현재 페이지를 관리하기 위해 간단히 `v-model` 속성을 사용하세요.",
   "components": ["v-pagination"],
-  "examples": [{
+  "examples": {
     "short": {
       "header": "짧은 (Short)",
       "desc": "부모 컴포넌트가 충분히 크다면, 페이지네이션은 모든 페이지를 표시합니다."
@@ -27,7 +27,7 @@
       "header": "비활성화 (Disabled)",
       "desc": "페이지네이션 아이템들은 수동으로 비활성활 할 수 있습니다."
     }
-  }],
+  },
   "props": {
     "circle": "페이지네이션 요소들의 형태를 둥글게",
     "disabled": "컴포넌트 비활성화",

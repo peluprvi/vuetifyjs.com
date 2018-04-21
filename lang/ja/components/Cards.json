@@ -7,7 +7,7 @@
     "v-card-title",
     "v-card-actions"
   ],
-  "examples": [{
+  "examples": {
     "components": {
       "header": "コンポーネント",
       "desc": "Card には `v-card-media` 、 `v-card-title` 、 `v-card-text` と `v-card-actions` のベースとなる4種類のコンポーネントが用意されています。"
@@ -28,7 +28,7 @@
       "header": "カスタムアクション",
       "desc": "シンプルな条件によって、開くまで閉じられている補助的なテキストを簡単に追加できます。"
     }
-  }],
+  },
   "props": {
     "contain": "background-size を内容に合わせます。",
     "flat": "Card の box-shadow を削除します。",

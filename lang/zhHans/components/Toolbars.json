@@ -8,7 +8,7 @@
     "v-toolbar-side-icon",
     "v-system-bar"
   ],
-  "examples": [{
+  "examples": {
     "default": {
       "header": "默认情况",
       "desc": "工具栏是一个灵活的容器，可以通过多种方式使用。默认情况下，桌面上的工具栏高为64px，移动人像的高为56px，移动风景的高为48px，这些可以用`dense`和`prominent`属性来重写。"
@@ -62,7 +62,7 @@
       "header": "系统栏——状态/窗口",
       "desc": "系统栏对于移动设备和桌面上的通知图标很有用，对于现场示例，请前往预定义的布局。"
     }
-  }],
+  },
   "props": {
     "card": "在`v-card`中使用时继承边框半径",
     "clippedLeft": "指定`v-navigation-drawer`应用程序在工具栏的左侧被剪切",

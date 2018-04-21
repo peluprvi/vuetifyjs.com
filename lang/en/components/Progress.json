@@ -2,7 +2,7 @@
   "header": "Progress",
   "headerText": "The `v-progress-circular` and `v-progress-linear` components are used to convey data visually to users. They can also represent an indeterminate amount, such as loading or processing. The circular progress component contains a slot that is centered within the circle.",
   "components": ["v-progress-circular', 'v-progress-linear"],
-  "examples": [{
+  "examples": {
     "circularDefault": {
       "header": "Default",
       "desc": "By default, progress circular uses the applications secondary color."
@@ -47,7 +47,7 @@
       "header": "Custom colors",
       "desc": "You can also set the color using the props `color` and `background-color`."
     }
-  }],
+  },
   "props": {
     "active": "Reduce the height to 0, hiding component",
     "backgroundColor": "Background color, set to component's color if null",

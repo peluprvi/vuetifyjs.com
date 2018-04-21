@@ -2,7 +2,7 @@
   "header": "Dialog",
   "headerText": "The `v-dialog` component inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks. Use dialogs sparingly because they are interruptive.",
   "components": ["v-dialog"],
-  "examples": [{
+  "examples": {
     "simple": {
       "header": "Simple dialogs",
       "desc": "Choosing an option immediately commits the option and closes the menu. Touching outside of the dialog, or pressing Back, cancels the action and closes the dialog.",
@@ -38,7 +38,7 @@
       "desc": "Modals that do not fit within the available window space will scroll the container.",
       "uninverted": true
     }
-  }],
+  },
   "props": {
     "disabled": "Disabled the ability to open the dialog",
     "fullWidth": "Specifies the modal to force 100% width",

@@ -16,27 +16,5 @@
   "applicationText1": "**src** 폴더로 가서 `main.js` 를 여세요. a-la-carte 템플릿을 사용하고 계신다면 이미 일부 컴포넌트들이 로딩되도록 설정되어 있을 겁니다.",
   "applicationText2": "아래 코드 예제는 `<v-app>`,`<v-navigation-drawer>`, `<v-footer>`, `<v-toolbar>` 를 사용하는 어플리케이션입니다. 일단 정의된 후에는 이 마크업들을 어떤 .vue 파일에서든 사용할 수 있습니다.`",
   "componentNameListHeader": "UI 컴포넌트 네임 리스트 (UI Component Name List)",
-  "componentNameListText1": "`VLayout` 이나 `VFlex` 같은 일부 컴포넌트들은 구조적인(organizational) 이유로 다른 컴포넌트들(이 경우엔 `VGrid`)에 포함되어 있습니다. 어떤 컴포넌트들을 import 해야할지 알기 위해선 다음 테이블을 참조하세요.",
-  "toc": [
-    {
-      "text": "개요",
-      "href": "introduction"
-    },
-    {
-      "text": "컴포넌트 임포팅",
-      "href": "importing-components"
-    },
-    {
-      "text": "필요한 스타일들",
-      "href": "required-styles"
-    },
-    {
-      "text": "어플리케이션",
-      "href": "application"
-    },
-    {
-      "text": "UI 컴포넌트 네임 리스트",
-      "href": "component-name-list"
-    }
-  ]
+  "componentNameListText1": "`VLayout` 이나 `VFlex` 같은 일부 컴포넌트들은 구조적인(organizational) 이유로 다른 컴포넌트들(이 경우엔 `VGrid`)에 포함되어 있습니다. 어떤 컴포넌트들을 import 해야할지 알기 위해선 다음 테이블을 참조하세요."
 }

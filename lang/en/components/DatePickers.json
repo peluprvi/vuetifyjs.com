@@ -2,7 +2,7 @@
   "header": "Date/month picker",
   "headerText": "The `v-date-picker` is stand-alone component that can be utilized in many existing Vuetify components. It offers the user a visual representation for selecting date/month.",
   "components": ["v-date-picker"],
-  "examples": [{
+  "examples": {
     "dateLight": {
       "header": "Date pickers",
       "desc": "Date pickers come in two orientation variations, portrait **(default)** and landscape. By default they are emitting `input` event when the day (for date picker) or month (for month picker), but with **reactive** prop they can update the model even after clicking year/month."
@@ -91,7 +91,7 @@
       "header": "Month pickers - current month indicator",
       "desc": "By default the current month is displayed using outline button - **show-current** prop allows you to remove the border or select different month to be displayed as the current one."
     }
-  }],
+  },
   "props": {
     "v-date-picker": {
       "type": "Determines the type of the picker - `date` for date picker, `month` for month picker",

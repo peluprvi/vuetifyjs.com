@@ -2,7 +2,7 @@
   "header": "Subheaders",
   "headerText": "The `v-subheader` component is used to separate sections of lists.",
   "components": ["v-subheader"],
-  "examples": [{
+  "examples": {
     "list": {
       "header": "List subheaders",
       "desc": "Subheaders work great with lists for describing the information below."
@@ -19,7 +19,7 @@
       "header": "Subheaders with social media",
       "desc": "Using a subheader with social media interaction."
     }
-  }],
+  },
   "props": {
     "inset": "Adds identation (72px)"
   }

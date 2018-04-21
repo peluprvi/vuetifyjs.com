@@ -1,24 +1,7 @@
 {
   "header": "무엇이 다를까?",
   "headerText": "",
-  "toc": [
-    {
-      "text": "무엇이 다를까?",
-      "href": "why-vuetify"
-    },
-    {
-      "text": "디자인 원칙",
-      "href": "design-principles"
-    },
-    {
-      "text": "역동적인 커뮤니티",
-      "href": "vibrant-community"
-    },
-    {
-      "text": "프레임웤 비교",
-      "href": "framework-comparison"
-    }
-  ],
+  
   "philosophies": [
     {
       "img": "/static/vuetify_semantic.svg",

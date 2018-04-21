@@ -2,7 +2,7 @@
   "header": "进度条",
   "headerText": "`v-progress-circular`和`v-progress-linear`组件用于将数据直观地传达给用户。他们也可以代表一个不确定的数量，如加载或处理。这些组件包含一个位于组件容器中心的插槽。",
   "components": ["v-progress-circular', 'v-progress-linear"],
-  "examples": [{
+  "examples": {
     "circularDefault": {
       "header": "默认圆环",
       "desc": "默认情况下，进度圆环使用应用程序辅助色彩。"
@@ -47,5 +47,5 @@
       "header": "自定义色彩",
       "desc": "您还可以使用属性`color`和`background-color`设置颜色。"
     }
-  }]
+  }
 }

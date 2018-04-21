@@ -2,7 +2,7 @@
   "header": "Footer",
   "headerText": "`v-footer`コンポーネントは、あなたのサイト内のどのページからでもアクセスしたい一般的な情報を表示するために使われます。",
   "components": ["v-footer"],
-  "examples": [{
+  "examples": {
     "default": {
       "header": "Default",
       "desc": "フッターコンポーネントは単なる基本的なコンテナです。"
@@ -19,7 +19,7 @@
       "header": "青緑色のフッター",
       "desc": "青緑色見出しと、列と行のリンクを含むフッターコンポーネントです。"
     }
-  }],
+  },
   "props": {
     "absolute": "Mixins.Positionable.props.absolute",
     "fixed": "Mixins.Positionable.props.fixed",

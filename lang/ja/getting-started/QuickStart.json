@@ -23,31 +23,5 @@
     "supported": "Supported",
     "notSupported": "Not supported",
     "polyfill": "Supported with polyfill"
-  },
-  "toc": [
-    {
-      "text": "Introduction",
-      "href": "introduction"
-    },
-    {
-      "text": "Supported browsers",
-      "href": "supported-browsers"
-    },
-    {
-      "text": "CDN install",
-      "href": "cdn-install"
-    },
-    {
-      "text": "New applications",
-      "href": "new-applications"
-    },
-    {
-      "text": "Existing applications",
-      "href": "existing-applications"
-    },
-    {
-      "text": "IE11 support",
-      "href": "ie11-support"
-    }
-  ]
+  }
 }

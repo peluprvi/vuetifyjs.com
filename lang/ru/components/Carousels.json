@@ -2,7 +2,7 @@
   "header": "Карусель",
   "headerText": "Компонент `v-carousel` используется для перебора элементов—изображений или слайдов текста.",
   "components": ["v-carousel', 'v-carousel-item"],
-  "examples": [{
+  "examples": {
     "default": {
       "header": "По умолчанию",
       "desc": "Карусель по умолчанию имеет переход слайдов.",
@@ -23,7 +23,7 @@
       "desc": "Вы можете скрыть нижние элементы управления с помощью `hide-controls`.",
       "uninverted": true
     }
-  }],
+  },
   "props": {
     "nextIcon": "Mixins.Input.props.appendIcon",
     "prevIcon": "Mixins.Input.props.prependIcon",

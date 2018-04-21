@@ -5,7 +5,7 @@
     "v-toolbar",
     "v-system-bar"
   ],
-  "examples": [{
+  "examples": {
     "usage": {
       "header": "사용법 (Usage)",
       "desc": "툴바는 여러 방법으로 쓰일 수 있는 유연한 컨테이너 입니다. 기본적으로 툴바는 데스크탑에서 64px, 세로 모바일에서 56px, 가로 모바일에서 48px 높이를 가집니다. 툴바와 함께 쓰일 수 있는 `v-toolbar-side-icon`, `v-toolbar-title`, `v-toolbar-items` 같은 여러 헬퍼 컴포넌트가 있습니다."
@@ -63,7 +63,7 @@
       "header": "시스템 바 - 상태/윈도우 (System bars - status/window)",
       "desc": "시스템바는 모바일과 데스크탑에서 알람 아이콘을 보여주는데 유용합니다. For live examples of, head to the pre-defined layouts."
     }
-  }],
+  },
   "props": {
     "card": "`v-card`에 사용될 때 테두리 반경(border radius)를 상속",
     "clippedLeft": "Designates that the applications `v-navigation-drawer` is clipped on the left side of the toolbar",

@@ -7,7 +7,7 @@
     "v-stepper-content",
     "v-stepper-header"
   ],
-  "examples": [{
+  "examples": {
     "example": {
       "header": "示例",
       "desc": "一个步骤组件适用于多种场景，包括购物车、创建记录等等。"
@@ -60,7 +60,7 @@
       "header": "动态步骤",
       "desc": "步骤可以动态的添加和移除，如果删除的是当前处于激活状态的步骤，请务必通过更改应用模型来解决这个问题。"
     }
-  }],
+  },
   "props": {
     "altLabels": "将标签置于步骤的下方",
     "complete": "标志一步完成",

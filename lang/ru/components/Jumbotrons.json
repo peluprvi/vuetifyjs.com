@@ -4,7 +4,7 @@
   "components": [
     "v-jumbotron"
   ],
-  "examples": [{
+  "examples": {
     "usage": {
       "header": "Использование",
       "desc": ""
@@ -21,7 +21,7 @@
       "header": "Градиент с изображением",
       "desc": "Более подробную информацию о градиентах можно найти [здесь](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)"
     }
-  }],
+  },
   "props": {
     "gradient": "Применение градиентного фона. Если используется с **src** prop, наложите его",
     "src": "Img src"

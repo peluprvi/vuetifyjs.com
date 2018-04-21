@@ -2,7 +2,7 @@
   "header": "Carousel",
   "headerText": "The `v-carousel` component is used to display large numbers of visual content on a rotating timer.",
   "components": ["v-carousel', 'v-carousel-item"],
-  "examples": [{
+  "examples": {
     "default": {
       "header": "Default",
       "desc": "A carousel by default has a slide transition.",
@@ -23,7 +23,7 @@
       "desc": "You can hide the bottom controls with the `hide-controls` prop.",
       "uninverted": true
     }
-  }],
+  },
   "props": {
     "nextIcon": "Mixins.Input.props.appendIcon",
     "prevIcon": "Mixins.Input.props.prependIcon",

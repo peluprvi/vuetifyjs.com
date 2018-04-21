@@ -2,7 +2,7 @@
   "header": "Slider",
   "headerText": "The `v-slider` component is a better visualization of the number input. It is used for gathering numerical user data. `v-range-slider` is also available for when both a minimum and maximum user input is needed.",
   "components": ["v-slider", "v-range-slider"],
-  "examples": [{
+  "examples": {
     "usage": {
       "header": "Usage",
       "desc": "Both `v-slider` and `v-range-slider` support the same props. The only difference is that `v-range-slider` takes an array of two numbers as its `value`."
@@ -47,7 +47,7 @@
       "header": "Range",
       "desc": "Range sliders."
     }
-  }],
+  },
   "props": {
     "alwaysDirty": "Makes the slider appear as always dirty, including when in its starting position. Most often used together with `tick-labels`.",
     "max": "Sets the maximum selectable value of the slider",

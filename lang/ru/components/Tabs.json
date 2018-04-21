@@ -8,7 +8,7 @@
     "v-tab-item",
     "v-tabs-slider"
   ],
-  "examples": [{
+  "examples": {
     "toolbar": {
       "header": "Toolbar tabs",
       "desc": ""
@@ -57,7 +57,7 @@
       "header": "Пользовательские иконки",
       "desc": "**prev-icon** и **next-icon** могут использоваться для применения пользовательских значков разбиения на страницы."
     }
-  }],
+  },
   "props": {
     "alignWithTitle": "Сделайте `v-tabs` выровненным с заголовком панели инструментов",
     "prevIcon": "Значок левой страницы",

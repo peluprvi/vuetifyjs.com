@@ -2,7 +2,7 @@
   "header": "프로그레스 (Progress)",
   "headerText": "`v-progress-circular`와 `v-progress-linear` 컴포넌트는 사용자에게 데이터를 시각적으로 전달하는데 쓰입니다. 이들은 로딩, 프로세싱과 같은 확정되지 않은 진행 중인 상태를 표시할 수 있습니다. 이 컴포넌트들은 컴포넌트 컨테이너 안의 중앙에 표시되는 슬롯을 가지고 있습니다.",
   "components": ["v-progress-circular', 'v-progress-linear"],
-  "examples": [{
+  "examples": {
     "circularDefault": {
       "header": "기본값 (Default)",
       "desc": "기본적으로, 원형(circular) 프로그레스는 어플리케이션의 secondary 색을 사용합니다."
@@ -47,7 +47,7 @@
       "header": "사용자지정 색상",
       "desc": "`color`와 `background-color` prop을 사용해 색상을 정할 수 있습니다."
     }
-  }],
+  },
   "props": {
     "active": "높이를 0으로 만들어 컴포넌트를 숨김",
     "backgroundColor": "배경 색상. null 일 경우 컴포넌트 색상을 적용",

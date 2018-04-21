@@ -2,7 +2,7 @@
   "header": "데이터 테이블 (Data table)",
   "headerText": "`v-data-table` 컴포넌트는 데이터를 테이블 형태로 보여줍니다. 정렬(sorting), 검색(searching), 페이지네이션(pagination), 선택(selection) 등이 가능합니다.",
   "components": ["v-data-table', 'v-edit-dialog"],
-  "examples": [{
+  "examples": {
     "standard": {
       "header": "표준 (Standard)",
       "desc": "표준 데이터 테이블은 추가 기능 없이 데이터를 보여줍니다. The standard data-table contains data with no additional functionality. You can opt out of displaying table actions that allow you to control the pagination of information with the `hide-actions` prop."
@@ -71,7 +71,7 @@
       "header": "CRUD 액션",
       "desc": "데이터 테이블에서 `v-dialog` 컴포넌트를 이용해 각 행을 편집하는 방식의 CRUD 액션입니다.\n(data-table with CRUD actions using a v-dialog component for editing each row)"
     }
-  }],
+  },
   "props": {
     "v-edit-dialog": {
       "cancelText": "**large** prop을 사용할때 나오는 취소(cancel) 버튼의 기본 텍스트를 설정",

@@ -3,7 +3,7 @@
   "headerText": "文本框组件用于收集用户提供的信息。",
   "components": ["v-text-field"],
   "supplemental": ["MaskTable"],
-  "examples": [{
+  "examples": {
     "label": {
       "header": "带标签",
       "desc": "文本框组件有两个主题选项，亮色和暗色。"
@@ -77,7 +77,7 @@
       "header": "进度条",
       "desc": "你可以用一个进度条来替换下划线，你可以使用与文本框具有相同颜色的默认的不确定进度的进度条，你也可以使用 `progress` 插槽来自定义进度条。"
     }
-  }],
+  },
   "props": {
     "autoGrow": "自动增长输入，需要使用 **v-model**",
     "autofocus": "启用自动聚焦",

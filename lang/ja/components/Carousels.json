@@ -2,7 +2,7 @@
   "header": "Carousel",
   "headerText": "`v-carousel` コンポーネントは、タイマーで入れ替わる数枚の大きなビジュアルコンテンツを表示するために使います。",
   "components": ["v-carousel', 'v-carousel-item"],
-  "examples": [{
+  "examples": {
     "default": {
       "header": "デフォルト",
       "desc": "Carousel はデフォルトでスライドの遷移が行われます。",
@@ -23,7 +23,7 @@
       "desc": "`hide-controls` prop を使用することで下部のコントローラーを隠すことができます。",
       "uninverted": true
     }
-  }],
+  },
   "props": {
     "appendIcon": "Mixins.Input.props.appendIcon",
     "prependIcon": "Mixins.Input.props.prependIcon",

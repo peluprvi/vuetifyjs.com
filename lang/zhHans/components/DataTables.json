@@ -2,7 +2,7 @@
   "header": "数据表格",
   "headerText": "`v-data-table` 用于显示表格数据，功能包括排序、搜索、分页、行内编辑、头部提示以及行选择。",
   "components": ["v-data-table', 'v-edit-dialog"],
-  "examples": [{
+  "examples": {
     "standard": {
       "header": "标准",
       "desc": "标准的数据表格包含没有附加功能的数据。你可以通过 `hide-actions` 属性来控制是否需要显示分页信息，即 使用 `hide-action`将不分页，直接显示全部数据。"
@@ -71,7 +71,7 @@
       "header": "CRUD 操作",
       "desc": "数据表格使用 `v-dialog` 组件来进行每行的CRUD操作。"
     }
-  }],
+  },
   "props": {
     "v-edit-dialog": {
       "cancelText": "为取消按钮设置默认文本，当使用了 `large` 属性时（即有提交和取消按钮的对话框）。",

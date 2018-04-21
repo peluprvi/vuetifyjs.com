@@ -2,7 +2,7 @@
   "header": "Chip",
   "headerText": "`v-chip` コンポーネントは小さな情報の断片を伝えるために使用されます。`close` プロパティを使用すると、Chip はインタラクティブとなり、ユーザーの入力を受け付けられるようになります。",
   "components": ["v-chip"],
-  "examples": [{
+  "examples": {
     "default": {
       "header": "デフォルト",
       "desc": "Chip には主な、基本型、アイコン付き、ポートレート付き、閉じるボタン付きの4種類が用意されています。",
@@ -34,7 +34,7 @@
       "desc": "Select では、選択された項目を表示するために Chip を使用することができます。",
       "uninverted": true
     }
-  }],
+  },
   "props": {
     "close": "閉じるボタンを追加します。",
     "disabled": "Chip を無効化し、選択できないようにします。",

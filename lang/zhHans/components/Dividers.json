@@ -2,7 +2,7 @@
   "header": "分隔线",
   "headerText": "`v-divider`组件用来分隔列表的各部分",
   "components": ["v-divider"],
-  "examples": [{
+  "examples": {
     "fullBleed": {
       "header": "完全流血（Full bleed）",
       "desc": "完全出血分隔线扩展了整个内容的宽度。"
@@ -28,7 +28,7 @@
       "header": "Divivders in Portrait View",
       "desc": "Create custom cards to fit any use-case"
     }
-  }],
+  },
   "props": {
     "inset": "添加缩进 (72px)"
   }

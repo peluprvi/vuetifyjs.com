@@ -2,7 +2,7 @@
   "header": "메뉴 (Menu)",
   "headerText": "`v-menu` 컴포넌트는 (메뉴를) 활성화할 요소의 위치에 메뉴를 보여줍니다.",
   "components": ["v-menu"],
-  "examples": [{
+  "examples": {
     "activator": {
       "header": "활성자 (Activator)",
       "desc": "`activator` 슬롯에 메뉴를 활성화 할 요소를 넣으세요.",
@@ -38,7 +38,7 @@
       "desc": "A menu can be configured to be static when opened, allowing it to function as a popover. 이는 메뉴 안에 여러 인터렉티브한 아이템이 있을 때 유용합니다.",
       "uninverted": true
     }
-  }],
+  },
   "props": {
     "closeOnClick": "활성자의 바깥을 클릭하면 메뉴를 닫음",
     "closeOnContentClick": "메뉴의 컨텐츠를 클릭하면 메뉴를 닫음",

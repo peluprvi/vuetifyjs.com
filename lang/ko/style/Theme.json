@@ -26,27 +26,5 @@
   "stylusText5": "node_modules의 상대적인 위치가 프로젝트에 따라 다를 수 있으니 적절히 설정해야 합니다. 메인 어플리케이션의 `index.js` 이나 `client-entry.js` 에서 import 하는 것을 권장합니다.  **절대로** `main.styl`을 컴포넌트 내에서 import **하지 마세요**. 이는 성능을 떨어뜨리고 **HMR** (hot module reloading)을 많이 느리게 만들 수 있습니다.",
   "stylusText6": "import 위치를 결정했고, 아직 index 파일에 Vuetify 스타일시트가 `<link>` 태그로 남아있다면, 지워버리세요. 이제 빌드 프로세스를 재시작 하고 프로젝트를 다시 열면 모든 스타일이 제대로 작동하고 있는 걸 보실 수 있습니다.",
   "stylusHeader3": "값 변경하기 (Changing values)",
-  "stylusText7": "이제 스타일러스가 설정되었으니 스타일러스의 변수의 기본값을 원하는 대로 바꿀 수 있습니다. 이는 반드시 import _하기 전에_ 선언되어야 하고, 자동으로 Vuetify 의 기본 값들을 대체합니다 (override).",
-  "toc": [
-    {
-      "text": "테마",
-      "href": "introduction"
-    },
-    {
-      "text": "라이트/다크",
-      "href": "light-and-dark"
-    },
-    {
-      "text": "커스터마이징",
-      "href": "customizing"
-    },
-    {
-      "text": "옵션",
-      "href": "options"
-    },
-    {
-      "text": "Stylus 변수 바꾸기",
-      "href": "stylus-guide"
-    }
-  ]
+  "stylusText7": "이제 스타일러스가 설정되었으니 스타일러스의 변수의 기본값을 원하는 대로 바꿀 수 있습니다. 이는 반드시 import _하기 전에_ 선언되어야 하고, 자동으로 Vuetify 의 기본 값들을 대체합니다 (override)."
 }

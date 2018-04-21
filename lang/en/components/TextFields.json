@@ -73,7 +73,7 @@
       "header": "Progress bar",
       "desc": "You can display a progress bar instead of the bottom line. You can use the default indeterminate progress having same color as the text field or designate a custom one using the `progress` slot"
     }
-  }],
+  },
   "props": {
     "autoGrow": "Auto-grows the input. This option requires the use of **v-model**",
     "autofocus": "Enable autofocus",

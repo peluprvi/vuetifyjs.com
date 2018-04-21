@@ -2,7 +2,7 @@
   "header": "버튼 (Button)",
   "headerText": "`v-btn` 컴포넌트는 표준 HTML 버튼을 대체하며 머티리얼 디자인 테마를 따르고 다양한 옵션을 가지고 있습니다. 어떤 색상 헬퍼(color helper)든 버튼의 배경과 글자색을 조절하는데 쓰일 수 있습니다.",
   "components": ["v-btn"],
-  "examples": [{
+  "examples": {
     "usage": {
       "header": "사용법",
       "desc": ""
@@ -56,7 +56,7 @@
       "header": "블럭 (Block)",
       "desc": "블럭 버튼은 너비가 가능한 최대값으로 확장됩니다."
     }
-  }],
+  },
   "props": {
     "v-btn": {
       "block": "가능한 공간의 100%로 버튼을 확장",

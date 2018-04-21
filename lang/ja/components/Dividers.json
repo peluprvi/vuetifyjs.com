@@ -2,7 +2,7 @@
   "header": "Divider",
   "headerText": "`v-divider` コンポーネントは、リスト中のセクションの区切り線として使用することができます。",
   "components": ["v-divider"],
-  "examples": [{
+  "examples": {
     "fullBleed": {
       "header": "全幅",
       "desc": "区切り線はコンテンツの幅に合わせて表示されます。"
@@ -28,7 +28,7 @@
       "header": "ポートレート",
       "desc": "横長のコンポーネント内でも区切り線は問題なく表示できます。"
     }
-  }],
+  },
   "props": {
     "inset": "インデントを加えます。 (72px)"
   }

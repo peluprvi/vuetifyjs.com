@@ -8,7 +8,7 @@
     "v-tab-item",
     "v-tabs-slider"
   ],
-  "examples": [{
+  "examples": {
     "toolbar": {
       "header": "Toolbar tabs",
       "desc": ""
@@ -57,7 +57,7 @@
       "header": "Custom icons",
       "desc": "**prepend-icon** and **append-icon** can be used for applying custom pagination icons."
     }
-  }],
+  },
   "props": {
     "alignWithTitle": "Make `v-tabs` lined up with the toolbar title",
     "prependIcon": "Left pagination icon",

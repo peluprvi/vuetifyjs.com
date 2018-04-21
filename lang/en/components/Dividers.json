@@ -2,7 +2,7 @@
   "header": "Divider",
   "headerText": "The `v-divider` component is used to separate sections of lists.",
   "components": ["v-divider"],
-  "examples": [{
+  "examples": {
     "fullBleed": {
       "header": "Full bleed",
       "desc": "Full bleed dividers extend the entire content width."
@@ -28,7 +28,7 @@
       "header": "Dividers in Portrait View",
       "desc": "Create custom cards to fit any use-case"
     }
-  }],
+  },
   "props": {
     "inset": "Adds indentation (72px)",
     "vertical": "Creates a vertical divider"

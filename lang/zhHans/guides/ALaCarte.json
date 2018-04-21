@@ -16,27 +16,5 @@
   "applicationText1": "导航到**src**文件夹并打开`main.js`，我们看到在模版中有一些组件已经配置好加载。",
   "applicationText2": "例如下面的代码中告诉我们的应用程序中，您使用了一个`<v-app>`、`<v-navigation-drawer>`、`<v-footer>`和`<v-toolbar>`的应用程序，一旦定义，标记可以在任何.vue文件中使用。",
   "componentNameListHeader": "UI组件名列表",
-  "componentNameListText1": "一些组件如`VLayout`和`VFlex`处于其它组件的原因，在这种环境下是`VGrid`。想要知道需要导入哪个组建，可以查看下表。",
-  "toc": [
-    {
-      "text": "概述",
-      "href": "introduction"
-    },
-    {
-      "text": "组件导入",
-      "href": "importing-components"
-    },
-    {
-      "text": "所需要的样式",
-      "href": "required-styles"
-    },
-    {
-      "text": "应用程序",
-      "href": "application"
-    },
-    {
-      "text": "UI组件名称列表",
-      "href": "component-name-list"
-    }
-  ]
+  "componentNameListText1": "一些组件如`VLayout`和`VFlex`处于其它组件的原因，在这种环境下是`VGrid`。想要知道需要导入哪个组建，可以查看下表。"
 }

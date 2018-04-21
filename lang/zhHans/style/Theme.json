@@ -19,23 +19,5 @@
   "stylusText5": "请记住，node_modules的相对位置可能在您的项目中有所不同，请相应地进行调整。建议导入被定位在主应用程序的`index.js`或`client-entry.js`文件。 **不要**导入您的`main.styl`到一个组件内，否则 _将会_ 导致性能问题并大大减慢**HMR**（模块重新热加载）。",
   "stylusText6": "确定导入位置之后，如果要在Index文件中使用一个`<link>`标签来请求Vuetify样式表，您应该可以看到所有样式都在正常工作。",
   "stylusHeader3": "改变值",
-  "stylusText7": "现在stylus是已经配置好了，您可以为需要改变的stylus变量设置默认值。这些必须在导入 _之前_ 声明，它们将会自动覆盖Vuetify的默认值。",
-  "toc": [
-    {
-      "text": "主题",
-      "href": "introduction"
-    },
-    {
-      "text": "明亮和暗黑",
-      "href": "light-and-dark"
-    },
-    {
-      "text": "自定义化",
-      "href": "customizing"
-    },
-    {
-      "text": "修改Stylus的变量",
-      "href": "stylus-guide"
-    }
-  ]
+  "stylusText7": "现在stylus是已经配置好了，您可以为需要改变的stylus变量设置默认值。这些必须在导入 _之前_ 声明，它们将会自动覆盖Vuetify的默认值。"
 }

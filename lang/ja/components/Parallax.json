@@ -2,7 +2,7 @@
   "header": "Parallax",
   "headerText": "The `v-parallax` component creates a 3d effect that makes an image appear to scroll slower than the window.",
   "components": ["v-parallax"],
-  "examples": [{
+  "examples": {
     "default": {
       "header": "Default",
       "desc": "A parallax causes a shift in a background image when the user scrolls the page."
@@ -15,7 +15,7 @@
       "header": "Custom height",
       "desc": "You can specify a custom height on a parallax. Keep in mind this can break the parallax if your image is not sized properly"
     }
-  }],
+  },
   "props": {
     "alt": "Attaches an alt property to the parallax image",
     "src": "The image to parallax"

@@ -3,7 +3,7 @@
   "headerText": "选择器组件用于从选项列表中收集用户提供的信息。",
   "components": ["v-select"],
   "supplemental": ["MaskTable"],
-  "examples": [{
+  "examples": {
     "light": {
       "header": "亮色主题",
       "desc": "标准的单选有多种配置选项"
@@ -40,7 +40,7 @@
       "header": "异步选项",
       "desc": "有时候你需要根据搜索查询从外部获取数据。当你使用 `autocomplete` 属性时可以使用 `search-input` 属性加上 **.sync** 修饰符。 我们也可以使用新的 `cache-items` 属性。这将保持传给 `items` 属性一个所有选项中的唯一列表，并且在使用异步选项以及 **multiple** 属性时是必须的。"
     }
-  }],
+  },
   "props": {
     "attach": "Mixins.Detachable.props.attach",
     "autocomplete": "根据用户输入进行筛选",

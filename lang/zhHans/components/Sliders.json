@@ -2,7 +2,7 @@
   "header": "滑块",
   "headerText": "`v-slider`组件是数字输入的更好的可视化，它用于收集数字用户数据。",
   "components": ["v-slider"],
-  "examples": [{
+  "examples": {
     "continuous": {
       "header": "连续的",
       "desc": "当精度不是问题时，应使用连续的滑块。"
@@ -32,7 +32,7 @@
       "header": "Range",
       "desc": "Range sliders."
     }
-  }],
+  },
   "props": {
     "step": "如果大于0，则为滑块上的点设置步骤间隔",
     "thumbColor": "设置拇指和拇指标签颜色",

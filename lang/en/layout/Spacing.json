@@ -1,24 +1,7 @@
 {
   "header": "Spacing",
   "headerText": "Update your layout without creating new classes. Spacing helpers are useful for modifying the padding and margin of an element.",
-  "toc": [
-    {
-      "text": "Introduction",
-      "href": "introduction"
-    },
-    {
-      "text": "How it works",
-      "href": "how-it-works"
-    },
-    {
-      "text": "Examples",
-      "href": "examples"
-    },
-    {
-      "text": "Horizontal centering",
-      "href": "horizontal-centering"
-    }
-  ],
+  
   "howText": "Apply **margin** or **padding** to an element ranging from _0 to 5_. Each size increment was designed to align with common Material Design spacing. These classes can be applied using the following format `{property}{direction}-{size}`.",
   "propertyText": "The _property_ applies the type of spacing:",
   "properties": [

@@ -2,7 +2,7 @@
   "header": "Badge",
   "headerText": "Компонент `v-badge` может обернуть любой тип контента, чтобы выделить информацию пользователю или просто привлечь внимание к определенному элементу.",
   "components": ["v-badge"],
-  "examples": [{
+  "examples": {
     "character": {
       "header": "Характеристика",
       "desc": "Любой символ может быть помещен с иконкой."
@@ -23,7 +23,7 @@
       "header": "Видимость",
       "desc": "Видимость значков можно контролировать с помощью `v-model`."
     }
-  }],
+  },
   "props": {
     "bottom": "Mixins.Positionable.props.bottom",
     "left": "Mixins.Positionable.props.left",

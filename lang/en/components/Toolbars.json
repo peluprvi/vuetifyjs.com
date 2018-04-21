@@ -5,7 +5,7 @@
     "v-toolbar",
     "v-system-bar"
   ],
-  "examples": [{
+  "examples": {
     "usage": {
       "header": "Usage",
       "desc": "A toolbar is a flexible container that can be utilized in a number of ways. By default, the toolbar is 64px high on desktop, 56px high on mobile portrait and 48px high on mobile landscape. There are a number of helper components available to use with the toolbar. These are `v-toolbar-side-icon`, `v-toolbar-title` and `v-toolbar-items`."
@@ -63,7 +63,7 @@
       "header": "System bars - status/window",
       "desc": "System bars are useful for notification icons on mobile and desktop. For live examples of, head to the pre-defined layouts."
     }
-  }],
+  },
   "props": {
     "card": "Inherits border radius when used within `v-card`",
     "clippedLeft": "Designates that the applications `v-navigation-drawer` is clipped on the left side of the toolbar",

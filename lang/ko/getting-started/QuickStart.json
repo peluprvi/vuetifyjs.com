@@ -23,31 +23,5 @@
     "supported": "지원됨",
     "notSupported": "지원되지 않음",
     "polyfill": "폴리필(polyfill)로 지원"
-  },
-  "toc": [
-    {
-      "text": "소개",
-      "href": "introduction"
-    },
-    {
-      "text": "지원되는 브라우져",
-      "href": "supported-browsers"
-    },
-    {
-      "text": "CDN을 이용한 설치",
-      "href": "cdn-install"
-    },
-    {
-      "text": "새 어플리케이션",
-      "href": "new-applications"
-    },
-    {
-      "text": "기존 어플리케이션",
-      "href": "existing-applications"
-    },
-    {
-      "text": "IE11 지원",
-      "href": "ie11-support"
-    }
-  ]
+  }
 }

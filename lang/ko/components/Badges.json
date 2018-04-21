@@ -2,7 +2,7 @@
   "header": "배지 (Badge)",
   "headerText": "`v-badge` 컴포넌트는 특정 정보를 부각시키거나(highlight) 특정 요소에 대해 이목을 끌기 위해 사용되며 어떤 종류의 컨텐츠에도 사용할 수 있습니다.",
   "components": ["v-badge"],
-  "examples": [{
+  "examples": {
     "character": {
       "header": "글자 (Character)",
       "desc": "어떤 요소에든 배지를 사용할 수 있습니다."
@@ -23,7 +23,7 @@
       "header": "표시여부 (Visibility)",
       "desc": "배지의 표시여부는 `v-model` 로 조절할 수 있습니다."
     }
-  }],
+  },
   "props": {
     "bottom": "Mixins.Positionable.props.bottom",
     "left": "Mixins.Positionable.props.left",

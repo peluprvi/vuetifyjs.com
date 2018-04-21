@@ -2,7 +2,7 @@
   "header": "Menu",
   "headerText": "The `v-menu` component shows a menu at the position of the element used to activate it.",
   "components": ["v-menu"],
-  "examples": [{
+  "examples": {
     "activator": {
       "header": "Activator",
       "desc": "Remember to put the element that activates the menu in the `activator` slot.",
@@ -38,7 +38,7 @@
       "desc": "A menu can be configured to be static when opened, allowing it to function as a popover. This can be useful when there are multiple interactive items within the menu contents.",
       "uninverted": true
     }
-  }],
+  },
   "props": {
     "closeOnClick": "Designates if menu should close on outside-activator click",
     "closeOnContentClick": "Designates if menu should close when its content is clicked",

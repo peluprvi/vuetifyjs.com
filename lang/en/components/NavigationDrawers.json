@@ -2,7 +2,7 @@
   "header": "Navigation drawer",
   "headerText": "The `v-navigation-drawer` component is what your users will utilize to navigate through the application. The navigation-drawer is pre-configured to work with or without **vue-router** right out the box.",
   "components": ["v-navigation-drawer"],
-  "examples": [{
+  "examples": {
     "permanent": {
       "header": "Default",
       "desc": "The navigation drawer is primarily used to house links to the pages in your application"
@@ -40,7 +40,7 @@
       "header": "Nested lists",
       "desc": "List tiles can be nested a second level for even more options for your navigation"
     }
-  }],
+  },
   "props": {
     "absolute": "Mixins.Positionable.props.absolute",
     "clipped": "A clipped drawer rests under the application toolbar",

@@ -2,7 +2,7 @@
   "header": "图标",
   "headerText": "`v-icon`组件提供了大量的字形来为应用程序的各个方面提供上下文。Vuetify图标利用Google的Material图标字体库。有关所有可用图标的列表，请访问官方的<a href=\"https://material.io/icons/\" target=\"_blank\" rel=\"noopener\">Material Icons</a>页面。",
   "components": ["v-icon"],
-  "examples": [{
+  "examples": {
     "standard": {
       "header": "标准",
       "desc": "图标有两个主题（明亮和暗黑）和四个不同的大小（标准（standard）、中型（medium）、大型（large）和超大型（x-large））。"
@@ -23,7 +23,7 @@
       "header": "按钮",
       "desc": "图标可以在按钮内部使用，以增加动作的重点。"
     }
-  }],
+  },
   "props": {
     "disabled": "Mixins.Input.props.disabled",
     "large": "设置图标为大型**（36px）**",

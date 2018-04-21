@@ -2,7 +2,7 @@
   "header": "Expansion Panel",
   "headerText": "The `v-expansion-panel` component is useful for reducing vertical space with large amounts of information. The default functionality of the component is to only display one expansion-panel body at a time, however, with the `expandable` property, the expansion-panel can remain open until explicitly closed.",
   "components": ["v-expansion-panel', 'v-expansion-panel-content"],
-  "examples": [{
+  "examples": {
     "accordion": {
       "header": "Accordion",
       "desc": "Accordion expansion panels can only have 1 panel open at a time."
@@ -34,7 +34,7 @@
       "desc": "The expansion panel headers can be made focusable with the prop `focusable`.",
       "uninverted": true
     }
-  }],
+  },
   "props": {
     "v-expansion-panel": {
       "disabled": "Disables entire expansion panel",

@@ -2,7 +2,7 @@
   "header": "Time picker",
   "headerText": "The `v-time-picker` is stand-alone component that can be utilized in many existing Vuetify components. It offers the user a visual representation for selecting the time.",
   "components": ["v-time-picker"],
-  "examples": [{
+  "examples": {
     "timeLight": {
       "header": "Time pickers",
       "desc": "Time pickers have the light theme enabled by default."
@@ -27,7 +27,7 @@
       "header": "Time pickers - Setting picker width",
       "desc": "You can specify allowed the picker's width or make it full width."
     }
-  }],
+  },
   "props": {
     "v-time-picker": {
       "format": "Available options are `ampm` and `24hr`",

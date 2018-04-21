@@ -12,7 +12,7 @@
     "v-list-tile-sub-title",
     "v-list-tile-action-text"
   ],
-  "examples": [{
+  "examples": {
     "avatarTwoLines": {
       "header": "Avatar with 2 lines",
       "desc": "리스트는 리스트 아이템의 배열을 취할 수 있습니다. 배열이 주어지면 리스트 컴포넌트는 이 배열에 기반하여 필요한 클래스를 알아 냅니다. 또한 아이템 배열 안에서 헤더나 구분자(디바이더)를 정의할 수도 있습니다."
@@ -53,7 +53,7 @@
       "header": "확장 리스트 (Expansion Lists)",
       "desc": "리스트는 클릭할때 보여지는 아이템 그룹을 가질 수 있습니다. 확장리스는 또한 `네비게이션 서랍(navigation drawer)` 컴포넌트 안에서도 사용됩니다."
     }
-  }],
+  },
   "props": {
     "avatar": "한줄짜리 리스트 아이템에서 최소 타일높이",
     "dense": "리스트 타일에서 최대 높이를 낮춤",

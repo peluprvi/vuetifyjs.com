@@ -2,14 +2,14 @@
   "header": "触摸支持",
   "headerText": "`v-touch`</code>`指令允许您捕获轻扫手势手势并应用定向回调。",
   "components": ["v-touch"],
-  "examples": [{
+  "examples": {
     "default": {
       "header": "Default",
       "desc": "在一个移动设备上，尝试向各个方向滑动。",
       "uninverted": true
     }
-  }],
-  "props": [{
+  },
+  "props": {
     "v-touch": [
       {
         "name": "[up, down, left, right]",
@@ -24,5 +24,5 @@
         "desc": "在触摸事件开始、结束或者正在进行的时候分配一个回调。"
       }
     ]
-  }]
+  }
 }

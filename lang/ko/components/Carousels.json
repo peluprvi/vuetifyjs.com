@@ -2,7 +2,7 @@
   "header": "캐러셀 (Carousel)",
   "headerText": "`v-carousel` 컴포넌트는 많은 수의 비쥬얼 컨텐츠(visual conents) 를 회전 타이머(rotating timer)를 이용해 보여줍니다.",
   "components": ["v-carousel', 'v-carousel-item"],
-  "examples": [{
+  "examples": {
     "default": {
       "header": "기본",
       "desc": "캐러셀의 기본 동작은 슬라이드 트랜지션입니다.",
@@ -23,7 +23,7 @@
       "desc": "하단의 컨트롤을 숨기려면 `hide-controls` prop 을 사용합니다.(이것도 오타같습니다. 실제론 좌우 전환 컨트롤을 숨깁니다. 델리미터를 숨기는 건 `hide-delemiters` 입니다.)",
       "uninverted": true
     }
-  }],
+  },
   "props": {
     "nextIcon": "Mixins.Input.props.appendIcon",
     "prevIcon": "Mixins.Input.props.prependIcon",

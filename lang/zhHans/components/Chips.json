@@ -2,7 +2,7 @@
   "header": "厚切薯条🍟",
   "headerText": "`v-chip`组件用于传递小块信息。使用`close`属性，厚切薯条变得互动，允许用户交互。",
   "components": ["v-chip"],
-  "examples": [{
+  "examples": {
     "default": {
       "header": "默认情况",
       "desc": "厚切薯条有4个主要的变种，Regular, 带图标、带头像和可关闭。",
@@ -34,7 +34,7 @@
       "desc": "选择框可以用厚切薯条来显示选定的数据。",
       "uninverted": true
     }
-  }],
+  },
   "props": {
     "close": "添加删除按钮",
     "disabled": "禁用厚切薯条，使其不可选择",

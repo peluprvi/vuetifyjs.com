@@ -1,24 +1,7 @@
 {
   "header": "Display",
   "headerText": "The display helpers allow you to control the display of content. This includes being conditionally visible based upon the current viewport, or the actual element display type.",
-  "toc": [
-    {
-      "text": "Introduction",
-      "href": "introduction"
-    },
-    {
-      "text": "Visibility",
-      "href": "visibility"
-    },
-    {
-      "text": "Display",
-      "href": "display"
-    },
-    {
-      "text": "Examples",
-      "href": "examples"
-    }
-  ],
+  
   "visibilityHeader": "Visibility",
   "visibilityText": "Conditionally display an element based upon the current **viewport**. These classes can be applied using the following format `hidden-{breakpoint}-{condition}`",
   "breakpointText": "The _breakpoint_ sets the viewport size:",

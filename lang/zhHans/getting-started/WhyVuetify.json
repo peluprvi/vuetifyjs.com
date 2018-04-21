@@ -1,24 +1,7 @@
 {
   "header": "不同之处是什么？",
   "headerText": "",
-  "toc": [
-    {
-      "text": "不同之处是什么?",
-      "href": "why-vuetify"
-    },
-    {
-      "text": "设计原则",
-      "href": "design-principles"
-    },
-    {
-      "text": "充满活力的社区",
-      "href": "vibrant-community"
-    },
-    {
-      "text": "框架比较",
-      "href": "framework-comparison"
-    }
-  ],
+  
   "philosophies": [
     {
       "img": "/static/vuetify_semantic.svg",

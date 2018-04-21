@@ -7,7 +7,7 @@
     "v-card-title",
     "v-card-actions"
   ],
-  "examples": [{
+  "examples": {
     "components": {
       "header": "Components",
       "desc": "A card has 4 basic components, `v-card-media`, `v-card-title`, `v-card-text` and `v-card-actions`."
@@ -28,7 +28,7 @@
       "header": "Custom actions",
       "desc": "With a simple conditional, you can easily add supplementary text that is hidden until opened."
     }
-  }],
+  },
   "props": {
     "contain": "Change the background-size to contain.",
     "flat": "Removes card box shadow",

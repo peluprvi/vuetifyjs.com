@@ -7,7 +7,7 @@
     "v-stepper-content",
     "v-stepper-header"
   ],
-  "examples": [{
+  "examples": {
     "example": {
       "header": "Example",
       "desc": "A stepper can be used for a multitude of scenarios, including shopping carts, record creation and more."
@@ -60,7 +60,7 @@
       "header": "Dynamic steps",
       "desc": "Steppers can have their steps dynamically added or removed. If a currently active step is removed, be sure to account for this by changing the applied model."
     }
-  }],
+  },
   "props": {
     "altLabels": "Places the labels beneath the step",
     "complete": "Marks step as complete",

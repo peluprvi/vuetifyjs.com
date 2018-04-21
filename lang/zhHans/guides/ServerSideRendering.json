@@ -25,39 +25,5 @@
   "redirectsHeader": "重定向",
   "redirectsText": "随着应用程序的发展，路由也会改变。如果您想保持您的页面已经从索引机器人获得的权重，最好是分配一个301重定向到新的位置。位于`router/301.json`中，您可以为页面定义301重定向，在页面加载时会自动处理。",
   "webAppSupportHeader": "Web App支持",
-  "webAppSupportText": "Vuetify SSR已经支持智能手机上的原生Web应用程序，也称为渐进式网络应用程序，您的网站可以保存在设备的主屏幕上，使其可以脱机使用并接收推送通知。有关Web App清单的更多信息，请导航到[Mozilla开发者网络](https://developer.mozilla.org/en-US/docs/Web/Manifest)。要查看实例，请移动到设备的主屏幕上添加Vuetify文档。",
-  "toc": [
-    {
-      "text": "概述",
-      "href": "introduction"
-    },
-    {
-      "text": "结构",
-      "href": "structure"
-    },
-    {
-      "text": "应用",
-      "href": "application"
-    },
-    {
-      "text": "路由",
-      "href": "routing"
-    },
-    {
-      "text": "状态控制",
-      "href": "state-control"
-    },
-    {
-      "text": "元数据",
-      "href": "meta-data"
-    },
-    {
-      "text": "重定向",
-      "href": "redirects"
-    },
-    {
-      "text": "Web App支持",
-      "href": "web-app-support"
-    }
-  ]
+  "webAppSupportText": "Vuetify SSR已经支持智能手机上的原生Web应用程序，也称为渐进式网络应用程序，您的网站可以保存在设备的主屏幕上，使其可以脱机使用并接收推送通知。有关Web App清单的更多信息，请导航到[Mozilla开发者网络](https://developer.mozilla.org/en-US/docs/Web/Manifest)。要查看实例，请移动到设备的主屏幕上添加Vuetify文档。"
 }

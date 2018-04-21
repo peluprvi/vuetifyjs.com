@@ -25,39 +25,5 @@
   "redirectsHeader": "Redirects",
   "redirectsText": "As applications evolve, routes change. If you want to maintain the authority already garnered from bots that index your page, it is best to assign a 301 redirect to the new location. Located in <code>router/301.json</code> you can define 301 redirects for your pages which will automatically be handled for you on page load.",
   "webAppSupportHeader": "Web App support",
-  "webAppSupportText": "Vuetify SSR has support for native Web Applications on smart phones. Also known as progressive web apps, your websites can be saved on the homescreen of a device, allowing it to be usable offline and receive push notifications. For more information on Web App Manifests, navigate to the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Manifest). To see a live example, add the Vuetify documentation on your mobile device's homescreen.",
-  "toc": [
-    {
-      "text": "Overview",
-      "href": "introduction"
-    },
-    {
-      "text": "Structure",
-      "href": "structure"
-    },
-    {
-      "text": "Application",
-      "href": "application"
-    },
-    {
-      "text": "Routing",
-      "href": "routing"
-    },
-    {
-      "text": "State control",
-      "href": "state-control"
-    },
-    {
-      "text": "Meta data",
-      "href": "meta-data"
-    },
-    {
-      "text": "Redirects",
-      "href": "redirects"
-    },
-    {
-      "text": "Web App support",
-      "href": "web-app-support"
-    }
-  ]
+  "webAppSupportText": "Vuetify SSR has support for native Web Applications on smart phones. Also known as progressive web apps, your websites can be saved on the homescreen of a device, allowing it to be usable offline and receive push notifications. For more information on Web App Manifests, navigate to the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Manifest). To see a live example, add the Vuetify documentation on your mobile device's homescreen."
 }

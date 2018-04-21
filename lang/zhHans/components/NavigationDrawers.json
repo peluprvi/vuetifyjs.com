@@ -2,7 +2,7 @@
   "header": "导航抽屉",
   "headerText": "`v-navigation-drawer`组件是用户将用来浏览应用程序的内容，导航抽屉被预先配置为可以使用或不实用**vue-router**。",
   "components": ["v-navigation-drawer"],
-  "examples": [{
+  "examples": {
     "permanent": {
       "header": "默认情况",
       "desc": "导航抽屉主要用于容纳应用程序中的页面的链接。"
@@ -32,7 +32,7 @@
       "desc": "Vuetify也支持暗黑的应用程序主题，这不会覆盖具有默认主题的主键，因此在某些情况下，需要手动设置为暗黑主题。",
       "uninverted": true
     }
-  }],
+  },
   "props": {
     "absolute": "Mixins.Positionable.props.absolute",
     "clipped": "剪切的抽屉位于应用程序工具栏下方",

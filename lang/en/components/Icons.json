@@ -2,7 +2,7 @@
   "header": "Icon",
   "headerText": "The `v-icon` component provides a large set of glyphs to provide context to various aspects of your application. Vuetify icons utilize Google's Material Icons font library. For a list of all available icons, visit the official <a href=\"https://material.io/icons/\" target=\"_blank\" rel=\"noopener\">Material Icons</a> page.",
   "components": ["v-icon"],
-  "examples": [{
+  "examples": {
     "standard": {
       "header": "Standard",
       "desc": "Icons come in two themes (light and dark), and four different sizes (standard, medium, large, and x-large)."
@@ -23,7 +23,7 @@
       "header": "Buttons",
       "desc": "Icons can be used inside of buttons to add emphasis to the action."
     }
-  }],
+  },
   "props": {
     "disabled": "Mixins.Input.props.disabled",
     "large": "Makes the icon large **(36px)**",

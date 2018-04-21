@@ -2,7 +2,7 @@
   "header": "Alert",
   "headerText": "`v-alert` コンポーネントは重要な情報をユーザーに伝える際に使用します。 **success**、**info**、**warning** そして **error** の4つのバリエーションを備えています。 これらにはそれぞれ異なるアクションを表すデフォルトのアイコンが設定されており、必要に応じて変更が可能です。",
   "components": ["v-alert"],
-  "examples": [{
+  "examples": {
     "contextual": {
       "header": "Contextual"
     },
@@ -22,7 +22,7 @@
       "header": "アウトライン",
       "desc": "アウトラインアラートは、適用されている色から引き継いだ色の境界線を表示します。"
     }
-  }],
+  },
   "props": {
     "dismissible": "アラートを閉じることができるかどうかを設定します。",
     "icon": "アイコンを指定します。",

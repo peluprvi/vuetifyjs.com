@@ -12,27 +12,5 @@
   "alert": "반드시 `stylus`를 사용할 수 있도록 웹팩(webpack)을 설정하세요. [Vuetify에서 제공하는 미리 만들어진 템플릿](/getting-started/quick-start#new-applications)들을 사용하고 있다면 이미 그렇게 설정되어 있을 것입니다.",
   "stylusPackText3": "메인 **App.vue** 에서 `main.style`를 바로 로딩할 수도 있습니다. 이 방법은 엔트리 파일이 변경될때 마다 스타일러스 파일을 재생성하기 때문에, 프로젝트 설정에 따라 빌드 시간이 (_아마도_) 늘어날 수 있다는 점을 기억하세요.",
   "colorHeader": "메테리얼 색상표 (Material colors)",
-  "colorText": "아래 리스트는 주색상으로 묶은 메테리얼 디자인 색상 팔레트 입니다.",
-  "toc": [
-    {
-      "text": "소개",
-      "href": "introduction"
-    },
-    {
-      "text": "클래스",
-      "href": "classes"
-    },
-    {
-      "text": "자바스크립트 색상 팩",
-      "href": "javascript-color-pack"
-    },
-    {
-      "text": "스타일러스 색상 팩",
-      "href": "stylus-color-pack"
-    },
-    {
-      "text": "메테리얼 색상표",
-      "href": "material-colors"
-    }
-  ]
+  "colorText": "아래 리스트는 주색상으로 묶은 메테리얼 디자인 색상 팔레트 입니다."
 }

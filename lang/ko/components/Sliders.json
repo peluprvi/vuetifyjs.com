@@ -2,7 +2,7 @@
   "header": "슬라이더 (Slider)",
   "headerText": "`v-slider` 컴포넌트는 숫자 입력을 위한 더 나은 시각화를 제공합니다. 사용의 숫자형 데이터를 수집하기 위해 사용도비니다.",
   "components": ["v-slider"],
-  "examples": [{
+  "examples": {
     "continuous": {
       "header": "연속적 (Continuous)",
       "desc": "연속적(Continuous) 슬라이더는 정확도가 문제가 되지 않을 때만 사용해야 합니다."
@@ -27,7 +27,7 @@
       "header": "Range",
       "desc": "Range sliders."
     }
-  }],
+  },
   "props": {
     "step": "0 보다 크면 스텝 간격으로 쓰임",
     "thumbColor": "Thumb과 thumb 레이블 색상",

@@ -2,7 +2,7 @@
   "header": "Slider",
   "headerText": "The `v-slider` component is a better visualization of the number input. It is used for gathering numerical user data.",
   "components": ["v-slider"],
-  "examples": [{
+  "examples": {
     "continuous": {
       "header": "Continuous",
       "desc": "Continuous sliders should be used when precision is not a concern."
@@ -27,7 +27,7 @@
       "header": "Range",
       "desc": "Range sliders."
     }
-  }],
+  },
   "props": {
     "step": "If greater than 0, sets step interval for ticks",
     "thumbColor": "Sets the thumb and thumb label color",

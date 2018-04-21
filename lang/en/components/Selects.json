@@ -3,10 +3,10 @@
   "headerText": "Select fields components are used for collecting user provided information from a list of options.",
   "components": ["v-select"],
   "supplemental": ["MaskTable"],
-  "examples": [{
+  "examples": {
     "usage": {
-      "header": 'Usage',
-      "desc": 'Todo'
+      "header": "Usage",
+      "desc": "Todo"
     },
     "light": {
       "header": "Light theme",
@@ -44,7 +44,7 @@
       "header": "Asynchronous items",
       "desc": "Sometimes you need to load data externally based upon a search query. Use the `search-input` prop with the **.sync** modifier when using the `autocomplete` prop. We also make use of the new `cache-items` prop. This will keep a unique list of all items that have been passed to the `items` prop and is **REQUIRED** when using asynchronous items and the **multiple** prop."
     }
-  }],
+  },
   "props": {
     "attach": "Mixins.Detachable.props.attach",
     "autocomplete": "Filter the items in the list based on user input",

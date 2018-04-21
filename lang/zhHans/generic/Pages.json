@@ -12,27 +12,6 @@
   "slots": "插槽",
   "supplemental": "补充",
   "type": "类型",
-  "toc": [
-    {
-      "text": "介绍",
-      "href": "introduction"
-    },
-    {
-      "text": "用例",
-      "href": "usage"
-    },
-    {
-      "text": "API",
-      "href": "api"
-    },
-    {
-      "text": "补充",
-      "href": "supplemental"
-    },
-    {
-      "text": "示例",
-      "href": "examples"
-    }
-  ],
+  
   "usage": "用例"
 }
