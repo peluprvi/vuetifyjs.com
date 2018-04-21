@@ -308,7 +308,7 @@ router.get('/status', async function (req, res) {
 
 async function run () {
   // console.log(await checkIfOutdated('ko', 'Components.Alerts.examples.closable.desc'))
-  console.log(await checkStatus('ko', 'GettingStarted.QuickStart.header'))
+  // console.log(await checkStatus('ko', 'GettingStarted.QuickStart.header'))
   // console.log(await updateTranslation('ko', 'GettingStarted.SponsorsAndBackers.header', 'new header'))
   // console.log(await newTranslation('Svenska', 'sv', 'se'))
   // let data = update({ GettingStarted: {} }, ['GettingStarted', 'arr[1]'], 'hello')

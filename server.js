@@ -69,6 +69,7 @@ const serve = (path, cache) => express.static(resolve(path), {
   maxAge: cache && isProd ? 1000 * 60 * 60 * 24 * 30 : 0
 })
 
+app.use(express.json())
 app.use(cookieParser())
 app.use(compression({ threshold: 0 }))
 app.use(favicon('./static/favicon.ico'))
