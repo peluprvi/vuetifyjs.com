@@ -3,7 +3,7 @@
     section#structure
       section-head(value="Guides.ServerSideRendering.structureHeader")
       section-text(value="Guides.ServerSideRendering.structureText1")
-      h3.mb-3 {{ $t('Guides.ServerSideRendering.structureSubHeader') }}
+      section-subheader(value="Guides.ServerSideRendering.structureSubHeader")
       markup(lang="bash")
         | / project
         |   / assets
@@ -32,9 +32,9 @@
         |   &lt;/v-content&gt;
         |   &lt;v-footer app&gt;2017&lt;/v-footer&gt;
         |&lt;/v-app&gt;
-      h3.mb-3 {{ $t('Guides.ServerSideRendering.applicationSubHeader1') }}
+      section-subheader(value="Guides.ServerSideRendering.applicationSubHeader1")
       section-text(value="Guides.ServerSideRendering.applicationText3")
-      h3.mb-3 {{ $t('Guides.ServerSideRendering.applicationSubHeader2') }}
+      section-subheader(value="Guides.ServerSideRendering.applicationSubHeader2")
       section-text(value="Guides.ServerSideRendering.applicationText4")
 
     section#routing
