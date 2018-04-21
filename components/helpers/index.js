@@ -5,6 +5,7 @@ import Markup from './Markup'
 import PageHead from './PageHead'
 import Parameters from './Parameters'
 import SectionHead from './SectionHead'
+import SectionSubheader from './SectionSubheader'
 import SectionText from './SectionText'
 
 export default {
@@ -15,5 +16,6 @@ export default {
   PageHead,
   Parameters,
   SectionHead,
+  SectionSubheader,
   SectionText
 }

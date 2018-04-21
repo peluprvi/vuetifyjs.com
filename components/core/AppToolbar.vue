@@ -7,6 +7,7 @@
     height="58px"
     :flat="isHome"
     :manual-scroll="isManualScrolled"
+    :scroll-off-screen="!isHome"
     ref="toolbar"
   )#app-toolbar
     v-toolbar-side-icon(
@@ -33,6 +34,7 @@
         v-show="isHome"
         :to="{ name: 'getting-started/QuickStart' }"
       )
+        translatable(:i18n="$vuetify.breakpoint.mdAndUp ? 'Vuetify.AppToolbar.documentation' : 'Vuetify.AppToolbar.docs'")
         span.hidden-md-and-up {{ $t('Vuetify.AppToolbar.docs' )}}
         span.hidden-sm-and-down {{ $t('Vuetify.AppToolbar.documentation' )}}
       v-menu(
@@ -64,6 +66,11 @@
                 width="24px"
               )
             v-list-tile-title {{language.title}}
+          v-list-tile(
+            v-if="isTranslating"
+            @click="showCreateDialog(true)"
+          )
+            v-list-tile-title New translation
     v-toolbar-items
       v-btn(
         flat
@@ -71,6 +78,7 @@
         v-show="!isStore"
         :to="{ name: 'store/Index' }"
       )
+        translatable(i18n="Vuetify.AppToolbar.store")
         span.hidden-sm-and-down {{ $t('Vuetify.AppToolbar.store' )}}
         v-icon.hidden-md-and-up store
 
@@ -88,7 +96,7 @@
           slot="activator"
           style="min-width: 64px"
         )
-          span.hidden-sm-and-down.mr-1 {{ $t('Vuetify.AppToolbar.ecosystem' )}}
+          translatable(i18n="Vuetify.AppToolbar.ecosystem").hidden-sm-and-down.mr-1
           v-icon.hidden-sm-and-down mdi-menu-down
           v-icon.hidden-md-and-up mdi-earth
         v-list(light)
@@ -185,9 +193,9 @@
 
 <script>
   // Utilities
-  import { mapState } from 'vuex'
+  import { mapState, mapMutations } from 'vuex'
   import asyncData from '@/util/asyncData'
-  import languages from '@/i18n/languages'
+  import languages from '@/i18n/languages.json'
 
   export default {
     mixins: [asyncData],
@@ -207,6 +215,9 @@
     }),
 
     computed: {
+      ...mapState('translation', [
+        'isTranslating'
+      ]),
       ...mapState('app', [
         'appToolbar',
         'isFullscreen',
@@ -238,6 +249,9 @@
     },
 
     methods: {
+      ...mapMutations({
+        showCreateDialog: 'translation/SHOW_CREATE_DIALOG'
+      }),
       changeToRelease (release) {
         // Remove language setting
         const path = this.$route.fullPath.split('/')

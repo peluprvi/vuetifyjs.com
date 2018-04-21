@@ -1,7 +1,6 @@
 <template lang="pug">
-  h2.headline.primary--text
-    translatable(:i18n="value")
-      markdown(:source="$t(value)")
+  translatable(:i18n="value")
+    h3.mb-3 {{ $t(value) }}
 </template>
 
 <script>
@@ -9,7 +8,7 @@
     props: {
       value: {
         type: String,
-        default: ''
+        required: true
       }
     }
   }
