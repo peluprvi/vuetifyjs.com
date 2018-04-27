@@ -22,6 +22,10 @@ export default {
     customColors: {
       header: 'Пользовательские цвета',
       desc: 'Вы можете использовать различные цвета используя свойства `color`, `track-color` и `thumb-color`.'
+    },
+    range: {
+      header: 'Range',
+      desc: 'Range sliders.'
     }
   }],
   props: {

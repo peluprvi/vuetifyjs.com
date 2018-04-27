@@ -22,6 +22,10 @@ export default {
     customColors: {
       header: '사용자지정 생상 (Custom colors)',
       desc: '`color`, `track-color`와 `thumb-color` prop들을 이용해 슬라이더의 색상을 정의할 수 있습니다.'
+    },
+    range: {
+      header: 'Range',
+      desc: 'Range sliders.'
     }
   }],
   props: {

@@ -27,6 +27,10 @@ export default {
     customColors: {
       header: '自定义色彩',
       desc: '您可以使用`color`、`track-color`和`thumb-color`属性来设置滑块的颜色。'
+    },
+    range: {
+      header: 'Range',
+      desc: 'Range sliders.'
     }
   }],
   props: {
