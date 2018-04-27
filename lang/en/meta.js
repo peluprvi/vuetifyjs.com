@@ -263,6 +263,12 @@ export default {
     'description': 'Icon component for Vuetify Framework',
     'keywords': 'icon'
   },
+  'components/inputs': {
+    'h1': 'Inputs',
+    'title': 'Inputs',
+    'description': 'Input component for the Vuetify framework.',
+    'keywords': 'input'
+  },
   'components/lists': {
     'h1': 'Lists',
     'title': 'List Component',
