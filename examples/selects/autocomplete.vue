@@ -9,7 +9,6 @@
           :items="states"
           v-model="a1"
           label="Select"
-          autocomplete
         ></v-autocomplete>
       </v-flex>
     </v-layout>
