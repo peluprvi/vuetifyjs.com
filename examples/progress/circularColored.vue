@@ -16,6 +16,6 @@
   div
     text-align: center
 
-  .progress-circular
+  .v-progress-circular
     margin: 1rem
 </style>
