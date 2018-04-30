@@ -3923,7 +3923,7 @@ module.exports = {
           "Boolean",
           "String"
         ],
-        "default": "menu-transition",
+        "default": "v-menu-transition",
         "source": null
       },
       {

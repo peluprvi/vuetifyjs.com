@@ -26,6 +26,6 @@
 </script>
 
 <style lang="stylus" scoped>
-  .menu
+  .v-menu
     max-width: 600px
 </style>
