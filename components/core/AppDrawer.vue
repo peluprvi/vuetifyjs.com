@@ -279,7 +279,7 @@
       height: 35px
       margin-bottom 0.25em
 
-      aside.navigation-drawer ul li
+      aside.v-navigation-drawer ul li
         font-size 14px
         color: #373737
 

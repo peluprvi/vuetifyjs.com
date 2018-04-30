@@ -259,7 +259,7 @@
     .justify
       text-align: justify
 
-    aside.navigation-drawer,
+    aside.v-navigation-drawer,
     .overlay
       z-index: 1
 

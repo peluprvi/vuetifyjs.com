@@ -179,7 +179,7 @@
 
 <style lang="stylus">
   #theme-generator
-    .navigation-drawer
+    .v-navigation-drawer
       overflow: hidden
 
     .card--swatches

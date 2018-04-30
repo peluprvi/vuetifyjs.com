@@ -122,7 +122,7 @@
     height: 660px;
   }
 
-  .navigation-drawer__border {
+  .v-navigation-drawer__border {
     display: none;
   }
 
