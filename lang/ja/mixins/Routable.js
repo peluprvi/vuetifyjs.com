@@ -10,6 +10,6 @@ export default {
     replace: 'Vue Router router-link prop',
     to: 'Will designate the component tag to `<router-link>`',
     tag: 'Specify a custom tag to use on the component',
-    target: 'Specify the target attribute, only works with anchor tag.'
+    target: 'Specify the target attribute.'
   }
 }
