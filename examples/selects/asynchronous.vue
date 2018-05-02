@@ -2,9 +2,8 @@
   <v-container fluid>
     <v-layout>
       <v-flex>
-        <v-select
+        <v-autocomplete
           label="Async items"
-          autocomplete
           :loading="loading"
           multiple
           cache-items
@@ -14,7 +13,7 @@
           :rules="[() => select.length > 0 || 'You must choose at least one']"
           :search-input.sync="search"
           v-model="select"
-        ></v-select>
+        ></v-autocomplete>
       </v-flex>
     </v-layout>
   </v-container>

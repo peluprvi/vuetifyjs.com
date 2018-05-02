@@ -37,13 +37,12 @@
                 ></v-select>
               </v-flex>
               <v-flex xs12 sm6>
-                <v-select
+                <v-autocomplete
                   label="Interests"
                   multiple
-                  autocomplete
                   chips
                   :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                ></v-select>
+                ></v-autocomplete>
               </v-flex>
             </v-layout>
           </v-container>
