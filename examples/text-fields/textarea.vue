@@ -6,11 +6,10 @@
         <v-container fluid>
           <v-layout row>
             <v-flex xs12>
-              <v-text-field
+              <v-textarea
                 name="input-1"
                 label="Label Text"
-                textarea
-              ></v-text-field>
+              ></v-textarea>
             </v-flex>
           </v-layout>
         </v-container>
@@ -22,12 +21,11 @@
         <v-container fluid>
           <v-layout row>
             <v-flex xs12>
-              <v-text-field
+              <v-textarea
                 name="input-1"
                 label="Label Text"
-                textarea
                 dark
-              ></v-text-field>
+              ></v-textarea>
             </v-flex>
           </v-layout>
         </v-container>

@@ -32,15 +32,14 @@
             ></v-text-field>
           </v-flex>
           <v-flex xs12>
-            <v-text-field
+            <v-textarea
               color="teal"
-              multi-line
               v-model="form.bio"
             >
               <div slot="label">
                 Bio <small>(optional)</small>
               </div>
-            </v-text-field>
+            </v-textarea>
           </v-flex>
           <v-flex xs12 sm6>
             <v-select
