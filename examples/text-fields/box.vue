@@ -18,7 +18,7 @@
         ></v-text-field>
       </v-flex>
       <v-flex xs12>
-        <v-text-field box multi-line label="Bio"></v-text-field>
+        <v-textarea box label="Bio"></v-textarea>
       </v-flex>
     </v-layout>
   </v-container>

@@ -40,15 +40,14 @@
               </v-flex>
               <v-flex xs12>
                 <v-divider></v-divider>
-                <v-text-field
+                <v-textarea
                   label="Message"
                   v-model="title"
                   counter
                   max="120"
                   full-width
-                  multi-line
                   single-line
-                ></v-text-field>
+                ></v-textarea>
               </v-flex>
             </v-layout>
           </v-container>
