@@ -1,16 +1,15 @@
 <template>
   <v-container fluid>
-    <v-layout row wrap>
+    <v-layout row wrap align-center>
       <v-flex xs12 sm6>
         <v-subheader v-text="'Autocomplete'"></v-subheader>
       </v-flex>
       <v-flex xs12 sm6>
-        <v-select
+        <v-autocomplete
           :items="states"
           v-model="a1"
           label="Select"
-          autocomplete
-        ></v-select>
+        ></v-autocomplete>
       </v-flex>
     </v-layout>
   </v-container>

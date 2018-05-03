@@ -1,11 +1,11 @@
 <template>
   <v-container fluid>
-    <v-layout row wrap>
+    <v-layout row wrap align-center>
       <v-flex xs12 sm6>
         <v-subheader v-text="'Slots'"></v-subheader>
       </v-flex>
       <v-flex xs12 sm6>
-        <v-select
+        <v-autocomplete
           label="Select"
           :items="people"
           v-model="e11"
@@ -14,7 +14,6 @@
           multiple
           chips
           max-height="auto"
-          autocomplete
         >
           <template slot="selection" slot-scope="data">
             <v-chip
@@ -44,7 +43,7 @@
               </v-list-tile-content>
             </template>
           </template>
-        </v-select>
+        </v-autocomplete>
       </v-flex>
     </v-layout>
   </v-container>
