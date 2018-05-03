@@ -20,6 +20,7 @@ import Footer from './Footer'
 import Forms from './Forms'
 import HelpMeChoose from './HelpMeChoose'
 import Icons from './Icons'
+import Inputs from './Inputs'
 import Lists from './Lists'
 import Jumbotrons from './Jumbotrons'
 import Menus from './Menus'
@@ -63,6 +64,7 @@ export default {
   Forms,
   HelpMeChoose,
   Icons,
+  Inputs,
   Lists,
   Jumbotrons,
   Menus,
