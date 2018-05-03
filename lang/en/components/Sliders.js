@@ -22,6 +22,10 @@ export default {
     customColors: {
       header: 'Custom colors',
       desc: 'You can set the colors of the slider using the props `color`, `track-color` and `thumb-color`.'
+    },
+    range: {
+      header: 'Range',
+      desc: 'Range sliders.'
     }
   }],
   props: {
