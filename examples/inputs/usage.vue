@@ -3,20 +3,20 @@
     <v-layout wrap>
       <v-flex xs12>
         <v-input
-          color="purple darken-2"
-          append-icon="close"
           :append-icon-cb="appendIconCallback"
           :disabled="true"
-          height="32px"
           :hide-details="false"
-          hint=""
           :loading="false"
           :persistent-hint="false"
-          prepend-icon="phone"
           :prepend-icon-cb="prependIconCallback"
           :readonly="false"
-          tabindex="0"
           v-model="text"
+          color="purple darken-2"
+          append-icon="close"
+          height="32px"
+          hint=""
+          prepend-icon="phone"
+          tabindex="0"
         ></v-input>
       </v-flex>
     </v-layout>

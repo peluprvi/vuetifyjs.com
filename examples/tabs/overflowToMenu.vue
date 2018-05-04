@@ -11,11 +11,11 @@
         <v-icon>more_vert</v-icon>
       </v-btn>
       <v-tabs
-        fixed-tabs
+        slot="extension"
         v-model="currentItem"
+        fixed-tabs
         color="transparent"
         slider-color="yellow"
-        slot="extension"
       >
         <v-tab
           v-for="item in items"
@@ -24,8 +24,8 @@
         >
           {{ item }}
         </v-tab>
-        <v-menu left bottom class="v-tabs__div" v-if="more.length">
-          <a class="v-tabs__item" slot="activator">
+        <v-menu v-if="more.length" left bottom class="v-tabs__div">
+          <a slot="activator" class="v-tabs__item">
             more
             <v-icon>arrow_drop_down</v-icon>
           </a>

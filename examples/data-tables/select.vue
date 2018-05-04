@@ -1,7 +1,7 @@
 <template>
   <v-data-table
     :headers="headers"
-    :items="items"
+    :items="desserts"
     :search="search"
     v-model="selected"
     item-key="name"
@@ -21,9 +21,9 @@
     <template slot="items" slot-scope="props">
       <td>
         <v-checkbox
+          v-model="props.selected"
           primary
           hide-details
-          v-model="props.selected"
         ></v-checkbox>
       </td>
       <td>{{ props.item.name }}</td>
@@ -55,7 +55,7 @@
           { text: 'Protein (g)', value: 'protein' },
           { text: 'Iron (%)', value: 'iron' }
         ],
-        items: [
+        desserts: [
           {
             value: false,
             name: 'Frozen Yogurt',

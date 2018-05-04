@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-dialog v-model="dialog" max-width="500px">
-      <v-btn color="primary" dark slot="activator" class="mb-2">New Item</v-btn>
+      <v-btn slot="activator" color="primary" dark class="mb-2">New Item</v-btn>
       <v-card>
         <v-card-title>
           <span class="headline">{{ formTitle }}</span>
@@ -10,19 +10,19 @@
           <v-container grid-list-md>
             <v-layout wrap>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Dessert name" v-model="editedItem.name"></v-text-field>
+                <v-text-field v-model="editedItem.name" label="Dessert name"></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Calories" v-model="editedItem.calories"></v-text-field>
+                <v-text-field v-model="editedItem.calories" label="Calories"></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Fat (g)" v-model="editedItem.fat"></v-text-field>
+                <v-text-field v-model="editedItem.fat" label="Fat (g)"></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Carbs (g)" v-model="editedItem.carbs"></v-text-field>
+                <v-text-field v-model="editedItem.carbs" label="Carbs (g)"></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Protein (g)" v-model="editedItem.protein"></v-text-field>
+                <v-text-field v-model="editedItem.protein" label="Protein (g)"></v-text-field>
               </v-flex>
             </v-layout>
           </v-container>
@@ -36,7 +36,7 @@
     </v-dialog>
     <v-data-table
       :headers="headers"
-      :items="items"
+      :items="desserts"
       hide-actions
       class="elevation-1"
     >
@@ -79,7 +79,7 @@
         { text: 'Protein (g)', value: 'protein' },
         { text: 'Actions', value: 'name', sortable: false }
       ],
-      items: [],
+      desserts: [],
       editedIndex: -1,
       editedItem: {
         name: '',
@@ -115,7 +115,7 @@
 
     methods: {
       initialize () {
-        this.items = [
+        this.desserts = [
           {
             name: 'Frozen Yogurt',
             calories: 159,
@@ -190,14 +190,14 @@
       },
 
       editItem (item) {
-        this.editedIndex = this.items.indexOf(item)
+        this.editedIndex = this.desserts.indexOf(item)
         this.editedItem = Object.assign({}, item)
         this.dialog = true
       },
 
       deleteItem (item) {
-        const index = this.items.indexOf(item)
-        confirm('Are you sure you want to delete this item?') && this.items.splice(index, 1)
+        const index = this.desserts.indexOf(item)
+        confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
       },
 
       close () {
@@ -210,9 +210,9 @@
 
       save () {
         if (this.editedIndex > -1) {
-          Object.assign(this.items[this.editedIndex], this.editedItem)
+          Object.assign(this.desserts[this.editedIndex], this.editedItem)
         } else {
-          this.items.push(this.editedItem)
+          this.desserts.push(this.editedItem)
         }
         this.close()
       }
