@@ -1,15 +1,35 @@
 export default {
   header: 'Slider',
-  headerText: 'The `v-slider` component is a better visualization of the number input. It is used for gathering numerical user data.',
-  components: ['v-slider'],
+  headerText: 'The `v-slider` component is a better visualization of the number input. It is used for gathering numerical user data. `v-range-slider` is also available for when both a minimum and maximum user input is needed.',
+  components: ['v-slider', 'v-range-slider'],
   examples: [{
-    continuous: {
-      header: 'Continuous',
-      desc: 'Continuous sliders should be used when precision is not a concern.'
+    usage: {
+      header: 'Usage',
+      desc: 'Both `v-slider` and `v-range-slider` support the same props. The only difference is that `v-range-slider` takes an array of two numbers as its `value`.'
     },
-    discrete: {
-      header: 'Discrete',
-      desc: 'Discrete sliders offer a thumb label that displays the exact current amount. Using the `step` prop you can disallow selecting values outside of steps.'
+    minMax: {
+      header: 'Min & max',
+      desc: 'Use the `min` and `max` props to change the possible slider values.'
+    },
+    step: {
+      header: 'Step',
+      desc: 'Using the `step` prop you can disallow selecting values outside of steps.'
+    },
+    ticks: {
+      header: 'Ticks',
+      desc: 'Using the `ticks` prop you can choose when to show the steps on the slider. You can also modify the size of the ticks using `tick-size`.'
+    },
+    tickLabels: {
+      header: 'Tick labels',
+      desc: 'By supplying an array of strings to the `tick-labels` prop you can customize the display of values in the slider.'
+    },
+    thumbLabel: {
+      header: 'Thumb-label',
+      desc: 'Using the `thumb-label` prop you can show a label containing the current value when using the slider. You can also modify the size of the thumb-label using `thumb-size`.'
+    },
+    slotThumbLabel: {
+      header: 'Slot: thumb-label',
+      desc: 'Using the `thumb-label` slot you can customize the look of the thumb-label.'
     },
     icons: {
       header: 'Icons',
