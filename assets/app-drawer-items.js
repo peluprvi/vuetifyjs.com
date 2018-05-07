@@ -82,7 +82,7 @@ export default [
       { name: 'footer', title: 'Footer' },
       {
         title: 'Inputs & controls',
-        group: '(forms|selects|selection|text-fields)',
+        group: '(forms|selects|selection|text-fields|inputs)',
         namespace: 'components',
         items: [
           { name: 'forms', title: 'Forms' },
