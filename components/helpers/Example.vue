@@ -42,15 +42,18 @@
         v-tooltip(top)
           v-btn(
             icon
-            @click.stop="panel = !panel"
+            @click.stop="togglePanel"
             slot="activator"
           )
             v-icon(color="grey darken-1") code
           span View source
 
       //- Example markup
-      v-expansion-panel.elevation-0
-        v-expansion-panel-content(v-model="panel")
+      v-expansion-panel(
+        ref="panel"
+        v-model="panel"
+      ).elevation-0
+        v-expansion-panel-content
           v-divider(v-if="!readonly")
           v-tabs(
             ref="tabs"
@@ -127,7 +130,7 @@
         tabs: ['template', 'script', 'style'],
         component: null,
         invertedProxy: this.inverted,
-        panel: false,
+        panel: [],
         parsed: {
           script: null,
           style: null,
@@ -159,7 +162,7 @@
 
     created () {
       if (this.active || this.readonly) {
-        this.panel = true
+        this.panel = []
       }
     },
 
@@ -216,6 +219,11 @@
       },
       sendToCodepen () {
         this.$refs.codepen.submit()
+      },
+      togglePanel () {
+        const panel = this.$refs.panel.items[0].uid
+
+        this.$refs.panel.panelClick(panel)
       }
     }
   }
