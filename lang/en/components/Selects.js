@@ -4,6 +4,10 @@ export default {
   components: ['v-select'],
   supplemental: ['MaskTable'],
   examples: [{
+    usage: {
+      header: 'Usage',
+      desc: 'Todo'
+    },
     light: {
       header: 'Light theme',
       desc: 'A standard single select has a multitude of configuration options.'

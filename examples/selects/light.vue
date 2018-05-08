@@ -1,50 +1,50 @@
 <template>
-  <v-container fluid>
-    <v-layout row wrap align-center>
-      <v-flex xs6>
-        <v-subheader>Standard</v-subheader>
-      </v-flex>
-      <v-flex xs6>
+  <v-container
+    fluid
+    grid-list-xl
+  >
+    <v-layout
+      align-center
+      wrap
+    >
+      <v-flex xs12 sm6>
         <v-select
+          v-model="value"
           :items="items"
-          v-model="e1"
-          label="Select"
-          single-line
+          attach
+          chips
+          label="Chips"
+          multiple
         ></v-select>
       </v-flex>
-      <v-flex xs6>
-        <v-subheader>Standard with focus</v-subheader>
-      </v-flex>
-      <v-flex xs6>
+      <v-flex xs12 sm6>
         <v-select
+          v-model="value"
           :items="items"
-          v-model="e2"
-          label="Select"
-          class="input-group--focused"
-          item-value="text"
+          box
+          chips
+          label="Chips"
+          multiple
         ></v-select>
       </v-flex>
-      <v-flex xs6>
-        <v-subheader>Error</v-subheader>
-      </v-flex>
-      <v-flex xs6>
+      <v-flex xs12 sm6>
         <v-select
+          v-model="value"
           :items="items"
-          v-model="e3"
-          :error-messages="['Please select an option']"
-          label="Select"
-          item-value="text"
+          chips
+          label="Chips"
+          multiple
+          outline
         ></v-select>
       </v-flex>
-      <v-flex xs6>
-        <v-subheader>Disabled</v-subheader>
-      </v-flex>
-      <v-flex xs6>
+      <v-flex xs12 sm6>
         <v-select
+          v-model="value"
           :items="items"
-          v-model="e4"
-          label="Select"
-          disabled
+          chips
+          label="Chips"
+          multiple
+          solo
         ></v-select>
       </v-flex>
     </v-layout>
@@ -53,38 +53,9 @@
 
 <script>
   export default {
-    data () {
-      return {
-        e1: null,
-        e2: null,
-        e3: null,
-        e4: null,
-        items: [
-          { text: 'State 1' },
-          { text: 'State 2' },
-          { text: 'State 3' },
-          { text: 'State 4' },
-          { text: 'State 5' },
-          { text: 'State 6' },
-          { text: 'State 7' }
-        ],
-        states: [
-          'Alabama', 'Alaska', 'American Samoa', 'Arizona',
-          'Arkansas', 'California', 'Colorado', 'Connecticut',
-          'Delaware', 'District of Columbia', 'Federated States of Micronesia',
-          'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho',
-          'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
-          'Louisiana', 'Maine', 'Marshall Islands', 'Maryland',
-          'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
-          'Missouri', 'Montana', 'Nebraska', 'Nevada',
-          'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
-          'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio',
-          'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico',
-          'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee',
-          'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia',
-          'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-        ]
-      }
-    }
+    data: () => ({
+      items: ['foo', 'bar', 'fizz', 'buzz'],
+      value: ['foo', 'bar', 'fizz', 'buzz']
+    })
   }
 </script>
