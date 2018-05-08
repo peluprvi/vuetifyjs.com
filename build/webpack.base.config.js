@@ -32,6 +32,12 @@ module.exports = {
     noParse: /es6-promise\.js$/, // avoid webpack shimming process
     rules: [
       {
+        test: /\.js$/,
+        loader: 'source-map-loader',
+        include: path.resolve(__dirname, '../node_modules/vuetify'),
+        enforce: 'pre'
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueConfig
