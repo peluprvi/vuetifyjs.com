@@ -1,0 +1,151 @@
+<template>
+  <v-jumbotron
+    dark
+    gradient="to bottom, #1867c0, #5CBBF6"
+    height="auto"
+  >
+    <v-chip
+      class="v-chip--tidelift white--text"
+    >
+      <img
+        alt="Tidelift"
+        class="mr-3"
+        src="/static/doc-images/affiliates/tidelift-small.png"
+        width="24px"
+      >
+      <span class="body-2 text-uppercase">
+        Get Professionally Supported Vuetify
+      </span>
+    </v-chip>
+    <v-container
+      fill-height
+      my-3
+    >
+      <v-layout
+        align-center
+        justify-center
+        wrap
+      >
+        <img
+          alt="Logo"
+          class="mx-3"
+          height="256px"
+          src="/static/vuetify-logo-300.png"
+          width="256px"
+        >
+        <v-flex shrink>
+          <div
+            class="display-3 font-weight-light"
+            v-text="$t('Vuetify.Home.materialDesign')"
+          />
+          <div
+            class="display-3 font-weight-light mb-3"
+            v-text="$t('Vuetify.Home.componentFramework')"
+          />
+          <div>
+            <v-btn
+              v-for="(btn, i) in buttons"
+              :class="btn.class"
+              :key="i"
+              color="white"
+              large
+              v-bind="btn.attrs"
+            >
+              <v-icon
+                v-if="btn.icon"
+                v-text="btn.icon"
+                left
+              />
+              {{ btn.lang ? $t(btn.lang) : btn.text }}
+            </v-btn>
+          </div>
+        </v-flex>
+      </v-layout>
+    </v-container>
+    <v-container
+      grid-list-xl
+      my-3
+    >
+      <v-layout wrap>
+        <v-flex
+          v-for="(feature, i) in features"
+          :key="i"
+          d-flex
+          xs12 sm6 md4 lg4
+        >
+          <v-card
+            class="elevation-24 hide-overflow text-xs-center"
+            light
+            max-width="375px"
+          >
+            <img
+              :alt="feature.title"
+              :src="feature.img"
+            >
+            <v-card-text>
+              <h3
+                v-text="feature.title"
+                class="subheading font-weight-bold"
+              />
+              <p
+                v-text="feature.text"
+                class="mb-2"
+              />
+            </v-card-text>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-jumbotron>
+</template>
+
+<script>
+  export default {
+    data: () => ({
+      buttons: [
+        {
+          attrs: {
+            to: {
+              name: 'getting-started/QuickStart'
+            }
+          },
+          class: 'primary--text',
+          lang: 'Vuetify.Home.getStarted'
+        },
+        {
+          attrs: {
+            href: 'https://github.com/vuetifyjs/vuetify',
+            outline: true,
+            target: '_blank'
+          },
+          icon: 'mdi-github-circle',
+          text: 'Github'
+        },
+        {
+          attrs: {
+            href: 'https://community.vuetifyjs.com',
+            outline: true,
+            target: '_blank'
+          },
+          icon: 'mdi-discord',
+          lang: 'Vuetify.Home.getHelp'
+        }
+      ]
+    }),
+
+    computed: {
+      features () {
+        return this.$t('Vuetify.Home.features').slice().reverse()
+      }
+    }
+  }
+</script>
+
+<style lang="stylus">
+  .v-chip--tidelift
+    background: #f6914d !important
+    padding-right: 64px
+    position: absolute
+    right: -24px
+    top: -20px
+</style>

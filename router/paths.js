@@ -1,5 +1,5 @@
 export default [
-  ['', 'Home', true],
+  ['', 'home/Home', true],
   ['getting-started/quick-start', 'getting-started/QuickStart'],
   ['getting-started/why-vuetify', 'getting-started/WhyVuetify'],
   ['getting-started/frequently-asked-questions', 'getting-started/FrequentlyAskedQuestions'],

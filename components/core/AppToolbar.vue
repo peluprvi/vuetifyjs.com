@@ -13,7 +13,7 @@
       @click="$store.commit('app/DRAWER_TOGGLE')"
       v-show="!stateless && $vuetify.breakpoint.mdAndDown"
     )
-    router-link(:to="{ name: 'Home' }").d-flex.ml-3
+    router-link(:to="{ name: 'home/Home' }").d-flex.ml-3
       img(
         src="/static/v-alt.svg"
         height="38px"
@@ -225,7 +225,7 @@
         return this.languages.find(l => l.locale === this.$i18n.locale)
       },
       isHome () {
-        return this.route.name === 'Home'
+        return this.route.name === 'home/Home'
       },
       isManualScrolled () {
         return !this.isHome &&
