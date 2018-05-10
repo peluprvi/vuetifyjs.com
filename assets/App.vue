@@ -74,30 +74,24 @@
 </script>
 
 <style lang="stylus">
-  // @import '~vuetify/src/stylus/settings/_variables.styl'
+  @import '~vuetify/src/stylus/settings/_variables.styl'
 
-  // [v-cloak]
-  //   display: none
+  main
+    section
+      &:before
+        content ''
+        display block
+        position relative
+        width 0
+        height 80px
+        margin-top -80px
 
-  // .dashme
-  //   border: 1px dashed black !important
+  .container.page
+    max-width: 1185px !important
+    padding-top: 75px
+    padding-bottom: 0
+    transition: .2s $transition.fast-out-slow-in
 
-  // main
-  //   section
-  //     &:before
-  //       content ''
-  //       display block
-  //       position relative
-  //       width 0
-  //       height 80px
-  //       margin-top -80px
-
-  // .container.page
-  //   max-width: 1185px !important
-  //   padding-top: 75px
-  //   padding-bottom: 0
-  //   transition: .2s $transition.fast-out-slow-in
-
-  //   section
-  //     margin-bottom: 48px
+    section
+      margin-bottom: 48px
 </style>

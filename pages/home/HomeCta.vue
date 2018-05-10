@@ -4,19 +4,27 @@
     gradient="to bottom, #1867c0, #5CBBF6"
     height="auto"
   >
-    <v-chip
-      class="v-chip--tidelift white--text"
+    <a
+      class="v-chip v-chip--tidelift white--text"
+      href="http://tidelift.com/subscription/npm/vuetify"
+      rel="noopener"
+      target="_blank"
     >
-      <img
-        alt="Tidelift"
-        class="mr-3"
-        src="/static/doc-images/affiliates/tidelift-small.png"
-        width="24px"
-      >
-      <span class="body-2 text-uppercase">
-        Get Professionally Supported Vuetify
+      <span class="v-chip__content">
+        <img
+          alt="Tidelift"
+          class="mr-3"
+          src="/static/doc-images/affiliates/tidelift-small.png"
+          width="24px"
+        >
+        <span class="body-2 text-uppercase hidden-sm-and-down">
+          Get Professionally Supported Vuetify
+        </span>
+        <span class="body-2 text-uppercase hidden-md-and-up">
+          Get Proffesional Support
+        </span>
       </span>
-    </v-chip>
+    </a>
     <v-container
       fill-height
       my-3
@@ -147,11 +155,14 @@
 </script>
 
 <style lang="stylus">
-.v-chip--tidelift {
-  background: #f6914d !important;
-  padding-right: 64px;
-  position: absolute;
-  right: -24px;
-  top: -20px;
-}
+  .v-chip--tidelift
+    background: #f6914d !important
+    padding-right: 64px
+    position: absolute
+    right: -24px
+    text-decoration: none
+    top: -20px
+
+    .v-chip__content
+      cursor: pointer !important
 </style>

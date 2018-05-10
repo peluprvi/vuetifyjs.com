@@ -296,10 +296,6 @@
 
 <style lang="stylus">
   #home
-    section
-      padding-top: 24px
-      padding-bottom: 24px
-
     #footer
       a
         text-decoration: none
