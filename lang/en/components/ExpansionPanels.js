@@ -12,6 +12,14 @@ export default {
       desc: 'Expand expansion panels will stay open until closed.',
       uninverted: true
     },
+    external: {
+      header: 'External control',
+      desc: 'Expansion panels can be controlled externally by modifying the `v-model`. Its value corresponds to a zero-based index of the currently opened expansion panel content. If `expand` prop is used then it is an array of booleans where the index corresponds to the index of the content.'
+    },
+    disabledAndReadonly: {
+      header: 'Disabled and readonly',
+      desc: 'Both the expansion panel and its content supports the `disabled` and `readonly` props.'
+    },
     popout: {
       header: 'Popout & Inset',
       desc: 'The expansion panel also has two alternative designs you can activate with the props `popout` and `inset`.',
@@ -29,14 +37,20 @@ export default {
   }],
   props: {
     'v-expansion-panel': {
+      disabled: 'Disables entire expansion panel',
       expand: 'Leaves expansion-panel open when selecting another',
       focusable: 'Makes the expansion panel headers focusable',
       inset: 'Makes the expansion panel open with a inset style',
-      popout: 'Makes the expansion panel open with an popout style'
+      popout: 'Makes the expansion panel open with an popout style',
+      readonly: 'Makes entire expansion panel read only.',
+      value: 'Controls the opened/closed state of content in the expansion-panel. Corresponds to a zero-based index of the currently opened content. If `expand` prop is used then it is an array of booleans where the index corresponds to the index of the content.'
     },
     'v-expansion-panel-content': {
+      disabled: 'Disables expansion panel content',
+      expandIcon: 'Set the expand action icon',
       hideActions: 'Hide the expand icon in the content header',
-      expandIcon: 'Set the expand action icon'
+      readonly: 'Makes expansion panel content read only.',
+      value: 'Controls the opened/closed state of content'
     }
   },
   slots: {
