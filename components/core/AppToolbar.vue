@@ -72,7 +72,7 @@
         :to="{ name: 'store/Index' }"
       )
         span.hidden-sm-and-down {{ $t('Vuetify.AppToolbar.store' )}}
-        v-icon(:right="$vuetify.breakpoint.mdAndUp") store
+        v-icon.hidden-md-and-up store
 
     v-toolbar-items
       v-menu(
@@ -88,8 +88,9 @@
           slot="activator"
           style="min-width: 64px"
         )
-          span.hidden-sm-and-down {{ $t('Vuetify.AppToolbar.ecosystem' )}}
-          v-icon(:right="$vuetify.breakpoint.mdAndUp") mdi-earth
+          span.hidden-sm-and-down.mr-1 {{ $t('Vuetify.AppToolbar.ecosystem' )}}
+          v-icon.hidden-sm-and-down mdi-menu-down
+          v-icon.hidden-md-and-up mdi-earth
         v-list(light)
           v-subheader(light) {{ $t('Vuetify.AppToolbar.quickLinks' )}}
           v-list-tile(
@@ -129,10 +130,10 @@
         v-btn(
           flat
           slot="activator"
-          style="min-width: 64px"
         )
-          span.hidden-sm-and-down {{ $t('Vuetify.AppToolbar.support' )}}
-          v-icon(:right="$vuetify.breakpoint.mdAndUp") mdi-lifebuoy
+          span.hidden-sm-and-down.mr-1 {{ $t('Vuetify.AppToolbar.support' )}}
+          v-icon.hidden-sm-and-down mdi-menu-down
+          v-icon.hidden-md-and-up mdi-lifebuoy
         v-list(light)
           v-list-tile(
             target="_blank"
@@ -157,8 +158,8 @@
           slot="activator"
           flat
         )
-          span {{ currentVersion }}
-          v-icon(right) keyboard_arrow_down
+          span.mr-1 {{ currentVersion }}
+          v-icon mdi-menu-down
         v-list(light)
           v-list-tile(
             v-for="release in releases"

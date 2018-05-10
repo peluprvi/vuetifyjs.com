@@ -47,14 +47,14 @@
               v-for="(btn, i) in buttons"
               :class="btn.class"
               :key="i"
+              v-bind="btn.attrs"
               color="white"
               large
-              v-bind="btn.attrs"
             >
               <v-icon
                 v-if="btn.icon"
-                v-text="btn.icon"
                 left
+                v-text="btn.icon"
               />
               {{ btn.lang ? $t(btn.lang) : btn.text }}
             </v-btn>
@@ -71,7 +71,10 @@
           v-for="(feature, i) in features"
           :key="i"
           d-flex
-          xs12 sm6 md4 lg4
+          xs12
+          sm6
+          md4
+          lg4
         >
           <v-card
             class="elevation-24 hide-overflow text-xs-center"
@@ -84,12 +87,12 @@
             >
             <v-card-text>
               <h3
-                v-text="feature.title"
                 class="subheading font-weight-bold"
+                v-text="feature.title"
               />
               <p
-                v-text="feature.text"
                 class="mb-2"
+                v-text="feature.text"
               />
             </v-card-text>
           </v-card>
@@ -135,17 +138,20 @@
 
     computed: {
       features () {
-        return this.$t('Vuetify.Home.features').slice().reverse()
+        return this.$t('Vuetify.Home.features')
+          .slice()
+          .reverse()
       }
     }
   }
 </script>
 
 <style lang="stylus">
-  .v-chip--tidelift
-    background: #f6914d !important
-    padding-right: 64px
-    position: absolute
-    right: -24px
-    top: -20px
+.v-chip--tidelift {
+  background: #f6914d !important;
+  padding-right: 64px;
+  position: absolute;
+  right: -24px;
+  top: -20px;
+}
 </style>
