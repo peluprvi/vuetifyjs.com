@@ -1,6 +1,8 @@
 <template lang="pug">
-  v-badge(v-model="isTranslating" left :color="color" class="translatable")
+  v-badge(v-if="isTranslating" v-model="isTranslating" left :color="color" class="translatable")
     v-icon(dark slot="badge" @click.capture.prevent="translate(i18n)") mode_edit
+    slot
+  div(v-else)
     slot
 </template>
 
