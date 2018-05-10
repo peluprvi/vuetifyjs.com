@@ -30,6 +30,7 @@ export default {
     }
   }],
   props: {
-    inset: 'Adds indentation (72px)'
+    inset: 'Adds indentation (72px)',
+    vertical: 'Creates a vertical divider'
   }
 }
