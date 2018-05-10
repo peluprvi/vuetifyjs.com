@@ -115,7 +115,6 @@ function getPreviousCommit (log, commit) {
 }
 
 async function checkStatus (locale, key) {
-  console.log(locale, key)
   const { sourcePath, localePath, fileKey } = getPaths(locale, key)
 
   setupCache(sourcePath)
