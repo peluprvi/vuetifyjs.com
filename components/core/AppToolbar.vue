@@ -96,7 +96,8 @@
           slot="activator"
           style="min-width: 64px"
         )
-          translatable(i18n="Vuetify.AppToolbar.ecosystem").hidden-sm-and-down.mr-1
+          translatable(i18n="Vuetify.AppToolbar.ecosystem").hidden-sm-and-down
+            span.mr-1 {{ $t('Vuetify.AppToolbar.ecosystem' )}}
           v-icon.hidden-sm-and-down mdi-menu-down
           v-icon.hidden-md-and-up mdi-earth
         v-list(light)
@@ -139,7 +140,8 @@
           flat
           slot="activator"
         )
-          span.hidden-sm-and-down.mr-1 {{ $t('Vuetify.AppToolbar.support' )}}
+          translatable(i18n="Vuetify.AppToolbar.support").hidden-sm-and-down
+            span.mr-1 {{ $t('Vuetify.AppToolbar.support' )}}
           v-icon.hidden-sm-and-down mdi-menu-down
           v-icon.hidden-md-and-up mdi-lifebuoy
         v-list(light)
@@ -222,12 +224,13 @@
         'appToolbar',
         'isFullscreen',
         'releases',
-        'stateless'
+        'stateless',
+        'currentVersion'
       ]),
       ...mapState('store', {
         cart: state => state.checkout
       }),
-      ...mapState(['currentVersion', 'route']),
+      ...mapState(['route']),
       backPath () {
         return this.route.from.path === '/'
           ? { name: 'getting-started/QuickStart' }
