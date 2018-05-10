@@ -2330,6 +2330,10 @@ module.exports = {
     ],
     "slots": [
       {
+        "name": "footer",
+        "source": "data-iterable"
+      },
+      {
         "name": "noData",
         "source": "data-iterable"
       },
@@ -2337,8 +2341,7 @@ module.exports = {
         "name": "noResults",
         "source": "data-iterable"
       },
-      "header",
-      "footer"
+      "header"
     ],
     "scopedSlots": [
       {
@@ -2364,7 +2367,8 @@ module.exports = {
     "events": [
       {
         "name": "update:pagination",
-        "value": "object"
+        "value": "object",
+        "source": "data-iterable"
       },
       {
         "name": "input",
@@ -2573,6 +2577,10 @@ module.exports = {
     ],
     "slots": [
       {
+        "name": "footer",
+        "source": "data-iterable"
+      },
+      {
         "name": "noData",
         "source": "data-iterable"
       },
@@ -2619,7 +2627,8 @@ module.exports = {
     "events": [
       {
         "name": "update:pagination",
-        "value": "object"
+        "value": "object",
+        "source": "data-iterable"
       },
       {
         "name": "input",
@@ -3391,7 +3400,7 @@ module.exports = {
         "name": "dark",
         "type": "Boolean",
         "default": "false",
-        "source": null
+        "source": "themeable"
       },
       {
         "name": "inset",
@@ -3403,7 +3412,7 @@ module.exports = {
         "name": "light",
         "type": "Boolean",
         "default": "false",
-        "source": null
+        "source": "themeable"
       },
       {
         "name": "vertical",
@@ -9325,7 +9334,221 @@ module.exports = {
   "v-text-field": {
     "props": [
       {
-        "name": "multiLine",
+        "name": "dontFillMaskBlanks",
+        "type": "Boolean",
+        "default": "false",
+        "source": "maskable"
+      },
+      {
+        "name": "loading",
+        "type": [
+          "Boolean",
+          "String"
+        ],
+        "default": false,
+        "source": null
+      },
+      {
+        "name": "light",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "color",
+        "type": "String",
+        "default": "primary",
+        "source": null
+      },
+      {
+        "name": "error",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "errorCount",
+        "type": [
+          "Number",
+          "String"
+        ],
+        "default": 1,
+        "source": null
+      },
+      {
+        "name": "errorMessages",
+        "type": [
+          "String",
+          "Array"
+        ],
+        "default": [],
+        "source": null
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "fullWidth",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "flat",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "counter",
+        "type": [
+          "Boolean",
+          "Number",
+          "String"
+        ],
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "clearIconCb",
+        "type": "Function",
+        "default": "null",
+        "source": null
+      },
+      {
+        "name": "appendIcon",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "appendIconCb",
+        "type": "Function",
+        "default": "null",
+        "source": null
+      },
+      {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "height",
+        "type": [
+          "Number",
+          "String"
+        ],
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "hideDetails",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "hint",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "clearIcon",
+        "type": "String",
+        "default": "clear",
+        "source": null
+      },
+      {
+        "name": "clearable",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "browserAutocomplete",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "box",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "autofocus",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "appendOuterIcon",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "dark",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "rules",
+        "type": "Array",
+        "default": [],
+        "source": null
+      },
+      {
+        "name": "mask",
+        "type": [
+          "Object",
+          "String"
+        ],
+        "default": "undefined",
+        "source": "maskable"
+      },
+      {
+        "name": "messages",
+        "type": [
+          "String",
+          "Array"
+        ],
+        "default": [],
+        "source": null
+      },
+      {
+        "name": "type",
+        "type": "String",
+        "default": "text",
+        "source": null
+      },
+      {
+        "name": "readonly",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "prependIconCb",
+        "type": "Function",
+        "default": "null",
+        "source": null
+      },
+      {
+        "name": "prependIcon",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "persistentHint",
         "type": "Boolean",
         "default": "false",
         "source": null
@@ -9335,9 +9558,98 @@ module.exports = {
         "type": "Boolean",
         "default": "false",
         "source": null
+      },
+      {
+        "name": "successMessages",
+        "type": [
+          "String",
+          "Array"
+        ],
+        "default": [],
+        "source": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "returnMaskedValue",
+        "type": "Boolean",
+        "default": "false",
+        "source": "maskable"
+      },
+      {
+        "name": "tabindex",
+        "type": "Any",
+        "default": 0,
+        "source": null
+      },
+      {
+        "name": "outline",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "placeholder",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "prefix",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "reverse",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "singleLine",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "solo",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "soloInverted",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "suffix",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "validateOnBlur",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "value",
+        "type": "Any",
+        "default": "undefined",
+        "source": null
       }
     ],
-    "mixins": [],
+    "mixins": [
+      "maskable"
+    ],
     "events": [
       {
         "name": "input",
