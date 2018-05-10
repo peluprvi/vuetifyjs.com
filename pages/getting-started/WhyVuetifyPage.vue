@@ -61,11 +61,11 @@
                           :class="{ 'grey lighten-3': i % 2 === 0 }"
                         )
                           translatable(:i18n="`${namespace}.featuresList[${i}]`")
-                            v-list-tile-content
-                              v-list-tile-title.subheading
-                                span {{ $t(`${namespace}.featuresList[${i}]`) }}
-                            v-list-tile-action
-                              v-icon(dark).green--text check
+                          v-list-tile-content
+                            v-list-tile-title.subheading
+                              span {{ $t(`${namespace}.featuresList[${i}]`) }}
+                          v-list-tile-action
+                            v-icon(dark).green--text check
 
               v-flex(xs12 md4 ofset-xs0 offset-md1).mb-5
                 v-badge(color="error" overlap)
