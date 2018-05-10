@@ -83,6 +83,7 @@ export default {
     'v-data-table': {
       headerText: 'If using an object, the text value for the header',
       headers: 'An array of objects that each describe a header column. See the example below for a definition of all properties.',
+      headersLength: 'Can be used in combination with `hide-headers` to specify the number of columns in the table to allow expansion rows and loading bar to function properly',
       hideHeaders: 'Hide the table headers',
       sortIcon: 'Use a custom sort icon, uses the same syntax as `v-icon`',
       nextIcon: 'Mixins.Input.props.appendIcon',
