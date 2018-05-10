@@ -17,11 +17,11 @@
           src="/static/doc-images/affiliates/tidelift-small.png"
           width="24px"
         >
-        <span class="body-2 text-uppercase hidden-sm-and-down">
-          Get Professionally Supported Vuetify
+        <span class="body-2 text-uppercase font-weight-regular hidden-sm-and-down">
+          Get Professionally-Supported Vuetify
         </span>
-        <span class="body-2 text-uppercase hidden-md-and-up">
-          Get Proffesional Support
+        <span class="body-2 text-uppercase font-weight-regular hidden-md-and-up">
+          Get Professional Support
         </span>
       </span>
     </a>
@@ -165,4 +165,7 @@
 
     .v-chip__content
       cursor: pointer !important
+
+      > span
+        line-height: 1
 </style>
