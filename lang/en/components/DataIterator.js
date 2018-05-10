@@ -6,6 +6,10 @@ export default {
     simple: {
       header: 'Simple',
       desc: 'The `v-data-iterator` allows you to customize exactly how to display your data. In this example we are using a grid list with cards. We can use the `content-tag` prop (along with `content-class` and `content-props`) to specify what the wrapper element around the items should look like.'
+    },
+    slots: {
+      header: 'Slots',
+      desc: 'THe `v-data-iterator` has both a header and footer slot for adding extra content'
     }
   }],
   props: {
@@ -15,7 +19,7 @@ export default {
     nextIcon: 'Mixins.Input.props.appendIcon',
     prevIcon: 'Mixins.Input.props.prependIcon'
   },
-  events: {
-    'update:pagination': 'The `pagination.sync` update event'
+  slots: {
+    header: 'Defines a header above the items'
   }
 }
