@@ -221,7 +221,7 @@ async function getAllFiles (dir, includeDirs = false, recurse = true) {
   }, [])
 }
 
-async function newTranslation (title, locale, country) {
+async function newTranslation (name, locale, country) {
   const localePath = `./lang/${locale}`
 
   if (fs.existsSync(localePath)) {
@@ -237,7 +237,7 @@ async function newTranslation (title, locale, country) {
   const languages = await fs.readJson('./i18n/languages.json')
 
   languages.push({
-    title,
+    name,
     locale,
     country
   })
@@ -260,13 +260,13 @@ router.use(function (req, res, next) {
 
 router.post('/new', async function (req, res) {
   try {
-    const { title, locale, country } = req.body
+    const { name, locale, country } = req.body
 
-    if (!title || !locale || !country) {
+    if (!name || !locale || !country) {
       res.send({ error: 'missing data' })
     }
 
-    await newTranslation(title, locale, country)
+    await newTranslation(name, locale, country)
 
     res.send({ status: 'ok' })
   } catch (err) {

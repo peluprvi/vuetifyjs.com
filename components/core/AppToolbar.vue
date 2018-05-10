@@ -65,7 +65,7 @@
                 :src="`https://countryflags.io/${language.country}/flat/24.png`"
                 width="24px"
               )
-            v-list-tile-title {{language.title}}
+            v-list-tile-title {{language.name}}
           v-list-tile(
             v-if="isTranslating"
             @click="showCreateDialog(true)"

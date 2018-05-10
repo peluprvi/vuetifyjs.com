@@ -6,8 +6,8 @@
       v-card-text
         div.mb-3
           v-text-field(
-            label="Title"
-            v-model="title"
+            label="Name"
+            v-model="name"
             placeholder="English"
             hint="Name of language written in that language (e.g 日本語 for Japanese)"
             persistent-hint
@@ -17,17 +17,15 @@
             label="Locale code"
             v-model="locale"
             placeholder="en"
-            hint="Use tag and/or subtag property from <a href=\"http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry\">this</a> reference"
-            persistent-hint
           )
+          div Use tag and/or subtag property from <a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">this</a> reference
         div.mb-3
           v-text-field(
             label="Country code"
             v-model="country"
             placeholder="us"
-            hint="Use two-letter code from <a href=\"https://countrycode.org/\">this</a> reference"
-            persistent-hint
           )
+          div Use two-letter code from <a href="https://countrycode.org/">this</a> reference
         v-btn(@click="create") create
 </template>
 
@@ -35,7 +33,7 @@
   export default {
     data () {
       return {
-        title: '',
+        name: '',
         locale: '',
         country: ''
       }
@@ -54,7 +52,7 @@
       async create () {
         try {
           const payload = {
-            title: this.title,
+            name: this.name,
             locale: this.locale,
             country: this.country
           }
