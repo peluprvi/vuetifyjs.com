@@ -133,7 +133,8 @@
                   height="64px"
                   width="64px"
                 ).mb-2
-                translatable(i18n="Vuetify.Home.callout")span(v-text="$t('Vuetify.Home.callout')").subheading
+                translatable(i18n="Vuetify.Home.callout")
+                  span(v-text="$t('Vuetify.Home.callout')").subheading
 
           v-layout(justify-center).mb-3
             a(
