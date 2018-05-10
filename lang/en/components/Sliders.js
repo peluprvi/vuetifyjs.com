@@ -49,10 +49,16 @@ export default {
     }
   }],
   props: {
+    alwaysDirty: 'Makes the slider appear as always dirty, including when in its starting position. Most often used together with `tick-labels`.',
+    max: 'Sets the maximum selectable value of the slider',
+    min: 'Sets the minimum selectable value of the slider',
     step: 'If greater than 0, sets step interval for ticks',
     thumbColor: 'Sets the thumb and thumb label color',
-    thumbLabel: 'Show thumb label',
-    ticks: '',
-    trackColor: 'Sets the track fill color'
+    thumbLabel: 'Shows thumb label. Default behaviour is to only show the ticks when moving the slider thumb. To always show the ticks, set prop value to \'always\'',
+    thumbSize: 'Sets the size of the thumb-label',
+    tickSize: 'Sets the size of the ticks',
+    ticks: 'Shows ticks on the slider in intervals corresponding to the `step` value. Default behaviour is to only show the ticks when moving the slider thumb. To always show the ticks, set prop value to \'always\'',
+    trackColor: 'Sets the track fill color',
+    value: 'Slider value'
   }
 }
