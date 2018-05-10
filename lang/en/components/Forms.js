@@ -21,7 +21,8 @@ export default {
     }
   }],
   props: {
-    lazyValidation: 'If enabled, **value** will always be _true_ unless there are visible validation errors. You can still call `validate()` to manually trigger validation'
+    lazyValidation: 'If enabled, **value** will always be _true_ unless there are visible validation errors. You can still call `validate()` to manually trigger validation',
+    value: 'A boolean value representing the validity of the form.'
   },
   functions: {
     reset: 'Resets validation for all inputs',
