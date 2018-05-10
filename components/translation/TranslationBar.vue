@@ -3,6 +3,8 @@
     v-card
       v-container(fluid)
         v-layout(wrap row)
+          v-flex(xs12)
+            h1.subheading {{ currentKey }}
           v-flex(xs6 pr-2)
             v-text-field(
               label="Original"
