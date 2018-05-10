@@ -6,16 +6,16 @@
           v-flex(xs12)
             h1.subheading {{ currentKey }}
           v-flex(xs6 pr-2)
-            v-text-field(
+            v-textarea(
               label="Original"
               disabled
-              textarea
+              outline
               hide-details
               :value="$t(currentKey, 'en')")
           v-flex(xs6 pl-2)
-            v-text-field(
+            v-textarea(
               label="Translation"
-              textarea
+              outline
               hide-details
               v-model="value")
           v-flex(xs6)
