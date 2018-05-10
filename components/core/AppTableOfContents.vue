@@ -40,7 +40,7 @@
           position: this.position,
           top: `${parseInt(this.top)}px`
         }
-    },
+      },
       list () {
         const list = []
 
@@ -57,7 +57,7 @@
             item.target = target
 
             list.push(item)
-      }
+          }
         }
 
         return list
@@ -77,37 +77,37 @@
         const isActive = this.activeIndex === index
         const vm = this
 
+        const link = this.$createElement('a', {
+          staticClass: 'subheading mb-3 d-block',
+          'class': {
+            'primary--text': isActive,
+            'grey--text text--darken-1': !isActive
+          },
+          style: {
+            borderLeft: `2px solid ${isActive ? this.$vuetify.theme.primary : 'transparent'}`
+          },
+          props: { href: '#' },
+          domProps: { innerText: this.$t(item.text) },
+          on: {
+            click (e) {
+              e.stopPropagation()
+              e.preventDefault()
+
+              const goTo = index === 0
+                ? 0
+                : `#${item.href}`
+
+              vm.$vuetify.goTo(goTo)
+            }
+          }
+        })
+
         return this.$createElement('li', [
           this.$createElement('translatable', {
             props: {
               i18n: item.text
             }
-          }, [
-          this.$createElement('a', {
-            staticClass: 'subheading mb-3 d-block',
-            'class': {
-              'primary--text': isActive,
-              'grey--text text--darken-1': !isActive
-            },
-            style: {
-              borderLeft: `2px solid ${isActive ? this.$vuetify.theme.primary : 'transparent'}`
-            },
-            props: { href: '#' },
-            domProps: { innerText: this.$t(item.text) },
-            on: {
-              click (e) {
-                e.stopPropagation()
-                e.preventDefault()
-
-                const goTo = index === 0
-                  ? 0
-                  : `#${item.href}`
-
-                vm.$vuetify.goTo(goTo)
-              }
-            }
-          })
-        ])
+          }, [link])
         ])
       },
       onScroll () {
