@@ -467,6 +467,12 @@
     "description": "Server side rendering guide for the Vuetify framework.",
     "keywords": "server side rendering, ssr"
   },
+  "guides/vue-cli-3": {
+    "h1": "Vue CLI 3",
+    "title": "Vue CLI 3",
+    "description": "Simplify getting started with vuetify by using the new vue-cli 3 plugin.",
+    "keywords": "vue, vue cli, webpack, setup"
+  },
   "theme-generator": {
     "h1": "Theme generator",
     "title": "Material design theme generator",

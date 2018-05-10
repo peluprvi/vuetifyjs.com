@@ -254,6 +254,16 @@ export default () => ({
           text: 'Guides.ServerSideRendering.webAppSupportHeader',
           href: 'web-app-support'
         }
+      ],
+      VueCli3: [
+        {
+          text: 'Overview',
+          href: 'introduction'
+        },
+        {
+          text: 'Get Started',
+          href: 'get-started'
+        }
       ]
     },
     Style: {
