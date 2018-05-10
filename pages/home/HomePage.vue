@@ -1,85 +1,6 @@
 <template lang="pug">
   div#home
-    v-jumbotron(
-      dark
-      gradient="to bottom, #1867c0, #5CBBF6"
-      height="auto"
-    )
-      v-container(fill-height).mt-3.mb-3
-        v-layout(
-          align-center
-          justify-center
-          wrap
-        )
-          img(
-            src="/static/vuetify-logo-300.png"
-            alt="Logo"
-            style="logoStyles"
-            height="256px"
-            width="256px"
-          ).mx-4
-          v-flex(shrink).text-xs-center.text-md-left
-            h1(
-              class="mb-4"
-              style="font-weight: 300;"
-              :class="{ 'display-1 mt-4': isBooted && $vuetify.breakpoint.xsOnly }"
-            ).display-3
-              div(v-text="$t('Vuetify.Home.materialDesign')")
-              div(v-text="$t('Vuetify.Home.componentFramework')")
-            v-btn(
-              :to="{ name: 'getting-started/QuickStart' }"
-              class="primary--text"
-              color="white"
-              large
-              style="min-width: 128px;"
-            )
-              | {{ $t("Vuetify.Home.getStarted") }}
-            v-btn(
-              color="white"
-              href="https://github.com/vuetifyjs/vuetify"
-              large
-              outline
-              rel="noopener"
-              target="_blank"
-            )
-              v-icon(left) mdi-github-circle
-              | Github
-            v-btn(
-              color="white"
-              href="https://community.vuetifyjs.com"
-              large
-              outline
-              rel="noopener"
-              target="_blank"
-            )
-              v-icon(left) mdi-discord
-              | {{ $t("Vuetify.Home.getHelp") }}
-
-      v-container(
-        grid-list-xl
-        style="max-width: 1280px"
-      ).mb-5
-        v-layout(row wrap justify-center)
-          v-flex(
-            d-flex
-            xs12 sm6 md4 lg4
-            v-for="(feature, i) in features"
-            :key="feature.title"
-          )
-            v-card(
-              light
-              style="max-width: 375px;"
-            ).elevation-24.hide-overflow
-              img(
-                :src="feature.img"
-                width="100%"
-              ).mb-2
-              v-card-text
-                h3(
-                  v-text="feature.title"
-                  style="font-size: 18px; font-weight: 500;"
-                ).mb-3.text-xs-center
-                p(v-text="feature.text").text-xs-center.mb-2
+    home-cta
 
     section#sponsors-and-backers.my-5
       v-container
@@ -189,54 +110,65 @@
               height="65px"
             )
 
-    v-jumbotron(
-      dark
-      gradient="to top, #1867c0, #5CBBF6"
-      height="auto"
-    )
-      v-container.mt-4.mb-3
-        v-layout(row wrap)
-          v-flex(xs12)
-            h5.mb-3
-              v-layout(align-center justify-center column)
-                img(
-                  src="/static/v-alt.svg"
-                  height="64px"
-                  width="64px"
-                ).mb-2
-                span(v-text="$t('Vuetify.Home.callout')").subheading
+    section#footer
+      v-jumbotron(
+        dark
+        gradient="to top, #1867c0, #5CBBF6"
+        height="auto"
+      )
+        v-container.mt-4.mb-3
+          v-layout(row wrap)
+            v-flex(xs12)
+              h5.mb-3
+                v-layout(align-center justify-center column)
+                  img(
+                    src="/static/v-alt.svg"
+                    height="64px"
+                    width="64px"
+                  ).mb-2
+                  span(v-text="$t('Vuetify.Home.callout')").subheading
 
-        v-layout(justify-center).mb-3
-          a(
-            v-for="(social, i) in socials"
-            :href="social.href"
-            :key="i"
-            :title="social.title"
-            target="_blank"
-            rel="noopener"
-          ).social.mx-3
-            v-icon(v-text="social.icon")
-
-        v-layout(column text-xs-center)
-          div Released under the&nbsp;
+          v-layout(justify-center).mb-3
             a(
-              href="https://opensource.org/licenses/MIT"
-              rel="noopener"
-              style="text-decoration: none;"
+              v-for="(social, i) in socials"
+              :href="social.href"
+              :key="i"
+              :title="social.title"
               target="_blank"
-              v-text="$t('Vuetify.Home.mit')"
-            ).body-2.white--text
-          div Copyright &copy; 2016-{{ (new Date()).getFullYear() }} Vuetify, LLC
+              rel="noopener"
+            ).social.mx-3
+              v-icon(v-text="social.icon")
+
+          v-layout(column text-xs-center)
+            div Released under the&nbsp;
+              a(
+                href="https://opensource.org/licenses/MIT"
+                rel="noopener"
+                style="text-decoration: none;"
+                target="_blank"
+                v-text="$t('Vuetify.Home.mit')"
+              ).body-2.white--text
+            div Copyright &copy; 2016-{{ (new Date()).getFullYear() }} Vuetify, LLC
+
+  </div>
 </template>
 
 <script>
+  // Components
+  import HomeCta from './HomeCta'
+  import HomeSponsors from './HomeSponsors'
+
+  // Assets
   import supporters from '@/assets/supporters'
 
   // Mixins
   import Message from '@/mixins/message'
 
   export default {
-    name: 'HomePage',
+    components: {
+      HomeCta,
+      HomeSponsors
+    },
 
     mixins: [Message],
 
@@ -362,7 +294,9 @@
   }
 </script>
 
-<style lang="stylus" scoped>
-  .social
-    text-decoration: none
+<style lang="stylus">
+  #home
+    #footer
+      a
+        text-decoration: none
 </style>

@@ -1,14 +1,22 @@
-<template lang="pug">
-  v-fade-transition(appear)
-    v-app(v-cloak v-if="!examples")
-      app-drawer
-      app-toolbar
-      app-view
-      app-fab
-      app-snackbar
-
-    div(v-else)#app
-      router-view
+<template>
+  <v-fade-transition appear>
+    <v-app
+      v-cloak
+      v-if="!examples"
+    >
+      <app-drawer />
+      <app-toolbar />
+      <app-view />
+      <app-fab />
+      <app-snackbar />
+    </v-app>
+    <div
+      v-else
+      id="app"
+    >
+      <router-view />
+    </div>
+  </v-fade-transition>
 </template>
 
 <script>
@@ -48,16 +56,6 @@
 
     mounted () {
       this.getReleases()
-
-      this.snackbar({
-        color: 'default',
-        close: true,
-        id: 'rebuilding-input-controls-part-2-a01936b6520e',
-        text: 'Go To Article',
-        msg: '**New Article** — _Rebuilding input-controls Part 2_',
-        href: 'https://medium.com/vuetify/rebuilding-input-controls-part-2-a01936b6520e',
-        timeout: 0
-      })
     },
 
     methods: {
@@ -77,12 +75,6 @@
 
 <style lang="stylus">
   @import '~vuetify/src/stylus/settings/_variables.styl'
-
-  [v-cloak]
-    display: none
-
-  .dashme
-    border: 1px dashed black !important
 
   main
     section

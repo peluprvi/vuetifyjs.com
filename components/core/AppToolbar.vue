@@ -13,7 +13,7 @@
       @click="$store.commit('app/DRAWER_TOGGLE')"
       v-show="!stateless && $vuetify.breakpoint.mdAndDown"
     )
-    router-link(:to="{ name: 'Home' }").d-flex.ml-3
+    router-link(:to="{ name: 'home/Home' }").d-flex.ml-3
       img(
         src="/static/v-alt.svg"
         height="38px"
@@ -72,7 +72,7 @@
         :to="{ name: 'store/Index' }"
       )
         span.hidden-sm-and-down {{ $t('Vuetify.AppToolbar.store' )}}
-        v-icon(:right="$vuetify.breakpoint.mdAndUp") store
+        v-icon.hidden-md-and-up store
 
     v-toolbar-items
       v-menu(
@@ -88,8 +88,9 @@
           slot="activator"
           style="min-width: 64px"
         )
-          span.hidden-sm-and-down {{ $t('Vuetify.AppToolbar.ecosystem' )}}
-          v-icon(:right="$vuetify.breakpoint.mdAndUp") mdi-earth
+          span.hidden-sm-and-down.mr-1 {{ $t('Vuetify.AppToolbar.ecosystem' )}}
+          v-icon.hidden-sm-and-down mdi-menu-down
+          v-icon.hidden-md-and-up mdi-earth
         v-list(light)
           v-subheader(light) {{ $t('Vuetify.AppToolbar.quickLinks' )}}
           v-list-tile(
@@ -129,10 +130,10 @@
         v-btn(
           flat
           slot="activator"
-          style="min-width: 64px"
         )
-          span.hidden-sm-and-down {{ $t('Vuetify.AppToolbar.support' )}}
-          v-icon(:right="$vuetify.breakpoint.mdAndUp") mdi-lifebuoy
+          span.hidden-sm-and-down.mr-1 {{ $t('Vuetify.AppToolbar.support' )}}
+          v-icon.hidden-sm-and-down mdi-menu-down
+          v-icon.hidden-md-and-up mdi-lifebuoy
         v-list(light)
           v-list-tile(
             target="_blank"
@@ -157,8 +158,8 @@
           slot="activator"
           flat
         )
-          span {{ currentVersion }}
-          v-icon(right) keyboard_arrow_down
+          span.mr-1 {{ currentVersion }}
+          v-icon mdi-menu-down
         v-list(light)
           v-list-tile(
             v-for="release in releases"
@@ -225,7 +226,7 @@
         return this.languages.find(l => l.locale === this.$i18n.locale)
       },
       isHome () {
-        return this.route.name === 'Home'
+        return this.route.name === 'home/Home'
       },
       isManualScrolled () {
         return !this.isHome &&
