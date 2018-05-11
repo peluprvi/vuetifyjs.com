@@ -21,7 +21,7 @@ export default [
       { name: 'PreDefined', title: 'Pre-defined layouts', badge: 'updated' },
       { name: 'PreMadeThemes', title: 'Pre-made themes', badge: 'updated' },
       {
-        title: 'Grid & breakpoints',
+        title: 'Grid system',
         group: 'grid',
         namespace: 'layout',
         items: [
@@ -29,6 +29,7 @@ export default [
           { name: 'grid-lists', title: 'Grid lists' }
         ]
       },
+      { name: 'Breakpoints', title: 'Breakpoints' },
       { name: 'Spacing', title: 'Spacing' },
       { name: 'Alignment', title: 'Text alignment' },
       { name: 'Display', title: 'Display' },
