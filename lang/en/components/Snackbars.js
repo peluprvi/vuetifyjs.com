@@ -14,7 +14,7 @@ export default {
   }],
   props: {
     multiLine: 'Makes the snackbar higher (mobile)',
-    timeout: 'Time to wait until snackbar is automatically hidden',
+    timeout: 'Time (in milliseconds) to wait until snackbar is automatically hidden.  Use -1 to keep open indefinitely and 0 to close.',
     vertical: 'Stacks snackbar content vertically (mobile)'
   }
 }
