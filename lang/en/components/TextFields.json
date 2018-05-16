@@ -3,7 +3,7 @@
   "headerText": "Text fields components are used for collecting user provided information.",
   "components": ["v-text-field"],
   "supplemental": ["MaskTable"],
-  "examples": [{
+  "examples": {
     "usage": {
       "header": "Standard text-field",
       "desc": "A simple text-field with placeholder and/or label."
