@@ -4,21 +4,17 @@ export default {
   components: ['v-text-field'],
   supplemental: ['MaskTable'],
   examples: [{
-    label: {
-      header: 'With label',
-      desc: 'Text-fields come in two theme options, dark and light.'
+    usage: {
+      header: 'Standard text-field',
+      desc: 'A simple text-field with placeholder and/or label.'
     },
     singleLine: {
-      header: 'Single line light theme',
-      desc: 'Single line text-fields do not float their label on focus or with data.'
+      header: 'Single line variants',
+      desc: 'Single line text-fields do not float their label on focus or with data. Solo fields are inherently singe-line.'
     },
     icon: {
       header: 'With Icon',
-      desc: 'Icons can be specified as prepended or appended.'
-    },
-    multiLine: {
-      header: 'Multi-Line',
-      desc: 'A multi-line text-field is useful for larger amounts of text.'
+      desc: 'Icons can help identify fields and provide a nice visual appearance.'
     },
     characterCounter: {
       header: 'Character counter',

@@ -36,6 +36,7 @@ import Steppers from './Steppers'
 import Subheaders from './Subheaders'
 import Tabs from './Tabs'
 import TemplateList from './TemplateList'
+import Textarea from './Textarea'
 import TextFields from './TextFields'
 import TimePickers from './TimePickers'
 import Toolbars from './Toolbars'
@@ -80,6 +81,7 @@ export default {
   Subheaders,
   Tabs,
   TemplateList,
+  Textarea,
   TextFields,
   TimePickers,
   Toolbars,

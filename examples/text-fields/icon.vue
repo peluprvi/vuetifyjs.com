@@ -1,56 +1,24 @@
 <template>
-  <v-container fluid grid-list-md>
-    <v-layout row wrap>
-      <v-flex xs4>
-        <v-subheader>Normal with hint text</v-subheader>
-      </v-flex>
-      <v-flex xs12 sm5>
-        <v-text-field
-          name="input-1-3"
-          label="Hint Text"
-          single-line
-          prepend-icon="phone"
-        ></v-text-field>
-      </v-flex>
-      <v-flex xs12 sm3>
-        <v-select :items="[{ text: 'Mobile' }]" label="Mobile"></v-select>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs4>
-        <v-subheader>Focus</v-subheader>
-      </v-flex>
-      <v-flex xs12 sm5>
-        <v-text-field
-          name="input-2-3"
-          label="Hint Text"
-          class="input-group--focused"
-          prepend-icon="phone"
-          value="650"
-          single-line
-        ></v-text-field>
-      </v-flex>
-      <v-flex xs12 sm3>
-        <v-select :items="[{ text: 'Mobile' }]" label="Mobile"></v-select>
-      </v-flex>
-
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs4>
-        <v-subheader>Normal with input text</v-subheader>
-      </v-flex>
-      <v-flex xs12 sm5>
-        <v-text-field
-          name="input-3-3"
-          label="Hint Text"
-          value="650-555-1234"
-          prepend-icon="phone"
-          single-line
-        ></v-text-field>
-      </v-flex>
-      <v-flex xs12 sm3>
-        <v-select :items="[{ text: 'Mobile' }]" label="Mobile"></v-select>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-form>
+    <v-text-field
+      box
+      label="Account name"
+      prepend-icon="mdi-account-circle"
+    ></v-text-field>
+    <v-text-field
+      box
+      label="Email address"
+      prepend-icon="mdi-at"
+      hint="Valid Email address"
+    ></v-text-field>
+    <v-text-field
+      :rules="[v => !!v && v.length >= 6 || 'Password too short!']"
+      box
+      hint="Password must be 6 characters long"
+      label="Password"
+      prepend-icon="mdi-textbox-password"
+      type="password"
+      validate-on-blur
+    ></v-text-field>
+  </v-form>
 </template>
