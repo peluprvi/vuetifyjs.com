@@ -17,11 +17,11 @@
       //- Example options
       v-toolbar(flat dense card v-if="!readonly").pr-1
         v-spacer
-        v-tooltip(top v-if="hasInverted")
+        v-tooltip(lazy top v-if="hasInverted")
           v-btn(icon slot="activator" @click="invertedProxy = !invertedProxy")
             v-icon(color="grey darken-1") invert_colors
           span Invert colors
-        v-tooltip(top)
+        v-tooltip(lazy top)
           v-btn(
             icon
             tag="a"
@@ -31,7 +31,7 @@
           )
             v-icon(color="grey darken-1") fab fa-github
           span View on Github
-        v-tooltip(top)
+        v-tooltip(lazy top)
           v-btn(
             icon
             @click="sendToCodepen"
@@ -39,7 +39,7 @@
           )
             v-icon(color="grey darken-1") fab fa-codepen
           span Edit in codepen
-        v-tooltip(top)
+        v-tooltip(lazy top)
           v-btn(
             icon
             @click.stop="togglePanel"

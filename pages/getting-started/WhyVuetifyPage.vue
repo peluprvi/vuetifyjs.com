@@ -76,7 +76,7 @@
                           v-list-tile-title John Leider
                           v-list-tile-sub-title {{ $t(`${namespace}.authorOfVuetify`) }}
                         v-list-tile-action
-                          v-tooltip(left)
+                          v-tooltip(lazy left)
                             v-btn(
                               icon
                               href="mailto:john@vuetifyjs.com"

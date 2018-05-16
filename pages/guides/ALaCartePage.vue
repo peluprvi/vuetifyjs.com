@@ -107,7 +107,7 @@
               class="elevation-1"
             )
             template(slot="headerCell" slot-scope="props")
-              v-tooltip(bottom)
+              v-tooltip(lazy bottom)
                 span(slot="activator") {{ props.header.text }}
                 span {{ props.header.text }}
             template(slot="items" slot-scope="props")
@@ -122,6 +122,7 @@
             template(slot="footer")
               td(colspan="100%")
                 v-tooltip(
+                  lazy
                   right
                   debounce="300"
                   dark
