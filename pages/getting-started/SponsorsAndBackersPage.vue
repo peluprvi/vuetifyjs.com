@@ -132,7 +132,7 @@
 </template>
 
 <script>
-  import supporters from '@/assets/supporters'
+  import supporters from '@/data/company/supporters'
 
   export default {
     data: () => ({

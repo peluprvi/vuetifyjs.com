@@ -1,15 +1,6 @@
 <template>
   <v-fade-transition appear>
-    <v-app
-      v-cloak
-      v-if="!examples"
-    >
-      <app-drawer />
-      <app-toolbar />
-      <app-view />
-      <app-fab />
-      <app-snackbar />
-    </v-app>
+    <documentation v-if="!examples" />
     <div
       v-else
       id="app"
@@ -20,11 +11,7 @@
 </template>
 
 <script>
-  import AppDrawer from '@/components/core/AppDrawer'
-  import AppFab from '@/components/core/AppFab'
-  import AppSnackbar from '@/components/core/AppSnackbar'
-  import AppToolbar from '@/components/core/AppToolbar'
-  import AppView from '@/components/core/AppView'
+  import Documentation from '@/components/core/Documentation'
   import Meta from '@/mixins/meta'
 
   import {
@@ -33,14 +20,8 @@
   } from 'vuex'
 
   export default {
-    name: 'Documentation',
-
     components: {
-      AppDrawer,
-      AppFab,
-      AppSnackbar,
-      AppToolbar,
-      AppView
+      Documentation
     },
 
     mixins: [Meta],

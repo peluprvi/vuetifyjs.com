@@ -37,7 +37,7 @@
   // Utilities
   import { mapState } from 'vuex'
   import { kebab } from '@/util/helpers'
-  import appDrawerItems from '@/assets/app-drawer-items'
+  import appDrawerItems from '@/data/layout/app-drawer-items'
 
   export default {
     data: () => ({

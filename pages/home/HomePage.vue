@@ -1,7 +1,6 @@
 <template lang="pug">
   div#home
     home-cta
-
     section#sponsors-and-backers.my-5
       v-container
         v-layout
@@ -167,7 +166,7 @@
   import HomeSponsors from './HomeSponsors'
 
   // Assets
-  import supporters from '@/assets/supporters'
+  import supporters from '@/data/company/supporters'
 
   // Mixins
   import Message from '@/mixins/message'

@@ -138,8 +138,8 @@
 <script>
   // Utilities
   import { mapMutations, mapState } from 'vuex'
-  import supporters from '@/assets/supporters'
-  import appDrawerItems from '@/assets/app-drawer-items'
+  import supporters from '@/data/company/supporters'
+  import appDrawerItems from '@/data/layout/app-drawer-items'
   import { camel } from '@/util/helpers'
 
   export default {
