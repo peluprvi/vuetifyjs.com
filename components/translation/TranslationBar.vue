@@ -29,7 +29,11 @@
               span Missing
           v-flex(xs6 text-xs-right)
             v-btn(@click="show(false)" outline color="grey") close
-            v-btn(@click="save" color="primary") save
+            v-btn(
+              @click="save"
+              color="primary"
+              :loading="isLoading"
+            ) save
 </template>
 
 <script>
@@ -41,11 +45,11 @@
   } from 'vuex'
 
   export default {
-    data () {
-      return {
-        value: ''
-      }
-    },
+    data: () => ({
+      isLoading: false,
+      value: ''
+    }),
+
     computed: {
       ...mapState({
         buttons: state => state.translation.buttons,
@@ -122,7 +126,12 @@
           value: this.value
         }
 
+        this.isLoading = true
         let response = await this.$store.dispatch('translation/save', msg)
+
+        setTimeout(() => {
+          this.isLoading = false
+        }, 500)
 
         if (response.status === 200) {
           const merged = this.merge(msg.locale, response.data)
