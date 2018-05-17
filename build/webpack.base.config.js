@@ -3,8 +3,9 @@ require('dotenv').config()
 const path = require('path')
 const webpack = require('webpack')
 const vueConfig = require('./vue-loader.config')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
 const resolve = (file) => path.resolve(__dirname, file)
@@ -12,13 +13,15 @@ const resolve = (file) => path.resolve(__dirname, file)
 let plugins = [
   new webpack.DefinePlugin({
     'process.env': JSON.stringify(process.env)
-  })
+  }),
+  new VueLoaderPlugin()
 ]
 
 module.exports = {
   devtool: isProd
     ? false
     : 'eval-source-map',
+  mode: isProd ? 'production' : 'development',
   output: {
     path: resolve('../public'),
     publicPath: '/public/',
@@ -55,16 +58,22 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          loader: 'css-loader',
-          options: {
-            minimize: isProd
-          }
-        })
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
       },
       {
-        test: /\.styl$/,
-        loader: ['style-loader', `css-loader?minimize=${isProd}`, 'stylus-loader']
+        test: /\.stylus$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-plain-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)(\?.*)?$/,
@@ -84,14 +93,11 @@ module.exports = {
 }
 
 plugins.push(
-  new ExtractTextPlugin({
-    filename: 'common.[chunkhash].css'
+  new MiniCssExtractPlugin({
+    // Options similar to the same options in webpackOptions.output
+    // both options are optional
+    filename: '[name].css',
+    chunkFilename: '[id].css'
   }),
   new FriendlyErrorsPlugin()
-)
-
-isProd && plugins.push(
-  new webpack.optimize.UglifyJsPlugin({
-    compress: { warnings: false }
-  })
 )

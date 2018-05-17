@@ -181,7 +181,7 @@
         /* webpackChunkName: "examples-source" */
         /* webpackMode: "lazy-once" */
         `!raw-loader!../../examples/${this.file}.vue`
-        ).then(this.boot)
+        ).then(comp => this.boot(comp.default))
     },
 
     beforeDestroy () {
