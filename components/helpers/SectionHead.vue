@@ -1,6 +1,7 @@
 <template lang="pug">
   h2.headline.primary--text
-    markdown(:source="$t(value)")
+    translatable(:i18n="value")
+      markdown(:source="$t(value)")
 </template>
 
 <script>

@@ -1,17 +1,19 @@
 <template lang="pug">
   section.component-example(:id="id")
     //- Section header
-    h3(v-if="header").title.layout.align-center.mb-3
+    h3(v-if="header.length > 0").title.layout.align-center.mb-3
       router-link(
         :to="{ hash: id }"
         v-if="id"
         style="text-decoration: none;"
       ).mr-2
         v-icon(color="accent") mdi-pound
-      span(v-text="header")
+      translatable(:i18n="header")
+        span(v-text="$t(header)")
 
     //- Description
-    markdown(v-if="desc" :source="desc")
+    translatable(v-if="$te(desc, 'en')" :i18n="desc")
+      markdown(:source="$t(desc)")
 
     v-card(:class="{ 'elevation-0': readonly }").mt-4
       //- Example options

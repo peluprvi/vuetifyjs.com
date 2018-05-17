@@ -4,6 +4,7 @@
     :icon="computedIcon"
     value
   ).my-4.app-alert
+    translatable(:i18n="value")
     markdown(:source="$t(value)")
 </template>
 

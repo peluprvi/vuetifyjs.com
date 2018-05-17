@@ -6,7 +6,9 @@
       v-container
         v-layout
           v-flex(xs12)
-            h2(v-text="$t('Vuetify.Home.proudlySponsoredBy')").text-xs-center.headline.mb-3.grey--text
+            h2.text-xs-center.headline.mb-3.grey--text
+              translatable(i18n="Vuetify.Home.proudlySponsoredBy")
+                span {{ $t('Vuetify.Home.proudlySponsoredBy') }}
             v-layout(row wrap justify-center align-center)
               template(v-for="(supporter, i) in supporters")
                 v-flex(
@@ -30,6 +32,7 @@
                     :style="{ maxHeight: `${supporter.size}px` }"
                   )
               v-flex(xs12).text-xs-center.mt-3
+                translatable(i18n="Vuetify.Home.becomeSponsor")
                 v-btn(
                   :to="{ name: 'getting-started/SponsorsAndBackers' }"
                   color="primary"
@@ -41,8 +44,10 @@
     section#checked-features.mb-5
       v-container
         h2.text-xs-center.headline.mb-5.grey--text
+          translatable(i18n="Vuetify.Home.checkFeaturesTitle")
           span {{ $t("Vuetify.Home.checkFeaturesTitle") }}
-          | {{ $t("Vuetify.Home.checkFeaturesTitleCtd") }}
+          translatable(i18n="Vuetify.Home.checkFeaturesTitleCtd")
+            span {{ $t("Vuetify.Home.checkFeaturesTitleCtd") }}
         v-layout(row wrap justify-center)
           v-flex(
             mx-3
@@ -58,7 +63,8 @@
                 color="green"
                 size="36px"
               ).mr-3 check
-              span.subheading {{ feature }}
+              translatable(:i18n="`Vuetify.Home.checkFeatures[${i}]`")
+                span.subheading {{ $t(`Vuetify.Home.checkFeatures[${i}]`) }}
           v-flex(
             mx-3
             :shrink="$vuetify.breakpoint.mdAndUp"
@@ -73,11 +79,13 @@
                 color="green"
                 size="36px"
               ).mr-3 check
-              span.subheading {{ feature }}
+              translatable(:i18n="`Vuetify.Home.checkFeaturesCtd[${i}]`")
+                span.subheading {{ $t(`Vuetify.Home.checkFeaturesCtd[${i}]`) }}
 
     section#using-vuetify.mb-5
       v-container(grid-list-xl)
         h2.text-xs-center.headline.mb-5.grey--text
+          translatable(i18n="Vuetify.Home.madeWithVuetify")
           span {{ $t("Vuetify.Home.madeWithVuetify") }}
         v-layout(wrap)
           v-flex(
@@ -110,22 +118,22 @@
               height="65px"
             )
 
-    section#footer
-      v-jumbotron(
-        dark
-        gradient="to top, #1867c0, #5CBBF6"
-        height="auto"
-      )
-        v-container.mt-4.mb-3
-          v-layout(row wrap)
-            v-flex(xs12)
-              h5.mb-3
-                v-layout(align-center justify-center column)
-                  img(
-                    src="/static/v-alt.svg"
-                    height="64px"
-                    width="64px"
-                  ).mb-2
+    section#footerv-jumbotron(
+      dark
+      gradient="to top, #1867c0, #5CBBF6"
+      height="auto"
+    )
+      v-container.mt-4.mb-3
+        v-layout(row wrap)
+          v-flex(xs12)
+            h5.mb-3
+              v-layout(align-center justify-center column)
+                img(
+                  src="/static/v-alt.svg"
+                  height="64px"
+                  width="64px"
+                ).mb-2
+                translatable(i18n="Vuetify.Home.callout")
                   span(v-text="$t('Vuetify.Home.callout')").subheading
 
           v-layout(justify-center).mb-3
@@ -213,16 +221,16 @@
 
     computed: {
       checkFeatures () {
-        return this.$t('Vuetify.Home.checkFeatures')
+        return this.$t('Vuetify.Home.checkFeatures', 'en')
       },
       checkFeaturesCtd () {
-        return this.$t('Vuetify.Home.checkFeaturesCtd')
+        return this.$t('Vuetify.Home.checkFeaturesCtd', 'en')
       },
       computedFeatured () {
         return this.featured.slice(0, 6)
       },
       features () {
-        return this.$t('Vuetify.Home.features').slice().reverse()
+        return this.$t('Vuetify.Home.features', 'en')
       },
       letterFromAuthor () {
         return this.$t('Vuetify.Home.letterFromAuthor')

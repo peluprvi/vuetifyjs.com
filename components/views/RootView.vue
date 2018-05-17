@@ -6,7 +6,7 @@
 <script>
   import { camelActual } from '@/util/helpers'
   import { mapState } from 'vuex'
-  import languages from '@/i18n/languages'
+  import languages from '@/i18n/languages.json'
   import NotFoundPage from '@/pages/general/404Page.vue'
 
   export default {

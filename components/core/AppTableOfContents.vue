@@ -22,7 +22,6 @@
       position: 'relative',
       right: 0,
       top: 0,
-      list: [],
       isBooted: false,
       timeout: null
     }),
@@ -41,12 +40,27 @@
           position: this.position,
           top: `${parseInt(this.top)}px`
         }
-      }
-    },
+      },
+      list () {
+        const list = []
 
-    watch: {
-      isBooted () {
-        this.genList()
+        if (!this.isBooted) return list
+
+        for (let item of this.items) {
+          item = Object.assign({}, item)
+
+          const target = item.target ||
+            document.getElementById(item.href)
+
+          if (target) {
+            item.offsetTop = target.offsetTop
+            item.target = target
+
+            list.push(item)
+          }
+        }
+
+        return list
       }
     },
 
@@ -63,51 +77,38 @@
         const isActive = this.activeIndex === index
         const vm = this
 
-        return this.$createElement('li', [
-          this.$createElement('a', {
-            staticClass: 'subheading mb-3 d-block',
-            'class': {
-              'primary--text': isActive,
-              'grey--text text--darken-1': !isActive
-            },
-            style: {
-              borderLeft: `2px solid ${isActive ? this.$vuetify.theme.primary : 'transparent'}`
-            },
-            props: { href: '#' },
-            domProps: { innerText: item.text },
-            on: {
-              click (e) {
-                e.stopPropagation()
-                e.preventDefault()
+        const link = this.$createElement('a', {
+          staticClass: 'subheading mb-3 d-block',
+          'class': {
+            'primary--text': isActive,
+            'grey--text text--darken-1': !isActive
+          },
+          style: {
+            borderLeft: `2px solid ${isActive ? this.$vuetify.theme.primary : 'transparent'}`
+          },
+          props: { href: '#' },
+          domProps: { innerText: this.$t(item.text) },
+          on: {
+            click (e) {
+              e.stopPropagation()
+              e.preventDefault()
 
-                const goTo = index === 0
-                  ? 0
-                  : `#${item.href}`
+              const goTo = index === 0
+                ? 0
+                : `#${item.href}`
 
-                vm.$vuetify.goTo(goTo)
-              }
+              vm.$vuetify.goTo(goTo)
             }
-          })
-        ])
-      },
-      genList () {
-        const list = []
-
-        for (let item of this.items) {
-          item = Object.assign({}, item)
-
-          const target = item.target ||
-            document.getElementById(item.href)
-
-          if (target) {
-            item.offsetTop = target.offsetTop
-            item.target = target
-
-            list.push(item)
           }
-        }
+        })
 
-        this.list = list
+        return this.$createElement('li', [
+          this.$createElement('translatable', {
+            props: {
+              i18n: item.text
+            }
+          }, [link])
+        ])
       },
       onScroll () {
         clearTimeout(this.timeout)
@@ -121,7 +122,6 @@
         this.top = shouldFloat ? 85 : 0
 
         this.timeout = setTimeout(() => {
-          requestAnimationFrame(this.genList)
           this.isBooted = true
         }, 100)
       }
@@ -164,7 +164,7 @@
     margin: 0 24px
     width: 200px
 
-    li > a
+    li a
       padding-left: 18px
       text-decoration: none
       border-left: 2px solid transparent

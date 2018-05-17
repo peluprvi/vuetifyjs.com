@@ -8,6 +8,7 @@ const compression = require('compression')
 const microcache = require('route-cache')
 const resolve = file => path.resolve(__dirname, file)
 const { createBundleRenderer } = require('vue-server-renderer')
+const Ouch = require('ouch')
 const redirects = require('./router/301.json')
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -69,6 +70,7 @@ const serve = (path, cache) => express.static(resolve(path), {
   maxAge: cache && isProd ? 1000 * 60 * 60 * 24 * 30 : 0
 })
 
+app.use(express.json())
 app.use(cookieParser())
 app.use(compression({ threshold: 0 }))
 app.use(favicon('./static/favicon.ico'))
@@ -88,6 +90,10 @@ app.get('/sitemap.xml', (req, res) => {
   res.sendFile(resolve('./static/sitemap.xml'))
 })
 
+if (process.env.TRANSLATE) {
+  app.use('/api/translation', require('./translation/router'))
+}
+
 // 301 redirect for changed routes
 Object.keys(redirects).forEach(k => {
   app.get(k, (req, res) => res.redirect(301, redirects[k]))
@@ -101,6 +107,8 @@ Object.keys(redirects).forEach(k => {
 // https://www.nginx.com/blog/benefits-of-microcaching-nginx/
 const isStore = req => !!req.params && !!req.params[1] && req.params[1].includes('store')
 const cacheMiddleware = microcache.cacheSeconds(10 * 60, req => useMicroCache && !isStore(req) && req.originalUrl)
+
+const ouchInstance = (new Ouch()).pushHandler(new Ouch.handlers.PrettyPageHandler('orange', null, 'sublime'))
 
 function render (req, res) {
   const s = Date.now()
@@ -117,10 +125,9 @@ function render (req, res) {
     } else if (err.code === 404) {
       res.status(404).send('404 | Page Not Found')
     } else {
-      // Render Error Page or Redirect
-      res.status(500).send('500 | Internal Server Error')
-      console.error(`error during render : ${req.url}`)
-      console.error(err.stack)
+      ouchInstance.handleException(err, req, res, output => {
+        console.log('Error handled!')
+      })
     }
   }
 

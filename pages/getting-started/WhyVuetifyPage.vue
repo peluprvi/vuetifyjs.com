@@ -18,21 +18,22 @@
                         img(:src="p.img").grey.darken-4
                     div.px-3
                       v-divider.indigo.lighten-4
-                    v-card-title(primary).headline.layout.justify-center
-                      span(v-text="p.title")
-                    v-card-text(v-html="p.caption").caption
+                    translatable(:i18n="`${namespace}.philosophies[${i}].title`")
+                    v-card-title.headline.layout.justify-center
+                      span(v-text="$t(`${namespace}.philosophies[${i}].title`)")
+                    translatable(:i18n="`${namespace}.philosophies[${i}].caption`")
+                    v-card-text.caption.text-xs-justify
+                      markdown(:source="$t(`${namespace}.philosophies[${i}].caption`)")
 
       v-layout(row wrap).mb-5
         v-flex(xs12)
           v-container(fluid grid-list-md).pa-0
             v-layout(row wrap)
               v-flex(xs12 md7).mb-5
-                section
-                  markdown(
-                    v-for="(p, i) in whyText"
-                    :key="i"
-                    :source="p"
-                  )
+                section.text-xs-justify
+                  div(v-for="(p, i) in whyText" :key="i")
+                    translatable(:i18n="`${namespace}.whyText[${i}]`")
+                      markdown(:source="$t(`${namespace}.whyText[${i}]`)")
 
                 section#design-principles
                   section-head(:value="`${namespace}.designHeader`")
@@ -46,20 +47,23 @@
                   section-head(:value="`${namespace}.comparisonHeader`")
                   section-text(:value="`${namespace}.comparisonText`")
 
-                  v-subheader {{ $t(`${namespace}.featuresHeader`) }}
+                  translatable(:i18n="`${namespace}.featuresHeader`")
+                    v-subheader {{ $t(`${namespace}.featuresHeader`) }}
                   v-layout(row wrap justify-center)
                     v-flex(xs12)
                       v-list(style="max-width: 400px;" dense).transparent.mb-5
                         v-list-tile(
                           tag="div"
                           :ripple="false"
-                          v-for="(feature, $index) in featuresList"
-                          :key="$index"
+                          v-for="(feature, i) in featuresList"
+                          :key="i"
                           avatar
-                          :class="{ 'grey lighten-3': $index % 2 === 0 }"
+                          :class="{ 'grey lighten-3': i % 2 === 0 }"
                         )
+                          translatable(:i18n="`${namespace}.featuresList[${i}]`")
                           v-list-tile-content
-                            v-list-tile-title.subheading {{ feature }}
+                            v-list-tile-title.subheading
+                              span {{ $t(`${namespace}.featuresList[${i}]`) }}
                           v-list-tile-action
                             v-icon(dark).green--text check
 
@@ -96,13 +100,13 @@
   export default {
     computed: {
       philosophies () {
-        return this.$t('GettingStarted.WhyVuetify.philosophies')
+        return this.$t('GettingStarted.WhyVuetify.philosophies', 'en')
       },
       whyText () {
-        return this.$t('GettingStarted.WhyVuetify.whyText')
+        return this.$t('GettingStarted.WhyVuetify.whyText', 'en')
       },
       featuresList () {
-        return this.$t('GettingStarted.WhyVuetify.featuresList')
+        return this.$t('GettingStarted.WhyVuetify.featuresList', 'en')
       }
     }
   }

@@ -59,6 +59,7 @@
               color="white"
               large
             >
+              <translatable v-if="btn.lang" :i18n="btn.lang"/>
               <v-icon
                 v-if="btn.icon"
                 left
@@ -76,7 +77,7 @@
     >
       <v-layout wrap>
         <v-flex
-          v-for="(feature, i) in features"
+          v-for="(_, i) in 3"
           :key="i"
           d-flex
           xs12
@@ -90,18 +91,22 @@
             max-width="375px"
           >
             <img
-              :alt="feature.title"
-              :src="feature.img"
+              :alt="$t(`Vuetify.Home.features[${i}].title`)"
+              :src="$t(`Vuetify.Home.features[${i}].img`)"
             >
             <v-card-text>
-              <h3
-                class="subheading font-weight-bold"
-                v-text="feature.title"
-              />
-              <p
-                class="mb-2"
-                v-text="feature.text"
-              />
+              <translatable :i18n="`Vuetify.Home.features[${i}].title`">
+                <h3
+                  class="subheading font-weight-bold"
+                  v-text="$t(`Vuetify.Home.features[${i}].title`)"
+                />
+              </translatable>
+              <translatable :i18n="`Vuetify.Home.features[${i}].text`">
+                <p
+                  class="mb-2"
+                  v-text="$t(`Vuetify.Home.features[${i}].text`)"
+                />
+              </translatable>
             </v-card-text>
           </v-card>
         </v-flex>
@@ -147,8 +152,6 @@
     computed: {
       features () {
         return this.$t('Vuetify.Home.features')
-          .slice()
-          .reverse()
       }
     }
   }

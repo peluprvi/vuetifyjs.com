@@ -5,6 +5,7 @@
 </template>
 
 <script>
+  import { getObjectValueByPath } from 'vuetify/es5/util/helpers'
   import { camel, kebab } from '@/util/helpers'
   import NotFound from '@/pages/general/404Page'
 
@@ -52,12 +53,9 @@
       },
       examples () {
         const examples = `${this.computedSection}.${this.computedComponent}.examples`
+        const lang = this.$i18n.getLocaleMessage('en')
 
-        return this.$te(examples)
-          ? this.$t(examples)[0]
-          : this.$te(examples, 'en')
-            ? this.$t(examples, 'en')[0]
-            : []
+        return getObjectValueByPath(lang, examples)
       },
       exists () {
         return this.components.length > 0 || this.examples.length > 0
