@@ -58,7 +58,8 @@
         return getObjectValueByPath(lang, examples)
       },
       exists () {
-        return this.components.length > 0 || this.examples.length > 0
+        return (this.components || []).length > 0 ||
+          (this.examples || []).length > 0
       }
     }
   }

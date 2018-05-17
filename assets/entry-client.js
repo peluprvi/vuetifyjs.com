@@ -1,5 +1,5 @@
 import 'vuetify/dist/vuetify.css'
-import 'mdi/css/materialdesignicons.css'
+import '@mdi/font/css/materialdesignicons.css'
 import 'es6-promise/auto'
 import { createApp } from './app'
 
