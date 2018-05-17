@@ -48,11 +48,6 @@
       "header": "Custom validation",
       "desc": "While the built in `v-form` or 3rd party plugin such as [vuelidate](https://github.com/monterail/vuelidate) or [vee-validation](https://github.com/logaretm/vee-validate) can help streamline your validation process, you can choose to simply control it yourself."
     },
-    "textarea": {
-      "header": "Textarea",
-      "desc": "Textarea text-fields have an alternate style.",
-      "uninverted": true
-    },
     "box": {
       "header": "Box style",
       "desc": "Text-fields can be used with an alternative box design. Append and prepend icon props are **not** supported in this mode."

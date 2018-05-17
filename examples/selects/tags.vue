@@ -27,7 +27,10 @@
           chips
           tags
         >
-          <template slot="selection" slot-scope="data">
+          <template
+            slot="selection"
+            slot-scope="data"
+          >
             <v-chip
               :selected="data.selected"
               :disabled="data.disabled"
@@ -35,7 +38,10 @@
               class="chip--select-multi"
               @input="data.parent.selectItem(data.item)"
             >
-              <v-avatar class="accent">{{ data.item.slice(0, 1).toUpperCase() }}</v-avatar>
+              <v-avatar
+                class="accent white--text"
+                v-text="data.item.slice(0, 1).toUpperCase()"
+              ></v-avatar>
               {{ data.item }}
             </v-chip>
           </template>
@@ -58,7 +64,7 @@
   export default {
     data () {
       return {
-        select: [],
+        select: ['Vuetify'],
         items: [
           'Programming',
           'Design',

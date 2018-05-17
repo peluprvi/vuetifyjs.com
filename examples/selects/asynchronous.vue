@@ -9,10 +9,12 @@
           :search-input.sync="search"
           v-model="select"
           label="Async items"
+          hide-no-data
           multiple
           cache-items
           chips
           required
+          solo
         ></v-autocomplete>
       </v-flex>
     </v-layout>

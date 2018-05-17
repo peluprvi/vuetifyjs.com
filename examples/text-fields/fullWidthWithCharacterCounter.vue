@@ -16,6 +16,7 @@
         chips
         label="To"
         full-width
+        hide-no-data
         hide-selected
         multiple
         single-line

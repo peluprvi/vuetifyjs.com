@@ -25,7 +25,7 @@
           label="Select"
           single-line
           auto
-          append-icon="map"
+          append-outer-icon="map"
           hide-details
         ></v-select>
       </v-flex>
@@ -37,8 +37,8 @@
   export default {
     data () {
       return {
-        e1: null,
-        e2: 'Arkansas',
+        e1: 'Florida',
+        e2: 'Texas',
         e3: null,
         e4: null,
         items: [
