@@ -119,13 +119,16 @@
                 style="max-width: 150px;"
               ).supporter
         div.text-xs-center
-          div.mb-3 {{ $t('GettingStarted.SponsorsAndBackers.questionHeader') }}
-          v-btn(
-            outline
-            color="success"
-            round
-            href="mailto:john@vuetifyjs.com"
-          ) {{ $t('GettingStarted.SponsorsAndBackers.questionButton') }}
+          div.mb-3
+            translatable(i18n="GettingStarted.SponsorsAndBackers.questionHeader")
+              span {{ $t('GettingStarted.SponsorsAndBackers.questionHeader') }}
+          translatable(i18n="GettingStarted.SponsorsAndBackers.questionButton")
+            v-btn(
+              outline
+              color="success"
+              round
+              href="mailto:john@vuetifyjs.com"
+            ) {{ $t('GettingStarted.SponsorsAndBackers.questionButton') }}
 </template>
 
 <script>

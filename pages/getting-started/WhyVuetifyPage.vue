@@ -76,6 +76,7 @@
                         v-list-tile-avatar
                           v-avatar
                             img(src="/static/doc-images/john.jpg")
+                        translatable(:i18n="`${namespace}.authorOfVuetify`")
                         v-list-tile-content
                           v-list-tile-title John Leider
                           v-list-tile-sub-title {{ $t(`${namespace}.authorOfVuetify`) }}
@@ -88,6 +89,7 @@
                             ).grey--text
                               v-icon mail
                             span {{ $t(`${namespace}.contactMe`) }}
+                    translatable(:i18n="`${namespace}.letterFromAuthor`")
                     v-card-text {{ $t(`${namespace}.letterFromAuthor`) }}
                     v-card-text.text-xs-right <em>&mdash;John Leider</em>
 
