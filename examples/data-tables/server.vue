@@ -3,7 +3,6 @@
     <v-data-table
       :headers="headers"
       :items="desserts"
-      :search="search"
       :pagination.sync="pagination"
       :total-items="totalDesserts"
       :loading="loading"
@@ -25,7 +24,6 @@
   export default {
     data () {
       return {
-        search: '',
         totalDesserts: 0,
         desserts: [],
         loading: true,
