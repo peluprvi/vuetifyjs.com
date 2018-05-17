@@ -164,8 +164,8 @@ app.get('*', (req, res) => {
   res.redirect(302, `/${lang}${req.originalUrl}`)
 })
 
-const port = process.env.PORT
-const host = process.env.HOST
+const port = process.env.PORT || 8095
+const host = process.env.HOST || '0.0.0.0'
 app.listen(port, host, () => {
   console.log(`server started at ${host}:${port}`)
 })
