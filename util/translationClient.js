@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const http = axios.create({ baseURL: 'http://localhost:8095/' })
+const http = axios.create({ baseURL: `http://${process.env.LANG_HOST}:${process.env.PORT}/` })
 
 export default {
   async save (data) {

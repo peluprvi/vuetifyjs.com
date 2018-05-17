@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const path = require('path')
 const webpack = require('webpack')
 const vueConfig = require('./vue-loader.config')
@@ -7,7 +9,11 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
 const resolve = (file) => path.resolve(__dirname, file)
 
-let plugins = []
+let plugins = [
+  new webpack.DefinePlugin({
+    'process.env': JSON.stringify(process.env)
+  })
+]
 
 module.exports = {
   devtool: isProd
