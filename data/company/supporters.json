@@ -1,0 +1,124 @@
+[
+  {
+    "pledge": 500,
+    "name": "LMAX Exchange",
+    "type": "Patron",
+    "link": "https://careers.lmax.com/?utm_source=vuetify&utm_medium=logo-link&utm_campaign=lmax-careers",
+    "logo": "backers/lmax-exchange.png"
+  },
+  {
+    "name": "Intygrate",
+    "link": "http://intygrate.com/",
+    "logo": "backers/intygrate.png",
+    "pledge": 500,
+    "type": "Patron"
+  },
+  {
+    "name": "ResaleAI",
+    "link": "http://resaleai.com/",
+    "logo": "backers/resaleai_logo_blue.svg",
+    "pledge": 500,
+    "type": "Patron"
+  },
+  {
+    "name": "Eikos Partners",
+    "link": "http://www.eikospartners.com/",
+    "logo": "backers/eikos-partners.webp",
+    "pledge": 250,
+    "type": "Patron"
+  },
+  {
+    "name": "quitt.ch",
+    "link": "https://quitt.ch",
+    "logo": "backers/quitt.png",
+    "pledge": 250,
+    "type": "Patron"
+  },
+  {
+    "name": "Deister Software",
+    "link": "http://www.deister.es/",
+    "logo": "backers/deister-logo-light.png",
+    "pledge": 50,
+    "type": "Patron"
+  },
+  {
+    "name": "Cocoatech",
+    "link": "https://cocoatech.com/",
+    "logo": "backers/cocoatechlogo.png",
+    "pledge": 50,
+    "type": "Patron"
+  },
+  {
+    "name": "Cycloid",
+    "link": "https://www.cycloid.io/",
+    "logo": "backers/cycloid.png",
+    "pledge": 50,
+    "type": "Patron"
+  },
+  {
+    "name": "Live Casino",
+    "link": "https://livecasino.com/",
+    "logo": "backers/casino.webp",
+    "pledge": 50,
+    "type": "Patron"
+  },
+  {
+    "name": "Nate Controls",
+    "link": "http://www.natecontrols.com/",
+    "logo": "backers/n8controls.png",
+    "pledge": 50,
+    "type": "Patron"
+  },
+  {
+    "name": "Zweidenker",
+    "link": "http://zweidenker.de/",
+    "logo": "backers/zweidenker-logo-grey.svg",
+    "pledge": 50,
+    "type": "Patron"
+  },
+  {
+    "name": "Identity Panel",
+    "link": "https://support.identitypanel.com/",
+    "logo": "backers/identity-panel.png",
+    "pledge": 50,
+    "type": "Patron"
+  },
+  {
+    "name": "Hohenstein",
+    "link": "https://www.hohenstein.de/en/home/home.xhtml",
+    "logo": "backers/hohenstein.svg",
+    "pledge": 50,
+    "type": "Patron"
+  },
+  {
+    "name": "P2L Technologies",
+    "link": "https://p2l.tech/",
+    "logo": "backers/p2l.png",
+    "pledge": 50,
+    "type": "Patron"
+  },
+  {
+    "name": "VueJobs",
+    "link": "https://vuejobs.com/?utm_source=vuejobs&utm_medium=affiliates&utm_campaign=linking",
+    "logo": "affiliates/vuejobs-logo.svg",
+    "type": "Affiliate"
+  },
+  {
+    "name": "Made with Vue.js",
+    "link": "https://madewithvuejs.com",
+    "logo": "affiliates/madewithvuejs.png",
+    "type": "Affiliate"
+  },
+  {
+    "name": "Vue.js Radar",
+    "link": "https://vuejsradar.com",
+    "logo": "affiliates/vueradar2.png",
+    "type": "Affiliate"
+  },
+  {
+    "name": "Cloudflare",
+    "link": "https://www.cloudflare.com/",
+    "logo": "cloudflare.svg",
+    "type": "Service"
+  }
+]
