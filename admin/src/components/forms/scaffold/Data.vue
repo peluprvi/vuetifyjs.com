@@ -21,7 +21,7 @@
             >
               <v-divider />
               <v-card-text>
-                <form-create
+                <forms-field
                   :value="field"
                   @input="val => update(val, i)"
                 />

@@ -18,7 +18,9 @@ Vue.use(Router)
 export default new Router({
   routes: [
     route('/', 'Home'),
-    route('/data', 'data/Data'),
-    route('/scaffold', 'scaffold/Scaffold')
+    route('/data/index', 'data/Index'),
+    route('/data/create', 'data/Create'),
+    route('/scaffold/index', 'scaffold/Index'),
+    route('/scaffold/create', 'scaffold/Create')
   ]
 })

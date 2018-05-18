@@ -19,21 +19,18 @@
 </template>
 
 <script>
-  const forms = require.context('./forms', false, /\.vue$/)
-  const components = {}
+  const forms = require.context('@/components/forms/scaffold', false, /\.vue$/)
+  // const components = {}
   const scaffolds = []
 
   for (const form of forms.keys()) {
     const component = form.replace('./', '')
     const name = component.replace('.vue', '')
 
-    components[name] = () => import(`./forms/${component}`)
-    scaffolds.push(name.replace('Scaffold', ''))
+    scaffolds.push(component.replace('.vue', ''))
   }
 
   export default {
-    components,
-
     data: () => ({
       scaffold: null,
       scaffolds
@@ -41,7 +38,7 @@
 
     computed: {
       component () {
-        return `scaffold-${this.scaffold.toLowerCase()}`
+        return `forms-scaffold-${this.scaffold.toLowerCase()}`
       }
     }
   }
