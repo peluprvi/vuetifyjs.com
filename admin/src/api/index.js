@@ -31,10 +31,9 @@ app.patch('/api/company/supporters', (req, res) => {
 
 const {
   VUE_APP_HOST,
-  VUE_APP_PORT
+  VUE_APP_API_PORT
 } = process.env
-console.log(process.env.VUE_APP_PORT)
 
-app.listen(VUE_APP_PORT, VUE_APP_HOST, () => {
-  console.log(`API Server is running at http://${VUE_APP_HOST}:${VUE_APP_PORT}`)
+app.listen(VUE_APP_API_PORT, '0.0.0.0', () => {
+  console.log(`API Server is running at http://${VUE_APP_HOST}:${VUE_APP_API_PORT}`)
 })
