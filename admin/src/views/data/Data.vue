@@ -16,8 +16,12 @@
               class="mt-0"
               label="Data"
               hide-details
+              return-object
             />
-            <component :is="item" />
+            <core-crud
+              v-if="item"
+              :value="item"
+            />
           </v-card-text>
         </v-card>
       </v-flex>
@@ -26,22 +30,18 @@
 </template>
 
 <script>
-  const items = [
-    'Supporters'
-  ]
-
-  const components = {}
-
-  for (const item of items) {
-    components[item] = () => import(`@/views/data/${item}`)
-  }
-
   export default {
-    components,
-
     data: () => ({
-      item: 'Supporters',
-      items
-    })
+      item: null,
+      items: []
+    }),
+
+    async mounted () {
+      const res = await this.$http.get('data/data', {
+        params: { crud: true }
+      })
+
+      this.items = res.data
+    }
   }
 </script>

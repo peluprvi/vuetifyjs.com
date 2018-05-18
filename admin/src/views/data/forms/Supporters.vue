@@ -1,61 +1,7 @@
 <template>
   <v-layout wrap>
     <v-flex xs12>
-      <v-card
-        color="grey lighten-3"
-        flat
-      >
-        <v-form ref="form">
-          <v-container>
-            <v-layout>
-              <v-flex>
-                <v-text-field
-                  v-model="item.name"
-                  label="Name"
-                />
-                <v-text-field
-                  v-model="item.logo"
-                  label="Logo"
-                />
-                <v-text-field
-                  v-model="item.link"
-                  label="Link"
-                />
-                <v-autocomplete
-                  v-model="item.type"
-                  :items="types"
-                  label="Type"
-                />
-                <v-autocomplete
-                  v-if="item.type === 'Patron'"
-                  v-model="item.pledge"
-                  :items="pledges"
-                  label="Pledge Amount"
-                  prefix="$"
-                />
-              </v-flex>
-            </v-layout>
-          </v-container>
-        </v-form>
-        <v-divider />
-        <v-card-actions>
-          <v-btn
-            v-if="isEditing"
-            flat
-            @click="isEditing = false"
-          >
-            Cancel
-          </v-btn>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            depressed
-            @click="action"
-          >
-            {{ isEditing ? 'Update' : 'Add' }}
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+
     </v-flex>
     <v-flex xs12 mt-5>
       <v-data-table

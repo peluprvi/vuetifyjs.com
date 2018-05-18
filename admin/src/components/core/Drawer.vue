@@ -26,6 +26,11 @@
     data: () => ({
       items: [
         {
+          icon: 'mdi-library-plus',
+          text: 'Scaffold',
+          to: '/scaffold'
+        },
+        {
           icon: 'mdi-database-plus',
           text: 'Data',
           to: '/data'
