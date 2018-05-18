@@ -21,6 +21,7 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "lodash": "^4.17.10",
     "vue-cli-plugin-vuetify": "^0.1.3",

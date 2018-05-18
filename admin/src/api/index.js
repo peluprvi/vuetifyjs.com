@@ -2,6 +2,7 @@ const bodyparser = require('body-parser')
 const cors = require('cors')
 const express = require('express')
 const fs = require('fs')
+require('dotenv').config()
 const path = require('path')
 
 const app = express()
@@ -28,6 +29,12 @@ app.patch('/api/company/supporters', (req, res) => {
   res.status(200).send('Ok')
 })
 
-app.listen(3333, '0.0.0.0', () => {
-  console.log('Listening on port 3333')
+const {
+  VUE_APP_HOST,
+  VUE_APP_PORT
+} = process.env
+console.log(process.env.VUE_APP_PORT)
+
+app.listen(VUE_APP_PORT, VUE_APP_HOST, () => {
+  console.log(`API Server is running at http://${VUE_APP_HOST}:${VUE_APP_PORT}`)
 })
