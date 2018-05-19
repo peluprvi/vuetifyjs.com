@@ -1,7 +1,7 @@
 const bodyparser = require('body-parser')
 const cors = require('cors')
 const express = require('express')
-const fs = require('fs')
+const fs = require('fs-extra')
 require('dotenv').config()
 const path = require('path')
 
@@ -11,59 +11,38 @@ const resolve = file => path.resolve(__dirname, `${file}.json`)
 app.use(bodyparser.json())
 app.use(cors())
 
-function readFile (name, crud) {
-  const base = getBase(crud)
+function readFile (file) {
+  const path = resolve(file)
 
-  return JSON.parse(fs.readFileSync(resolve(`${base}/${name}`), 'utf8'))
-}
-
-function writeFile (name, data, crud) {
-  const base = getBase(crud)
-
-  fs.writeFileSync(resolve(`${base}/${name}`), JSON.stringify(data, null, 2), {
-    encoding: 'utf8',
-    flags: 'a'
+  return new Promise((resolve, reject) => {
+    if (!fs.existsSync(path)) reject(`Unable to find file located at ${path}`)
+    else resolve(JSON.parse(fs.readFileSync(path, 'utf8')))
   })
 }
 
-function getBase(crud = false) {
-  return crud
-    ? '../cruds'
-    : '../../../data'
+function writeFile (file, data) {
+  const path = resolve(file)
+  data = JSON.stringify(data, null, 2)
+
+  return new Promise(async (resolve, reject) => {
+    await fs.ensureFile(path)
+
+    fs.writeFileSync(path, data, 'utf8')
+  })
 }
 
 app.get('/api/read', (req, res) => {
-  const { file, crud } = req.query
-
-  res.json(readFile(file, crud))
+  return readFile(req.query.file)
+    .then(data => res.json(data))
+    .catch(e => res.status(500).send(e))
 })
 
 app.post('/api/write', (req, res) => {
-  const { data } = req.body
-  let read
+  const { data, file } = req.body
 
-  try {
-    read = readFile(data.file, data.crud)
-  } catch (e) {
-    read = []
-  }
-
-  read.push(data)
-
-  writeFile(data.file, read, data.crud)
-
-  res.status(200).send('Ok')
-})
-
-app.post('/api/crud', (req, res) => {
-  const body = req.body
-  const file = readFile(body.file, '../cruds')
-
-  file.push(body.scaffold)
-
-  writeFile(body.file, file, '../cruds')
-
-  res.status(200).send('Ok')
+  return writeFile(file, data)
+    .then(() => res.status(200).send('Ok'))
+    .catch(e => res.status(500).send(e))
 })
 
 const {

@@ -51,6 +51,8 @@
     data: () => ({
       isEditing: false,
       types: {
+        autocomplete: 'v-autocomplete',
+        select: 'v-select',
         text: 'v-text-field'
       }
     }),

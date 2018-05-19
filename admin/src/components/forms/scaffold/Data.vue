@@ -1,11 +1,11 @@
 <template>
-  <v-card>
-    <v-form>
+  <v-card flat>
+    <v-form v-if="item.data.length">
       <v-container>
         <v-layout wrap>
           <v-flex xs12>
             <core-card
-              v-for="(field, i) in fields"
+              v-for="(field, i) in item.data"
               :actions="actions"
               :key="field.id"
               class="mt-3"
@@ -28,12 +28,16 @@
     <v-card-text class="text-xs-center">
       <core-button
         @click="add"
-      >Add</core-button>
+      >
+        Add
+      </core-button>
     </v-card-text>
     <v-divider />
     <v-card-actions>
       <v-spacer />
-      <core-button @click="setData">Save</core-button>
+      <core-button @click="action">
+        {{ isEditing ? 'Update' : 'Save' }}
+      </core-button>
     </v-card-actions>
   </v-card>
 </template>
@@ -41,7 +45,8 @@
 <script>
   // Utilities
   import {
-    mapActions
+    mapActions,
+    mapState
   } from 'vuex'
 
   export default {
@@ -52,40 +57,33 @@
           handler: vm.remove
         }
       ],
-      fields: [{}],
       nonce: 1
     }),
 
-    props: {
-      data: {
-        type: Array,
-        default: () => ([])
-      }
-    },
-
     computed: {
-      scaffold () {
-        return this.fields.map((field, i) => {
-          return Object.assign({}, field, { id: i + 1 })
-        })
-      }
+      ...mapState('scaffold', ['isEditing', 'item']),
     },
 
     created () {
-      if (this.data) this.fields = this.data
+      this.nonce = this.item.data.length + 1
     },
 
     methods: {
-      ...mapActions('scaffold', ['setData']),
+      ...mapActions('scaffold', ['saveItem', 'setItems']),
+      action () {
+        this.isEditing
+          ? this.setItems()
+          : this.saveItem()
+      },
       add () {
-        this.fields.push({ id: this.nonce })
+        this.item.data.push({ id: this.nonce })
         this.nonce++
       },
       remove (i) {
-        this.fields.splice(i, 1)
+        this.item.data.splice(i, 1)
       },
       update (val, i) {
-        this.fields.splice(i, 1, val)
+        this.item.data.splice(i, 1, val)
       }
     }
   }

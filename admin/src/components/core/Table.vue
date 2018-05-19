@@ -9,20 +9,24 @@
         slot-scope="{ item, index }"
       >
         <td
-          v-text="index"
-        />
-        <td
           v-for="(field, i) in fields"
           :key="i"
           v-text="item[field]"
         />
-        <td>
+        <td class="text-xs-right">
           <v-btn
             small
             icon
-            @click="$emit('edit', index)"
+            @click="$emit('edit', item)"
           >
             <v-icon small>mdi-pencil</v-icon>
+          </v-btn>
+          <v-btn
+            small
+            icon
+            @click="$emit('remove', item)"
+          >
+            <v-icon small>mdi-delete</v-icon>
           </v-btn>
         </td>
       </template>
@@ -52,12 +56,8 @@
           value: field
         }))
 
-        headers.unshift({
-          text: 'Index',
-          sortable: false
-        })
-
         headers.push({
+          align: 'right',
           text: 'Actions',
           sortable: false
         })

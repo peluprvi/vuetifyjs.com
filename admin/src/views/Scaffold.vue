@@ -29,9 +29,11 @@
     >
       <component :is="component" />
     </core-card>
+
     <core-table
       @edit="edit"
-      :fields="['name', 'file']"
+      @remove="remove"
+      :fields="['id', 'name']"
       :items="items"
     />
   </section>
@@ -67,16 +69,16 @@
         'items'
       ]),
       component () {
-        return `forms-scaffold-${this.scaffold.toLowerCase()}`
+        return `forms-scaffold-${this.item.scaffold.toLowerCase()}`
       }
     },
 
     async mounted () {
-      this.getData()
+      this.getItems()
     },
 
     methods: {
-      ...mapActions('scaffold', ['getData']),
+      ...mapActions('scaffold', ['getItems', 'removeItem']),
       ...mapMutations('scaffold', {
         setIsEditing: 'SET_IS_EDITING',
         setItem: 'SET_ITEM'
@@ -84,6 +86,9 @@
       edit (item) {
         this.setItem(item)
         this.setIsEditing(true)
+      },
+      remove (item) {
+        this.removeItem(item)
       }
     }
   }

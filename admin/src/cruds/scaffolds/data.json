@@ -1,30 +1,46 @@
 [
   {
-    "crud": true,
-    "target": "Admin",
-    "scaffold": "Data",
+    "data": [
+      {
+        "id": 1,
+        "label": "Name",
+        "type": "text"
+      },
+      {
+        "id": 2,
+        "label": "Logo",
+        "type": "text"
+      },
+      {
+        "id": 3,
+        "label": "Link",
+        "type": "text"
+      },
+      {
+        "attrs": {
+          "items": [
+            "Patron",
+            "Affiliate",
+            "Service"
+          ]
+        },
+        "id": 4,
+        "label": "Type",
+        "type": "autocomplete",
+        "data": [
+          "Patron",
+          "Affiliate",
+          "Service"
+        ],
+        "items": [
+          "Patron",
+          "Affiliate",
+          "Service"
+        ]
+      }
+    ],
     "name": "Supporters",
-    "file": "scaffolds/data",
-    "data": [
-      {
-        "id": 1,
-        "label": "Name",
-        "type": "text"
-      }
-    ]
-  },
-  {
-    "crud": true,
-    "target": "Admin",
     "scaffold": "Data",
-    "name": "Supporters2",
-    "file": "scaffolds/data",
-    "data": [
-      {
-        "id": 1,
-        "label": "Name",
-        "type": "text"
-      }
-    ]
+    "target": "Docs"
   }
 ]

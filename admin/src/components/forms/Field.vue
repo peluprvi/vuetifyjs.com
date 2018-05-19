@@ -9,6 +9,13 @@
       :items="types"
       label="Type"
     ></v-autocomplete>
+    <v-autocomplete
+      v-if="isSelect"
+      v-model="internalValue.attrs.items"
+      label="Options"
+      small-chips
+      tags
+    ></v-autocomplete>
   </div>
 </template>
 
@@ -22,13 +29,19 @@
     },
 
     data: vm => ({
-      internalValue: Object.assign({}, vm.value),
+      internalValue: Object.assign({ attrs: {} }, vm.value),
       types: [
         'autocomplete',
         'text',
         'select'
       ]
     }),
+
+    computed: {
+      isSelect () {
+        return ['autocomplete', 'selected'].includes(this.internalValue.type)
+      }
+    },
 
     watch: {
       internalValue: {
