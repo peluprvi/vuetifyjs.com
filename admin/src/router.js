@@ -20,7 +20,6 @@ export default new Router({
     route('/', 'Home'),
     route('/data/index', 'data/Index'),
     route('/data/create', 'data/Create'),
-    route('/scaffold/index', 'scaffold/Index'),
-    route('/scaffold/create', 'scaffold/Create')
+    route('/scaffold', 'Scaffold')
   ]
 })

@@ -15,6 +15,7 @@
               box
               class="mt-0"
               label="Data"
+              item-text="name"
               hide-details
               return-object
             />
@@ -37,8 +38,11 @@
     }),
 
     async mounted () {
-      const res = await this.$http.get('data/data', {
-        params: { crud: true }
+      const res = await this.$http.get('read', {
+        params: {
+          file: 'scaffolds/data',
+          crud: true
+        }
       })
 
       this.items = res.data

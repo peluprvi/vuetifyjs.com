@@ -4,11 +4,6 @@
       <v-container>
         <v-layout wrap>
           <v-flex xs12>
-            <v-text-field
-              label="Property Name"
-            ></v-text-field>
-          </v-flex>
-          <v-flex xs12>
             <core-card
               v-for="(field, i) in fields"
               :actions="actions"
@@ -17,7 +12,6 @@
               color="grey lighten-3"
               dense
               flat
-              toolbar-color="primary"
             >
               <v-divider />
               <v-card-text>
@@ -31,7 +25,6 @@
         </v-layout>
       </v-container>
     </v-form>
-    <pre>{{ scaffold }}</pre>
     <v-card-text class="text-xs-center">
       <core-button
         @click="add"
@@ -40,12 +33,17 @@
     <v-divider />
     <v-card-actions>
       <v-spacer />
-      <core-button @click="save">Save</core-button>
+      <core-button @click="setData">Save</core-button>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
+  // Utilities
+  import {
+    mapActions
+  } from 'vuex'
+
   export default {
     data: vm => ({
       actions: [
@@ -58,6 +56,13 @@
       nonce: 1
     }),
 
+    props: {
+      data: {
+        type: Array,
+        default: () => ([])
+      }
+    },
+
     computed: {
       scaffold () {
         return this.fields.map((field, i) => {
@@ -66,19 +71,18 @@
       }
     },
 
+    created () {
+      if (this.data) this.fields = this.data
+    },
+
     methods: {
+      ...mapActions('scaffold', ['setData']),
       add () {
         this.fields.push({ id: this.nonce })
         this.nonce++
       },
       remove (i) {
         this.fields.splice(i, 1)
-      },
-      save () {
-        this.$http.post('crud', {
-          file: 'data/data',
-          scaffold: this.scaffold
-        })
       },
       update (val, i) {
         this.fields.splice(i, 1, val)

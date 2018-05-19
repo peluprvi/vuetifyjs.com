@@ -11,26 +11,46 @@ const resolve = file => path.resolve(__dirname, `${file}.json`)
 app.use(bodyparser.json())
 app.use(cors())
 
-function readFile (name, base = '../../../data') {
+function readFile (name, crud) {
+  const base = getBase(crud)
+
   return JSON.parse(fs.readFileSync(resolve(`${base}/${name}`), 'utf8'))
 }
 
-function writeFile (name, data, base = '../../../data') {
-  fs.writeFileSync(resolve(`${base}/${name}`), JSON.stringify(data, null, 2), 'utf8')
+function writeFile (name, data, crud) {
+  const base = getBase(crud)
+
+  fs.writeFileSync(resolve(`${base}/${name}`), JSON.stringify(data, null, 2), {
+    encoding: 'utf8',
+    flags: 'a'
+  })
 }
 
-app.get('/api/:path/:file', (req, res) => {
-  const { path, file } = req.params
-  const { crud } = req.query
+function getBase(crud = false) {
+  return crud
+    ? '../cruds'
+    : '../../../data'
+}
 
-  res.json(readFile(`${path}/${file}`, crud ? '../cruds' : undefined))
+app.get('/api/read', (req, res) => {
+  const { file, crud } = req.query
+
+  res.json(readFile(file, crud))
 })
 
-app.patch('/api/:path/:file', (req, res) => {
-  const { path, file } = req.params
-  const { crud } = req.query
+app.post('/api/write', (req, res) => {
+  const { data } = req.body
+  let read
 
-  writeFile(`${path}/${file}`, req.body, crud ? '../cruds' : undefined)
+  try {
+    read = readFile(data.file, data.crud)
+  } catch (e) {
+    read = []
+  }
+
+  read.push(data)
+
+  writeFile(data.file, read, data.crud)
 
   res.status(200).send('Ok')
 })

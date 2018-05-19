@@ -1,0 +1,30 @@
+[
+  {
+    "crud": true,
+    "target": "Admin",
+    "scaffold": "Data",
+    "name": "Supporters",
+    "file": "scaffolds/data",
+    "data": [
+      {
+        "id": 1,
+        "label": "Name",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "crud": true,
+    "target": "Admin",
+    "scaffold": "Data",
+    "name": "Supporters2",
+    "file": "scaffolds/data",
+    "data": [
+      {
+        "id": 1,
+        "label": "Name",
+        "type": "text"
+      }
+    ]
+  }
+]

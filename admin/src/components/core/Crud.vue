@@ -8,7 +8,7 @@
         <v-layout>
           <v-flex>
             <component
-              v-for="(field, i) in fields"
+              v-for="(field, i) in value.data"
               :is="types[field.type]"
               :key="i"
               :label="field.label"
