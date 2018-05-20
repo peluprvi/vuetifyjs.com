@@ -1,5 +1,65 @@
 <template>
   <div>
+    <v-container
+      grid-list-lg
+      pa-0
+    >
+      <v-layout align-center>
+        <v-flex xs3>
+          <v-switch
+            v-model="internalValue.conditional"
+            label="Conditional"
+          />
+        </v-flex>
+        <v-flex xs9 v-if="internalValue.conditional">
+          <v-layout>
+            <v-flex xs4>
+              <v-autocomplete
+                :items="siblings"
+                v-model="internalValue.conditions.target"
+                hide-details
+                label="Sibling"
+                item-text="label"
+                return-object
+              />
+            </v-flex>
+            <!-- If we have selected a sibling -->
+            <!-- Allow selection of an attribute -->
+            <v-flex xs4 v-if="internalValue.conditions.target">
+              <v-autocomplete
+                v-model="internalValue.conditions.attribute"
+                :items="getSiblingAttributes(internalValue.conditions)"
+                :key="internalValue.conditions.target.id"
+                hide-details
+                label="Attribute"
+              />
+            </v-flex>
+            <!-- Once an attribute has been selected -->
+            <!-- Either display that fields attributes -->
+            <!-- Or comparison operators -->
+            <template v-if="internalValue.conditions.attribute">
+              <v-flex xs4 v-if="!internalValue.conditions.target.attrs.items">
+                <v-text-field
+                  v-model="internalValue.conditions.option"
+                  hide-details
+                  label="Comparison"
+                />
+              </v-flex>
+              <v-flex xs4 v-else>
+                <v-autocomplete
+                  v-model="internalValue.conditions.option"
+                  :items="internalValue.conditions.target.attrs.items"
+                  hide-details
+                  label="Option"
+                  item-text="label"
+                />
+              </v-flex>
+            </template>
+          </v-layout>
+        </v-flex>
+      </v-layout>
+    </v-container>
+
     <v-text-field
       v-model="internalValue.label"
       label="Label"
@@ -8,7 +68,7 @@
 
     <v-autocomplete
       v-model="internalValue.type"
-      :items="types"
+      :items="fieldTypes"
       label="Type"
       hide-details
     />
@@ -21,65 +81,6 @@
       small-chips
       tags
     />
-
-    <v-container
-      grid-list-lg
-      pa-0
-    >
-      <v-layout>
-        <v-flex xs3>
-          <v-switch
-            v-model="internalValue.conditional"
-            hide-details
-            label="Conditional"
-          />
-        </v-flex>
-        <v-flex xs9 v-if="internalValue.conditional">
-          <v-form ref="conditional">
-            <v-layout>
-              <v-flex xs4>
-                <v-autocomplete
-                  :items="siblings"
-                  v-model="internalValue.sibling"
-                  hide-details
-                  label="Sibling"
-                  item-text="label"
-                  return-object
-                />
-              </v-flex>
-              <!-- If we have selected a sibling -->
-              <v-flex xs4 v-if="internalValue.sibling">
-                <v-autocomplete
-                  v-model="internalValue.attribute"
-                  :items="getSiblingAttributes(internalValue.sibling.attrs)"
-                  :key="internalValue.sibling.id"
-                  hide-details
-                  label="Attribute"
-                />
-              </v-flex>
-              <template v-if="internalValue.attribute">
-                <v-flex xs4 v-if="!internalValue.sibling.attrs.items">
-                  <v-text-field
-                    v-model="internalValue.option"
-                    hide-details
-                    label="Comparison"
-                  />
-                </v-flex>
-                <v-flex xs4 v-else>
-                  <v-autocomplete
-                    v-model="internalValue.option"
-                    :items="internalValue.sibling.attrs.items"
-                    hide-details
-                    label="Option"
-                    item-text="label"
-                  />
-                </v-flex>
-              </template>
-            </v-layout>
-          </v-form>
-        </v-flex>
-      </v-layout>
-    </v-container>
   </div>
 </template>
 
@@ -99,14 +100,20 @@
     data: vm => ({
       internalValue: Object.assign({
         attrs: {},
-        attribute: null,
         conditional: false,
-        option: null
+        conditions: {}
       }, vm.value),
-      types: [
+      fieldTypes: [
         'autocomplete',
         'text',
-        'select'
+        'select',
+        'switch'
+      ],
+      types: [
+        'Array',
+        'Boolean',
+        'Object',
+        'String'
       ]
     }),
 
@@ -125,9 +132,6 @@
         handler (val) {
           this.$emit('input', val)
         }
-      },
-      'internalValue.conditional' () {
-        this.$refs.conditional.reset()
       }
     },
 
@@ -135,8 +139,8 @@
       checkSelect (val) {
         return ['autocomplete', 'selected'].includes(val)
       },
-      getSiblingAttributes (attrs) {
-        const options = Object.keys(attrs)
+      getSiblingAttributes (conditions) {
+        const options = Object.keys(conditions.target.attrs)
 
         return options.length > 0
           ? options

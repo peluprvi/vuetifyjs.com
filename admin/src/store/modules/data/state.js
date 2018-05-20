@@ -1,4 +1,7 @@
 export default {
+  isEditing: false,
   item: {},
-  items: []
+  items: [],
+  scaffold: {},
+  scaffolds: []
 }

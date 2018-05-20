@@ -9,7 +9,7 @@
               translatable(i18n="Vuetify.Home.proudlySponsoredBy")
                 span {{ $t('Vuetify.Home.proudlySponsoredBy') }}
             v-layout(row wrap justify-center align-center)
-              template(v-for="(supporter, i) in supporters")
+              template(v-for="(supporter, i) in parsedSupporters")
                 v-flex(
                   xs12
                   v-if="supporter.break"
@@ -19,16 +19,16 @@
                   target="_blank"
                   rel="noopener"
                   class="ma-3"
-                  :href="`${supporter.href}?ref=vuetifyjs.com`"
-                  :title="supporter.title"
+                  :href="`${supporter.URL}`"
+                  :title="supporter.Name"
                   :key="i"
-                  @click="$ga.event('home sponsor click', 'click', supporter.title)"
+                  @click="$ga.event('home sponsor click', 'click', supporter.Name)"
                   v-else
                 )
                   img(
-                    :src="`/static/doc-images/${supporter.src}`"
-                    :height="supporter.size || 'auto'"
-                    :style="{ maxHeight: `${supporter.size}px` }"
+                    :src="`/static/doc-images/${supporter.Logo}`"
+                    :height="supporter.Size || 'auto'"
+                    :style="{ maxHeight: `${supporter.Size}px` }"
                   )
               v-flex(xs12).text-xs-center.mt-3
                 translatable(i18n="Vuetify.Home.becomeSponsor")
@@ -165,11 +165,13 @@
   import HomeCta from './HomeCta'
   import HomeSponsors from './HomeSponsors'
 
-  // Assets
-  import supporters from '@/data/company/supporters'
-
   // Mixins
   import Message from '@/mixins/message'
+
+  // Utilities
+  import {
+    mapGetters
+  } from 'vuex'
 
   export default {
     components: {
@@ -180,10 +182,8 @@
     mixins: [Message],
 
     data: () => ({
-      diamond: supporters.diamond,
       featured: [],
       isBooted: false,
-      palladium: supporters.palladium,
       socials: [
         {
           icon: 'mdi-reddit',
@@ -219,6 +219,7 @@
     }),
 
     computed: {
+      ...mapGetters('app', ['supporters']),
       checkFeatures () {
         return this.$t('Vuetify.Home.checkFeatures', 'en')
       },
@@ -234,8 +235,11 @@
       letterFromAuthor () {
         return this.$t('Vuetify.Home.letterFromAuthor')
       },
-      supporters () {
-        const supporters = [...this.diamond, ...this.palladium]
+      parsedSupporters () {
+        const supporters = [
+          ...this.supporters.diamond,
+          ...this.supporters.palladium
+        ]
 
         const end = { break: true }
 

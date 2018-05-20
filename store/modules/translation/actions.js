@@ -1,4 +1,4 @@
-import translationClient from '../../util/translationClient'
+import translationClient from '../../../util/translationClient'
 
 export default {
   async save ({ commit }, payload) {

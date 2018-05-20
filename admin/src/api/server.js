@@ -27,7 +27,9 @@ function writeFile (file, data) {
   return new Promise(async (resolve, reject) => {
     await fs.ensureFile(path)
 
-    fs.writeFileSync(path, data, 'utf8')
+    fs.writeFile(path, data, 'utf8')
+      .then(resolve)
+      .catch(reject)
   })
 }
 

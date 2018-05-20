@@ -11,13 +11,12 @@
           />
           <v-autocomplete
             v-model="item.target"
-            :disabled="isEditing"
             :items="targets"
             label="Target"
           />
           <v-text-field
             v-model="item.name"
-            label="Property Name"
+            label="File location (lowercase)"
           ></v-text-field>
         </v-card-text>
       </v-form>

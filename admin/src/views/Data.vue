@@ -8,8 +8,8 @@
       </v-toolbar>
       <v-card-text>
         <v-autocomplete
-          v-model="item"
-          :items="items"
+          v-model="internalValue"
+          :items="scaffolds"
           box
           class="mt-0"
           clearable
@@ -38,12 +38,18 @@
             </v-list-tile-action>
           </template>
         </v-autocomplete>
-        <core-crud
-          v-if="item"
-          :value="item"
-        />
+
+        <core-crud />
       </v-card-text>
     </v-card>
+
+    <core-table
+      v-if="items.length > 0"
+      @edit="edit"
+      @remove="remove"
+      :fields="fields"
+      :items="items"
+    />
   </section>
 </template>
 
@@ -51,23 +57,51 @@
   // Utilities
   import {
     mapActions,
+    mapMutations,
     mapState
   } from 'vuex'
 
   export default {
-    data: () => ({
-      item: null
-    }),
-
     computed: {
-      ...mapState('data', ['items'])
+      ...mapState('data', ['item', 'items', 'scaffold', 'scaffolds']),
+      fields () {
+        const fields = ['id']
+
+        if (!this.items.length) return fields
+
+        return fields.concat(
+          Object.keys(this.items[0]).slice(0, 2)
+        )
+      },
+      internalValue: {
+        get () {
+          return this.scaffold
+        },
+        set (val) {
+          this.setScaffold(val)
+          this.getItems()
+        }
+      }
     },
+
     async mounted () {
-      this.getItems()
+      this.getScaffolds()
     },
 
     methods: {
-      ...mapActions('data', ['getItems'])
+      ...mapActions('data', ['getItems', 'getScaffolds', 'removeItem']),
+      ...mapMutations('data', {
+        setIsEditing: 'SET_IS_EDITING',
+        setItem: 'SET_ITEM',
+        setScaffold: 'SET_SCAFFOLD'
+      }),
+      edit (item) {
+        this.setItem(item)
+        this.setIsEditing(true)
+      },
+      remove (item) {
+        this.removeItem(item)
+      }
     }
   }
 </script>

@@ -16,7 +16,7 @@ export default {
 
     store.commit('SET_ITEMS', items)
 
-    return store.dispatch('setData')
+    return store.dispatch('setItems')
   },
   saveItem: async store => {
     const items = store.state.items.slice()
@@ -25,7 +25,7 @@ export default {
 
     store.commit('SET_ITEMS', items)
 
-    return store.dispatch('setData')
+    return store.dispatch('setItems')
   },
   setItems: async store => {
     const items = store.state.items.slice().map(item => {
@@ -37,8 +37,7 @@ export default {
 
     Filesystem.write('scaffolds/data').toAdmin(items)
       .then(res => {
-        store.commit('RESET_ITEM')
-        store.dispatch('getData')
+        store.dispatch('getItems')
       })
   }
 }

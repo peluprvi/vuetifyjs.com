@@ -4,23 +4,25 @@
       {
         "attrs": {},
         "conditional": false,
-        "conditionalTarget": "Type",
-        "show": "If",
+        "conditions": {},
         "id": 1,
         "label": "Name",
         "type": "text"
       },
       {
         "attrs": {},
+        "conditional": false,
+        "conditions": {},
         "id": 2,
         "label": "Logo",
         "type": "text"
       },
       {
         "attrs": {},
-        "show": "If",
+        "conditional": false,
+        "conditions": {},
         "id": 3,
-        "label": "Link",
+        "label": "URL",
         "type": "text"
       },
       {
@@ -28,22 +30,14 @@
           "items": [
             "Patron",
             "Affiliate",
-            "Service"
+            "Service Sponsor"
           ]
         },
+        "conditional": false,
+        "conditions": {},
         "id": 4,
         "label": "Type",
-        "type": "autocomplete",
-        "data": [
-          "Patron",
-          "Affiliate",
-          "Service"
-        ],
-        "items": [
-          "Patron",
-          "Affiliate",
-          "Service"
-        ]
+        "type": "autocomplete"
       },
       {
         "attrs": {
@@ -54,37 +48,47 @@
             "Gold ($50)"
           ]
         },
-        "attribute": "items",
         "conditional": true,
-        "option": "Patron",
-        "id": 5,
-        "label": "Tier",
-        "type": "autocomplete",
-        "sibling": {
-          "attrs": {
-            "items": [
-              "Patron",
-              "Affiliate",
-              "Service"
-            ]
+        "conditions": {
+          "target": {
+            "attrs": {
+              "items": [
+                "Patron",
+                "Affiliate",
+                "Service Sponsor"
+              ]
+            },
+            "conditional": false,
+            "conditions": {},
+            "id": 4,
+            "label": "Type",
+            "type": "autocomplete"
           },
-          "id": 4,
-          "label": "Type",
-          "type": "autocomplete",
-          "data": [
-            "Patron",
-            "Affiliate",
-            "Service"
-          ],
-          "items": [
-            "Patron",
-            "Affiliate",
-            "Service"
-          ]
-        }
+          "attribute": "items",
+          "option": "Patron"
+        },
+        "id": 5,
+        "label": "Pledge",
+        "type": "autocomplete"
+      },
+      {
+        "attrs": {},
+        "conditional": false,
+        "conditions": {},
+        "id": 6,
+        "label": "Size",
+        "type": "text"
+      },
+      {
+        "attrs": {},
+        "conditional": false,
+        "conditions": {},
+        "id": 7,
+        "label": "Dark",
+        "type": "switch"
       }
     ],
-    "name": "Supporters",
+    "name": "company/supporters",
     "scaffold": "Data",
     "target": "Docs"
   }

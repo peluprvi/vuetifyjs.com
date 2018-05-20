@@ -31,7 +31,7 @@ class Filesystem {
   }
 
   toDocs (data) {
-    return this.to(data, true)
+    return this.to(data, false)
   }
 
   from (crud) {

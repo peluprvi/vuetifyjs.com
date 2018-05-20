@@ -8,17 +8,17 @@
     div.text-xs-center.pt-3
       div(
         v-for="diamond in diamonds"
-        :key="diamond.title"
+        :key="diamond.Name"
       )
         a(
-          :href="diamond.href"
+          :href="diamond.URL"
           target="_blank"
           rel="noopener"
-          @click="$ga.event('drawer sponsor click', 'click', diamond.title)"
+          @click="$ga.event('drawer sponsor click', 'click', diamond.Name)"
         )
           img.diamond-sponsor(
-            :src="`/static/doc-images/${diamond.src}`"
-            :alt="diamond.title"
+            :src="`/static/doc-images/${diamond.Logo}`"
+            :alt="diamond.Name"
           )
       patreon-btn
     v-container(fluid)
@@ -137,14 +137,16 @@
 
 <script>
   // Utilities
-  import { mapMutations, mapState } from 'vuex'
-  import supporters from '@/data/company/supporters'
+  import {
+    mapGetters,
+    mapMutations,
+    mapState
+  } from 'vuex'
   import appDrawerItems from '@/data/layout/app-drawer-items'
   import { camel } from '@/util/helpers'
 
   export default {
     data: () => ({
-      diamonds: supporters.diamond,
       docSearch: {},
       isSearching: false,
       items: appDrawerItems,
@@ -153,6 +155,10 @@
 
     computed: {
       ...mapState('app', ['isFullscreen', 'stateless', 'appDrawer']),
+      ...mapGetters('app', ['supporters']),
+      diamonds () {
+        return this.supporters.diamond
+      },
       inputValue: {
         get (state) {
           return this.appDrawer &&
