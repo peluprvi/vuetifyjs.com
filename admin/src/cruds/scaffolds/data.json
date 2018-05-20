@@ -2,16 +2,23 @@
   {
     "data": [
       {
+        "attrs": {},
+        "conditional": false,
+        "conditionalTarget": "Type",
+        "show": "If",
         "id": 1,
         "label": "Name",
         "type": "text"
       },
       {
+        "attrs": {},
         "id": 2,
         "label": "Logo",
         "type": "text"
       },
       {
+        "attrs": {},
+        "show": "If",
         "id": 3,
         "label": "Link",
         "type": "text"
@@ -37,6 +44,44 @@
           "Affiliate",
           "Service"
         ]
+      },
+      {
+        "attrs": {
+          "items": [
+            "Adamantium ($1500)",
+            "Diamond ($500)",
+            "Palladium ($250)",
+            "Gold ($50)"
+          ]
+        },
+        "attribute": "items",
+        "conditional": true,
+        "option": "Patron",
+        "id": 5,
+        "label": "Tier",
+        "type": "autocomplete",
+        "sibling": {
+          "attrs": {
+            "items": [
+              "Patron",
+              "Affiliate",
+              "Service"
+            ]
+          },
+          "id": 4,
+          "label": "Type",
+          "type": "autocomplete",
+          "data": [
+            "Patron",
+            "Affiliate",
+            "Service"
+          ],
+          "items": [
+            "Patron",
+            "Affiliate",
+            "Service"
+          ]
+        }
       }
     ],
     "name": "Supporters",

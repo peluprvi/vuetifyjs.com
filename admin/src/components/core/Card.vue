@@ -4,6 +4,7 @@
     v-bind="$attrs"
   >
     <v-toolbar
+      v-if="title || actions.length"
       :color="toolbarColor"
       :dark="!!toolbarColor"
       :dense="dense"

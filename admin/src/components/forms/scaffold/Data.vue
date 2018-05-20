@@ -6,25 +6,34 @@
           <v-flex xs12>
             <core-card
               v-for="(field, i) in item.data"
-              :actions="actions"
               :key="field.id"
-              class="mt-3"
               color="grey lighten-3"
               dense
               flat
+              invert
             >
-              <v-divider />
               <v-card-text>
                 <forms-field
+                  :items="item.data"
                   :value="field"
                   @input="val => update(val, i)"
                 />
               </v-card-text>
+              <v-card-actions class="grey lighten-2">
+                <v-spacer />
+                <v-btn
+                  color="error"
+                  depressed
+                  small
+                  @click="remove(i)"
+                >Remove</v-btn>
+              </v-card-actions>
             </core-card>
           </v-flex>
         </v-layout>
       </v-container>
     </v-form>
+
     <v-card-text class="text-xs-center">
       <core-button
         @click="add"
@@ -32,7 +41,9 @@
         Add
       </core-button>
     </v-card-text>
+
     <v-divider />
+
     <v-card-actions>
       <v-spacer />
       <core-button @click="action">
@@ -51,13 +62,7 @@
 
   export default {
     data: vm => ({
-      actions: [
-        {
-          icon: 'mdi-delete',
-          handler: vm.remove
-        }
-      ],
-      nonce: 1
+      nonce: 1,
     }),
 
     computed: {
