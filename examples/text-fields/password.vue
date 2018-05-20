@@ -7,9 +7,9 @@
       <v-flex xs8>
         <v-text-field
           v-model="password"
-          :append-icon="e1 ? 'visibility' : 'visibility_off'"
-          :append-icon-cb="() => (e1 = !e1)"
-          :type="e1 ? 'password' : 'text'"
+          :append-icon="show1 ? 'visibility_off' : 'visibility'"
+          :append-icon-cb="() => (show1 = !show1)"
+          :type="show1 ? 'text' : 'password'"
           name="input-10-1"
           label="Enter your password"
           hint="At least 8 characters"
@@ -24,9 +24,9 @@
       </v-flex>
       <v-flex xs8>
         <v-text-field
-          :append-icon="e2 ? 'visibility' : 'visibility_off'"
-          :append-icon-cb="() => (e2 = !e2)"
-          :type="e2 ? 'password' : 'text'"
+          :append-icon="show2 ? 'visibility_off' : 'visibility'"
+          :append-icon-cb="() => (show2 = !show2)"
+          :type="show2 ? 'text' : 'password'"
           name="input-10-2"
           label="Enter your password"
           hint="At least 8 characters"
@@ -42,9 +42,9 @@
       </v-flex>
       <v-flex xs8>
         <v-text-field
-          :append-icon="e3 ? 'visibility' : 'visibility_off'"
-          :append-icon-cb="() => (e3 = !e3)"
-          :type="e3 ? 'password' : 'text'"
+          :append-icon="show3 ? 'visibility_off' : 'visibility'"
+          :append-icon-cb="() => (show3 = !show3)"
+          :type="show3 ? 'text' : 'password'"
           name="input-10-2"
           label="Enter your password"
           hint="At least 8 characters"
@@ -60,10 +60,10 @@
       </v-flex>
       <v-flex xs8>
         <v-text-field
-          :append-icon="e4 ? 'visibility' : 'visibility_off'"
-          :append-icon-cb="() => (e4 = !e4)"
+          :append-icon="show4 ? 'visibility_off' : 'visibility'"
+          :append-icon-cb="() => (show4 = !show4)"
           :rules="[() => ('The email and password you entered don\'t match')]"
-          :type="e4 ? 'password' : 'text'"
+          :type="show4 ? 'text' : 'password'"
           name="input-10-2"
           label="Enter your password"
           hint="At least 8 characters"
@@ -80,10 +80,10 @@
   export default {
     data () {
       return {
-        e1: false,
-        e2: false,
-        e3: false,
-        e4: false,
+        show1: false,
+        show2: true,
+        show3: false,
+        show4: false,
         password: 'Password'
       }
     }
