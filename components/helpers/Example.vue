@@ -270,7 +270,7 @@
       text-align: justify
 
     aside.v-navigation-drawer,
-    .overlay
+    .v-overlay
       z-index: 1
 
     nav.v-toolbar
