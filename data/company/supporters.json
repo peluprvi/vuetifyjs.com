@@ -1,139 +1,139 @@
 [
   {
-    "Type": "Patron",
-    "Name": "LMAX Exchange",
-    "URL": "https://careers.lmax.com/?utm_source=vuetify&utm_medium=logo-link&utm_campaign=lmax-careers",
-    "Logo": "backers/lmax-exchange.png",
-    "Pledge": "Diamond ($500)",
-    "Size": "70"
+    "type": "Patron",
+    "name": "LMAX Exchange",
+    "href": "https://careers.lmax.com/?utm_source=vuetify&utm_medium=logo-link&utm_campaign=lmax-careers",
+    "logo": "backers/lmax-exchange.png",
+    "pledge": "Diamond ($500)",
+    "size": "70"
   },
   {
-    "Name": "Intygrate",
-    "Logo": "backers/intygrate.png",
-    "URL": "http://intygrate.com/",
-    "Type": "Patron",
-    "Pledge": "Diamond ($500)",
-    "Size": "70"
+    "name": "Intygrate",
+    "logo": "backers/intygrate.png",
+    "href": "http://intygrate.com/",
+    "type": "Patron",
+    "pledge": "Diamond ($500)",
+    "size": "70"
   },
   {
-    "Name": "ResaleAI",
-    "Logo": "backers/resaleai_logo_blue.svg",
-    "URL": "http://resaleai.com/",
-    "Type": "Patron",
-    "Pledge": "Diamond ($500)",
-    "Size": "70"
+    "name": "ResaleAI",
+    "logo": "backers/resaleai_logo_blue.svg",
+    "href": "http://resaleai.com/",
+    "type": "Patron",
+    "pledge": "Diamond ($500)",
+    "size": "70"
   },
   {
-    "Name": "Eikos Partners",
-    "Logo": "backers/eikos-partners.webp",
-    "URL": "http://www.eikospartners.com/",
-    "Type": "Patron",
-    "Pledge": "Palladium ($250)",
-    "Size": "50"
+    "name": "Eikos Partners",
+    "logo": "backers/eikos-partners.webp",
+    "href": "http://www.eikospartners.com/",
+    "type": "Patron",
+    "pledge": "Palladium ($250)",
+    "size": "50"
   },
   {
-    "Name": "rateGenius",
-    "URL": "https://application.rategenius.com/",
-    "Logo": "backers/rate-genius.png",
-    "Type": "Patron",
-    "Pledge": "Palladium ($250)",
-    "Size": "50"
+    "name": "rateGenius",
+    "href": "https://application.rategenius.com/",
+    "logo": "backers/rate-genius.png",
+    "type": "Patron",
+    "pledge": "Palladium ($250)",
+    "size": "50"
   },
   {
-    "Name": "quitt.ch",
-    "URL": "https://quitt.ch",
-    "Logo": "backers/quitt.png",
-    "Type": "Patron",
-    "Pledge": "Palladium ($250)",
-    "Size": "50"
+    "name": "quitt.ch",
+    "href": "https://quitt.ch",
+    "logo": "backers/quitt.png",
+    "type": "Patron",
+    "pledge": "Palladium ($250)",
+    "size": "50"
   },
   {
-    "Name": "Deister Software",
-    "URL": "http://www.deister.es/",
-    "Logo": "backers/deister-logo-light.png",
-    "Type": "Patron",
-    "Pledge": "Gold ($50)"
+    "name": "Deister Software",
+    "href": "http://www.deister.es/",
+    "logo": "backers/deister-logo-light.png",
+    "type": "Patron",
+    "pledge": "Gold ($50)"
   },
   {
-    "Name": "Cocoatech",
-    "Type": "Patron",
-    "Pledge": "Gold ($50)",
-    "URL": "https://cocoatech.com/",
-    "Logo": "backers/cocoatechlogo.png"
+    "name": "Cocoatech",
+    "type": "Patron",
+    "pledge": "Gold ($50)",
+    "href": "https://cocoatech.com/",
+    "logo": "backers/cocoatechlogo.png"
   },
   {
-    "Name": "Cycloid",
-    "URL": "https://www.cycloid.io/",
-    "Logo": "backers/cycloid.png",
-    "Type": "Patron",
-    "Pledge": "Gold ($50)"
+    "name": "Cycloid",
+    "href": "https://www.cycloid.io/",
+    "logo": "backers/cycloid.png",
+    "type": "Patron",
+    "pledge": "Gold ($50)"
   },
   {
-    "Name": "Live Casino",
-    "URL": "https://livecasino.com/",
-    "Logo": "backers/casino.webp",
-    "Type": "Patron",
-    "Pledge": "Gold ($50)",
-    "Dark": true
+    "name": "Live Casino",
+    "href": "https://livecasino.com/",
+    "logo": "backers/casino.webp",
+    "type": "Patron",
+    "pledge": "Gold ($50)",
+    "dark": true
   },
   {
-    "Name": "Nate Controls",
-    "URL": "http://www.natecontrols.com/",
-    "Logo": "backers/n8controls.png",
-    "Type": "Patron",
-    "Pledge": "Gold ($50)"
+    "name": "Nate Controls",
+    "href": "http://www.natecontrols.com/",
+    "logo": "backers/n8controls.png",
+    "type": "Patron",
+    "pledge": "Gold ($50)"
   },
   {
-    "Name": "Zweidenker",
-    "URL": "http://zweidenker.de/",
-    "Logo": "backers/zweidenker-logo-grey.svg",
-    "Type": "Patron",
-    "Pledge": "Gold ($50)"
+    "name": "Zweidenker",
+    "href": "http://zweidenker.de/",
+    "logo": "backers/zweidenker-logo-grey.svg",
+    "type": "Patron",
+    "pledge": "Gold ($50)"
   },
   {
-    "Name": "Identity Panel",
-    "URL": "https://support.identitypanel.com/",
-    "Logo": "backers/identity-panel.png",
-    "Type": "Patron",
-    "Pledge": "Gold ($50)",
-    "Size": "100"
+    "name": "Identity Panel",
+    "href": "https://support.identitypanel.com/",
+    "logo": "backers/identity-panel.png",
+    "type": "Patron",
+    "pledge": "Gold ($50)",
+    "size": "100"
   },
   {
-    "Name": "Hohenstein",
-    "URL": "https://www.hohenstein.de/en/home/home.xhtml",
-    "Logo": "backers/hohenstein.svg",
-    "Type": "Patron",
-    "Pledge": "Gold ($50)"
+    "name": "Hohenstein",
+    "href": "https://www.hohenstein.de/en/home/home.xhtml",
+    "logo": "backers/hohenstein.svg",
+    "type": "Patron",
+    "pledge": "Gold ($50)"
   },
   {
-    "Name": "P2L Technologies",
-    "URL": "https://p2l.tech/",
-    "Logo": "backers/p2l.png",
-    "Type": "Patron",
-    "Pledge": "Gold ($50)"
+    "name": "P2L Technologies",
+    "href": "https://p2l.tech/",
+    "logo": "backers/p2l.png",
+    "type": "Patron",
+    "pledge": "Gold ($50)"
   },
   {
-    "Name": "VueJobs",
-    "Logo": "affiliates/vuejobs-logo.svg",
-    "URL": "https://vuejobs.com/?utm_source=vuejobs&utm_medium=affiliates&utm_campaign=linking",
-    "Type": "Affiliate"
+    "name": "VueJobs",
+    "logo": "affiliates/vuejobs-logo.svg",
+    "href": "https://vuejobs.com/?utm_source=vuejobs&utm_medium=affiliates&utm_campaign=linking",
+    "type": "Affiliate"
   },
   {
-    "Name": "Made with Vue.js",
-    "URL": "https://madewithvuejs.com",
-    "Logo": "affiliates/madewithvuejs.png",
-    "Type": "Affiliate"
+    "name": "Made with Vue.js",
+    "href": "https://madewithvuejs.com",
+    "logo": "affiliates/madewithvuejs.png",
+    "type": "Affiliate"
   },
   {
-    "Name": "Vue.js Radar",
-    "URL": "https://vuejsradar.com",
-    "Logo": "affiliates/vueradar2.png",
-    "Type": "Affiliate"
+    "name": "Vue.js Radar",
+    "href": "https://vuejsradar.com",
+    "logo": "affiliates/vueradar2.png",
+    "type": "Affiliate"
   },
   {
-    "Name": "Cloudflare",
-    "URL": "https://www.cloudflare.com/",
-    "Logo": "cloudflare.svg",
-    "Type": "Service Sponsor"
+    "name": "Cloudflare",
+    "href": "https://www.cloudflare.com/",
+    "logo": "cloudflare.svg",
+    "type": "Service Sponsor"
   }
 ]

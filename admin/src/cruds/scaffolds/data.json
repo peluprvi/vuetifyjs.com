@@ -91,5 +91,44 @@
     "name": "company/supporters",
     "scaffold": "Data",
     "target": "Docs"
+  },
+  {
+    "data": [
+      {
+        "attrs": {},
+        "conditional": false,
+        "conditions": {},
+        "id": 6,
+        "label": "Page",
+        "type": "text"
+      },
+      {
+        "attrs": {},
+        "conditional": false,
+        "conditions": {},
+        "id": 7,
+        "label": "Route",
+        "type": "text"
+      },
+      {
+        "attrs": {},
+        "conditional": false,
+        "conditions": {},
+        "id": 5,
+        "label": "Props",
+        "type": "switch"
+      },
+      {
+        "attrs": {},
+        "conditional": false,
+        "conditions": {},
+        "id": 6,
+        "label": "Fullscreen",
+        "type": "switch"
+      }
+    ],
+    "name": "routes",
+    "scaffold": "Data",
+    "target": "Docs"
   }
 ]

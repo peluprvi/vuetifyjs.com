@@ -18,14 +18,14 @@
             a(
               :href="`${backer.href}?ref=vuetifyjs.com`"
               target="_blank"
-              :title="backer.Name"
+              :title="backer.name"
               v-for="backer in supporters.diamond"
-              v-bind:key="backer.Name"
-              @click="$ga.event('backers page click', 'click', backer.Name)"
+              v-bind:key="backer.name"
+              @click="$ga.event('backers page click', 'click', backer.name)"
             ).text-xs-center.ma-3
               img(
-                :src="`/static/doc-images/${backer.Logo}`"
-                :alt="backer.Name"
+                :src="`/static/doc-images/${backer.logo}`"
+                :alt="backer.name"
               ).supporter
 
         v-list(dense).transparent
@@ -36,16 +36,16 @@
           v-layout(row wrap justify-start align-center)
             a(
               target="_blank"
-              :class="[backer.Dark ? 'black' : '']"
+              :class="[backer.dark ? 'black' : '']"
               :href="`${backer.href}?ref=vuetifyjs.com`"
-              :title="backer.Name"
+              :title="backer.name"
               v-for="backer in supporters.palladium"
-              v-bind:key="backer.Name"
-              @click="$ga.event('backers page click', 'click', backer.Name)"
+              v-bind:key="backer.name"
+              @click="$ga.event('backers page click', 'click', backer.name)"
             ).text-xs-center.ma-3
               img(
-                :src="`/static/doc-images/${backer.Logo}`"
-                :alt="backer.Name"
+                :src="`/static/doc-images/${backer.logo}`"
+                :alt="backer.name"
               ).supporter
 
         v-list(dense).transparent
@@ -61,16 +61,16 @@
           )
             a(
             target="_blank"
-              :class="[backer.Dark ? 'black' : '']"
+              :class="[backer.dark ? 'black' : '']"
               :href="`${backer.href}?ref=vuetifyjs.com`"
-              :title="backer.Name"
+              :title="backer.name"
               v-for="backer in supporters.gold"
-              v-bind:key="backer.Name"
-              @click="$ga.event('backers page click', 'click', backer.Name)"
+              v-bind:key="backer.name"
+              @click="$ga.event('backers page click', 'click', backer.name)"
             ).text-xs-center.ma-3
               img(
-                :src="`/static/doc-images/${backer.Logo}`"
-                :alt="backer.Name"
+                :src="`/static/doc-images/${backer.logo}`"
+                :alt="backer.name"
                 :style="`max-width: ${backer.Size || 150}px;`"
               ).supporter
         section-head(value="GettingStarted.SponsorsAndBackers.affiliatesHeader")
@@ -84,16 +84,16 @@
           )
             a(
               target="_blank"
-              :class="[affiliate.Dark ? 'black' : '']"
+              :class="[affiliate.dark ? 'black' : '']"
               :href="`${affiliate.href}${affiliate.noref ? '' : '?ref=vuetifyjs.com'}`"
-              :title="affiliate.Name"
+              :title="affiliate.name"
               v-for="affiliate in supporters.affiliate"
-              v-bind:key="affiliate.Name"
-              @click="$ga.event('backers page click', 'click', affiliate.Name)"
+              v-bind:key="affiliate.name"
+              @click="$ga.event('backers page click', 'click', affiliate.name)"
             ).text-xs-center.mx-3
               img(
-                :src="`/static/doc-images/${affiliate.Logo}`"
-                :alt="affiliate.Name"
+                :src="`/static/doc-images/${affiliate.logo}`"
+                :alt="affiliate.name"
                 style="max-width: 150px;"
               ).supporter
         section-head(value="GettingStarted.SponsorsAndBackers.sponsorsHeader")
@@ -108,14 +108,14 @@
             a(
               :href="`${sponsor.href}?ref=vuetifyjs.com`"
               target="_blank"
-              :title="sponsor.Name"
+              :title="sponsor.name"
               v-for="sponsor in supporters.service"
-              v-bind:key="sponsor.Name"
-              @click="$ga.event('backers page click', 'click', sponsor.Name)"
+              v-bind:key="sponsor.name"
+              @click="$ga.event('backers page click', 'click', sponsor.name)"
             ).text-xs-center.mx-3
               img(
-                :src="`/static/doc-images/${sponsor.Logo}`"
-                alt="sponsor.Name"
+                :src="`/static/doc-images/${sponsor.logo}`"
+                alt="sponsor.name"
                 style="max-width: 150px;"
               ).supporter
         div.text-xs-center

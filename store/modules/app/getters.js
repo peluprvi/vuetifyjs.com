@@ -11,8 +11,8 @@ export default {
     const matches = (str, comp) => str.toLowerCase().indexOf(comp.toLowerCase()) > -1
 
     for (const supporter of supporters) {
-      const pledge = supporter.Pledge
-      const type = supporter.Type
+      const pledge = supporter.pledge
+      const type = supporter.type
 
       if (pledge) {
         if (matches(pledge, 'diamond')) diamond.push(supporter)

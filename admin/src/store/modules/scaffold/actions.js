@@ -39,5 +39,20 @@ export default {
       .then(res => {
         store.dispatch('getItems')
       })
+  },
+  updateItem: async store => {
+    const items = store.state.items.slice()
+    const index = items.findIndex(i => {
+      return i.id === store.state.item.id
+    })
+
+    // Should never get here but hey
+    if (index < 0) return store.dispatch('saveItem')
+
+    items.splice(index, 1, store.state.item)
+
+    store.commit('SET_ITEMS', items)
+
+    return store.dispatch('setItems')
   }
 }

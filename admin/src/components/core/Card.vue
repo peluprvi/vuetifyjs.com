@@ -1,6 +1,5 @@
 <template>
   <v-card
-    class="mb-3"
     v-bind="$attrs"
   >
     <v-toolbar

@@ -15,7 +15,7 @@
               :is="types[field.type]"
               :key="i"
               :label="field.label"
-              v-model="internalValue[field.label]"
+              v-model="internalValue[camelCase(field.label)]"
             />
           </v-flex>
         </v-layout>
@@ -89,6 +89,7 @@
 
         this.setIsEditing(true)
       },
+      camelCase,
       getModel (field) {
         return camelCase(field.label)
       },

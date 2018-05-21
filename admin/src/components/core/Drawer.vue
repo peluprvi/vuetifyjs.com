@@ -55,7 +55,7 @@
   export default {
     data: () => ({
       icons: {
-        '/home': 'mdi-speedometer',
+        '/pages': 'mdi-book-open-page-variant',
         '/scaffold': 'mdi-library-plus',
         '/data': 'mdi-database-plus'
       },

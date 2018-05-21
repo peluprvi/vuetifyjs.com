@@ -19,16 +19,16 @@
                   target="_blank"
                   rel="noopener"
                   class="ma-3"
-                  :href="`${supporter.URL}`"
-                  :title="supporter.Name"
+                  :href="`${supporter.href}`"
+                  :title="supporter.name"
                   :key="i"
-                  @click="$ga.event('home sponsor click', 'click', supporter.Name)"
+                  @click="$ga.event('home sponsor click', 'click', supporter.name)"
                   v-else
                 )
                   img(
-                    :src="`/static/doc-images/${supporter.Logo}`"
-                    :height="supporter.Size || 'auto'"
-                    :style="{ maxHeight: `${supporter.Size}px` }"
+                    :src="`/static/doc-images/${supporter.logo}`"
+                    :height="supporter.size || 'auto'"
+                    :style="{ maxHeight: `${supporter.size}px` }"
                   )
               v-flex(xs12).text-xs-center.mt-3
                 translatable(i18n="Vuetify.Home.becomeSponsor")

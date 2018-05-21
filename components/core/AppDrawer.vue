@@ -8,16 +8,16 @@
     div.text-xs-center.pt-3
       div(
         v-for="diamond in diamonds"
-        :key="diamond.Name"
+        :key="diamond.name"
       )
         a(
-          :href="diamond.URL"
+          :href="diamond.href"
           target="_blank"
           rel="noopener"
-          @click="$ga.event('drawer sponsor click', 'click', diamond.Name)"
+          @click="$ga.event('drawer sponsor click', 'click', diamond.name)"
         )
           img.diamond-sponsor(
-            :src="`/static/doc-images/${diamond.Logo}`"
+            :src="`/static/doc-images/${diamond.logo}`"
             :alt="diamond.Name"
           )
       patreon-btn

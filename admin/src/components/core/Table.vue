@@ -1,5 +1,8 @@
 <template>
-  <v-card>
+  <core-card
+    :actions="actions"
+    title="List"
+  >
     <v-data-table
       :headers="headers"
       :items="items"
@@ -31,7 +34,7 @@
         </td>
       </template>
     </v-data-table>
-  </v-card>
+  </core-card>
 </template>
 
 <script>
@@ -50,6 +53,18 @@
     },
 
     computed: {
+      actions () {
+        const actions = []
+
+        if (this.$listeners.create) {
+          actions.push({
+            icon: 'mdi-plus-circle',
+            handler: () => this.$emit('create')
+          })
+        }
+
+        return actions
+      },
       headers () {
         const headers = this.fields.map(field => ({
           text: capitalize(field),

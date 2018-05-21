@@ -74,10 +74,10 @@
     },
 
     methods: {
-      ...mapActions('scaffold', ['saveItem', 'setItems']),
+      ...mapActions('scaffold', ['saveItem', 'updateItem']),
       action () {
         this.isEditing
-          ? this.setItems()
+          ? this.updateItem()
           : this.saveItem()
       },
       add () {

@@ -15,9 +15,11 @@ function route (path, name) {
 
 Vue.use(Router)
 
+// TODO: Make this dynamic as well
 export default new Router({
   routes: [
     route('/data', 'Data'),
+    route('/pages', 'Pages'),
     route('/scaffold', 'Scaffold')
   ]
 })
