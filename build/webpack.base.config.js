@@ -59,7 +59,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          isProd ? MiniCssExtractPlugin.loader : 'style-loader',
           'css-loader'
         ]
       },
@@ -92,12 +92,15 @@ module.exports = {
   plugins
 }
 
-plugins.push(
+isProd && plugins.push(
   new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
     // both options are optional
     filename: '[name].css',
     chunkFilename: '[id].css'
-  }),
+  })
+)
+
+plugins.push(
   new FriendlyErrorsPlugin()
 )

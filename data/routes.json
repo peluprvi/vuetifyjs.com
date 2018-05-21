@@ -128,7 +128,7 @@
   },
   {
     "page": "examples/Example",
-    "route": ":example+",
+    "route": "examples/:example+",
     "fullscreen": true
   },
   {
