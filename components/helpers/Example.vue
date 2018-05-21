@@ -12,6 +12,7 @@
         span(v-text="$t(header)")
 
     //- Description
+    // TODO: make independant of english locale
     translatable(v-if="$te(desc, 'en')" :i18n="desc")
       markdown(:source="$t(desc)")
 
@@ -182,10 +183,6 @@
         /* webpackMode: "lazy-once" */
         `!raw-loader!../../examples/${this.file}.vue`
         ).then(comp => this.boot(comp.default))
-    },
-
-    beforeDestroy () {
-      this.instance && this.instance.$destroy()
     },
 
     methods: {

@@ -5,9 +5,10 @@
 </template>
 
 <script>
-  import { getObjectValueByPath } from 'vuetify/es5/util/helpers'
   import { camel, kebab } from '@/util/helpers'
   import NotFound from '@/pages/general/404Page'
+
+  const examples = require.context('@/examples', true, /\.vue$/).keys()
 
   export default {
     components: { NotFound },
@@ -29,6 +30,7 @@
 
     computed: {
       components () {
+        // TODO: move out of translation files
         const components = `${this.computedSection}.${this.computedComponent}.components`
 
         return this.$te(components)
@@ -52,10 +54,18 @@
         }
       },
       examples () {
-        const examples = `${this.computedSection}.${this.computedComponent}.examples`
-        const lang = this.$i18n.getLocaleMessage('en')
-
-        return getObjectValueByPath(lang, examples)
+        return examples.filter(path => (
+          path.startsWith('./' + this.component)
+        )).map(path => {
+          let name = path.split('/')[2]
+          name = name.substr(0, name.length - 4)
+          const namespace = `${this.computedSection}.${this.computedComponent}.examples.${name}`
+          return {
+            file: name,
+            desc: `${namespace}.desc`,
+            header: `${namespace}.header`
+          }
+        })
       },
       exists () {
         return (this.components || []).length > 0 ||
