@@ -90,7 +90,6 @@
   import { Swatches } from 'vue-color'
 
   export default {
-    name: 'ThemeGeneratorPage',
     components: {
       SwatchPicker: Swatches
     },
@@ -193,8 +192,7 @@
         return value
       },
       goBack () {
-        const language = this.$route.params.lang
-        this.$router.push({ path: `/${language}/style/theme` })
+        this.$router.push({ path: `style/theme` })
       }
     }
   }
