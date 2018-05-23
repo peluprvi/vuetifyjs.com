@@ -46,6 +46,10 @@
     "route": "layout/grid-lists"
   },
   {
+    "page": "layout/Breakpoints",
+    "route": "layout/breakpoints"
+  },
+  {
     "page": "layout/Spacing",
     "route": "layout/spacing"
   },
