@@ -43,8 +43,7 @@
                 <v-text-field
                   v-model="title"
                   label="Message"
-                  counter
-                  max="120"
+                  counter="120"
                   full-width
                   multi-line
                   single-line
