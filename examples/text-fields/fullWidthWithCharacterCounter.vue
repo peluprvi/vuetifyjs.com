@@ -43,7 +43,8 @@
                 <v-text-field
                   v-model="title"
                   label="Message"
-                  counter="120"
+                  :counter="120"
+                  :rules="[(v) => v.length <= 120 || 'Max 120 characters']"
                   full-width
                   multi-line
                   single-line
