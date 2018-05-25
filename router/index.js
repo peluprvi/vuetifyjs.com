@@ -33,23 +33,27 @@ export function createRouter (store) {
     }
   }
 
-  const routes = Routes.map(r => {
-    return route(
-      r.route,
-      r.page,
-      r.fullscreen,
-      r.props
+  const routes = [
+    // Temp until I figure out a way
+    // to implement this into admin
+    route(
+      'store/product/:id',
+      'store/Product',
+      null,
+      r => ({ id: r.params.id })
     )
-  })
+  ]
 
-  // Temp until I figure out a way
-  // to implement this into admin
-  routes.push(route(
-    'store/product/:id',
-    'store/Product',
-    null,
-    r => ({ id: r.params.id })
-  ))
+  routes.push(
+    ...Routes.map(r => {
+      return route(
+        r.route,
+        r.page,
+        r.fullscreen,
+        r.props
+      )
+    })
+  )
 
   const router = new Router({
     base: release ? `/releases/${release}` : __dirname,
