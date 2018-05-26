@@ -113,6 +113,12 @@
     "description": "Grid list component for Vuetify Framework",
     "keywords": "grid lists, grid"
   },
+  "layout/breakpoints": {
+    "h1": "Breakpoints",
+    "title": "Breakpoints",
+    "description": "Breakpoints for Vuetify Framework",
+    "keywords": "breakpoints"
+  },
   "layout/spacing": {
     "h1": "Spacing",
     "title": "Spacing helpers",

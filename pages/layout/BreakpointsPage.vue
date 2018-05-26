@@ -8,48 +8,48 @@
         section-head(value="Layout.Breakpoints.breakpointHeader")
         section-text(value="Layout.Breakpoints.breakpointText1")
         markup(lang="js")
-          |export default {
-          |    mounted () {
-          |      console.log(this.$vuetify.breakpoint)
-          |    },
-          |    computed: {
-          |      imageHeight () {
-          |        switch (this.$vuetify.breakpoint.name) {
-          |          case 'xs': return '220px'
-          |          case 'sm': return '400px'
-          |          case 'md': return '500px'
-          |          case 'lg': return '600px'
-          |          case 'xl': return '800px'
-          |        }
-          |      }
-          |    }
-          |}
+          | export default {
+          |   mounted () {
+          |     console.log(this.$vuetify.breakpoint)
+          |   },
+          |   computed: {
+          |     imageHeight () {
+          |       switch (this.$vuetify.breakpoint.name) {
+          |         case 'xs': return '220px'
+          |         case 'sm': return '400px'
+          |         case 'md': return '500px'
+          |         case 'lg': return '600px'
+          |         case 'xl': return '800px'
+          |       }
+          |     }
+          |   }
+          | }
         section-text(value="Layout.Breakpoints.breakpointText2")
         markup(lang="js")
-          |export default {
-          |    data: () => ({
-          |       isMobile: false
-          |    }),
-          |    mounted () {
-          |      this.onResize()
-          |      window.addEventListener('resize', this.onResize, { passive: true })
-          |    },
-          |    beforeDestroy () {
-          |      if (typeof window !== 'undefined') {
-          |         window.removeEventListener('resize', this.onResize, { passive: true })
-          |      }
-          |    },
-          |    methods: {
-          |      onResize () {
-          |         this.isMobile = window.innerWidth < 600
-          |      }
-          |    }
-          |}
+          | export default {
+          |   data: () => ({
+          |     isMobile: false
+          |   }),
+          |   mounted () {
+          |     this.onResize()
+          |     window.addEventListener('resize', this.onResize, { passive: true })
+          |   },
+          |   beforeDestroy () {
+          |     if (typeof window !== 'undefined') {
+          |       window.removeEventListener('resize', this.onResize, { passive: true })
+          |     }
+          |   },
+          |   methods: {
+          |     onResize () {
+          |       this.isMobile = window.innerWidth < 600
+          |     }
+          |   }
+          | }
         section-text(value="Layout.Breakpoints.breakpointText3")
         markup(lang="html")
-          |&lt;v-dialog :fullscreen="$vuetify.breakpoint.xsOnly"&gt;
-          |&nbsp;&nbsp;&nbsp;&nbsp;...
-          |&lt;/v-dialog&gt;
+          | &lt;v-dialog :fullscreen="$vuetify.breakpoint.xsOnly"&gt;
+          | &nbsp;&nbsp;&nbsp;&nbsp;...
+          | &lt;/v-dialog&gt;
         section-text(value="Layout.Breakpoints.breakpointText4")
         ul.browser-list.pb-2
           li <code>xs</code>, <code>xsOnly</code>, <code>xsAndUp</code>
