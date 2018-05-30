@@ -79,8 +79,7 @@ const config = merge(base, {
 
 isProd && config.plugins.push(
   new MiniCssExtractPlugin({
-    filename: '[name].css',
-    chunkFilename: '[id].css'
+    filename: 'common.[chunkhash].css'
   })
 )
 

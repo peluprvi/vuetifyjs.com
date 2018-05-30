@@ -8,6 +8,7 @@
 
 <script>
   import {
+    mapActions,
     mapMutations,
     mapState
   } from 'vuex'
@@ -25,10 +26,7 @@
     },
 
     computed: {
-      ...mapState({
-        buttons: state => state.translation.buttons,
-        isTranslating: state => state.translation.isTranslating
-      }),
+      ...mapState('translation', ['buttons', 'isTranslation']),
       status () {
         const state = this.buttons.find(b => b.key === this.i18n)
         return state ? state.status : 'unchanged'
@@ -55,14 +53,17 @@
       }
     },
     created () {
-      this.isTranslating && this.$store.commit('translation/REGISTER_BTN', { key: this.i18n, status: 'unchanged' })
+      this.isTranslating && this.registerBtn({ key: this.i18n, status: 'unchanged' })
     },
     beforeDestroy () {
-      this.isTranslating && this.$store.commit('translation/UNREGISTER_BTN', { key: this.i18n })
+      this.isTranslating && this.unregisterBtn({ key: this.i18n })
     },
     methods: {
+      ...mapActions('translation', ['status']),
       ...mapMutations('translation', {
-        translate: 'TRANSLATE'
+        translate: 'TRANSLATE',
+        registerBtn: 'REGISTER_BTN',
+        unregisterBtn: 'UNREGISTER_BTN'
       }),
       update (status) {
         if (!status) return this.status
@@ -74,12 +75,12 @@
 
         try {
           const msg = { locale: this.locale, key: this.i18n }
-          const response = await this.$store.dispatch('translation/status', msg)
+          const response = await this.status(msg)
 
           if (response.status === 200 && response.data.status) {
             let status = response.data.status
 
-            this.$store.commit('translation/UPDATE_BTN', { key: this.i18n, status })
+            this.updateBtn({ key: this.i18n, status })
           }
         } catch (err) {
           // console.log(err)
