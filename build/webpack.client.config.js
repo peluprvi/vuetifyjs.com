@@ -1,14 +1,44 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const base = require('./webpack.base.config')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const isProd = process.env.NODE_ENV === 'production'
 
+const cssLoaders = [
+  isProd ? MiniCssExtractPlugin.loader : {
+    loader: 'vue-style-loader',
+    options: { sourceMap: !isProd }
+  },
+  {
+    loader: 'css-loader',
+    options: { sourceMap: !isProd }
+  }
+]
+
 const config = merge(base, {
   entry: {
     app: './assets/entry-client.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: cssLoaders
+      },
+      {
+        test: /\.stylus$/,
+        use: [
+          ...cssLoaders,
+          {
+            loader: 'stylus-loader',
+            options: { sourceMap: false } // stylus-loader sucks at sourcemaps
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     // strip dev-only code in Vue source
@@ -46,5 +76,12 @@ const config = merge(base, {
     }
   }
 })
+
+isProd && config.plugins.push(
+  new MiniCssExtractPlugin({
+    filename: '[name].css',
+    chunkFilename: '[id].css'
+  })
+)
 
 module.exports = config

@@ -3,7 +3,6 @@ require('dotenv').config()
 const path = require('path')
 const webpack = require('webpack')
 const vueConfig = require('./vue-loader.config')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
@@ -20,7 +19,7 @@ let plugins = [
 module.exports = {
   devtool: isProd
     ? false
-    : 'eval-source-map',
+    : 'source-map',
   mode: isProd ? 'production' : 'development',
   output: {
     path: resolve('../public'),
@@ -41,7 +40,8 @@ module.exports = {
     noParse: /es6-promise\.js$/, // avoid webpack shimming process
     rules: [
       {
-        test: /\.js$/,
+        // Load sourcemaps from vuetify, both css + js
+        test: /\.(js|css)$/,
         loader: 'source-map-loader',
         include: path.resolve(__dirname, '../node_modules/vuetify'),
         enforce: 'pre'
@@ -55,21 +55,6 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.css$/,
-        use: [
-          isProd ? MiniCssExtractPlugin.loader : 'style-loader',
-          'css-loader'
-        ]
-      },
-      {
-        test: /\.stylus$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'stylus-loader'
-        ]
       },
       {
         test: /\.pug$/,
@@ -91,15 +76,6 @@ module.exports = {
   },
   plugins
 }
-
-isProd && plugins.push(
-  new MiniCssExtractPlugin({
-    // Options similar to the same options in webpackOptions.output
-    // both options are optional
-    filename: '[name].css',
-    chunkFilename: '[id].css'
-  })
-)
 
 plugins.push(
   new FriendlyErrorsPlugin()

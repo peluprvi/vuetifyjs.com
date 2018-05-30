@@ -117,47 +117,46 @@
               height="65px"
             )
 
-    section#footerv-jumbotron(
-      dark
-      gradient="to top, #1867c0, #5CBBF6"
-      height="auto"
-    )
-      v-container.mt-4.mb-3
-        v-layout(row wrap)
-          v-flex(xs12)
-            h5.mb-3
-              v-layout(align-center justify-center column)
-                img(
-                  src="/static/v-alt.svg"
-                  height="64px"
-                  width="64px"
-                ).mb-2
-                translatable(i18n="Vuetify.Home.callout")
-                  span(v-text="$t('Vuetify.Home.callout')").subheading
+    section#footer
+      v-jumbotron(
+        dark
+        gradient="to top, #1867c0, #5CBBF6"
+        height="auto"
+      )
+        v-container.mt-4.mb-3
+          v-layout(row wrap)
+            v-flex(xs12)
+              h5.mb-3
+                v-layout(align-center justify-center column)
+                  img(
+                    src="/static/v-alt.svg"
+                    height="64px"
+                    width="64px"
+                  ).mb-2
+                  translatable(i18n="Vuetify.Home.callout")
+                    span(v-text="$t('Vuetify.Home.callout')").subheading
 
-          v-layout(justify-center).mb-3
-            a(
-              v-for="(social, i) in socials"
-              :href="social.href"
-              :key="i"
-              :title="social.title"
-              target="_blank"
-              rel="noopener"
-            ).social.mx-3
-              v-icon(v-text="social.icon")
-
-          v-layout(column text-xs-center)
-            div Released under the&nbsp;
+            v-layout(justify-center).mb-3
               a(
-                href="https://opensource.org/licenses/MIT"
-                rel="noopener"
-                style="text-decoration: none;"
+                v-for="(social, i) in socials"
+                :href="social.href"
+                :key="i"
+                :title="social.title"
                 target="_blank"
-                v-text="$t('Vuetify.Home.mit')"
-              ).body-2.white--text
-            div Copyright &copy; 2016-{{ (new Date()).getFullYear() }} Vuetify, LLC
+                rel="noopener"
+              ).social.mx-3
+                v-icon(v-text="social.icon")
 
-  </div>
+            v-layout(column text-xs-center)
+              div Released under the&nbsp;
+                a(
+                  href="https://opensource.org/licenses/MIT"
+                  rel="noopener"
+                  style="text-decoration: none;"
+                  target="_blank"
+                  v-text="$t('Vuetify.Home.mit')"
+                ).body-2.white--text
+              div Copyright &copy; 2016-{{ (new Date()).getFullYear() }} Vuetify, LLC
 </template>
 
 <script>
