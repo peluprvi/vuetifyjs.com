@@ -26,7 +26,7 @@
     },
 
     computed: {
-      ...mapState('translation', ['buttons', 'isTranslation']),
+      ...mapState('translation', ['buttons', 'isTranslating']),
       status () {
         const state = this.buttons.find(b => b.key === this.i18n)
         return state ? state.status : 'unchanged'
@@ -59,23 +59,17 @@
       this.isTranslating && this.unregisterBtn({ key: this.i18n })
     },
     methods: {
-      ...mapActions('translation', ['status']),
       ...mapMutations('translation', {
         translate: 'TRANSLATE',
         registerBtn: 'REGISTER_BTN',
         unregisterBtn: 'UNREGISTER_BTN'
       }),
-      update (status) {
-        if (!status) return this.status
-
-        this.status = status
-      },
       async fetchStatus () {
         if (!this.isTranslating || this.i18n.length <= 0) return
 
         try {
           const msg = { locale: this.locale, key: this.i18n }
-          const response = await this.status(msg)
+          const response = await this.$store.dispatch('translation/status', msg)
 
           if (response.status === 200 && response.data.status) {
             let status = response.data.status
