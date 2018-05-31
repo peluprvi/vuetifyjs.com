@@ -8,7 +8,6 @@
 
 <script>
   import {
-    mapActions,
     mapMutations,
     mapState
   } from 'vuex'

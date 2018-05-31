@@ -43,14 +43,9 @@ const config = merge(base, {
   plugins: [
     // strip dev-only code in Vue source
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
       'process.env.VUE_ENV': '"client"'
     }),
-    new VueSSRClientPlugin(),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      openAnalyzer: false
-    })
+    new VueSSRClientPlugin()
   ],
   optimization: {
     minimize: isProd,
@@ -77,10 +72,19 @@ const config = merge(base, {
   }
 })
 
-isProd && config.plugins.push(
-  new MiniCssExtractPlugin({
-    filename: 'common.[chunkhash].css'
-  })
-)
+if (isProd) {
+  config.plugins.push(
+    new MiniCssExtractPlugin({
+      filename: 'common.[chunkhash].css'
+    })
+  )
+} else {
+  config.plugins.push(
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false
+    })
+  )
+}
 
 module.exports = config

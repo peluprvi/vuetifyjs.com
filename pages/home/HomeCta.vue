@@ -161,7 +161,7 @@
   .v-chip--tidelift
     background: #f6914d !important
     padding-right: 64px
-    position: absolute
+    position: absolute !important
     right: -24px
     text-decoration: none
     top: -20px
