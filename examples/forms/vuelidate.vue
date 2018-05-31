@@ -120,7 +120,7 @@
   }
 </codepen-resources>
 
-<codepen-additional lang="js">
+<codepen-additional>
   const { required, maxLength, email } = validators
   const validationMixin = vuelidate.validationMixin
 

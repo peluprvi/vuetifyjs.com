@@ -102,6 +102,6 @@
   }
 </codepen-resources>
 
-<codepen-additional lang="js">
+<codepen-additional>
   Vue.use(VeeValidate)
 </codepen-additional>

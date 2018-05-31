@@ -63,7 +63,7 @@
   }
 </script>
 
-<codepen-additional lang="js">
+<codepen-additional>
   const easings = {
     linear: '',
     easeInQuad: '',
