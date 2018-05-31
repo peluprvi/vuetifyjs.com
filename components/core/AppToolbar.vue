@@ -197,7 +197,7 @@
   // Utilities
   import { mapState, mapMutations } from 'vuex'
   import asyncData from '@/util/asyncData'
-  import languages from '@/i18n/languages.json'
+  import languages from '@/data/i18n/languages.json'
 
   export default {
     mixins: [asyncData],

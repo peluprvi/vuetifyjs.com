@@ -234,7 +234,7 @@ async function newTranslation (name, locale, country) {
 
   await fs.writeFile(path.join(localePath, 'index.js'), index)
 
-  const languages = await fs.readJson('./i18n/languages.json')
+  const languages = await fs.readJson('./data/i18n/languages.json')
 
   languages.push({
     name,
@@ -242,7 +242,7 @@ async function newTranslation (name, locale, country) {
     country
   })
 
-  await fs.writeJson('./i18n/languages.json', languages, { spaces: 2 })
+  await fs.writeJson('./data/i18n/languages.json', languages, { spaces: 2 })
 
   await updateIndexFiles(localePath, true)
 }

@@ -130,5 +130,36 @@
     "name": "routes",
     "scaffold": "Data",
     "target": "Docs"
+  },
+  {
+    "data": [
+      {
+        "attrs": {},
+        "conditional": false,
+        "conditions": {},
+        "id": 1,
+        "label": "Name",
+        "type": "text"
+      },
+      {
+        "attrs": {},
+        "conditional": false,
+        "conditions": {},
+        "id": 2,
+        "label": "Locale",
+        "type": "text"
+      },
+      {
+        "attrs": {},
+        "conditional": false,
+        "conditions": {},
+        "id": 3,
+        "label": "Country",
+        "type": "text"
+      }
+    ],
+    "name": "i18n/languages",
+    "scaffold": "Data",
+    "target": "Docs"
   }
 ]

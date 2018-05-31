@@ -17,7 +17,7 @@ const serverInfo =
   `express/${require('express/package.json').version} ` +
   `vue-server-renderer/${require('vue-server-renderer/package.json').version}`
 
-const availableLanguages = require('./i18n/languages').map(lang => lang.locale)
+const availableLanguages = require('./data/i18n/languages').map(lang => lang.locale)
 
 const app = express()
 

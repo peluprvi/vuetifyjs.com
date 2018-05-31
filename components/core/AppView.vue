@@ -4,7 +4,6 @@
       <router-view :key="$route.path" />
     </v-fade-transition>
     <translation-bar v-if="isTranslating" />
-    <create-translation-dialog v-if="isTranslating"/>
   </v-content>
 </template>
 

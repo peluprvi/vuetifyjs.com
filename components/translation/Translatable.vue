@@ -61,7 +61,8 @@
       ...mapMutations('translation', {
         translate: 'TRANSLATE',
         registerBtn: 'REGISTER_BTN',
-        unregisterBtn: 'UNREGISTER_BTN'
+        unregisterBtn: 'UNREGISTER_BTN',
+        updateBtn: 'UPDATE_BTN'
       }),
       async fetchStatus () {
         if (!this.isTranslating || this.i18n.length <= 0) return
