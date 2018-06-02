@@ -44,12 +44,16 @@
       <v-flex xs12>
         <v-subheader class="pl-0">Custom thumb label</v-subheader>
         <v-slider
-          v-model="slider"
+          v-model="selectedSeason"
           always-dirty
           thumb-label="always"
+          ticks="always"
+          thumb-size="64"
+          min="0"
+          max="3"
         >
           <template slot="thumb-label" slot-scope="props">
-            <span>{{ props.value }}%</span>
+            <span>{{ season(props.value) }}</span>
           </template>
         </v-slider>
       </v-flex>
@@ -77,7 +81,19 @@
   export default {
     data () {
       return {
-        slider: 45
+        slider: 45,
+        selectedSeason: 0
+      }
+    },
+
+    methods: {
+      season (val) {
+        switch (val) {
+          case 0: return 'Winter'
+          case 1: return 'Spring'
+          case 2: return 'Summer'
+          case 3: return 'Fall'
+        }
       }
     }
   }
