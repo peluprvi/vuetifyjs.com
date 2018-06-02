@@ -8,7 +8,7 @@
   import { camel, kebab } from '@/util/helpers'
   import NotFound from '@/pages/general/404Page'
 
-  const examples = require.context('@/examples', true, /\.vue$/).keys()
+  const examples = require('@/data/examples.json')
 
   export default {
     components: { NotFound },
@@ -54,14 +54,11 @@
         }
       },
       examples () {
-        return examples.filter(path => (
-          path.startsWith('./' + this.component)
-        )).map(path => {
-          let name = path.split('/')[2]
-          name = name.substr(0, name.length - 4)
-          const namespace = `${this.computedSection}.${this.computedComponent}.examples.${name}`
+        return examples[this.component].map(file => {
+          const namespace = `${this.computedSection}.${this.computedComponent}.examples.${file}`
+
           return {
-            file: name,
+            file,
             desc: `${namespace}.desc`,
             header: `${namespace}.header`
           }
