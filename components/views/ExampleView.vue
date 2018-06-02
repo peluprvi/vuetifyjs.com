@@ -174,15 +174,7 @@
         }
       },
       examples () {
-        const examples = this.data.examples || {}
-
-        return Object.keys(examples).map(key => {
-          return Object.assign(examples[key], {
-            file: key,
-            desc: `${this.namespace}.examples.${key}.desc`,
-            header: `${this.namespace}.examples.${key}.header`
-          })
-        })
+        return this.data.examples || []
       },
       folder () {
         return this.data.folder || this.$route.params.component
@@ -205,7 +197,7 @@
         return 'Components'
       },
       usage () {
-        return this.examples.slice(0, 1).shift()
+        return this.examples.slice(0, 1)[0]
       }
     },
 
