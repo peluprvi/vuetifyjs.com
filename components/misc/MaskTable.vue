@@ -14,7 +14,7 @@
             :key="i"
           )
             template(v-if="row.header")
-              td
+              td(colspan="2")
                 strong {{ row.text }}
             template(v-else)
               td(v-for="(mask, i) in row" :key="i") {{ mask }}
