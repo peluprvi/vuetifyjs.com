@@ -132,6 +132,10 @@
     "spec": false
   },
   "data-tables": {
+    "components": [
+      "v-data-table",
+      "v-edit-dialog"
+    ],
     "examples": [
       "standard",
       "noData",
@@ -150,7 +154,8 @@
       "headerless",
       "editdialog",
       "crud"
-    ]
+    ],
+    "spec": false
   },
   "date-pickers": {
     "examples": [
