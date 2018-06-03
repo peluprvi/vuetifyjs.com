@@ -48,10 +48,15 @@
     "spec": false
   },
   "breadcrumbs": {
+    "components": [
+      "v-breadcrumbs",
+      "v-breadcrumbs-item"
+    ],
     "examples": [
       "textDividers",
       "iconDividers"
-    ]
+    ],
+    "spec": false
   },
   "buttons": {
     "examples": [
