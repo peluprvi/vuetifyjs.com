@@ -8,7 +8,7 @@
         style="text-decoration: none;"
       ).mr-2
         v-icon(color="accent") mdi-pound
-      translatable(:i18n="header")
+      translatable(:i18n="header").d-inline-flex.align-center
         span(v-text="$t(header)")
         v-chip(
           v-if="newIn"

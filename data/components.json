@@ -255,13 +255,19 @@
     ]
   },
   "icons": {
+    "components": ["v-icon"],
     "examples": [
       "standard",
       "fontAwesome",
       "mdi",
       "color",
-      "buttons"
-    ]
+      "buttons",
+      {
+        "file": "clickable",
+        "newIn": "1.1"
+      }
+    ],
+    "spec": false
   },
   "inputs": {
     "examples": ["usage"]
