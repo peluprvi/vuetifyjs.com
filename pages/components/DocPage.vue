@@ -62,17 +62,26 @@
         }
       },
       examples () {
-        const examples = this.components[this.component]
+        const component = this.components[this.component]
 
-        if (!examples) return []
+        if (!component) return []
 
-        return examples.examples.map(file => {
+        return component.examples.map(example => {
+          let file = example
+          let newIn = false
+
+          if (example === Object(example)) {
+            file = example.file
+            newIn = example.newIn
+          }
+
           const namespace = `${this.computedSection}.${this.computedComponent}.examples.${file}`
 
           return {
             file,
             desc: `${namespace}.desc`,
-            header: `${namespace}.header`
+            header: `${namespace}.header`,
+            newIn
           }
         })
       },

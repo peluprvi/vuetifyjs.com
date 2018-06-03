@@ -79,7 +79,7 @@
         template(v-for="(example, i) in examples.slice(1)")
           example(
             :header="example.header"
-            :new-in="example.new"
+            :new-in="example.newIn"
             :file="`${folder}/${example.file}`"
             :inverted="example.inverted"
             :has-inverted="!example.uninverted"

@@ -1,7 +1,6 @@
 {
   "header": "Button",
   "headerText": "The `v-btn` component replaces the standard html button with a material design theme and a multitude of options. Any color helper class can be used to alter the background or text color.",
-  "components": ["v-btn"],
   "examples": {
     "usage": {
       "header": "Usage",
@@ -55,6 +54,10 @@
     "block": {
       "header": "Block",
       "desc": "Block buttons extend the full available width."
+    },
+    "appBar": {
+      "header": "In toolbar",
+      "desc": "Easily integrate customized button solutions with a `v-toolbar`"
     }
   },
   "props": {

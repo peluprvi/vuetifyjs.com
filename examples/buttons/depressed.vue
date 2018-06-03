@@ -14,6 +14,7 @@
         <v-btn depressed small disabled>Disabled</v-btn>
       </div>
     </v-flex>
+
     <v-flex xs12 sm4 text-xs-center>
       <div>
         <v-btn depressed>Normal</v-btn>
@@ -28,6 +29,7 @@
         <v-btn depressed disabled>Disabled</v-btn>
       </div>
     </v-flex>
+
     <v-flex xs12 sm4 text-xs-center>
       <div>
         <v-btn depressed large>Normal</v-btn>

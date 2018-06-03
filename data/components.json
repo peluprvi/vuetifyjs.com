@@ -59,6 +59,7 @@
     "spec": false
   },
   "buttons": {
+    "components": ["v-btn"],
     "examples": [
       "usage",
       "flat",
@@ -72,8 +73,13 @@
       "sizing",
       "outline",
       "round",
-      "block"
-    ]
+      "block",
+      {
+        "file": "appBar" ,
+        "newIn": "1.1"
+      }
+    ],
+    "spec": false
   },
   "cards": {
     "examples": [

@@ -10,6 +10,15 @@
         v-icon(color="accent") mdi-pound
       translatable(:i18n="header")
         span(v-text="$t(header)")
+        v-chip(
+          v-if="newIn"
+          class="white--text font-weight-regular"
+          color="red lighten-2"
+          small
+        )
+          span(v-text="$t('Generic.Common.newIn')")
+          |&nbsp;
+          span(v-text="`v${newIn}`")
 
     //- Description
     // TODO: make independant of english locale
@@ -115,8 +124,8 @@
         default: false
       },
       newIn: {
-        type: String,
-        default: ''
+        type: [Boolean, String],
+        default: false
       },
       id: {
         type: String,
