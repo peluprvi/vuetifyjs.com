@@ -1,16 +1,37 @@
 <template>
   <v-card height="200px" flat>
-    <div class="headline text-xs-center pa-5">Active: {{ e1 }}</div>
-    <v-bottom-nav :value="true" :active.sync="e1" absolute color="transparent">
-      <v-btn flat color="teal" value="recent">
+    <div class="headline text-xs-center pa-5">
+      Active: {{ bottomNav }}
+    </div>
+    <v-bottom-nav
+      :active.sync="bottomNav"
+      :value="true"
+      absolute
+      color="transparent"
+    >
+      <v-btn
+        color="teal"
+        flat
+        value="recent"
+      >
         <span>Recent</span>
         <v-icon>history</v-icon>
       </v-btn>
-      <v-btn flat color="teal" value="favorites">
+
+      <v-btn
+        color="teal"
+        flat
+        value="favorites"
+      >
         <span>Favorites</span>
         <v-icon>favorite</v-icon>
       </v-btn>
-      <v-btn flat color="teal" value="nearby">
+
+      <v-btn
+        color="teal"
+        flat
+        value="nearby"
+      >
         <span>Nearby</span>
         <v-icon>place</v-icon>
       </v-btn>
@@ -22,7 +43,7 @@
   export default {
     data () {
       return {
-        e1: 'recent'
+        bottomNav: 'recent'
       }
     }
   }

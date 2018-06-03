@@ -1,9 +1,9 @@
 <template>
   <v-card height="200px">
     <v-bottom-nav
-      :value="true"
-      :active.sync="e2"
+      :active.sync="bottomNav"
       :color="color"
+      :value="true"
       absolute
       shift
     >
@@ -11,14 +11,17 @@
         <span>Video</span>
         <v-icon>ondemand_video</v-icon>
       </v-btn>
+
       <v-btn dark>
         <span>Music</span>
         <v-icon>music_note</v-icon>
       </v-btn>
+
       <v-btn dark>
         <span>Book</span>
         <v-icon>book</v-icon>
       </v-btn>
+
       <v-btn dark>
         <span>Image</span>
         <v-icon>image</v-icon>
@@ -31,13 +34,13 @@
   export default {
     data () {
       return {
-        e2: 3
+        bottomNav: 3
       }
     },
 
     computed: {
       color () {
-        switch (this.e2) {
+        switch (this.bottomNav) {
           case 0: return 'blue-grey'
           case 1: return 'teal'
           case 2: return 'brown'

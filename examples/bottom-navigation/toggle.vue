@@ -1,17 +1,34 @@
 <template>
-  <v-card height="200px" style="overflow: hidden;">
+  <v-card
+    class="hide-overflow"
+    height="200px"
+  >
     <v-card-text class="text-xs-center">
-      <v-btn flat color="primary" @click.native="e31 = !e31">Toggle Nav</v-btn>
+      <v-btn
+        flat
+        color="primary"
+        @click="showNav = !showNav"
+      >
+        Toggle Nav
+      </v-btn>
     </v-card-text>
-    <v-bottom-nav :value="e31" :active.sync="e3" absolute color="transparent">
+
+    <v-bottom-nav
+      :active.sync="activeBtn"
+      :value="showNav"
+      absolute
+      color="transparent"
+    >
       <v-btn flat color="teal">
         <span>Recents</span>
         <v-icon>history</v-icon>
       </v-btn>
+
       <v-btn flat color="teal">
         <span>Favorites</span>
         <v-icon>favorite</v-icon>
       </v-btn>
+
       <v-btn flat color="teal">
         <span>Nearby</span>
         <v-icon>place</v-icon>
@@ -24,8 +41,8 @@
   export default {
     data () {
       return {
-        e3: 1,
-        e31: true
+        activeBtn: 1,
+        showNav: true
       }
     }
   }

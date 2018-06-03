@@ -31,11 +31,13 @@
     "spec": false
   },
   "bottom-navigation": {
+    "components": ["v-bottom-nav"],
     "examples": [
       "iconsAndText",
       "colorAndShift",
       "toggle"
-    ]
+    ],
+    "spec": false
   },
   "bottom-sheets": {
     "examples": [
