@@ -2,5 +2,9 @@
   "alerts": {
     "components": ["v-alert"],
     "spec": false
+  },
+  "avatars": {
+    "components": ["v-avatar"],
+    "spec": false
   }
 }
