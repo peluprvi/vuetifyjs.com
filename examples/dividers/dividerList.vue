@@ -4,12 +4,16 @@
       <v-card>
         <v-toolbar color="orange lighten-1" dark>
           <v-toolbar-side-icon></v-toolbar-side-icon>
+
           <v-toolbar-title>Message Board</v-toolbar-title>
+
           <v-spacer></v-spacer>
+
           <v-btn icon>
             <v-icon>search</v-icon>
           </v-btn>
         </v-toolbar>
+
         <v-list two-line>
           <template v-for="(item, index) in items">
             <v-subheader
@@ -19,11 +23,13 @@
             >
               {{ item.header }}
             </v-subheader>
+
             <v-divider
               v-else-if="item.divider"
               :key="index"
               inset
             ></v-divider>
+
             <v-list-tile
               v-else
               :key="item.title"
@@ -45,6 +51,7 @@
     </v-flex>
   </v-layout>
 </template>
+
 <script>
   export default {
     data () {

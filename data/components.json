@@ -199,14 +199,17 @@
     "spec": false
   },
   "dividers": {
+    "components": ["v-divider"],
     "examples": [
       "fullBleed",
       "lightAndDark",
       "inset",
       "subheaders",
       "dividerList",
-      "dividerListPortrait"
-    ]
+      "dividerListPortrait",
+      "vertical"
+    ],
+    "spec": false
   },
   "expansion-panels": {
     "examples": [
