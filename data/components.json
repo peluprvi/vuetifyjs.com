@@ -40,10 +40,12 @@
     "spec": false
   },
   "bottom-sheets": {
+    "components": ["v-bottom-sheet"],
     "examples": [
       "standard",
       "inset"
-    ]
+    ],
+    "spec": false
   },
   "breadcrumbs": {
     "examples": [
