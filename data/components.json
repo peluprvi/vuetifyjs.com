@@ -82,13 +82,20 @@
     "spec": false
   },
   "cards": {
+    "components": [
+      "v-card",
+      "v-card-media",
+      "v-card-title",
+      "v-card-actions"
+    ],
     "examples": [
       "components",
       "mediaWithText",
       "horizontal",
       "grids",
       "customActions"
-    ]
+    ],
+    "spec": false
   },
   "carousels": {
     "examples": [
