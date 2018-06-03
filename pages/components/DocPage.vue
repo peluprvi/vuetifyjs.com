@@ -8,6 +8,7 @@
   import { camel, kebab } from '@/util/helpers'
   import NotFound from '@/pages/general/404Page'
 
+  const components = require('@/data/components.json')
   const examples = require('@/data/examples.json')
 
   export default {
@@ -30,13 +31,20 @@
 
     computed: {
       components () {
-        // TODO: move out of translation files
-        const components = `${this.computedSection}.${this.computedComponent}.components`
+        let component = components[this.component]
 
-        return this.$te(components)
-          ? this.$t(components)
-          : this.$te(components, 'en')
-            ? this.$t(components, 'en')
+        // Temporary until all components are converted
+        if (component) {
+          return component.components
+        } else {
+          // TODO: move out of translation files
+          component = `${this.computedSection}.${this.computedComponent}.components`
+        }
+
+        return this.$te(component)
+          ? this.$t(component)
+          : this.$te(component, 'en')
+            ? this.$t(component, 'en')
             : []
       },
       computedComponent () {

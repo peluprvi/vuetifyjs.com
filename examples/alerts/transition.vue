@@ -1,7 +1,12 @@
 <template>
   <div>
     <div class="text-xs-center">
-      <v-btn color="primary" @click="alert = !alert">Toggle</v-btn>
+      <v-btn
+        color="primary"
+        @click="alert = !alert"
+      >
+        Toggle
+      </v-btn>
     </div>
     <v-alert
       :value="alert"
@@ -15,8 +20,10 @@
 
 <script>
   export default {
-    data: () => ({
-      alert: true
-    })
+    data () {
+      return {
+        alert: true
+      }
+    }
   }
 </script>

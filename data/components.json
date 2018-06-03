@@ -1,0 +1,6 @@
+{
+  "alerts": {
+    "components": ["v-alert"],
+    "spec": false
+  }
+}
