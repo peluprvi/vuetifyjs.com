@@ -124,10 +124,12 @@
     "spec": false
   },
   "data-iterator": {
+    "components": ["v-data-iterator"],
     "examples": [
       "simple",
       "slots"
-    ]
+    ],
+    "spec": false
   },
   "data-tables": {
     "examples": [
