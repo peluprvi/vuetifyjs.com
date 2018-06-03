@@ -111,6 +111,7 @@
     "spec": false
   },
   "chips": {
+    "components": ["v-chip"],
     "examples": [
       "default",
       "colored",
@@ -119,7 +120,8 @@
       "label",
       "closable",
       "inSelects"
-    ]
+    ],
+    "spec": false
   },
   "data-iterator": {
     "examples": [

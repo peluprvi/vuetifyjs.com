@@ -10,13 +10,33 @@
         Reset Chips
       </v-btn>
     </div>
-    <v-chip v-model="chip1" close>Closable</v-chip>
 
-    <v-chip v-model="chip2" close color="red" text-color="white">Remove</v-chip>
+    <v-chip
+      v-model="chip1"
+      close
+    >Closable</v-chip>
 
-    <v-chip v-model="chip3" close outline color="green">Success</v-chip>
+    <v-chip
+      v-model="chip2"
+      close
+      color="red"
+      text-color="white"
+    >Remove</v-chip>
 
-    <v-chip v-model="chip4" close outline label color="orange">Complete</v-chip>
+    <v-chip
+      v-model="chip3"
+      close
+      color="green"
+      outline
+    >Success</v-chip>
+
+    <v-chip
+      v-model="chip4"
+      close
+      color="orange"
+      label
+      outline
+    >Complete</v-chip>
   </div>
 </template>
 

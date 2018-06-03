@@ -1,13 +1,13 @@
 <template>
-  <v-select
+  <v-autocomplete
     v-model="chips"
+    :items="items"
     label="Your favorite hobbies"
     chips
-    tags
-    solo
-    prepend-icon="filter_list"
-    append-icon=""
     clearable
+    prepend-icon="filter_list"
+    solo
+    tags
   >
     <template slot="selection" slot-scope="data">
       <v-chip
@@ -19,14 +19,15 @@
         <span>(interest)</span>
       </v-chip>
     </template>
-  </v-select>
+  </v-autocomplete>
 </template>
 
 <script>
   export default {
     data () {
       return {
-        chips: ['Programming', 'Playing video games', 'Watching', 'Sleeping']
+        chips: ['Programming', 'Playing video games', 'Watching movies', 'Sleeping'],
+        items: ['Streaming', 'Eating']
       }
     },
 
