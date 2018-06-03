@@ -237,12 +237,14 @@
     ]
   },
   "footer": {
+    "components": ["v-footer"],
     "examples": [
       "default",
       "companyFooter",
       "indigoFooter",
       "tealFooter"
-    ]
+    ],
+    "spec": false
   },
   "forms": {
     "examples": [
