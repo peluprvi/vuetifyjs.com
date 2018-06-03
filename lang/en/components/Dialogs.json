@@ -1,12 +1,10 @@
 {
   "header": "Dialog",
   "headerText": "The `v-dialog` component inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks. Use dialogs sparingly because they are interruptive.",
-  "components": ["v-dialog"],
   "examples": {
     "simple": {
-      "header": "Simple dialogs",
-      "desc": "Choosing an option immediately commits the option and closes the menu. Touching outside of the dialog, or pressing Back, cancels the action and closes the dialog.",
-      "uninverted": true
+      "header": "A simple dialog",
+      "desc": "A dialog contains 2 slots, 1 for its activator and one for its content (default). Good for Privacy Policies."
     },
     "withoutActivator": {
       "header": "Without activator",
@@ -37,6 +35,15 @@
       "header": "Overflowed",
       "desc": "Modals that do not fit within the available window space will scroll the container.",
       "uninverted": true
+    },
+    "advanced": {
+      "header": "Simple dialogs",
+      "desc": "Choosing an option immediately closes the menu. Touching outside of the dialog, or pressing Back, cancels the action and closes the dialog.",
+      "uninverted": true
+    },
+    "loader": {
+      "header": "Loader",
+      "desc": "The `v-dialog` component makes it easy to create a customized loading experience for your application."
     }
   },
   "props": {

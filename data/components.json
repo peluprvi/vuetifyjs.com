@@ -184,6 +184,7 @@
     ]
   },
   "dialogs": {
+    "components": ["v-dialog"],
     "examples": [
       "simple",
       "withoutActivator",
@@ -191,8 +192,11 @@
       "fullscreen",
       "form",
       "scrollable",
-      "overflowed"
-    ]
+      "overflowed",
+      "advanced",
+      "loader"
+    ],
+    "spec": false
   },
   "dividers": {
     "examples": [
