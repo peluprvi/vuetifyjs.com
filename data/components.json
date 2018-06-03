@@ -212,6 +212,10 @@
     "spec": false
   },
   "expansion-panels": {
+    "components": [
+      "v-expansion-panel",
+      "v-expansion-panel-content"
+    ],
     "examples": [
       "accordion",
       "expand",
@@ -220,7 +224,8 @@
       "popout",
       "customIcons",
       "focusable"
-    ]
+    ],
+    "spec": false
   },
   "floating-action-buttons": {
     "examples": [

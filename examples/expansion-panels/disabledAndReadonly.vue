@@ -1,10 +1,22 @@
 <template>
   <div>
     <div class="d-flex">
-      <v-checkbox v-model="disabled" label="Disabled"></v-checkbox>
-      <v-checkbox v-model="readonly" label="Readonly"></v-checkbox>
+      <v-checkbox
+        v-model="disabled"
+        label="Disabled"
+      ></v-checkbox>
+      <v-checkbox
+        v-model="readonly"
+        label="Readonly"
+      ></v-checkbox>
     </div>
-    <v-expansion-panel v-model="panel" :disabled="disabled" :readonly="readonly" expand>
+
+    <v-expansion-panel
+      v-model="panel"
+      :disabled="disabled"
+      :readonly="readonly"
+      expand
+    >
       <v-expansion-panel-content disabled>
         <template slot="header">Disabled</template>
         <v-card>
@@ -13,6 +25,7 @@
           </v-card-text>
         </v-card>
       </v-expansion-panel-content>
+
       <v-expansion-panel-content readonly>
         <template slot="header">Readonly</template>
         <v-card>
@@ -21,6 +34,7 @@
           </v-card-text>
         </v-card>
       </v-expansion-panel-content>
+
       <v-expansion-panel-content>
         <template slot="header">Regular</template>
         <v-card>
