@@ -98,12 +98,17 @@
     "spec": false
   },
   "carousels": {
+    "components": [
+      "v-carousel",
+      "v-carousel-item"
+    ],
     "examples": [
       "default",
       "customTransition",
       "customIcons",
       "hideControls"
-    ]
+    ],
+    "spec": false
   },
   "chips": {
     "examples": [
