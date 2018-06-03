@@ -261,11 +261,16 @@
   ],
   "sliders": [
     "usage",
+    "thumb",
+    "customThumb",
+    "ticks",
     "discrete",
     "icons",
     "editableNumericValue",
     "customColors",
-    "range"
+    "validation",
+    "range",
+    "minMax"
   ],
   "snackbars": [
     "position",

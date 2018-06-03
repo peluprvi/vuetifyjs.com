@@ -1,26 +1,59 @@
 <template>
   <v-card class="e4">
-    <v-card-media :style="{ background: `rgb(${red}, ${green}, ${blue})` }" height="300px"></v-card-media>
+    <v-card-media
+      :style="{ background: `rgb(${red}, ${green}, ${blue})` }"
+      height="300px"
+    ></v-card-media>
     <v-card-text>
-      <v-container fluid grid-list-md>
-        <v-layout row wrap>
+      <v-container
+        fluid
+        grid-list-lg
+      >
+        <v-layout
+          row
+          wrap
+        >
           <v-flex xs9>
-            <v-slider :max="255" v-model="red" label="R"></v-slider>
+            <v-slider
+              :max="255"
+              v-model="red"
+              label="R"
+            ></v-slider>
           </v-flex>
           <v-flex xs3>
-            <v-text-field v-model="red" type="number"></v-text-field>
+            <v-text-field
+              v-model="red"
+              type="number"
+              class="mt-0"
+            ></v-text-field>
           </v-flex>
           <v-flex xs9>
-            <v-slider :max="255" v-model="green" label="G"></v-slider>
+            <v-slider
+              :max="255"
+              v-model="green"
+              label="G"
+            ></v-slider>
           </v-flex>
           <v-flex xs3>
-            <v-text-field v-model="green" type="number"></v-text-field>
+            <v-text-field
+              v-model="green"
+              type="number"
+              class="mt-0"
+            ></v-text-field>
           </v-flex>
           <v-flex xs9>
-            <v-slider :max="255" v-model="blue" label="B"></v-slider>
+            <v-slider
+              :max="255"
+              v-model="blue"
+              label="B"
+            ></v-slider>
           </v-flex>
           <v-flex xs3>
-            <v-text-field v-model="blue" type="number"></v-text-field>
+            <v-text-field
+              v-model="blue"
+              type="number"
+              class="mt-0"
+            ></v-text-field>
           </v-flex>
         </v-layout>
       </v-container>

@@ -1,11 +1,22 @@
 <template>
-  <v-card>
-    <v-card-text>
-      <v-slider :label="ex1.label" v-model="ex1.val" :color="ex1.color"></v-slider>
-      <v-slider :label="ex2.label" v-model="ex2.val" :track-color="ex2.color"></v-slider>
-      <v-slider :label="ex3.label" v-model="ex3.val" :thumb-color="ex3.color" thumb-label></v-slider>
-    </v-card-text>
-  </v-card>
+  <div>
+    <v-slider
+      v-model="ex1.val"
+      :color="ex1.color"
+      :label="ex1.label"
+    ></v-slider>
+    <v-slider
+      v-model="ex2.val"
+      :label="ex2.label"
+      :track-color="ex2.color"
+    ></v-slider>
+    <v-slider
+      v-model="ex3.val"
+      :label="ex3.label"
+      :thumb-color="ex3.color"
+      thumb-label="always"
+    ></v-slider>
+  </div>
 </template>
 
 <script>
