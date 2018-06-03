@@ -1,10 +1,450 @@
 {
   "alerts": {
     "components": ["v-alert"],
+    "examples": [
+      "contextual",
+      "closable",
+      "icon",
+      "transition",
+      "outline"
+    ],
     "spec": false
   },
   "avatars": {
     "components": ["v-avatar"],
+    "examples": [
+      "standard",
+      "advanced",
+      "iconAndText"
+    ],
     "spec": false
+  },
+  "badges": {
+    "components": ["v-badge"],
+    "examples": [
+      "character",
+      "overlap",
+      "inline",
+      "icon",
+      "visibility"
+    ],
+    "spec": false
+  },
+  "bottom-navigation": {
+    "examples": [
+      "iconsAndText",
+      "colorAndShift",
+      "toggle"
+    ]
+  },
+  "bottom-sheets": {
+    "examples": [
+      "standard",
+      "inset"
+    ]
+  },
+  "breadcrumbs": {
+    "examples": [
+      "textDividers",
+      "iconDividers"
+    ]
+  },
+  "buttons": {
+    "examples": [
+      "usage",
+      "flat",
+      "raised",
+      "depressed",
+      "dropdown",
+      "toggle",
+      "icon",
+      "floating",
+      "loaders",
+      "sizing",
+      "outline",
+      "round",
+      "block"
+    ]
+  },
+  "cards": {
+    "examples": [
+      "components",
+      "mediaWithText",
+      "horizontal",
+      "grids",
+      "customActions"
+    ]
+  },
+  "carousels": {
+    "examples": [
+      "default",
+      "customTransition",
+      "customIcons",
+      "hideControls"
+    ]
+  },
+  "chips": {
+    "examples": [
+      "default",
+      "colored",
+      "icon",
+      "outline",
+      "label",
+      "closable",
+      "inSelects"
+    ]
+  },
+  "data-iterator": {
+    "examples": [
+      "simple",
+      "slots"
+    ]
+  },
+  "data-tables": {
+    "examples": [
+      "standard",
+      "noData",
+      "headers",
+      "headerCell",
+      "progress",
+      "footer",
+      "expand",
+      "pageText",
+      "select",
+      "search",
+      "customIcons",
+      "paginate",
+      "sort",
+      "server",
+      "headerless",
+      "editdialog",
+      "crud"
+    ]
+  },
+  "date-pickers": {
+    "examples": [
+      "dateLight",
+      "dateColorable",
+      "dateDialogAndMenu",
+      "dateFormatting",
+      "dateAllowedDates",
+      "dateWidth",
+      "dateBirthday",
+      "datePickerDate",
+      "dateEvents",
+      "dateInternationalization",
+      "dateIcons",
+      "dateReadonly",
+      "dateCurrent",
+      "monthLight",
+      "monthColorable",
+      "monthDialogAndMenu",
+      "monthAllowedMonths",
+      "monthWidth",
+      "monthInternationalization",
+      "monthIcons",
+      "monthReadonly",
+      "monthCurrent"
+    ]
+  },
+  "dialogs": {
+    "examples": [
+      "simple",
+      "withoutActivator",
+      "modal",
+      "fullscreen",
+      "form",
+      "scrollable",
+      "overflowed"
+    ]
+  },
+  "dividers": {
+    "examples": [
+      "fullBleed",
+      "lightAndDark",
+      "inset",
+      "subheaders",
+      "dividerList",
+      "dividerListPortrait"
+    ]
+  },
+  "expansion-panels": {
+    "examples": [
+      "accordion",
+      "expand",
+      "external",
+      "disabledAndReadonly",
+      "popout",
+      "customIcons",
+      "focusable"
+    ]
+  },
+  "floating-action-buttons": {
+    "examples": [
+      "promotedAction",
+      "small",
+      "displayAnimation",
+      "lateralScreens",
+      "speedDial"
+    ]
+  },
+  "footer": {
+    "examples": [
+      "default",
+      "companyFooter",
+      "indigoFooter",
+      "tealFooter"
+    ]
+  },
+  "forms": {
+    "examples": [
+      "basicValidation",
+      "validationWithSubmitAndClear",
+      "vuelidate",
+      "veeValidate"
+    ]
+  },
+  "icons": {
+    "examples": [
+      "standard",
+      "fontAwesome",
+      "mdi",
+      "color",
+      "buttons"
+    ]
+  },
+  "inputs": {
+    "examples": ["usage"]
+  },
+  "jumbotrons": {
+    "examples": [
+      "usage",
+      "color",
+      "gradient",
+      "gradientWithImage"
+    ]
+  },
+  "lists": {
+    "examples": [
+      "avatarTwoLines",
+      "avatarTitleAndAction",
+      "iconTwoLinesAndAction",
+      "avatarThreeLines",
+      "avatarSubheaderTitleAndAction",
+      "subheadingsAndDividers",
+      "cardList",
+      "titleSubtitleActionsAndActionText",
+      "actionTitleAndSubtitle",
+      "expansionLists"
+    ]
+  },
+  "menus": {
+    "examples": [
+      "activator",
+      "absolute",
+      "absoluteWithoutActivator",
+      "hover",
+      "menus",
+      "customTransition",
+      "popover"
+    ]
+  },
+  "navigation-drawers": {
+    "examples": [
+      "permanent",
+      "permanentClipped",
+      "permanentFloating",
+      "persistent",
+      "mini",
+      "temporary",
+      "dark",
+      "combined",
+      "nested"
+    ]
+  },
+  "paginations": {
+    "examples": [
+      "short",
+      "long",
+      "limit",
+      "round",
+      "icons",
+      "disabled"
+    ]
+  },
+  "parallax": {
+    "examples": [
+      "default",
+      "content",
+      "customHeight"
+    ]
+  },
+  "progress": {
+    "examples": [
+      "circularDefault",
+      "circularColored",
+      "circularIndeterminate",
+      "circularSizeAndWidth",
+      "circularRotate",
+      "linearDeterminate",
+      "linearIndeterminate",
+      "linearBuffer",
+      "linearQueryIndeterminateAndDeterminate",
+      "linearCustomHeightAndContextualColors",
+      "linearCustomColors"
+    ]
+  },
+  "selection-controls": {
+    "examples": [
+      "example",
+      "checkboxesBoolean",
+      "checkboxesArray",
+      "checkboxesStates",
+      "checkboxesColors",
+      "checkboxesInlineTexfield",
+      "radiosDefault",
+      "radiosDirection",
+      "radiosColors",
+      "switchesBoolean",
+      "switchesArray",
+      "switchesStates",
+      "switchesColors"
+    ]
+  },
+  "selects": {
+    "examples": [
+      "usage",
+      "light",
+      "icons",
+      "multiple",
+      "autocomplete",
+      "customFilter",
+      "scopedSlots",
+      "customTextAndValue",
+      "tags",
+      "asynchronous"
+    ]
+  },
+  "sliders": {
+    "examples": [
+      "usage",
+      "thumb",
+      "customThumb",
+      "ticks",
+      "discrete",
+      "icons",
+      "editableNumericValue",
+      "customColors",
+      "validation",
+      "range",
+      "minMax"
+    ]
+  },
+  "snackbars": {
+    "examples": [
+      "position",
+      "contextual"
+    ]
+  },
+  "steppers": {
+    "examples": [
+      "example",
+      "editable",
+      "nonEditable",
+      "optional",
+      "horizontal",
+      "vertical",
+      "linear",
+      "nonLinear",
+      "alternateLabels",
+      "error",
+      "alternateError",
+      "verticalError",
+      "dynamic"
+    ]
+  },
+  "subheaders": {
+    "examples": [
+      "list",
+      "grid",
+      "menu",
+      "social"
+    ]
+  },
+  "tabs": {
+    "examples": [
+      "toolbar",
+      "fixedTabs",
+      "right",
+      "content",
+      "search",
+      "iconsAndText",
+      "desktop",
+      "alignWithTitle",
+      "grow",
+      "overflowToMenu",
+      "pagination",
+      "icons"
+    ]
+  },
+  "textarea": {
+    "examples": [
+      "multiLine"
+    ]
+  },
+  "text-fields": {
+    "examples": [
+      "usage",
+      "singleLine",
+      "icon",
+      "characterCounter",
+      "password",
+      "validation",
+      "fullWidthWithCharacterCounter",
+      "requiredFields",
+      "hint",
+      "prefixesAndSuffixes",
+      "customValidation",
+      "box",
+      "solo",
+      "customColors",
+      "masks",
+      "progressBar"
+    ]
+  },
+  "time-pickers": {
+    "examples": [
+      "timeLight",
+      "timeColorable",
+      "timeDialogAndMenu",
+      "time24hFormat",
+      "timeAllowedTimes",
+      "timeWidth"
+    ]
+  },
+  "toolbars": {
+    "examples": [
+      "usage",
+      "appBar",
+      "appBarItems",
+      "appBarExtension",
+      "columnWidthWithHierarchy",
+      "flexibleAndCard",
+      "floatingWithSearch",
+      "variations",
+      "prominent",
+      "dense",
+      "denseProminent",
+      "scrolling",
+      "appBarMenu",
+      "systemBarsStatusWindow"
+    ]
+  },
+  "tooltips": {
+    "examples": [
+      "default",
+      "alignment",
+      "visibility"
+    ]
   }
 }
