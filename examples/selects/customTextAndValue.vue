@@ -4,17 +4,18 @@
       <v-flex xs6>
         <v-subheader>Custom items</v-subheader>
       </v-flex>
+
       <v-flex xs6>
         <v-select
-          :items="items"
           v-model="select"
           :hint="`${select.state}, ${select.abbr}`"
-          label="Select"
-          single-line
+          :items="items"
           item-text="state"
           item-value="abbr"
-          return-object
+          label="Select"
           persistent-hint
+          return-object
+          single-line
         ></v-select>
       </v-flex>
     </v-layout>

@@ -1,5 +1,6 @@
 import Alerts from './Alerts'
 import ApiExplorer from './ApiExplorer'
+import Autocompletes from './Autocompletes'
 import Avatars from './Avatars'
 import Badges from './Badges'
 import BottomNavigation from './BottomNavigation'
@@ -25,6 +26,7 @@ import Lists from './Lists'
 import Jumbotrons from './Jumbotrons'
 import Menus from './Menus'
 import NavigationDrawers from './NavigationDrawers'
+import OverflowBtns from './OverflowBtns'
 import Paginations from './Paginations'
 import Parallax from './Parallax'
 import Progress from './Progress'
@@ -45,6 +47,7 @@ import Tooltips from './Tooltips'
 export default {
   Alerts,
   ApiExplorer,
+  Autocompletes,
   Avatars,
   Badges,
   BottomNavigation,
@@ -70,6 +73,7 @@ export default {
   Jumbotrons,
   Menus,
   NavigationDrawers,
+  OverflowBtns,
   Paginations,
   Parallax,
   Progress,

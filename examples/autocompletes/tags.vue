@@ -35,7 +35,7 @@
               :selected="data.selected"
               :disabled="data.disabled"
               :key="JSON.stringify(data.item)"
-              class="chip--select-multi"
+              class="v-chip--select-multi"
               @input="data.parent.selectItem(data.item)"
             >
               <v-avatar

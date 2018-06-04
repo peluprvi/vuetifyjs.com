@@ -8,11 +8,11 @@
         <v-select
           :items="states"
           v-model="e1"
-          label="Select"
-          single-line
           auto
-          prepend-icon="map"
+          label="Select"
           hide-details
+          prepend-icon="map"
+          single-line
         ></v-select>
       </v-flex>
       <v-flex xs6>
@@ -22,11 +22,11 @@
         <v-select
           :items="states"
           v-model="e2"
+          append-outer-icon="map"
+          auto
+          hide-details
           label="Select"
           single-line
-          auto
-          append-outer-icon="map"
-          hide-details
         ></v-select>
       </v-flex>
     </v-layout>

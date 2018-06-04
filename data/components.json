@@ -10,6 +10,17 @@
     ],
     "spec": false
   },
+  "autocompletes": {
+    "components": ["v-autocomplete"],
+    "examples": [
+      "autocomplete",
+      "combobox",
+      "tags",
+      "scopedSlots",
+      "customFilter",
+      "asynchronous"
+    ]
+  },
   "avatars": {
     "components": ["v-avatar"],
     "examples": [
@@ -342,6 +353,11 @@
     ],
     "spec": false
   },
+  "overflow-btns": {
+    "components": ["v-overflow-btn"],
+    "examples": [],
+    "spec": false
+  },
   "paginations": {
     "components": ["v-pagination"],
     "examples": [
@@ -401,18 +417,15 @@
     ]
   },
   "selects": {
+    "components": ["v-select"],
     "examples": [
       "usage",
       "light",
       "icons",
       "multiple",
-      "autocomplete",
-      "customFilter",
-      "scopedSlots",
-      "customTextAndValue",
-      "tags",
-      "asynchronous"
-    ]
+      "customTextAndValue"
+    ],
+    "spec": false
   },
   "sliders": {
     "components": ["v-slider"],

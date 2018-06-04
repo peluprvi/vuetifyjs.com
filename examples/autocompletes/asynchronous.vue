@@ -8,11 +8,11 @@
           :rules="[() => select.length > 0 || 'You must choose at least one']"
           :search-input.sync="search"
           v-model="select"
-          label="Async items"
-          hide-no-data
-          multiple
           cache-items
           chips
+          hide-no-data
+          label="Async items"
+          multiple
           required
           solo
         ></v-autocomplete>

@@ -15,9 +15,11 @@
           persistent-hint
         ></v-select>
       </v-flex>
+
       <v-flex xs12 sm6>
         <v-subheader v-text="'Multiple (Chips) with persistent hint'"></v-subheader>
       </v-flex>
+
       <v-flex xs12 sm6>
         <v-select
           :items="states"

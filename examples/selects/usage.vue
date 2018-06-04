@@ -7,6 +7,7 @@
           label="Standard"
         ></v-select>
       </v-flex>
+
       <v-flex xs12 sm6 d-flex>
         <v-select
           :items="items"
@@ -14,6 +15,7 @@
           label="Box style"
         ></v-select>
       </v-flex>
+
       <v-flex xs12 sm6 d-flex>
         <v-select
           :items="items"
@@ -21,6 +23,7 @@
           outline
         ></v-select>
       </v-flex>
+
       <v-flex xs12 sm6 d-flex>
         <v-select
           :items="items"

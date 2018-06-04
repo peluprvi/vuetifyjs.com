@@ -80,6 +80,12 @@
               )
                 v-list-tile-content
                   v-list-tile-title {{ grand.title }}
+                v-chip(
+                  v-if="grand.badge"
+                  :color="grand.color || 'primary'"
+                  class="white--text pa-0 v-chip--x-small"
+                  disabled
+                ) {{ grand.badge }}
             <!--child item-->
             v-list-tile(
               v-else,
