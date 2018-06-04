@@ -360,6 +360,10 @@
     "spec": false
   },
   "progress": {
+    "components": [
+      "v-progress-circular",
+      "v-progress-linear"
+    ],
     "examples": [
       "circularDefault",
       "circularColored",
@@ -372,7 +376,8 @@
       "linearQueryIndeterminateAndDeterminate",
       "linearCustomHeightAndContextualColors",
       "linearCustomColors"
-    ]
+    ],
+    "spec": false
   },
   "selection-controls": {
     "examples": [

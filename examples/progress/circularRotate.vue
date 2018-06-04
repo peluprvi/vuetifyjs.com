@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="text-xs-center">
     <v-progress-circular
+      :rotate="360"
       :size="100"
       :width="15"
-      :rotate="360"
       :value="value"
       color="teal"
     >
@@ -11,9 +11,9 @@
     </v-progress-circular>
 
     <v-progress-circular
+      :rotate="-90"
       :size="100"
       :width="15"
-      :rotate="-90"
       :value="value"
       color="primary"
     >
@@ -21,9 +21,9 @@
     </v-progress-circular>
 
     <v-progress-circular
+      :rotate="90"
       :size="100"
       :width="15"
-      :rotate="90"
       :value="value"
       color="red"
     >
@@ -31,9 +31,9 @@
     </v-progress-circular>
 
     <v-progress-circular
+      :rotate="180"
       :size="100"
       :width="15"
-      :rotate="180"
       :value="value"
       color="pink"
     >
@@ -65,9 +65,6 @@
 </script>
 
 <style lang="stylus" scoped>
-  div
-    text-align: center
-
   .v-progress-circular
     margin: 1rem
 </style>

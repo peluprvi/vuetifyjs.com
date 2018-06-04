@@ -1,13 +1,33 @@
 <template>
   <div>
-    <v-progress-linear value="15" height="2" color="secondary"></v-progress-linear>
+    <v-progress-linear
+      color="secondary"
+      height="2"
+      value="15"
+    ></v-progress-linear>
 
-    <v-progress-linear value="30" height="5" color="success"></v-progress-linear>
+    <v-progress-linear
+      color="success"
+      height="5"
+      value="30"
+    ></v-progress-linear>
 
-    <v-progress-linear value="45" height="10" color="info"></v-progress-linear>
+    <v-progress-linear
+      color="info"
+      height="10"
+      value="45"
+    ></v-progress-linear>
 
-    <v-progress-linear value="60" height="15" color="warning"></v-progress-linear>
+    <v-progress-linear
+      color="warning"
+      height="15"
+      value="60"
+    ></v-progress-linear>
 
-    <v-progress-linear value="75" height="20" color="error"></v-progress-linear>
+    <v-progress-linear
+      color="error"
+      height="20"
+      value="75"
+    ></v-progress-linear>
   </div>
 </template>

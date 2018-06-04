@@ -1,7 +1,6 @@
 {
   "header": "Progress",
   "headerText": "The `v-progress-circular` and `v-progress-linear` components are used to convey data visually to users. They can also represent an indeterminate amount, such as loading or processing. The circular progress component contains a slot that is centered within the circle.",
-  "components": ["v-progress-circular', 'v-progress-linear"],
   "examples": {
     "circularDefault": {
       "header": "Default",
