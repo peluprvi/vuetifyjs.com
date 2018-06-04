@@ -12,6 +12,7 @@
           v-model="slider"
         ></v-slider>
       </v-flex>
+
       <v-flex xs12>
         <v-slider
           disabled
@@ -20,6 +21,7 @@
           value="30"
         ></v-slider>
       </v-flex>
+
       <v-flex xs12>
         <v-slider
           label="Readonly"
@@ -27,56 +29,62 @@
           value="30"
         ></v-slider>
       </v-flex>
+
       <v-flex xs12>
         <v-slider
           v-model="slider"
           label="Label"
         ></v-slider>
       </v-flex>
+
       <v-flex xs12>
         <v-slider
           v-model="slider"
-          label="Inverse label"
           inverse-label
+          label="Inverse label"
         ></v-slider>
       </v-flex>
+
       <v-flex xs12>
         <v-slider
           v-model="volume"
-          prepend-icon="volume_down"
           append-icon="volume_up"
+          prepend-icon="volume_down"
         ></v-slider>
       </v-flex>
+
       <v-flex
         shrink
         style="width: 60px"
       >
         <v-text-field
           v-model="price[0]"
-          type="number"
+          class="mt-0"
           hide-details
           single-line
-          class="mt-0"
+          type="number"
         ></v-text-field>
       </v-flex>
+
       <v-flex>
         <v-range-slider
           v-model="price"
-          :step="10"
-          :min="20"
           :max="600"
+          :min="20"
+          :step="10"
         ></v-range-slider>
       </v-flex>
+
       <v-flex
         shrink
         style="width: 60px"
       >
         <v-text-field
           v-model="price[1]"
-          type="number"
+          class="mt-0"
           hide-details
           single-line
-          class="mt-0"
+          type="number"
         ></v-text-field>
       </v-flex>
     </v-layout>

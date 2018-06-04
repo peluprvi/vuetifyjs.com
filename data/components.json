@@ -411,6 +411,7 @@
     ]
   },
   "sliders": {
+    "components": ["v-slider"],
     "examples": [
       "usage",
       "thumb",
@@ -423,7 +424,8 @@
       "validation",
       "range",
       "minMax"
-    ]
+    ],
+    "spec": false
   },
   "snackbars": {
     "examples": [

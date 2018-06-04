@@ -4,6 +4,7 @@
       :style="{ background: `rgb(${red}, ${green}, ${blue})` }"
       height="300px"
     ></v-card-media>
+
     <v-card-text>
       <v-container
         fluid
@@ -15,32 +16,36 @@
         >
           <v-flex xs9>
             <v-slider
-              :max="255"
               v-model="red"
+              :max="255"
               label="R"
             ></v-slider>
           </v-flex>
+
           <v-flex xs3>
             <v-text-field
               v-model="red"
-              type="number"
               class="mt-0"
+              type="number"
             ></v-text-field>
           </v-flex>
+
           <v-flex xs9>
             <v-slider
-              :max="255"
               v-model="green"
+              :max="255"
               label="G"
             ></v-slider>
           </v-flex>
+
           <v-flex xs3>
             <v-text-field
               v-model="green"
-              type="number"
               class="mt-0"
+              type="number"
             ></v-text-field>
           </v-flex>
+
           <v-flex xs9>
             <v-slider
               :max="255"
@@ -48,11 +53,12 @@
               label="B"
             ></v-slider>
           </v-flex>
+
           <v-flex xs3>
             <v-text-field
               v-model="blue"
-              type="number"
               class="mt-0"
+              type="number"
             ></v-text-field>
           </v-flex>
         </v-layout>

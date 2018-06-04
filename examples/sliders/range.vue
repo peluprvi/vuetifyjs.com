@@ -24,29 +24,29 @@
         <v-flex shrink style="width: 60px">
           <v-text-field
             v-model="value3[0]"
-            type="number"
+            class="mt-0"
             hide-details
             single-line
-            class="mt-0"
+            type="number"
           ></v-text-field>
         </v-flex>
 
         <v-flex class="px-3">
           <v-range-slider
             v-model="value3"
-            :step="10"
-            :min="20"
             :max="600"
+            :min="20"
+            :step="10"
           ></v-range-slider>
         </v-flex>
 
         <v-flex shrink style="width: 60px">
           <v-text-field
             v-model="value3[1]"
-            type="number"
+            class="mt-0"
             hide-details
             single-line
-            class="mt-0"
+            type="number"
           ></v-text-field>
         </v-flex>
       </v-layout>

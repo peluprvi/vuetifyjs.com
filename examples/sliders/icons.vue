@@ -10,21 +10,25 @@
         prepend-icon="volume_up"
       ></v-slider>
     </v-card-text>
+
     <v-subheader>Alarm volume</v-subheader>
+
     <v-card-text>
       <v-slider
         v-model="alarm"
         append-icon="alarm"
       ></v-slider>
     </v-card-text>
+
     <v-subheader>Icon click callback</v-subheader>
+
     <v-card-text>
       <v-slider
         v-model="zoom"
-        :prepend-icon-cb="zoomOut"
         :append-icon-cb="zoomIn"
-        prepend-icon="zoom_out"
+        :prepend-icon-cb="zoomOut"
         append-icon="zoom_in"
+        prepend-icon="zoom_out"
       ></v-slider>
     </v-card-text>
   </v-card>

@@ -40,9 +40,9 @@
         <v-slider
           v-model="slider"
           always-dirty
-          thumb-label="always"
           hint="Try set it to '0'"
           persistent-hint
+          thumb-label="always"
         ></v-slider>
       </v-flex>
     </v-layout>

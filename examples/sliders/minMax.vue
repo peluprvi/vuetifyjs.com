@@ -7,17 +7,18 @@
         <v-flex class="pr-3">
           <v-slider
             v-model="slider"
-            :min="min"
             :max="max"
+            :min="min"
           ></v-slider>
         </v-flex>
+
         <v-flex shrink style="width: 60px">
           <v-text-field
             v-model="slider"
-            type="number"
+            class="mt-0"
             hide-details
             single-line
-            class="mt-0"
+            type="number"
           ></v-text-field>
         </v-flex>
       </v-layout>
@@ -33,17 +34,17 @@
         >
           <v-text-field
             v-model="range[0]"
-            type="number"
+            class="mt-0"
             hide-details
             single-line
-            class="mt-0"
+            type="number"
           ></v-text-field>
         </v-flex>
         <v-flex class="px-3">
           <v-range-slider
             v-model="range"
-            :min="min"
             :max="max"
+            :min="min"
           ></v-range-slider>
         </v-flex>
         <v-flex
@@ -52,10 +53,10 @@
         >
           <v-text-field
             v-model="range[1]"
-            type="number"
+            class="mt-0"
             hide-details
             single-line
-            class="mt-0"
+            type="number"
           ></v-text-field>
         </v-flex>
       </v-layout>
