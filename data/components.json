@@ -274,7 +274,9 @@
     "spec": false
   },
   "inputs": {
-    "examples": ["usage"]
+    "components": ["v-input"],
+    "examples": ["usage"],
+    "spec": false
   },
   "jumbotrons": {
     "components": ["v-jumbotron"],
