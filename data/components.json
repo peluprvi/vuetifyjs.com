@@ -273,12 +273,14 @@
     "examples": ["usage"]
   },
   "jumbotrons": {
+    "components": ["v-jumbotron"],
     "examples": [
       "usage",
       "color",
       "gradient",
       "gradientWithImage"
-    ]
+    ],
+    "spec": false
   },
   "lists": {
     "components": [

@@ -1,6 +1,10 @@
 <template>
   <div>
-    <v-text-field v-model="gradient" label="Gradient"></v-text-field>
+    <v-text-field
+      v-model="gradient"
+      label="Gradient"
+    ></v-text-field>
+
     <v-jumbotron :gradient="gradient" dark>
       <v-container fill-height>
         <v-layout align-center>

@@ -1,8 +1,8 @@
 <template>
   <v-jumbotron
     :gradient="gradient"
-    src="/static/doc-images/parallax/material2.jpg"
     dark
+    src="/static/doc-images/parallax/material2.jpg"
   >
     <v-container fill-height>
       <v-layout align-center>
