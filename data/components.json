@@ -553,10 +553,12 @@
     "spec": false
   },
   "tooltips": {
+    "components": ["v-tooltip"],
     "examples": [
       "default",
       "alignment",
       "visibility"
-    ]
+    ],
+    "spec": false
   }
 }

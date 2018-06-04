@@ -1,9 +1,15 @@
 <template>
   <v-container fluid class="text-xs-center">
-    <v-layout flex wrap row justify-space-between>
+    <v-layout
+      flex
+      justify-space-between
+      row
+      wrap
+    >
       <v-flex xs12>
-        <v-btn @click.native="show = !show">toggle</v-btn>
+        <v-btn @click="show = !show">toggle</v-btn>
       </v-flex>
+
       <v-flex xs12 class="mt-5">
         <v-tooltip v-model="show" top>
           <v-btn slot="activator" icon>
