@@ -249,12 +249,14 @@
     "spec": false
   },
   "forms": {
+    "components": ["v-form"],
     "examples": [
       "basicValidation",
       "validationWithSubmitAndClear",
       "vuelidate",
       "veeValidate"
-    ]
+    ],
+    "spec": false
   },
   "icons": {
     "components": ["v-icon"],
