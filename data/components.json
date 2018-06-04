@@ -436,6 +436,12 @@
     "spec": false
   },
   "steppers": {
+    "components": [
+      "v-stepper",
+      "v-stepper-step",
+      "v-stepper-content",
+      "v-stepper-header"
+    ],
     "examples": [
       "example",
       "editable",
@@ -450,7 +456,8 @@
       "alternateError",
       "verticalError",
       "dynamic"
-    ]
+    ],
+    "spec": false
   },
   "subheaders": {
     "examples": [

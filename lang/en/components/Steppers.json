@@ -1,12 +1,6 @@
 {
   "header": "Stepper",
   "headerText": "The `v-stepper` component displays progress through numbered steps.",
-  "components": [
-    "v-stepper",
-    "v-stepper-step",
-    "v-stepper-content",
-    "v-stepper-header"
-  ],
   "examples": {
     "example": {
       "header": "Example",
