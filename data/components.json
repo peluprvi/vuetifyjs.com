@@ -428,10 +428,12 @@
     "spec": false
   },
   "snackbars": {
+    "components": ["v-snackbar"],
     "examples": [
       "position",
       "contextual"
-    ]
+    ],
+    "spec": false
   },
   "steppers": {
     "examples": [
