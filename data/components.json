@@ -158,6 +158,7 @@
     "spec": false
   },
   "date-pickers": {
+    "components": ["v-date-picker"],
     "examples": [
       "dateLight",
       "dateColorable",
@@ -181,7 +182,8 @@
       "monthIcons",
       "monthReadonly",
       "monthCurrent"
-    ]
+    ],
+    "spec": false
   },
   "dialogs": {
     "components": ["v-dialog"],
@@ -491,6 +493,7 @@
     ]
   },
   "time-pickers": {
+    "components": ["v-time-picker"],
     "examples": [
       "timeLight",
       "timeColorable",
@@ -498,7 +501,8 @@
       "time24hFormat",
       "timeAllowedTimes",
       "timeWidth"
-    ]
+    ],
+    "spec": false
   },
   "toolbars": {
     "examples": [
