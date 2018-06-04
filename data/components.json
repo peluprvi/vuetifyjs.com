@@ -531,6 +531,10 @@
     "spec": false
   },
   "toolbars": {
+    "components": [
+      "v-toolbar",
+      "v-system-bar"
+    ],
     "examples": [
       "usage",
       "appBar",
@@ -542,11 +546,11 @@
       "variations",
       "prominent",
       "dense",
-      "denseProminent",
       "scrolling",
       "appBarMenu",
       "systemBarsStatusWindow"
-    ]
+    ],
+    "spec": false
   },
   "tooltips": {
     "examples": [
