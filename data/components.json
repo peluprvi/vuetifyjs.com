@@ -404,6 +404,34 @@
     ],
     "spec": false
   },
+  "resizing": {
+    "components": ["v-resize"],
+    "examples": [
+      "default"
+    ]
+  },
+  "ripples": {
+    "components": ["v-ripple"],
+    "examples": [
+      "buttons",
+      "customColor",
+      "tabs",
+      "navigationDrawers",
+      "toolbars",
+      "expansionPanels",
+      "customRipple",
+      "htmlElement"
+    ],
+    "spec": false
+  },
+  "scrolling": {
+    "components": ["v-scroll"],
+    "examples": [
+      "default",
+      "options"
+    ],
+    "spec": false
+  },
   "selection-controls": {
     "components": [
       "v-radio-group",
@@ -593,5 +621,9 @@
       "visibility"
     ],
     "spec": false
+  },
+  "touch-support": {
+    "components": ["v-touch"],
+    "examples": ["default"]
   }
 }
