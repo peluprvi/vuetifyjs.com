@@ -1,7 +1,6 @@
 {
   "header": "Subheaders",
   "headerText": "The `v-subheader` component is used to separate sections of lists.",
-  "components": ["v-subheader"],
   "examples": {
     "list": {
       "header": "List subheaders",

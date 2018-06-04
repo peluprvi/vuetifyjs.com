@@ -460,12 +460,14 @@
     "spec": false
   },
   "subheaders": {
+    "components": ["v-subheader"],
     "examples": [
       "list",
       "grid",
       "menu",
       "social"
-    ]
+    ],
+    "spec": false
   },
   "tabs": {
     "examples": [
