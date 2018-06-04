@@ -94,8 +94,8 @@ export default [
         ]
       },
       { name: 'icons', title: 'Icons' },
-      { name: 'lists', title: 'Lists' },
       { name: 'jumbotrons', title: 'Jumbotrons' },
+      { name: 'lists', title: 'Lists' },
       { name: 'menus', title: 'Menus' },
       { name: 'navigation-drawers', title: 'Navigation drawers' },
       { name: 'paginations', title: 'Paginations' },
