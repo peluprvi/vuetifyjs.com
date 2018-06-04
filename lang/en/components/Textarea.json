@@ -1,7 +1,6 @@
 {
   "header": "Textarea",
   "headerText": "Textarea components are used for collecting large amounts of textual data.",
-  "components": ["v-textarea"],
   "examples": [{
     "multiLine": {
       "header": "Multi-Line",

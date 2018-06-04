@@ -1,7 +1,6 @@
 {
   "header": "Buttons: Floating Action Button",
   "headerText": "The `v-btn` component can be used as a Floating action button. This provides an application a main point of action. Combined with the `v-speed-dial` component, you can create a diverse set of functions available for your users.",
-  "components": ["v-speed-dial', 'v-btn"],
   "examples": {
     "promotedAction": {
       "header": "Promoted action",

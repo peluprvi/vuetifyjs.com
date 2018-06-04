@@ -241,13 +241,18 @@
     "spec": false
   },
   "floating-action-buttons": {
+    "components": [
+      "v-speed-dial",
+      "v-btn"
+    ],
     "examples": [
       "promotedAction",
       "small",
       "displayAnimation",
       "lateralScreens",
       "speedDial"
-    ]
+    ],
+    "spec": false
   },
   "footer": {
     "components": ["v-footer"],
@@ -400,6 +405,12 @@
     "spec": false
   },
   "selection-controls": {
+    "components": [
+      "v-radio-group",
+      "v-radio",
+      "v-checkbox",
+      "v-switch"
+    ],
     "examples": [
       "example",
       "checkboxesBoolean",
@@ -414,7 +425,8 @@
       "switchesArray",
       "switchesStates",
       "switchesColors"
-    ]
+    ],
+    "spec": false
   },
   "selects": {
     "components": ["v-select"],
@@ -511,11 +523,14 @@
     "spec": false
   },
   "textarea": {
+    "components": ["v-text-area"],
     "examples": [
       "multiLine"
-    ]
+    ],
+    "spec": false
   },
   "text-fields": {
+    "components": ["v-text-field"],
     "examples": [
       "usage",
       "singleLine",
@@ -533,7 +548,8 @@
       "customColors",
       "masks",
       "progressBar"
-    ]
+    ],
+    "spec": false
   },
   "time-pickers": {
     "components": ["v-time-picker"],
