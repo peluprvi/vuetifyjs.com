@@ -337,6 +337,7 @@
     "spec": false
   },
   "paginations": {
+    "components": ["v-pagination"],
     "examples": [
       "short",
       "long",
@@ -344,7 +345,8 @@
       "round",
       "icons",
       "disabled"
-    ]
+    ],
+    "spec": false
   },
   "parallax": {
     "examples": [
