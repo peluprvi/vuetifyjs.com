@@ -349,11 +349,13 @@
     "spec": false
   },
   "parallax": {
+    "components": ["v-parallax"],
     "examples": [
       "default",
       "content",
       "customHeight"
-    ]
+    ],
+    "spec": false
   },
   "progress": {
     "examples": [
