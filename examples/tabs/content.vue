@@ -1,15 +1,24 @@
 <template>
   <div>
-    <v-toolbar color="cyan" dark tabs>
+    <v-toolbar
+      color="cyan"
+      dark
+      tabs
+    >
       <v-toolbar-side-icon></v-toolbar-side-icon>
+
       <v-toolbar-title>Page title</v-toolbar-title>
+
       <v-spacer></v-spacer>
+
       <v-btn icon>
         <v-icon>search</v-icon>
       </v-btn>
+
       <v-btn icon>
         <v-icon>more_vert</v-icon>
       </v-btn>
+
       <v-tabs
         slot="extension"
         v-model="model"
@@ -26,11 +35,12 @@
         </v-tab>
       </v-tabs>
     </v-toolbar>
+
     <v-tabs-items v-model="model">
       <v-tab-item
         v-for="i in 3"
-        :key="i"
         :id="`tab-${i}`"
+        :key="i"
       >
         <v-card flat>
           <v-card-text v-text="text"></v-card-text>
