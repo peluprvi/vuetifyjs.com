@@ -322,6 +322,7 @@
     "spec": false
   },
   "navigation-drawers": {
+    "components": ["v-navigation-drawer"],
     "examples": [
       "permanent",
       "permanentClipped",
@@ -332,7 +333,8 @@
       "dark",
       "combined",
       "nested"
-    ]
+    ],
+    "spec": false
   },
   "paginations": {
     "examples": [
