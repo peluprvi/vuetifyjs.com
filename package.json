@@ -21,6 +21,7 @@
     "npm": ">=4.0"
   },
   "dependencies": {
+    "api-generator": "vuetifyjs/api-generator",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "chokidar": "^2.0.3",

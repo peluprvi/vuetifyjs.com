@@ -118,7 +118,7 @@
 </template>
 
 <script>
-  import api from '@/api/api'
+  import api from 'api-generator'
 
   import ExampleView from '@/components/views/ExampleView'
 

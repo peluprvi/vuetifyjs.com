@@ -92,7 +92,7 @@
 </template>
 
 <script>
-  import api from '@/api/api'
+  import api from 'api-generator'
   // Utilities
   import { camel } from '@/util/helpers'
 

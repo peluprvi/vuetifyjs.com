@@ -10,7 +10,7 @@
         div(class="pa-2 grey lighten-4 d-flex align-top")
           v-flex(
             v-for="header in headers"
-            :class="[`xs${header.size}`, `text-xs-${header.align}`]"
+            :class="[header.size ? `xs${header.size}` : 'shrink', `text-xs-${header.align}`]"
             :key="header.value"
           )
             div(class="header grey--text text--darken-1") {{ genHeaderName(header.value, item) }}
@@ -116,7 +116,7 @@
           description = this.$t(genericDesc)
           devPrepend = '**GENERIC** - '
         } else {
-          description = '**MISSING DESCRIPTION**'
+          description = `**MISSING DESCRIPTION** - ${item.source}`
         }
 
         const prepend = process.env.NODE_ENV === 'development' ? devPrepend : ''
@@ -136,9 +136,7 @@
       genType (type) {
         type = Array.isArray(type) ? type : [type]
 
-        return type.map(t => {
-          return this.$t(`Generic.Types.${t}`)
-        }).join(', ')
+        return type.join(' | ')
       },
       genProps (props) {
         if (!props) return '-'

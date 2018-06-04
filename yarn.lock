@@ -375,6 +375,10 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
+api-generator@vuetifyjs/api-generator:
+  version "1.0.0"
+  resolved "https://codeload.github.com/vuetifyjs/api-generator/tar.gz/fe6c3e7aee4e0905e8db831145a7336b56f710f3"
+
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
