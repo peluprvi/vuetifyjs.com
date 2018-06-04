@@ -1,9 +1,28 @@
 <template>
-  <v-layout d-flex justify-center>
-    <v-menu v-model="showMenu" offset-y absolute full-width>
-      <v-card slot="activator" class="portrait" img="/static/doc-images/cards/girl.jpg" height="300px"></v-card>
+  <v-layout
+    d-flex
+    justify-center
+  >
+    <v-menu
+      v-model="showMenu"
+      absolute
+      offset-y
+      style="max-width: 600px"
+    >
+      <v-card
+        slot="activator"
+        class="portrait"
+        img="/static/doc-images/cards/girl.jpg"
+        height="300"
+        width="600"
+      ></v-card>
+
       <v-list>
-        <v-list-tile v-for="(item, index) in items" :key="index" @click="">
+        <v-list-tile
+          v-for="(item, index) in items"
+          :key="index"
+          @click=""
+        >
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>
         </v-list-tile>
       </v-list>
@@ -24,8 +43,3 @@
     })
   }
 </script>
-
-<style lang="stylus" scoped>
-  .v-menu
-    max-width: 600px
-</style>

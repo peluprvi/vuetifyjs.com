@@ -1,7 +1,6 @@
 {
   "header": "Menu",
   "headerText": "The `v-menu` component shows a menu at the position of the element used to activate it.",
-  "components": ["v-menu"],
   "examples": {
     "activator": {
       "header": "Activator",

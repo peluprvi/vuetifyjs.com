@@ -309,6 +309,7 @@
     "spec": false
   },
   "menus": {
+    "components": ["v-menu"],
     "examples": [
       "activator",
       "absolute",
@@ -317,7 +318,8 @@
       "menus",
       "customTransition",
       "popover"
-    ]
+    ],
+    "spec": false
   },
   "navigation-drawers": {
     "examples": [

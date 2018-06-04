@@ -8,15 +8,20 @@
         @contextmenu="show"
       ></v-card>
     </v-layout>
+
     <v-menu
       v-model="showMenu"
       :position-x="x"
       :position-y="y"
-      offset-y
       absolute
+      offset-y
     >
       <v-list>
-        <v-list-tile v-for="(item, index) in items" :key="index" @click="">
+        <v-list-tile
+          v-for="(item, index) in items"
+          :key="index"
+          @click=""
+        >
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>
         </v-list-tile>
       </v-list>
