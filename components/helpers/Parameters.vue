@@ -24,6 +24,7 @@
 
 <script>
   import { capitalize, camel } from '@/util/helpers'
+  import componentNameMap from '@/data/i18n/componentNameMap'
 
   export default {
     props: {
@@ -89,8 +90,9 @@
         const camelSource = camel(item.source)
 
         const specialLevelDesc = `${this.namespace}.${this.type}.${this.target}['${name}']`
-        const componentLevelDesc = `${this.namespace}.${this.type}['${name}']`
+        const selfDesc = `${this.namespace}.${this.type}['${name}']`
         const mixinDesc = `Mixins.${camelSource}.${this.type}['${name}']`
+        const componentDesc = `Components.${componentNameMap[item.source]}.${this.type}['${name}']`
         const genericDesc = `Generic.${capitalize(this.type)}['${name}']`
 
         if (this.$te(specialLevelDesc)) {
@@ -100,23 +102,27 @@
             description = this.$t(description)
           }
 
-          devPrepend = '**SPECIAL** - '
-        } else if (this.$te(componentLevelDesc)) {
-          description = this.$t(componentLevelDesc)
+          devPrepend = `**SPECIAL (${item.source})** - `
+        } else if (this.$te(selfDesc)) {
+          description = this.$t(selfDesc)
 
           if (description.indexOf('Mixins.') > -1) {
             description = this.$t(description)
           }
 
-          devPrepend = '**COMPONENT** - '
+          devPrepend = '**SELF** - '
         } else if (this.$te(mixinDesc)) {
           description = this.$t(mixinDesc)
-          devPrepend = '**MIXIN** - '
+          devPrepend = `**MIXIN (${item.source})** - `
+        } else if (this.$te(componentDesc)) {
+          description = this.$t(componentDesc)
+          devPrepend = `**COMPONENT (${item.source})** - `
         } else if (this.$te(genericDesc)) {
           description = this.$t(genericDesc)
-          devPrepend = '**GENERIC** - '
+          devPrepend = `**GENERIC (${item.source})** - `
         } else {
-          description = `**MISSING DESCRIPTION** - ${item.source}`
+          description = `**MISSING DESCRIPTION**`
+          devPrepend = `${item.source} - `
         }
 
         const prepend = process.env.NODE_ENV === 'development' ? devPrepend : ''
