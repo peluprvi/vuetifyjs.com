@@ -6,7 +6,6 @@ import DataIterable from './DataIterable'
 import Delayable from './Delayable'
 import Detachable from './Detachable'
 import Filterable from './Filterable'
-import Input from './Input'
 import Loadable from './Loadable'
 import Menuable from './Menuable'
 import Picker from './Picker'
@@ -27,7 +26,6 @@ export default {
   Delayable,
   Detachable,
   Filterable,
-  Input,
   Loadable,
   Menuable,
   Picker,

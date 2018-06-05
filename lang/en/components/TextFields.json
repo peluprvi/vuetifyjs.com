@@ -69,6 +69,7 @@
     }
   },
   "props": {
+    "appendOuterIcon": "Append an icon to the outside of `v-text-field`'s input, uses same syntax as `v-icon`",
     "autoGrow": "Auto-grows the input. This option requires the use of **v-model**",
     "autofocus": "Enable autofocus",
     "box": "Applies the alternate box input style",
