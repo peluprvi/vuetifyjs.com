@@ -274,6 +274,29 @@
     ],
     "spec": false
   },
+  "grid": {
+    "components": ["v-container", "v-layout", "v-flex", "v-spacer"],
+    "examples": [
+      "grid",
+      "offset",
+      "order",
+      "directionAndAlign",
+      "rowColumnBreakpoint",
+      "nestedGrid",
+      "uniqueLayouts",
+      "spacer",
+      "tags"
+    ],
+    "spec": false
+  },
+  "grid-lists": {
+    "components": ["v-container", "v-layout", "v-flex", "v-spacer"],
+    "examples": [
+      "default",
+      "subheader"
+    ],
+    "spec": false
+  },
   "icons": {
     "components": ["v-icon"],
     "examples": [
