@@ -26,7 +26,6 @@
   },
   "events": {
     "blur": "Emitted when the input is blurred",
-    "change": "Emitted when the select is changed by user interaction",
-    "update:error": "The `update.sync` event"
+    "change": "Emitted when the input is changed by user interaction"
   }
 }

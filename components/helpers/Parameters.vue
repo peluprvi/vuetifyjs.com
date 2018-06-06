@@ -1,30 +1,62 @@
-<template lang="pug">
-  v-data-iterator(
+<template>
+  <v-data-iterator
     :search="search"
     :items="computedItems"
     :pagination.sync="pagination"
+    class="component-parameters"
     hide-actions
-  ).component-parameters
-    template(slot="item" slot-scope="{ item }")
-      div(class="ma-2")
-        div(class="pa-2 grey lighten-4 d-flex align-top")
-          v-flex(
+  >
+    <template
+      slot="item"
+      slot-scope="{ item }"
+    >
+      <div class="ma-2">
+        <div
+          v-if="item.newIn"
+          class="pt-2 pl-2 grey lighten-4 caption font-weight-bold primary--text"
+        >
+          New in — v{{ item.newIn }}
+        </div>
+        <div class="pa-2 grey lighten-4 d-flex align-top">
+          <v-flex
             v-for="header in headers"
             :class="[header.size ? `xs${header.size}` : 'shrink', `text-xs-${header.align}`]"
             :key="header.value"
-          )
-            div(class="header grey--text text--darken-1") {{ genHeaderName(header.value, item) }}
-            div(:class="['mono', header.value]") {{ item[header.value] }}
-        div(class="pa-2 grey lighten-3 grey--text text--darken-2 d-flex")
-          v-flex
-            markdown(:source="item.description" class="justify")
-            kbd(v-if="item.example" class="pa-2 d-flex mt-2 grey darken-2") {{ genTypescriptDef(item.example) }}
-
+          >
+            <div
+              class="header grey--text text--darken-1"
+              v-text="genHeaderName(header.value, item)"
+            />
+            <div
+              :class="['mono', header.value]"
+              v-text="item[header.value]"
+            />
+          </v-flex>
+        </div>
+        <div class="pa-2 grey lighten-3 grey--text text--darken-2 d-flex">
+          <v-flex>
+            <markdown
+              :source="item.description"
+              class="justify"
+            />
+            <kbd
+              v-if="item.example"
+              class="pa-2 d-flex mt-2 grey darken-2"
+              v-text="genTypescriptDef(item.example)"
+            />
+          </v-flex>
+        </div>
+      </div>
+    </template>
+  </v-data-iterator>
 </template>
 
 <script>
+  // Utilities
+  import { mapState } from 'vuex'
   import { capitalize, camel } from '@/util/helpers'
   import componentNameMap from '@/data/i18n/componentNameMap'
+  import { getObjectValueByPath } from 'vuetify/es5/util/helpers'
 
   export default {
     props: {
@@ -62,6 +94,7 @@
     }),
 
     computed: {
+      ...mapState('app', ['newIn']),
       computedItems () {
         return this.items.map(item => {
           const newItem = item !== Object(item) ? { name: item } : Object.assign({}, item)
@@ -77,6 +110,11 @@
           }
 
           newItem.description = this.genDescription(item.name || item, item)
+          newItem.newIn = getObjectValueByPath(this.newIn, `${this.type}.${this.target}.${newItem.name}`)
+
+          if (!newItem.newIn && newItem.source) {
+            newItem.newIn = getObjectValueByPath(this.newIn, `${this.type}.${newItem.source}.${newItem.name}`)
+          }
 
           return newItem
         })

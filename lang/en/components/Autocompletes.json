@@ -28,7 +28,9 @@
       "desc": "Sometimes you need to load data externally based upon a search query. Use the `search-input` prop with the **.sync** modifier when using the `autocomplete` prop. We also make use of the new `cache-items` prop. This will keep a unique list of all items that have been passed to the `items` prop and is **REQUIRED** when using asynchronous items and the **multiple** prop."
     }
   },
-  "props": {},
+  "props": {
+    "combobox": "The single select version of **tags**"
+  },
   "slots": {
     "item": "Scoped slot for designating the markup for a list-tile",
     "no-data": "Mixins.Filterable.slots.noData",
@@ -39,8 +41,7 @@
     "selection": "Define a custom selection appearance"
   },
   "events": {
-    "change": "Mixins.Input.events.change",
-    "update:error": "Mixins.Input.events.update:error",
+    "update:error": "Mixins.Validatable.events['update:error']",
     "update:searchInput": "The `search-input.sync` event"
   }
 }

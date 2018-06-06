@@ -1,4 +1,5 @@
 import components from '@/data/components'
+import newIn from '@/data/newIn'
 
 export default () => ({
   appDrawer: null,
@@ -16,6 +17,7 @@ export default () => ({
   currentVersion: null,
   isFullscreen: false,
   loadedLangs: [],
+  newIn,
   releases: [],
   stateless: false,
   tablesOfContents: {

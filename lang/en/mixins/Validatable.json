@@ -8,5 +8,8 @@
     "success": "Puts the input in a manual success state",
     "successMessages": "Puts the input in a success state and passes through custom success messsages.",
     "validateOnBlur": "Delays validation until blur event"
+  },
+  "events": {
+    "update:error": "The `update.sync` event"
   }
 }

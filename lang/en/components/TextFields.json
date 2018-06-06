@@ -73,6 +73,9 @@
     "autoGrow": "Auto-grows the input. This option requires the use of **v-model**",
     "autofocus": "Enable autofocus",
     "box": "Applies the alternate box input style",
+    "browserAutocomplete": "Configures the default `<input>` autocomplete attribute",
+    "clearIcon": "Applied when using **clearable** and the input is dirty",
+    "clearIconCb": "Callback for clear icon when clicked",
     "counter": "Creates counter for input length. If no Number is specified, it defaults to 25. Does not apply any validation.",
     "fullWidth": "Desginates input type as full-width",
     "multiLine": "Turns into textarea",
@@ -87,6 +90,6 @@
   },
   "events": {
     "change": "Mixins.Input.events.change",
-    "update:error": "Mixins.Input.events.update:error"
+    "update:error": "Mixins.Validatable.events['update:error']"
   }
 }
