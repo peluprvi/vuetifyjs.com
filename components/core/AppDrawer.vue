@@ -5,21 +5,20 @@
     v-model="inputValue"
     :stateless="isFullscreen"
   )#app-drawer
-    div.text-xs-center
-      div(v-text="$t('Vuetify.AppDrawer.diamondSponsors')").diamond-sponsor-label
+    div.text-xs-center.pt-3
       div(
         v-for="diamond in diamonds"
-        :key="diamond.title"
+        :key="diamond.name"
       )
         a(
           :href="diamond.href"
           target="_blank"
           rel="noopener"
-          @click="$ga.event('drawer sponsor click', 'click', diamond.title)"
+          @click="$ga.event('drawer sponsor click', 'click', diamond.name)"
         )
           img.diamond-sponsor(
-            :src="`/static/doc-images/${diamond.src}`"
-            :alt="diamond.title"
+            :src="`/static/doc-images/${diamond.logo}`"
+            :alt="diamond.Name"
           )
       patreon-btn
     v-container(fluid)
@@ -35,7 +34,7 @@
         ref="search"
         light
       )
-    div.py-3.text-xs-center
+    div.pt-3.text-xs-center
       a(
         href="https://vuejobs.com/?utm_source=vuejobs&utm_medium=banner&utm_campaign=linking&ref=vuetifyjs.com"
         target="_blank"
@@ -81,6 +80,12 @@
               )
                 v-list-tile-content
                   v-list-tile-title {{ grand.title }}
+                v-chip(
+                  v-if="grand.badge"
+                  :color="grand.color || 'primary'"
+                  class="white--text pa-0 v-chip--x-small"
+                  disabled
+                ) {{ grand.badge }}
             <!--child item-->
             v-list-tile(
               v-else,
@@ -96,7 +101,7 @@
                   span {{ subItem.title }}
               v-chip(
                 v-if="subItem.badge"
-                class="white--text pa-0 chip--x-small"
+                class="white--text pa-0 v-chip--x-small"
                 color="primary"
                 disabled
               ) {{ subItem.badge }}
@@ -122,7 +127,7 @@
             v-list-tile-title {{ item.title }}
           v-chip(
             v-if="item.badge"
-            class="white--text pa-0 chip--x-small"
+            class="white--text pa-0 v-chip--x-small"
             :color="item.color || 'primary'"
             disabled
           ) {{ item.badge }}
@@ -138,14 +143,16 @@
 
 <script>
   // Utilities
-  import { mapMutations, mapState } from 'vuex'
-  import supporters from '@/assets/supporters'
-  import appDrawerItems from '@/assets/app-drawer-items'
+  import {
+    mapGetters,
+    mapMutations,
+    mapState
+  } from 'vuex'
+  import appDrawerItems from '@/data/layout/app-drawer-items'
   import { camel } from '@/util/helpers'
 
   export default {
     data: () => ({
-      diamonds: supporters.diamond,
       docSearch: {},
       isSearching: false,
       items: appDrawerItems,
@@ -154,6 +161,10 @@
 
     computed: {
       ...mapState('app', ['isFullscreen', 'stateless', 'appDrawer']),
+      ...mapGetters('app', ['supporters']),
+      diamonds () {
+        return this.supporters.diamond
+      },
       inputValue: {
         get (state) {
           return this.appDrawer &&
@@ -266,20 +277,20 @@
     img.logo
       margin 40px 0 15px
 
-    .chip--x-small
+    .v-chip--x-small
       font-size: 10px
       height: 16px
 
-      .chip__content
+      .v-chip__content
         line-height: 1
         padding: 8px
 
     .diamond-sponsor
       // todo trim down actual image file dimensions
-      height: 35px
+      height: 30px
       margin-bottom 0.25em
 
-      aside.navigation-drawer ul li
+      aside.v-navigation-drawer ul li
         font-size 14px
         color: #373737
 

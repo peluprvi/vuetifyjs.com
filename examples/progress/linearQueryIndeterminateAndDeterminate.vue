@@ -1,9 +1,9 @@
 <template>
   <v-progress-linear
-    :indeterminate="query"
-    :query="true"
     v-model="value"
     :active="show"
+    :indeterminate="query"
+    :query="true"
   ></v-progress-linear>
 </template>
 

@@ -4,18 +4,21 @@
     style="max-width: 400px; margin: auto;"
     class="grey lighten-3"
   >
-    <v-toolbar color="pink">
+    <v-toolbar
+      color="pink"
+      dark
+    >
       <v-toolbar-side-icon></v-toolbar-side-icon>
-      <v-toolbar-title class="white--text">My Music</v-toolbar-title>
+      <v-toolbar-title>My Music</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-icon>search</v-icon>
       </v-btn>
     </v-toolbar>
+
     <v-card>
       <v-container
         fluid
-        style="min-height: 0;"
         grid-list-lg
       >
         <v-layout row wrap>
@@ -30,6 +33,7 @@
               </v-card-actions>
             </v-card>
           </v-flex>
+
           <v-flex xs12>
             <v-card color="cyan darken-2" class="white--text">
               <v-container fluid grid-list-lg>
@@ -51,6 +55,7 @@
               </v-container>
             </v-card>
           </v-flex>
+
           <v-flex xs12>
             <v-card color="purple" class="white--text">
               <v-container fluid grid-list-lg>

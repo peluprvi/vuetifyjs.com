@@ -1,11 +1,22 @@
 <template>
   <div>
-    <v-alert type="success" dismissible v-model="alert">
+    <v-alert
+      v-model="alert"
+      dismissible
+      type="success"
+    >
       This is a success alert that is closable.
     </v-alert>
 
     <div class="text-xs-center">
-      <v-btn color="primary" dark v-if="!alert" @click="alert = true">Reset</v-btn>
+      <v-btn
+        v-if="!alert"
+        color="primary"
+        dark
+        @click="alert = true"
+      >
+        Reset
+      </v-btn>
     </div>
   </div>
 </template>

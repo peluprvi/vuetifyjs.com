@@ -1,9 +1,6 @@
 <template lang="pug">
   doc-view
     template(slot-scope="{ namespace }")
-      section#grid
-        grid
-
       section#visibility
         section-head(:value="`${namespace}.visibilityHeader`")
         section-text(:value="`${namespace}.visibilityText`")

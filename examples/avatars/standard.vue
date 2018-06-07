@@ -9,24 +9,26 @@
           label="Size"
           thumb-label
         ></v-slider>
+
         <v-switch
-          label="Tile"
           v-model="tile"
+          label="Tile"
         ></v-switch>
       </v-flex>
+
       <v-flex
         xs12
         sm6
         md8
-        text-xs-center
-        layout
         align-center
         justify-center
+        layout
+        text-xs-center
       >
         <v-avatar
           :tile="tile"
           :size="avatarSize"
-          class="grey lighten-4"
+          color="grey lighten-4"
         >
           <img src="/static/apple-touch-icon-180x180.png" alt="avatar">
         </v-avatar>

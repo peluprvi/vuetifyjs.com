@@ -4,46 +4,99 @@
       <v-container fluid>
         <v-layout row wrap>
           <v-flex xs12 sm3>
-            <v-checkbox v-model="x" value="left" label="Left"></v-checkbox>
+            <v-checkbox
+              v-model="x"
+              label="Left"
+              value="left"
+            ></v-checkbox>
           </v-flex>
+
           <v-flex xs6 sm3>
-            <v-checkbox v-model="x" value="right" label="Right"></v-checkbox>
+            <v-checkbox
+              v-model="x"
+              label="Right"
+              value="right"
+            ></v-checkbox>
           </v-flex>
+
           <v-flex xs6 sm3>
-            <v-checkbox v-model="y" value="top" label="Top"></v-checkbox>
+            <v-checkbox
+              v-model="y"
+              label="Top"
+              value="top"
+            ></v-checkbox>
           </v-flex>
+
           <v-flex xs6 sm3>
-            <v-checkbox v-model="y" value="bottom" label="Bottom"></v-checkbox>
+            <v-checkbox
+              v-model="y"
+              label="Bottom"
+              value="bottom"
+            ></v-checkbox>
           </v-flex>
+
           <v-flex xs12 sm3>
-            <v-checkbox v-model="mode" value="multi-line" label="Multi-line (mobile)"></v-checkbox>
+            <v-checkbox
+              v-model="mode"
+              label="Multi-line (mobile)"
+              value="multi-line"
+            ></v-checkbox>
           </v-flex>
+
           <v-flex xs12 sm3>
-            <v-checkbox v-model="mode" value="vertical" label="Vertical (mobile)"></v-checkbox>
+            <v-checkbox
+              v-model="mode"
+              label="Vertical (mobile)"
+              value="vertical"
+            ></v-checkbox>
           </v-flex>
+
           <v-flex xs12 sm4 offset-sm4>
-            <v-text-field v-model="text" type="text" label="Text"></v-text-field>
+            <v-text-field
+              v-model="text"
+              label="Text"
+              type="text"
+            ></v-text-field>
           </v-flex>
+
           <v-flex xs12 sm4>
-            <v-text-field v-model.number="timeout" type="number" label="Timeout"></v-text-field>
+            <v-text-field
+              v-model.number="timeout"
+              label="Timeout"
+              type="number"
+            ></v-text-field>
           </v-flex>
         </v-layout>
 
       </v-container>
-      <v-btn block color="primary" @click.native="snackbar = true" dark>Show Snackbar</v-btn>
+      <v-btn
+        block
+        color="primary"
+        dark
+        @click="snackbar = true"
+      >
+        Show Snackbar
+      </v-btn>
     </v-card-text>
+
     <v-snackbar
-      :timeout="timeout"
-      :top="y === 'top'"
+      v-model="snackbar"
       :bottom="y === 'bottom'"
-      :right="x === 'right'"
       :left="x === 'left'"
       :multi-line="mode === 'multi-line'"
+      :right="x === 'right'"
+      :timeout="timeout"
+      :top="y === 'top'"
       :vertical="mode === 'vertical'"
-      v-model="snackbar"
     >
       {{ text }}
-      <v-btn flat color="pink" @click.native="snackbar = false">Close</v-btn>
+      <v-btn
+        color="pink"
+        flat
+        @click="snackbar = false"
+      >
+        Close
+      </v-btn>
     </v-snackbar>
   </v-card>
 </template>

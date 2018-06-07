@@ -1,5 +1,6 @@
 import Alerts from './Alerts'
 import ApiExplorer from './ApiExplorer'
+import Autocompletes from './Autocompletes'
 import Avatars from './Avatars'
 import Badges from './Badges'
 import BottomNavigation from './BottomNavigation'
@@ -20,10 +21,12 @@ import Footer from './Footer'
 import Forms from './Forms'
 import HelpMeChoose from './HelpMeChoose'
 import Icons from './Icons'
+import Inputs from './Inputs'
 import Lists from './Lists'
 import Jumbotrons from './Jumbotrons'
 import Menus from './Menus'
 import NavigationDrawers from './NavigationDrawers'
+import OverflowBtns from './OverflowBtns'
 import Paginations from './Paginations'
 import Parallax from './Parallax'
 import Progress from './Progress'
@@ -35,6 +38,7 @@ import Steppers from './Steppers'
 import Subheaders from './Subheaders'
 import Tabs from './Tabs'
 import TemplateList from './TemplateList'
+import Textarea from './Textarea'
 import TextFields from './TextFields'
 import TimePickers from './TimePickers'
 import Toolbars from './Toolbars'
@@ -43,6 +47,7 @@ import Tooltips from './Tooltips'
 export default {
   Alerts,
   ApiExplorer,
+  Autocompletes,
   Avatars,
   Badges,
   BottomNavigation,
@@ -63,10 +68,12 @@ export default {
   Forms,
   HelpMeChoose,
   Icons,
+  Inputs,
   Lists,
   Jumbotrons,
   Menus,
   NavigationDrawers,
+  OverflowBtns,
   Paginations,
   Parallax,
   Progress,
@@ -78,6 +85,7 @@ export default {
   Subheaders,
   Tabs,
   TemplateList,
+  Textarea,
   TextFields,
   TimePickers,
   Toolbars,

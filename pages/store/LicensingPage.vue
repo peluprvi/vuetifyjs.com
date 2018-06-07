@@ -1,7 +1,7 @@
 <template>
   <v-container class="page pb-5">
     <div class="text-xs-center">
-      <v-btn flat :to="{ name: 'store/Index' }" class="mb-5" exact>
+      <v-btn :to="{ name: 'store/Index' }" flat class="mb-5" exact>
         <v-icon>chevron_left</v-icon>
         Back to store
       </v-btn>
@@ -15,7 +15,7 @@
       An Unlimited License can be used an unlimited amount of times for Personal Use, Commercial Use, and Commercial End Products.
     </p>
     <p>If you have a use-case that you feel isn't covered by these licenses and are interested in purchasing, please <a href="mailto:sales@vuetifyjs.com">Contact Us</a>.</p>
-    <table class="table">
+    <table class="v-table">
       <thead>
         <tr class="text-xs-left">
           <th>License</th>
@@ -41,9 +41,9 @@
     </div>
     <h2 class="headline primary--text mb-3">General FAQ</h2>
     <div
-      class="mb-4"
       v-for="(f, i) in faq"
       :key="i"
+      class="mb-4"
     >
       <div class="subheading" v-text="f[0]" />
       <div v-html="f[1]" />

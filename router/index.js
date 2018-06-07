@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import VueAnalytics from 'vue-analytics'
-import paths from './paths'
+import Routes from '@/data/routes.json'
 import scrollBehavior from './scroll-behavior'
 
 Vue.use(Router)
@@ -33,9 +33,27 @@ export function createRouter (store) {
     }
   }
 
-  const routes = paths.map(path => {
-    return route(...path)
-  })
+  const routes = [
+    // Temp until I figure out a way
+    // to implement this into admin
+    route(
+      'store/product/:id',
+      'store/Product',
+      null,
+      r => ({ id: r.params.id })
+    )
+  ]
+
+  routes.push(
+    ...Routes.map(r => {
+      return route(
+        r.route,
+        r.page,
+        r.fullscreen,
+        r.props
+      )
+    })
+  )
 
   const router = new Router({
     base: release ? `/releases/${release}` : __dirname,

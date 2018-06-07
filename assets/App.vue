@@ -1,35 +1,27 @@
-<template lang="pug">
-  v-fade-transition(appear)
-    v-app(v-cloak v-if="!examples")
-      app-drawer
-      app-toolbar
-      app-view
-      app-fab
-      app-snackbar
-
-    div(v-else)#app
-      router-view
+<template>
+  <v-fade-transition appear>
+    <documentation v-if="!examples" />
+    <div
+      v-else
+      id="app"
+    >
+      <router-view />
+    </div>
+  </v-fade-transition>
 </template>
 
 <script>
-  import AppDrawer from '@/components/core/AppDrawer'
-  import AppFab from '@/components/core/AppFab'
-  import AppSnackbar from '@/components/core/AppSnackbar'
-  import AppToolbar from '@/components/core/AppToolbar'
-  import AppView from '@/components/core/AppView'
+  import Documentation from '@/components/core/Documentation'
   import Meta from '@/mixins/meta'
 
-  import { mapState } from 'vuex'
+  import {
+    mapMutations,
+    mapState
+  } from 'vuex'
 
   export default {
-    name: 'Documentation',
-
     components: {
-      AppDrawer,
-      AppFab,
-      AppSnackbar,
-      AppToolbar,
-      AppView
+      Documentation
     },
 
     mixins: [Meta],
@@ -48,6 +40,9 @@
     },
 
     methods: {
+      ...mapMutations('app', {
+        snackbar: 'SNACKBAR'
+      }),
       getReleases () {
         this.$http.get('/releases/releases.json').then(({ data }) => {
           this.$store.commit('app/RELEASES', data)
@@ -61,12 +56,6 @@
 
 <style lang="stylus">
   @import '~vuetify/src/stylus/settings/_variables.styl'
-
-  [v-cloak]
-    display: none
-
-  .dashme
-    border: 1px dashed black !important
 
   main
     section

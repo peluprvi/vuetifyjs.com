@@ -77,10 +77,9 @@
       section(v-if="examples.length > 1")#examples
         section-head(value="Generic.Pages.examples")
         template(v-for="(example, i) in examples.slice(1)")
-          support-vuetify(v-if="i === 5" :key="i")
           example(
-            :header="`${example.header}`"
-            :new-in="example.new"
+            :header="example.header"
+            :new-in="example.newIn"
             :file="`${folder}/${example.file}`"
             :inverted="example.inverted"
             :has-inverted="!example.uninverted"
@@ -88,13 +87,12 @@
             :key="example.file"
             :desc="example.desc"
           )
-      section-head {{ $t('Generic.Pages.examples') }}
 
       slot
 </template>
 
 <script>
-  import api from '@/api/api'
+  import api from 'api-generator'
   // Utilities
   import { camel } from '@/util/helpers'
 
@@ -170,19 +168,13 @@
           scopedSlots: [],
           params: [],
           events: [],
-          funtions: [],
+          functions: [],
           functional: [],
           options: []
         }
       },
       examples () {
-        const examples = this.data.examples || {}
-
-        return Object.keys(examples).map(key => {
-          return Object.assign({
-            file: key
-          }, examples[key])
-        })
+        return this.data.examples || []
       },
       folder () {
         return this.data.folder || this.$route.params.component
@@ -202,20 +194,24 @@
             : []
       },
       toc () {
-        return this.$t(this.data.toc || `Generic.Pages.toc`)
+        return 'Components'
       },
       usage () {
-        return this.examples.slice(0, 1).shift()
+        return this.examples.slice(0, 1)[0]
       }
     },
 
     watch: {
       currentApi () {
-        if (this.currentApi.hasOwnProperty(this.tab) &&
-          this.currentApi[this.tab].length > 0
+        const api = this.currentApi[this.tab]
+
+        if (
+          !api ||
+          (this.currentApi.hasOwnProperty(this.tab) &&
+          api.length > 0)
         ) return
 
-        for (let tab of ['props', 'slots']) {
+        for (let tab of ['props', 'slots', 'options']) {
           if (this.currentApi[tab].length > 0) {
             this.tab = tab
             break

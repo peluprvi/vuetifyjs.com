@@ -1,34 +1,50 @@
 <template>
   <div>
-    <v-toolbar color="cyan" dark tabs>
+    <v-toolbar
+      color="cyan"
+      dark
+      tabs
+    >
       <v-toolbar-side-icon></v-toolbar-side-icon>
+
       <v-toolbar-title>Page title</v-toolbar-title>
+
       <v-spacer></v-spacer>
+
       <v-btn icon>
         <v-icon>search</v-icon>
       </v-btn>
+
       <v-btn icon>
         <v-icon>more_vert</v-icon>
       </v-btn>
+
       <v-tabs
-        fixed-tabs
+        slot="extension"
         v-model="currentItem"
         color="transparent"
+        fixed-tabs
         slider-color="yellow"
-        slot="extension"
       >
         <v-tab
           v-for="item in items"
-          :key="item"
           :href="'#tab-' + item"
+          :key="item"
         >
           {{ item }}
         </v-tab>
-        <v-menu left bottom class="tabs__div" v-if="more.length">
-          <a class="tabs__item" slot="activator">
+
+        <v-menu
+          v-if="more.length"
+          bottom
+          class="v-tabs__div"
+          left
+        >
+          <a slot="activator" class="v-tabs__item">
             more
             <v-icon>arrow_drop_down</v-icon>
           </a>
+
           <v-list class="grey lighten-3">
             <v-list-tile
               v-for="item in more"
@@ -45,8 +61,8 @@
     <v-tabs-items v-model="currentItem">
       <v-tab-item
         v-for="item in items.concat(more)"
-        :key="item"
         :id="'tab-' + item"
+        :key="item"
       >
         <v-card flat>
           <v-card-text>

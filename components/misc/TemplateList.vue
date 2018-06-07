@@ -46,6 +46,7 @@
                 v-card-text(v-html="template.desc")
               v-flex(xs2).layout.column.align-end.pa-3
                 v-tooltip(
+                  lazy
                   dark
                   left
                   v-if="template.link"
@@ -62,7 +63,7 @@
                     v-icon fab fa-codepen
                   span Codepen
                 template(v-else)
-                  v-tooltip(left dark)
+                  v-tooltip(lazy left dark)
                     v-btn(
                       icon
                       dark
@@ -74,7 +75,7 @@
                     ).elevation-20
                       v-icon fab fa-github
                     span Github
-                  v-tooltip(left dark)
+                  v-tooltip(lazy left dark)
                     v-btn(
                       icon
                       color="secondary"

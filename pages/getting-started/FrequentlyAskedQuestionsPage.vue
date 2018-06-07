@@ -34,15 +34,18 @@
           ) {{ $t(`${namespace}.resetSearch`) }}
 
       div.text-xs-center
-        div.mb-3 {{ $t(`${namespace}.questionHeader`) }}
-        v-btn(
-          outline
-          color="success"
-          round
-          href="https://chat.vuetifyjs.com"
-          target="_blank"
-          rel="noopener"
-        ) {{ $t(`${namespace}.questionButton`) }}
+        div.mb-3
+          translatable(:i18n="`${namespace}.questionHeader`")
+            span {{ $t(`${namespace}.questionHeader`) }}
+        translatable(:i18n="`${namespace}.questionButton`")
+          v-btn(
+            outline
+            color="success"
+            round
+            href="https://chat.vuetifyjs.com"
+            target="_blank"
+            rel="noopener"
+          ) {{ $t(`${namespace}.questionButton`) }}
 </template>
 
 <script>

@@ -2,7 +2,6 @@
   doc-view
     template(slot-scope="{ namespace }")
       app-alert(error :value="`${namespace}.alert1`")
-      app-alert(info :value="`${namespace}.newStoreAlert`")
 
       section#supported-browsers
         section-head(:value="`${namespace}.browserHeader`")
@@ -14,13 +13,15 @@
               v-for="browser in browsers"
               v-bind:key="browser.title"
             ).px-0
+              translatable(:i18n="getBrowserSupport(browser)")
               v-list-tile(avatar tag="ul")
                 v-list-tile-avatar(:color="browser.supported ? browser.supported === 'polyfill' ? 'warning' : 'success' : 'error'")
                   v-icon(dark v-if="typeof browser.icon === 'string'") fab fa-{{ browser.icon }}
                   v-icon(dark v-else v-for="icon in browser.icon" :key="icon").browser-icon--split fab fa-{{ icon }}
                 v-list-tile-content
                   v-list-tile-title {{ browser.title }}
-                  v-list-tile-sub-title {{ getBrowserSupport(browser) }}
+                  v-list-tile-sub-title
+                    span {{ $t(getBrowserSupport(browser)) }}
 
       section#cdn-install
         section-head(:value="`${namespace}.cdnHeader`")
@@ -83,6 +84,10 @@
           | &lt;head&gt;
           |   &lt;link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet"&gt;
           | &lt;/head&gt;
+        section-text(:value="`${namespace}.existingText6`")
+        markup(lang="js")
+          | // index.js or main.js
+          | import 'material-design-icons-iconfont/dist/material-design-icons.css' // Ensure you are using css-loader
         app-alert(error :value="`${namespace}.alert2`")
 
       section#ie11-support
@@ -127,9 +132,9 @@
 
     methods: {
       getBrowserSupport (browser) {
-        if (browser.supported === true) return this.$t('GettingStarted.QuickStart.browserSupport.supported')
-        else if (browser.supported === false) return this.$t('GettingStarted.QuickStart.browserSupport.notSupported')
-        else return this.$t(`GettingStarted.QuickStart.browserSupport.${browser.supported}`)
+        if (browser.supported === true) return 'GettingStarted.QuickStart.browserSupport.supported'
+        else if (browser.supported === false) return 'GettingStarted.QuickStart.browserSupport.notSupported'
+        else return `GettingStarted.QuickStart.browserSupport.${browser.supported}`
       }
     }
   }

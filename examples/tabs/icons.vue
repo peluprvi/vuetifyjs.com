@@ -1,24 +1,25 @@
 <template>
   <v-tabs
-    dark
     color="cyan"
-    show-arrows
-    prev-icon="mdi-arrow-left-bold-box-outline"
+    dark
     next-icon="mdi-arrow-right-bold-box-outline"
+    prev-icon="mdi-arrow-left-bold-box-outline"
+    show-arrows
   >
     <v-tabs-slider color="yellow"></v-tabs-slider>
     <v-tab
       v-for="i in 15"
-      :key="i"
       :href="'#tab-' + i"
+      :key="i"
     >
       Item {{ i }}
     </v-tab>
+
     <v-tabs-items>
       <v-tab-item
         v-for="i in 15"
-        :key="i"
         :id="'tab-' + i"
+        :key="i"
       >
         <v-card flat>
           <v-card-text>{{ text }}</v-card-text>

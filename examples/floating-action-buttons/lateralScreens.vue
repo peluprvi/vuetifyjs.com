@@ -11,9 +11,9 @@
         <v-icon>more_vert</v-icon>
       </v-btn>
       <v-tabs
-        align-with-title
-        v-model="tabs"
         slot="extension"
+        v-model="tabs"
+        align-with-title
         color="transparent"
       >
         <v-tab href="#one">Item One</v-tab>
@@ -32,12 +32,12 @@
       <v-btn
         :color="activeFab.color"
         :key="activeFab.icon"
+        v-model="fab"
         dark
         fab
         fixed
         bottom
         left
-        v-model="fab"
       >
         <v-icon>{{ activeFab.icon }}</v-icon>
         <v-icon>close</v-icon>
@@ -69,11 +69,11 @@
 
 <style>
   /* This is for documentation purposes and will not be needed in your application */
-  #lateral .speed-dial,
-  #lateral .btn--floating {
+  #lateral .v-speed-dial,
+  #lateral .v-btn--floating {
     position: absolute;
   }
-  #lateral .btn--floating {
+  #lateral .v-btn--floating {
     margin: 0 0 16px 16px;
   }
 </style>

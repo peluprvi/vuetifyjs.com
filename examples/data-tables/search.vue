@@ -4,16 +4,16 @@
       Nutrition
       <v-spacer></v-spacer>
       <v-text-field
+        v-model="search"
         append-icon="search"
         label="Search"
         single-line
         hide-details
-        v-model="search"
       ></v-text-field>
     </v-card-title>
     <v-data-table
       :headers="headers"
-      :items="items"
+      :items="desserts"
       :search="search"
     >
       <template slot="items" slot-scope="props">
@@ -49,7 +49,7 @@
           { text: 'Protein (g)', value: 'protein' },
           { text: 'Iron (%)', value: 'iron' }
         ],
-        items: [
+        desserts: [
           {
             value: false,
             name: 'Frozen Yogurt',

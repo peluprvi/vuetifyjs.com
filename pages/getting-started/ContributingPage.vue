@@ -6,16 +6,24 @@
         div.mb-3
           ul.browser-list
             li
-              markdown(:source="$t(`${namespace}.issue1`)")
+              translatable(:i18n="`${namespace}.issue1`")
+                markdown(:source="$t(`${namespace}.issue1`)")
             ul.browser-list
               li
-                markdown(:source="$t(`${namespace}.issue2`)")
+                translatable(:i18n="`${namespace}.issue2`")
+                  markdown(:source="$t(`${namespace}.issue2`)")
             li
-              markdown(:source="$t(`${namespace}.issue3`)")
+              translatable(:i18n="`${namespace}.issue3`")
+                markdown(:source="$t(`${namespace}.issue3`)")
             li
-              markdown(:source="$t(`${namespace}.issue4`)")
+              translatable(:i18n="`${namespace}.issue4`")
+                markdown(:source="$t(`${namespace}.issue4`)")
             li
-              markdown(:source="$t(`${namespace}.issue5`)")
+              translatable(:i18n="`${namespace}.issue5`")
+                markdown(:source="$t(`${namespace}.issue5`)")
+            li
+              translatable(:i18n="`${namespace}.issue6`")
+                markdown(:source="$t(`${namespace}.issue6`)")
       section#pull-requests
         section-head(:value="`${namespace}.pullRequestsHeader`")
         div.mb-3
@@ -24,7 +32,8 @@
               v-for="n in 3"
               :key="n"
             )
-              markdown(:source="$t(`${namespace}.pullRequest${n}`)")
+              translatable(:i18n="`${namespace}.pullRequest${n}`")
+                markdown(:source="$t(`${namespace}.pullRequest${n}`)")
       section#local-dev
         section-head(:value="`${namespace}.localDevHeader`")
         section-text(:value="`${namespace}.localDevText1`").mb-5

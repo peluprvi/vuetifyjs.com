@@ -10,64 +10,63 @@
       <span>Registration successful!</span>
       <v-icon dark>check_circle</v-icon>
     </v-snackbar>
-    <v-form @submit.prevent="submit" ref="form">
+    <v-form ref="form" @submit.prevent="submit">
       <v-container grid-list-xl fluid>
         <v-layout wrap>
           <v-flex xs12 sm6>
             <v-text-field
+              v-model="form.first"
+              :rules="rules.name"
               color="purple darken-2"
               label="First name"
               required
-              v-model="form.first"
-              :rules="rules.name"
             ></v-text-field>
           </v-flex>
           <v-flex xs12 sm6>
             <v-text-field
+              v-model="form.last"
+              :rules="rules.name"
               color="blue darken-2"
               label="Last name"
-              v-model="form.last"
               required
-              :rules="rules.name"
             ></v-text-field>
           </v-flex>
           <v-flex xs12>
-            <v-text-field
-              color="teal"
-              multi-line
+            <v-textarea
               v-model="form.bio"
+              color="teal"
             >
               <div slot="label">
                 Bio <small>(optional)</small>
               </div>
-            </v-text-field>
+            </v-textarea>
           </v-flex>
           <v-flex xs12 sm6>
             <v-select
-              color="pink"
-              label="Favorite animal"
               v-model="form.favoriteAnimal"
-              required
               :items="animals"
               :rules="rules.animal"
+              color="pink"
+              label="Favorite animal"
+              required
             ></v-select>
           </v-flex>
           <v-flex xs12 sm6>
             <v-slider
+              v-model="form.age"
+              :rules="rules.age"
               color="orange"
               label="Age"
               hint="Be honest"
               min="1"
               max="100"
               thumb-label
-              v-model="form.age"
-              :rules="rules.age"
             ></v-slider>
           </v-flex>
           <v-flex xs12>
             <v-checkbox
-              color="green"
               v-model="form.terms"
+              color="green"
             >
               <div slot="label" @click.stop="">
                 Do you accept the
@@ -83,10 +82,10 @@
         <v-btn flat @click="resetForm">Cancel</v-btn>
         <v-spacer></v-spacer>
         <v-btn
+          :disabled="!formIsValid"
           flat
           color="primary"
           type="submit"
-          :disabled="!formIsValid"
         >Register</v-btn>
       </v-card-actions>
     </v-form>

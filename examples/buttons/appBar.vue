@@ -1,32 +1,70 @@
 <template>
-  <v-toolbar>
-    <v-select :items="dropdown_font" overflow label="Select font" hide-details></v-select>
-    <v-select :items="dropdown_edit" overflow label="Select size" hide-details editable></v-select>
-    <v-btn-toggle v-model="toggle_multiple" multiple>
-      <v-btn icon :value="1">
+  <v-toolbar dense>
+    <v-overflow-btn
+      :items="dropdown_font"
+      label="Select font"
+      hide-details
+    ></v-overflow-btn>
+
+    <v-divider vertical></v-divider>
+
+    <v-overflow-btn
+      :items="dropdown_edit"
+      editable
+      label="Select size"
+      hide-details
+      overflow
+    ></v-overflow-btn>
+
+    <v-divider
+      class="mr-2"
+      vertical
+    ></v-divider>
+
+    <v-btn-toggle
+      v-model="toggle_multiple"
+      class="transparent"
+      multiple
+    >
+      <v-btn :value="1" flat>
         <v-icon>format_bold</v-icon>
       </v-btn>
-      <v-btn icon :value="2">
+
+      <v-btn :value="2" flat>
         <v-icon>format_italic</v-icon>
       </v-btn>
-      <v-btn icon :value="3">
+
+      <v-btn :value="3" flat>
         <v-icon>format_underlined</v-icon>
       </v-btn>
-      <v-btn icon :value="4">
+
+      <v-btn :value="4" flat>
         <v-icon>format_color_fill</v-icon>
       </v-btn>
     </v-btn-toggle>
-    <v-btn-toggle v-model="toggle_exclusive">
-      <v-btn icon :value="1">
+
+    <v-divider
+      class="mx-2"
+      vertical
+    ></v-divider>
+
+    <v-btn-toggle
+      v-model="toggle_exclusive"
+      class="transparent"
+    >
+      <v-btn :value="1" flat>
         <v-icon>format_align_left</v-icon>
       </v-btn>
-      <v-btn icon :value="2">
+
+      <v-btn :value="2" flat>
         <v-icon>format_align_center</v-icon>
       </v-btn>
-      <v-btn icon :value="3">
+
+      <v-btn :value="3" flat>
         <v-icon>format_align_right</v-icon>
       </v-btn>
-      <v-btn icon :value="4">
+
+      <v-btn :value="4" flat>
         <v-icon>format_align_justify</v-icon>
       </v-btn>
     </v-btn-toggle>

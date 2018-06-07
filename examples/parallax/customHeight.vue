@@ -1,3 +1,6 @@
 <template>
-  <v-parallax src="/static/doc-images/parallax/material2.jpg" height="300"></v-parallax>
+  <v-parallax
+    height="300"
+    src="/static/doc-images/parallax/material2.jpg"
+  ></v-parallax>
 </template>

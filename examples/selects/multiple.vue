@@ -1,28 +1,30 @@
 <template>
   <v-container fluid>
-    <v-layout row wrap>
+    <v-layout row wrap align-center>
       <v-flex xs12 sm6>
         <v-subheader v-text="'Multiple with persistent hint'"></v-subheader>
       </v-flex>
       <v-flex xs12 sm6>
         <v-select
-          label="Select"
           :items="states"
           v-model="e6"
+          label="Select"
           multiple
           max-height="400"
           hint="Pick your favorite states"
           persistent-hint
         ></v-select>
       </v-flex>
+
       <v-flex xs12 sm6>
         <v-subheader v-text="'Multiple (Chips) with persistent hint'"></v-subheader>
       </v-flex>
+
       <v-flex xs12 sm6>
         <v-select
-          label="Select"
           :items="states"
           v-model="e7"
+          label="Select"
           multiple
           chips
           hint="What are the target regions"

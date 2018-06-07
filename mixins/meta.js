@@ -71,16 +71,16 @@ export default {
     setMeta () {
       const path = this.$route.path.split('/').slice(2).join('/')
       const lang = this.$route.path.split('/')[1]
-      const meta = this.$i18n.getLocaleMessage(lang).meta || {}
+      const meta = this.$i18n.getLocaleMessage(lang).Meta || {}
 
-      if (this.$route.path.indexOf('product') > -1) {
+      if (this.$route.name === 'store/Product') {
         return (this.meta = this.getProductMeta())
       }
 
       this.meta = meta[path] || this.getFallbackMeta(path) || {}
     },
     getFallbackMeta (path) {
-      const fallbackmeta = this.$i18n.getLocaleMessage('en').meta
+      const fallbackmeta = this.$i18n.getLocaleMessage('en').Meta
       if (process.env.NODE_ENV === 'development') {
         console.warn('Falling back to english meta for ' + (path || '/'))
       }

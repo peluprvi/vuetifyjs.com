@@ -1,10 +1,10 @@
 <template>
   <v-layout row justify-center>
-    <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition" :overlay="false">
-      <v-btn color="primary" dark slot="activator">Open Dialog</v-btn>
+    <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+      <v-btn slot="activator" color="primary" dark>Open Dialog</v-btn>
       <v-card>
         <v-toolbar dark color="primary">
-          <v-btn icon @click.native="dialog = false" dark>
+          <v-btn icon dark @click.native="dialog = false">
             <v-icon>close</v-icon>
           </v-btn>
           <v-toolbar-title>Settings</v-toolbar-title>

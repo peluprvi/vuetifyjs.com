@@ -1,6 +1,10 @@
 <template>
   <div class="text-xs-center">
-    <v-pagination :length="15" v-model="page" :total-visible="7"></v-pagination>
+    <v-pagination
+      v-model="page"
+      :length="15"
+      :total-visible="7"
+    ></v-pagination>
   </div>
 </template>
 

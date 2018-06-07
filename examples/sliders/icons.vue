@@ -1,12 +1,35 @@
 <template>
-  <v-card>
+  <v-card
+    flat
+    color="transparent"
+  >
     <v-subheader>Media volume</v-subheader>
     <v-card-text>
-      <v-slider prepend-icon="volume_up" v-model="media"></v-slider>
+      <v-slider
+        v-model="media"
+        prepend-icon="volume_up"
+      ></v-slider>
     </v-card-text>
+
     <v-subheader>Alarm volume</v-subheader>
+
     <v-card-text>
-      <v-slider append-icon="alarm" v-model="alarm"></v-slider>
+      <v-slider
+        v-model="alarm"
+        append-icon="alarm"
+      ></v-slider>
+    </v-card-text>
+
+    <v-subheader>Icon click callback</v-subheader>
+
+    <v-card-text>
+      <v-slider
+        v-model="zoom"
+        :append-icon-cb="zoomIn"
+        :prepend-icon-cb="zoomOut"
+        append-icon="zoom_in"
+        prepend-icon="zoom_out"
+      ></v-slider>
     </v-card-text>
   </v-card>
 </template>
@@ -16,7 +39,17 @@
     data () {
       return {
         media: 0,
-        alarm: 0
+        alarm: 0,
+        zoom: 0
+      }
+    },
+
+    methods: {
+      zoomOut () {
+        this.zoom = (this.zoom - 10) || 0
+      },
+      zoomIn () {
+        this.zoom = (this.zoom + 10) || 100
       }
     }
   }

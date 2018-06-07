@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-tooltip(right)
+  v-tooltip(lazy right)
     v-btn(
       fab
       dark

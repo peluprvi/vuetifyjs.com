@@ -1,7 +1,14 @@
 <template>
   <div class="text-xs-center">
     <v-bottom-sheet v-model="sheet">
-      <v-btn slot="activator" color="purple" dark>Click me</v-btn>
+      <v-btn
+        slot="activator"
+        color="purple"
+        dark
+      >
+        Click me
+      </v-btn>
+
       <v-list>
         <v-subheader>Open in</v-subheader>
         <v-list-tile
@@ -11,7 +18,10 @@
         >
           <v-list-tile-avatar>
             <v-avatar size="32px" tile>
-              <img :src="`/static/doc-images/bottom-sheets/${tile.img}`" :alt="tile.title">
+              <img
+                :src="`/static/doc-images/bottom-sheets/${tile.img}`"
+                :alt="tile.title"
+              >
             </v-avatar>
           </v-list-tile-avatar>
           <v-list-tile-title>{{ tile.title }}</v-list-tile-title>

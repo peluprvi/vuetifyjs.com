@@ -1,5 +1,7 @@
 <template lang="pug">
-  markdown(:source="$t(value)")
+  div.text-xs-justify
+    translatable(:i18n="value")
+    markdown(:source="$t(value)")
 </template>
 
 <script>

@@ -1,11 +1,11 @@
 import Applicationable from './Applicationable'
 import Bootable from './Bootable'
 import Colorable from './Colorable'
+import Comparable from './Comparable'
 import DataIterable from './DataIterable'
 import Delayable from './Delayable'
 import Detachable from './Detachable'
 import Filterable from './Filterable'
-import Input from './Input'
 import Loadable from './Loadable'
 import Menuable from './Menuable'
 import Picker from './Picker'
@@ -21,11 +21,11 @@ export default {
   Applicationable,
   Bootable,
   Colorable,
+  Comparable,
   DataIterable,
   Delayable,
   Detachable,
   Filterable,
-  Input,
   Loadable,
   Menuable,
   Picker,

@@ -7,39 +7,72 @@
             <v-radio-group v-model="color" row>
               <v-radio
                 v-for="(colorValue, i) in ['success', 'info', 'error', 'cyan darken-2']"
-                :key="i"
-                :value="colorValue"
-                :label="colorValue"
                 :color="colorValue"
+                :key="i"
+                :label="colorValue"
+                :value="colorValue"
               ></v-radio>
             </v-radio-group>
           </v-flex>
+
           <v-flex xs12 sm3>
-            <v-checkbox v-model="mode" value="multi-line" label="Multi-line (mobile)"></v-checkbox>
+            <v-checkbox
+              v-model="mode"
+              label="Multi-line (mobile)"
+              value="multi-line"
+            ></v-checkbox>
           </v-flex>
+
           <v-flex xs12 sm3>
-            <v-checkbox v-model="mode" value="vertical" label="Vertical (mobile)"></v-checkbox>
+            <v-checkbox
+              v-model="mode"
+              label="Vertical (mobile)"
+              value="vertical"
+            ></v-checkbox>
           </v-flex>
+
           <v-flex xs12 sm4 offset-sm4>
-            <v-text-field v-model="text" type="text" label="Text"></v-text-field>
+            <v-text-field
+              v-model="text"
+              label="Text"
+              type="text"
+            ></v-text-field>
           </v-flex>
+
           <v-flex xs12 sm4>
-            <v-text-field v-model.number="timeout" type="number" label="Timeout"></v-text-field>
+            <v-text-field
+              v-model.number="timeout"
+              label="Timeout"
+              type="number"
+            ></v-text-field>
           </v-flex>
         </v-layout>
-
       </v-container>
-      <v-btn block color="primary" @click.native="snackbar = true" dark>Show Snackbar</v-btn>
+
+      <v-btn
+        block
+        color="primary"
+        dark
+        @click="snackbar = true"
+      >
+        Show Snackbar
+      </v-btn>
     </v-card-text>
     <v-snackbar
-      :timeout="timeout"
+      v-model="snackbar"
       :color="color"
       :multi-line="mode === 'multi-line'"
+      :timeout="timeout"
       :vertical="mode === 'vertical'"
-      v-model="snackbar"
     >
       {{ text }}
-      <v-btn dark flat @click.native="snackbar = false">Close</v-btn>
+      <v-btn
+        dark
+        flat
+        @click="snackbar = false"
+      >
+        Close
+      </v-btn>
     </v-snackbar>
   </v-card>
 </template>

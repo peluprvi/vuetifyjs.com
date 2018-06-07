@@ -1,20 +1,21 @@
 <template>
   <v-container fluid>
-    <v-layout row wrap>
+    <v-layout row wrap align-center>
       <v-flex xs6>
         <v-subheader>Custom items</v-subheader>
       </v-flex>
+
       <v-flex xs6>
         <v-select
-          :items="items"
           v-model="select"
-          label="Select"
-          single-line
+          :hint="`${select.state}, ${select.abbr}`"
+          :items="items"
           item-text="state"
           item-value="abbr"
-          return-object
-          :hint="`${select.state}, ${select.abbr}`"
+          label="Select"
           persistent-hint
+          return-object
+          single-line
         ></v-select>
       </v-flex>
     </v-layout>

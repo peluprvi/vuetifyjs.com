@@ -1,11 +1,16 @@
 <template>
   <div>
     <div class="text-xs-center">
-      <v-btn color="primary" @click="alert = !alert">Toggle</v-btn>
+      <v-btn
+        color="primary"
+        @click="alert = !alert"
+      >
+        Toggle
+      </v-btn>
     </div>
     <v-alert
-      type="success"
       :value="alert"
+      type="success"
       transition="scale-transition"
     >
       This is a success alert.
@@ -15,8 +20,10 @@
 
 <script>
   export default {
-    data: () => ({
-      alert: true
-    })
+    data () {
+      return {
+        alert: true
+      }
+    }
   }
 </script>

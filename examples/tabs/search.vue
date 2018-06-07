@@ -6,19 +6,20 @@
       tabs
     >
       <v-text-field
-        prepend-icon="search"
         append-icon="mic"
-        label="Search"
-        solo-inverted
         class="mx-3"
         flat
+        label="Search"
+        prepend-icon="search"
+        solo-inverted
       ></v-text-field>
+
       <v-tabs
         slot="extension"
-        centered
         v-model="tabs"
-        slider-color="white"
+        centered
         color="transparent"
+        slider-color="white"
       >
         <v-tab
           v-for="n in 3"
@@ -28,6 +29,7 @@
         </v-tab>
       </v-tabs>
     </v-toolbar>
+
     <v-tabs-items v-model="tabs">
       <v-tab-item
         v-for="n in 3"

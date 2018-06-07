@@ -5,6 +5,8 @@
 </template>
 
 <script>
+  // Utilities
+  import { mapState } from 'vuex'
   import { camel, kebab } from '@/util/helpers'
   import NotFound from '@/pages/general/404Page'
 
@@ -27,40 +29,65 @@
     },
 
     computed: {
-      components () {
-        const components = `${this.computedSection}.${this.computedComponent}.components`
-
-        return this.$te(components)
-          ? this.$t(components)
-          : this.$te(components, 'en')
-            ? this.$t(components, 'en')
-            : []
-      },
+      ...mapState('app', ['components']),
       computedComponent () {
         return camel(this.component)
+      },
+      computedComponents () {
+        let component = this.components[this.component]
+
+        // Temporary until all components are converted
+        if (component) {
+          return component.components
+        } else {
+          // TODO: move out of translation files
+          component = `${this.computedSection}.${this.computedComponent}.components`
+        }
+
+        return this.$te(component)
+          ? this.$t(component)
+          : this.$te(component, 'en')
+            ? this.$t(component, 'en')
+            : []
       },
       computedSection () {
         return camel(this.section)
       },
       data () {
         return {
-          components: this.components,
+          components: this.computedComponents,
           examples: this.examples,
           folder: kebab(this.computedComponent),
           toc: this.toc
         }
       },
       examples () {
-        const examples = `${this.computedSection}.${this.computedComponent}.examples`
+        const component = this.components[this.component]
 
-        return this.$te(examples)
-          ? this.$t(examples)[0]
-          : this.$te(examples, 'en')
-            ? this.$t(examples, 'en')[0]
-            : []
+        if (!component) return []
+
+        return component.examples.map(example => {
+          let file = example
+          let newIn = false
+
+          if (example === Object(example)) {
+            file = example.file
+            newIn = example.newIn
+          }
+
+          const namespace = `${this.computedSection}.${this.computedComponent}.examples.${file}`
+
+          return {
+            file,
+            desc: `${namespace}.desc`,
+            header: `${namespace}.header`,
+            newIn
+          }
+        })
       },
       exists () {
-        return this.components.length > 0 || this.examples.length > 0
+        return (this.computedComponents || []).length > 0 ||
+          (this.examples || []).length > 0
       }
     }
   }

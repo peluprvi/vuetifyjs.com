@@ -6,7 +6,7 @@
 <script>
   import { camelActual } from '@/util/helpers'
   import { mapState } from 'vuex'
-  import languages from '@/i18n/languages'
+  import languages from '@/data/i18n/languages.json'
   import NotFoundPage from '@/pages/general/404Page.vue'
 
   export default {
@@ -49,7 +49,7 @@
           /* webpackChunkName: "lang-[request]" */
           /* webpackMode: "lazy-once" */
           `@/lang/${localeFile}`
-          ).then(msgs => this.$i18n.setLocaleMessage(locale, msgs.default))
+        ).then(msgs => this.$i18n.setLocaleMessage(locale, msgs.default))
           .catch(err => Promise.resolve(err))
       }
 

@@ -2,9 +2,9 @@
   <v-data-table
     v-model="selected"
     :headers="headers"
-    :items="items"
-    select-all
+    :items="desserts"
     :pagination.sync="pagination"
+    select-all
     item-key="name"
     class="elevation-1"
   >
@@ -12,11 +12,11 @@
       <tr>
         <th>
           <v-checkbox
+            :input-value="props.all"
+            :indeterminate="props.indeterminate"
             primary
             hide-details
             @click.native="toggleAll"
-            :input-value="props.all"
-            :indeterminate="props.indeterminate"
           ></v-checkbox>
         </th>
         <th
@@ -34,9 +34,9 @@
       <tr :active="props.selected" @click="props.selected = !props.selected">
         <td>
           <v-checkbox
+            :input-value="props.selected"
             primary
             hide-details
-            :input-value="props.selected"
           ></v-checkbox>
         </td>
         <td>{{ props.item.name }}</td>
@@ -69,7 +69,7 @@
         { text: 'Protein (g)', value: 'protein' },
         { text: 'Iron (%)', value: 'iron' }
       ],
-      items: [
+      desserts: [
         {
           value: false,
           name: 'Frozen Yogurt',
@@ -166,7 +166,7 @@
     methods: {
       toggleAll () {
         if (this.selected.length) this.selected = []
-        else this.selected = this.items.slice()
+        else this.selected = this.desserts.slice()
       },
       changeSort (column) {
         if (this.pagination.sortBy === column) {

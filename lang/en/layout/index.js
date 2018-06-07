@@ -1,4 +1,5 @@
 import Alignment from './Alignment'
+import Breakpoints from './Breakpoints'
 import Display from './Display'
 import Elevation from './Elevation'
 import Grid from './Grid'
@@ -10,6 +11,7 @@ import Spacing from './Spacing'
 
 export default {
   Alignment,
+  Breakpoints,
   Display,
   Elevation,
   Grid,

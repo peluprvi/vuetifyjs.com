@@ -1,8 +1,15 @@
 <template>
-  <v-parallax src="/static/doc-images/vbanner.jpg">
-    <v-layout column align-center justify-center>
-      <h1 class="white--text">Vuetify.js</h1>
-      <h4 class="white--text">Build your application today!</h4>
+  <v-parallax
+    dark
+    src="/static/doc-images/vbanner.jpg"
+  >
+    <v-layout
+      align-center
+      column
+      justify-center
+    >
+      <h1 class="display-2 font-weight-thin mb-3">Vuetify.js</h1>
+      <h4 class="subheading">Build your application today!</h4>
     </v-layout>
   </v-parallax>
 </template>

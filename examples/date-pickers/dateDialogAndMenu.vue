@@ -1,22 +1,22 @@
 <template>
   <v-layout row wrap>
-    <v-flex xs11 sm5>
+    <v-flex xs12 sm6 md4>
       <v-menu
         ref="menu"
-        lazy
         :close-on-content-click="false"
         v-model="menu"
+        :nudge-right="40"
+        :return-value.sync="date"
+        lazy
         transition="scale-transition"
         offset-y
         full-width
-        :nudge-right="40"
         min-width="290px"
-        :return-value.sync="date"
       >
         <v-text-field
           slot="activator"
-          label="Picker in menu"
           v-model="date"
+          label="Picker in menu"
           prepend-icon="event"
           readonly
         ></v-text-field>
@@ -28,20 +28,20 @@
       </v-menu>
     </v-flex>
     <v-spacer></v-spacer>
-    <v-flex xs11 sm5>
+    <v-flex xs12 sm6 md4>
       <v-dialog
         ref="dialog"
-        persistent
         v-model="modal"
+        :return-value.sync="date"
+        persistent
         lazy
         full-width
         width="290px"
-        :return-value.sync="date"
       >
         <v-text-field
           slot="activator"
-          label="Picker in dialog"
           v-model="date"
+          label="Picker in dialog"
           prepend-icon="event"
           readonly
         ></v-text-field>
@@ -52,6 +52,31 @@
         </v-date-picker>
       </v-dialog>
     </v-flex>
+    <v-flex xs12 sm6 md4>
+      <v-menu
+        ref="menu2"
+        :close-on-content-click="false"
+        v-model="menu2"
+        :nudge-right="40"
+        :return-value.sync="date"
+        lazy
+        transition="scale-transition"
+        offset-y
+        full-width
+        min-width="290px"
+      >
+        <v-text-field
+          slot="activator"
+          v-model="date"
+          label="Picker without buttons"
+          prepend-icon="event"
+          readonly
+        ></v-text-field>
+        <v-date-picker v-model="date" @input="$refs.menu2.save(date)"></v-date-picker>
+
+      </v-menu>
+    </v-flex>
+    <v-spacer></v-spacer>
   </v-layout>
 </template>
 
@@ -60,7 +85,8 @@
     data: () => ({
       date: null,
       menu: false,
-      modal: false
+      modal: false,
+      menu2: false
     })
   }
 </script>

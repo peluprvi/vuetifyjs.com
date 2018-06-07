@@ -1,0 +1,13 @@
+{
+  "props": {
+    "v-dialog": {
+      "no-click-animation": "1.1"
+    },
+    "v-divider": {
+      "vertical": "1.1"
+    },
+    "v-text-field": {
+      "append-outer-icon": "1.1"
+    }
+  }
+}

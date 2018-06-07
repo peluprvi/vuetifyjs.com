@@ -9,12 +9,16 @@
           <v-icon>search</v-icon>
         </v-btn>
       </v-toolbar>
+
       <v-card>
-        <v-container fluid grid-list-md>
+        <v-container
+          fluid
+          grid-list-md
+        >
           <v-layout row wrap>
             <v-flex
-              v-bind="{ [`xs${card.flex}`]: true }"
               v-for="card in cards"
+              v-bind="{ [`xs${card.flex}`]: true }"
               :key="card.title"
             >
               <v-card>
@@ -22,14 +26,19 @@
                   :src="card.src"
                   height="200px"
                 >
-                  <v-container fill-height fluid>
+                  <v-container
+                    fill-height
+                    fluid
+                    pa-2
+                  >
                     <v-layout fill-height>
                       <v-flex xs12 align-end flexbox>
-                        <span class="headline white--text" v-text="card.title"/>
+                        <span class="headline white--text" v-text="card.title"></span>
                       </v-flex>
                     </v-layout>
                   </v-container>
                 </v-card-media>
+
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn icon>

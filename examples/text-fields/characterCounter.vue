@@ -1,41 +1,44 @@
 <template>
-  <v-container fluid grid-list-xl>
-    <v-layout row wrap>
-      <v-flex xs12 class="my-3">
-        <v-card>
-          <v-toolbar color="primary">
-            <v-btn icon>
-              <v-icon color="white">arrow_back</v-icon>
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-btn icon>
-              <v-icon color="white">more_vert</v-icon>
-            </v-btn>
-          </v-toolbar>
-          <v-container fluid class="px-3">
-            <v-layout row wrap>
-              <v-flex xs12>
-                <v-text-field
-                  label="Title"
-                  :rules="[(v) => v.length <= 25 || 'Max 25 characters']"
-                  :counter="25"
-                  v-model="title"
-                ></v-text-field>
-              </v-flex>
-              <v-flex xs12>
-                <v-text-field
-                  label="Description"
-                  :rules="[(v) => v.length <= 50 || 'Max 50 characters']"
-                  :counter="50"
-                  v-model="description"
-                ></v-text-field>
-              </v-flex>
-            </v-layout>
-          </v-container>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-card>
+    <v-toolbar
+      card
+      color="indigo"
+      dark
+    >
+      <v-btn icon>
+        <v-icon>arrow_back</v-icon>
+      </v-btn>
+      <v-toolbar-title>Create new report</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>more_vert</v-icon>
+      </v-btn>
+    </v-toolbar>
+    <v-card-text>
+      <v-form>
+        <v-text-field
+          v-model="title"
+          :rules="[v => v.length <= 25 || 'Max 25 characters']"
+          counter="25"
+          label="Title"
+        ></v-text-field>
+        <v-text-field
+          v-model="blurb"
+          :rules="[v => v.length <= 50 || 'Max 50 characters']"
+          counter="50"
+          label="Blurb"
+        ></v-text-field>
+        <v-textarea
+          v-model="description"
+          :rules="[v => v.length <= 256 || 'Max 50 characters']"
+          auto-grow
+          counter="256"
+          label="Description"
+          rows="3"
+        ></v-textarea>
+      </v-form>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>
@@ -43,7 +46,8 @@
     data () {
       return {
         title: 'Preliminary report',
-        description: 'Report describing the state of California'
+        blurb: 'Report describing the state of California',
+        description: 'California is a state in the western United States. It is the third largest state in size. It is the state with the most people living in it. Important cities are Los Angeles, San Diego, San Jose, and San Francisco'
       }
     }
   }

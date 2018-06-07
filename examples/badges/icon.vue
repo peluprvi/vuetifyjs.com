@@ -6,7 +6,9 @@
         MDI icon
       </span>
     </v-badge>
+
     &nbsp;&nbsp;
+
     <v-badge color="orange">
       <v-icon slot="badge" dark small>fas fa-fighter-jet</v-icon>
       <span>

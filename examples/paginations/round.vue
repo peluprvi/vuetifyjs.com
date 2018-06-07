@@ -1,6 +1,10 @@
 <template>
   <div class="text-xs-center">
-    <v-pagination :length="4" v-model="page" circle></v-pagination>
+    <v-pagination
+      v-model="page"
+      :length="4"
+      circle
+    ></v-pagination>
   </div>
 </template>
 

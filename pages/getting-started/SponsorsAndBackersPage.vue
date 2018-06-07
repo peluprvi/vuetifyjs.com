@@ -18,14 +18,14 @@
             a(
               :href="`${backer.href}?ref=vuetifyjs.com`"
               target="_blank"
-              :title="backer.title"
-              v-for="backer in diamond"
-              v-bind:key="backer.title"
-              @click="$ga.event('backers page click', 'click', backer.title)"
+              :title="backer.name"
+              v-for="backer in supporters.diamond"
+              v-bind:key="backer.name"
+              @click="$ga.event('backers page click', 'click', backer.name)"
             ).text-xs-center.ma-3
               img(
-                :src="`/static/doc-images/${backer.src}`"
-                :alt="backer.title"
+                :src="`/static/doc-images/${backer.logo}`"
+                :alt="backer.name"
               ).supporter
 
         v-list(dense).transparent
@@ -38,14 +38,14 @@
               target="_blank"
               :class="[backer.dark ? 'black' : '']"
               :href="`${backer.href}?ref=vuetifyjs.com`"
-              :title="backer.title"
-              v-for="backer in palladium"
-              v-bind:key="backer.title"
-              @click="$ga.event('backers page click', 'click', backer.title)"
+              :title="backer.name"
+              v-for="backer in supporters.palladium"
+              v-bind:key="backer.name"
+              @click="$ga.event('backers page click', 'click', backer.name)"
             ).text-xs-center.ma-3
               img(
-                :src="`/static/doc-images/${backer.src}`"
-                :alt="backer.title"
+                :src="`/static/doc-images/${backer.logo}`"
+                :alt="backer.name"
               ).supporter
 
         v-list(dense).transparent
@@ -63,15 +63,15 @@
             target="_blank"
               :class="[backer.dark ? 'black' : '']"
               :href="`${backer.href}?ref=vuetifyjs.com`"
-              :title="backer.title"
-              v-for="backer in gold"
-              v-bind:key="backer.title"
-              @click="$ga.event('backers page click', 'click', backer.title)"
+              :title="backer.name"
+              v-for="backer in supporters.gold"
+              v-bind:key="backer.name"
+              @click="$ga.event('backers page click', 'click', backer.name)"
             ).text-xs-center.ma-3
               img(
-                :src="`/static/doc-images/${backer.src}`"
-                :alt="backer.title"
-                :style="`max-width: ${backer.size || 150}px;`"
+                :src="`/static/doc-images/${backer.logo}`"
+                :alt="backer.name"
+                :style="`max-width: ${backer.Size || 150}px;`"
               ).supporter
         section-head(value="GettingStarted.SponsorsAndBackers.affiliatesHeader")
         v-divider.mb-3
@@ -86,14 +86,14 @@
               target="_blank"
               :class="[affiliate.dark ? 'black' : '']"
               :href="`${affiliate.href}${affiliate.noref ? '' : '?ref=vuetifyjs.com'}`"
-              :title="affiliate.title"
-              v-for="affiliate in affiliates"
-              v-bind:key="affiliate.title"
-              @click="$ga.event('backers page click', 'click', affiliate.title)"
+              :title="affiliate.name"
+              v-for="affiliate in supporters.affiliate"
+              v-bind:key="affiliate.name"
+              @click="$ga.event('backers page click', 'click', affiliate.name)"
             ).text-xs-center.mx-3
               img(
-                :src="`/static/doc-images/${affiliate.src}`"
-                :alt="affiliate.title"
+                :src="`/static/doc-images/${affiliate.logo}`"
+                :alt="affiliate.name"
                 style="max-width: 150px;"
               ).supporter
         section-head(value="GettingStarted.SponsorsAndBackers.sponsorsHeader")
@@ -108,37 +108,39 @@
             a(
               :href="`${sponsor.href}?ref=vuetifyjs.com`"
               target="_blank"
-              :title="sponsor.title"
-              v-for="sponsor in sponsors"
-              v-bind:key="sponsor.title"
-              @click="$ga.event('backers page click', 'click', sponsor.title)"
+              :title="sponsor.name"
+              v-for="sponsor in supporters.service"
+              v-bind:key="sponsor.name"
+              @click="$ga.event('backers page click', 'click', sponsor.name)"
             ).text-xs-center.mx-3
               img(
-                :src="`/static/doc-images/${sponsor.src}`"
-                alt="sponsor.title"
+                :src="`/static/doc-images/${sponsor.logo}`"
+                alt="sponsor.name"
                 style="max-width: 150px;"
               ).supporter
         div.text-xs-center
-          div.mb-3 {{ $t('GettingStarted.SponsorsAndBackers.questionHeader') }}
-          v-btn(
-            outline
-            color="success"
-            round
-            href="mailto:john@vuetifyjs.com"
-          ) {{ $t('GettingStarted.SponsorsAndBackers.questionButton') }}
+          div.mb-3
+            translatable(i18n="GettingStarted.SponsorsAndBackers.questionHeader")
+              span {{ $t('GettingStarted.SponsorsAndBackers.questionHeader') }}
+          translatable(i18n="GettingStarted.SponsorsAndBackers.questionButton")
+            v-btn(
+              outline
+              color="success"
+              round
+              href="mailto:john@vuetifyjs.com"
+            ) {{ $t('GettingStarted.SponsorsAndBackers.questionButton') }}
 </template>
 
 <script>
-  import supporters from '@/assets/supporters'
+  // Utilities
+  import {
+    mapGetters
+  } from 'vuex'
 
   export default {
-    data: () => ({
-      diamond: supporters.diamond,
-      gold: supporters.gold,
-      palladium: supporters.palladium,
-      affiliates: supporters.affiliates,
-      sponsors: supporters.sponsors
-    })
+    computed: {
+      ...mapGetters('app', ['supporters'])
+    }
   }
 </script>
 

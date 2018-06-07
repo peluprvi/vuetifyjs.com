@@ -116,7 +116,7 @@
       &:after
         opacity: 0
 
-    .icon
+    .v-icon
       position: absolute
       right: 0
       transition: opacity .2s ease-in
@@ -129,7 +129,7 @@
       z-index: 4
 
     &:hover
-      .icon
+      .v-icon
         opacity: 1
 
     pre, code
@@ -175,7 +175,7 @@
         color: $grey.base
         font-weight: 300
 
-  .tabs
+  .v-tabs
     .markup
       max-width: 100%
 </style>

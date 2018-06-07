@@ -1,17 +1,20 @@
-<template lang="pug">
-  v-content
-    v-fade-transition(mode="out-in")
-      router-view(:key="$route.path")
-    //- app-footer
+<template>
+  <v-content>
+    <v-fade-transition mode="out-in">
+      <router-view :key="$route.path" />
+    </v-fade-transition>
+    <translation-bar v-if="isTranslating" />
+  </v-content>
 </template>
 
 <script>
-  // Components
-  import AppFooter from '@/components/core/AppFooter'
+  import { mapState } from 'vuex'
 
   export default {
-    components: {
-      AppFooter
+    computed: {
+      ...mapState('translation', {
+        isTranslating: state => state.isTranslating
+      })
     }
   }
 </script>

@@ -2,23 +2,23 @@
   <v-container grid-list-md>
     <v-layout row wrap>
       <v-flex xs12 sm6>
-        <v-text-field box label="First Name" v-model="first"></v-text-field>
+        <v-text-field v-model="first" box label="First Name"></v-text-field>
       </v-flex>
       <v-flex xs12 sm6>
-        <v-text-field box label="Last Name" v-model="last"></v-text-field>
+        <v-text-field v-model="last" box label="Last Name"></v-text-field>
       </v-flex>
       <v-flex xs12>
         <v-text-field
-          box
-          label="Email address"
           :rules="emailRules"
           v-model="email"
+          box
+          label="Email address"
           hint="Enter your email!"
           persistent-hint
         ></v-text-field>
       </v-flex>
       <v-flex xs12>
-        <v-text-field box multi-line label="Bio"></v-text-field>
+        <v-textarea box label="Bio"></v-textarea>
       </v-flex>
     </v-layout>
   </v-container>

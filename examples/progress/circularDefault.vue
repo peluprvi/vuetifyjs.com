@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-xs-center">
     <v-progress-circular :value="20"></v-progress-circular>
 
     <v-progress-circular :value="40"></v-progress-circular>
@@ -13,9 +13,6 @@
 </template>
 
 <style lang="stylus" scoped>
-  div
-    text-align: center
-
-  .progress-circular
+  .v-progress-circular
     margin: 1rem
 </style>

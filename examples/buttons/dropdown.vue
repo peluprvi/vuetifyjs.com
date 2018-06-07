@@ -1,32 +1,36 @@
 <template>
-  <v-container grid-list-xl id="dropdown-example">
+  <v-container id="dropdown-example" grid-list-xl>
     <v-layout row wrap>
       <v-flex xs12 sm4>
         <p>Overflow</p>
-        <v-select
+
+        <v-overflow-btn
           :items="dropdown_font"
-          overflow
-          label="Select"
+          label="Overflow Btn"
           target="#dropdown-example"
-        ></v-select>
+        ></v-overflow-btn>
       </v-flex>
+
       <v-flex xs12 sm4>
         <p>Segmented</p>
-        <v-select
+
+        <v-overflow-btn
           :items="dropdown_icon"
-          label="Select"
+          label="Segmented Btn"
           segmented
           target="#dropdown-example"
-        ></v-select>
+        ></v-overflow-btn>
       </v-flex>
+
       <v-flex xs12 sm4>
         <p>Editable</p>
-        <v-select
+
+        <v-overflow-btn
           :items="dropdown_edit"
-          label="Select"
+          label="Editable Btn"
           editable
           item-value="text"
-        ></v-select>
+        ></v-overflow-btn>
       </v-flex>
     </v-layout>
   </v-container>

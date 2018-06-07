@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-layout row wrap>
+    <v-layout row wrap align-center>
       <v-flex xs6>
         <v-subheader>Prepended icon</v-subheader>
       </v-flex>
@@ -8,11 +8,11 @@
         <v-select
           :items="states"
           v-model="e1"
-          label="Select"
-          single-line
           auto
-          prepend-icon="map"
+          label="Select"
           hide-details
+          prepend-icon="map"
+          single-line
         ></v-select>
       </v-flex>
       <v-flex xs6>
@@ -22,11 +22,11 @@
         <v-select
           :items="states"
           v-model="e2"
+          append-outer-icon="map"
+          auto
+          hide-details
           label="Select"
           single-line
-          auto
-          append-icon="map"
-          hide-details
         ></v-select>
       </v-flex>
     </v-layout>
@@ -37,8 +37,8 @@
   export default {
     data () {
       return {
-        e1: null,
-        e2: 'Arkansas',
+        e1: 'Florida',
+        e2: 'Texas',
         e3: null,
         e4: null,
         items: [

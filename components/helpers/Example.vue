@@ -1,27 +1,39 @@
 <template lang="pug">
   section.component-example(:id="id")
     //- Section header
-    h3(v-if="header").title.layout.align-center.mb-3
+    h3(v-if="header.length > 0").title.layout.align-center.mb-3
       router-link(
         :to="{ hash: id }"
         v-if="id"
         style="text-decoration: none;"
       ).mr-2
         v-icon(color="accent") mdi-pound
-      span(v-text="header")
+      translatable(:i18n="header").d-inline-flex.align-center
+        span(v-text="$t(header)")
+        v-chip(
+          v-if="newIn"
+          class="white--text font-weight-regular"
+          color="red lighten-2"
+          small
+        )
+          span(v-text="$t('Generic.Common.newIn')")
+          |&nbsp;
+          span(v-text="`v${newIn}`")
 
     //- Description
-    markdown(v-if="desc" :source="desc")
+    // TODO: make independant of english locale
+    translatable(v-if="$te(desc, 'en')" :i18n="desc")
+      markdown(:source="$t(desc)")
 
     v-card(:class="{ 'elevation-0': readonly }").mt-4
       //- Example options
       v-toolbar(flat dense card v-if="!readonly").pr-1
         v-spacer
-        v-tooltip(top v-if="hasInverted")
+        v-tooltip(lazy top v-if="hasInverted")
           v-btn(icon slot="activator" @click="invertedProxy = !invertedProxy")
             v-icon(color="grey darken-1") invert_colors
           span Invert colors
-        v-tooltip(top)
+        v-tooltip(lazy top)
           v-btn(
             icon
             tag="a"
@@ -31,7 +43,7 @@
           )
             v-icon(color="grey darken-1") fab fa-github
           span View on Github
-        v-tooltip(top)
+        v-tooltip(lazy top)
           v-btn(
             icon
             @click="sendToCodepen"
@@ -39,18 +51,21 @@
           )
             v-icon(color="grey darken-1") fab fa-codepen
           span Edit in codepen
-        v-tooltip(top)
+        v-tooltip(lazy top)
           v-btn(
             icon
-            @click.stop="panel = !panel"
+            @click.stop="togglePanel"
             slot="activator"
           )
             v-icon(color="grey darken-1") code
           span View source
 
       //- Example markup
-      v-expansion-panel.elevation-0
-        v-expansion-panel-content(v-model="panel")
+      v-expansion-panel(
+        ref="panel"
+        v-model="panel"
+      ).elevation-0
+        v-expansion-panel-content
           v-divider(v-if="!readonly")
           v-tabs(
             ref="tabs"
@@ -109,8 +124,8 @@
         default: false
       },
       newIn: {
-        type: String,
-        default: ''
+        type: [Boolean, String],
+        default: false
       },
       id: {
         type: String,
@@ -127,7 +142,7 @@
         tabs: ['template', 'script', 'style'],
         component: null,
         invertedProxy: this.inverted,
-        panel: false,
+        panel: [],
         parsed: {
           script: null,
           style: null,
@@ -159,7 +174,7 @@
 
     created () {
       if (this.active || this.readonly) {
-        this.panel = true
+        this.panel = []
       }
     },
 
@@ -176,11 +191,7 @@
         /* webpackChunkName: "examples-source" */
         /* webpackMode: "lazy-once" */
         `!raw-loader!../../examples/${this.file}.vue`
-        ).then(this.boot)
-    },
-
-    beforeDestroy () {
-      this.instance && this.instance.$destroy()
+        ).then(comp => this.boot(comp.default))
     },
 
     methods: {
@@ -216,6 +227,11 @@
       },
       sendToCodepen () {
         this.$refs.codepen.submit()
+      },
+      togglePanel () {
+        const panel = this.$refs.panel.items[0].uid
+
+        this.$refs.panel.panelClick(panel)
       }
     }
   }
@@ -242,13 +258,13 @@
         width: 100%
 
     .component-example__panel
-      .expansion-panel__body
+      .v-expansion-panel__body
         border: none
 
-      .tabs__item, .markup
+      .v-tabs__item, .markup
         height: 100%
 
-      .tabs__items
+      .v-tabs__items
         border: none
         max-height: 500px
         overflow-y: auto
@@ -259,10 +275,10 @@
     .justify
       text-align: justify
 
-    aside.navigation-drawer,
-    .overlay
+    aside.v-navigation-drawer,
+    .v-overlay
       z-index: 1
 
-    nav.toolbar
+    nav.v-toolbar
       z-index: 0
 </style>

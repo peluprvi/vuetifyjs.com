@@ -1,7 +1,7 @@
 <template lang="pug">
   v-card.mb-5
     v-table-overflow
-      table.table
+      table.v-table
         caption.mt-3
           strong Mask legend
         thead
@@ -14,7 +14,7 @@
             :key="i"
           )
             template(v-if="row.header")
-              td
+              td(colspan="2")
                 strong {{ row.text }}
             template(v-else)
               td(v-for="(mask, i) in row" :key="i") {{ mask }}

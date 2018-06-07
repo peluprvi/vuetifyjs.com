@@ -5,7 +5,10 @@
         <v-flex xs8>
           <v-card>
             <v-card-text>
-              <v-pagination :length="15" v-model="page"></v-pagination>
+              <v-pagination
+                v-model="page"
+                :length="15"
+              ></v-pagination>
             </v-card-text>
           </v-card>
         </v-flex>
