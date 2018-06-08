@@ -1,7 +1,0 @@
-export default {
-  askCommunity: 'Pergunte a comunidade',
-  contactUs: 'Contate-nos',
-  needHelp: 'Precisa de ajuda?',
-  getHelp: 'Obter ajuda agora',
-  havingIssues: 'Você está tendo problemas?'
-}
