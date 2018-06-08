@@ -34,7 +34,7 @@
         v-model="title"
         label="Message"
         counter
-        max="120"
+        maxlength="120"
         full-width
         single-line
       ></v-textarea>

@@ -20,12 +20,15 @@
           v-model="title"
           :rules="[v => v.length <= 25 || 'Max 25 characters']"
           counter="25"
+          hint="This field uses counter prop"
           label="Title"
         ></v-text-field>
         <v-text-field
           v-model="blurb"
           :rules="[v => v.length <= 50 || 'Max 50 characters']"
-          counter="50"
+          counter
+          maxlength="50"
+          hint="This field uses maxlength attribute"
           label="Blurb"
         ></v-text-field>
         <v-textarea

@@ -20,7 +20,7 @@
                   :rules="[rules.required]"
                   label="Title"
                   counter
-                  max="15"
+                  maxlength="20"
                 ></v-text-field>
               </v-flex>
               <v-flex xs12>
