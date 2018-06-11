@@ -240,8 +240,9 @@
 <style lang="stylus">
   @import '~vuetify/src/stylus/settings/_variables.styl'
 
-  #snackbars .component-example .application--example
-    z-index: auto
+  #snackbars, #data-tables
+    .component-example .application--example
+      z-index: auto
 
   .component-example
     // margin-bottom: 32px
