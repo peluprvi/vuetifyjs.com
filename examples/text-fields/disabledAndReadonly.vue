@@ -3,61 +3,73 @@
     <v-container>
       <v-layout row wrap>
 
-        <v-flex xs12 sm6 md3>
+        <v-flex xs12 sm6>
           <v-text-field
+            value="John Doe"
             label="Regular"
+            disabled
           ></v-text-field>
         </v-flex>
 
-        <v-flex xs12 sm6 md3>
+        <v-flex xs12 sm6>
           <v-text-field
+            value="John Doe"
             label="Regular"
-            placeholder="Placeholder"
+            readonly
           ></v-text-field>
         </v-flex>
 
-        <v-flex xs12 sm6 md3>
+        <v-flex xs12 sm6>
           <v-text-field
+            value="John Doe"
             label="Solo"
             solo
+            disabled
           ></v-text-field>
         </v-flex>
 
-        <v-flex xs12 sm6 md3>
+        <v-flex xs12 sm6>
           <v-text-field
+            value="John Doe"
             label="Solo"
-            placeholder="Placeholder"
             solo
+            readonly
           ></v-text-field>
         </v-flex>
 
-        <v-flex xs12 sm6 md3>
+        <v-flex xs12 sm6>
           <v-text-field
+            value="John Doe"
             label="Box"
             box
+            disabled
           ></v-text-field>
         </v-flex>
 
-        <v-flex xs12 sm6 md3>
+        <v-flex xs12 sm6>
           <v-text-field
+            value="John Doe"
             label="Box"
-            placeholder="Placeholder"
             box
+            readonly
           ></v-text-field>
         </v-flex>
 
-        <v-flex xs12 sm6 md3>
+        <v-flex xs12 sm6>
           <v-text-field
+            value="John Doe"
             label="Outline"
             outline
+            disabled
           ></v-text-field>
         </v-flex>
 
-        <v-flex xs12 sm6 md3>
+        <v-flex xs12 sm6>
           <v-text-field
+            value="John Doe"
             label="Outline"
-            placeholder="Placeholder"
             outline
+            readonly
           ></v-text-field>
         </v-flex>
 
