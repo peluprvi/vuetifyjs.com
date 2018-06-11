@@ -53,6 +53,12 @@
     "description": "The upcoming planned features and new functionality coming to Vuetify. New vue components, new directives, and much much more!.",
     "keywords": "roadmap, future plans"
   },
+  "framework/internationalization": {
+    "h1": "Internationalization",
+    "title": "Internationalization",
+    "description": "Vuetify supports language internationalization of its components.",
+    "keywords": "vue, i18n, language, internationalization"
+  },
   "motion/transitions": {
     "h1": "Transitions",
     "title": "Transitions",

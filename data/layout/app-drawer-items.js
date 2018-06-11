@@ -14,6 +14,14 @@ export default [
     ]
   },
   {
+    title: 'Framework Options',
+    group: 'framework',
+    icon: 'mdi-buffer',
+    items: [
+      { name: 'Internationalization', title: 'Internationalization', badge: 'new' }
+    ]
+  },
+  {
     title: 'Application layout',
     group: 'layout',
     icon: 'mdi-page-layout-body',

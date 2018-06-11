@@ -30,6 +30,10 @@
     "route": "getting-started/roadmap"
   },
   {
+    "page": "framework/Internationalization",
+    "route": "framework/internationalization"
+  },
+  {
     "page": "layout/PreDefined",
     "route": "layout/pre-defined"
   },
