@@ -7,20 +7,19 @@
           <v-text-field
             v-model="password"
             :append-icon="show1 ? 'visibility_off' : 'visibility'"
-            :append-icon-cb="() => (show1 = !show1)"
             :rules="[rules.required, rules.min]"
             :type="show1 ? 'text' : 'password'"
             name="input-10-1"
             label="Normal with hint text"
             hint="At least 8 characters"
             counter
+            @click:append="show1 = !show1"
           ></v-text-field>
         </v-flex>
 
         <v-flex xs12 sm6>
           <v-text-field
             :append-icon="show2 ? 'visibility_off' : 'visibility'"
-            :append-icon-cb="() => (show2 = !show2)"
             :rules="[rules.required, rules.min]"
             :type="show2 ? 'text' : 'password'"
             name="input-10-2"
@@ -28,13 +27,13 @@
             hint="At least 8 characters"
             value="wqfasds"
             class="input-group--focused"
+            @click:append="show2 = !show2"
           ></v-text-field>
         </v-flex>
 
         <v-flex xs12 sm6>
           <v-text-field
             :append-icon="show3 ? 'visibility_off' : 'visibility'"
-            :append-icon-cb="() => (show3 = !show3)"
             :rules="[rules.required, rules.min]"
             :type="show3 ? 'text' : 'password'"
             name="input-10-2"
@@ -42,13 +41,13 @@
             hint="At least 8 characters"
             value="wqfasds"
             class="input-group--focused"
+            @click:append="show3 = !show3"
           ></v-text-field>
         </v-flex>
 
         <v-flex xs12 sm6>
           <v-text-field
             :append-icon="show4 ? 'visibility_off' : 'visibility'"
-            :append-icon-cb="() => (show4 = !show4)"
             :rules="[rules.required, rules.emailMatch]"
             :type="show4 ? 'text' : 'password'"
             name="input-10-2"
@@ -56,6 +55,7 @@
             hint="At least 8 characters"
             value="Pa"
             error
+            @click:append="show4 = !show4"
           ></v-text-field>
         </v-flex>
 

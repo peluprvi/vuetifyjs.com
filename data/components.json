@@ -588,7 +588,7 @@
       "disabledAndReadonly",
       "icon",
       "clearable",
-      "iconCb",
+      "iconEvents",
       "characterCounter",
       "password",
       "validation",

@@ -7,17 +7,17 @@
           <v-text-field
             v-model="message"
             :append-icon="marker ? 'mdi-map-marker' : 'mdi-map-marker-off'"
-            :append-icon-cb="toggleMarker"
             :append-outer-icon="message ? 'mdi-send' : 'mdi-microphone'"
-            :append-outer-icon-cb="sendMessage"
-            :clear-icon-cb="clearMessage"
             :prepend-icon="icon"
-            :prepend-icon-cb="changeIcon"
             box
             clear-icon="mdi-close-circle"
             clearable
             label="Message"
             type="text"
+            @click:append="toggleMarker"
+            @click:append-outer="sendMessage"
+            @click:prepend="changeIcon"
+            @click:clear="clearMessage"
           ></v-text-field>
         </v-flex>
 
@@ -28,25 +28,23 @@
 
 <script>
   export default {
-    data () {
-      return {
-        password: 'Password',
-        show: false,
-        message: 'Hey!',
-        marker: true,
-        iconIndex: 0,
-        icons: [
-          'mdi-emoticon',
-          'mdi-emoticon-cool',
-          'mdi-emoticon-dead',
-          'mdi-emoticon-excited',
-          'mdi-emoticon-happy',
-          'mdi-emoticon-neutral',
-          'mdi-emoticon-sad',
-          'mdi-emoticon-tongue'
-        ]
-      }
-    },
+    data: () => ({
+      password: 'Password',
+      show: false,
+      message: 'Hey!',
+      marker: true,
+      iconIndex: 0,
+      icons: [
+        'mdi-emoticon',
+        'mdi-emoticon-cool',
+        'mdi-emoticon-dead',
+        'mdi-emoticon-excited',
+        'mdi-emoticon-happy',
+        'mdi-emoticon-neutral',
+        'mdi-emoticon-sad',
+        'mdi-emoticon-tongue'
+      ]
+    }),
 
     computed: {
       icon () {
@@ -69,7 +67,9 @@
         this.iconIndex = 0
       },
       changeIcon () {
-        this.iconIndex === this.icons.length - 1 ? this.iconIndex = 0 : this.iconIndex++
+        this.iconIndex === this.icons.length - 1
+          ? this.iconIndex = 0
+          : this.iconIndex++
       }
     }
   }

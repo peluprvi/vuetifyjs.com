@@ -23,9 +23,9 @@
       "header": "Clearable",
       "desc": "When `clearable`, you can customize the clear icon with `clear-icon`."
     },
-    "iconCb": {
-      "header": "Icons callback",
-      "desc": "With `prepend-icon-cb` and `append-icon-cb` you can trigger a callback function when click the text field icons. You can overwrite the clear icon behavior with `clear-icon-cb`"
+    "iconEvents": {
+      "header": "Icon events",
+      "desc": "`click:prepend`, `click:append`, `click:append-outer`, and `click:clear` will be emitted when you click on the respective icon. Note that these events will not be fired if the slot is used instead. "
     },
     "characterCounter": {
       "header": "Character counter",
