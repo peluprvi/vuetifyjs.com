@@ -1,27 +1,48 @@
-<template lang="pug">
-  div(:class="['markup', color]" :data-lang="lang").mb-3
-    pre
-      code(v-bind:class="lang" ref="markup")
-        slot
-    div(class="markup__copy")
-      v-icon(v-on:click="copyMarkup") content_copy
-      v-slide-x-transition
-        span(class="component-example-copied" v-if="copied") Copied
+<template>
+  <div
+    :class="['markup', color]"
+    :data-lang="lang"
+    class="mb-3"
+  >
+    <pre><code ref="markup" class="hljs" v-html="code" /></pre>
+
+    <div class="markup__copy">
+      <v-icon @click="copyMarkup">content_copy</v-icon>
+      <v-slide-x-transition>
+        <span
+          v-if="copied"
+          class="component-example-copied"
+        >Copied</span>
+      </v-slide-x-transition>
+    </div>
+  </div>
 </template>
 
 <script>
-  import highlight from 'highlight.js/lib/highlight.js'
-  import highlightBash from 'highlight.js/lib/languages/bash'
-  import highlightStylus from 'highlight.js/lib/languages/stylus'
-  import highlightXML from 'highlight.js/lib/languages/xml'
-  import highlightJS from 'highlight.js/lib/languages/javascript'
-  import highlightScss from 'highlight.js/lib/languages/scss'
+  // Libs
+  import hljs from 'highlight.js/lib/highlight.js'
+  import hljsBash from 'highlight.js/lib/languages/bash'
+  import hljsJson from 'highlight.js/lib/languages/json'
+  import hljsJS from 'highlight.js/lib/languages/javascript'
+  import hljsScss from 'highlight.js/lib/languages/scss'
+  import hljsStylus from 'highlight.js/lib/languages/stylus'
+  import hljsXML from 'highlight.js/lib/languages/xml'
 
-  highlight.registerLanguage('bash', highlightBash)
-  highlight.registerLanguage('stylus', highlightStylus)
-  highlight.registerLanguage('sass', highlightScss)
-  highlight.registerLanguage('html', highlightXML)
-  highlight.registerLanguage('js', highlightJS)
+  hljs.registerLanguage('bash', hljsBash)
+  hljs.registerLanguage('js', hljsJS)
+  hljs.registerLanguage('json', hljsJson)
+  hljs.registerLanguage('html', hljsXML)
+  hljs.registerLanguage('stylus', hljsStylus)
+  hljs.registerLanguage('sass', hljsScss)
+  hljs.registerLanguage('vue', hljsXML)
+
+  // Utilities
+  const LANG_MAP = {
+    'cli': 'bash',
+    'html': 'html',
+    'javascript': 'js',
+    'styl': 'stylus'
+  }
 
   export default {
     name: 'Markup',
@@ -37,30 +58,46 @@
       }
     },
 
-    data () {
-      return {
-        copied: false,
-        content: '',
-        highlightAttempts: 0
+    data: () => ({
+      code: null,
+      copied: false,
+      highlightAttempts: 0
+    }),
+
+    computed: {
+      language () {
+        return LANG_MAP[this.lang] || this.lang
       }
     },
 
     mounted () {
       const cb = deadline => {
-        if (deadline.timeRemaining() < 33.3 && this.highlightAttempts < 3 && !deadline.didTimeout) {
+        if (deadline.timeRemaining() < 33.3 &&
+          this.highlightAttempts < 3 &&
+          !deadline.didTimeout
+        ) {
           ++this.highlightAttempts
           requestIdleCallback(cb, { timeout: 250 })
         } else {
-          highlight.highlightBlock(this.$refs.markup)
+          this.init()
         }
       }
 
       'requestIdleCallback' in window
         ? window.requestIdleCallback(cb, { timeout: 500 })
-        : highlight.highlightBlock(this.$refs.markup)
+        : this.init()
     },
 
     methods: {
+      init () {
+        const lang = this.language
+        const text = this.$slots.default[0].text
+        const { value: code } = lang
+          ? hljs.highlight(lang, text)
+          : hljs.highlightAuto(text)
+
+        this.code = code
+      },
       copyMarkup () {
         const markup = this.$refs.markup
         markup.setAttribute('contenteditable', 'true')
