@@ -30,6 +30,10 @@
     "route": "getting-started/roadmap"
   },
   {
+    "page": "framework/Icons",
+    "route": "framework/icons"
+  },
+  {
     "page": "framework/Internationalization",
     "route": "framework/internationalization"
   },

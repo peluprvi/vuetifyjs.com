@@ -18,6 +18,7 @@ export default [
     group: 'framework',
     icon: 'mdi-buffer',
     items: [
+      { name: 'Icons', title: 'Icons', badge: 'new' },
       { name: 'Internationalization', title: 'Internationalization', badge: 'new' }
     ]
   },

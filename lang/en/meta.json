@@ -53,6 +53,12 @@
     "description": "The upcoming planned features and new functionality coming to Vuetify. New vue components, new directives, and much much more!.",
     "keywords": "roadmap, future plans"
   },
+  "framework/icons": {
+    "h1": "Installing Icons",
+    "title": "Installing Icons",
+    "description": "Vuetify supports custom icon sets through prefixes and global options.",
+    "keywords": "vue, icon, iconfont, icon libraries, vuetify icons"
+  },
   "framework/internationalization": {
     "h1": "Internationalization",
     "title": "Internationalization",
