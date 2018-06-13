@@ -16,7 +16,7 @@
     },
     "time24hFormat": {
       "header": "Time pickers - 24h format",
-      "desc": "A time picker can be switched to 24hr format."
+      "desc": "A time picker can be switched to 24hr format. Note that the `format` prop defines only the way the picker is displayed, picker's value (model) is always in 24hr format."
     },
     "timeAllowedTimes": {
       "header": "Time pickers - Allowed times",
@@ -29,12 +29,13 @@
   },
   "props": {
     "v-time-picker": {
-      "format": "Available options are `ampm` and `24hr`",
+      "format": "Defines the format of a time displayed in picker. Available options are `ampm` and `24hr`.",
       "allowedHours": "Restricts which hours can be selected",
       "allowedMinutes": "Restricts which minutes can be selected",
       "scrollable": "Allows changing hour/minute with mouse scroll",
       "min": "Minimum allowed time",
-      "max": "Maximum allowed time"
+      "max": "Maximum allowed time",
+      "value": "Time picker model (ISO 8601 format, 24hr hh:mm)"
     }
   }
 }
