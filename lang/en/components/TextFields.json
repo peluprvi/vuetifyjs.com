@@ -73,7 +73,7 @@
     },
     "masks": {
       "header": "Masks",
-      "desc": "Text fields can validate against character masks. Using either a pre-made or custom rules, you can optionally format and validate specific character sets."
+      "desc": "Text fields can validate against character masks. Using either a pre-made or custom rules, you can optionally format and validate specific character sets. Note that **masks work only with text fields**, using them with date/number/file etc inputs may end up in unexpected behaviour or exception."
     },
     "progressBar": {
       "header": "Progress bar",
