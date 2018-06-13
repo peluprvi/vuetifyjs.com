@@ -138,13 +138,13 @@
 
       markup(lang="vue")
         | &lt;template&gt;
-        |   &lt;v-icon&gt;$vuetify.icons.product&lt;/&gt;
+        |   &lt;v-icon&gt;$vuetify.icons.product&lt;/v-icon&gt;
         |
-        |   &lt;v-icon v-text="'$vuetify.icons.support'"&gt;&lt;/&gt;
+        |   &lt;v-icon v-text="'$vuetify.icons.support'"&gt;&lt;/v-icon&gt;
         |
-        |   &lt;v-icon v-html="'$vuetify.icons.steam'"&gt;&lt;/&gt;
+        |   &lt;v-icon v-html="'$vuetify.icons.steam'"&gt;&lt;/v-icon&gt;
         |
-        |   &lt;v-icon v-text="system"&gt;&lt;/&gt;
+        |   &lt;v-icon v-text="system"&gt;&lt;/v-icon&gt;
         | &lt;/template&gt;
         |
         | &lt;script&gt;
