@@ -21,14 +21,13 @@
 <script>
   // Libs
   import hljs from 'highlight.js/lib/highlight.js'
-  import hljsBash from 'highlight.js/lib/languages/bash'
   import hljsJson from 'highlight.js/lib/languages/json'
   import hljsJS from 'highlight.js/lib/languages/javascript'
   import hljsScss from 'highlight.js/lib/languages/scss'
   import hljsStylus from 'highlight.js/lib/languages/stylus'
   import hljsXML from 'highlight.js/lib/languages/xml'
 
-  hljs.registerLanguage('bash', hljsBash)
+  hljs.registerLanguage('bash', hljsJS)
   hljs.registerLanguage('js', hljsJS)
   hljs.registerLanguage('json', hljsJson)
   hljs.registerLanguage('html', hljsXML)
@@ -86,6 +85,10 @@
       'requestIdleCallback' in window
         ? window.requestIdleCallback(cb, { timeout: 500 })
         : this.init()
+    },
+
+    updated () {
+      this.init()
     },
 
     methods: {
