@@ -37,6 +37,16 @@
 
     mounted () {
       this.getReleases()
+
+      this.snackbar({
+        color: 'default',
+        close: true,
+        id: 'may-2018-update-19449773',
+        text: 'Go To Update',
+        msg: '**New Patreon Update** — _May 2018 Update_',
+        href: 'https://www.patreon.com/posts/may-2018-update-19449773',
+        timeout: 0
+      })
     },
 
     methods: {
