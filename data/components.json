@@ -11,11 +11,14 @@
     "spec": false
   },
   "autocompletes": {
-    "components": ["v-autocomplete"],
+    "components": [
+      "v-autocomplete",
+      "v-combobox"
+    ],
     "examples": [
       "autocomplete",
       "combobox",
-      "tags",
+      "comboboxMultiple",
       "scopedSlots",
       "customFilter",
       "asynchronous"

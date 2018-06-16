@@ -9,11 +9,11 @@
     },
     "combobox": {
       "header": "Combobox",
-      "desc": "A combobox is the single value variant of **tags**"
+      "desc": "With combobox you can allow a user to create new values that may not be present in a provided items list. Keep in mind, this component only supports arrays of **primitive** items and cannot be used with props such as `item-text`, `item-value` for example."
     },
-    "tags": {
-      "header": "Tags",
-      "desc": "With tags you can allow a user to create new values that may not be present in a provided items list. Keep in mind, tags only supports arrays of **primitive** items and cannot be used with props such as `item-text`, `item-value` for example."
+    "comboboxMultiple": {
+      "header": "Multiple combobox",
+      "desc": "This is a multple version of **combobox** - user is allowed to enter more than 1 value"
     },
     "scopedSlots": {
       "header": "Scoped slots",
