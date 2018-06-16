@@ -11,6 +11,7 @@
         section-head(:value="`${namespace}.importHeader`")
         section-text(:value="`${namespace}.importText1`")
         markup(lang="js")
+          |// .babelrc
           |["transform-imports", {
           |  "vuetify": {
           |    "transform": "vuetify/es5/components/${member}",
@@ -19,6 +20,7 @@
           |}]
         app-alert(:value="`${namespace}.alert2`" error)
         markup(lang="js")
+          |// main.js
           |import Vue from 'vue'
           |import App from './App.vue'
           |import {
@@ -46,6 +48,7 @@
         app-alert(:value="`${namespace}.alert3`" info)
         section-text(:value="`${namespace}.importText2`")
         markup(lang="js")
+          |// main.js
           |// Without `transform-imports` package
           |import Vue from 'vue'
           |import VApp from 'vuetify/es5/components/VApp'
@@ -63,6 +66,7 @@
           |})
         section-text(:value="`${namespace}.importText3`")
         markup(lang="js")
+          |// .vue files
           |import * as VCard from 'vuetify/es5/components/VCard'
           |
           |export default {
