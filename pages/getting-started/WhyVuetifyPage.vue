@@ -8,16 +8,23 @@
               v-layout(row wrap).pillars
                 v-flex(
                   xs12
-                  sm4
+                  md6
+                  xl3
                   v-for="(p, i) in philosophies"
                   :key="i"
                 )
                   v-card
-                    v-layout(align-center justify-center).pa-5
-                      v-avatar(size="150px")
-                        img(:src="p.img").grey.darken-4
+                    v-layout(align-center justify-center).pt-5.pb-2
+                      v-avatar(
+                        :color="p.color"
+                        size="150px"
+                      ).elevation-12
+                        v-icon(
+                          v-text="p.icon"
+                          dark
+                          size="100px"
+                        )
                     div.px-3
-                      v-divider.indigo.lighten-4
                     translatable(:i18n="`${namespace}.philosophies[${i}].title`")
                     v-card-title.headline.layout.justify-center
                       span(v-text="$t(`${namespace}.philosophies[${i}].title`)")
@@ -100,9 +107,32 @@
 
 <script>
   export default {
+    data: () => ({
+      icons: [
+        {
+          icon: 'mdi-account-multiple',
+          color: 'indigo'
+        },
+        {
+          icon: 'mdi-toolbox',
+          color: 'purple'
+        },
+        {
+          icon: 'mdi-update',
+          color: 'red lighten-2'
+        },
+        {
+          icon: 'mdi-flash',
+          color: 'yellow darken-3'
+        }
+      ]
+    }),
+
     computed: {
       philosophies () {
-        return this.$t('GettingStarted.WhyVuetify.philosophies', 'en')
+        return this.$t('GettingStarted.WhyVuetify.philosophies', 'en').map((o, i) => {
+          return Object.assign({}, o, this.icons[i])
+        })
       },
       whyText () {
         return this.$t('GettingStarted.WhyVuetify.whyText', 'en')

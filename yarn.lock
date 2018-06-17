@@ -78,9 +78,9 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@mdi/font@^2.3.54":
-  version "2.3.54"
-  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-2.3.54.tgz#12dc9a64a5081c488f105fc55e814ecc190c0982"
+"@mdi/font@^2.4.85":
+  version "2.4.85"
+  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-2.4.85.tgz#f257a2c3ed1dec3023f2dc12cd9210fab572ab42"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
