@@ -12,13 +12,10 @@
   },
   "autocompletes": {
     "components": [
-      "v-autocomplete",
-      "v-combobox"
+      "v-autocomplete"
     ],
     "examples": [
       "autocomplete",
-      "combobox",
-      "comboboxMultiple",
       "scopedSlots",
       "customFilter",
       "asynchronous"
@@ -136,6 +133,15 @@
       "inSelects"
     ],
     "spec": false
+  },
+  "combobox": {
+    "components": [
+      "v-combobox"
+    ],
+    "examples": [
+      "combobox",
+      "comboboxMultiple"
+    ]
   },
   "data-iterator": {
     "components": ["v-data-iterator"],

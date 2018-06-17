@@ -10,6 +10,7 @@ import Buttons from './Buttons'
 import Cards from './Cards'
 import Carousels from './Carousels'
 import Chips from './Chips'
+import Combobox from './Combobox'
 import DataIterator from './DataIterator'
 import DataTables from './DataTables'
 import DatePickers from './DatePickers'
@@ -57,6 +58,7 @@ export default {
   Cards,
   Carousels,
   Chips,
+  Combobox,
   DataIterator,
   DataTables,
   DatePickers,

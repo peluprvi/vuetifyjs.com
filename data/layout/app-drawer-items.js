@@ -92,10 +92,11 @@ export default [
       { name: 'footer', title: 'Footer' },
       {
         title: 'Inputs & controls',
-        group: '(autocompletes|forms|inputs|overflow-btns|selects|selection|text-fields)',
+        group: '(autocompletes|combobox|forms|inputs|overflow-btns|selects|selection|text-fields)',
         namespace: 'components',
         items: [
           { name: 'autocompletes', title: 'Autocompletes', badge: 'new' },
+          { name: 'combobox', title: 'Combobox', badge: 'new' },
           { name: 'forms', title: 'Forms', badge: 'updated', color: 'red lighten-2' },
           { name: 'inputs', title: 'Inputs', badge: 'new' },
           { name: 'overflow-btns', title: 'Overflow Buttons', badge: 'new' },
