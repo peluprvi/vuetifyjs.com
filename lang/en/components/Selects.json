@@ -71,7 +71,7 @@
     "overflow": "Creates an overflow button - [spec](https://material.io/guidelines/components/buttons.html#buttons-dropdown-buttons)",
     "returnObject": "Changes the selection behavior to return the object directly rather than the value specified with **item-value**",
     "searchInput": "Bound when using the autocomplete prop. Use the **.sync** modifier to catch user input from the autocomplete search input",
-    "segmented": "Creates a segmented button - [spec](https://material.io/guidelines/components/buttons.html#buttons-dropdown-buttons)",
+    "segmented": "Creates a segmented button - [spec](https://material.io/guidelines/components/buttons.html#buttons-dropdown-buttons)"
   },
   "slots": {
     "item": "Scoped slot for designating the markup for a list-tile",
