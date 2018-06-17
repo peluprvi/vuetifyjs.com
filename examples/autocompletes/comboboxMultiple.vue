@@ -63,7 +63,7 @@
   export default {
     data () {
       return {
-        select: ['Vuetify'],
+        select: ['Vuetify', 'Programming'],
         items: [
           'Programming',
           'Design',
