@@ -1,8 +1,6 @@
 <template lang="pug">
   doc-view
     template(slot-scope="{ namespace }")
-      app-alert(error :value="`${namespace}.alert1`")
-
       section#supported-browsers
         section-head(:value="`${namespace}.browserHeader`")
         section-text(:value="`${namespace}.browserText`")
@@ -22,6 +20,36 @@
                   v-list-tile-title {{ browser.title }}
                   v-list-tile-sub-title
                     span {{ $t(getBrowserSupport(browser)) }}
+
+      section#vue-cli-3
+        section-head(:value="`${namespace}.vueCliHeader`")
+        section-text(:value="`${namespace}.vueCliText1`")
+
+        markup(lang="bash")
+          | $ yarn global add @vue/cli
+          | // OR
+          | $ npm install vue-cli -g
+
+        app-alert(info :value="`${namespace}.vueCliText2`")
+
+        section-text(:value="`${namespace}.vueCliText3`")
+        section-text(:value="`${namespace}.vueCliText4`")
+
+        markup(lang="bash")
+          | $ vue create my-app
+
+        section-text(:value="`${namespace}.vueCliText5`")
+
+        markup(lang="bash")
+          | $ vue add vuetify
+
+        section-text(:value="`${namespace}.vueCliText6`")
+        section-text(:value="`${namespace}.vueCliText7`")
+
+        markup(lang="bash")
+          | $ yarn serve
+          | // OR
+          | $ npm run serve
 
       section#cdn-install
         section-head(:value="`${namespace}.cdnHeader`")
@@ -55,11 +83,13 @@
       section#new-applications
         section-head(:value="`${namespace}.newHeader`")
         section-text(:value="`${namespace}.newText`")
+        app-alert(:value="`${namespace}.newAlert`")
         template-list
 
       section#existing-applications
         section-head(:value="`${namespace}.existingHeader`")
         section-text(:value="`${namespace}.existingText1`")
+        app-alert(info :value="`${namespace}.existingAlert`")
         section-text(:value="`${namespace}.existingText2`")
         markup(lang="cli")
           | $ npm install vuetify --save
@@ -100,6 +130,8 @@
           | // or
           | $ yarn add babel-polyfill
 
+        section-text(:value="`${namespace}.ie11Text1`")
+
         markup(lang="javascript")
           | // my-project/src/index.js
           | import 'babel-polyfill'
@@ -107,6 +139,27 @@
           | new Vue()
 
         section-text(:value="`${namespace}.ie11Text2`")
+
+        markup(lang="cli")
+          | $ yarn add @babel/preset-env -d
+          | // or
+          | $ npm install @babel/preset-env --save-dev
+
+        section-text(:value="`${namespace}.ie11Text3`")
+
+        markup(lang="json")
+          | // .babelrc
+          | {
+          |    "presets": ["@babel/preset-env"]
+          | }
+
+        markup(lang="javascript")
+          | // babel.config.js
+          | module.exports = {
+          |   presets: ['@babel/preset-env']
+          | }
+
+        section-text(:value="`${namespace}.ie11Text4`")
         markup(lang="html")
           | &lt;template slot="items" slot-scope="props"&gt;
           |   &lt;td&gt;{‌{ props.item.name }‌}&lt;/td&gt;

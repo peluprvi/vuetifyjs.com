@@ -122,10 +122,6 @@
     "route": "licensing"
   },
   {
-    "page": "guides/VueCli3",
-    "route": "guides/vue-cli-3"
-  },
-  {
     "page": "guides/SSR",
     "route": "guides/server-side-rendering"
   },

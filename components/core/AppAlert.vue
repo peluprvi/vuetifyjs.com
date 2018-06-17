@@ -2,7 +2,7 @@
   v-alert(
     :color="computedColor"
     :icon="computedIcon"
-    value
+    :value="true"
   ).my-4.app-alert
     translatable(:i18n="value")
     markdown(:source="$t(value)")
@@ -56,8 +56,11 @@
   }
 </script>
 
-<style>
-  .app-alert p {
-    margin: 0 !important;
-  }
+<style lang="stylus">
+  .app-alert
+    a
+      color: #fff
+
+    p
+      margin: 0 !important
 </style>

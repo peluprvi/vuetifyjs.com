@@ -54,6 +54,10 @@ export default () => ({
           href: 'supported-browsers'
         },
         {
+          text: 'GettingStarted.QuickStart.vueCliHeader',
+          href: 'vue-cli-3'
+        },
+        {
           text: 'GettingStarted.QuickStart.cdnHeader',
           href: 'cdn-install'
         },
