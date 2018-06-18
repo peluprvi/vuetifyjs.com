@@ -3,17 +3,19 @@
   "headerText": "",
   "philosophies": [
     {
-      "img": "/static/vuetify_semantic.svg",
+      "title": "Comunidade vibrante",
+      "caption":
+      "Prepare-se para desfrutar de uma das comunidades mais ativas do ecossistema Vue. Preso em um problema? Obtenha ajuda [agora mesmo](https://community.vuetifyjs.com). Encontrou um bug? Quer falar sobre o Firebase? Criou algo incrível? Nos informe. A **equipe principal** responde e reage aos problemas conforme eles acontecem. Sinta-se confiante sabendo que lhe daremos suporte."
+    },
+    {
       "title": "Kit de ferramentas semântico",
       "caption": "O Vuetify foi feito com o intuito de ser semântico. Fácil de aprender, fácil de lembrar&mdash; Isso significa que se você está desenvolvendo seu próprio aplicativo, ou recebendo um novo desenvolvedor, os componentes e propriedades _escreve-como-se-fala_ do Vuetify faz o desenvolvimento ser simples."
     },
     {
-      "img": "/static/vuetify_sizes.svg",
       "title": "Atualizações contínuas",
       "caption": "O Vuetify tem um ciclo de atualização consistente, permitindo que você coloque suas mãos sobre correções de erros e aprimoramentos com mais freqüência. A equipe de desenvolvimento está empenhada em fornecer-lhe a melhor experiência que você pode ter."
     },
     {
-      "img": "/static/vuetify_cli.svg",
       "title": "Suporte incrível",
       "caption": "Quando você encontra uma barreira, você precisa de assistência imediatamente. Vuetify oferece suporte de bate-papo em nossa crescente comunidade no Discord."
     }
