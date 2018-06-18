@@ -14,6 +14,15 @@ export default [
     ]
   },
   {
+    title: 'Framework Options',
+    group: 'framework',
+    icon: 'mdi-buffer',
+    items: [
+      { name: 'Icons', title: 'Icons', badge: 'new' },
+      { name: 'Internationalization', title: 'Internationalization', badge: 'new' }
+    ]
+  },
+  {
     title: 'Application layout',
     group: 'layout',
     icon: 'mdi-page-layout-body',
@@ -83,10 +92,11 @@ export default [
       { name: 'footer', title: 'Footer' },
       {
         title: 'Inputs & controls',
-        group: '(autocompletes|forms|inputs|overflow-btns|selects|selection|text-fields)',
+        group: '(autocompletes|combobox|forms|inputs|overflow-btns|selects|selection|text-fields)',
         namespace: 'components',
         items: [
           { name: 'autocompletes', title: 'Autocompletes', badge: 'new' },
+          { name: 'combobox', title: 'Combobox', badge: 'new' },
           { name: 'forms', title: 'Forms', badge: 'updated', color: 'red lighten-2' },
           { name: 'inputs', title: 'Inputs', badge: 'new' },
           { name: 'overflow-btns', title: 'Overflow Buttons', badge: 'new' },
@@ -140,7 +150,6 @@ export default [
     group: 'guides',
     icon: 'mdi-television-guide',
     items: [
-      { name: 'VueCli3', title: 'Vue-cli 3', badge: 'new' },
       { name: 'SSR', title: 'Server side rendering' },
       { name: 'ALaCarte', title: 'A la carte' }
     ]

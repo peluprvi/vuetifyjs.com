@@ -2,30 +2,29 @@
   <v-container fluid>
     <v-layout wrap>
       <v-flex xs12>
-        <v-autocomplete
+        <v-combobox
           v-model="select"
           :items="items"
           label="Select a favorite activity or create a new one"
           multiple
-          tags
-        ></v-autocomplete>
+        ></v-combobox>
       </v-flex>
       <v-flex xs12>
-        <v-autocomplete
+        <v-combobox
           v-model="select"
           :items="items"
           label="I use chips"
+          multiple
           chips
-          tags
-        ></v-autocomplete>
+        ></v-combobox>
       </v-flex>
       <v-flex xs12>
-        <v-autocomplete
+        <v-combobox
           v-model="select"
           :items="items"
           label="I use a scoped slot"
+          multiple
           chips
-          tags
         >
           <template
             slot="selection"
@@ -45,16 +44,16 @@
               {{ data.item }}
             </v-chip>
           </template>
-        </v-autocomplete>
+        </v-combobox>
       </v-flex>
       <v-flex xs12>
-        <v-autocomplete
+        <v-combobox
           v-model="select"
           label="I'm readonly"
           chips
+          multiple
           readonly
-          tags
-        ></v-autocomplete>
+        ></v-combobox>
       </v-flex>
     </v-layout>
   </v-container>
@@ -64,7 +63,7 @@
   export default {
     data () {
       return {
-        select: ['Vuetify'],
+        select: ['Vuetify', 'Programming'],
         items: [
           'Programming',
           'Design',

@@ -25,11 +25,7 @@ export function createRouter (store) {
       meta: { fullscreen },
       name: view,
       props,
-      component: () => import(
-        /* webpackChunkName: "routes" */
-        /* webpackMode: "lazy-once" */
-        `@/pages/${view}Page.vue`
-      )
+      component: () => import(`@/pages/${view}Page.vue`)
     }
   }
 

@@ -49,16 +49,15 @@
             required
             placeholder="79938"
           ></v-text-field>
-          <v-select
+          <v-autocomplete
             ref="country"
             :rules="[() => !!country || 'This field is required']"
             :items="countries"
             v-model="country"
-            autocomplete
             label="Country"
             placeholder="Select..."
             required
-          ></v-select>
+          ></v-autocomplete>
         </v-card-text>
         <v-divider class="mt-5"></v-divider>
         <v-card-actions>

@@ -30,6 +30,14 @@
     "route": "getting-started/roadmap"
   },
   {
+    "page": "framework/Icons",
+    "route": "framework/icons"
+  },
+  {
+    "page": "framework/Internationalization",
+    "route": "framework/internationalization"
+  },
+  {
     "page": "layout/PreDefined",
     "route": "layout/pre-defined"
   },
@@ -112,10 +120,6 @@
   {
     "page": "Licensing",
     "route": "licensing"
-  },
-  {
-    "page": "guides/VueCli3",
-    "route": "guides/vue-cli-3"
   },
   {
     "page": "guides/SSR",

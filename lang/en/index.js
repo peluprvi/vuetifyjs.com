@@ -1,6 +1,7 @@
 import Additional from './additional'
 import Components from './components'
 import Directives from './directives'
+import Framework from './framework'
 import Generic from './generic'
 import GettingStarted from './getting-started'
 import Guides from './guides'
@@ -15,6 +16,7 @@ export default {
   Additional,
   Components,
   Directives,
+  Framework,
   Generic,
   GettingStarted,
   Guides,

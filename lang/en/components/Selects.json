@@ -50,7 +50,6 @@
     "browserAutocomplete": "Set browser autocompletion for the search input",
     "cacheItems": "Keeps a local _unique_ copy of all items that have been passed through the **items** prop.",
     "chips": "Changes display of selections to chips",
-    "combobox": "The single select variant of **tags**",
     "contentClass": "Mixins.Detachable.props.contentClass",
     "debounceSearch": "Debounces the search input value being emitted",
     "deletableChips": "Adds a remove icon to selected chips",
@@ -72,8 +71,7 @@
     "overflow": "Creates an overflow button - [spec](https://material.io/guidelines/components/buttons.html#buttons-dropdown-buttons)",
     "returnObject": "Changes the selection behavior to return the object directly rather than the value specified with **item-value**",
     "searchInput": "Bound when using the autocomplete prop. Use the **.sync** modifier to catch user input from the autocomplete search input",
-    "segmented": "Creates a segmented button - [spec](https://material.io/guidelines/components/buttons.html#buttons-dropdown-buttons)",
-    "tags": "Tagging functionality, allows the user to create new values not available from the **items** prop"
+    "segmented": "Creates a segmented button - [spec](https://material.io/guidelines/components/buttons.html#buttons-dropdown-buttons)"
   },
   "slots": {
     "item": "Scoped slot for designating the markup for a list-tile",

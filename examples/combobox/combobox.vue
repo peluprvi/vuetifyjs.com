@@ -2,28 +2,25 @@
   <v-container fluid>
     <v-layout wrap>
       <v-flex xs12>
-        <v-autocomplete
+        <v-combobox
           v-model="select"
           :items="items"
-          combobox
           label="Select a favorite activity or create a new one"
-        ></v-autocomplete>
+        ></v-combobox>
       </v-flex>
       <v-flex xs12>
-        <v-autocomplete
+        <v-combobox
           v-model="select"
           :items="items"
           chips
-          combobox
           label="I use chips"
-        ></v-autocomplete>
+        ></v-combobox>
       </v-flex>
       <v-flex xs12>
-        <v-autocomplete
+        <v-combobox
           v-model="select"
           :items="items"
           chips
-          combobox
           label="I use a scoped slot"
         >
           <template slot="selection" slot-scope="data">
@@ -40,16 +37,15 @@
               {{ data.item }}
             </v-chip>
           </template>
-        </v-autocomplete>
+        </v-combobox>
       </v-flex>
       <v-flex xs12>
-        <v-autocomplete
+        <v-combobox
           v-model="select"
           chips
-          combobox
           label="I'm readonly"
           readonly
-        ></v-autocomplete>
+        ></v-combobox>
       </v-flex>
     </v-layout>
   </v-container>

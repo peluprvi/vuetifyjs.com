@@ -1,7 +1,7 @@
-import VueCli3 from './VueCli3'
-import ServerSideRendering from './ServerSideRendering'
 import ALaCarte from './ALaCarte'
+import ServerSideRendering from './ServerSideRendering'
 
 export default {
-  VueCli3, ServerSideRendering, ALaCarte
+  ALaCarte,
+  ServerSideRendering
 }

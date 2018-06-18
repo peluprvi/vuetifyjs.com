@@ -54,6 +54,10 @@ export default () => ({
           href: 'supported-browsers'
         },
         {
+          text: 'GettingStarted.QuickStart.vueCliHeader',
+          href: 'vue-cli-3'
+        },
+        {
           text: 'GettingStarted.QuickStart.cdnHeader',
           href: 'cdn-install'
         },
@@ -268,6 +272,24 @@ export default () => ({
         {
           text: 'Get Started',
           href: 'get-started'
+        }
+      ],
+      Internationalization: [
+        {
+          text: 'Generic.Pages.api',
+          href: 'api'
+        },
+        {
+          text: 'Guides.Internationalization.gettingStarted',
+          href: 'usage'
+        },
+        {
+          text: 'Guides.Internationalization.createTranslation',
+          href: 'translation'
+        },
+        {
+          text: 'Guides.Internationalization.customComponents',
+          href: 'custom'
         }
       ]
     },

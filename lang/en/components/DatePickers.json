@@ -112,7 +112,8 @@
       "prevIcon": "Sets the icon for previous month/year button",
       "readonly": "Makes the picker readonly (doesnt't allow to select new date or navigate through months/years)",
       "scrollable": "Allows changing displayed month with mouse scroll",
-      "showCurrent": "Toggles visibility of the current date/month outline or shows the provided date/month as a current"
+      "showCurrent": "Toggles visibility of the current date/month outline or shows the provided date/month as a current",
+      "value": "Date picker model (ISO 8601 format, YY-mm-dd or YY-mm)"
     }
   }
 }

@@ -11,11 +11,11 @@
     "spec": false
   },
   "autocompletes": {
-    "components": ["v-autocomplete"],
+    "components": [
+      "v-autocomplete"
+    ],
     "examples": [
       "autocomplete",
-      "combobox",
-      "tags",
       "scopedSlots",
       "customFilter",
       "asynchronous"
@@ -133,6 +133,15 @@
       "inSelects"
     ],
     "spec": false
+  },
+  "combobox": {
+    "components": [
+      "v-combobox"
+    ],
+    "examples": [
+      "combobox",
+      "comboboxMultiple"
+    ]
   },
   "data-iterator": {
     "components": ["v-data-iterator"],
@@ -585,17 +594,20 @@
     "examples": [
       "usage",
       "singleLine",
+      "disabledAndReadonly",
       "icon",
+      "clearable",
+      "iconEvents",
       "characterCounter",
       "password",
       "validation",
       "fullWidthWithCharacterCounter",
-      "requiredFields",
       "hint",
       "prefixesAndSuffixes",
       "customValidation",
       "box",
       "solo",
+      "outline",
       "customColors",
       "masks",
       "progressBar"

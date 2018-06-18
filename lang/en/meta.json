@@ -53,6 +53,18 @@
     "description": "The upcoming planned features and new functionality coming to Vuetify. New vue components, new directives, and much much more!.",
     "keywords": "roadmap, future plans"
   },
+  "framework/icons": {
+    "h1": "Installing Icons",
+    "title": "Installing Icons",
+    "description": "Vuetify supports custom icon sets through prefixes and global options.",
+    "keywords": "vue, icon, iconfont, icon libraries, vuetify icons"
+  },
+  "framework/internationalization": {
+    "h1": "Internationalization",
+    "title": "Internationalization",
+    "description": "Vuetify supports language internationalization of its components.",
+    "keywords": "vue, i18n, language, internationalization"
+  },
   "motion/transitions": {
     "h1": "Transitions",
     "title": "Transitions",
@@ -161,6 +173,12 @@
     "description": "The v-alert component is used to convey information to the user. Designed to stand out, the alerts come in four contextual styles, success, info, warning, and error.",
     "keywords": "alerts, components"
   },
+  "components/autocompletes": {
+    "h1": "Autocomplete",
+    "title": "Autocomplete Component",
+    "description": "The v-autocomplete component provides type-ahead autocomplete functionality.",
+    "keywords": "autocomplete, components"
+  },
   "components/avatars": {
     "h1": "Avatars",
     "title": "Avatar Component",
@@ -220,6 +238,12 @@
     "title": "Chip Component",
     "description": "Chip component for Vuetify Framework.",
     "keywords": "chip"
+  },
+  "components/combobox": {
+    "h1": "Combobox",
+    "title": "Combobox Component",
+    "description": "The v-combobox component provides type-ahead autocomplete functionality and allows user to provide a custom value.",
+    "keywords": "autocomplete, combobox, components"
   },
   "components/dividers": {
     "h1": "Dividers",
@@ -292,6 +316,12 @@
     "title": "Navigation drawer",
     "description": "Navigation drawer component for Vuetify Framework",
     "keywords": "navigation, drawer, sidebar, sidenav"
+  },
+  "components/overflow-btns": {
+    "h1": "Overflow button",
+    "title": "Overflow button Component",
+    "description": "Coming soon",
+    "keywords": "overflow button, components"
   },
   "components/paginations": {
     "h1": "Pagination",
@@ -472,12 +502,6 @@
     "title": "Server side rendering",
     "description": "Server side rendering guide for the Vuetify framework.",
     "keywords": "server side rendering, ssr"
-  },
-  "guides/vue-cli-3": {
-    "h1": "Vue CLI 3",
-    "title": "Vue CLI 3",
-    "description": "Simplify getting started with vuetify by using the new vue-cli 3 plugin.",
-    "keywords": "vue, vue cli, webpack, setup"
   },
   "theme-generator": {
     "h1": "Theme generator",
