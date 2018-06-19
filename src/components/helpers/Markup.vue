@@ -32,12 +32,13 @@
   hljs.registerLanguage('json', hljsJson)
   hljs.registerLanguage('html', hljsXML)
   hljs.registerLanguage('stylus', hljsStylus)
-  hljs.registerLanguage('sass', hljsScss)
+  hljs.registerLanguage('scss', hljsScss)
   hljs.registerLanguage('vue', hljsXML)
 
   // Utilities
   const LANG_MAP = {
     'cli': 'bash',
+    'css': 'scss',
     'html': 'html',
     'javascript': 'js',
     'styl': 'stylus'
