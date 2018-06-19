@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer
-    color="blue lighten-3"
+    class="blue lighten-3"
     dark
     permanent
   >
