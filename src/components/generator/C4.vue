@@ -45,12 +45,10 @@
               />
             </v-flex>
             <v-flex xs12 sm6>
-              <v-select
+              <v-combobox
                 :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
                 label="Interests"
                 multiple
-                autocomplete
-                chips
               />
             </v-flex>
             <v-flex xs12>

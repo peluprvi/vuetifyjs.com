@@ -38,7 +38,7 @@
   </v-card>
 </template>
 
-<script type="text/javascript">
+<script>
   export default {
     props: {
       dark: {
