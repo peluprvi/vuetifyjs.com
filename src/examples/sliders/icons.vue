@@ -25,8 +25,8 @@
     <v-card-text>
       <v-slider
         v-model="zoom"
-        :append-icon-cb="zoomIn"
-        :prepend-icon-cb="zoomOut"
+        @click:append="zoomIn"
+        @click:prepend="zoomOut"
         append-icon="zoom_in"
         prepend-icon="zoom_out"
       ></v-slider>
