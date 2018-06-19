@@ -20,7 +20,7 @@
     },
     "timeAllowedTimes": {
       "header": "Time pickers - Allowed times",
-      "desc": "You can specify allowed times using arrays, objects, and functions."
+      "desc": "You can specify allowed times using arrays, objects, and functions. You can also specify time step/precision/interval - e.g. 10 minutes."
     },
     "timeWidth": {
       "header": "Time pickers - Setting picker width",
