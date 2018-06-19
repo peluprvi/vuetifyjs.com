@@ -36,10 +36,10 @@
     data () {
       return {
         items: [
-          { icon: true, title: 'Jason Oner', avatar: '/static/doc-images/lists/1.jpg' },
-          { title: 'Travis Howard', avatar: '/static/doc-images/lists/2.jpg' },
-          { title: 'Ali Connors', avatar: '/static/doc-images/lists/3.jpg' },
-          { title: 'Cindy Baker', avatar: '/static/doc-images/lists/4.jpg' },
+          { icon: true, title: 'Jason Oner', avatar: '/doc-images/lists/1.jpg' },
+          { title: 'Travis Howard', avatar: '/doc-images/lists/2.jpg' },
+          { title: 'Ali Connors', avatar: '/doc-images/lists/3.jpg' },
+          { title: 'Cindy Baker', avatar: '/doc-images/lists/4.jpg' },
         ]
       }
     }

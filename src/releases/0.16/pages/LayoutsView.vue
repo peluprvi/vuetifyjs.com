@@ -101,7 +101,7 @@
 
     methods: {
       genSrc (name) {
-        return `'/static/doc-images/layouts/${name.toLowerCase().replace(' ', '-')}.png'`
+        return `'/doc-images/layouts/${name.toLowerCase().replace(' ', '-')}.png'`
       }
     }
   }

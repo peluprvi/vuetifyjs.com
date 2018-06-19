@@ -3,7 +3,7 @@
     v-card(
       flat
       height="205px"
-      img="/static/doc-images/ads/store-ad-1.png"
+      img="/doc-images/ads/store-ad-1.png"
       tile
       width="130px"
       :to="{ name: 'store/Index' }"

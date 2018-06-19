@@ -3,7 +3,7 @@
     class="pa-3"
     flat
     height="300px"
-    img="/static/doc-images/toolbar/map.jpg"
+    img="/doc-images/toolbar/map.jpg"
   >
     <v-toolbar
       dense

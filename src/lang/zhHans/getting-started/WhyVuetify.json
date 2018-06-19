@@ -1,20 +1,20 @@
 {
   "header": "不同之处是什么？",
   "headerText": "",
-  
+
   "philosophies": [
     {
-      "img": "/static/vuetify_semantic.svg",
+      "img": "/vuetify_semantic.svg",
       "title": "语义化工具箱",
       "caption": "Vuetify是从底层构建起来的语义化。简单易学，容易记住&mdash;这意味着无论您是开发自己的应用程序，还是新加入到项目中的开发者，Vuetify的_能像讲话一样编写的_组件和属性使开发变得轻而易举。"
     },
     {
-      "img": "/static/vuetify_sizes.svg",
+      "img": "/vuetify_sizes.svg",
       "title": "持续更新",
       "caption": "Vuetify具有固定的更新周期，可让您更频繁地修复错误和增强功能。开发团队致力于为您提供最好的体验。"
     },
     {
-      "img": "/static/vuetify_cli.svg",
+      "img": "/vuetify_cli.svg",
       "title": "强大支持",
       "caption": "当遇到问题时，您可以立即向我们请求协助。Vuetify借助Discord服务成立了正在不断壮大社区，为您提供即时聊天支持。"
     }

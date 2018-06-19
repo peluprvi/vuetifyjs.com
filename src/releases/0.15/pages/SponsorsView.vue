@@ -25,7 +25,7 @@
             v-bind:key="sponsor.title"
           ).text-xs-center.mx-3
             img(
-              :src="`/static/doc-images/${sponsor.src}`"
+              :src="`/doc-images/${sponsor.src}`"
               alt="sponsor.title"
             )
 
@@ -47,7 +47,7 @@
             v-bind:key="backer.title"
           ).text-xs-center.mx-3
             img(
-              :src="`/static/doc-images/backers/${backer.src}`"
+              :src="`/doc-images/backers/${backer.src}`"
               :alt="backer.title"
             )
       v-list.transparent
@@ -66,7 +66,7 @@
             v-bind:key="backer.title"
           ).text-xs-center.mx-3
             img(
-              :src="`/static/doc-images/backers/${backer.src}`"
+              :src="`/doc-images/backers/${backer.src}`"
               :alt="backer.title"
             )
 

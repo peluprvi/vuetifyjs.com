@@ -14,7 +14,7 @@
         <img
           alt="Tidelift"
           class="mr-3"
-          src="/static/doc-images/affiliates/tidelift-small.png"
+          src="/doc-images/affiliates/tidelift-small.png"
           width="24px"
         >
         <span class="body-2 text-uppercase font-weight-regular hidden-sm-and-down">
@@ -38,7 +38,7 @@
           alt="Logo"
           class="mx-3"
           height="256px"
-          src="/static/vuetify-logo-300.png"
+          src="/vuetify-logo-300.png"
           width="256px"
         >
         <v-flex shrink>

@@ -4,15 +4,15 @@
 
   "philosophies": [
     {
-      "img": "/static/vuetify_semantic.svg",
+      "img": "/vuetify_semantic.svg",
       "title": "시맨틱 툴킷"
     },
     {
-      "img": "/static/vuetify_sizes.svg",
+      "img": "/vuetify_sizes.svg",
       "title": "지속적 업데이트"
     },
     {
-      "img": "/static/vuetify_cli.svg",
+      "img": "/vuetify_cli.svg",
       "title": "놀라운 지원"
     }
   ],

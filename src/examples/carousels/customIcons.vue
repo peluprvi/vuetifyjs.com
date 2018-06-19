@@ -18,16 +18,16 @@
       return {
         items: [
           {
-            src: '/static/doc-images/carousel/squirrel.jpg'
+            src: '/doc-images/carousel/squirrel.jpg'
           },
           {
-            src: '/static/doc-images/carousel/sky.jpg'
+            src: '/doc-images/carousel/sky.jpg'
           },
           {
-            src: '/static/doc-images/carousel/bird.jpg'
+            src: '/doc-images/carousel/bird.jpg'
           },
           {
-            src: '/static/doc-images/carousel/planet.jpg'
+            src: '/doc-images/carousel/planet.jpg'
           }
         ]
       }

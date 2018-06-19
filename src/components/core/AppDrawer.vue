@@ -17,7 +17,7 @@
           @click="$ga.event('drawer sponsor click', 'click', diamond.name)"
         )
           img.diamond-sponsor(
-            :src="`/static/doc-images/${diamond.logo}`"
+            :src="`/doc-images/${diamond.logo}`"
             :alt="diamond.Name"
           )
       patreon-btn
@@ -43,7 +43,7 @@
         @click="$ga.event('drawer jobs click', 'click', 'vuejobs')"
       )
         img(
-          src="/static/doc-images/affiliates/vuejobs-logo.svg"
+          src="/doc-images/affiliates/vuejobs-logo.svg"
           alt="VueJobs"
           title="VueJobs"
           width="30%"

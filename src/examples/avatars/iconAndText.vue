@@ -10,7 +10,7 @@
 
     <v-avatar>
       <img
-        src="/static/doc-images/john.jpg"
+        src="/doc-images/john.jpg"
         alt="John"
       >
     </v-avatar>

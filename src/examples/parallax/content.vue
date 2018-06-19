@@ -1,7 +1,7 @@
 <template>
   <v-parallax
     dark
-    src="/static/doc-images/vbanner.jpg"
+    src="/doc-images/vbanner.jpg"
   >
     <v-layout
       align-center

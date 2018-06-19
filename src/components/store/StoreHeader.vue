@@ -9,7 +9,7 @@
           color="secondary"
         ).mb-3
           img(
-            src="/static/doc-images/logo.svg"
+            src="/doc-images/logo.svg"
             height="125px"
             alt="Vuetify"
           )

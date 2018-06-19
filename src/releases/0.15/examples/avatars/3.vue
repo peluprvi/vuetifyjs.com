@@ -4,7 +4,7 @@
       <v-icon dark>account_circle</v-icon>
     </v-avatar>
     <v-avatar>
-      <img src="/static/doc-images/john.jpg" alt="John">
+      <img src="/doc-images/john.jpg" alt="John">
     </v-avatar>
     <v-avatar
       class="purple red--after"

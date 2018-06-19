@@ -15,7 +15,7 @@
     )
     router-link(:to="{ name: 'home/Home' }").d-flex.ml-3
       img(
-        src="/static/v-alt.svg"
+        src="/v-alt.svg"
         height="38px"
         width="38px"
       )

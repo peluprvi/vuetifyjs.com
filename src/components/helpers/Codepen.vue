@@ -47,7 +47,7 @@
 
         return additional
           .replace(/(<codepen-additional.*?>|<\/codepen-additional>$)/g, '')
-          .replace(/\/static\//g, 'https://vuetifyjs.com/static/')
+          .replace(/\//g, 'https://vuetifyjs.com/')
           .replace(/\n {2}/g, '\n')
           .trim() + (additional ? '\n\n' : '')
       },
@@ -67,7 +67,7 @@
         return (this.pen.script || '')
           .replace(replace, '')
           .replace(imports, '')
-          .replace(/\/static\//g, 'https://vuetifyjs.com/static/')
+          .replace(/\//g, 'https://vuetifyjs.com/')
           .replace(/\n {2}/g, '\n')
           .trim()
       },
@@ -81,7 +81,7 @@
         const template = this.pen.template || ''
 
         return template
-          .replace(/\/static\//g, 'https://vuetifyjs.com/static/')
+          .replace(/\//g, 'https://vuetifyjs.com/')
           .replace(/(<template>|<\/template>$)/g, '')
           .replace(/\n/g, '\n  ')
           .trim()

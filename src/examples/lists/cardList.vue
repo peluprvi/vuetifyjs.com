@@ -3,7 +3,7 @@
     <v-flex xs12 sm6 offset-sm3>
       <v-card>
         <v-card-media
-          src="/static/doc-images/lists/ali.png"
+          src="/doc-images/lists/ali.png"
           height="300px"
         >
           <v-layout

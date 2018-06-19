@@ -12,7 +12,7 @@
       <v-card
         slot="activator"
         class="portrait"
-        img="/static/doc-images/cards/girl.jpg"
+        img="/doc-images/cards/girl.jpg"
         height="300"
         width="600"
       ></v-card>

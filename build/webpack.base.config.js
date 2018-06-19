@@ -22,8 +22,8 @@ module.exports = {
     : 'source-map',
   mode: isProd ? 'production' : 'development',
   output: {
-    path: resolve('../public'),
-    publicPath: '/public/',
+    path: resolve('../dist'),
+    publicPath: '/dist/',
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].js'
   },

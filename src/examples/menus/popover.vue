@@ -18,7 +18,7 @@
         <v-list>
           <v-list-tile avatar>
             <v-list-tile-avatar>
-              <img src="/static/doc-images/john.jpg" alt="John">
+              <img src="/doc-images/john.jpg" alt="John">
             </v-list-tile-avatar>
 
             <v-list-tile-content>

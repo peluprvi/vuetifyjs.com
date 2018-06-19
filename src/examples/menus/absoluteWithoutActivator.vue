@@ -3,7 +3,7 @@
     <v-layout flex justify-center>
       <v-card
         class="portrait"
-        img="/static/doc-images/cards/girl.jpg"
+        img="/doc-images/cards/girl.jpg"
         height="300px"
         @contextmenu="show"
       ></v-card>

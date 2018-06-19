@@ -90,7 +90,7 @@
         <v-btn icon large>
           <v-avatar size="32px" tile>
             <img
-              src="https://vuetifyjs.com/static/doc-images/logo.svg"
+              src="https://vuetifyjs.com/doc-images/logo.svg"
               alt="Vuetify"
             >
           </v-avatar>

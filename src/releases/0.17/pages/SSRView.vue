@@ -39,7 +39,7 @@
         |   &lt;v-footer app&gt;2017&lt;/v-footer&gt;
         |&lt;/v-app&gt;
       h5 Static assets
-      section-text Place all statically served assets in <code>static</code>. This can be accessed by referencing <code>/static/picture.png</code>, for example.
+      section-text Place all statically served assets in <code>static</code>. This can be accessed by referencing <code>/picture.png</code>, for example.
       h5 Components
       section-text The components folder is where your custom components should be placed. Edit the <code>components/_index.js</code> file to have these files automatically bootstrapped for you.
       section-header Routing

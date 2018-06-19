@@ -8,7 +8,7 @@
   "applicationHeader": "应用程序",
   "applicationText1": "导航到**src**文件夹并打开`App.vue`.Vuetify是一个以语义为中心的框架，您写的代码应该很容易记住，而且易于管理。为此，Vuetify的主要组件之一是`v-app`，这个组件允许您定义您的应用程序布局，这与`v-toolbar`、`v-navigation-drawer`和`v-footer`结合使用。",
   "applicationText2": "下面的标记告诉应用程序您有一个`toolbar`和`footer`。一旦定义，内容区域将被调整到适应的大小。有关布局的更多信息，请导航到[布局](/layouts/pre-defined)部分。",
-  "applicationText3": "举个例子，将所有静态提供的资源放在`static`目录，这样可以通过引用`/static/picture.png`。",
+  "applicationText3": "举个例子，将所有静态提供的资源放在`static`目录，这样可以通过引用`/picture.png`。",
   "applicationText4": "组件文件夹是您的自定义组件应放置的位置，编辑`components/_index.js`文件以使这些文件自动为您启动。",
   "applicationSubHeader1": "静态资源",
   "applicationSubHeader2": "组件",

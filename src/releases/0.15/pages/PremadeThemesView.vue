@@ -25,7 +25,7 @@
               v-btn(
                 flat
                 success
-                :href="template.demoUrl" 
+                :href="template.demoUrl"
                 v-if="!template.price"
                 target="_blank"
                 rel="noopener"
@@ -40,7 +40,7 @@
               v-btn(
                 flat
                 success
-                :href="`https://github.com/${template.sourceUrl}/tree/master/template`" 
+                :href="`https://github.com/${template.sourceUrl}/tree/master/template`"
                 target="_blank"
                 rel="noopener"
                 v-else
@@ -54,22 +54,22 @@
     data: () => ({
       templates: [
         {
-          screenshot: '/static/doc-images/starter/vuetify-premium.jpg',
+          screenshot: '/doc-images/starter/vuetify-premium.jpg',
           title: 'Startup',
           tag: 'PREMIUM',
           description: 'Showcase your Company or personal portfolio with this beautifully hand-crafted Material design template.',
           price: '25$',
           demoUrl: ''
         },
-        { 
-          screenshot: '/static/doc-images/starter/vuetify-parallax-starter.png',
+        {
+          screenshot: '/doc-images/starter/vuetify-parallax-starter.png',
           title: 'Parallax',
           description:'This beautiful single page parallax is a great home page for any application.',
           sourceUrl: 'vuetifyjs/parallax-starter',
           demoUrl: '/themes/parallax-starter'
         },
-        { 
-          screenshot: '/static/doc-images/starter/vuetify-blog-starter.png',
+        {
+          screenshot: '/doc-images/starter/vuetify-blog-starter.png',
           title: 'Blog',
           description:'A simple template that features a clean interface for creating a blog or blog-like application.',
           sourceUrl: 'vuetifyjs/blog-starter',

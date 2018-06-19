@@ -37,7 +37,7 @@
           d-flex>
           <v-layout align-center>
             <v-flex xs12>
-              <img class="logo" src="/static/doc-images/logo.svg" width="50px" alt="">
+              <img class="logo" src="/doc-images/logo.svg" width="50px" alt="">
             </v-flex>
           </v-layout>
         </v-flex>

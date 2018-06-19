@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-layout flex justify-center>
-      <v-card class="portrait" img="/static/doc-images/cards/girl.jpg" height="300px" @contextmenu="show"></v-card>
+      <v-card class="portrait" img="/doc-images/cards/girl.jpg" height="300px" @contextmenu="show"></v-card>
     </v-layout>
     <v-menu offset-y v-model="showMenu" absolute :position-x="x" :position-y="y">
       <v-list>

@@ -21,7 +21,7 @@
         |   / router
         |   / static
         |   / store
-      section-text 
+      section-text
         p The <strong>Build</strong> folder contains all of the webpack specific build configurations for your project. <strong>Src</strong> is where all the development project files reside. Notice that the Webpack-SSR template is out-of-the-box configured to use <a href="https://router.vuejs.org/en/" target="_blank" rel="noopener">Vue Router</a>, <a href="https://vuex.vuejs.org/en/intro.html" target="_blank" rel="noopener">Vuex</a>, and the <a href="https://vuejs.org/v2/guide/ssr.html" target="_blank" rel="noopener">Vue Server Renderer</a>. This will allow you to make simple or complex applications that are not only fast/efficient, but <strong>SEO</strong> friendly.
       section-header Application
       section-text Navigate to the <strong>src</strong> folder and open up <code>App.vue</code>. Vuetify is a semantic-focused framework. The code you write should be easy to remember, and easy to manage. To do this, one of the main components of Vuetify is <code>v-app</code>. This component allows you to define your application layout. This is used in conjunction with <code>v-toolbar</code>, <code>v-navigation-drawer</code>, and <code>v-footer</code>.
@@ -38,8 +38,8 @@
         |   &lt;/main&gt;
         |   &lt;v-footer&gt;2017&lt;/v-footer&gt;
         |&lt;/v-app&gt;
-      h5 Static assets        
-      section-text Place all statically served assets in <code>static</code>. This can be accessed by referencing <code>/static/picture.png</code>, for example.
+      h5 Static assets
+      section-text Place all statically served assets in <code>static</code>. This can be accessed by referencing <code>/picture.png</code>, for example.
       h5 Components
       section-text The components folder is where your custom components should be placed. Edit the <code>components/_index.js</code> file to have these files automatically bootstrapped for you.
       section-header Routing

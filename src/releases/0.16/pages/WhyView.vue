@@ -57,7 +57,7 @@
                   v-icon(dark).green--text check
           v-flex(xs12 sm4).layout.align-center.justify-center
             img(
-              src="/static/doc-images/logo.svg"
+              src="/doc-images/logo.svg"
               alt="Vuetify"
               width="150px"
             ).my-5
@@ -72,7 +72,7 @@
               v-list-tile(avatar tag="div")
                 v-list-tile-avatar
                   v-avatar
-                    img(src="/static/doc-images/john.jpg")
+                    img(src="/doc-images/john.jpg")
                 v-list-tile-content
                   v-list-tile-title John Leider
                   v-list-tile-sub-title Author of Vuetify.js
@@ -113,17 +113,17 @@
       ],
       philosophies: [
         {
-          img: '/static/vuetify_semantic.svg',
+          img: '/vuetify_semantic.svg',
           title: 'Semantic toolkit',
           caption: `Vuetify is built from the ground up to be semantic. Easy to learn, easy to remember&mdash;this means that whether you are developing your own application, or onboarding a new developer, Vuetify's <em>write-as-you-speak</em> components and properties make development a breeze.`
         },
         {
-          img: '/static/vuetify_sizes.svg',
+          img: '/vuetify_sizes.svg',
           title: 'Continuous updates',
           caption: `Vuetify has a consistent update cycle, allowing you to get your hands on bug fixes and enhancements more often. The development team is committed to providing you with the best experience you can have.`
         },
         {
-          img: '/static/vuetify_cli.svg',
+          img: '/vuetify_cli.svg',
           title: 'Amazing support',
           caption: `When you run into a roadblock, you need assistance immediately. Vuetify offers chat support in our growing community on Discord.`
         }

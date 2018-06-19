@@ -26,7 +26,7 @@
                   v-else
                 )
                   img(
-                    :src="`/static/doc-images/${supporter.logo}`"
+                    :src="`/doc-images/${supporter.logo}`"
                     :height="supporter.size || 'auto'"
                     :style="{ maxHeight: `${supporter.size}px` }"
                   )
@@ -113,7 +113,7 @@
             @click="$ga.event('home mwvjs click', 'click', 'madewithvuejs')"
           )
             img(
-              src="/static/doc-images/powered-by-madewithvue-1.svg"
+              src="/doc-images/powered-by-madewithvue-1.svg"
               height="65px"
             )
 
@@ -129,7 +129,7 @@
               h5.mb-3
                 v-layout(align-center justify-center column)
                   img(
-                    src="/static/v-alt.svg"
+                    src="/v-alt.svg"
                     height="64px"
                     width="64px"
                   ).mb-2
