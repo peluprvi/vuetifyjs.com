@@ -144,7 +144,9 @@
         } else if (this.$te(selfDesc)) {
           description = this.$t(selfDesc)
 
-          if (description.indexOf('Mixins.') > -1) {
+          if (description.indexOf('Mixins.') > -1 ||
+            description.indexOf('Components.') > -1
+          ) {
             description = this.$t(description)
           }
 

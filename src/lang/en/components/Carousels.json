@@ -24,8 +24,8 @@
     }
   },
   "props": {
-    "nextIcon": "Mixins.Input.props.appendIcon",
-    "prevIcon": "Mixins.Input.props.prependIcon",
+    "nextIcon": "The displayed icon for forcing pagination to the next item",
+    "prevIcon": "The displayed icon for forcing pagination to the previous item",
     "cycle": "Determines if carousel should cycle through images",
     "delimiterIcon": "Sets icon for carousel delimiter",
     "hideControls": "Hides the navigation controls",

@@ -101,7 +101,7 @@
     "type": "Sets input type"
   },
   "events": {
-    "change": "Mixins.Input.events.change",
+    "change": "Components.Inputs.events.change",
     "update:error": "Mixins.Validatable.events['update:error']"
   }
 }

@@ -83,8 +83,8 @@
     "selection": "Define a custom selection appearance"
   },
   "events": {
-    "change": "Mixins.Input.events.change",
-    "update:error": "Mixins.Input.events.update:error",
+    "change": "Components.Inputs.events.change",
+    "update:error": "Mixins.Validatable.events['update:error']",
     "update:searchInput": "The `search-input.sync` event"
   }
 }

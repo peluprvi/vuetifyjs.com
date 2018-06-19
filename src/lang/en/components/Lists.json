@@ -60,9 +60,9 @@
     },
     "v-list-group": {
       "activeClass": "Mixins.Routable.props.activeClass",
-      "appendIcon": "Mixins.Input.props.appendIcon",
-      "disabled": "Mixins.Input.props.disabled",
-      "prependIcon": "Mixins.Input.props.prependIcon"
+      "appendIcon": "Components.Inputs.props.appendIcon",
+      "disabled": "Components.Inputs.props.disabled",
+      "prependIcon": "Components.Inputs.props.prependIcon"
     }
   }
 }

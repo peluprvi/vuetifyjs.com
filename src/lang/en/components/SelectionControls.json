@@ -57,8 +57,6 @@
   },
   "props": {
     "column": "Displays radio buttons in column",
-    "disabled": "Mixins.Input.props.disabled",
-    "label": "Mixins.Input.props.label",
     "mandatory": "Forces a selection on a `v-radio` child",
     "name": "Sets the component's name attribute",
     "row": "Displays radio buttons in row",
@@ -67,8 +65,7 @@
     "value": "Sets the value of the selection control component"
   },
   "events": {
-    "blur": "Mixins.Input.events.blur",
-    "change": "Mixins.Input.events.change",
-    "update:error": "Mixins.Input.events.update:error"
+    "change": "Components.Inputs.events.change",
+    "update:error": "Mixins.Validatable.events['update:error']"
   }
 }

@@ -28,7 +28,7 @@
     }
   },
   "props": {
-    "disabled": "Mixins.Input.props.disabled",
+    "disabled": "Components.Inputs.props.disabled",
     "large": "Makes the icon large **(36px)**",
     "left": "Places icon on the left, when used inside a button",
     "medium": "Makes the icon medium **(28px)**",
