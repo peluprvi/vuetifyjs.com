@@ -13,7 +13,7 @@
       @click="$store.commit('app/DRAWER_TOGGLE')"
       v-show="!stateless && $vuetify.breakpoint.mdAndDown"
     )
-    router-link(:to="{ name: 'home/Home' }").d-flex.ml-3
+    router-link(:to="{ name: 'home/Home' }").d-flex
       img(
         src="/v-alt.svg"
         height="38px"
