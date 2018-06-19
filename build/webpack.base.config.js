@@ -30,7 +30,7 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.json', '.vue'],
     alias: {
-      '@': path.resolve(__dirname, '../'),
+      '@': path.resolve(__dirname, '../src'),
       // Make sure *our* version of vue is always loaded. This is needed for `yarn link vuetify` to work
       'vue$': path.resolve(__dirname, '../node_modules/vue/dist/vue.common.js')
     },

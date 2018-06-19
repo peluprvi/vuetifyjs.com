@@ -20,7 +20,7 @@ const cssLoaders = [
 
 const config = merge(base, {
   entry: {
-    app: './assets/entry-client.js'
+    app: './src/assets/entry-client.js'
   },
   module: {
     rules: [
