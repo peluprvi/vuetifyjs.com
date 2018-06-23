@@ -22,15 +22,15 @@ module.exports = {
     : 'source-map',
   mode: isProd ? 'production' : 'development',
   output: {
-    path: resolve('../public'),
-    publicPath: '/public/',
+    path: resolve('../dist'),
+    publicPath: '/dist/',
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].js'
   },
   resolve: {
     extensions: ['*', '.js', '.json', '.vue'],
     alias: {
-      '@': path.resolve(__dirname, '../'),
+      '@': path.resolve(__dirname, '../src'),
       // Make sure *our* version of vue is always loaded. This is needed for `yarn link vuetify` to work
       'vue$': path.resolve(__dirname, '../node_modules/vue/dist/vue.common.js')
     },
@@ -74,6 +74,7 @@ module.exports = {
     maxEntrypointSize: 300000,
     hints: isProd ? 'warning' : false
   },
+  stats: { children: false },
   plugins
 }
 
