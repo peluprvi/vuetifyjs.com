@@ -1,5 +1,5 @@
 import en from './en'
-import ptBR from './ptBR'
+import ptBR from './pt-BR'
 import ru from './ru'
 import ko from './ko'
 import zhHans from './zhHans'
