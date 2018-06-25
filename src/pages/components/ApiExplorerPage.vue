@@ -5,22 +5,21 @@
         xs12
         mb-5
       >
-        <v-select
+        <v-combobox
           v-model="currentProxy"
           :label="$t('Components.ApiExplorer.select')"
           :items="computedApi"
           solo
-          prepend-icon="mdi-database-search"
+          prepend-inner-icon="mdi-database-search"
           clearable
-          combobox
           chips
-          return-object
         >
           <template
             slot="selection"
             slot-scope="props"
           >
             <v-chip
+              :selected="props.selected"
               color="primary"
               class="white--text"
               label
@@ -44,7 +43,7 @@
               <v-list-tile-sub-title v-text="props.item.subtext" />
             </v-list-tile-content>
           </template>
-        </v-select>
+        </v-combobox>
       </v-flex>
       <v-flex
         v-if="!current"
@@ -102,7 +101,7 @@
                 <parameters
                   :headers="headers[tabItem]"
                   :items="currentApi[tabItem]"
-                  :namespace="namespace"
+                  :namespace="currentProxy.namespace"
                   :search="search"
                   :target="current"
                   :type="tabItem"
@@ -119,15 +118,17 @@
 
 <script>
   import api from 'api-generator'
-
+  import { camel } from '@/util/helpers'
+  import { mapState } from 'vuex'
   import ExampleView from '@/components/views/ExampleView'
 
   export default {
-    name: 'AtAGlance',
+    name: 'ApiExplorerPage',
 
     extends: ExampleView,
 
     data: () => ({
+      current: null,
       currentProxy: null,
       directives: [
         'v-ripple',
@@ -144,22 +145,24 @@
     }),
 
     computed: {
+      ...mapState('app', ['components']),
       computedApi () {
-        return Object.keys(api)
-          .filter(a => a !== '$vuetify')
-          .map(text => {
-            const icon = this.getIcon(text)
-            return Object.assign({}, {
-              text,
-              subtext: this.getSubText(icon),
-              icon
-            })
-          })
-          .sort((a, b) => {
-            if (a.text > b.text) return 1
-            if (b.text > a.text) return -1
-            return 0
-          })
+        const computedApi = []
+
+        for (const section in this.components) {
+          for (const component of this.components[section].components) {
+            // Temporarily remove directives
+            if (this.directives.includes(component)) continue
+
+            computedApi.push(this.genItem(section, component))
+          }
+        }
+
+        return computedApi.sort((a, b) => {
+          if (a.text > b.text) return 1
+          if (b.text > a.text) return -1
+          return 0
+        })
       }
     },
 
@@ -170,24 +173,38 @@
     },
 
     methods: {
-      getIcon (text) {
-        const directives = this.directives
-        const grid = this.grid
+      genItem (section, component) {
+        let icon
+        let namespace
+        let subtext
+        let text = component
 
-        if (directives.includes(text)) return 'mdi-function'
-        if (grid.includes(text)) return 'mdi-grid'
-        if (text.indexOf('transition') > -1) return 'mdi-clock-fast'
-        if (api[text].props.length === 0) return 'mdi-view-stream'
-        else return 'mdi-view-dashboard'
-      },
-      getSubText (text) {
-        switch (text) {
-          case 'mdi-function': return 'Directive'
-          case 'mdi-grid': return 'Grid Component'
-          case 'mdi-clock-fast': return 'Transition'
-          case 'mdi-view-stream': return 'Functional Component'
-          default: return 'Component'
+        if (this.directives.includes(text)) {
+          namespace = 'Directives'
+          subtext = 'Directive'
+          icon = 'mdi-function'
+        } else if (this.grid.includes(text)) {
+          namespace = 'Layout'
+          section = 'Grid'
+          subtext = 'Grid Component'
+          icon = 'mdi-grid'
+        } else if (text.indexOf('transition') > -1) {
+          namespace = 'Motion'
+          subtext = 'Transition'
+          icon = 'mdi-clock-fast'
+        } else if (api[text] && api[text].props.length === 0) {
+          namespace = 'Components'
+          subtext = 'Functional Components'
+          icon = 'mdi-view-stream'
+        } else {
+          namespace = 'Components'
+          subtext = 'Component'
+          icon = 'mdi-view-dashboard'
         }
+
+        namespace += `.${camel(section)}`
+
+        return { icon, namespace, subtext, text }
       }
     }
   }
