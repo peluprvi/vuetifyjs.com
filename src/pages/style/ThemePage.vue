@@ -73,10 +73,10 @@
         markup(lang="javascript")
           | Vue.use(Vuetify, {
           |   options: {
-          |     minifyTheme: function () {
+          |     minifyTheme: function (css) {
           |       return process.env.NODE_ENV === 'production'
-          |         ? val.replace(/[\s|\r\n|\r|\n]/g, '')
-          |         : null
+          |         ? css.replace(/[\s|\r\n|\r|\n]/g, '')
+          |         : css
           |     }
           |   }
           | })
