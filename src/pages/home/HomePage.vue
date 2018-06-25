@@ -8,6 +8,7 @@
             h2.text-xs-center.headline.mb-3.grey--text
               translatable(i18n="Vuetify.Home.proudlySponsoredBy")
                 span {{ $t('Vuetify.Home.proudlySponsoredBy') }}
+
             v-layout(row wrap justify-center align-center)
               template(v-for="(supporter, i) in parsedSupporters")
                 v-flex(
@@ -30,7 +31,28 @@
                     :height="supporter.size || 'auto'"
                     :style="{ maxHeight: `${supporter.size}px` }"
                   )
-              v-flex(xs12).text-xs-center.mt-3
+
+              v-flex(xs12).my-3
+                h3.text-xs-center.headline.mb-3.grey--text
+                  translatable(i18n="Vuetify.Home.specialSponsors")
+                    span {{ $t('Vuetify.Home.specialSponsors') }}
+
+              v-flex(xs12).text-xs-center.mb-5
+                a(
+                  target="_blank"
+                  rel="noopener"
+                  class="ma-3"
+                  href="https://haloplatform.tech?ref=vuetifyjs.com"
+                  title="HALO Platform"
+                  @click="$ga.event('home sponsor click', 'click', 'HALO Platform')"
+                )
+                  img(
+                    src="/doc-images/special/halo.png"
+                    height="120"
+                    style="{ maxHeight: '120px' }"
+                  )
+
+              v-flex(xs12).text-xs-center
                 translatable(i18n="Vuetify.Home.becomeSponsor")
                 v-btn(
                   :to="{ name: 'getting-started/SponsorsAndBackers' }"
