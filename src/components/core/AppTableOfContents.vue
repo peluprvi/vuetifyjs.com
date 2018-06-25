@@ -76,6 +76,7 @@
         item = item || {}
         const isActive = this.activeIndex === index
         const vm = this
+        const id = `#${item.href}`
 
         const link = this.$createElement('a', {
           staticClass: 'subheading mb-3 d-block',
@@ -86,18 +87,14 @@
           style: {
             borderLeft: `2px solid ${isActive ? this.$vuetify.theme.primary : 'transparent'}`
           },
-          props: { href: '#' },
+          attrs: { href: id },
           domProps: { innerText: this.$t(item.text) },
           on: {
             click (e) {
               e.stopPropagation()
               e.preventDefault()
 
-              const goTo = index === 0
-                ? 0
-                : `#${item.href}`
-
-              vm.$vuetify.goTo(goTo)
+              vm.$vuetify.goTo(index && id).then(() => document.location.hash = index ? id : '')
             }
           }
         })
