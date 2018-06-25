@@ -10,6 +10,10 @@
     "comboboxMultiple": {
       "header": "Multiple combobox",
       "desc": "Previously known as **tags** - user is allowed to enter more than 1 value"
+    },
+    "noData": {
+      "header": "No data with chips",
+      "desc": "In this example we utilize a custom **no-data** slot to provide context to the user when searching / creating items."
     }
   },
   "slots": {
