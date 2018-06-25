@@ -1,6 +1,6 @@
 <template lang="pug">
   doc-view
-    section
+    section#usage
       section-head(value="Generic.Pages.usage")
       section-text(value="Framework.Icons.usageText1")
 
@@ -14,7 +14,7 @@
 
       section-text(value="Framework.Icons.usageText2")
 
-    section
+    section#installing-fonts
       section-head(value="Framework.Icons.installHeader")
       section-text(value="Framework.Icons.installText1")
 
@@ -61,7 +61,7 @@
       section-subheader(value="Framework.Icons.installFA")
       section-subheader(value="Framework.Icons.installFA4")
 
-    section
+    section#using-custom-icons
       section-head(value="Framework.Icons.customIconsHeader")
       section-text(value="Framework.Icons.customIconsText1")
 
@@ -113,7 +113,7 @@
         |   icons: MY_ICONS
         | })
 
-    section
+    section#reusable-custom-icons
       section-head(value="Framework.Icons.reusableHeader")
       section-text(value="Framework.Icons.reusableText1")
 
@@ -164,7 +164,7 @@
         |   }
         | &lt;/script&gt;
 
-    section
+    section#custom-components
       section-head(value="Framework.Icons.customComponentHeader")
       section-text(value="Framework.Icons.customComponentText1")
 

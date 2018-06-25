@@ -93,6 +93,60 @@ export default () => ({
         }
       ]
     },
+    Framework: {
+      Icons: [
+        {
+          text: 'Introduction',
+          href: 'introduction'
+        },
+        {
+          text: 'Usage',
+          href: 'usage'
+        },
+        {
+          text: 'Installing fonts',
+          href: 'installing-fonts'
+        },
+        {
+          text: 'Using custom icons',
+          href: 'using-custom-icons'
+        },
+        {
+          text: 'Reusable custom icons',
+          href: 'reusable-custom-icons'
+        },
+        {
+          text: 'Custom components',
+          href: 'custom-components'
+        }
+      ],
+      Internationalization: [
+        {
+          text: 'Introduction',
+          href: 'introduction'
+        },
+        {
+          text: 'API',
+          href: 'api'
+        },
+        {
+          text: 'Getting started',
+          href: 'getting-started'
+        },
+        {
+          text: 'Create translation',
+          href: 'create-translation'
+        },
+        {
+          text: 'Custom components',
+          href: 'custom-components'
+        },
+        {
+          text: 'Vue i18n',
+          href: 'vue-i18n'
+        }
+      ]
+    },
     Layout: {
       PreDefined: [
         {

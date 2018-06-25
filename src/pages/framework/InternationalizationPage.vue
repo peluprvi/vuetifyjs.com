@@ -12,7 +12,7 @@
             target="api"
           )
 
-    section#usage
+    section#getting-started
       section-head(value="Framework.Internationalization.gettingStarted")
       section-text(value="Framework.Internationalization.gettingStartedText")
       markup(lang="js")
@@ -36,14 +36,14 @@
         |   }
         |})
 
-    section#translation
+    section#create-translation
       section-head(value="Framework.Internationalization.createTranslation")
       section-text(value="Framework.Internationalization.createTranslationText")
 
       markup(lang="json")
         | {{ enLocale }}
 
-    section#custom
+    section#custom-components
       section-head(value="Framework.Internationalization.customComponents")
       section-text(value="Framework.Internationalization.customComponentsText")
 
