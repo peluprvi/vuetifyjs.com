@@ -18,6 +18,10 @@
     "asynchronous": {
       "header": "Asynchronous items",
       "desc": "Sometimes you need to load data externally based upon a search query. Use the `search-input` prop with the **.sync** modifier when using the `autocomplete` prop. We also make use of the new `cache-items` prop. This will keep a unique list of all items that have been passed to the `items` prop and is **REQUIRED** when using asynchronous items and the **multiple** prop."
+    },
+    "advanced": {
+      "header": "Searching an API",
+      "desc": "The `v-autocomplete` component is extremely flexible and can fit just about any use-case. Create custom displays for **no-data**, **item** and **selection** slots to provide a unique user experience."
     }
   },
   "slots": {

@@ -18,7 +18,8 @@
       "autocomplete",
       "scopedSlots",
       "customFilter",
-      "asynchronous"
+      "asynchronous",
+      "advanced"
     ]
   },
   "avatars": {

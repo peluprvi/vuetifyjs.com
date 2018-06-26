@@ -1,24 +1,26 @@
 <template>
-  <v-container fluid>
-    <v-layout>
-      <v-flex>
-        <v-autocomplete
-          :loading="loading"
-          :items="items"
-          :rules="[() => select.length > 0 || 'You must choose at least one']"
-          :search-input.sync="search"
-          v-model="select"
-          cache-items
-          chips
-          hide-no-data
-          label="Async items"
-          multiple
-          required
-          solo
-        ></v-autocomplete>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-toolbar
+    dark
+    color="teal"
+  >
+    <v-toolbar-title>State selection</v-toolbar-title>
+    <v-autocomplete
+      :loading="loading"
+      :items="items"
+      :search-input.sync="search"
+      v-model="select"
+      cache-items
+      class="mx-3"
+      flat
+      hide-no-data
+      hide-details
+      label="What state are you from?"
+      solo-inverted
+    ></v-autocomplete>
+    <v-btn icon>
+      <v-icon>more_vert</v-icon>
+    </v-btn>
+  </v-toolbar>
 </template>
 
 <script>

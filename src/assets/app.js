@@ -60,6 +60,9 @@ export function createApp (ssrContext) {
     store,
     ssrContext,
     i18n,
+    mounted () {
+      window.axios = axios
+    },
     render: h => h(App)
   })
 

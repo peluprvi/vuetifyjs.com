@@ -94,7 +94,7 @@
               e.stopPropagation()
               e.preventDefault()
 
-              vm.$vuetify.goTo(index && id).then(() => document.location.hash = index ? id : '')
+              vm.$vuetify.goTo(index && id).then(() => (document.location.hash = index ? id : ''))
             }
           }
         })
