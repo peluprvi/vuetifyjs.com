@@ -101,8 +101,8 @@
                   span {{ subItem.title }}
               v-chip(
                 v-if="subItem.badge"
+                :color="subItem.color || 'primary'"
                 class="white--text pa-0 v-chip--x-small"
-                color="primary"
                 disabled
               ) {{ subItem.badge }}
               v-list-tile-action(v-if="subItem.action")

@@ -27,8 +27,8 @@ export default [
     group: 'layout',
     icon: 'mdi-page-layout-body',
     items: [
-      { name: 'PreDefined', title: 'Pre-defined layouts', badge: 'updated' },
-      { name: 'PreMadeThemes', title: 'Pre-made themes', badge: 'updated' },
+      { name: 'PreDefined', title: 'Pre-defined layouts' },
+      { name: 'PreMadeThemes', title: 'Pre-made themes' },
       {
         title: 'Grid system',
         group: 'grid',
@@ -72,7 +72,7 @@ export default [
     component: 'components/Doc',
     icon: 'mdi-view-dashboard',
     items: [
-      { name: 'api-explorer', title: 'API explorer', badge: 'new' },
+      { name: 'api-explorer', title: 'API explorer', badge: 'updated', color: 'tertiary' },
       { name: 'alerts', title: 'Alerts' },
       { name: 'avatars', title: 'Avatars' },
       { name: 'badges', title: 'Badges' },
@@ -86,26 +86,27 @@ export default [
       { name: 'chips', title: 'Chips' },
       { name: 'data-iterator', title: 'Data iterator' },
       { name: 'data-tables', title: 'Data tables' },
-      { name: 'dialogs', title: 'Dialogs' },
-      { name: 'dividers', title: 'Dividers' },
+      { name: 'dialogs', title: 'Dialogs', badge: 'updated', color: 'tertiary' },
+      { name: 'dividers', title: 'Dividers', badge: 'updated', color: 'tertiary' },
       { name: 'expansion-panels', title: 'Expansion panels' },
       { name: 'footer', title: 'Footer' },
       {
         title: 'Inputs & controls',
-        group: '(autocompletes|combobox|forms|inputs|overflow-btns|selects|selection|text-fields)',
+        group: '(autocompletes|combobox|forms|inputs|overflow-btns|selects|selection|text-fields|sliders)',
         namespace: 'components',
         items: [
           { name: 'autocompletes', title: 'Autocompletes', badge: 'new' },
           { name: 'combobox', title: 'Combobox', badge: 'new' },
-          { name: 'forms', title: 'Forms', badge: 'updated', color: 'red lighten-2' },
+          { name: 'forms', title: 'Forms', badge: 'updated', color: 'tertiary' },
           { name: 'inputs', title: 'Inputs', badge: 'new' },
           { name: 'overflow-btns', title: 'Overflow Buttons', badge: 'new' },
-          { name: 'selects', title: 'Selects', badge: 'updated', color: 'red lighten-2' },
-          { name: 'selection-controls', title: 'Selection controls', badge: 'updated', color: 'red lighten-2' },
-          { name: 'text-fields', title: 'Text fields', badge: 'updated', color: 'red lighten-2' }
+          { name: 'selects', title: 'Selects', badge: 'updated', color: 'tertiary' },
+          { name: 'selection-controls', title: 'Selection controls', badge: 'updated', color: 'tertiary' },
+          { name: 'sliders', title: 'Sliders', badge: 'updated', color: 'tertiary' },
+          { name: 'text-fields', title: 'Text fields', badge: 'updated', color: 'tertiary' }
         ]
       },
-      { name: 'icons', title: 'Icons' },
+      { name: 'icons', title: 'Icons', badge: 'updated', color: 'tertiary' },
       { name: 'jumbotrons', title: 'Jumbotrons' },
       { name: 'lists', title: 'Lists' },
       { name: 'menus', title: 'Menus' },
@@ -117,12 +118,11 @@ export default [
         group: '(date-pickers|time-pickers)',
         namespace: 'components',
         items: [
-          { name: 'date-pickers', title: 'Date pickers' },
-          { name: 'time-pickers', title: 'Time pickers' }
+          { name: 'date-pickers', title: 'Date pickers', badge: 'updated', color: 'tertiary' },
+          { name: 'time-pickers', title: 'Time pickers', badge: 'updated', color: 'tertiary' }
         ]
       },
       { name: 'progress', title: 'Progress' },
-      { name: 'sliders', title: 'Sliders' },
       { name: 'snackbars', title: 'Snackbars' },
       { name: 'steppers', title: 'Steppers' },
       { name: 'subheaders', title: 'Subheaders' },
@@ -157,7 +157,6 @@ export default [
   {
     title: 'Theme generator',
     icon: 'mdi-format-paint',
-    name: 'ThemeGenerator',
-    badge: 'new'
+    name: 'ThemeGenerator'
   }
 ]
