@@ -1,25 +1,39 @@
 <template>
-  <v-container fluid>
-    <v-layout row wrap align-center>
-      <v-flex xs12 sm6>
-        <v-subheader v-text="'Autocomplete'"></v-subheader>
-      </v-flex>
-      <v-flex xs12 sm6>
-        <v-autocomplete
-          :items="states"
-          v-model="a1"
-          label="Select"
-        ></v-autocomplete>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-card>
+    <v-card-title class="headline font-weight-regular blue-grey white--text">Profile</v-card-title>
+    <v-card-text>
+      <v-subheader class="pa-0">Where do you live?</v-subheader>
+      <v-autocomplete
+        v-model="model"
+        :hint="!isEditing ? 'Click the icon to edit' : 'Click the icon to save'"
+        :items="states"
+        :readonly="!isEditing"
+        :label="`State — ${isEditing ? 'Editable' : 'Readonly'}`"
+        persistent-hint
+        prepend-icon="mdi-city"
+      >
+        <v-slide-x-reverse-transition
+          mode="out-in"
+          slot="append-outer"
+        >
+          <v-icon
+            :color="isEditing ? 'success' : 'info'"
+            :key="`icon-${isEditing}`"
+            v-text="isEditing ? 'mdi-check-outline' : 'mdi-circle-edit-outline'"
+            @click="isEditing = !isEditing"
+          ></v-icon>
+        </v-slide-x-reverse-transition>
+      </v-autocomplete>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>
   export default {
     data () {
       return {
-        a1: null,
+        isEditing: false,
+        model: null,
         states: [
           'Alabama', 'Alaska', 'American Samoa', 'Arizona',
           'Arkansas', 'California', 'Colorado', 'Connecticut',

@@ -16,6 +16,7 @@
     ],
     "examples": [
       "autocomplete",
+      "api",
       "scopedSlots",
       "customFilter",
       "asynchronous",

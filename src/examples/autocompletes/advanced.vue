@@ -1,55 +1,76 @@
 <template>
-  <v-autocomplete
-    v-model="model"
-    :items="items"
-    :loading="isLoading"
-    :search-input.sync="search"
-    chips
-    item-text="name"
-    item-value="symbol"
-    label="Select a coin"
-    solo
+  <v-toolbar
+    color="orange accent-1"
+    prominent
+    tabs
   >
-    <template slot="no-data">
-      <v-list-tile>
-        <v-list-tile-title>
-          Search for your favorite
-          <strong>Cryptocurrency</strong>
-        </v-list-tile-title>
-      </v-list-tile>
-    </template>
-    <template
-      slot="selection"
-      slot-scope="{ item, selected }"
+    <v-toolbar-side-icon></v-toolbar-side-icon>
+    <v-toolbar-title class="title mr-4">Cryptocurrency</v-toolbar-title>
+    <v-autocomplete
+      v-model="model"
+      :items="items"
+      :loading="isLoading"
+      :search-input.sync="search"
+      chips
+      clearable
+      hide-details
+      hide-selected
+      item-text="name"
+      item-value="symbol"
+      label="Search for a coin..."
+      solo
     >
-      <v-chip
-        color="indigo"
-        class="white--text"
-        :selected="selected"
+      <template slot="no-data">
+        <v-list-tile>
+          <v-list-tile-title>
+            Search for your favorite
+            <strong>Cryptocurrency</strong>
+          </v-list-tile-title>
+        </v-list-tile>
+      </template>
+      <template
+        slot="selection"
+        slot-scope="{ item, selected }"
       >
-        <v-icon left>mdi-coin</v-icon>
-        <span v-text="item.name"></span>
-      </v-chip>
-    </template>
-    <template
-      slot="item"
-      slot-scope="{ item, tile }"
+        <v-chip
+          color="blue-grey"
+          class="white--text"
+          :selected="selected"
+        >
+          <v-icon left>mdi-coin</v-icon>
+          <span v-text="item.name"></span>
+        </v-chip>
+      </template>
+      <template
+        slot="item"
+        slot-scope="{ item, tile }"
+      >
+        <v-list-tile-avatar
+          color="indigo"
+          class="headline font-weight-light white--text"
+        >
+          {{ item.name.charAt(0) }}
+        </v-list-tile-avatar>
+        <v-list-tile-content>
+          <v-list-tile-title v-text="item.name"></v-list-tile-title>
+          <v-list-tile-sub-title v-text="item.symbol"></v-list-tile-sub-title>
+        </v-list-tile-content>
+        <v-list-tile-action>
+          <v-icon>mdi-coin</v-icon>
+        </v-list-tile-action>
+      </template>
+    </v-autocomplete>
+    <v-tabs
+      :hide-slider="!model"
+      color="transparent"
+      slot="extension"
+      slider-color="blue-grey"
     >
-      <v-list-tile-avatar
-        color="indigo"
-        class="headline font-weight-light white--text"
-      >
-        {{ item.name.charAt(0) }}
-      </v-list-tile-avatar>
-      <v-list-tile-content>
-        <v-list-tile-title v-text="item.name"></v-list-tile-title>
-        <v-list-tile-sub-title v-text="item.symbol"></v-list-tile-sub-title>
-      </v-list-tile-content>
-      <v-list-tile-action>
-        <v-icon>mdi-coin</v-icon>
-      </v-list-tile-action>
-    </template>
-  </v-autocomplete>
+      <v-tab :disabled="!model">News</v-tab>
+      <v-tab :disabled="!model">Trading</v-tab>
+      <v-tab :disabled="!model">Blog</v-tab>
+    </v-tabs>
+  </v-toolbar>
 </template>
 
 <script>

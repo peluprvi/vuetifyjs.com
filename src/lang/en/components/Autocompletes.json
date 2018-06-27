@@ -1,11 +1,15 @@
 {
   "header": "Autocomplete",
-  "headerText": "Autocomplete info coming soon",
+  "headerText": "The `v-autocomplete` component offers simple and flexible type-ahead functionality. This is useful when searching large sets of data or even dynamically requesting information from an API.",
   "supplemental": ["MaskTable"],
   "examples": {
     "autocomplete": {
       "header": "Autocomplete",
-      "desc": "Provides type-ahead autocomplete functionality."
+      "desc": "The autocomplete component extends `v-select` and adds the ability to filter items."
+    },
+    "api": {
+      "header": "Searching an API",
+      "desc": "Easily hook up dynamic data and create a unique experience. The `v-autocomplete`'s expansive prop list makes it easy to fine tune every aspect of the input."
     },
     "scopedSlots": {
       "header": "Scoped slots",
@@ -20,8 +24,8 @@
       "desc": "Sometimes you need to load data externally based upon a search query. Use the `search-input` prop with the **.sync** modifier when using the `autocomplete` prop. We also make use of the new `cache-items` prop. This will keep a unique list of all items that have been passed to the `items` prop and is **REQUIRED** when using asynchronous items and the **multiple** prop."
     },
     "advanced": {
-      "header": "Searching an API",
-      "desc": "The `v-autocomplete` component is extremely flexible and can fit just about any use-case. Create custom displays for **no-data**, **item** and **selection** slots to provide a unique user experience."
+      "header": "Advanced slots",
+      "desc": "The `v-autocomplete` component is extremely flexible and can fit in just about any use-case. Create custom displays for **no-data**, **item** and **selection** slots to provide a unique user experience. Using _scoped slots_ enables you to easily customize the desired look for your application."
     }
   },
   "slots": {
