@@ -30,7 +30,7 @@
         loading: false,
         items: [],
         search: null,
-        select: [],
+        select: null,
         states: [
           'Alabama',
           'Alaska',
@@ -96,7 +96,7 @@
     },
     watch: {
       search (val) {
-        val && this.querySelections(val)
+        val && val !== this.select && this.querySelections(val)
       }
     },
     methods: {
