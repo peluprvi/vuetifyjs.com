@@ -265,7 +265,7 @@
 
         if (this.es5) {
           return `import Vue from 'vue';
-import Vuetify from 'vuetify/es5/components/Vuetify'
+import Vuetify from 'vuetify/es5/components/Vuetify';
 ${Object.keys(components).map(c => 'import ' + c + " from 'vuetify/es5/components/" + c + "';").join('\n')}
 
 Vue.use(Vuetify, {
