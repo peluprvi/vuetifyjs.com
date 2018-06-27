@@ -108,6 +108,7 @@
               v-model="selected"
               item-key="name"
               select-all
+              :rows-per-page-items="[10, 20, {text: '$vuetify.dataIterator.rowsPerPageAll', value: -1}]"
               class="elevation-1"
             )
             template(slot="headerCell" slot-scope="props")
@@ -121,10 +122,12 @@
                   hide-details
                   v-model="props.selected"
                 )
-              td(class="text-xs-right") {{ props.item.name }}
+              td(class="text-xs-right")
+                span(v-if="props.item.name !== 'transitions'") <{{ props.item.name }}></{{ props.item.name }}>
               td(class="text-xs-right") {{ props.item.component }}
+              td(class="text-xs-right") {{ props.item.group }}
             template(slot="footer")
-              td(colspan="3")
+              td(colspan="4")
                 v-layout(align-center)
                   div
                     v-switch(
@@ -149,10 +152,11 @@
       return {
         search: '',
         pagination: {},
-        selected: [],
+        selected: [{ value: false, name: 'v-app', component: 'VApp', group: 'VApp' }],
         headers: [
           { text: 'Markup', value: 'name' },
-          { text: 'Component Name', value: 'component' }
+          { text: 'Component', value: 'component' },
+          { text: 'Group', value: 'group' }
         ],
         es5: false,
         // component list.
@@ -246,6 +250,14 @@
         const isGroup = {}
         this.items.forEach(({ group }) => isGroup[group] = (group in isGroup) ? isGroup[group] + 1 : 0)
         return isGroup
+      },
+      isVAppSelected () {
+        return !!this.selected.find(item => item.name === 'v-app')
+      }
+    },
+    watch: {
+      isVAppSelected () {
+        this.isVAppSelected || alert('VApp component is required, removing it may cause your application not working properly!')
       }
     },
     methods: {
