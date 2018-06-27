@@ -124,22 +124,23 @@
               td(class="text-xs-right") {{ props.item.name }}
               td(class="text-xs-right") {{ props.item.component }}
             template(slot="footer")
-              td(colspan="100%")
-                v-tooltip(
-                  lazy
-                  right
-                  debounce="300"
-                  dark
-                )
+              td(colspan="3")
+                v-layout(align-center)
+                  div
+                    v-switch(
+                      label="ES5"
+                      v-model="es5"
+                      hide-details
+                    )
+                  v-flex
                     v-btn(
-                      icon
                       color="primary"
-                      dark
+                      flat
                       @click="copyMarkup"
                       slot="activator"
                     )
-                      v-icon content_copy
-                    span Copy components
+                      | Copy markup
+                      v-icon(right) content_copy
 </template>
 
 <script>
@@ -150,53 +151,67 @@
         pagination: {},
         selected: [],
         headers: [
-          { text: 'Markup', value: 'markup' },
+          { text: 'Markup', value: 'name' },
           { text: 'Component Name', value: 'component' }
         ],
+        es5: false,
         // component list.
         items: [
           { value: false, name: 'v-alert', component: 'VAlert', group: 'VAlert' },
           { value: false, name: 'v-app', component: 'VApp', group: 'VApp' },
+          { value: false, name: 'v-autocomplete', component: 'VAutocomplete', group: 'VAutocomplete' },
           { value: false, name: 'v-avatar', component: 'VAvatar', group: 'VAvatar' },
           { value: false, name: 'v-badge', component: 'VBadge', group: 'VBadge' },
           { value: false, name: 'v-bottom-nav', component: 'VBottomNav', group: 'VBottomNav' },
           { value: false, name: 'v-bottom-sheet', component: 'VBottomSheet', group: 'VBottomSheet' },
           { value: false, name: 'v-breadcrumbs', component: 'VBreadcrumbs', group: 'VBreadcrumbs' },
-          { value: false, name: 'v-breadcrumbs-item', component: 'VBreadcrumbs', group: 'VBreadcrumbs' },
+          { value: false, name: 'v-breadcrumbs-item', component: 'VBreadcrumbsItem', group: 'VBreadcrumbs' },
           { value: false, name: 'v-btn', component: 'VBtn', group: 'VBtn' },
           { value: false, name: 'v-btn-toggle', component: 'VBtnToggle', group: 'VBtnToggle' },
           { value: false, name: 'v-card', component: 'VCard', group: 'VCard' },
-          { value: false, name: 'v-card-title', component: 'VCard', group: 'VCard' },
-          { value: false, name: 'v-card-media', component: 'VCard', group: 'VCard' },
+          { value: false, name: 'v-card-title', component: 'VCardTitle', group: 'VCard' },
+          { value: false, name: 'v-card-media', component: 'VCardMedia', group: 'VCard' },
           { value: false, name: 'v-carousel', component: 'VCarousel', group: 'VCarousel' },
           { value: false, name: 'v-checkbox', component: 'VCheckbox', group: 'VCheckbox' },
           { value: false, name: 'v-chip', component: 'VChip', group: 'VChip' },
+          { value: false, name: 'v-combobox', component: 'VCombobox', group: 'VCombobox' },
+          { value: false, name: 'v-counter', component: 'VCounter', group: 'VCounter' },
+          { value: false, name: 'v-data-iterator', component: 'VDataIterator', group: 'VDataIterator' },
           { value: false, name: 'v-data-table', component: 'VDataTable', group: 'VDataTable' },
-          { value: false, name: 'v-edit-dialog', component: 'VDataTable', group: 'VDataTable' },
           { value: false, name: 'v-date-picker', component: 'VDatePicker', group: 'VDatePicker' },
           { value: false, name: 'v-dialog', component: 'VDialog', group: 'VDialog' },
           { value: false, name: 'v-divider', component: 'VDivider', group: 'VDivider' },
+          { value: false, name: 'v-edit-dialog', component: 'VEditDialog', group: 'VDataTable' },
           { value: false, name: 'v-expansion-panel', component: 'VExpansionPanel', group: 'VExpansionPanel' },
-          { value: false, name: 'v-expansion-panel-content', component: 'VExpansionPanel', group: 'VExpansionPanel' },
+          { value: false, name: 'v-expansion-panel-content', component: 'VExpansionPanelContent', group: 'VExpansionPanel' },
           { value: false, name: 'v-footer', component: 'VFooter', group: 'VFooter' },
           { value: false, name: 'v-form', component: 'VForm', group: 'VForm' },
-          { value: false, name: 'v-footer', component: 'VFooter', group: 'VFooter' },
-          { value: false, name: 'v-layout', component: 'VGrid', group: 'VGrid' },
-          { value: false, name: 'v-flex', component: 'VGrid', group: 'VGrid' },
-          { value: false, name: 'v-container', component: 'VGrid', group: 'VGrid' },
-          { value: false, name: 'v-content', component: 'VGrid', group: 'VGrid' },
+          { value: false, name: 'v-layout', component: 'VLayout', group: 'VGrid' },
+          { value: false, name: 'v-flex', component: 'VFlex', group: 'VGrid' },
+          { value: false, name: 'v-container', component: 'VContainer', group: 'VGrid' },
+          { value: false, name: 'v-content', component: 'VContent', group: 'VGrid' },
           { value: false, name: 'v-icon', component: 'VIcon', group: 'VIcon' },
+          { value: false, name: 'v-input', component: 'VInput', group: 'VInput' },
+          { value: false, name: 'v-jumbotron', component: 'VJumbotron', group: 'VJumbotron' },
+          { value: false, name: 'v-label', component: 'VLabel', group: 'VLabel' },
           { value: false, name: 'v-list', component: 'VList', group: 'VList' },
-          { value: false, name: 'v-list-group', component: 'VList', group: 'VList' },
-          { value: false, name: 'v-list-tile', component: 'VList', group: 'VList' },
-          { value: false, name: 'v-list-tile-action', component: 'VList', group: 'VList' },
+          { value: false, name: 'v-list-group', component: 'VListGroup', group: 'VList' },
+          { value: false, name: 'v-list-tile', component: 'VListTile', group: 'VList' },
+          { value: false, name: 'v-list-tile-action', component: 'VListTileAction', group: 'VList' },
+          { value: false, name: 'v-list-tile-action-text', component: 'VListTileActionText', group: 'VList' },
+          { value: false, name: 'v-list-tile-avatar', component: 'VListTileAvatar', group: 'VList' },
+          { value: false, name: 'v-list-tile-content', component: 'VListTileContent', group: 'VList' },
+          { value: false, name: 'v-list-tile-sub-title', component: 'VListTileSubTitle', group: 'VList' },
+          { value: false, name: 'v-list-tile-title', component: 'VListTileTitle', group: 'VList' },
           { value: false, name: 'v-menu', component: 'VMenu', group: 'VMenu' },
+          { value: false, name: 'v-messages', component: 'VMessages', group: 'VMessages' },
           { value: false, name: 'v-navigation-drawer', component: 'VNavigationDrawer', group: 'VNavigationDrawer' },
+          { value: false, name: 'v-overflow-btn', component: 'VOverflowBtn', group: 'VOverflowBtn' },
           { value: false, name: 'v-pagination', component: 'VPagination', group: 'VPagination' },
           { value: false, name: 'v-parallax', component: 'VParallax', group: 'VParallax' },
           { value: false, name: 'v-progress-circular', component: 'VProgressCircular', group: 'VProgressCircular' },
           { value: false, name: 'v-progress-linear', component: 'VProgressLinear', group: 'VProgressLinear' },
-          { value: false, name: 'v-radio', component: 'VRadioGroup', group: 'VRadioGroup' },
+          { value: false, name: 'v-radio', component: 'VRadio', group: 'VRadioGroup' },
           { value: false, name: 'v-radio-group', component: 'VRadioGroup', group: 'VRadioGroup' },
           { value: false, name: 'v-range-slider', component: 'VRangeSlider', group: 'VRangeSlider' },
           { value: false, name: 'v-select', component: 'VSelect', group: 'VSelect' },
@@ -204,20 +219,20 @@
           { value: false, name: 'v-snackbar', component: 'VSnackbar', group: 'VSnackbar' },
           { value: false, name: 'v-speed-dial', component: 'VSpeedDial', group: 'VSpeedDial' },
           { value: false, name: 'v-stepper', component: 'VStepper', group: 'VStepper' },
-          { value: false, name: 'v-stepper-content', component: 'VStepper', group: 'VStepper' },
-          { value: false, name: 'v-stepper-step', component: 'VStepper', group: 'VStepper' },
+          { value: false, name: 'v-stepper-content', component: 'VStepperCotent', group: 'VStepper' },
+          { value: false, name: 'v-stepper-step', component: 'VStepperStep', group: 'VStepper' },
           { value: false, name: 'v-subheader', component: 'VSubheader', group: 'VSubheader' },
           { value: false, name: 'v-switch', component: 'VSwitch', group: 'VSwitch' },
           { value: false, name: 'v-system-bar', component: 'VSystemBar', group: 'VSystemBar' },
           { value: false, name: 'v-tabs', component: 'VTabs', group: 'VTabs' },
-          { value: false, name: 'v-tab', component: 'VTabs', group: 'VTabs' },
-          { value: false, name: 'v-tabs-slider', component: 'VTabs', group: 'VTabs' },
-          { value: false, name: 'v-tabs-items', component: 'VTabs', group: 'VTabs' },
-          { value: false, name: 'v-tab-item', component: 'VTabs', group: 'VTabs' },
+          { value: false, name: 'v-tab', component: 'VTab', group: 'VTabs' },
+          { value: false, name: 'v-tabs-slider', component: 'VTabsSlider', group: 'VTabs' },
+          { value: false, name: 'v-tabs-items', component: 'VTabsItems', group: 'VTabs' },
+          { value: false, name: 'v-tab-item', component: 'VTabItem', group: 'VTabs' },
           { value: false, name: 'v-text-field', component: 'VTextField', group: 'VTextField' },
           { value: false, name: 'v-time-picker', component: 'VTimePicker', group: 'VTimePicker' },
           { value: false, name: 'v-toolbar', component: 'VToolbar', group: 'VToolbar' },
-          { value: false, name: 'v-toolbar-side-icon', component: 'VToolbar', group: 'VToolbar' },
+          { value: false, name: 'v-toolbar-side-icon', component: 'VToolbarSideIcon', group: 'VToolbar' },
           { value: false, name: 'v-tooltip', component: 'VTooltip', group: 'VTooltip' },
           { value: false, name: 'transitions', component: 'transitions', group: 'transitions' }
         ]
@@ -226,6 +241,11 @@
     computed: {
       copy () {
         return this.generateCustomComponent()
+      },
+      isGroup () {
+        const isGroup = {}
+        this.items.forEach(({ group }) => isGroup[group] = (group in isGroup) ? isGroup[group] + 1 : 0)
+        return isGroup
       }
     },
     methods: {
@@ -238,8 +258,31 @@
         ))
       },
       generateCustomComponent () {
-        const components = this.selected.map(({ component }) => component).join(', ')
-        return `import Vue from 'vue';\nimport { Vuetify, ${components} } from 'vuetify';\nVue.use(Vuetify, { components: { ${components} } });`
+        const components = {}
+        this.selected.forEach(({ group }) => {
+          components[group] = this.isGroup[group] ? `...${group}` : group
+        })
+
+        if (this.es5) {
+          return `import Vue from 'vue';
+import Vuetify from 'vuetify/es5/components/Vuetify'
+${Object.keys(components).map(c => 'import ' + c + " from 'vuetify/es5/components/" + c + "';").join('\n')}
+
+Vue.use(Vuetify, {
+  components: {
+${Object.values(components).map(c => `    ${c}`).join(',\n')}
+  }
+});`
+        } else {
+          return `import Vue from 'vue';
+import { Vuetify, ${Object.keys(components).join(', ')} } from 'vuetify';
+Vue.use(Vuetify, {
+  components: {
+${Object.values(components).map(c => `    ${c}`).join(',\n')}
+  }
+});`
+        }
+
       },
       copyMarkup () {
         this.$refs.copy.select()
