@@ -198,6 +198,7 @@
           { value: false, name: 'v-progress-linear', component: 'VProgressLinear', group: 'VProgressLinear' },
           { value: false, name: 'v-radio', component: 'VRadioGroup', group: 'VRadioGroup' },
           { value: false, name: 'v-radio-group', component: 'VRadioGroup', group: 'VRadioGroup' },
+          { value: false, name: 'v-range-slider', component: 'VRangeSlider', group: 'VRangeSlider' },
           { value: false, name: 'v-select', component: 'VSelect', group: 'VSelect' },
           { value: false, name: 'v-slider', component: 'VSlider', group: 'VSlider' },
           { value: false, name: 'v-snackbar', component: 'VSnackbar', group: 'VSnackbar' },
