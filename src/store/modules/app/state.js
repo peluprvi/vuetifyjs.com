@@ -96,27 +96,27 @@ export default () => ({
     Framework: {
       Icons: [
         {
-          text: 'Introduction',
+          text: 'Generic.Pages.introduction',
           href: 'introduction'
         },
         {
-          text: 'Usage',
+          text: 'Generic.Pages.usage',
           href: 'usage'
         },
         {
-          text: 'Installing fonts',
+          text: 'Framework.Icons.installHeader',
           href: 'installing-fonts'
         },
         {
-          text: 'Using custom icons',
+          text: 'Framework.Icons.customIconsHeader',
           href: 'using-custom-icons'
         },
         {
-          text: 'Reusable custom icons',
+          text: 'Framework.Icons.reusableHeader',
           href: 'reusable-custom-icons'
         },
         {
-          text: 'Custom components',
+          text: 'Framework.Icons.customComponentHeader',
           href: 'custom-components'
         }
       ],
