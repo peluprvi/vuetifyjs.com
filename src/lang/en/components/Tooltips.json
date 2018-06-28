@@ -19,7 +19,6 @@
     "closeDelay": "Delay (in ms) after which menu closes (when open-on-hover prop is set to true)",
     "debounce": "Duration before tooltip is shown and hidden when hovered",
     "disabled": "Disables the tooltip",
-    "inputActivator": "Sets a new activator target for the detached tooltip. Use when placing tooltips in `v-input` slots while in an absolutely positioned element",
     "openDelay": "Delay (in ms) after which menu opens (when open-on-hover prop is set to true)",
     "tag": "Specifies a custom tag for the activator wrapper",
     "transition": "Mixins.Transitionable.props.transition"
