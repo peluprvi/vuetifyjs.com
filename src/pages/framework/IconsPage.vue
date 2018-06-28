@@ -59,7 +59,9 @@
         | Vue.use(Vuetify)
 
       section-subheader(value="Framework.Icons.installFA")
+      p Coming soon
       section-subheader(value="Framework.Icons.installFA4")
+      p Coming soon
 
     section#using-custom-icons
       section-head(value="Framework.Icons.customIconsHeader")
