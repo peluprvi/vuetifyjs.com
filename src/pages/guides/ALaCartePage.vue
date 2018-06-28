@@ -248,7 +248,7 @@
       },
       isGroup () {
         const isGroup = {}
-        this.items.forEach(({ group }) => isGroup[group] = (group in isGroup) ? isGroup[group] + 1 : 0)
+        this.items.forEach(({ group }) => (isGroup[group] = (group in isGroup) ? isGroup[group] + 1 : 0))
         return isGroup
       },
       isVAppSelected () {
@@ -294,7 +294,6 @@ ${Object.values(components).map(c => `    ${c}`).join(',\n')}
   }
 });`
         }
-
       },
       copyMarkup () {
         this.$refs.copy.select()
