@@ -28,9 +28,12 @@
       "desc": "The `v-autocomplete` component is extremely flexible and can fit in just about any use-case. Create custom displays for **no-data**, **item** and **selection** slots to provide a unique user experience. Using _scoped slots_ enables you to easily customize the desired look for your application."
     }
   },
+  "props": {
+    "noFilter": "Do not apply filtering when searching. Useful when data is being filtered server side"
+  },
   "slots": {
     "item": "Scoped slot for designating the markup for a list-tile",
-    "no-data": "Mixins.Filterable.slots.noData",
+    "noData": "Mixins.Filterable.slots.noData",
     "selection": "Scoped slot for designating the markup for the selected items"
   },
   "scopedSlots": {
