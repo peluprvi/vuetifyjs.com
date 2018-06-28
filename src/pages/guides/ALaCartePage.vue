@@ -167,25 +167,23 @@
     },
     computed: {
       copy () {
-        const components = `components: {\n` + Object.values(this.componentSelection).filter(name => name !== 'directives').map(name => `    ${name}`).join(',\n') + '\n  }'
-        const directives = this.componentSelection.directives ? 'directives' : ''
-        const directivesImport = this.componentSelection.directives ? `import directives from 'vuetify/es5/directives';\n` : ''
-        const items = [components, directives].filter(v => v).map(v => `  ${v}`).join(',\n')
+        const components = `components: {\n` + this.componentSelection.filter(name => name !== 'directives').map(name => `    ${name}`).join(',\n') + '\n  }'
+        const hasDirectives = this.componentSelection.includes('directives')
+        const directivesImport = hasDirectives ? `import directives from 'vuetify/es5/directives';\n` : ''
+        const items = (hasDirectives ? [components, 'directives'] : [components]).map(v => `  ${v}`).join(',\n')
         const use = `Vue.use(Vuetify, {\n${items}\n});`
         const imports = this.es5 ? this.es5Imports : this.es6Imports
         return `import Vue from 'vue';\n${imports}\n${directivesImport}\n${use}`
       },
       es5Imports () {
-        const imports = Object
-          .keys(this.componentSelection)
+        const imports = this.componentSelection
           .filter(name => name !== 'directives')
-          .map(name => `import ${this.isGroup[name] ? '* as ' + name : name} from 'vuetify/es5/components/${name}';`).join('\n')
+          .map(name => `import ${name} from 'vuetify/es5/components/${name}';`).join('\n')
 
         return `import Vuetify from 'vuetify/es5/components/Vuetify';\n${imports}`
       },
       es6Imports () {
-        const imports = Object
-          .keys(this.componentSelection)
+        const imports = this.componentSelection
           .filter(name => name !== 'directives')
           .map(name => `  ${name}`)
           .join(',\n')
@@ -201,11 +199,13 @@
         return !!this.selected.find(item => item.name === 'v-app')
       },
       componentSelection () {
-        const components = {}
-        this.selected.forEach(({ group }) => {
-          components[group] = this.isGroup[group] ? `...${group}` : group
+        const names = [...new Set(this.selected.map(({group}) => group))]
+        names.sort((a, b) => {
+          a = a === 'VApp' ? '' : a
+          b = b === 'VApp' ? '' : b
+          return a < b ? -1 : a > b
         })
-        return components
+        return names
       }
     },
     watch: {
