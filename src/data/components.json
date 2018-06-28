@@ -504,7 +504,7 @@
     "spec": false
   },
   "sliders": {
-    "components": ["v-slider"],
+    "components": ["v-slider", "v-range-slider"],
     "examples": [
       "usage",
       "thumb",
