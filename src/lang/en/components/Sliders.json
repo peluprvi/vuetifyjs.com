@@ -48,10 +48,15 @@
     }
   },
   "props": {
+    "alwaysDirty": "When used with the **thumb-label** prop will always show the thumb label.",
+    "inverseLabel": "Reverse the label position. Works with **rtl**.",
     "step": "If greater than 0, sets step interval for ticks",
     "thumbColor": "Sets the thumb and thumb label color",
     "thumbLabel": "Show thumb label",
+    "thumbSize": "Controls the size of the **thumb-label**",
     "ticks": "",
+    "tickLabels": "When provided with Array<string>, will attempt to map the labels to each step in index order",
+    "tickSize": "Controls the size of **ticks**",
     "trackColor": "Sets the track fill color"
   }
 }
