@@ -1,5 +1,7 @@
 import components from '@/data/components'
+import deprecatedIn from '@/data/deprecatedIn'
 import newIn from '@/data/newIn'
+import removed from '@/data/removed'
 
 export default () => ({
   appDrawer: null,
@@ -15,10 +17,12 @@ export default () => ({
   appToolbar: null,
   components,
   currentVersion: null,
+  deprecatedIn,
   isFullscreen: false,
   loadedLangs: [],
   newIn,
   releases: [],
+  removed,
   stateless: false,
   tablesOfContents: {
     Components: [
