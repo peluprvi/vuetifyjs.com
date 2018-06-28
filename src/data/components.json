@@ -15,12 +15,12 @@
       "v-autocomplete"
     ],
     "examples": [
-      "autocomplete",
-      "api",
-      "scopedSlots",
-      "customFilter",
-      "asynchronous",
-      "advanced"
+      { "file": "autocomplete", "newIn": "1.1" },
+      { "file": "api", "newIn": "1.1" },
+      { "file": "scopedSlots", "newIn": "1.1" },
+      { "file": "customFilter", "newIn": "1.1" },
+      { "file": "asynchronous", "newIn": "1.1" },
+      { "file": "advanced", "newIn": "1.1" }
     ]
   },
   "avatars": {
@@ -141,9 +141,9 @@
       "v-combobox"
     ],
     "examples": [
-      "combobox",
+      { "file": "combobox", "newIn": "1.1" },
       "noData",
-      "advanced",
+      { "file": "advanced", "newIn": "1.1" },
       "comboboxMultiple"
     ]
   },
@@ -233,7 +233,7 @@
       "subheaders",
       "dividerList",
       "dividerListPortrait",
-      "vertical"
+      { "file": "vertical", "newIn": "1.1" }
     ],
     "spec": false
   },
@@ -508,14 +508,14 @@
     "examples": [
       "usage",
       "thumb",
-      "customThumb",
-      "ticks",
+      { "file": "customThumb", "newIn": "1.1" },
+      { "file": "ticks", "newIn": "1.1" },
       "discrete",
       "icons",
       "editableNumericValue",
       "customColors",
       "validation",
-      "range",
+      { "file": "range", "newIn": "1.1" },
       "minMax"
     ],
     "spec": false
