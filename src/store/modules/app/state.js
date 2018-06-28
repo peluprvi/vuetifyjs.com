@@ -122,28 +122,32 @@ export default () => ({
       ],
       Internationalization: [
         {
-          text: 'Introduction',
+          text: 'Generic.Pages.introduction',
           href: 'introduction'
         },
         {
-          text: 'API',
+          text: 'Generic.Pages.api',
           href: 'api'
         },
         {
-          text: 'Getting started',
+          text: 'Framework.Internationalization.gettingStarted',
           href: 'getting-started'
         },
         {
-          text: 'Create translation',
+          text: 'Framework.Internationalization.createTranslation',
           href: 'create-translation'
         },
         {
-          text: 'Custom components',
+          text: 'Framework.Internationalization.customComponents',
           href: 'custom-components'
         },
         {
-          text: 'Vue i18n',
+          text: 'Framework.Internationalization.vueI18nHeader',
           href: 'vue-i18n'
+        },
+        {
+          text: 'Framework.Internationalization.rtlHeader',
+          href: 'rtl'
         }
       ]
     },

@@ -95,6 +95,19 @@
         |   }
         | })
 
+    section#rtl
+      section-head(value="Framework.Internationalization.rtlHeader")
+      section-text(value="Framework.Internationalization.rtlText1")
+
+      markup(lang="js")
+        | import Vue from 'vue'
+        | import Vuetify from 'vuetify'
+        |
+        | Vue.use(Vuetify, {
+        |   rtl: true
+        | })
+
+      section-text(value="Framework.Internationalization.rtlText2")
 </template>
 
 <script>
