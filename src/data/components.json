@@ -142,8 +142,9 @@
     ],
     "examples": [
       "combobox",
-      "comboboxMultiple",
-      "noData"
+      "noData",
+      "advanced",
+      "comboboxMultiple"
     ]
   },
   "data-iterator": {
