@@ -51,9 +51,9 @@ export default [
     group: 'style',
     icon: 'mdi-format-color-fill',
     items: [
-      { name: 'Colors', title: 'Colors', badge: 'updated' },
-      { name: 'Theme', title: 'Theme', badge: 'updated' },
-      { name: 'Typography', title: 'Typography' },
+      { name: 'Colors', title: 'Colors', badge: 'updated', color: 'tertiary' },
+      { name: 'Theme', title: 'Theme', badge: 'updated', color: 'tertiary' },
+      { name: 'Typography', title: 'Typography', badge: 'updated', color: 'tertiary' },
       { name: 'Content', title: 'Content' }
     ]
   },
