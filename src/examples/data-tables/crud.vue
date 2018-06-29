@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar>
+    <v-toolbar flat color="white">
       <v-toolbar-title>My CRUD</v-toolbar-title>
       <v-divider
         class="mx-2"
