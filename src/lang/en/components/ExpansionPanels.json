@@ -8,7 +8,7 @@
     },
     "expand": {
       "header": "Expand",
-      "desc": "Expand expansion panels will stay open until closed. When providing a model, any value not specified will be interpretted at false.",
+      "desc": "Expand expansion panels will stay open until closed. When providing a model, any value not specified will be interpreted at false.",
       "uninverted": true
     },
     "external": {
