@@ -6,7 +6,7 @@
   "installHeader": "Installing fonts",
   "installText1": "You are required to include the specified icon library (even if using default). This can be done by including a CDN link or importing the icon library into your application",
   "installMD": "Install Material Icons",
-  "installMDText1": "This is the default iconfont for Vuetify. For projects without a build process, it is recommended to import the icons from CDN",
+  "installMDText1": "This is the default icon font for Vuetify. For projects without a build process, it is recommended to import the icons from CDN",
   "installMDText2": "Alternatively, it is possible to install locally using yarn or npm. Keep in mind that this is not an official google repository and may not receive updates",
   "installMDText3": "Once you have installed the package, import it into your main entry js file. This is typically the `main.js`, `index.js` or `app.js` located in your `src/` folder. If you are using an SSR application, you may have a `client.js` or `entry-client.js` file.",
   "installMDI": "Install Material Design Icons",
@@ -20,5 +20,5 @@
   "reusableText1": "Vuetify will _automatically_ merge any icon strings provided into the pool of available presets. This allows you to create custom strings that can be utilized in your application by simply referencing the **global icons**.",
   "reusableText2": "This can help ensure your application is always using a specific icon given a provided string. Here are a few ways that you can use `<v-icon>` with this system.",
   "customComponentHeader": "Custom components",
-  "customComponentText1": "You can utilize the same icon strings in your own custom components. Anytime **$vuetify.icons** is passed in through _v-text_, _v-html_ or as text, `<v-icon>` will lookup that specified value. This allows you to easily create customized solutions that are easy to build and easy to manage."
+  "customComponentText1": "You can utilize the same icon strings in your own custom components. Any time **$vuetify.icons** is passed in through _v-text_, _v-html_ or as text, `<v-icon>` will look up that specified value. This allows you to create customized solutions that are easy to build and easy to manage."
 }
