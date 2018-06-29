@@ -40,8 +40,8 @@
       section-head(value="Framework.Internationalization.createTranslation")
       section-text(value="Framework.Internationalization.createTranslationText")
 
-      markup(lang="json")
-        | {{ enLocale }}
+      markup(lang="js")
+        | export default {{ enLocale }}
 
     section#custom-components
       section-head(value="Framework.Internationalization.customComponents")
