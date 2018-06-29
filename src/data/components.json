@@ -119,7 +119,8 @@
       "default",
       "customTransition",
       "customIcons",
-      "hideControls"
+      "hideControls",
+      "hideDelimiters"
     ],
     "spec": false
   },

@@ -17,9 +17,14 @@
       "desc": "You can also change the icon for the carousel delimiter and previous/next icons.",
       "uninverted": true
     },
+    "hideDelimiters": {
+      "header": "Hide delimiters",
+      "desc": "You can hide the bottom controls with the `hide-delimiters` prop.",
+      "uninverted": true
+    },
     "hideControls": {
       "header": "Hide controls",
-      "desc": "You can hide the bottom controls with the `hide-controls` prop.",
+      "desc": "You can hide the navigtion controls with the `hide-controls` prop.",
       "uninverted": true
     }
   },
