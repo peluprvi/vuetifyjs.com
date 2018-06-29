@@ -26,6 +26,7 @@
   import hljsScss from 'highlight.js/lib/languages/scss'
   import hljsStylus from 'highlight.js/lib/languages/stylus'
   import hljsXML from 'highlight.js/lib/languages/xml'
+  import hljsTS from 'highlight.js/lib/languages/typescript'
 
   hljs.registerLanguage('bash', hljsJS)
   hljs.registerLanguage('js', hljsJS)
@@ -34,6 +35,7 @@
   hljs.registerLanguage('stylus', hljsStylus)
   hljs.registerLanguage('scss', hljsScss)
   hljs.registerLanguage('vue', hljsXML)
+  hljs.registerLanguage('ts', hljsTS)
 
   // Utilities
   const LANG_MAP = {

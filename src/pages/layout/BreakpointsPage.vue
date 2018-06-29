@@ -52,6 +52,30 @@
           | &lt;/v-dialog&gt;
         section-text(value="Layout.Breakpoints.breakpointText4")
         ul.browser-list.pb-2
+        markup(lang="ts")
+          | {
+          |   xs: boolean
+          |   xsOnly: boolean
+          |   xsAndUp: boolean
+          |   sm: boolean
+          |   smOnly: boolean
+          |   smAndDown: boolean
+          |   smAndUp: boolean
+          |   md: boolean
+          |   mdOnly: boolean
+          |   mdAndDown: boolean
+          |   mdAndUp: boolean
+          |   lg: boolean
+          |   lgOnly: boolean
+          |   lgAndDown: boolean
+          |   lgAndUp: boolean
+          |   xl: boolean
+          |   xlOnly: boolean
+          |   xlAndDown: boolean
+          |   name: ('xs' | 'sm' | 'md' | 'lg' | 'xl')
+          |   width: number
+          |   height: number
+          | }
           li <code>xs</code>, <code>xsOnly</code>, <code>xsAndUp</code>
           li <code>sm</code>, <code>smOnly</code>, <code>smAndDown</code>, <code>smAndUp</code>
           li <code>md</code>, <code>mdOnly</code>, <code>mdAndDown</code>, <code>mdAndUp</code>
