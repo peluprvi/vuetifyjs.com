@@ -401,6 +401,12 @@
     "description": "Tabs component for the Vuetify framework.",
     "keywords": "tabs"
   },
+  "components/textarea": {
+    "h1": "Textareas",
+    "title": "Textareas",
+    "description": "Textarea component for the Vuetify framework.",
+    "keywords": "textarea"
+  },
   "components/text-fields": {
     "h1": "Text fields",
     "title": "Text fields",

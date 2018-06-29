@@ -587,7 +587,7 @@
     "spec": false
   },
   "textarea": {
-    "components": ["v-text-area"],
+    "components": ["v-textarea"],
     "examples": [
       "multiLine"
     ],

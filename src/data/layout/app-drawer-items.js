@@ -92,7 +92,7 @@ export default [
       { name: 'footer', title: 'Footer' },
       {
         title: 'Inputs & controls',
-        group: '(autocompletes|combobox|forms|inputs|overflow-btns|selects|selection|text-fields|sliders)',
+        group: '(autocompletes|combobox|forms|inputs|overflow-btns|selects|selection|text-fields|sliders|textarea)',
         namespace: 'components',
         items: [
           { name: 'autocompletes', title: 'Autocompletes', badge: 'new' },
@@ -103,6 +103,7 @@ export default [
           { name: 'selects', title: 'Selects', badge: 'updated', color: 'tertiary' },
           { name: 'selection-controls', title: 'Selection controls', badge: 'updated', color: 'tertiary' },
           { name: 'sliders', title: 'Sliders', badge: 'updated', color: 'tertiary' },
+          { name: 'textarea', title: 'Textareas', badge: 'new' },
           { name: 'text-fields', title: 'Text fields', badge: 'updated', color: 'tertiary' }
         ]
       },
