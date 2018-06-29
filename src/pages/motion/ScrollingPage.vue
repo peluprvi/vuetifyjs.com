@@ -18,20 +18,33 @@
 </template>
 
 <script>
+  // Helpers
+  import { mapState } from 'vuex'
+
   export default {
     computed: {
-      components () {
-        return this.$t('Motion.Scrolling.components')
-      },
+      ...mapState('app', ['components']),
       data () {
         return {
           folder: 'scrolling',
-          components: this.components,
+          components: this.components.scrolling.components,
           examples: this.examples
         }
       },
       examples () {
-        return this.$t('Motion.Scrolling.examples')[0]
+        const component = this.components['scrolling']
+
+        if (!component) return []
+
+        return component.examples.map(example => {
+          let file = example
+
+          return {
+            file,
+            desc: `Motion.Scrolling.examples.${file}.desc`,
+            header: `Motion.Scrolling.examples.${file}.header`
+          }
+        })
       }
     }
   }

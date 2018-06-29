@@ -38,7 +38,7 @@ export default [
           { name: 'grid-lists', title: 'Grid lists' }
         ]
       },
-      { name: 'Breakpoints', title: 'Breakpoints' },
+      { name: 'Breakpoints', title: 'Breakpoints', badge: 'new' },
       { name: 'Spacing', title: 'Spacing' },
       { name: 'Alignment', title: 'Text alignment' },
       { name: 'Display', title: 'Display' },
