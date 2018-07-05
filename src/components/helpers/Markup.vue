@@ -1,5 +1,5 @@
 <template>
-  <div class="v-markup grey lighten-3 mb-3">
+  <div class="v-markup">
     <prism :language="language">
       <slot />
     </prism>
@@ -18,7 +18,7 @@
 
 <script>
   import 'prismjs'
-  import 'prismjs/themes/prism.css'
+  import 'prismjs/themes/prism-tomorrow.css'
   import 'prismjs/components/prism-bash.js'
   import 'prismjs/components/prism-css.js'
   import 'prismjs/components/prism-javascript.js'
@@ -54,10 +54,6 @@
     },
 
     props: {
-      color: {
-        type: String,
-        default: 'grey lighten-3'
-      },
       lang: {
         type: String,
         default: ''
@@ -103,13 +99,18 @@
     display: flex
     border-radius: 2px
     position: relative
+    overflow-x: auto
+    overflow-y: hidden
+    margin-bottom: 16px
+    background: #2d2d2d
 
     pre, code
+      margin: 0
       background: transparent
       font-family: 'Inconsolata', monospace
-      font-size: 1.05rem
-      line-height: 1.5
-      width: 100%
+      font-weight: 300
+      font-size: 15px
+      line-height: 1.55
 
     code
       position: relative
