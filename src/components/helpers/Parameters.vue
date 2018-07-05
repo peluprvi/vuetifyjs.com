@@ -41,7 +41,7 @@
         </div>
         <div class="pa-2 grey lighten-3 grey--text text--darken-2 d-flex">
           <v-flex>
-            <markdown
+            <helpers-markdown
               :source="item.description"
               class="justify"
             />
