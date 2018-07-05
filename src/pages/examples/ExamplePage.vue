@@ -24,7 +24,6 @@
 
       return import(
         /* webpackChunkName: "examples" */
-        /* webpackMode: "lazy-once" */
         `../../examples/${example}.vue`
       ).catch(e => NotFound).then(comp => {
         next(vm => { vm.component = comp.default })
