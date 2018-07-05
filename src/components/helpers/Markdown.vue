@@ -19,7 +19,8 @@
       }
 
       return h('div', {
-        domProps: { innerHTML: marked(code) }
+        domProps: { innerHTML: marked(code) },
+        ...ctx.data
       })
     }
   }
