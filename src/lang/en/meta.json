@@ -293,6 +293,12 @@
     "description": "Icon component for Vuetify Framework",
     "keywords": "icon"
   },
+  "components/images": {
+    "h1": "Images",
+    "title": "Image Component",
+    "description": "Image component for Vuetify Framework",
+    "keywords": "image, progressive, lazy, load"
+  },
   "components/inputs": {
     "h1": "Inputs",
     "title": "Input Component",

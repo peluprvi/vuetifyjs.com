@@ -22,6 +22,7 @@ import Footer from './Footer'
 import Forms from './Forms'
 import HelpMeChoose from './HelpMeChoose'
 import Icons from './Icons'
+import Images from './Images'
 import Inputs from './Inputs'
 import Lists from './Lists'
 import Jumbotrons from './Jumbotrons'
@@ -70,6 +71,7 @@ export default {
   Forms,
   HelpMeChoose,
   Icons,
+  Images,
   Inputs,
   Lists,
   Jumbotrons,

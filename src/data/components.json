@@ -334,6 +334,15 @@
     ],
     "spec": false
   },
+  "images": {
+    "components": ["v-img"],
+    "examples": [
+      "usage",
+      "containCover",
+      "maxHeight"
+    ],
+    "spec": false
+  },
   "inputs": {
     "components": ["v-input"],
     "examples": ["usage"],

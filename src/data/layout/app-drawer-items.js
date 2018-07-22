@@ -108,6 +108,7 @@ export default [
         ]
       },
       { name: 'icons', title: 'Icons', badge: 'updated', color: 'tertiary' },
+      { name: 'images', 'title': 'Images', badge: 'new' },
       { name: 'jumbotrons', title: 'Jumbotrons' },
       { name: 'lists', title: 'Lists' },
       { name: 'menus', title: 'Menus' },

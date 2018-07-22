@@ -3,7 +3,7 @@
     color="blue-grey darken-1"
     dark
   >
-    <v-card-media
+    <v-img
       height="200"
       src="https://cdn.vuetifyjs.com/images/cards/dark-beach.jpg"
     >
@@ -54,7 +54,7 @@
           <span class="grey--text text--lighten-1">{{ title }}</span>
         </v-layout>
       </v-layout>
-    </v-card-media>
+    </v-img>
     <v-form>
       <v-container>
         <v-layout wrap>
