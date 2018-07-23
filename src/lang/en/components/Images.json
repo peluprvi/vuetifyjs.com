@@ -9,6 +9,9 @@
     "maxHeight": {
       "header": "Height",
       "desc": "`v-img` will automatically grow to the size of its `src`, preserving the correct aspect ratio. You can limit this with the `height` and `max-height` props."
+    },
+    "ratio": {
+      "header": "Fixed ratio"
     }
   },
   "props": {

@@ -118,7 +118,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   #keep main .container {
     height: 660px;
   }

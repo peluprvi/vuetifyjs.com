@@ -339,7 +339,8 @@
     "examples": [
       "usage",
       "containCover",
-      "maxHeight"
+      "maxHeight",
+      "ratio"
     ],
     "spec": false
   },
