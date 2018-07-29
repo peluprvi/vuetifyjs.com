@@ -110,12 +110,11 @@
           slot="item"
           slot-scope="props"
           :color="props.isFilled ? 'purple darken-4' : ''"
-          @click="props.click"
           v-text="`mdi-numeric-${props.index}-box`"
         ></v-icon>
       </v-rating>
     </v-card-actions>
-    <div class="py-2 px-3 caption">
+    <div class="pa-3 pt-0 caption">
       <em>Portions of the materials used are trademarks and/or copyrighted works of Epic Games, Inc. All rights reserved by Epic. This material is not official and is not endorsed by Epic.</em>
     </div>
   </v-card>
