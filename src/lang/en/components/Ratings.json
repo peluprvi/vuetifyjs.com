@@ -30,5 +30,16 @@
       "header": "Advanced usage",
       "desc": "The `v-rating` component fits right in with existing components. Build truly complex examples with rich features and beautiful designs."
     }
+  },
+  "props": {
+    "backgroundColor": "The color used empty icons",
+    "emptyIcon": "The icon displayed when empty",
+    "fullIcon": "The icon displayed when full",
+    "halfIcon": "The icon displayed when half (requires **half-increments** prop)",
+    "halfIncrements": "Allows the selection of half increments",
+    "hover": "Provides visual feedback when hovering over icons",
+    "length": "The amount of ratings to show",
+    "readonly": "Removes all hover effects and pointer events",
+    "value": "The rating value"
   }
 }

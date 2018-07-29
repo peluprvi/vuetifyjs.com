@@ -462,13 +462,13 @@
   "ratings": {
     "components": ["v-rating"],
     "examples": [
-      "default",
-      "sizes",
-      "length",
-      "increments",
-      "slots",
-      "card",
-      "advanced"
+      { "file": "default", "newIn": "1.2" },
+      { "file": "sizes", "newIn": "1.2" },
+      { "file": "length", "newIn": "1.2" },
+      { "file": "increments", "newIn": "1.2" },
+      { "file": "slots", "newIn": "1.2" },
+      { "file": "card", "newIn": "1.2" },
+      { "file": "advanced", "newIn": "1.2" }
     ]
   },
   "resizing": {

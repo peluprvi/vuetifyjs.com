@@ -18,8 +18,8 @@ export default [
     group: 'framework',
     icon: 'mdi-buffer',
     items: [
-      { name: 'Icons', title: 'Icons', badge: 'new' },
-      { name: 'Internationalization', title: 'Internationalization', badge: 'new' }
+      { name: 'Icons', title: 'Icons' },
+      { name: 'Internationalization', title: 'Internationalization' }
     ]
   },
   {
@@ -38,7 +38,7 @@ export default [
           { name: 'grid-lists', title: 'Grid lists' }
         ]
       },
-      { name: 'Breakpoints', title: 'Breakpoints', badge: 'new' },
+      { name: 'Breakpoints', title: 'Breakpoints' },
       { name: 'Spacing', title: 'Spacing' },
       { name: 'Alignment', title: 'Text alignment' },
       { name: 'Display', title: 'Display' },
@@ -51,9 +51,9 @@ export default [
     group: 'style',
     icon: 'mdi-format-color-fill',
     items: [
-      { name: 'Colors', title: 'Colors', badge: 'updated', color: 'tertiary' },
-      { name: 'Theme', title: 'Theme', badge: 'updated', color: 'tertiary' },
-      { name: 'Typography', title: 'Typography', badge: 'updated', color: 'tertiary' },
+      { name: 'Colors', title: 'Colors', color: 'tertiary' },
+      { name: 'Theme', title: 'Theme', color: 'tertiary' },
+      { name: 'Typography', title: 'Typography', color: 'tertiary' },
       { name: 'Content', title: 'Content' }
     ]
   },
@@ -62,7 +62,7 @@ export default [
     group: 'motion',
     icon: 'mdi-clock-fast',
     items: [
-      { name: 'Scrolling', title: 'Scrolling', badge: 'new' },
+      { name: 'Scrolling', title: 'Scrolling' },
       { name: 'Transitions', title: 'Transitions' }
     ]
   },
@@ -72,7 +72,7 @@ export default [
     component: 'components/Doc',
     icon: 'mdi-view-dashboard',
     items: [
-      { name: 'api-explorer', title: 'API explorer', badge: 'updated', color: 'tertiary' },
+      { name: 'api-explorer', title: 'API explorer', color: 'tertiary' },
       { name: 'alerts', title: 'Alerts' },
       { name: 'avatars', title: 'Avatars' },
       { name: 'badges', title: 'Badges' },
@@ -86,8 +86,8 @@ export default [
       { name: 'chips', title: 'Chips' },
       { name: 'data-iterator', title: 'Data iterator' },
       { name: 'data-tables', title: 'Data tables' },
-      { name: 'dialogs', title: 'Dialogs', badge: 'updated', color: 'tertiary' },
-      { name: 'dividers', title: 'Dividers', badge: 'updated', color: 'tertiary' },
+      { name: 'dialogs', title: 'Dialogs', color: 'tertiary' },
+      { name: 'dividers', title: 'Dividers', color: 'tertiary' },
       { name: 'expansion-panels', title: 'Expansion panels' },
       { name: 'footer', title: 'Footer' },
       {
@@ -95,16 +95,16 @@ export default [
         group: '(autocompletes|combobox|forms|inputs|overflow-btns|selects|selection|text-fields|sliders|textarea)',
         namespace: 'components',
         items: [
-          { name: 'autocompletes', title: 'Autocompletes', badge: 'new' },
-          { name: 'combobox', title: 'Combobox', badge: 'new' },
-          { name: 'forms', title: 'Forms', badge: 'updated', color: 'tertiary' },
-          { name: 'inputs', title: 'Inputs', badge: 'new' },
-          { name: 'overflow-btns', title: 'Overflow Buttons', badge: 'new' },
-          { name: 'selects', title: 'Selects', badge: 'updated', color: 'tertiary' },
-          { name: 'selection-controls', title: 'Selection controls', badge: 'updated', color: 'tertiary' },
-          { name: 'sliders', title: 'Sliders', badge: 'updated', color: 'tertiary' },
-          { name: 'textarea', title: 'Textareas', badge: 'new' },
-          { name: 'text-fields', title: 'Text fields', badge: 'updated', color: 'tertiary' }
+          { name: 'autocompletes', title: 'Autocompletes' },
+          { name: 'combobox', title: 'Combobox' },
+          { name: 'forms', title: 'Forms', color: 'tertiary' },
+          { name: 'inputs', title: 'Inputs' },
+          { name: 'overflow-btns', title: 'Overflow Buttons' },
+          { name: 'selects', title: 'Selects', color: 'tertiary' },
+          { name: 'selection-controls', title: 'Selection controls', color: 'tertiary' },
+          { name: 'sliders', title: 'Sliders', color: 'tertiary' },
+          { name: 'textarea', title: 'Textareas' },
+          { name: 'text-fields', title: 'Text fields', color: 'tertiary' }
         ]
       },
       { name: 'icons', title: 'Icons', badge: 'updated', color: 'tertiary' },
@@ -125,7 +125,7 @@ export default [
         ]
       },
       { name: 'progress', title: 'Progress' },
-      { name: 'ratings', title: 'Ratings' },
+      { name: 'ratings', title: 'Ratings', badge: 'new' },
       { name: 'snackbars', title: 'Snackbars' },
       { name: 'steppers', title: 'Steppers' },
       { name: 'subheaders', title: 'Subheaders' },

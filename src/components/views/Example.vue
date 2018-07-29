@@ -3,6 +3,10 @@
     template(slot-scope="{ namespace }")
       section(v-if="usage")#usage
         helpers-section-head(value="Generic.Pages.usage")
+        helpers-section-text(
+          v-if="$te(`${namespace}.headerText`)"
+          :value="`${namespace}.headerText`"
+        )
         helpers-example(
           :new-in="usage.new"
           :file="`${folder}/${usage.file}`"
