@@ -32,6 +32,7 @@ import OverflowBtns from './OverflowBtns'
 import Paginations from './Paginations'
 import Parallax from './Parallax'
 import Progress from './Progress'
+import Ratings from './Ratings'
 import SelectionControls from './SelectionControls'
 import Selects from './Selects'
 import Sliders from './Sliders'
@@ -81,6 +82,7 @@ export default {
   Paginations,
   Parallax,
   Progress,
+  Ratings,
   SelectionControls,
   Selects,
   Sliders,

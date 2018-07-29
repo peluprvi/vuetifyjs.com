@@ -459,6 +459,18 @@
     ],
     "spec": false
   },
+  "ratings": {
+    "components": ["v-rating"],
+    "examples": [
+      "default",
+      "sizes",
+      "length",
+      "increments",
+      "slots",
+      "card",
+      "advanced"
+    ]
+  },
   "resizing": {
     "components": ["v-resize"],
     "examples": [

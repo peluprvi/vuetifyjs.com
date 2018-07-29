@@ -125,6 +125,7 @@ export default [
         ]
       },
       { name: 'progress', title: 'Progress' },
+      { name: 'ratings', title: 'Ratings' },
       { name: 'snackbars', title: 'Snackbars' },
       { name: 'steppers', title: 'Steppers' },
       { name: 'subheaders', title: 'Subheaders' },

@@ -365,6 +365,12 @@
     "description": "Progress components for the Vuetify framework.",
     "keywords": "progress"
   },
+  "components/ratings": {
+    "h1": "Ratings",
+    "title": "Ratings",
+    "description": "Star rating component for the Vuetify framework.",
+    "keywords": "rating, star rating, ratings, stars"
+  },
   "components/sliders": {
     "h1": "Sliders",
     "title": "Slider Component",
