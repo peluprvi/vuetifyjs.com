@@ -22,9 +22,14 @@
         :source="$t(desc)"
       )
 
-    v-card(:class="{ 'elevation-0': readonly }").mt-4
+    v-card(
+      :dark="invertedProxy"
+      :class="{ 'elevation-0': readonly }"
+    ).mt-4
       //- Example options
-      v-toolbar(flat dense card v-if="!readonly").pr-1
+      v-toolbar(
+        flat dense card v-if="!readonly"
+      ).pr-1
         v-btn(
           :href="`#${id}`"
           icon
@@ -72,7 +77,6 @@
           v-divider(v-if="!readonly")
           v-tabs(
             ref="tabs"
-            color="grey lighten-4"
             v-show="!readonly"
           )
             v-tab(
@@ -170,8 +174,6 @@
       },
       exampleClasses () {
         return {
-          'theme--dark': this.invertedProxy,
-          'theme--light': !this.invertedProxy,
           'grey lighten-3': !this.invertedProxy
         }
       }
