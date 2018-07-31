@@ -53,7 +53,7 @@ export default [
     icon: 'mdi-format-color-fill',
     items: [
       { name: 'Colors', title: 'Colors', color: 'tertiary' },
-      { name: 'Theme', title: 'Theme', color: 'tertiary' },
+      { name: 'Theme', title: 'Theme', color: 'tertiary', badge: 'updated' },
       { name: 'Typography', title: 'Typography', color: 'tertiary' },
       { name: 'Content', title: 'Content' }
     ]

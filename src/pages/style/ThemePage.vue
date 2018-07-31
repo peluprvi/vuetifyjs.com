@@ -43,7 +43,7 @@
           |
           | Vue.use(Vuetify, {
           |   theme: {
-          |     primary: colors.purple.base,
+          |     primary: colors.purple,
           |     secondary: colors.grey.darken1,
           |     accent: colors.shades.black,
           |     error: colors.red.accent3
@@ -57,17 +57,6 @@
       section#options
         helpers-section-head(:value="`${namespace}.optionHeader`")
         helpers-section-text(:value="`${namespace}.optionText1`")
-        helpers-section-text(:value="`${namespace}.optionText2`")
-        helpers-markup(lang="javascript")
-          | Vue.use(Vuetify, {
-          |   theme: {
-          |     primary: 'red',
-          |     secondary: 'purple'
-          |   },
-          |   options: {
-          |     themeVariations: ['primary', 'secondary']
-          |   }
-          | })
         h3.mb-3 {{ $t(`${namespace}.optionHeader2`) }}
         helpers-section-text(:value="`${namespace}.optionText3`")
         helpers-markup(lang="javascript")
