@@ -10,6 +10,9 @@
     "v-combobox": {
       "delimiters": "1.1"
     },
+    "v-date-picker": {
+      "multiple": "1.2"
+    },
     "v-dialog": {
       "no-click-animation": "1.1"
     },
