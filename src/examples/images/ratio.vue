@@ -1,7 +1,11 @@
 <template>
   <v-container fluid>
     <v-slider v-model="width" min="200" max="500" step="1"></v-slider>
-    <v-navigation-drawer :width="width">
+    <v-navigation-drawer
+      :width="width"
+      :value="true"
+      stateless
+    >
       <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
         <v-layout pa-2 column fill-height class="lightbox white--text">
           <v-spacer></v-spacer>
