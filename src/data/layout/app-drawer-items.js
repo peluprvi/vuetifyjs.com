@@ -100,7 +100,7 @@ export default [
           { name: 'forms', title: 'Forms', color: 'tertiary' },
           { name: 'inputs', title: 'Inputs' },
           { name: 'overflow-btns', title: 'Overflow Buttons' },
-          { name: 'selects', title: 'Selects', color: 'tertiary' },
+          { name: 'selects', title: 'Selects', badge: 'updated', color: 'tertiary' },
           { name: 'selection-controls', title: 'Selection controls', color: 'tertiary' },
           { name: 'sliders', title: 'Sliders', color: 'tertiary' },
           { name: 'textarea', title: 'Textareas' },
@@ -121,7 +121,7 @@ export default [
         namespace: 'components',
         items: [
           { name: 'date-pickers', title: 'Date pickers', badge: 'updated', color: 'tertiary' },
-          { name: 'time-pickers', title: 'Time pickers', badge: 'updated', color: 'tertiary' }
+          { name: 'time-pickers', title: 'Time pickers', color: 'tertiary' }
         ]
       },
       { name: 'progress', title: 'Progress' },

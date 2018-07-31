@@ -4,8 +4,8 @@
       section(v-if="usage")#usage
         helpers-section-head(value="Generic.Pages.usage")
         helpers-section-text(
-          v-if="$te(`${namespace}.headerText`)"
-          :value="`${namespace}.headerText`"
+          v-if="$te(`${namespace}.examples.usage.desc`)"
+          :value="`${namespace}.examples.usage.desc`"
         )
         helpers-example(
           :new-in="usage.new"

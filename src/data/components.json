@@ -530,7 +530,8 @@
       "light",
       "icons",
       "multiple",
-      "customTextAndValue"
+      "customTextAndValue",
+      { "file": "slots", "newIn": "1.2" }
     ],
     "spec": false
   },
