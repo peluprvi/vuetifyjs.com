@@ -541,7 +541,8 @@
       "icons",
       "multiple",
       "customTextAndValue",
-      { "file": "slots", "newIn": "1.2" }
+      { "file": "slots", "newIn": "1.2" },
+      "selectionAppearance"
     ],
     "spec": false
   },
