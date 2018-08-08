@@ -1,5 +1,5 @@
 <template>
-  <DocPage section="layout" component="aspect-ratios"/>
+  <DocPage section="layout" component="aspect-ratios" />
 </template>
 
 <script>

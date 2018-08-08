@@ -20,8 +20,8 @@
         min-width="290px"
       >
         <v-combobox
-          v-model="dates"
           slot="activator"
+          v-model="dates"
           multiple
           chips
           small-chips
