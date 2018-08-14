@@ -35,11 +35,11 @@
           icon
           @click.prevent.stop="goTo"
         )
-          v-icon(color="grey darken-1") mdi-pound-box
+          v-icon(:color="iconColor") mdi-pound-box
         v-spacer
         v-tooltip(lazy top v-if="hasInverted")
           v-btn(icon slot="activator" @click="invertedProxy = !invertedProxy")
-            v-icon(color="grey darken-1") invert_colors
+            v-icon(:color="iconColor") invert_colors
           span Invert colors
         v-tooltip(lazy top)
           v-btn(
@@ -49,7 +49,7 @@
             target="_blank"
             slot="activator"
           )
-            v-icon(color="grey darken-1") fab fa-github
+            v-icon(:color="iconColor") fab fa-github
           span View on Github
         v-tooltip(lazy top)
           v-btn(
@@ -57,7 +57,7 @@
             @click="sendToCodepen"
             slot="activator"
           )
-            v-icon(color="grey darken-1") fab fa-codepen
+            v-icon(:color="iconColor") fab fa-codepen
           span Edit in codepen
         v-tooltip(lazy top)
           v-btn(
@@ -65,7 +65,7 @@
             @click.stop="togglePanel"
             slot="activator"
           )
-            v-icon(color="grey darken-1") code
+            v-icon(:color="iconColor") code
           span View source
 
       //- Example markup
@@ -172,8 +172,13 @@
       currentColor () {
         return this.$store.state.currentColor
       },
+      iconColor () {
+        return 'grey ' + (this.invertedProxy ? 'lighten-1' : 'darken-1')
+      },
       exampleClasses () {
         return {
+          'theme--dark': this.invertedProxy,
+          'theme--light': !this.invertedProxy,
           'grey lighten-3': !this.invertedProxy
         }
       }
