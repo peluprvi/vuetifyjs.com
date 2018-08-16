@@ -10,7 +10,7 @@
           v-model="e6"
           label="Select"
           multiple
-          max-height="400"
+          :menu-props="{ maxHeight: '400' }"
           hint="Pick your favorite states"
           persistent-hint
         ></v-select>
