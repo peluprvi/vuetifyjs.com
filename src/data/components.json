@@ -105,9 +105,10 @@
   "cards": {
     "components": [
       "v-card",
+      "v-card-actions",
       "v-card-media",
-      "v-card-title",
-      "v-card-actions"
+      "v-card-text",
+      "v-card-title"
     ],
     "examples": [
       "components",
