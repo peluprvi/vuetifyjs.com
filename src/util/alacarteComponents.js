@@ -62,7 +62,7 @@ export default function alacarteComponents () {
     { name: 'v-snackbar', component: 'VSnackbar', group: 'VSnackbar' },
     { name: 'v-speed-dial', component: 'VSpeedDial', group: 'VSpeedDial' },
     { name: 'v-stepper', component: 'VStepper', group: 'VStepper' },
-    { name: 'v-stepper-content', component: 'VStepperCotent', group: 'VStepper' },
+    { name: 'v-stepper-content', component: 'VStepperContent', group: 'VStepper' },
     { name: 'v-stepper-step', component: 'VStepperStep', group: 'VStepper' },
     { name: 'v-subheader', component: 'VSubheader', group: 'VSubheader' },
     { name: 'v-switch', component: 'VSwitch', group: 'VSwitch' },
