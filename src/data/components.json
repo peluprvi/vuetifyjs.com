@@ -648,6 +648,7 @@
       "icon",
       "clearable",
       "iconEvents",
+      "iconSlots",
       "characterCounter",
       "password",
       "validation",
