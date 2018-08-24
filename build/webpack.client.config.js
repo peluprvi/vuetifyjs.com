@@ -19,6 +19,10 @@ const cssLoaders = [
 ]
 
 const config = merge(base, {
+  name: 'client',
+  devtool: isProd
+    ? false
+    : 'source-map',
   entry: {
     app: './src/entry-client.js'
   },
@@ -50,7 +54,9 @@ const config = merge(base, {
   optimization: {
     minimize: isProd,
     runtimeChunk: 'single',
-    splitChunks: {
+    removeAvailableModules: isProd,
+    removeEmptyChunks: isProd,
+    splitChunks: isProd && {
       chunks: 'all',
       minSize: 30000,
       minChunks: 1,
@@ -76,13 +82,6 @@ if (isProd) {
   config.plugins.push(
     new MiniCssExtractPlugin({
       filename: 'common.[chunkhash].css'
-    })
-  )
-} else {
-  config.plugins.push(
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      openAnalyzer: false
     })
   )
 }
