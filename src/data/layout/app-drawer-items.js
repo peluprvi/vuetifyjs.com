@@ -108,6 +108,7 @@ export default [
           { name: 'text-fields', title: 'Text fields', color: 'tertiary' }
         ]
       },
+      { name: 'hover', title: 'Hover', badge: 'new' },
       { name: 'icons', title: 'Icons', badge: 'updated', color: 'tertiary' },
       { name: 'images', 'title': 'Images', badge: 'new' },
       { name: 'jumbotrons', title: 'Jumbotrons' },

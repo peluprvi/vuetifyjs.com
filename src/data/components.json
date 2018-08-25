@@ -330,6 +330,14 @@
     ],
     "spec": false
   },
+  "hover": {
+    "components": ["v-hover"],
+    "examples": [
+      { "file": "default", "newIn": "1.2" },
+      { "file": "transition", "newIn": "1.2" }
+    ],
+    "spec": false
+  },
   "icons": {
     "components": ["v-icon"],
     "examples": [

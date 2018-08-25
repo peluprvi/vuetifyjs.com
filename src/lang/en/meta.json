@@ -293,6 +293,12 @@
     "description": "Form component for Vuetify Framework",
     "keywords": "form"
   },
+  "components/hover": {
+    "h1": "Hover",
+    "title": "Hover Component",
+    "description": "Easily respond when the user hovers over elements",
+    "keywords": "hover, mouseover"
+  },
   "components/icons": {
     "h1": "Icons",
     "title": "Icon Component",

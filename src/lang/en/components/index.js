@@ -21,6 +21,7 @@ import FloatingActionButtons from './FloatingActionButtons'
 import Footer from './Footer'
 import Forms from './Forms'
 import HelpMeChoose from './HelpMeChoose'
+import Hover from './Hover'
 import Icons from './Icons'
 import Images from './Images'
 import Inputs from './Inputs'
@@ -71,6 +72,7 @@ export default {
   Footer,
   Forms,
   HelpMeChoose,
+  Hover,
   Icons,
   Images,
   Inputs,
