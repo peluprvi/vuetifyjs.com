@@ -27,5 +27,9 @@
   "stylusHeader3": "Changing values",
   "stylusText7": "Now that stylus is configured, you can set default values for the stylus variables that you wish to change. These must be declared _before_ the import and will automatically override the Vuetify defaults.",
   "themeGeneratorHeader": "Theme generator",
-  "themeGeneratorText1": "Discover and generate new color themes for your **Vuetify** applications using our [Theme Generator](/theme-generator) tool."
+  "themeGeneratorText1": "Discover and generate new color themes for your **Vuetify** applications using our [Theme Generator](/theme-generator) tool.",
+  "variantsSubheader": "Custom theme variants",
+  "variantsText1": "While Vuetify automatically generates _lighten_ and _darken_ variants for theme colors, you may want to control this yourself. Simply pass a theme object that contains the variants that you wish to modify. Anything not provided will still be generated for you.",
+  "variantsText2": "You can now import your custom theme object and apply it to Vuetify",
+  "variantsText3": "Below is a full list of the overwritable keys on the theme object:"
 }
