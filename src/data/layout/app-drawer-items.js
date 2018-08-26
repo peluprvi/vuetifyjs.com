@@ -42,7 +42,7 @@ export default [
       { name: 'AspectRatios', title: 'Aspect ratios', badge: 'new' },
       { name: 'Spacing', title: 'Spacing', badge: 'updated', color: 'tertiary' },
       { name: 'Alignment', title: 'Text alignment' },
-      { name: 'Display', title: 'Display' },
+      { name: 'Display', title: 'Display', badge: 'updated', color: 'tertiary' },
       { name: 'Elevation', title: 'Elevation' },
       { name: 'Sandbox', title: 'Sandbox' }
     ]
