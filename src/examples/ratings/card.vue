@@ -27,15 +27,17 @@
     <v-card-actions class="pa-3">
       Rate this album
       <v-spacer></v-spacer>
-      <span class="grey--text text--lighten-2 caption">
+      <span class="grey--text text--lighten-2 caption mr-2">
         ({{ rating }})
       </span>
       <v-rating
         v-model="rating"
         background-color="white"
         color="yellow accent-4"
+        dense
         half-increments
         hover
+        size="18"
       ></v-rating>
     </v-card-actions>
   </v-card>
