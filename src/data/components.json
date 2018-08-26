@@ -724,6 +724,10 @@
   "transitions": {
     "components": [
       "v-fade-transition",
+      "v-scroll-x-transition",
+      "v-scroll-x-reverse-transition",
+      "v-scroll-y-transition",
+      "v-scroll-y-reverse-transition",
       "v-slide-x-transition",
       "v-slide-x-reverse-transition",
       "v-slide-y-transition",
@@ -735,7 +739,8 @@
       "slideYTransitions",
       "scaleTransition",
       "fadeTransition",
-      "customOrigin"
+      "customOrigin",
+      { "file": "todo", "newIn": "1.2" }
     ]
   }
 }

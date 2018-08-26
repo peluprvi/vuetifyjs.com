@@ -64,7 +64,7 @@ export default [
     icon: 'mdi-clock-fast',
     items: [
       { name: 'Scrolling', title: 'Scrolling' },
-      { name: 'Transitions', title: 'Transitions' }
+      { name: 'Transitions', title: 'Transitions', color: 'tertiary', badge: 'updated' }
     ]
   },
   {
