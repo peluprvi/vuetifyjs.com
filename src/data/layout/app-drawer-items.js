@@ -40,7 +40,7 @@ export default [
       },
       { name: 'Breakpoints', title: 'Breakpoints' },
       { name: 'AspectRatios', title: 'Aspect ratios', badge: 'new' },
-      { name: 'Spacing', title: 'Spacing' },
+      { name: 'Spacing', title: 'Spacing', badge: 'updated', color: 'tertiary' },
       { name: 'Alignment', title: 'Text alignment' },
       { name: 'Display', title: 'Display' },
       { name: 'Elevation', title: 'Elevation' },
