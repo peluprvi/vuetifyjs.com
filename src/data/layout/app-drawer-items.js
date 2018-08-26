@@ -54,7 +54,7 @@ export default [
     items: [
       { name: 'Colors', title: 'Colors', color: 'tertiary' },
       { name: 'Theme', title: 'Theme', color: 'tertiary', badge: 'updated' },
-      { name: 'Typography', title: 'Typography', color: 'tertiary' },
+      { name: 'Typography', title: 'Typography', color: 'tertiary', badge: 'updated' },
       { name: 'Content', title: 'Content' }
     ]
   },

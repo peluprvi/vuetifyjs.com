@@ -443,6 +443,24 @@ export default () => ({
           href: 'stylus-guide'
         }
       ],
+      Typography: [
+        {
+          text: 'Style.Typography.fontHeader',
+          href: 'font-sizes'
+        },
+        {
+          text: 'Style.Typography.weightsHeader',
+          href: 'font-weights'
+        },
+        {
+          text: 'Style.Typography.transformHeader',
+          href: 'text-transforms'
+        },
+        {
+          text: 'Style.Typography.wrapHeader',
+          href: 'text-wrapping'
+        }
+      ],
       Content: [
         {
           text: 'Style.Content.header',
