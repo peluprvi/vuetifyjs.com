@@ -8,7 +8,7 @@
     >
       <v-img
         :aspect-ratio="16/9"
-        src="https://images.pexels.com/photos/873653/pexels-photo-873653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
       ></v-img>
       <v-card-title>
         <div>
