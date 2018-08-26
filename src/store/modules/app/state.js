@@ -245,6 +245,10 @@ export default () => ({
           href: 'visibility'
         },
         {
+          text: 'Layout.Display.overflowHeader',
+          href: 'overflow'
+        },
+        {
           text: 'Layout.Display.displayHeader',
           href: 'display'
         },
