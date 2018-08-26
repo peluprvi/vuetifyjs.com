@@ -1,7 +1,6 @@
 <template lang="pug">
   views-doc#typography-page
     template(slot-scope="{ namespace }")
-      section WIP
       section#font-size
         v-card(
           color="teal"
