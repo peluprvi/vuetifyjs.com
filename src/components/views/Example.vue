@@ -37,7 +37,7 @@
               single-line
               v-bind:items="components"
               v-model="current"
-              auto
+              menu-props="auto"
               :disabled="components.length < 2"
             )
             v-spacer
