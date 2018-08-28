@@ -111,7 +111,7 @@ export default [
       { name: 'hover', title: 'Hover', badge: 'new' },
       { name: 'icons', title: 'Icons', badge: 'updated', color: 'tertiary' },
       { name: 'images', 'title': 'Images', badge: 'new' },
-      { name: 'jumbotrons', title: 'Jumbotrons' },
+      { name: 'jumbotrons', title: 'Jumbotrons', badge: 'deprecated', color: 'black' },
       { name: 'lists', title: 'Lists' },
       { name: 'menus', title: 'Menus' },
       { name: 'navigation-drawers', title: 'Navigation drawers' },
