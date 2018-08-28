@@ -34,7 +34,8 @@
       "reverse": "1.1"
     },
     "v-select": {
-      "small-chips": "1.1"
+      "small-chips": "1.1",
+      "menu-props": "1.2"
     },
     "v-slider": {
       "always-dirty": "1.1",
