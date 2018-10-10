@@ -8656,10 +8656,10 @@ vuelidate@^0.6.2:
   resolved "https://registry.yarnpkg.com/vuelidate/-/vuelidate-0.6.2.tgz#b417f5367407b047a2548119b25db56fe2bd5753"
   integrity sha512-rowo/OSwC8XEGdWg+ZgTpcgxYtmbQKbGOw4Z+lfT/BkNPoNyPEVgIeObUhhFO7Q7Lz0u0p429qfus/BHs9tMpg==
 
-vuetify@^1.2.7:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.2.7.tgz#3d73447d72bad6dca3e39272ec1bce73954add53"
-  integrity sha512-humc4uXzIiD91lf8DDec4jPNdqM9PDFE5DgZ8YOj5WyZ/1FLkhgX+EeMyms5ZgGbMwUJvXmqZm1QWbfCa+1vVQ==
+vuetify@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.2.8.tgz#83de9f679bf7662d2ebd247682941fcfff68a7b6"
+  integrity sha512-1XyVIxX5kl5pGvJv2BYgpWD7TRLoZtV1+4MdQ1rQmwKm7SdqjxbnnHMbv7w5lslBnBQQG/rXph1XylrrCUuElQ==
 
 vuex-router-sync@^5.0.0:
   version "5.0.0"
