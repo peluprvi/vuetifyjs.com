@@ -715,6 +715,9 @@
   "toolbars": {
     "components": [
       "v-toolbar",
+      "v-toolbar-items",
+      "v-toolbar-side-icon",
+      "v-toolbar-title",
       "v-system-bar"
     ],
     "examples": [
